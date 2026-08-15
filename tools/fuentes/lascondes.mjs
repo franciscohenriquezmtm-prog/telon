@@ -5,11 +5,16 @@
    No hay listado en /cartelera (devuelve 404), así que las fichas se descubren
    desde los enlaces de la portada.
 
-   El JSON-LD trae solo la fecha de inicio. Cuando el texto de la página declara un
-   rango que empieza ese mismo día, se toma su fecha de término; si no coinciden, se
-   deja la fecha del JSON-LD antes que estirar la temporada por nuestra cuenta. */
+   Ojo con las fechas: el JSON-LD declara solo startDate, y no siempre es el estreno
+   —en "Close To Me" apuntaba al 14 de agosto cuando la temporada partió el 6—. Tomarlo
+   como temporada completa hacía desaparecer la obra al día siguiente.
 
-import { bajar, aTexto, limpiar, slug, jsonLD, parseRangoFechas, parsePrecios, parseDuracion, parseEdad, inferirGenero } from '../lib/util.mjs';
+   La buena noticia es que el cuerpo de la página lista las funciones una por una
+   ("Jueves 6 de agosto • 19:30 horas"). De ahí sale la temporada de verdad, con sus
+   días y sus horas. El startDate del JSON-LD queda solo como respaldo y como ancla
+   para el año, que las líneas no declaran. */
+
+import { bajar, aTexto, limpiar, slug, jsonLD, iso, parsePrecios, parseDuracion, parseEdad, inferirGenero } from '../lib/util.mjs';
 import { resolverSala } from '../lib/salas.mjs';
 import { campo, listaDeNombres } from '../lib/tribe.mjs';
 
@@ -24,6 +29,73 @@ const NO_ES_OBRA = /\/(wp-[a-z]+|author|category|tag|feed|conoce-el-teatro|estre
 
 // El teatro programa sobre todo conciertos; nos quedamos con las artes escénicas.
 const ESCENICAS = /teatro|danza|familiar|infantil|circo|humor|ópera|opera|musical/i;
+
+const MESES = {
+  enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+  julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre: 10, diciembre: 11,
+};
+
+/* "Jueves 6 de agosto • 19:30 horas". Exige el número de día, y por eso no confunde
+   estas líneas con el horario de boletería ("Lunes a viernes: 10:00 a 19:30 h"). */
+const RE_FUNCION = /^(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:[^\d\n]{1,8}(\d{1,2})[:.](\d{2}))?/i;
+
+// Ninguna temporada de este teatro dura más que esto. Si el resultado se pasa, es
+// que se colaron líneas de otra cosa y no se puede confiar en lo leído.
+const MAX_DIAS_TEMPORADA = 200;
+
+/**
+ * Temporada reconstruida desde las funciones que lista la ficha.
+ *
+ * Las líneas no declaran el año ("Jueves 6 de agosto"), y el startDate del JSON-LD
+ * no sirve de ancla directa: en "Close To Me" apuntaba al 14 de agosto cuando las
+ * funciones parten el 6, y en las obras de Teatro a Mil apunta a junio para una
+ * temporada de enero. Así que para cada función se prueban el año anterior, el del
+ * startDate y el siguiente, y se toma el que caiga más cerca de esa fecha declarada.
+ * Es la lectura más conservadora: acerca cada función al único dato con año que el
+ * teatro sí publica, en vez de suponer una dirección.
+ */
+function funcionesPublicadas(texto, inicioJsonLD, log, titulo) {
+  const ancla = new Date(inicioJsonLD + 'T00:00:00');
+  const fechas = [];
+  const horas = {};
+
+  for (const linea of texto.split('\n')) {
+    const m = linea.trim().match(RE_FUNCION);
+    if (!m) continue;
+    const mes = MESES[m[2].toLowerCase()];
+    if (mes === undefined) continue;
+
+    const candidatas = [-1, 0, 1]
+      .map((salto) => new Date(ancla.getFullYear() + salto, mes, Number(m[1])))
+      .filter((f) => !Number.isNaN(f.getTime()));
+    const fecha = candidatas.sort((a, b) => Math.abs(a - ancla) - Math.abs(b - ancla))[0];
+    if (!fecha) continue;
+
+    fechas.push(fecha);
+    if (m[3] && horas[fecha.getDay()] === undefined) {
+      horas[fecha.getDay()] = `${String(Number(m[3])).padStart(2, '0')}:${m[4]}`;
+    }
+  }
+
+  if (!fechas.length) return null;
+  fechas.sort((a, b) => a - b);
+
+  const span = (fechas[fechas.length - 1] - fechas[0]) / 86400000;
+  if (span > MAX_DIAS_TEMPORADA) {
+    log(`  ! ${titulo}: las funciones leídas abarcan ${Math.round(span)} días; no se usan y queda la fecha del JSON-LD`);
+    return null;
+  }
+
+  const dias = [...new Set(fechas.map((f) => f.getDay()))].sort((a, b) => a - b);
+
+  return {
+    desde: iso(fechas[0]),
+    hasta: iso(fechas[fechas.length - 1]),
+    dias,
+    ...(Object.keys(horas).length ? { horas } : {}),
+    total: fechas.length,
+  };
+}
 
 /**
  * Cada obra es un post con URL en la raíz. La portada solo enlaza las de la semana,
@@ -69,12 +141,12 @@ export async function obtener({ log }) {
       if (!ESCENICAS.test(genero)) { descartadas++; continue; }
 
       const texto = aTexto(html);
-      const desde = evento.startDate.slice(0, 10);
-      let hasta = (evento.endDate || evento.startDate).slice(0, 10);
 
-      // El sitio a veces escribe el rango completo en el cuerpo
-      const rango = parseRangoFechas(texto.split('\n').find((l) => /\bal\b/.test(l) && /\d/.test(l) && l.length < 120) || '');
-      if (rango && rango.desde === desde && rango.hasta > hasta) hasta = rango.hasta;
+      // La lista de funciones de la ficha manda; el JSON-LD es el respaldo
+      const funciones = funcionesPublicadas(texto, evento.startDate.slice(0, 10), log, limpiar(evento.name));
+      const temporada = funciones
+        ? { desde: funciones.desde, hasta: funciones.hasta, dias: funciones.dias, ...(funciones.horas ? { horas: funciones.horas } : {}) }
+        : { desde: evento.startDate.slice(0, 10), hasta: (evento.endDate || evento.startDate).slice(0, 10) };
 
       const oferta = evento.offers || {};
       const precio = Number(oferta.price);
@@ -95,10 +167,10 @@ export async function obtener({ log }) {
         duracion: parseDuracion(texto),
         edad: parseEdad(texto),
         sala: resolverSala('tm-las-condes'),
-        // No se deducen los días de función: lo único con horas en la página es el
-        // horario de boletería, y tomarlo por horario de función sería inventar.
-        temporada: { desde, hasta },
-        horarioTexto: 'Consulta los horarios de cada función en el sitio del teatro',
+        temporada,
+        horarioTexto: funciones
+          ? `${funciones.total} ${funciones.total === 1 ? 'función publicada' : 'funciones publicadas'} por el teatro`
+          : 'Consulta los horarios de cada función en el sitio del teatro',
         precios: precio >= 1000 ? [{ tipo: 'General', valor: precio }] : parsePrecios(texto),
         imagen: typeof evento.image === 'string' ? evento.image : evento.image?.url || null,
         entradas: oferta.url ? limpiar(oferta.url) : url,
