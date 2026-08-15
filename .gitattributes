@@ -1,0 +1,13 @@
+# El workflow corre en Linux: los saltos de línea van siempre en LF, si no los
+# bloques `run:` llegan con CRLF y el shell falla con errores incomprensibles.
+* text=auto eol=lf
+
+# Binarios: que git no intente normalizarlos
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+
+# En Windows estos sí necesitan CRLF
+*.ps1 text eol=crlf

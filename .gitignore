@@ -1,0 +1,17 @@
+# Dependencias (el proyecto no usa ninguna, pero por si acaso)
+node_modules/
+
+# La versión de un solo archivo se regenera con `npm run build`.
+# Pesa 3 MB y cambia en cada actualización: no vale la pena versionarla.
+dist/
+
+# Miniaturas: son un paso intermedio para dist/telon.html, no las usa la web.
+assets/img/mini/
+
+# Los .ics que genera la app al probar "Agregar al calendario"
+*.ics
+
+# Ajustes locales de Claude Code y basura del sistema
+.claude/settings.local.json
+.DS_Store
+Thumbs.db

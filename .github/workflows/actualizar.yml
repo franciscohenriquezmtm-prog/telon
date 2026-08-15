@@ -1,0 +1,118 @@
+# Telón — actualización automática de la cartelera.
+#
+# Dos veces al día, un servidor de GitHub lee los sitios de los teatros, guarda la
+# cartelera nueva en el repositorio y republica el sitio. No necesita que el PC de
+# nadie esté encendido, y no usa ningún servicio de pago.
+
+name: Actualizar cartelera
+
+on:
+  schedule:
+    # GitHub solo entiende UTC, y Chile cambia de hora dos veces al año:
+    # UTC-4 en invierno y UTC-3 en verano (horario de America/Santiago).
+    # Por eso se disparan las cuatro horas UTC posibles y el primer job descarta
+    # las que no corresponden. Resultado: exactamente dos corridas reales al día,
+    # a las 08:00 y a las 19:00 de Santiago, todo el año y sin tocar nada.
+    - cron: '0 11,12,22,23 * * *'
+  # Botón para correrla a mano desde la pestaña Actions
+  workflow_dispatch:
+
+permissions:
+  contents: write   # para guardar la cartelera nueva en el repositorio
+  pages: write      # para publicar el sitio
+  id-token: write
+
+# Que no se pisen dos actualizaciones a la vez
+concurrency:
+  group: cartelera
+  cancel-in-progress: false
+
+jobs:
+  # ── ¿Toca correr a esta hora? ───────────────────────────────────────────────
+  decidir:
+    runs-on: ubuntu-latest
+    outputs:
+      correr: ${{ steps.hora.outputs.correr }}
+    steps:
+      - id: hora
+        run: |
+          HORA=$(TZ=America/Santiago date +%H)
+          echo "En Santiago son las $HORA h."
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Ejecución manual: corre igual."
+            echo "correr=si" >> "$GITHUB_OUTPUT"
+          elif [ "$HORA" = "08" ] || [ "$HORA" = "19" ]; then
+            echo "correr=si" >> "$GITHUB_OUTPUT"
+          else
+            echo "No es ni las 08 ni las 19 en Santiago: esta pasada se salta."
+            echo "correr=no" >> "$GITHUB_OUTPUT"
+          fi
+
+  # ── Leer los teatros y publicar ─────────────────────────────────────────────
+  actualizar:
+    needs: decidir
+    if: needs.decidir.outputs.correr == 'si'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Para las miniaturas en Linux. Si faltara, el actualizador sigue igual:
+      # solo avisa y no genera miniaturas.
+      - name: Instalar ImageMagick
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+
+      # --sin-build: dist/telon.html es la versión de un archivo, que no se publica
+      # en la web y se regenera a mano cuando haga falta.
+      - name: Leer la cartelera de los teatros
+        run: node tools/actualizar.mjs --sin-build
+        # Si un teatro se cae, el actualizador conserva sus obras de la última
+        # corrida buena y termina con código 1. No queremos que eso frene la
+        # publicación: el resto de la cartelera sigue estando fresca.
+        continue-on-error: true
+
+      - name: Guardar la cartelera nueva en el repositorio
+        run: |
+          git config user.name  "Telón"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cartelera.json assets/img
+          if git diff --staged --quiet; then
+            echo "La cartelera no cambió desde la última corrida."
+          else
+            git commit -m "Cartelera al $(TZ=America/Santiago date '+%d-%m-%Y %H:%M')"
+            git push
+          fi
+
+      # El sitio publicado lleva solo lo que la app necesita para funcionar;
+      # los scripts de Node se quedan en el repositorio.
+      - name: Armar el sitio
+        run: |
+          mkdir -p _sitio
+          cp index.html manifest.webmanifest sw.js _sitio/
+          mkdir -p _sitio/assets
+          cp assets/app.js assets/styles.css assets/cartelera.json _sitio/assets/
+          cp assets/icon.svg assets/icon-180.png assets/icon-192.png assets/icon-512.png _sitio/assets/
+          mkdir -p _sitio/assets/img
+          find assets/img -maxdepth 1 -type f -exec cp {} _sitio/assets/img/ \;
+          echo "Sitio armado: $(du -sh _sitio | cut -f1)"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _sitio
+      - id: despliegue
+        uses: actions/deploy-pages@v4
+
+      - name: Resumen
+        run: |
+          echo "### Cartelera actualizada 🎭" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Obras: $(node -e "console.log(JSON.parse(require('fs').readFileSync('assets/cartelera.json')).obras.length)")" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Sitio: ${{ steps.despliegue.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"

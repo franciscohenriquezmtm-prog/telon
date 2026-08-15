@@ -1,0 +1,15 @@
+{
+  "name": "telon",
+  "version": "1.0.0",
+  "description": "Cartelera de teatro de Santiago de Chile — PWA que se alimenta de los sitios oficiales de los teatros",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/server.mjs",
+    "actualizar": "node tools/actualizar.mjs",
+    "build": "node tools/build-single.mjs",
+    "miniaturas": "powershell -ExecutionPolicy Bypass -File tools/miniaturas.ps1",
+    "iconos": "node tools/make-icons.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

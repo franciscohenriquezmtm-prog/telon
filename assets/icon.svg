@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="telon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7263d"/>
+      <stop offset="1" stop-color="#4a0a15"/>
+    </linearGradient>
+    <linearGradient id="oro" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7dfa0"/>
+      <stop offset="1" stop-color="#d99f2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#telon)"/>
+  <g fill="#000" opacity=".14">
+    <rect x="6" y="0" width="3" height="64"/><rect x="18" y="0" width="3" height="64"/>
+    <rect x="43" y="0" width="3" height="64"/><rect x="55" y="0" width="3" height="64"/>
+  </g>
+  <ellipse cx="32" cy="34" rx="17" ry="20" fill="url(#oro)"/>
+  <ellipse cx="25" cy="29" rx="3.6" ry="2.6" fill="#2b0710"/>
+  <ellipse cx="39" cy="29" rx="3.6" ry="2.6" fill="#2b0710"/>
+  <path d="M22 38c3 6 17 6 20 0" fill="none" stroke="#2b0710" stroke-width="3.4" stroke-linecap="round"/>
+</svg>

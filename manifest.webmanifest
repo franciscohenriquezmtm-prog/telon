@@ -1,0 +1,23 @@
+{
+  "name": "Telón · Teatro en Santiago",
+  "short_name": "Telón",
+  "description": "Cartelera de obras de teatro en Santiago de Chile: qué hay hoy, dónde, a qué hora y cuánto cuesta.",
+  "lang": "es-CL",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0508",
+  "theme_color": "#12060a",
+  "categories": ["entertainment", "lifestyle", "events"],
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Funciones de hoy", "short_name": "Hoy", "url": "./index.html#hoy" },
+    { "name": "Mi cartelera", "short_name": "Guardadas", "url": "./index.html#favoritos" }
+  ]
+}
