@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-15T21:00:53.575Z",
+ "actualizado": "2026-08-15T23:12:06.494Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 0,
+   "obras": 1,
    "error": null
   },
   {
@@ -345,6 +345,62 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "lascondes-close-to-me",
+   "titulo": "Close To Me",
+   "subtitulo": null,
+   "sinopsis": "De los creadores de los exitosos musicales “Hit, un musical de los 80” y “Es por Amor, el musical de Rock Latino”, llega “Close To Me”, una emocionante, romántica y...",
+   "genero": "musical",
+   "compania": null,
+   "director": "Paula Barraza y Martín Erazo",
+   "dramaturgo": "Rodrigo Muñoz Medina, Paula Barraza y Martín Erazo",
+   "elenco": [
+    "Francisca Walker"
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-06",
+    "hasta": "2026-09-06",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "20 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 22000
+    }
+   ],
+   "imagen": "https://www.tmlascondes.cl/wp-content/uploads/2026/05/WEB_CLOSETOME_SLIDE-1-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-close-to-me.jpg",
+   "huellaImagen": "8fda91295a7eac87221acae55c404ba628f005b1",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30777",
+   "url": "https://www.tmlascondes.cl/close-to-me/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
