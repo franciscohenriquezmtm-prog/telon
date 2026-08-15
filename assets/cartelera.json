@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-15T01:58:28.832Z",
+ "actualizado": "2026-08-15T21:00:53.575Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 2,
+   "obras": 0,
    "error": null
   },
   {
@@ -748,51 +748,6 @@
    }
   },
   {
-   "id": "lascondes-close-to-me",
-   "titulo": "Close To Me",
-   "subtitulo": null,
-   "sinopsis": "De los creadores de los exitosos musicales “Hit, un musical de los 80” y “Es por Amor, el musical de Rock Latino”, llega “Close To Me”, una emocionante, romántica y...",
-   "genero": "musical",
-   "compania": null,
-   "director": "Paula Barraza y Martín Erazo",
-   "dramaturgo": "Rodrigo Muñoz Medina, Paula Barraza y Martín Erazo",
-   "elenco": [
-    "Francisca Walker"
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-14",
-    "hasta": "2026-08-14",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 22000
-    }
-   ],
-   "imagen": "https://www.tmlascondes.cl/wp-content/uploads/2026/05/WEB_CLOSETOME_SLIDE-1-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-close-to-me.jpg",
-   "huellaImagen": "8fda91295a7eac87221acae55c404ba628f005b1",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30777",
-   "url": "https://www.tmlascondes.cl/close-to-me/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
    "id": "mori-el-pais-de-las-maravillas",
    "titulo": "El País de las Maravillas",
    "subtitulo": null,
@@ -848,94 +803,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "lascondes-otra-otra",
-   "titulo": "Otra Otra",
-   "subtitulo": null,
-   "sinopsis": "La banda infantil chilena OTRA OTRA que hace furor entre los niños, vuelve a nuestro teatro en julio, transformando la literatura en una experiencia escénica llena de energía, humor y...",
-   "genero": "infantil",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-14",
-    "hasta": "2026-08-14",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    }
-   ],
-   "imagen": "https://www.tmlascondes.cl/wp-content/uploads/2026/05/SLIDE1_OTRA-OTRA_2026-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-otra-otra.jpg",
-   "huellaImagen": "b37f40483d6e8155b7361873d4f863dfd6631daa",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30781",
-   "url": "https://www.tmlascondes.cl/otra-otra-2/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-14",
-    "hasta": "2026-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1163,6 +1030,51 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "ictus-pa-ta-yo-ba-e",
+   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
+   "subtitulo": null,
+   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Nicolás Bascuñán",
+   "dramaturgo": "Nicolás Bascuñán",
+   "elenco": [],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-15",
+    "hasta": "2026-08-22",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
+   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
+   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
+   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
