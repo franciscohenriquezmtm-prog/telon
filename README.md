@@ -6,6 +6,20 @@ enlaza a su ficha original. Pensada para el iPhone, funciona sin internet una ve
 
 Sin frameworks ni dependencias: HTML + CSS + JavaScript y unos scripts de Node.
 
+## 👉 En vivo: **https://franciscohenriquezmtm-prog.github.io/telon/**
+
+Enlace público: se abre desde cualquier teléfono o computador, sin cuenta ni instalación.
+En Safari, **Compartir → Agregar a pantalla de inicio** lo deja como app, a pantalla
+completa y funcionando sin señal.
+
+**Se actualiza sola**, a las 08:00 y a las 19:00 de Santiago. No hay que encender ningún
+computador: el trabajo lo hace [`.github/workflows/actualizar.yml`](.github/workflows/actualizar.yml)
+en un servidor de GitHub, que lee los teatros, guarda la cartelera nueva en este
+repositorio y republica el sitio. Todo en el plan gratuito.
+
+Para forzar una actualización sin esperar la hora: pestaña **Actions** → *Actualizar
+cartelera* → **Run workflow**.
+
 ---
 
 ## Empezar
