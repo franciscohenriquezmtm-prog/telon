@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-15T23:12:06.494Z",
+ "actualizado": "2026-08-16T12:16:55.441Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -862,6 +862,114 @@
    }
   },
   {
+   "id": "mori-la-elvira",
+   "titulo": "La Elvira",
+   "subtitulo": null,
+   "sinopsis": "Elvira regresa más enamorada que nunca, pero esta vez de la vida. Los años la encuentran como protagonista absoluta de su propia historia: vivaz, reflexiva y con ganas de disfrutar cada momento.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Felipe Izquierdo"
+   ],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-15",
+    "hasta": "2026-08-28",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "22:00",
+     "6": "22:00"
+    }
+   },
+   "horarioTexto": "15, 22 y 28 de agosto, viernes y sábado a las 22:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 22000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/d14dfd7322e4f2ae4c934452e04c5098.jpg",
+   "imagenLocal": "assets/img/mori-la-elvira.jpg",
+   "huellaImagen": "10cc6e43ac4e4fe1575cca94fee5c4f98e029b95",
+   "entradas": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
+   "url": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-yo-soy-un-oso",
+   "titulo": "Yo soy un Oso",
+   "subtitulo": null,
+   "sinopsis": "Mientras el Oso dormía apaciblemente en su cueva, una gran fábrica se construye afuera, arrasando con todo el bosque. El Oso despierta en medio del patio de la gran fábrica, donde los hombres lo convencen de que no es un Oso y lo obligan a trabajar como un obrero más, perdiendo por completo su identidad. Por eso deberá vivir un viaje formidable, para poder recuperar su verdadera naturaleza animal.",
+   "genero": "drama",
+   "compania": "Abrapalabra Compañía de Teatro y Marionetas y OANI Teatro (Valparaíso)",
+   "director": "Camila Landon",
+   "dramaturgo": null,
+   "elenco": [
+    "Jano Mateluna"
+   ],
+   "duracion": 34,
+   "edad": 6,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-15",
+    "hasta": "2026-08-16",
+    "dias": [
+     0,
+     6
+    ],
+    "horas": {
+     "0": "12:00",
+     "6": "16:00"
+    }
+   },
+   "horarioTexto": "Sábado 16:00 hrs | Domingo 12:00 y 16:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/ec8ddc6ac8ab2300ced1093e1076d945.jpg",
+   "imagenLocal": "assets/img/mori-yo-soy-un-oso.jpg",
+   "huellaImagen": "c12c1a2daaaa093ee5e63a8fda773a23d7d3d5ba",
+   "entradas": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
+   "url": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "gam-bloom-famfest-2026",
    "titulo": "Bloom: FAMFEST 2026",
    "subtitulo": "FAMFEST 2026",
@@ -882,7 +990,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-16",
     "dias": [
      0,
@@ -945,7 +1053,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-16",
     "dias": [
      0,
@@ -1001,7 +1109,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-16",
     "dias": [
      0,
@@ -1037,58 +1145,6 @@
    }
   },
   {
-   "id": "mori-la-elvira",
-   "titulo": "La Elvira",
-   "subtitulo": null,
-   "sinopsis": "Elvira regresa más enamorada que nunca, pero esta vez de la vida. Los años la encuentran como protagonista absoluta de su propia historia: vivaz, reflexiva y con ganas de disfrutar cada momento.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Izquierdo"
-   ],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-15",
-    "hasta": "2026-08-28",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "22:00",
-     "6": "22:00"
-    }
-   },
-   "horarioTexto": "15, 22 y 28 de agosto, viernes y sábado a las 22:00 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 22000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/d14dfd7322e4f2ae4c934452e04c5098.jpg",
-   "imagenLocal": "assets/img/mori-la-elvira.jpg",
-   "huellaImagen": "10cc6e43ac4e4fe1575cca94fee5c4f98e029b95",
-   "entradas": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
-   "url": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "ictus-pa-ta-yo-ba-e",
    "titulo": "PA$$$TA(YO)BA$$$E!!!!",
    "subtitulo": null,
@@ -1109,7 +1165,7 @@
     "sitio": "https://teatroictus.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-22",
     "dias": [
      5,
@@ -1160,7 +1216,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-23",
     "dias": [
      0,
@@ -1209,7 +1265,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-15",
+    "desde": "2026-08-16",
     "hasta": "2026-08-16",
     "dias": [
      0,
@@ -1246,62 +1302,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "mori-yo-soy-un-oso",
-   "titulo": "Yo soy un Oso",
-   "subtitulo": null,
-   "sinopsis": "Mientras el Oso dormía apaciblemente en su cueva, una gran fábrica se construye afuera, arrasando con todo el bosque. El Oso despierta en medio del patio de la gran fábrica, donde los hombres lo convencen de que no es un Oso y lo obligan a trabajar como un obrero más, perdiendo por completo su identidad. Por eso deberá vivir un viaje formidable, para poder recuperar su verdadera naturaleza animal.",
-   "genero": "drama",
-   "compania": "Abrapalabra Compañía de Teatro y Marionetas y OANI Teatro (Valparaíso)",
-   "director": "Camila Landon",
-   "dramaturgo": null,
-   "elenco": [
-    "Jano Mateluna"
-   ],
-   "duracion": 34,
-   "edad": 6,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-15",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "12:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": "Sábado 16:00 hrs | Domingo 12:00 y 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/ec8ddc6ac8ab2300ced1093e1076d945.jpg",
-   "imagenLocal": "assets/img/mori-yo-soy-un-oso.jpg",
-   "huellaImagen": "c12c1a2daaaa093ee5e63a8fda773a23d7d3d5ba",
-   "entradas": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
-   "url": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
