@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-16T12:16:55.441Z",
+ "actualizado": "2026-08-16T23:12:11.797Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-16 → fetch failed"
   },
   {
    "id": "mori",
@@ -3320,19 +3320,18 @@
    "director": "Hernán Vallejo",
    "dramaturgo": "Alejandro Sieveking",
    "elenco": [
-    "Bárbara Santander",
-    "Juan Carlos Maldonado",
     "Katty Kowaleczko",
-    "Enoe Coulón",
-    "Hernán Vallejo",
-    "Alex Vidal",
-    "Ángela Vallejo",
-    "Jósefa López",
-    "Max Meriño",
+    "Enoe Coulon",
     "Marcela Espinoza",
-    "Jacob Reyes",
-    "Cristián Gajardo",
-    "Marco Rebolledo"
+    "Angela Vallejo",
+    "Max Meriño",
+    "Juan Carlos Maldonado",
+    "Claudia Narea",
+    "Rodrigo Aceituno",
+    "Cristian Gajardo",
+    "Josefa López",
+    "Marco Rebolledo",
+    "Sebastian Trincado"
    ],
    "duracion": 30,
    "edad": 12,
@@ -3371,17 +3370,17 @@
    "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES presentará el regreso a su escenario de una entrañable obra del teatro chileno, “Ánimas de día claro”, con única función el viernes 25 de septiembre.",
    "genero": "drama",
    "compania": "La Originaria",
-   "director": "Ángela Vallejo",
+   "director": "Ángela Vallejo y Cristian Gajardo",
    "dramaturgo": "Alejandro Sieveking",
    "elenco": [
-    "Juan Carlos Maldonado",
-    "Marco Rebolledo",
+    "Hernán Contreras",
     "Ángela Vallejo",
     "Marcela Espinoza",
-    "Alex Vidal",
-    "Bárbara Santander",
-    "Cristián Gajardo",
-    "Sara Henríquez"
+    "Claudia Hidalgo",
+    "Juan Carlos Maldonado",
+    "Cristian Gajardo",
+    "Sara Henríquez",
+    "Marco Rebolledo"
    ],
    "duracion": 30,
    "edad": 12,
