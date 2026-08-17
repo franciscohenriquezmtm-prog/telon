@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-08-16T23:12:11.797Z",
+ "actualizado": "2026-08-17T12:21:28.042Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 19,
+   "obras": 16,
    "error": null
   },
   {
@@ -14,20 +14,20 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-16 → fetch failed"
+   "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 12,
+   "obras": 9,
    "error": null
   },
   {
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 5,
+   "obras": 4,
    "error": null
   },
   {
@@ -69,7 +69,7 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 15,
+   "obras": 14,
    "error": null
   }
  ],
@@ -194,57 +194,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "zoco-inter-alia",
-   "titulo": "INTER ALIA",
-   "subtitulo": null,
-   "sinopsis": "Jessica Parks ha construido una carrera ejemplar como jueza, convencida de que la ley siempre puede ordenar el caos. Pero cuando un hecho inesperado que involucra a su hijo de 18 años irrumpe en su vida, sus certezas comienzan a resquebrajarse.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Pablo Halpern",
-   "dramaturgo": null,
-   "elenco": [
-    "Paola Giannini",
-    "Nicolás Saavedra",
-    "Diego Leiva"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-07-09",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     4,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "9 de julio al 16 de agosto · ***Función del 19 de julio suspendida por razones de fuerza mayor. · Jueves a sábado 19:30 hrs, domingo 18:00 hrs",
-   "precios": [],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2026/05/interalia-1024x540.jpg",
-   "imagenLocal": "assets/img/zoco-inter-alia.jpg",
-   "huellaImagen": "13ced563604a118fc0db0aec2684fed624c8c493",
-   "entradas": "https://teatrozoco.cl/evento/inter-alia/",
-   "url": "https://teatrozoco.cl/evento/inter-alia/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
    }
   },
   {
@@ -404,71 +353,6 @@
    }
   },
   {
-   "id": "m100-fe-de-ratas",
-   "titulo": "Fe de Ratas",
-   "subtitulo": null,
-   "sinopsis": "Comedia negra escrita y dirigida por Alexis Moreno que trata los abusos, el encubrimiento, el poder, la hipocresía institucional y la fragilidad moral presentes en la sociedad chilena.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Alexis Moreno",
-   "dramaturgo": "Alexis Moreno",
-   "elenco": [
-    "Alexandra von Hummel",
-    "Alexis Moreno",
-    "Rodrigo Soto",
-    "Manuel Peña",
-    "Daniela Fernández",
-    "Juan Gálvez"
-   ],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Matucana 100 — Espacio Patricio Bunster",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-06",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:30",
-     "4": "20:30",
-     "5": "20:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Jue y vie: 20:30 hrs · Sáb y dom: 19:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/07/fe-de-ratas_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-fe-de-ratas.jpg",
-   "huellaImagen": "591eddbe5c0ba7c53e2cc3cd133b75f682c2586e",
-   "entradas": "https://www.m100.cl/programacion/teatro/fe-de-ratas/",
-   "url": "https://www.m100.cl/programacion/teatro/fe-de-ratas/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
    "id": "m100-un-dia-no-vamos-a-estar",
    "titulo": "Un día no vamos a estar",
    "subtitulo": null,
@@ -624,7 +508,7 @@
      "6": "19:00"
     }
    },
-   "horarioTexto": "9 funciones — 19:00 h",
+   "horarioTexto": "10 funciones — 19:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -635,63 +519,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "mori-el-viaje-de-la-paz",
-   "titulo": "El Viaje de la Paz",
-   "subtitulo": null,
-   "sinopsis": "En este estreno, una niña llamada Paz decide seguir su anhelo más profundo: conocer el mar. En su travesía, perdida en la montaña, encontrará en su inocencia las alas y en la amistad su libertad. Mientras tanto, en el pueblo la ausencia de Paz desata el caos. La comunidad deberá aprender a unirse para encontrarla, sin sospechar que esa búsqueda los conducirá a un viaje mayor: el de reencontrarse con la paz de todos.",
-   "genero": "drama",
-   "compania": "Teatro de la Poesía",
-   "director": "Claudio Rojas",
-   "dramaturgo": "Claudio Rojas",
-   "elenco": [
-    "Leticia Bortoletto",
-    "Claudio Rojas"
-   ],
-   "duracion": 55,
-   "edad": 4,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-08",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "16:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": "Sábado 16:00 hrs | Domingo 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/2974f95126ff51317562c49a90b37f7c.jpg",
-   "imagenLocal": "assets/img/mori-el-viaje-de-la-paz.jpg",
-   "huellaImagen": "ec131c413938bd31a9ae9ab69ed813a2616ad5a7",
-   "entradas": "https://teatromori.cl/obra/6dfd856d/el-viaje-de-la-paz",
-   "url": "https://teatromori.cl/obra/6dfd856d/el-viaje-de-la-paz",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -804,64 +631,6 @@
    }
   },
   {
-   "id": "mori-el-pais-de-las-maravillas",
-   "titulo": "El País de las Maravillas",
-   "subtitulo": null,
-   "sinopsis": "A través del viaje onírico y existencial de Alicia, propuesto por Lewis Carroll, el montaje de la compañía Teatro Huevo de la Región de Aysén busca valorar la belleza del sur de Chile, especialmente del patrimonio natural y cultural de la Patagonia, además de promover el cuidado del medio ambiente.",
-   "genero": "drama",
-   "compania": "Teatro Huevo (Aysén)",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Cecilia Barril"
-   ],
-   "duracion": 70,
-   "edad": 7,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-14",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "12:00",
-     "5": "18:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": "Viernes 18:00 hrs | Sábado 16:00 hrs | Domingo 12:00 y 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/e067bd189efa521853c32f153dde5ff6.jpg",
-   "imagenLocal": "assets/img/mori-el-pais-de-las-maravillas.jpg",
-   "huellaImagen": "cd9e0c5eec4e2525a42b7edd990c4cb5df2afb81",
-   "entradas": "https://teatromori.cl/obra/1b39c9f4/el-pais-de-las-maravillas",
-   "url": "https://teatromori.cl/obra/1b39c9f4/el-pais-de-las-maravillas",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "mori-la-elvira",
    "titulo": "La Elvira",
    "subtitulo": null,
@@ -914,237 +683,6 @@
    }
   },
   {
-   "id": "mori-yo-soy-un-oso",
-   "titulo": "Yo soy un Oso",
-   "subtitulo": null,
-   "sinopsis": "Mientras el Oso dormía apaciblemente en su cueva, una gran fábrica se construye afuera, arrasando con todo el bosque. El Oso despierta en medio del patio de la gran fábrica, donde los hombres lo convencen de que no es un Oso y lo obligan a trabajar como un obrero más, perdiendo por completo su identidad. Por eso deberá vivir un viaje formidable, para poder recuperar su verdadera naturaleza animal.",
-   "genero": "drama",
-   "compania": "Abrapalabra Compañía de Teatro y Marionetas y OANI Teatro (Valparaíso)",
-   "director": "Camila Landon",
-   "dramaturgo": null,
-   "elenco": [
-    "Jano Mateluna"
-   ],
-   "duracion": 34,
-   "edad": 6,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-15",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "12:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": "Sábado 16:00 hrs | Domingo 12:00 y 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/ec8ddc6ac8ab2300ced1093e1076d945.jpg",
-   "imagenLocal": "assets/img/mori-yo-soy-un-oso.jpg",
-   "huellaImagen": "c12c1a2daaaa093ee5e63a8fda773a23d7d3d5ba",
-   "entradas": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
-   "url": "https://teatromori.cl/obra/4fe5cc64/yo-soy-un-oso",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "gam-bloom-famfest-2026",
-   "titulo": "Bloom: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "Un tierno viaje lleno de poesía, fantasía y encuentros sorprendentes es el que emprende Gargardenia, una niña curiosa que, como Alicia, tropieza con el miste...",
-   "genero": "infantil",
-   "compania": "Teatro 4Garoupas (Brasil/Alemania)",
-   "director": "Arno Kleinofen",
-   "dramaturgo": "Arno Kleinofen",
-   "elenco": [],
-   "duracion": 50,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-16",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "16:30",
-     "6": "16:30"
-    }
-   },
-   "horarioTexto": "Sá y Do— 16.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 7000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/BLOOOM_by_GusBenke_-227.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-bloom-famfest-2026.jpg",
-   "huellaImagen": "fcfe272b98850ae082dbaecc913f9b2ef4372880",
-   "entradas": "https://www.passline.com/sitio-evento/blooom-brasilalemania",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/bloom/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-cachalote-famfest-2026",
-   "titulo": "Cachalote: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "La compañía Cuento Corto propone valorar la naturaleza a través de la mirada de los animales, contando la historia de una gran ballena blanca, que tiene la m...",
-   "genero": "infantil",
-   "compania": "Cuento Corto",
-   "director": "Elvira López",
-   "dramaturgo": null,
-   "elenco": [
-    "Sofía Contreras",
-    "Elías Coroseo",
-    "Francisca Cienfuegos",
-    "Matías Garrido",
-    "Gabriela Grandy",
-    "Sofía De Lasa",
-    "Louie Ramírez",
-    "Joaquín Juricic"
-   ],
-   "duracion": 45,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-16",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     2,
-     6
-    ],
-    "horas": {
-     "0": "16:00",
-     "2": "16:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Cachalote-5_1_-_thais_zuniga.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-cachalote-famfest-2026.jpg",
-   "huellaImagen": "af3327d03053aa33eee2453a20057c47e9b71327",
-   "entradas": "https://www.passline.com/sitio-evento/cachalote",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/cachalote/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-gea-famfest-2026",
-   "titulo": "GEA: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "Inspirada en la rica geografía y biodiversidad de nuestro territorio, esta obra de danza inmersiva invita a un viaje sensorial que evoca los paisajes desde l...",
-   "genero": "infantil",
-   "compania": "GEA",
-   "director": "Loreto Caviedes Jeria",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 50,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-16",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     2,
-     6
-    ],
-    "horas": {
-     "0": "12:00",
-     "2": "12:00",
-     "6": "12:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Gea_4.e81b4b97.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-gea-famfest-2026.jpg",
-   "huellaImagen": "1dc4fbfcefbafb4edc4d4eaf69e1402998786b54",
-   "entradas": "https://www.passline.com/sitio-evento/gea-danza",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/gea/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "ictus-pa-ta-yo-ba-e",
    "titulo": "PA$$$TA(YO)BA$$$E!!!!",
    "subtitulo": null,
@@ -1165,7 +703,7 @@
     "sitio": "https://teatroictus.cl"
    },
    "temporada": {
-    "desde": "2026-08-16",
+    "desde": "2026-08-17",
     "hasta": "2026-08-22",
     "dias": [
      5,
@@ -1187,121 +725,6 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "gam-sirenas",
-   "titulo": "Sirenas",
-   "subtitulo": "Coproducción GAM- Theater Basel",
-   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
-   "genero": "drama",
-   "compania": "Sirenas",
-   "director": "Viviane Kübler",
-   "dramaturgo": "Manuela Infante Güell",
-   "elenco": [
-    "Elmira Bahrami",
-    "Giannina Fruttero",
-    "Nicole Sazo Cariola",
-    "Antoinette Ullrich",
-    "Gala Othero Winter"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-16",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-sirenas.jpg",
-   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
-   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-wunelfe-lucero-del-amanecer",
-   "titulo": "Wuñelfe: Lucero del amanecer",
-   "subtitulo": null,
-   "sinopsis": "Una creación coreográfica inspirada en la cosmogonía mapuche y los relatos sobre el origen del mundo. Dirigida por Ricardo Curaqueo Curiche, la obra propone ...",
-   "genero": "danza",
-   "compania": "Wuñelfe: Lucero del amanecer",
-   "director": "Ricardo Curaqueo Curiche",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-16",
-    "hasta": "2026-08-16",
-    "dias": [
-     0,
-     4,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5850
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/wunelfe_cred_Rodrigo_Diaz_11.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-wunelfe-lucero-del-amanecer.jpg",
-   "huellaImagen": "8c96cc13b997f7f05c48106c38bc652adca297f8",
-   "entradas": "https://gam.ticketplus.cl/events/wunelfe-lucero-del-amanecer?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/wunelfe-lucero-del-amanecer/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1608,6 +1031,61 @@
     "id": "m100",
     "nombre": "Matucana 100",
     "sitio": "https://www.m100.cl"
+   }
+  },
+  {
+   "id": "gam-sirenas",
+   "titulo": "Sirenas",
+   "subtitulo": "Coproducción GAM- Theater Basel",
+   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
+   "genero": "drama",
+   "compania": "Sirenas",
+   "director": "Viviane Kübler",
+   "dramaturgo": "Manuela Infante Güell",
+   "elenco": [
+    "Elmira Bahrami",
+    "Giannina Fruttero",
+    "Nicole Sazo Cariola",
+    "Antoinette Ullrich",
+    "Gala Othero Winter"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-20",
+    "hasta": "2026-08-23",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-sirenas.jpg",
+   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
+   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -2610,9 +2088,9 @@
    }
   },
   {
-   "id": "gam-xi-encuentros-coreograficos-nacionales",
-   "titulo": "XI Encuentros Coreográficos Nacionales",
-   "subtitulo": null,
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
    "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
    "genero": "danza",
    "compania": "XI Encuentros Coreográficos Nacionales",
@@ -2647,9 +2125,9 @@
    },
    "horarioTexto": null,
    "precios": [],
-   "imagen": "https://gam.cl/media/images/portadaDanza.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales.png",
-   "huellaImagen": "3f81beedf1f57b1057a417fb56f8b791fc19e447",
+   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
+   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
    "entradas": null,
    "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
    "fuente": {
@@ -3887,6 +3365,71 @@
    "huellaImagen": "d6d58890bafc0399b7323610bf5a54ee2f6eeea2",
    "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-dona-rosita-anotada",
+   "titulo": "Doña Rosita [anotada]",
+   "subtitulo": null,
+   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
+   "genero": "clasico",
+   "compania": "Doña Rosita [anotada]",
+   "director": "Francisco Albornoz",
+   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
+   "elenco": [
+    "Solange Lackington",
+    "Benjamín Salinas",
+    "Konstanza Villalobos",
+    "Colomba Chamorro"
+   ],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-30",
+    "hasta": "2026-11-15",
+    "dias": [
+     0,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/solancge-lackington-3.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
+   "huellaImagen": "3b90ceaf5035b1a2a536a5092d42a498360d5657",
+   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
