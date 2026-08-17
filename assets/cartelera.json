@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-17T12:21:28.042Z",
+ "actualizado": "2026-08-17T23:27:31.750Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -1465,7 +1465,7 @@
      0
     ]
    },
-   "horarioTexto": "13 al 16 / 20 al 23 de agosto",
+   "horarioTexto": "20 al 23 de agosto",
    "precios": [],
    "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/05/2026_07_31_sdo_2_s.jpg",
    "imagenLocal": "assets/img/nescafe-secretos-de-oficina.jpg",
@@ -1523,8 +1523,8 @@
    }
   },
   {
-   "id": "ictus-simon-campusano",
-   "titulo": "SIMÓN CAMPUSANO",
+   "id": "ictus-simon-campusano-agotado",
+   "titulo": "SIMÓN CAMPUSANO | AGOTADO",
    "subtitulo": null,
    "sinopsis": "Simón Campusano, ofrece un espectáculo de carácter artístico-cultural en formato banda. La presentación estará centrada en una interpretación especial del álbum Brillo , obra que constituye el primer trabajo discográfico de su carrera como solista y que representa un hito relevante dentro de la música popular chilena contemporánea. El concierto contempla la ejecución en vivo de las composiciones que integran dicho álbum, mediante una propuesta escénica especialmente concebida para esta ocasión, con arreglos e interpretación en formato de banda.",
    "genero": "musical",
@@ -1559,7 +1559,7 @@
    "horarioTexto": "26 DE AGOSTO · Miércoles | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/SIMONCAMPUSANO_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-simon-campusano.jpg",
+   "imagenLocal": "assets/img/ictus-simon-campusano-agotado.jpg",
    "huellaImagen": "27f918b31c654fba64bbf7d9aba35ade98b3bcd0",
    "entradas": "https://ticketplus.cl/events/simon-campusano-2026-08-26-20-00-00-0400",
    "url": "https://teatroictus.cl/cartelera/proximamente-simon-campusano/",
@@ -1745,8 +1745,8 @@
    }
   },
   {
-   "id": "mori-puerto-de-amores",
-   "titulo": "Puerto de Amores",
+   "id": "mori-puerto-amores",
+   "titulo": "Puerto Amores",
    "subtitulo": null,
    "sinopsis": "Puerto Amores es una comedia musical romántica, familiar y 100% chilena, ambientada en una pintoresca caleta de mediados del siglo XX. La llegada de un misterioso forastero altera la vida de sus habitantes y desata una historia de amores, secretos y enredos. Con música en vivo, humor y personajes entrañables, la obra recorre ritmos como el foxtrot, el bolero, el swing y los valses porteños. Un espectáculo alegre y emotivo que celebra el amor, la memoria y la identidad popular chilena.",
    "genero": "infantil",
@@ -1754,10 +1754,7 @@
    "director": "Rodrigo Cabello Zárate",
    "dramaturgo": null,
    "elenco": [
-    "Ema Pinto",
-    "Li Milagros",
-    "Manuel Castro",
-    "Rafael de la Reguera"
+    "Ema Pinto"
    ],
    "duracion": 70,
    "edad": 6,
@@ -1795,10 +1792,10 @@
     }
    ],
    "imagen": "https://teatromori.cl/mini/268x372xS/dca2bbabe6ffca3f9d9672633141a1cb.jpg",
-   "imagenLocal": "assets/img/mori-puerto-de-amores.jpg",
+   "imagenLocal": "assets/img/mori-puerto-amores.jpg",
    "huellaImagen": "5cf9ad4ee9195d917d1941d5f4fee4d956364745",
-   "entradas": "https://teatromori.cl/obra/ymdQ8i2C/puerto-de-amores",
-   "url": "https://teatromori.cl/obra/ymdQ8i2C/puerto-de-amores",
+   "entradas": "https://teatromori.cl/obra/ymdQ8i2C/puerto-amores",
+   "url": "https://teatromori.cl/obra/ymdQ8i2C/puerto-amores",
    "fuente": {
     "id": "mori",
     "nombre": "Teatro Mori",
@@ -2599,8 +2596,8 @@
    "id": "ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
    "titulo": "SIEMPRE ENCUENTRA CASA NUEVA, UN MUEBLE ANTIGUO EN LA BASURA",
    "subtitulo": null,
-   "sinopsis": "Ivonne, es una asesora del hogar de 70 años que se ha quedado a cargo de la casa de su difunto patrón. Su rutina de cuidado se interrumpe cuando su hijo Guolgan, un hombre de 45 años en situación de calle, llega buscando un refugio el día de año nuevo. La presencia de Guolgan pone en riesgo la estabilidad de Ivonne, ya que los herederos, ad portas de vender la casa, podrían enterarse de su visita y echarla a la calle, confirmando su temor de ser fríamente desechada como un mueble viejo en la basura que ya no le sirve a nadie.",
-   "genero": "drama",
+   "sinopsis": "&#8220;Es un relato familiar. Se trata de todo lo que una madre es capaz de sacrificar por el cuidado de su hijo&#8221; — Felipe Zambrano Miguieles",
+   "genero": "infantil",
    "compania": null,
    "director": "Felipe Zambrano Miguieles",
    "dramaturgo": "Felipe Zambrano Miguieles",
@@ -2632,11 +2629,11 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · Ivonne, es una asesora del hogar de 70 años que se ha quedado a cargo de la casa de su difunto patrón. Su rutina de cuidado se interrumpe cuando su hijo Guolgan, un hombre de 45 años en situación de calle, llega buscando un refugio el día de año nuevo. La presencia de Guolgan pone en riesgo la estabilidad de Ivonne, ya que los herederos, ad portas de vender la casa, podrían enterarse de su visita y echarla a la calle, confirmando su temor de ser fríamente desechada como un mueble viejo en la basura que ya no le sirve a nadie.",
+   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · &#8220;Es un relato familiar. Se trata de todo lo que una madre es capaz de sacrificar por el cuidado de su hijo&#8221; — Felipe Zambrano Miguieles",
    "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/CAMILO0381-1-scaled.jpg",
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.jpg",
-   "huellaImagen": "5855dc31620c206e081872911b6a522c3568a8a5",
+   "huellaImagen": "1406bb88c546d07ddcb67d7e992ed0965ebf671f",
    "entradas": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
    "url": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
    "fuente": {
@@ -3104,9 +3101,9 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/furias.original.2e16d0ba.fill-1200x630.png",
+   "imagen": "https://gam.cl/media/images/Banner_FURIAS.598d8f56.fill-1200x630.png",
    "imagenLocal": "assets/img/gam-furias.png",
-   "huellaImagen": "aec9721c3ef0b8d8a67b2056d1bd5049a2a47f3d",
+   "huellaImagen": "7bae7cff905f103e650c31c64de81423b0ff78cf",
    "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
