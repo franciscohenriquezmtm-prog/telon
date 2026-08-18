@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-18T12:22:09.218Z",
+ "actualizado": "2026-08-18T23:12:55.005Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -2277,7 +2277,7 @@
    "id": "m100-vicaria",
    "titulo": "Vicaría",
    "subtitulo": null,
-   "sinopsis": "Unipersonal que rescata las memorias de secretarias de la Vicaría de la Solidaridad, explorando la memoria, la pérdida y sus conexiones.",
+   "sinopsis": "Unipersonal que rescata las memorias invisibilizadas de trabajadoras de la Vicaría, explorando la memoria, la pérdida y la resistencia.",
    "genero": "drama",
    "compania": null,
    "director": "Ignacia González Torres",
@@ -3106,7 +3106,7 @@
   {
    "id": "gam-furias",
    "titulo": "Furias",
-   "subtitulo": null,
+   "subtitulo": "Coproducción GAM",
    "sinopsis": "Escrita por Manuela Oyarzún y dirigida por Víctor Carrasco, la obra cruza los mundos del arte, la ciencia y la salud mental para cuestionar sus jerarquías y ...",
    "genero": "drama",
    "compania": "Furias",
@@ -3193,12 +3193,12 @@
     "hasta": "2026-10-25",
     "dias": [
      0,
-     5,
+     4,
      6
     ],
     "horas": {
      "0": "19:00",
-     "5": "20:00",
+     "4": "20:00",
      "6": "20:00"
     }
    },
@@ -3206,15 +3206,15 @@
    "precios": [
     {
      "tipo": "General",
-     "valor": 15000
+     "valor": 12000
     },
     {
      "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
+     "valor": 8400
     },
     {
      "tipo": "Convenio",
-     "valor": 9750
+     "valor": 7800
     }
    ],
    "imagen": "https://gam.cl/media/images/RODRIGO_RODRIGAN_1.jpg.1200x900_q.2e16d0ba.fill-1200x630.jpg",
@@ -3365,13 +3365,16 @@
   {
    "id": "gam-los-dias-felices",
    "titulo": "Los días felices",
-   "subtitulo": "COPRODUCCIÓN GAM",
+   "subtitulo": "Coproducción GAM / La Santa",
    "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
    "genero": "drama",
-   "compania": "Los días felices",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
    "duracion": null,
    "edad": null,
    "sala": {
@@ -3409,9 +3412,9 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/los_dias_felices.3d6343fd.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices.jpg",
-   "huellaImagen": "d6d58890bafc0399b7323610bf5a54ee2f6eeea2",
+   "imagen": "https://gam.cl/media/images/2_u0it2of.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-los-dias-felices.png",
+   "huellaImagen": "60153193ff3ecc72beb0c1c4aeb26bebfc9d5658",
    "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
    "fuente": {
