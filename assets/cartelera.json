@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-17T23:27:31.750Z",
+ "actualizado": "2026-08-18T12:22:09.218Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 6,
+   "obras": 7,
    "error": null
   },
   {
@@ -683,51 +683,6 @@
    }
   },
   {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-17",
-    "hasta": "2026-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "nescafe-expertas-en-nada",
    "titulo": "Expertas en Nada",
    "subtitulo": null,
@@ -765,6 +720,51 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "ictus-pa-ta-yo-ba-e",
+   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
+   "subtitulo": null,
+   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Nicolás Bascuñán",
+   "dramaturgo": "Nicolás Bascuñán",
+   "elenco": [],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-18",
+    "hasta": "2026-08-22",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
+   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
+   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
+   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2629,12 +2629,12 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · &#8220;Es un relato familiar. Se trata de todo lo que una madre es capaz de sacrificar por el cuidado de su hijo&#8221; — Felipe Zambrano Miguieles",
+   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.jpg",
    "huellaImagen": "1406bb88c546d07ddcb67d7e992ed0965ebf671f",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
+   "entradas": "https://ticketplus.cl/events/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
    "url": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
    "fuente": {
     "id": "ictus",
@@ -2977,6 +2977,58 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "ictus-historia-de-amor-para-un-alma-vieja",
+   "titulo": "HISTORIA DE AMOR PARA UN ALMA VIEJA",
+   "subtitulo": null,
+   "sinopsis": "“Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
+   "genero": "drama",
+   "compania": null,
+   "director": "Felipe Zambrano Miguieles",
+   "dramaturgo": null,
+   "elenco": [
+    "Eduardo Barril",
+    "Luz Jiménez",
+    "Colomba Larraín",
+    "Pascale Zelaya"
+   ],
+   "duracion": 55,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-27",
+    "hasta": "2026-09-27",
+    "dias": [
+     0,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · “Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/historiadeamor_paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-historia-de-amor-para-un-alma-vieja.jpg",
+   "huellaImagen": "41793d40c8dfacd9647b7d17dff9fb193787bb9e",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
