@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-19T12:22:27.216Z",
+ "actualizado": "2026-08-19T23:14:56.745Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 7,
+   "obras": 8,
    "error": null
   },
   {
@@ -2551,6 +2551,55 @@
    }
   },
   {
+   "id": "ictus-sigrid-y-los-claveles",
+   "titulo": "SIGRID Y LOS CLAVELES",
+   "subtitulo": null,
+   "sinopsis": "Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Sigrid Alegría",
+    "Alonso Velasco Alegría",
+    "Ignacio Andrade",
+    "Ignacio Puga",
+    "Esteban Cruz"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-16",
+    "hasta": "2026-09-16",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:30"
+    }
+   },
+   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIGRIDYLOSCLAVELES_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-sigrid-y-los-claveles.jpg",
+   "huellaImagen": "49871819f1fc4cb13bb5671c8de905fbee643df0",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "nescafe-edo-caroe",
    "titulo": "Edo Caroe",
    "subtitulo": null,
@@ -3061,9 +3110,9 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/Banner_FURIAS.598d8f56.fill-1200x630.png",
+   "imagen": "https://gam.cl/media/images/Portada_furia.2e16d0ba.fill-1200x630.png",
    "imagenLocal": "assets/img/gam-furias.png",
-   "huellaImagen": "7bae7cff905f103e650c31c64de81423b0ff78cf",
+   "huellaImagen": "9f3e99cf09f98a783a234537366bafa472dcfff7",
    "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
@@ -3125,9 +3174,9 @@
      "valor": 7800
     }
    ],
-   "imagen": "https://gam.cl/media/images/RODRIGO_RODRIGAN_1.jpg.1200x900_q.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-informe-para-nadie.jpg",
-   "huellaImagen": "2085f7f5611b19c994b973a6ef847a5aa490ea68",
+   "imagen": "https://gam.cl/media/images/PortadaInforme_Para_Nadie.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
+   "huellaImagen": "be35a1a10d86274adfe95c730d695ac6b3a4a7bd",
    "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
    "fuente": {
