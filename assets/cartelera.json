@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-18T23:12:55.005Z",
+ "actualizado": "2026-08-19T12:22:27.216Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,13 +14,13 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 9,
+   "obras": 8,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 19,
+   "obras": 18,
    "error": null
   },
   {
@@ -579,58 +579,6 @@
    }
   },
   {
-   "id": "mori-felipe-avello-mori-recoleta",
-   "titulo": "Felipe Avello (Mori Recoleta)",
-   "subtitulo": null,
-   "sinopsis": "Felipe Avello llega con un espectáculo de monólogos dinámico y cercano, que invita al público a ser parte activa de la experiencia. Con su estilo lúdico y espontáneo, el comediante construye en escena un show donde referencias internacionales y latinoamericanas se entrelazan con situaciones cotidianas, generando una conexión directa con la audiencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Avello"
-   ],
-   "duracion": 90,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-12",
-    "hasta": "2026-08-18",
-    "dias": [
-     2,
-     3
-    ],
-    "horas": {
-     "2": "20:00",
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "Martes y miércoles, a las 20.00 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/67cae73a9d88f36ce15e7adfa1c9d2f2.jpg",
-   "imagenLocal": "assets/img/mori-felipe-avello-mori-recoleta.jpg",
-   "huellaImagen": "a499385c466c60596e6f215447de23848d93e6d2",
-   "entradas": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
-   "url": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "mori-la-elvira",
    "titulo": "La Elvira",
    "subtitulo": null,
@@ -680,91 +628,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-expertas-en-nada",
-   "titulo": "Expertas en Nada",
-   "subtitulo": null,
-   "sinopsis": "Una charla sin power point. Un panel sin especialistas. Un debate sin moderador. Una conversación sin desenlace. Un consejo que no seguimos. Una fake news sin malas intenciones.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 18,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-18",
-    "hasta": "2026-08-18",
-    "dias": [
-     2
-    ]
-   },
-   "horarioTexto": "18 de agosto - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2025/03/2026_08_18_een_s.jpg",
-   "imagenLocal": "assets/img/nescafe-expertas-en-nada.jpg",
-   "huellaImagen": "bbcdafb756f15f5e32eda332344654ec75387607",
-   "entradas": "https://www.ticketmaster.cl/event/expertas-en-nada-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/expertas-en-nada-2026/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-18",
-    "hasta": "2026-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -852,6 +715,51 @@
    "huellaImagen": "bd4790a162faeb6cb2e10155d1a48fdce8bea862",
    "entradas": "https://ticketplus.cl/events/los-nogalinos",
    "url": "https://teatroictus.cl/cartelera/los-nogalinos/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "ictus-pa-ta-yo-ba-e",
+   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
+   "subtitulo": null,
+   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Nicolás Bascuñán",
+   "dramaturgo": "Nicolás Bascuñán",
+   "elenco": [],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-19",
+    "hasta": "2026-08-22",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
+   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
+   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
+   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
    "fuente": {
     "id": "ictus",
     "nombre": "Teatro Ictus",
