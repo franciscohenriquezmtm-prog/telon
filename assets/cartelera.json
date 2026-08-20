@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-19T23:14:56.745Z",
+ "actualizado": "2026-08-20T12:24:58.905Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-20 → fetch failed"
   },
   {
    "id": "mori",
@@ -34,14 +34,14 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 1,
+   "obras": 2,
    "error": null
   },
   {
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 18,
+   "obras": 17,
    "error": null
   },
   {
@@ -62,14 +62,14 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 8,
+   "obras": 0,
    "error": null
   },
   {
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 14,
+   "obras": 15,
    "error": null
   }
  ],
@@ -508,7 +508,7 @@
      "6": "19:00"
     }
    },
-   "horarioTexto": "10 funciones — 19:00 h",
+   "horarioTexto": "9 funciones — 19:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -628,142 +628,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-fleabag",
-   "titulo": "Fleabag",
-   "subtitulo": null,
-   "sinopsis": "Como ya es tradición, TEATRO NESCAFÉ DE LAS ARTES continúa en 2026 con las transmisiones del ciclo National Theatre Live, obras de altísima calidad artística producidas por el Teatro Nacional de Londres.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Vicky Jones",
-   "dramaturgo": null,
-   "elenco": [
-    "Phoebe Waller-Bridge"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-19",
-    "hasta": "2026-08-19",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "19 de agosto - 19:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_08_19_nt-live_fleabag_s.jpg",
-   "imagenLocal": "assets/img/nescafe-fleabag.jpg",
-   "huellaImagen": "c6db72a6b9c173ab995df95ffdae886840c77223",
-   "entradas": "https://www.ticketmaster.cl/event/477-fleabag-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-fleabag/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-los-nogalinos",
-   "titulo": "LOS NOGALINOS",
-   "subtitulo": null,
-   "sinopsis": "En esta fecha, la banda lanzará su próximo disco &#8220;Patrimonial&#8221; que rescata principalmente el relato urbano, la epopeya ferroviaria, arquitectónica y tradicional plasmada en el canto, instrumentalización y poesía de cada una de las cuecas de este disco, Pero fundamentalmente rescata lo aprendido de los grandes cultores, lo aprendido en las ruedas de canto, el haber escuchado a los &#8220;taitas&#8221; en su máxima expresión y de esta misma forma poder dejar el legado a las nuevas generaciones de cultores de nuestra cueca chilena.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Hernán Rojas",
-    "Cristian Comigual",
-    "Arturo Pastrian",
-    "Felipe Leyton",
-    "Carlos Carrasco"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-19",
-    "hasta": "2026-08-19",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "19 DE AGOSTO · Miércoles | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/Los-nogalinos.jpg",
-   "imagenLocal": "assets/img/ictus-los-nogalinos.jpg",
-   "huellaImagen": "bd4790a162faeb6cb2e10155d1a48fdce8bea862",
-   "entradas": "https://ticketplus.cl/events/los-nogalinos",
-   "url": "https://teatroictus.cl/cartelera/los-nogalinos/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-19",
-    "hasta": "2026-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1431,53 +1295,6 @@
    }
   },
   {
-   "id": "ictus-simon-campusano-agotado",
-   "titulo": "SIMÓN CAMPUSANO | AGOTADO",
-   "subtitulo": null,
-   "sinopsis": "Simón Campusano, ofrece un espectáculo de carácter artístico-cultural en formato banda. La presentación estará centrada en una interpretación especial del álbum Brillo , obra que constituye el primer trabajo discográfico de su carrera como solista y que representa un hito relevante dentro de la música popular chilena contemporánea. El concierto contempla la ejecución en vivo de las composiciones que integran dicho álbum, mediante una propuesta escénica especialmente concebida para esta ocasión, con arreglos e interpretación en formato de banda.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Simón Campusano",
-    "Martín Díaz",
-    "Felipe Díaz"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-26",
-    "hasta": "2026-08-26",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "26 DE AGOSTO · Miércoles | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/SIMONCAMPUSANO_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-simon-campusano-agotado.jpg",
-   "huellaImagen": "27f918b31c654fba64bbf7d9aba35ade98b3bcd0",
-   "entradas": "https://ticketplus.cl/events/simon-campusano-2026-08-26-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-simon-campusano/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "finisterrae-carrera",
    "titulo": "Carrera",
    "subtitulo": null,
@@ -1603,53 +1420,6 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "ictus-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-imp",
-   "titulo": "NATALIA VALDEBENITO PRESENTA: “EL TESORO”. Un espectáculo de improvisación",
-   "subtitulo": null,
-   "sinopsis": "Después casi 20 años en el arte de la improvisación, Natalia Valdebenito , actriz y comediante, se atreve a lanzarse por primera vez al vacío teatral con esta obra íntegramente improvisada. En “El Tesoro ”, Natalia no estará completamente sola. En compañía de un pianista en el escenario, harán nacer una obra teatral cada día, creada ahí mismo con un título dado por el público . El único pie forzado del montaje, donde se le permite al público participar de una manera más que importante en lo que será el resultado de la función.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-27",
-    "hasta": "2026-08-29",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "27, 28 Y 29 DE AGOSTO · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/NATALIAVALDEBENITO_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-imp.jpg",
-   "huellaImagen": "9861cbcaf13934bd85b4cf232032043cf7bf5c2b",
-   "entradas": "https://ticketplus.cl/events/natalia-valdebenito-2026-08-27-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-improvisacion/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2366,53 +2136,6 @@
    }
   },
   {
-   "id": "ictus-fernando-milagros",
-   "titulo": "FERNANDO MILAGROS",
-   "subtitulo": null,
-   "sinopsis": "A 15 de su publicación, Fernando Milagros vuelve a su disco “San Sebastián” , uno de los discos fundamentales de su trayectoria, para interpretarlo completo en un concierto íntimo y excepcional en Teatro ICTUS. Acompañado por el guitarrista Felipe Ruz, Milagros revisitará las canciones SAN SEBASTIÁN en un formato de dos guitarras, cercano y despojado, recuperando el espíritu con el que muchas de ellas fueron creadas. Será una oportunidad única para volver a escuchar este repertorio desde el presente y descubrir cómo el tiempo ha transformado sus letras, sus sonidos y su significado. Este aniversario también marca el regreso de San Sebastián como objeto, el disco será reeditado en vinilo en una edición especial celebrando sus 15 años.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Fernando Milagros",
-    "Simón Campusano",
-    "Felipe Ruiz"
-   ],
-   "duracion": 120,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-09",
-    "hasta": "2026-09-09",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "9 DE SEPTIEMBRE · Miércoles | 20:00H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/1000206419.jpg",
-   "imagenLocal": "assets/img/ictus-fernando-milagros.jpg",
-   "huellaImagen": "a67ffeb12dca3b4ed873b238cdc5533d8733f801",
-   "entradas": "https://ticketplus.cl/events/fernando-milagros",
-   "url": "https://teatroictus.cl/cartelera/fernando-milagros/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "nescafe-mrs-warren-s-profession",
    "titulo": "Mrs. Warren's Profession",
    "subtitulo": null,
@@ -2498,105 +2221,6 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
-   "titulo": "SIEMPRE ENCUENTRA CASA NUEVA, UN MUEBLE ANTIGUO EN LA BASURA",
-   "subtitulo": null,
-   "sinopsis": "&#8220;Es un relato familiar. Se trata de todo lo que una madre es capaz de sacrificar por el cuidado de su hijo&#8221; — Felipe Zambrano Miguieles",
-   "genero": "infantil",
-   "compania": null,
-   "director": "Felipe Zambrano Miguieles",
-   "dramaturgo": "Felipe Zambrano Miguieles",
-   "elenco": [
-    "Consuelo Holzapfel",
-    "Nicolás Eyzaguirre"
-   ],
-   "duracion": 50,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-12",
-    "hasta": "2026-09-12",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.jpg",
-   "huellaImagen": "1406bb88c546d07ddcb67d7e992ed0965ebf671f",
-   "entradas": "https://ticketplus.cl/events/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
-   "url": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "ictus-sigrid-y-los-claveles",
-   "titulo": "SIGRID Y LOS CLAVELES",
-   "subtitulo": null,
-   "sinopsis": "Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Sigrid Alegría",
-    "Alonso Velasco Alegría",
-    "Ignacio Andrade",
-    "Ignacio Puga",
-    "Esteban Cruz"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-16",
-    "hasta": "2026-09-16",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:30"
-    }
-   },
-   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIGRIDYLOSCLAVELES_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-sigrid-y-los-claveles.jpg",
-   "huellaImagen": "49871819f1fc4cb13bb5671c8de905fbee643df0",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
-   "url": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2937,55 +2561,61 @@
    }
   },
   {
-   "id": "ictus-historia-de-amor-para-un-alma-vieja",
-   "titulo": "HISTORIA DE AMOR PARA UN ALMA VIEJA",
+   "id": "lascondes-chicago-el-musical",
+   "titulo": "Chicago: El Musical",
    "subtitulo": null,
-   "sinopsis": "“Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
-   "genero": "drama",
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, «CHICAGO el musical» es...",
+   "genero": "musical",
    "compania": null,
-   "director": "Felipe Zambrano Miguieles",
+   "director": "Felipe Leiva",
    "dramaturgo": null,
    "elenco": [
-    "Eduardo Barril",
-    "Luz Jiménez",
-    "Colomba Larraín",
-    "Pascale Zelaya"
+    "Constanza Mackenna: Roxie Hart"
    ],
-   "duracion": 55,
-   "edad": 12,
+   "duracion": 120,
+   "edad": 14,
    "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
     "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-09-27",
-    "hasta": "2026-09-27",
+    "desde": "2026-09-30",
+    "hasta": "2026-10-18",
     "dias": [
      0,
+     3,
+     4,
      5,
      6
     ],
     "horas": {
-     "0": "19:00",
-     "5": "20:00",
-     "6": "20:00"
+     "0": "18:30",
+     "3": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
     }
    },
-   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · “Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/historiadeamor_paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-historia-de-amor-para-un-alma-vieja.jpg",
-   "huellaImagen": "41793d40c8dfacd9647b7d17dff9fb193787bb9e",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
-   "url": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
+   "horarioTexto": "13 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": "https://www.tmlascondes.cl/wp-content/uploads/2026/08/CHI_SLIDE_2880-x-720-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-chicago-el-musical.jpg",
+   "huellaImagen": "8b52821e5cf3de9f272bad4f6340be1b529825ce",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
+   "url": "https://www.tmlascondes.cl/chicago/",
    "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
@@ -4218,6 +3848,58 @@
    "huellaImagen": "59502021da62b980b6d7d04bdfad2759c5568a42",
    "entradas": "https://teatrozoco.cl/evento/contracciones/",
    "url": "https://teatrozoco.cl/evento/contracciones/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "zoco-el-quinto-paso",
+   "titulo": "EL QUINTO PASO",
+   "subtitulo": null,
+   "sinopsis": "Dos hombres, una mesa y un café que se enfría son el escenario de un duelo psicológico implacable. James, un veterano de Alcohólicos Anónimos, guía a Luka en el momento más crudo del programa: el quinto paso. Lo que inicia como un rito de redención se transforma rápidamente en una espiral de confesiones incómodas, humor ácido y silencios eléctricos que desarman cualquier certeza.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Jesús Urqueta",
+   "dramaturgo": "David Ireland",
+   "elenco": [
+    "Francisco Melo",
+    "Felipe Rojas"
+   ],
+   "duracion": null,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2027-05-14",
+    "hasta": "2027-06-21",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:00",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "14 de mayo al 21 de junio · jueves a sábado 19:30 hrs, domingo 18:00 hrs",
+   "precios": [],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2025/12/AficheFinal_ElQuintoPaso_adaptado-scaled.jpg",
+   "imagenLocal": "assets/img/zoco-el-quinto-paso.jpg",
+   "huellaImagen": "aa0aecfbe952537c1c23d3e1e94b11c2dbb86ffe",
+   "entradas": "https://teatrozoco.cl/evento/el-quinto-paso/",
+   "url": "https://teatrozoco.cl/evento/el-quinto-paso/",
    "fuente": {
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
