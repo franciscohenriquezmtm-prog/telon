@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-20T23:17:42.510Z",
+ "actualizado": "2026-08-21T12:23:39.777Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,20 +14,20 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 8,
+   "obras": 10,
    "error": null
   },
   {
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 4,
+   "obras": 5,
    "error": null
   },
   {
@@ -806,106 +806,6 @@
    }
   },
   {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-20",
-    "hasta": "2026-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "gam-sirenas",
-   "titulo": "Sirenas",
-   "subtitulo": "Coproducción GAM- Theater Basel",
-   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
-   "genero": "drama",
-   "compania": "Sirenas",
-   "director": "Viviane Kübler",
-   "dramaturgo": "Manuela Infante Güell",
-   "elenco": [
-    "Elmira Bahrami",
-    "Giannina Fruttero",
-    "Nicole Sazo Cariola",
-    "Antoinette Ullrich",
-    "Gala Othero Winter"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-20",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-sirenas.jpg",
-   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
-   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "gam-de-papel-famfest-2026",
    "titulo": "De papel: FAMFEST 2026",
    "subtitulo": "FAMFEST 2026",
@@ -964,6 +864,51 @@
    }
   },
   {
+   "id": "ictus-pa-ta-yo-ba-e",
+   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
+   "subtitulo": null,
+   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Nicolás Bascuñán",
+   "dramaturgo": "Nicolás Bascuñán",
+   "elenco": [],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-21",
+    "hasta": "2026-08-22",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
+   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
+   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
+   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "gam-pionero-famfest-2026",
    "titulo": "Pionero: FAMFEST 2026",
    "subtitulo": "FAMFEST 2026",
@@ -1014,6 +959,61 @@
    "huellaImagen": "b475affb5229139d8fed2e18af3d55b683309df0",
    "entradas": "https://www.passline.com/sitio-evento/pionero",
    "url": "https://gam.cl/es/que-hacer-en-gam/familiar/pionero/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-sirenas",
+   "titulo": "Sirenas",
+   "subtitulo": "Coproducción GAM- Theater Basel",
+   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
+   "genero": "drama",
+   "compania": "Sirenas",
+   "director": "Viviane Kübler",
+   "dramaturgo": "Manuela Infante Güell",
+   "elenco": [
+    "Elmira Bahrami",
+    "Giannina Fruttero",
+    "Nicole Sazo Cariola",
+    "Antoinette Ullrich",
+    "Gala Othero Winter"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-21",
+    "hasta": "2026-08-23",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-sirenas.jpg",
+   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
+   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -2043,6 +2043,127 @@
    }
   },
   {
+   "id": "m100-las-cacerolas-vacias",
+   "titulo": "Las Cacerolas Vacías",
+   "subtitulo": null,
+   "sinopsis": "Dos mujeres se reencuentran en un velorio, enfrentando recuerdos, contradicciones y violencia de un movimiento femenino chileno olvidado.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Soledad Cruz Court",
+   "dramaturgo": "Iván Fernández Vidal",
+   "elenco": [
+    "Tamara Ferreira Cáceres",
+    "Carol Henríquez Aguilera",
+    "Bárbara Martín Espinoza"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": "Jue y vie: 20:00 hrs · Sáb y dom: 19:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 6000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 5000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 4000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/08/las-cacerolas-vacías_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-las-cacerolas-vacias.jpg",
+   "huellaImagen": "bba55de6d4432e5f034d2144f8373a9fb9459780",
+   "entradas": "https://www.m100.cl/programacion/teatro/las-cacerolas-vacias/",
+   "url": "https://www.m100.cl/programacion/teatro/las-cacerolas-vacias/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
+   }
+  },
+  {
+   "id": "mori-que-le-corten-la-cabeza",
+   "titulo": "Que le corten la cabeza",
+   "subtitulo": null,
+   "sinopsis": "\"Que le corten la cabeza\", el nuevo trabajo de los Contadores Auditores, evocará la decapitación de la Reina María Antonieta de Francia como metáfora de distintos fenómenos actuales, como la llamada \"cultura de la cancelación\", los violentos vaivenes políticos de Occidente, y la crisis de la verdad en la era de las redes sociales.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "Los Contadores Auditores",
+   "elenco": [
+    "Natalia Valdebenito",
+    "Javiera Contador"
+   ],
+   "duracion": 60,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-10-03",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:30",
+     "5": "20:30",
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": "De jueves a sábado, a las 20:30 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 16000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/01f3716cb56ba02fbe91f753d7d5ca1a.jpg",
+   "imagenLocal": "assets/img/mori-que-le-corten-la-cabeza.jpg",
+   "huellaImagen": "2b528e2179cc6dc0eb06c7d20d08d10222140c20",
+   "entradas": "https://teatromori.cl/obra/WaqiDEqj/que-le-corten-la-cabeza",
+   "url": "https://teatromori.cl/obra/WaqiDEqj/que-le-corten-la-cabeza",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "gam-tres-marias-y-una-rosa",
    "titulo": "Tres Marías y una Rosa",
    "subtitulo": null,
@@ -2506,6 +2627,63 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "mori-tres-marias-y-una-rosa",
+   "titulo": "Tres Marías y una Rosa",
+   "subtitulo": null,
+   "sinopsis": "Inspirada en hechos reales, Tres Marías y una Rosa retrata la vida de cuatro mujeres pobladoras durante la dictadura chilena, quienes encuentran en los talleres de arpilleras su única fuente de ingreso para la familia, en un contexto de pobreza y represión. La obra muestra, con fuerza, humanidad y humor, el desconcierto que genera este cambio de roles en sus hogares y cómo, pese a todo, estas mujeres resisten desde lo cotidiano. Un relato íntimo y potente sobre dignidad, trabajo y supervivencia.",
+   "genero": "comedia",
+   "compania": "Taller de Investigación Teatral (TIT)",
+   "director": "Loreto Valenzuela",
+   "dramaturgo": "David Benavente",
+   "elenco": [
+    "Luciana Ibañez",
+    "Constanza Mora",
+    "Carolina Paulsen",
+    "Malucha Pinto"
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-17",
+    "hasta": "2026-10-03",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:30",
+     "5": "20:30",
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": "De jueves a sábado, a las 20:30 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/eee3fb5b2b1525cf2a8ad9f9528624f9.jpg",
+   "imagenLocal": "assets/img/mori-tres-marias-y-una-rosa.jpg",
+   "huellaImagen": "5fa5a21590620830979095ca258b35e7c117831c",
+   "entradas": "https://teatromori.cl/obra/ylhCcamm/tres-marias-y-una-rosa",
+   "url": "https://teatromori.cl/obra/ylhCcamm/tres-marias-y-una-rosa",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
