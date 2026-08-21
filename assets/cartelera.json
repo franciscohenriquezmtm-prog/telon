@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-21T12:23:39.777Z",
+ "actualizado": "2026-08-21T23:14:33.832Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,8 +13,8 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "obras": 2,
+   "error": null
   },
   {
    "id": "mori",
@@ -631,53 +631,6 @@
    }
   },
   {
-   "id": "teatrouc-el-nino-de-los-fosiles",
-   "titulo": "El niño de los fósiles",
-   "subtitulo": null,
-   "sinopsis": "Gabriel tiene diez años y vive en la ciudad de Los Vilos, es paleontólogo por intuición y decisión, e invita a sus amigos de escuela a vivir aventuras, marcando sus vidas y su visión de la educación tradicional. Compañía Teatro Marote llega a Teatro UC para hacernos parte de estas expediciones a través de las marionetas y el teatro de objetos. Con siete funciones, entre el 20 y el 29 de agosto.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 45,
-   "edad": 5,
-   "sala": {
-    "nombre": "Teatro UC — Sala Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-20",
-    "hasta": "2026-08-29",
-    "dias": [
-     3,
-     4,
-     6
-    ],
-    "horas": {
-     "3": "19:00",
-     "4": "19:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/07/PRO5343-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-el-nino-de-los-fosiles.jpg",
-   "huellaImagen": "29f101d7dd79d9223d79a7c31abe70af259bd672",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/el-nino-de-los-fosiles/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
    "id": "m100-la-nueva-obra",
    "titulo": "La Nueva Obra",
    "subtitulo": null,
@@ -864,8 +817,8 @@
    }
   },
   {
-   "id": "ictus-pa-ta-yo-ba-e",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!!",
+   "id": "ictus-pa-ta-yo-ba-e-agotado",
+   "titulo": "PA$$$TA(YO)BA$$$E!!!! | AGOTADO",
    "subtitulo": null,
    "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
    "genero": "comedia",
@@ -895,10 +848,10 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO | ÚLTIMAS FUNCIONES · Vie y sáb | 20:00 H · Comprar entrada",
+   "horarioTexto": "HASTA EL 22 DE AGOSTO · Vie y sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e.jpg",
+   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e-agotado.jpg",
    "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
    "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
    "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
@@ -1387,6 +1340,53 @@
    }
   },
   {
+   "id": "ictus-el-tesoro-por-natalia-valdebenito-agotado",
+   "titulo": "“EL TESORO” POR NATALIA VALDEBENITO | AGOTADO",
+   "subtitulo": null,
+   "sinopsis": "Después casi 20 años en el arte de la improvisación, Natalia Valdebenito , actriz y comediante, se atreve a lanzarse por primera vez al vacío teatral con esta obra íntegramente improvisada. En “El Tesoro ”, Natalia no estará completamente sola. En compañía de un pianista en el escenario, harán nacer una obra teatral cada día, creada ahí mismo con un título dado por el público . El único pie forzado del montaje, donde se le permite al público participar de una manera más que importante en lo que será el resultado de la función.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-27",
+    "hasta": "2026-08-29",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "27, 28 Y 29 DE AGOSTO · Jue a sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/NATALIAVALDEBENITO_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-el-tesoro-por-natalia-valdebenito-agotado.jpg",
+   "huellaImagen": "9861cbcaf13934bd85b4cf232032043cf7bf5c2b",
+   "entradas": "https://ticketplus.cl/events/natalia-valdebenito-2026-08-27-20-00-00-0400",
+   "url": "https://teatroictus.cl/cartelera/proximamente-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-improvisacion/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "finisterrae-carrera",
    "titulo": "Carrera",
    "subtitulo": null,
@@ -1512,53 +1512,6 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "ictus-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-imp",
-   "titulo": "NATALIA VALDEBENITO PRESENTA: “EL TESORO”. Un espectáculo de improvisación",
-   "subtitulo": null,
-   "sinopsis": "Después casi 20 años en el arte de la improvisación, Natalia Valdebenito , actriz y comediante, se atreve a lanzarse por primera vez al vacío teatral con esta obra íntegramente improvisada. En “El Tesoro ”, Natalia no estará completamente sola. En compañía de un pianista en el escenario, harán nacer una obra teatral cada día, creada ahí mismo con un título dado por el público . El único pie forzado del montaje, donde se le permite al público participar de una manera más que importante en lo que será el resultado de la función.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-27",
-    "hasta": "2026-08-29",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "27, 28 Y 29 DE AGOSTO · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/NATALIAVALDEBENITO_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-imp.jpg",
-   "huellaImagen": "9861cbcaf13934bd85b4cf232032043cf7bf5c2b",
-   "entradas": "https://ticketplus.cl/events/natalia-valdebenito-2026-08-27-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-improvisacion/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
