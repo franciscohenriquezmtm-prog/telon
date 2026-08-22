@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-21T23:14:33.832Z",
+ "actualizado": "2026-08-22T12:17:40.313Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": null
+   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-22 → fetch failed"
   },
   {
    "id": "mori",
@@ -759,6 +759,57 @@
    }
   },
   {
+   "id": "zoco-un-interrogatorio",
+   "titulo": "UN INTERROGATORIO",
+   "subtitulo": null,
+   "sinopsis": "Cada palabra es un movimiento dentro de un juego que se libera contra el tiempo en el que el público se convierte en testigo de una coreografía de estrategia y manipulación.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Manuel Morgado @manuel_morgado_esc",
+   "dramaturgo": null,
+   "elenco": [
+    "Jaime Omeñaca @jaimeomenaca",
+    "Julio Milostich @juliomilostich.oficial",
+    "Fernanda Finsterbusch @fernandafinsterbusch"
+   ],
+   "duracion": 60,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-21",
+    "hasta": "2026-10-05",
+    "dias": [
+     0,
+     4,
+     6
+    ],
+    "horas": {
+     "0": "18:00",
+     "4": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Temporada desde el 21 de agosto al 5 de octubre con receso entre el 18 y el 21 de septiembre. · De jueves a sábado a las 19.30 hrs y domingo a las 18.00 hrs. · Recomendada para mayores de 14 años · Av. la Dehesa 1500, Lo Barnechea.",
+   "precios": [],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2025/03/Afiche_UnInterrogatorio-2-scaled.jpg",
+   "imagenLocal": "assets/img/zoco-un-interrogatorio.jpg",
+   "huellaImagen": "096db61cb756d019b8b17516bbd584cb43b53aa1",
+   "entradas": "https://teatrozoco.cl/evento/un-interrogatorio/",
+   "url": "https://teatrozoco.cl/evento/un-interrogatorio/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
    "id": "gam-de-papel-famfest-2026",
    "titulo": "De papel: FAMFEST 2026",
    "subtitulo": "FAMFEST 2026",
@@ -783,7 +834,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-21",
+    "desde": "2026-08-22",
     "hasta": "2026-08-23",
     "dias": [
      0,
@@ -817,6 +868,62 @@
    }
   },
   {
+   "id": "mori-golden-las-guerreras-del-kpop-tributo",
+   "titulo": "Golden: las Guerreras del KPOP Tributo",
+   "subtitulo": null,
+   "sinopsis": "En esta experiencia teatral y musical imperdible, Rumi, Mira y Zoey luchan por restablecer el bien en el mundo, peleando contra los Saja Boy.",
+   "genero": "musical",
+   "compania": "Landaeta&Cano Teatro",
+   "director": "Coto Gutiérrez y Roger Landaeta",
+   "dramaturgo": null,
+   "elenco": [
+    "Adonis Yerone"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-22",
+    "hasta": "2026-08-23",
+    "dias": [
+     0,
+     6
+    ],
+    "horas": {
+     "0": "16:00",
+     "6": "16:00"
+    }
+   },
+   "horarioTexto": "Sábado 16:00 hrs | Domingo 16:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/72e1fdd2504292806b41c552f7a26b54.jpg",
+   "imagenLocal": "assets/img/mori-golden-las-guerreras-del-kpop-tributo.jpg",
+   "huellaImagen": "ad27a7b3e64265678e79f5e458746e63aedcf62c",
+   "entradas": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
+   "url": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "ictus-pa-ta-yo-ba-e-agotado",
    "titulo": "PA$$$TA(YO)BA$$$E!!!! | AGOTADO",
    "subtitulo": null,
@@ -837,8 +944,8 @@
     "sitio": "https://teatroictus.cl"
    },
    "temporada": {
-    "desde": "2026-08-21",
-    "hasta": "2026-08-22",
+    "desde": "2026-08-22",
+    "hasta": "2027-08-22",
     "dias": [
      5,
      6
@@ -885,7 +992,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-21",
+    "desde": "2026-08-22",
     "hasta": "2026-08-23",
     "dias": [
      0,
@@ -945,7 +1052,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-21",
+    "desde": "2026-08-22",
     "hasta": "2026-08-23",
     "dias": [
      0,
@@ -971,113 +1078,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "zoco-un-interrogatorio",
-   "titulo": "UN INTERROGATORIO",
-   "subtitulo": null,
-   "sinopsis": "Cada palabra es un movimiento dentro de un juego que se libera contra el tiempo en el que el público se convierte en testigo de una coreografía de estrategia y manipulación.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Manuel Morgado @manuel_morgado_esc",
-   "dramaturgo": null,
-   "elenco": [
-    "Jaime Omeñaca @jaimeomenaca",
-    "Julio Milostich @juliomilostich.oficial",
-    "Fernanda Finsterbusch @fernandafinsterbusch"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-21",
-    "hasta": "2026-10-05",
-    "dias": [
-     0,
-     4,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Temporada desde el 21 de agosto al 5 de octubre con receso entre el 18 y el 21 de septiembre. · De jueves a sábado a las 19.30 hrs y domingo a las 18.00 hrs. · Recomendada para mayores de 14 años · Av. la Dehesa 1500, Lo Barnechea.",
-   "precios": [],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2025/03/Afiche_UnInterrogatorio-2-scaled.jpg",
-   "imagenLocal": "assets/img/zoco-un-interrogatorio.jpg",
-   "huellaImagen": "096db61cb756d019b8b17516bbd584cb43b53aa1",
-   "entradas": "https://teatrozoco.cl/evento/un-interrogatorio/",
-   "url": "https://teatrozoco.cl/evento/un-interrogatorio/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "mori-golden-las-guerreras-del-kpop-tributo",
-   "titulo": "Golden: las Guerreras del KPOP Tributo",
-   "subtitulo": null,
-   "sinopsis": "En esta experiencia teatral y musical imperdible, Rumi, Mira y Zoey luchan por restablecer el bien en el mundo, peleando contra los Saja Boy.",
-   "genero": "musical",
-   "compania": "Landaeta&Cano Teatro",
-   "director": "Coto Gutiérrez y Roger Landaeta",
-   "dramaturgo": null,
-   "elenco": [
-    "Adonis Yerone"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "16:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": "Sábado 16:00 hrs | Domingo 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/72e1fdd2504292806b41c552f7a26b54.jpg",
-   "imagenLocal": "assets/img/mori-golden-las-guerreras-del-kpop-tributo.jpg",
-   "huellaImagen": "ad27a7b3e64265678e79f5e458746e63aedcf62c",
-   "entradas": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
-   "url": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
