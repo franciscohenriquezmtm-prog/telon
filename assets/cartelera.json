@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-22T23:12:18.884Z",
+ "actualizado": "2026-08-23T12:17:53.925Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -55,14 +55,14 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 7,
+   "obras": 6,
    "error": null
   },
   {
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 7,
+   "obras": 6,
    "error": null
   },
   {
@@ -473,55 +473,6 @@
    }
   },
   {
-   "id": "puente-cornisa",
-   "titulo": "CORNISA",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-08",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "9 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
    "id": "mori-el-monstruo-triste-tras-la-puerta-secreta",
    "titulo": "El monstruo triste tras la puerta secreta",
    "subtitulo": null,
@@ -810,64 +761,6 @@
    }
   },
   {
-   "id": "gam-de-papel-famfest-2026",
-   "titulo": "De papel: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "Una invitación a jugar desde la simpleza e ingenuidad en situaciones cotidianas. Una marioneta de papel, tres manipuladores y el público son los protagonista...",
-   "genero": "titeres",
-   "compania": "De papel",
-   "director": "Santiago Tobar",
-   "dramaturgo": null,
-   "elenco": [
-    "Dominga Gutiérrez",
-    "Rodolfo Armijo",
-    "Santiago Tobar"
-   ],
-   "duracion": 30,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     5
-    ],
-    "horas": {
-     "0": "17:00",
-     "5": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/depapel-65_Cred_Nicolas_Calderon.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-de-papel-famfest-2026.jpg",
-   "huellaImagen": "02dbff6d195819ac1d5ac4d2f275ec27e7d90f27",
-   "entradas": "https://www.passline.com/sitio-evento/de-papel-534578",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/de-papel/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-golden-las-guerreras-del-kpop-tributo",
    "titulo": "Golden: las Guerreras del KPOP Tributo",
    "subtitulo": null,
@@ -921,163 +814,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "ictus-pa-ta-yo-ba-e-agotado",
-   "titulo": "PA$$$TA(YO)BA$$$E!!!! | AGOTADO",
-   "subtitulo": null,
-   "sinopsis": "PA$$$TA(YO)BA$$$E!!!! es un monólogo contemporáneo que transcurre durante los últimos instantes de vida de un consumidor de pasta base de cocaína en una población de Santiago. Desde ese umbral entre la vida y la muerte emerge una polifonía de voces, tiempos y territorios que fracturan la realidad: una anciana perdida en la inmensidad del altiplano boliviano, un actor atrapado en el vacío narcisista de Hollywood, un soldado romano que atraviesa una población devastada por la droga y la aparición de una enigmática presencia divina. Cada figura constituye un viaje febril que explora la adicción no solo como experiencia individual, sino también como síntoma social, político y espiritual. Con una puesta en escena cargada de humor negro, que transita entre lo popular y lo sagrado, la obra propone diferentes reflexiones sobre el consumo de pasta base, en donde convergen la historia latinoameric",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Nicolás Bascuñán",
-   "dramaturgo": "Nicolás Bascuñán",
-   "elenco": [],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2027-08-22",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "HASTA EL 22 DE AGOSTO · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/06/PASTAYOBASE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-pa-ta-yo-ba-e-agotado.jpg",
-   "huellaImagen": "8ff17397fa9cfb87e201e0242e9916bb1a36b07f",
-   "entradas": "https://ticketplus.cl/events/pa-ta-yo-ba-e-2026-07-31-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-patayobae/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "gam-pionero-famfest-2026",
-   "titulo": "Pionero: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "¿Qué puede descubrir un niño en un colegio vacío? Esa pregunta da inicio a la obra de la compañía Candilejas. Pionero sigue a Alberto, un niño cuya espera co...",
-   "genero": "infantil",
-   "compania": "Pionero",
-   "director": "Valentina Tapia",
-   "dramaturgo": "Valentina Tapia",
-   "elenco": [
-    "Yomara Espinosa",
-    "Elisa Osorio"
-   ],
-   "duracion": 45,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     5
-    ],
-    "horas": {
-     "0": "18:00",
-     "5": "18:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Pionero_2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-pionero-famfest-2026.jpg",
-   "huellaImagen": "b475affb5229139d8fed2e18af3d55b683309df0",
-   "entradas": "https://www.passline.com/sitio-evento/pionero",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/pionero/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-sirenas",
-   "titulo": "Sirenas",
-   "subtitulo": "Coproducción GAM- Theater Basel",
-   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
-   "genero": "drama",
-   "compania": "Sirenas",
-   "director": "Viviane Kübler",
-   "dramaturgo": "Manuela Infante Güell",
-   "elenco": [
-    "Elmira Bahrami",
-    "Giannina Fruttero",
-    "Nicole Sazo Cariola",
-    "Antoinette Ullrich",
-    "Gala Othero Winter"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2026-08-23",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-sirenas.jpg",
-   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
-   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1137,19 +873,23 @@
    }
   },
   {
-   "id": "gam-tormenta-famfest-2026",
-   "titulo": "Tormenta: FAMFEST 2026",
+   "id": "gam-de-papel-famfest-2026",
+   "titulo": "De papel: FAMFEST 2026",
    "subtitulo": "FAMFEST 2026",
-   "sinopsis": "El circo familiar llega con la compañía El Límite de lo Propio que combina acrobacias, malabares y danza para jugar con las fuerzas y energías de la tormenta...",
-   "genero": "infantil",
-   "compania": "Tormenta",
-   "director": null,
+   "sinopsis": "Una invitación a jugar desde la simpleza e ingenuidad en situaciones cotidianas. Una marioneta de papel, tres manipuladores y el público son los protagonista...",
+   "genero": "titeres",
+   "compania": "De papel",
+   "director": "Santiago Tobar",
    "dramaturgo": null,
-   "elenco": [],
-   "duracion": 50,
-   "edad": 0,
+   "elenco": [
+    "Dominga Gutiérrez",
+    "Rodolfo Armijo",
+    "Santiago Tobar"
+   ],
+   "duracion": 30,
+   "edad": null,
    "sala": {
-    "nombre": "Centro GAM — Sala B1",
+    "nombre": "Centro GAM — Sala N1",
     "comuna": "Santiago Centro",
     "direccion": "Av. Libertador Bernardo O’Higgins 227",
     "metro": "Universidad Católica (L1)",
@@ -1157,15 +897,15 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-22",
-    "hasta": "2026-08-30",
+    "desde": "2026-08-23",
+    "hasta": "2026-08-23",
     "dias": [
      0,
-     6
+     5
     ],
     "horas": {
-     "0": "16:00",
-     "6": "16:00"
+     "0": "17:00",
+     "5": "17:00"
     }
    },
    "horarioTexto": null,
@@ -1176,22 +916,71 @@
     },
     {
      "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 9000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 6300
-    },
-    {
-     "tipo": "Convenio",
      "valor": 5000
     }
    ],
-   "imagen": "https://gam.cl/media/images/Tormenta-6_Franco_Von_Arx_-_Allui.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-tormenta-famfest-2026.jpg",
-   "huellaImagen": "69244236bb1b56f70d9c59c313c60cc28e5bd582",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/tormenta/",
+   "imagen": "https://gam.cl/media/images/depapel-65_Cred_Nicolas_Calderon.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-de-papel-famfest-2026.jpg",
+   "huellaImagen": "02dbff6d195819ac1d5ac4d2f275ec27e7d90f27",
+   "entradas": "https://www.passline.com/sitio-evento/de-papel-534578",
+   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/de-papel/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-pionero-famfest-2026",
+   "titulo": "Pionero: FAMFEST 2026",
+   "subtitulo": "FAMFEST 2026",
+   "sinopsis": "¿Qué puede descubrir un niño en un colegio vacío? Esa pregunta da inicio a la obra de la compañía Candilejas. Pionero sigue a Alberto, un niño cuya espera co...",
+   "genero": "infantil",
+   "compania": "Pionero",
+   "director": "Valentina Tapia",
+   "dramaturgo": "Valentina Tapia",
+   "elenco": [
+    "Yomara Espinosa",
+    "Elisa Osorio"
+   ],
+   "duracion": 45,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-23",
+    "hasta": "2026-08-23",
+    "dias": [
+     0,
+     5
+    ],
+    "horas": {
+     "0": "18:00",
+     "5": "18:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Pionero_2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-pionero-famfest-2026.jpg",
+   "huellaImagen": "b475affb5229139d8fed2e18af3d55b683309df0",
+   "entradas": "https://www.passline.com/sitio-evento/pionero",
+   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/pionero/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1235,7 +1024,7 @@
      0
     ]
    },
-   "horarioTexto": "20 al 23 de agosto",
+   "horarioTexto": "Ultima función - 23 de agosto - 19:00 horas",
    "precios": [],
    "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/05/2026_07_31_sdo_2_s.jpg",
    "imagenLocal": "assets/img/nescafe-secretos-de-oficina.jpg",
@@ -1246,6 +1035,123 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-sirenas",
+   "titulo": "Sirenas",
+   "subtitulo": "Coproducción GAM- Theater Basel",
+   "sinopsis": "En la antigüedad, las sirenas eran criaturas parte pájaros, parte peces, con torso de mujer. «Lo sabemos todo», cantaban. Eran criaturas híbridas en la front...",
+   "genero": "drama",
+   "compania": "Sirenas",
+   "director": "Viviane Kübler",
+   "dramaturgo": "Manuela Infante Güell",
+   "elenco": [
+    "Elmira Bahrami",
+    "Giannina Fruttero",
+    "Nicole Sazo Cariola",
+    "Antoinette Ullrich",
+    "Gala Othero Winter"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-23",
+    "hasta": "2026-08-23",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/sirenas_1.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-sirenas.jpg",
+   "huellaImagen": "d5b28cbba353417f041b4d10bce670bd359807e1",
+   "entradas": "https://gam.ticketplus.cl/events/sirenas?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sirenas/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-tormenta-famfest-2026",
+   "titulo": "Tormenta: FAMFEST 2026",
+   "subtitulo": "FAMFEST 2026",
+   "sinopsis": "El circo familiar llega con la compañía El Límite de lo Propio que combina acrobacias, malabares y danza para jugar con las fuerzas y energías de la tormenta...",
+   "genero": "infantil",
+   "compania": "Tormenta",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 50,
+   "edad": 0,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-23",
+    "hasta": "2026-08-30",
+    "dias": [
+     0,
+     6
+    ],
+    "horas": {
+     "0": "16:00",
+     "6": "16:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 6300
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Tormenta-6_Franco_Von_Arx_-_Allui.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-tormenta-famfest-2026.jpg",
+   "huellaImagen": "69244236bb1b56f70d9c59c313c60cc28e5bd582",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/tormenta/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
