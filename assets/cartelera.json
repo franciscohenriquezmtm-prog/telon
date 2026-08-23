@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-23T12:17:53.925Z",
+ "actualizado": "2026-08-23T23:12:06.127Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -1505,7 +1505,7 @@
      5
     ]
    },
-   "horarioTexto": "28 de agosto - 20:00 horas",
+   "horarioTexto": "28 de agosto / 7 y 8 de septiembre - 20:00 horas",
    "precios": [],
    "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/11/2026_08_03_avello_s.jpg",
    "imagenLocal": "assets/img/nescafe-felipe-avello.jpg",
