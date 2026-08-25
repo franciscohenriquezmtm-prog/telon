@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-24T23:14:46.965Z",
+ "actualizado": "2026-08-25T12:25:14.837Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": null
+   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-25 → fetch failed"
   },
   {
    "id": "mori",
@@ -2010,12 +2010,12 @@
      "3": "20:30"
     }
    },
-   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
+   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIGRIDYLOSCLAVELES_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-sigrid-y-los-claveles.jpg",
    "huellaImagen": "49871819f1fc4cb13bb5671c8de905fbee643df0",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
+   "entradas": "https://ticketplus.cl/events/sigrid-y-los-claveles",
    "url": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
    "fuente": {
     "id": "ictus",
@@ -2314,9 +2314,9 @@
    },
    "horarioTexto": "25 de septiembre - 20:00 horas",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_25_animas-de-dia-claro_s.jpg",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_25_animas-de-dia-claro_s_3.jpg",
    "imagenLocal": "assets/img/nescafe-animas-de-dia-claro.jpg",
-   "huellaImagen": "66fba10837834fe1dbadcdb2785e800b7b3321c1",
+   "huellaImagen": "5531c615e4c519b4bc52884e352135dbbfec4fa3",
    "entradas": "https://www.ticketmaster.cl/event/animas-de-dia-claro-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/animas-de-dia-claro-2026/",
    "fuente": {
