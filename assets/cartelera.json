@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-25T12:25:14.837Z",
+ "actualizado": "2026-08-25T23:18:11.507Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": "https://teatrouc.uc.cl/wp-json/tribe/events/v1/events?per_page=50&status=publish&start_date=2026-08-25 → fetch failed"
+   "error": null
   },
   {
    "id": "mori",
@@ -1890,7 +1890,16 @@
    "director": "Andrés Pérez Ramírez",
    "dramaturgo": null,
    "elenco": [
-    "Por confirmar"
+    "Micaela Sandoval",
+    "Tito Cancino",
+    "Marcela Pumarino",
+    "Sebastián Caro",
+    "María Elena Ovalle",
+    "Franco Falcón",
+    "Mona Guerrero",
+    "Emerson Velásquez",
+    "Natalia Rojas",
+    "Michael Bravo"
    ],
    "duracion": 30,
    "edad": 12,
@@ -2265,9 +2274,9 @@
    },
    "horarioTexto": "24 de septiembre - 20:00 horas",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_24_la-remolienda_s.jpg",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_24_la-remolienda_s_4.jpg",
    "imagenLocal": "assets/img/nescafe-la-remolienda.jpg",
-   "huellaImagen": "a2198e21b8138ab7a1cf5eb621b6b38e883052a0",
+   "huellaImagen": "80431e7837c18a786111e0b95cd3a6494c8d056e",
    "entradas": "https://www.ticketmaster.cl/event/la-remolienda-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-remolienda-2026/",
    "fuente": {
