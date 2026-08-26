@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-25T23:18:11.507Z",
+ "actualizado": "2026-08-26T12:26:45.191Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -69,7 +69,7 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 15,
+   "obras": 14,
    "error": null
   }
  ],
@@ -236,60 +236,6 @@
    "huellaImagen": "36e5297a504da1f540a4a6e4c1f77e3ef58a3f59",
    "entradas": "https://teatrozoco.cl/evento/en-el-medio-2/",
    "url": "https://teatrozoco.cl/evento/en-el-medio-2/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "zoco-la-prueba",
-   "titulo": "LA PRUEBA",
-   "subtitulo": null,
-   "sinopsis": "Catherine ha sacrificado años de su vida al cuidado de su padre, un matemático brillante que revolucionó su campo de estudio desde muy joven. Sus cuadernos la conducen ahora a develar una serie de oscuros secretos. ¿Qué es lo que realmente ha heredado de él? ¿Su genio o su locura?",
-   "genero": "drama",
-   "compania": null,
-   "director": "Marcelo Leonart",
-   "dramaturgo": "David Auburn",
-   "elenco": [
-    "Paula Luchsinger",
-    "Tito Bustamante",
-    "Andrew Bargsted",
-    "Valentina Muhr"
-   ],
-   "duracion": null,
-   "edad": 14,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-07-19",
-    "hasta": "2026-08-25",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Temporada: 19 de julio al 25 de agosto · Funciones jueves, viernes y sábado a las 20h y domingo a las 19h · Recomendada para mayores de 14 años",
-   "precios": [],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2024/05/Captura-de-pantalla-2024-05-14-a-las-16.45.28.png",
-   "imagenLocal": "assets/img/zoco-la-prueba.png",
-   "huellaImagen": "379e9bba6a1772afab2c801cc41061ce2c69fac6",
-   "entradas": "https://teatrozoco.cl/evento/la-prueba/",
-   "url": "https://teatrozoco.cl/evento/la-prueba/",
    "fuente": {
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
