@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-29T23:43:18.152Z",
+ "actualizado": "2026-08-31T00:02:11.129Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 9,
+   "obras": 8,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 18,
+   "obras": 17,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
+   "obras": 4,
    "error": null
   },
   {
@@ -190,58 +190,6 @@
    "huellaImagen": "01b60c198a7c969692b0837e2140686cb11f8ef8",
    "entradas": "https://teatromori.cl/obra/5GoAPfvX/empieza-con-d--siete-letras",
    "url": "https://teatromori.cl/obra/5GoAPfvX/empieza-con-d--siete-letras",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "mori-amantes-parejas-disparejas",
-   "titulo": "Amantes, Parejas Disparejas",
-   "subtitulo": null,
-   "sinopsis": "\"Amantes, Parejas Disparejas\" es la exitosa comedia de improvisación teatral de Lospleimovil que regresa en su novena temporada, ahora en el festival de comedias del teatro MORI. Tres parejas buscan salvar su relación asistiendo a una terapia de pareja. Lo que no saben es que sus historias se entrelazarán en una ola de infidelidades tan absurda como divertida.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Claudio Espinoza",
-   "dramaturgo": "Claudio Espinoza",
-   "elenco": [
-    "Lissette Villegas"
-   ],
-   "duracion": 60,
-   "edad": 16,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-07",
-    "hasta": "2026-08-29",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:30",
-     "6": "20:30"
-    }
-   },
-   "horarioTexto": "Viernes y sábado a las 20:30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/ea4a794e83049c8fea259a2951c7b6eb.jpg",
-   "imagenLocal": "assets/img/mori-amantes-parejas-disparejas.jpg",
-   "huellaImagen": "34d0ac325183316e3be3706d75fa64a6084b2119",
-   "entradas": "https://teatromori.cl/obra/nW6pRm3x/amantes--parejas-disparejas",
-   "url": "https://teatromori.cl/obra/nW6pRm3x/amantes--parejas-disparejas",
    "fuente": {
     "id": "mori",
     "nombre": "Teatro Mori",
@@ -428,53 +376,6 @@
    }
   },
   {
-   "id": "ictus-el-tesoro-por-natalia-valdebenito-agotado",
-   "titulo": "“EL TESORO” POR NATALIA VALDEBENITO | AGOTADO",
-   "subtitulo": null,
-   "sinopsis": "Después casi 20 años en el arte de la improvisación, Natalia Valdebenito , actriz y comediante, se atreve a lanzarse por primera vez al vacío teatral con esta obra íntegramente improvisada. En “El Tesoro ”, Natalia no estará completamente sola. En compañía de un pianista en el escenario, harán nacer una obra teatral cada día, creada ahí mismo con un título dado por el público . El único pie forzado del montaje, donde se le permite al público participar de una manera más que importante en lo que será el resultado de la función.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-27",
-    "hasta": "2026-08-29",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "27, 28 Y 29 DE AGOSTO · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/07/NATALIAVALDEBENITO_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-el-tesoro-por-natalia-valdebenito-agotado.jpg",
-   "huellaImagen": "9861cbcaf13934bd85b4cf232032043cf7bf5c2b",
-   "entradas": "https://ticketplus.cl/events/natalia-valdebenito-2026-08-27-20-00-00-0400",
-   "url": "https://teatroictus.cl/cartelera/proximamente-natalia-valdebenito-presenta-el-tesoro-un-espectaculo-de-improvisacion/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "zoco-espectros",
    "titulo": "ESPECTROS",
    "subtitulo": null,
@@ -588,6 +489,55 @@
    }
   },
   {
+   "id": "puente-la-noche-de-las-espaldas",
+   "titulo": "La noche de las espaldas",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-08-29",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": "9 funciones — 19:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
    "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
    "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
    "subtitulo": "Presentado por LOS HÉROES",
@@ -610,7 +560,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-29",
+    "desde": "2026-08-30",
     "hasta": "2026-09-13",
     "dias": [
      0,
@@ -659,7 +609,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-29",
+    "desde": "2026-08-30",
     "hasta": "2026-09-06",
     "dias": [
      0,
@@ -719,7 +669,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-08-29",
+    "desde": "2026-08-30",
     "hasta": "2026-08-30",
     "dias": [
      0,
@@ -750,95 +700,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-cecilia-ce",
-   "titulo": "Cecilia Ce",
-   "subtitulo": null,
-   "sinopsis": "Este evento se realizaría originalmente el miércoles 8 de julio a las 20:00 horas y se ha cambiado para el domingo 30 de agosto a las 19:00 horas, por razones logísticas. Las entradas siguen siendo válidas con las mismas condiciones y ubicaciones para la nueva fecha.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ariel Stolier",
-   "dramaturgo": "Cecilia Ce",
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-30",
-    "hasta": "2026-08-30",
-    "dias": [
-     0
-    ]
-   },
-   "horarioTexto": "30 de agosto - 19:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2025/05/2026_07_08_cecilia-ce_s.jpg",
-   "imagenLocal": "assets/img/nescafe-cecilia-ce.jpg",
-   "huellaImagen": "c25f287583f710af9030d5e2108c0d640aa04a4f",
-   "entradas": "https://www.ticketmaster.cl/event/cecilia-ce-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/cecilia-ce-encende-tu-motor/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "puente-la-noche-de-las-espaldas",
-   "titulo": "La noche de las espaldas",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-30",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "9 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
