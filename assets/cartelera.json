@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-08-31T00:02:11.129Z",
+ "actualizado": "2026-09-01T23:39:50.126Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 13,
+   "obras": 12,
    "error": null
   },
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 0,
+   "obras": 7,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
+   "obras": 6,
    "error": null
   },
   {
@@ -197,34 +197,30 @@
    }
   },
   {
-   "id": "m100-la-nueva-obra",
-   "titulo": "La Nueva Obra",
+   "id": "lascondes-close-to-me",
+   "titulo": "Close To Me",
    "subtitulo": null,
-   "sinopsis": "Una compañía teatral en crisis planea robar un banco. A partir de esa ficción, la obra explora con humor oscuro, la precariedad, la creación y la supervivencia.",
-   "genero": "comedia",
+   "sinopsis": "De los creadores de los exitosos musicales “Hit, un musical de los 80” y “Es por Amor, el musical de Rock Latino”, llega “Close To Me”, una emocionante, romántica y...",
+   "genero": "musical",
    "compania": null,
-   "director": "Alexis Moreno",
-   "dramaturgo": null,
+   "director": "Paula Barraza y Martín Erazo",
+   "dramaturgo": "Rodrigo Muñoz Medina, Paula Barraza y Martín Erazo",
    "elenco": [
-    "Alexandra von Hummel Zegers",
-    "Alexis Moreno",
-    "Rodrigo Soto",
-    "Manuel Peña",
-    "Tamara Acosta"
+    "Francisca Walker"
    ],
-   "duracion": 75,
+   "duracion": 90,
    "edad": 14,
    "sala": {
-    "nombre": "Matucana 100",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-08-20",
-    "hasta": "2026-08-30",
+    "desde": "2026-08-06",
+    "hasta": "2026-09-06",
     "dias": [
      0,
      4,
@@ -232,96 +228,28 @@
      6
     ],
     "horas": {
-     "0": "19:30",
-     "4": "20:30",
-     "5": "20:30",
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
      "6": "19:30"
     }
    },
-   "horarioTexto": "Jue y vie: 20:30 hrs · Sáb y dom: 19:30 hrs",
+   "horarioTexto": "20 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
+     "valor": 22000
     }
    ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/07/la-nueva-obra_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-la-nueva-obra.jpg",
-   "huellaImagen": "07f0538a4662757cc3d4fa364148dd4f08501767",
-   "entradas": "https://www.m100.cl/programacion/teatro/la-nueva-obra-2/",
-   "url": "https://www.m100.cl/programacion/teatro/la-nueva-obra-2/",
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/05/WEB_CLOSETOME_SLIDE-1-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-close-to-me.jpg",
+   "huellaImagen": "8fda91295a7eac87221acae55c404ba628f005b1",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30777",
+   "url": "https://tmlascondes.cl/close-to-me/",
    "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "m100-not-antigona",
-   "titulo": "Not-Antígona",
-   "subtitulo": null,
-   "sinopsis": "Inspirada en Antígona, el clásico griego, esta nueva versión invita a preguntarnos quiénes somos, qué sociedad hemos construido y cuáles son los futuros que aún podemos imaginar.",
-   "genero": "clasico",
-   "compania": null,
-   "director": "Sebastián Squella Chávez",
-   "dramaturgo": "Sebastián Squella Chávez",
-   "elenco": [
-    "Noel Saint-Jean Maucher",
-    "Belén Zambeat Meneses",
-    "Amelia Barrés Valdivieso"
-   ],
-   "duracion": 80,
-   "edad": 14,
-   "sala": {
-    "nombre": "Matucana 100 — Espacio Patricio Bunster",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-20",
-    "hasta": "2026-08-30",
-    "dias": [
-     0,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "Mié a vie: 20:00 hrs · Sáb y dom: 19:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 7000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/07/not-antigona_slidehome_1920x1488-1.jpg",
-   "imagenLocal": "assets/img/m100-not-antigona.jpg",
-   "huellaImagen": "feb683c7c6d60b82eca4a4563228f7fb73f0b48f",
-   "entradas": "https://www.m100.cl/programacion/teatro/not-antigona/",
-   "url": "https://www.m100.cl/programacion/teatro/not-antigona/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
@@ -489,260 +417,6 @@
    }
   },
   {
-   "id": "puente-la-noche-de-las-espaldas",
-   "titulo": "La noche de las espaldas",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-29",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "9 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
-   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
-   "subtitulo": "Presentado por LOS HÉROES",
-   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
-   "genero": "drama",
-   "compania": "Piedad Noguera",
-   "director": "Cuti Aste",
-   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
-   "elenco": [
-    "Bernardita Nassar"
-   ],
-   "duracion": 120,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-30",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "18:30"
-    }
-   },
-   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
-   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
-   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-sismo",
-   "titulo": "Sismo",
-   "subtitulo": null,
-   "sinopsis": "La nueva creación escénica multidisciplinar del Colectivo Artístico Circo Virtual, aborda los movimientos telúricos desde una perspectiva material, filosófic...",
-   "genero": "drama",
-   "compania": "Mila Casanova",
-   "director": "Katiuska Valenzuela",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-30",
-    "hasta": "2026-09-06",
-    "dias": [
-     0,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "17:00",
-     "5": "19:00",
-     "6": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5850
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/portadaSISMO.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-sismo.png",
-   "huellaImagen": "8a3c290c8b2f9b5e275d5e314f6a0b0c62dd6dc8",
-   "entradas": "https://gam.ticketplus.cl/events/sismo?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sismo/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-tormenta-famfest-2026",
-   "titulo": "Tormenta: FAMFEST 2026",
-   "subtitulo": "FAMFEST 2026",
-   "sinopsis": "El circo familiar llega con la compañía El Límite de lo Propio que combina acrobacias, malabares y danza para jugar con las fuerzas y energías de la tormenta...",
-   "genero": "infantil",
-   "compania": "Tormenta",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 50,
-   "edad": 0,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-30",
-    "hasta": "2026-08-30",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "16:00",
-     "6": "16:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Tormenta-6_Franco_Von_Arx_-_Allui.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-tormenta-famfest-2026.jpg",
-   "huellaImagen": "69244236bb1b56f70d9c59c313c60cc28e5bd582",
-   "entradas": "https://gam.ticketplus.cl/events/tormenta?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/tormenta/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-el-sentido-del-humor",
-   "titulo": "El sentido del humor",
-   "subtitulo": null,
-   "sinopsis": "Tras una década haciendo reír a miles de personas, El Sentido del Humor celebra su historia con LA GRAN GIRA DE LOS 10 AÑOS, un recorrido nacional que llevará al escenario toda la esencia del podcast que se ha convertido en un referente de la comedia chilena.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-31",
-    "hasta": "2026-08-31",
-    "dias": [
-     1
-    ]
-   },
-   "horarioTexto": "31 de agosto - 21:30 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_08_31_esdh_s.jpg",
-   "imagenLocal": "assets/img/nescafe-el-sentido-del-humor.jpg",
-   "huellaImagen": "60a3d9baf5e84be254c1ff7e0e7fbb3b4e311cdb",
-   "entradas": "https://www.ticketmaster.cl/event/esdh-la-gran-gira-de-los-10-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-sentido-del-humor/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
    "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
    "subtitulo": "Residencia de creación El rumor del agua",
@@ -884,6 +558,106 @@
    }
   },
   {
+   "id": "puente-la-noche-de-las-espaldas",
+   "titulo": "La noche de las espaldas",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-12-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": "16 funciones — 19:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
+   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
+   "subtitulo": "Presentado por LOS HÉROES",
+   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
+   "genero": "drama",
+   "compania": "Piedad Noguera",
+   "director": "Cuti Aste",
+   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
+   "elenco": [
+    "Bernardita Nassar"
+   ],
+   "duracion": 120,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "18:30"
+    }
+   },
+   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
+   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
+   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "m100-las-cacerolas-vacias",
    "titulo": "Las Cacerolas Vacías",
    "subtitulo": null,
@@ -1002,6 +776,68 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "gam-sismo",
+   "titulo": "Sismo",
+   "subtitulo": null,
+   "sinopsis": "La nueva creación escénica multidisciplinar del Colectivo Artístico Circo Virtual, aborda los movimientos telúricos desde una perspectiva material, filosófic...",
+   "genero": "drama",
+   "compania": "Mila Casanova",
+   "director": "Katiuska Valenzuela",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-09-06",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "17:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "17:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6300
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5850
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/portadaSISMO.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-sismo.png",
+   "huellaImagen": "8a3c290c8b2f9b5e275d5e314f6a0b0c62dd6dc8",
+   "entradas": "https://gam.ticketplus.cl/events/sismo?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sismo/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1361,7 +1197,7 @@
      "3": "20:00"
     }
    },
-   "horarioTexto": "9 DE SEPTIEMBRE · Miércoles | 20:00H · Comprar entrada",
+   "horarioTexto": "9 DE SEPTIEMBRE | ÚLTIMAS ENTRADAS · Miércoles | 20:00H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/1000206419.jpg",
    "imagenLocal": "assets/img/ictus-fernando-milagros.jpg",
@@ -1774,9 +1610,9 @@
    },
    "horarioTexto": "21, 22 y 23 de septiembre - 20:00 horas",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/12/2026_03_02_edo-caroe_s.jpg",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/12/2026_09_21_edo-caroe_s.jpg",
    "imagenLocal": "assets/img/nescafe-edo-caroe.jpg",
-   "huellaImagen": "a44b47f4e990cb7f0de3eb1a4a1b967192dab736",
+   "huellaImagen": "deef02356ef09f1900d70f9b52e49bac02638c83",
    "entradas": "https://www.ticketmaster.cl/event/947-edo-caroe-no-tiene-show-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/edo-caroe-no-tiene-show/",
    "fuente": {
@@ -1989,10 +1825,10 @@
    }
   },
   {
-   "id": "gam-entramado",
-   "titulo": "Entramado",
-   "subtitulo": null,
-   "sinopsis": "El histórico programa de Teatro del Lago, Puedes bailar, presenta en GAM esta creación de Vivian Romo, interpretada por cerca de cien niñas, niños y jóvenes....",
+   "id": "gam-entramado-puedes-bailar-santiago",
+   "titulo": "Entramado: Puedes Bailar Santiago",
+   "subtitulo": "Puedes Bailar Santiago",
+   "sinopsis": "El histórico programa de Teatro del Lago, Puedes Bailar, presenta en GAM esta creación de Vivian Romo, interpretada por cerca de 40 jóvenes. La obra de danza...",
    "genero": "danza",
    "compania": "Entramado",
    "director": null,
@@ -2021,7 +1857,7 @@
    "horarioTexto": "Vi—19.30 h",
    "precios": [],
    "imagen": "https://gam.cl/media/images/Entramado1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-entramado.png",
+   "imagenLocal": "assets/img/gam-entramado-puedes-bailar-santiago.png",
    "huellaImagen": "05376ecc3cc55c5936a407532291e8d0f780ea20",
    "entradas": null,
    "url": "https://gam.cl/es/que-hacer-en-gam/danza/entramado/",
@@ -2053,7 +1889,7 @@
    },
    "temporada": {
     "desde": "2026-09-26",
-    "hasta": "2026-10-11",
+    "hasta": "2026-12-27",
     "dias": [
      0,
      4,
@@ -2067,7 +1903,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "10 funciones — 20:00 h",
+   "horarioTexto": "12 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -2130,6 +1966,126 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "lascondes-chicago-el-musical",
+   "titulo": "Chicago: El Musical",
+   "subtitulo": null,
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, «CHICAGO el musical» es...",
+   "genero": "musical",
+   "compania": null,
+   "director": "Felipe Leiva",
+   "dramaturgo": null,
+   "elenco": [
+    "Constanza Mackenna: Roxie Hart"
+   ],
+   "duracion": 120,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-30",
+    "hasta": "2026-10-18",
+    "dias": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "3": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "13 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/08/CHI_SLIDE_2880-x-720-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-chicago-el-musical.jpg",
+   "huellaImagen": "8b52821e5cf3de9f272bad4f6340be1b529825ce",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
+   "url": "https://tmlascondes.cl/chicago/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "m100-re-producirse",
+   "titulo": "RE-PRODUCIRSE",
+   "subtitulo": null,
+   "sinopsis": "Una mujer solitaria, obsesionada con replicarse materialmente, busca convertirse en la sombra que controle el destino de sus propias creaciones.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Catalina Bize del Campo",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 50,
+   "edad": 16,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-01",
+    "hasta": "2026-10-04",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Jue a dom: 20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 7000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/re-producirse_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-re-producirse.jpg",
+   "huellaImagen": "163300b12d0350b650cbd386d69c4336dd5ae554",
+   "entradas": "https://www.m100.cl/programacion/teatro/re-producirse/",
+   "url": "https://www.m100.cl/programacion/teatro/re-producirse/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
    }
   },
   {
@@ -2318,9 +2274,9 @@
      "valor": 7800
     }
    ],
-   "imagen": "https://gam.cl/media/images/PortadaInforme_Para_Nadie.2e16d0ba.fill-1200x630.png",
+   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
    "imagenLocal": "assets/img/gam-informe-para-nadie.png",
-   "huellaImagen": "be35a1a10d86274adfe95c730d695ac6b3a4a7bd",
+   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
    "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
    "fuente": {
@@ -2415,6 +2371,64 @@
    }
   },
   {
+   "id": "m100-vigia",
+   "titulo": "Vigía",
+   "subtitulo": null,
+   "sinopsis": "Vigía explora la vigilancia contemporánea, reivindicando el cuerpo, el error, la emoción y lo colectivo frente a la medición algorítmica.",
+   "genero": "danza",
+   "compania": null,
+   "director": "Luna Ivanoff",
+   "dramaturgo": "Luna Ivanoff",
+   "elenco": [],
+   "duracion": 45,
+   "edad": 14,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-22",
+    "hasta": "2026-10-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Jue a dom: 19:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 5000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 3000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/vigía_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-vigia.jpg",
+   "huellaImagen": "4da2d64e233d6bf385b95bc5d06e15e86a86cbce",
+   "entradas": "https://www.m100.cl/programacion/danza-circo/vigia/",
+   "url": "https://www.m100.cl/programacion/danza-circo/vigia/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
+   }
+  },
+  {
    "id": "gam-los-dias-felices-produccion-gam-la-santa",
    "titulo": "Los días felices: Producción GAM | La Santa",
    "subtitulo": "Producción GAM | La Santa",
@@ -2476,6 +2490,56 @@
    }
   },
   {
+   "id": "ictus-el-bosque",
+   "titulo": "EL BOSQUE",
+   "subtitulo": null,
+   "sinopsis": "Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
+   "genero": "infantil",
+   "compania": null,
+   "director": "Cristian Marambio",
+   "dramaturgo": "David Mamet",
+   "elenco": [
+    "Camila Hirane",
+    "Mario Horton"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-24",
+    "hasta": "2026-10-24",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/Camila-Hirane-Mario-Horton_©Juan-Hoppe-45-1-scaled.jpg",
+   "imagenLocal": "assets/img/ictus-el-bosque.jpg",
+   "huellaImagen": "3a14dd3871e78e9c4f96f651f0ebabbd3a7e0993",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "puente-epistolario-para-una-futurolog",
    "titulo": "Epistolario para una Futurolog…",
    "subtitulo": null,
@@ -2522,6 +2586,101 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "nescafe-dejame-caer",
+   "titulo": "Déjame caer",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
+   "genero": "musical",
+   "compania": null,
+   "director": "Jesús Urqueta",
+   "dramaturgo": null,
+   "elenco": [
+    "José Antonio Raffo",
+    "Magdalena Müller",
+    "Emilia Noguera",
+    "Katty Kowaleczko",
+    "Nicolás Saavedra",
+    "Norma-Norma Ortiz"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-25",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ]
+   },
+   "horarioTexto": "1 al 4 / 8 al 11 / 15 al 18 / 22 al 25 de octubre",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s.jpg",
+   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
+   "huellaImagen": "ff202833c474cc9be09757c76f85ed8e911eaf4f",
+   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "ictus-olivia-garcia",
+   "titulo": "OLIVIA GARCÍA",
+   "subtitulo": null,
+   "sinopsis": "Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Andrés Elgueta",
+    "Rocío Gatica",
+    "Constanza Valenzuela",
+    "Fernando Guarello"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-25",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "18:00"
+    }
+   },
+   "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/Olivia-Garcia-sesion-20-de-junio-02.jpg",
+   "imagenLocal": "assets/img/ictus-olivia-garcia.jpg",
+   "huellaImagen": "55deff58d0af96262c9b11883f59f991e7dd76d8",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -3236,6 +3395,277 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "lascondes-tu-amaras",
+   "titulo": "Tú Amarás",
+   "subtitulo": null,
+   "sinopsis": "Abrimos el año con un ciclo retrospectivo de la compañía Bonobo, teatro que no deja indiferente, que mezcla fuerza dramática, crítica social, humor corrosivo y una estética provocadora e inteligente....",
+   "genero": "comedia",
+   "compania": "Bonobo",
+   "director": "Pablo Manzi y Andreina Olivari",
+   "dramaturgo": "Pablo Manzi",
+   "elenco": [
+    "Paulina Giglio",
+    "Gabriel Urzúa",
+    "Guilherme Sepúlveda",
+    "Carlos Donoso",
+    "Gabriel Cañas"
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-08",
+    "hasta": "2027-01-11",
+    "dias": [
+     0,
+     1,
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "4 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_TUAMARAS-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-tu-amaras.jpg",
+   "huellaImagen": "bcf1525d370483548592621c783dbb3d9c7aedd4",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30750&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=tu_amaras",
+   "url": "https://tmlascondes.cl/tu-amaras/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-temis",
+   "titulo": "Temis",
+   "subtitulo": null,
+   "sinopsis": "Dentro del ciclo especial de la compañía Bonobo, en enero presentaremos Temis -cuyo título hace alusión a la diosa griega de la justicia y la equivalencia- que es la tercera...",
+   "genero": "drama",
+   "compania": "Bonobo",
+   "director": "Pablo Manzi y Andreina Olivari",
+   "dramaturgo": "Pablo Manzi",
+   "elenco": [
+    "Paulina Giglio",
+    "Gabriel Urzúa",
+    "Guilherme Sepúlveda",
+    "Carlos Donoso",
+    "Gabriel Cañasny Marcela Salinas"
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-15",
+    "hasta": "2027-01-18",
+    "dias": [
+     0,
+     1,
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "4 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_TEMIS-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-temis.jpg",
+   "huellaImagen": "6ccc12be6d2c5f729ab574c1e743bfed9cb7c5cb",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30749&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=temis",
+   "url": "https://tmlascondes.cl/temis/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-teatro-a-mil-acreedores",
+   "titulo": "Teatro a Mil: Acreedores",
+   "subtitulo": null,
+   "sinopsis": "A más de 130 años de su escritura, este texto del sueco August Strindberg revive en escena, luego de la adaptación que hace el dramaturgo y director Alexis Moreno, desplegando...",
+   "genero": "drama",
+   "compania": null,
+   "director": "Alexis Moreno",
+   "dramaturgo": null,
+   "elenco": [
+    "Francisco Reyes",
+    "Paloma Moreno",
+    "Mario Horton"
+   ],
+   "duracion": 100,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-19",
+    "hasta": "2027-01-20",
+    "dias": [
+     2,
+     3
+    ]
+   },
+   "horarioTexto": "2 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/10/Acreedores-Slider-Web_TMLC_TAM26.png",
+   "imagenLocal": "assets/img/lascondes-teatro-a-mil-acreedores.png",
+   "huellaImagen": "b77c87cc1e506f7f67693bbf1f9c609e9465594c",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/acreedores-TAM2026/?utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_web_acreedores",
+   "url": "https://tmlascondes.cl/teatro-a-mil-acreedores/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-teatro-a-mil-mam",
+   "titulo": "Teatro a Mil: MÁM",
+   "subtitulo": null,
+   "sinopsis": "Reuniendo en escena al virtuoso concertinista irlandés Cormac Begley, a la orquesta Europea de música contemporánea S t a r g a z e y a doce bailarines internacionales de...",
+   "genero": "danza",
+   "compania": null,
+   "director": "Michael Keegan-Dolan",
+   "dramaturgo": null,
+   "elenco": [
+    "Imogen Alvares",
+    "Cormac Begley",
+    "Romain Bly",
+    "Tyler Carney",
+    "Kim Ceysens",
+    "Lisa De Boos",
+    "Aki Iwamoto",
+    "Zen Jefferson",
+    "Mayah Kadish",
+    "Amit Noy",
+    "James O’Hara",
+    "Keir Patrick",
+    "Rachel Poirier",
+    "Connor Scott"
+   ],
+   "duracion": 80,
+   "edad": 10,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-23",
+    "hasta": "2027-01-25",
+    "dias": [
+     0,
+     1,
+     6
+    ]
+   },
+   "horarioTexto": "3 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 30000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/10/MAM-Slider-Web_TMLC_TAM26.png",
+   "imagenLocal": "assets/img/lascondes-teatro-a-mil-mam.png",
+   "huellaImagen": "c896c518dd8209c22bbce3ad8462e305eda33e48",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/mam-FITAM2026?utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_web_mam",
+   "url": "https://tmlascondes.cl/teatro-a-mil-mam/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-la-verdad",
+   "titulo": "La Verdad",
+   "subtitulo": null,
+   "sinopsis": "Este 27 y 28 de enero no te pierdas las dos únicas funciones que presentaremos de la exitosa obra “La Verdad”. Una cena, una amistad y un secreto a voces:...",
+   "genero": "drama",
+   "compania": null,
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Florian Zeller",
+   "elenco": [
+    "Camila Hirane",
+    "María Gracia Omegna",
+    "Álvaro Espinoza",
+    "Nicolás Saavedra."
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-27",
+    "hasta": "2027-01-28",
+    "dias": [
+     3,
+     4
+    ]
+   },
+   "horarioTexto": "2 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_LAVERDAD-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-la-verdad.jpg",
+   "huellaImagen": "2c9f55a680bb397369f899c77eb4fc60fb198388",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30754&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=la_verdad",
+   "url": "https://tmlascondes.cl/la-verdad/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
