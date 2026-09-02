@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-01T23:39:50.126Z",
+ "actualizado": "2026-09-02T23:41:15.383Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -55,7 +55,7 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 6,
+   "obras": 7,
    "error": null
   },
   {
@@ -417,55 +417,6 @@
    }
   },
   {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-01",
-    "hasta": "2026-10-24",
-    "dias": [
-     0,
-     2,
-     3,
-     4
-    ],
-    "horas": {
-     "0": "13:00",
-     "2": "13:00",
-     "3": "13:00",
-     "4": "13:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
-   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "teatrouc-gladys",
    "titulo": "Gladys",
    "subtitulo": null,
@@ -508,6 +459,55 @@
     "id": "teatrouc",
     "nombre": "Teatro UC",
     "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
+   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
+   "genero": "danza",
+   "compania": "XI Encuentros Coreográficos Nacionales",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-02",
+    "hasta": "2026-10-24",
+    "dias": [
+     0,
+     2,
+     3,
+     4
+    ],
+    "horas": {
+     "0": "13:00",
+     "2": "13:00",
+     "3": "13:00",
+     "4": "13:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
+   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -785,7 +785,7 @@
    "sinopsis": "La nueva creación escénica multidisciplinar del Colectivo Artístico Circo Virtual, aborda los movimientos telúricos desde una perspectiva material, filosófic...",
    "genero": "drama",
    "compania": "Mila Casanova",
-   "director": "Katiuska Valenzuela",
+   "director": "Katiuska Valenzuela y Isadora Guital",
    "dramaturgo": null,
    "elenco": [],
    "duracion": 60,
@@ -829,9 +829,9 @@
      "valor": 5850
     }
    ],
-   "imagen": "https://gam.cl/media/images/portadaSISMO.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-sismo.png",
-   "huellaImagen": "8a3c290c8b2f9b5e275d5e314f6a0b0c62dd6dc8",
+   "imagen": "https://gam.cl/media/images/_PRO0614.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-sismo.jpg",
+   "huellaImagen": "c36ff3c9db751c65897152fb927a5d83df9594e9",
    "entradas": "https://gam.ticketplus.cl/events/sismo?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sismo/",
    "fuente": {
@@ -2219,6 +2219,49 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "puente-fernando-cabrera-en-vivo",
+   "titulo": "Fernando Cabrera en vivo",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-07",
+    "hasta": "2026-10-07",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "1 función — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
