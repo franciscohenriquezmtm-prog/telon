@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-02T23:41:15.383Z",
+ "actualizado": "2026-09-03T23:39:10.869Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 8,
+   "obras": 10,
    "error": null
   },
   {
@@ -417,100 +417,6 @@
    }
   },
   {
-   "id": "teatrouc-gladys",
-   "titulo": "Gladys",
-   "subtitulo": null,
-   "sinopsis": "A 15 años de su aclamado estreno en el Teatro del Puente, regresa a las tablas un hito fundamental de nuestra dramaturgia contemporánea. Galardonada con cuatro Premios Altazor 2012 y reconocida internacionalmente por la crítica, Gladys se presenta del 2 al 12 de septiembre en Teatro UC para retratar, a través del ingenio, la ironía y un incisivo humor negro, la intimidad y el dolor de una familia común y corriente que se siente profundamente nuestro.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro UC — Sala Ana González",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-02",
-    "hasta": "2026-09-12",
-    "dias": [
-     3,
-     6
-    ],
-    "horas": {
-     "3": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/08/monos-1-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-gladys.jpg",
-   "huellaImagen": "f3ef802c98005a5437cbdf00e3e6d43006f16340",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/gladys/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-02",
-    "hasta": "2026-10-24",
-    "dias": [
-     0,
-     2,
-     3,
-     4
-    ],
-    "horas": {
-     "0": "13:00",
-     "2": "13:00",
-     "3": "13:00",
-     "4": "13:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
-   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "teatrouc-l-s-nin-s-del-winnipeg",
    "titulo": "L@s niñ@s del Winnipeg",
    "subtitulo": null,
@@ -534,12 +440,10 @@
     "desde": "2026-09-03",
     "hasta": "2026-09-12",
     "dias": [
-     3,
      4,
      6
     ],
     "horas": {
-     "3": "19:00",
      "4": "19:00",
      "6": "19:00"
     }
@@ -555,55 +459,6 @@
     "id": "teatrouc",
     "nombre": "Teatro UC",
     "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "puente-la-noche-de-las-espaldas",
-   "titulo": "La noche de las espaldas",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-12-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "16 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -951,6 +806,104 @@
    }
   },
   {
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
+   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
+   "genero": "danza",
+   "compania": "XI Encuentros Coreográficos Nacionales",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-10-24",
+    "dias": [
+     0,
+     2,
+     3,
+     4
+    ],
+    "horas": {
+     "0": "13:00",
+     "2": "13:00",
+     "3": "13:00",
+     "4": "13:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
+   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "puente-la-noche-de-las-espaldas",
+   "titulo": "La noche de las espaldas",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-12-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": "14 funciones — 19:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
    "id": "nescafe-tengo-miedo-torero",
    "titulo": "Tengo miedo torero",
    "subtitulo": null,
@@ -995,6 +948,60 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "mori-golden-las-guerreras-del-kpop-tributo",
+   "titulo": "Golden: las Guerreras del KPOP Tributo",
+   "subtitulo": null,
+   "sinopsis": "En esta experiencia teatral y musical imperdible, Rumi, Mira y Zoey luchan por restablecer el bien en el mundo, peleando contra los Saja Boy.",
+   "genero": "musical",
+   "compania": "Landaeta&Cano Teatro",
+   "director": "Coto Gutiérrez y Roger Landaeta",
+   "dramaturgo": null,
+   "elenco": [
+    "Adonis Yerone"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-06",
+    "hasta": "2026-09-13",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "16:00"
+    }
+   },
+   "horarioTexto": "Domingo a las 16:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/1bf8ba2f2dc2147e3ea02a9d2db0be87.jpg",
+   "imagenLocal": "assets/img/mori-golden-las-guerreras-del-kpop-tributo.jpg",
+   "huellaImagen": "b6f1682b89e51332fdc2007bb3b9055531cb7ed8",
+   "entradas": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
+   "url": "https://teatromori.cl/obra/0cd884bb/golden--las-guerreras-del-kpop-tributo",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -1676,6 +1683,51 @@
    }
   },
   {
+   "id": "teatrouc-cabeza-de-elefante",
+   "titulo": "Cabeza de elefante",
+   "subtitulo": null,
+   "sinopsis": "Inspirada en una historia real y a través de una poética metáfora visual con marionetas, la compañía Silencio Blanco nos invita a explorar las profundidades de la memoria y el olvido. Un emotivo e íntimo viaje sobre la fragilidad del recuerdo, la identidad que permanece y las preguntas que surgen cuando la propia historia comienza a desvanecerse. Funciones entre el 23 de septiembre y el 3 de octubre.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 50,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-23",
+    "hasta": "2026-10-03",
+    "dias": [
+     3,
+     6
+    ],
+    "horas": {
+     "3": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/DSC_0529©Melian_Riffo-@_fantasmadeunafoto-scaled.jpg",
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/cabeza-de-elefante/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
    "id": "gam-chiloe-cielos-cubiertos",
    "titulo": "Chiloé, cielos cubiertos",
    "subtitulo": null,
@@ -1914,6 +1966,60 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "mori-alicia-el-musical-de-las-maravillas",
+   "titulo": "Alicia, el musical de las maravillas",
+   "subtitulo": null,
+   "sinopsis": "Este musical chileno inspirado en el clásico de Lewis Carroll sigue a Alicia, una niña curiosa que al perseguir al Señor Conejo cae por una madriguera y llega al País de las Maravillas. Allí se encuentra con particulares personajes: la Gata Sonriente, la Sabia Oruga, el Sombrerero Loco, la Liebre de Marzo y la temida Reina de Corazones, dueña de un ejército de traviesas cartas.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "Daniela Fernán",
+   "elenco": [
+    "Daniela Fernán"
+   ],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-27",
+    "hasta": "2026-10-11",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "16:00"
+    }
+   },
+   "horarioTexto": "Domingos 16 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/202745f1cf601f958787ecb6f6173d23.jpg",
+   "imagenLocal": "assets/img/mori-alicia-el-musical-de-las-maravillas.jpg",
+   "huellaImagen": "d610d9a08f4371a52e0f6a436efe78914571a5aa",
+   "entradas": "https://teatromori.cl/obra/DdlRNja9/alicia--el-musical-de-las-maravillas",
+   "url": "https://teatromori.cl/obra/DdlRNja9/alicia--el-musical-de-las-maravillas",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -2713,12 +2819,12 @@
      "0": "18:00"
     }
    },
-   "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
+   "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/Olivia-Garcia-sesion-20-de-junio-02.jpg",
    "imagenLocal": "assets/img/ictus-olivia-garcia.jpg",
    "huellaImagen": "55deff58d0af96262c9b11883f59f991e7dd76d8",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
+   "entradas": "https://ticketplus.cl/events/olivia-garcia",
    "url": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
    "fuente": {
     "id": "ictus",
