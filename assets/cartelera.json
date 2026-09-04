@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-03T23:39:10.869Z",
+ "actualizado": "2026-09-04T23:31:35.834Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 7,
+   "obras": 14,
    "error": null
   },
   {
@@ -462,30 +462,28 @@
    }
   },
   {
-   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
-   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
-   "subtitulo": "Presentado por LOS HÉROES",
-   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
+   "id": "puente-la-noche-de-las-espaldas",
+   "titulo": "La noche de las espaldas",
+   "subtitulo": null,
+   "sinopsis": "",
    "genero": "drama",
-   "compania": "Piedad Noguera",
-   "director": "Cuti Aste",
-   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
-   "elenco": [
-    "Bernardita Nassar"
-   ],
-   "duracion": 120,
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
    "edad": null,
    "sala": {
-    "nombre": "Centro GAM — Sala A2",
+    "nombre": "Teatro del Puente",
     "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
     "desde": "2026-09-03",
-    "hasta": "2026-09-13",
+    "hasta": "2026-12-13",
     "dias": [
      0,
      4,
@@ -493,23 +491,23 @@
      6
     ],
     "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "18:30"
+     "0": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
     }
    },
-   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
+   "horarioTexto": "14 funciones — 19:00 h",
    "precios": [],
-   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
-   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
-   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
    "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -634,6 +632,392 @@
    }
   },
   {
+   "id": "m100-vicaria",
+   "titulo": "Vicaría",
+   "subtitulo": null,
+   "sinopsis": "Unipersonal que rescata las memorias invisibilizadas de trabajadoras de la Vicaría, explorando la memoria, la pérdida y la resistencia.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Ignacia González Torres",
+   "dramaturgo": "Leonardo González",
+   "elenco": [],
+   "duracion": 70,
+   "edad": null,
+   "sala": {
+    "nombre": "Matucana 100",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-03",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "18:30"
+    }
+   },
+   "horarioTexto": "Jue y vie: 19:30 hrs · Sáb y dom: 18:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 7000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/08/secretarias-vicaría_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-vicaria.jpg",
+   "huellaImagen": "bec2945c4aaedb6c30523e052c4643231db4d52b",
+   "entradas": "https://www.m100.cl/programacion/teatro/vicaria/",
+   "url": "https://www.m100.cl/programacion/teatro/vicaria/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
+   }
+  },
+  {
+   "id": "lascondes-aqui-me-bajo-yo",
+   "titulo": "Aquí me bajo yo",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/08/AQUI-ME-BAJO-YO-1.jpg",
+   "imagenLocal": "assets/img/lascondes-aqui-me-bajo-yo.jpg",
+   "huellaImagen": "ff41b98072f9f23f0423869047a4d5e77e96d326",
+   "entradas": "https://tmlascondes.cl/aqui-me-bajo-yo/",
+   "url": "https://tmlascondes.cl/aqui-me-bajo-yo/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-educando-a-rita",
+   "titulo": "Educando a Rita",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/EDUCANDO-A-RITA-1.jpg",
+   "imagenLocal": "assets/img/lascondes-educando-a-rita.jpg",
+   "huellaImagen": "6f60268a05c1a809c32656025c2de9b37c2d1744",
+   "entradas": "https://tmlascondes.cl/educando-a-rita/",
+   "url": "https://tmlascondes.cl/educando-a-rita/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-es-por-amor",
+   "titulo": "Es por amor",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/es-por-amor-1.jpg",
+   "imagenLocal": "assets/img/lascondes-es-por-amor.jpg",
+   "huellaImagen": "85570e10da4b614f91fc35368c0a1d057b7d4f5c",
+   "entradas": "https://tmlascondes.cl/es-por-amor/",
+   "url": "https://tmlascondes.cl/es-por-amor/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-esta-obra-es-un-desastre",
+   "titulo": "Esta obra es un desastre",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/ESTA-OBRA-ES-UN-DESASTRE-5.jpg",
+   "imagenLocal": "assets/img/lascondes-esta-obra-es-un-desastre.jpg",
+   "huellaImagen": "45366f5c3584835ae55d7bcb3248fc73b2d5f3bf",
+   "entradas": "https://tmlascondes.cl/esta-obra-es-un-desastre/",
+   "url": "https://tmlascondes.cl/esta-obra-es-un-desastre/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-footloose-el-musical",
+   "titulo": "Footloose, el musical",
+   "subtitulo": null,
+   "sinopsis": "En esos años todo era gigante. La frase que más usábamos era “entre más grande, mejor”. Los peinados, las hombreras, las radios… Todo! Teatro Municipal de Las Condes y Cultura...",
+   "genero": "musical",
+   "compania": null,
+   "director": "Natalia Grez",
+   "dramaturgo": "Claudia Hidalgo / Natalia Grez",
+   "elenco": [],
+   "duracion": 30,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/07/Footloose-2.jpg",
+   "imagenLocal": "assets/img/lascondes-footloose-el-musical.jpg",
+   "huellaImagen": "4d689a5e614da168d82ef0fd136b5538a6b7d799",
+   "entradas": "https://tmlascondes.cl/footloose-el-musical/",
+   "url": "https://tmlascondes.cl/footloose-el-musical/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-la-flauta-magica",
+   "titulo": "La Flauta Mágica",
+   "subtitulo": null,
+   "sinopsis": "En vacaciones de invierno llega “La Flauta Mágica”, una de las óperas más queridas de todos los tiempos, ahora en una versión especial para toda la familia situada en mundo...",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "niños:"
+   ],
+   "duracion": 30,
+   "edad": 0,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/la-flauta-magica-1.jpg",
+   "imagenLocal": "assets/img/lascondes-la-flauta-magica.jpg",
+   "huellaImagen": "169d9a1c4a23f199b57f66e8e25e5188d351ed5a",
+   "entradas": "https://tmlascondes.cl/la-flauta-magica/",
+   "url": "https://tmlascondes.cl/la-flauta-magica/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "lascondes-la-hora-azul-banch",
+   "titulo": "La Hora Azul Banch",
+   "subtitulo": null,
+   "sinopsis": "Para conmemorar sus 80 años, la compañía celebra con una función única en nuestra sala con la obra La hora azul (L’huere Bleue), una creación del coreógrafo francés y director...",
+   "genero": "danza",
+   "compania": null,
+   "director": "Mathieu Guilhaumon",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-04",
+    "sinHorario": true
+   },
+   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 16000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/07/LA-HORA-AZUL_WEB.jpg",
+   "imagenLocal": "assets/img/lascondes-la-hora-azul-banch.jpg",
+   "huellaImagen": "11af318b68b711d090ef588375a4a43c0cbd5d65",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=470&#038;_gl=1*bzu7lw*_gcl_au*MTU0MDMxMjI2OS4xNzUyODY3Njky*_ga*MTQ0ODk5ODU4Mi4xNzUxMzAxMTc3*_ga_CVGYBTEEL6*czE3NTUxMDEzNDMkbzMwJGcxJHQxNzU1MTAxMzY4JGozNSRsMCRoMA..",
+   "url": "https://tmlascondes.cl/la-hora-azul-banch/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
+   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
+   "subtitulo": "Presentado por LOS HÉROES",
+   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
+   "genero": "drama",
+   "compania": "Piedad Noguera",
+   "director": "Cuti Aste",
+   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
+   "elenco": [
+    "Bernardita Nassar"
+   ],
+   "duracion": 120,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-04",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "18:30"
+    }
+   },
+   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
+   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
+   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-sismo",
    "titulo": "Sismo",
    "subtitulo": null,
@@ -654,7 +1038,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-09-03",
+    "desde": "2026-09-04",
     "hasta": "2026-09-06",
     "dias": [
      0,
@@ -721,7 +1105,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-09-03",
+    "desde": "2026-09-04",
     "hasta": "2026-09-13",
     "dias": [
      0
@@ -741,166 +1125,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "m100-vicaria",
-   "titulo": "Vicaría",
-   "subtitulo": null,
-   "sinopsis": "Unipersonal que rescata las memorias invisibilizadas de trabajadoras de la Vicaría, explorando la memoria, la pérdida y la resistencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ignacia González Torres",
-   "dramaturgo": "Leonardo González",
-   "elenco": [],
-   "duracion": 70,
-   "edad": null,
-   "sala": {
-    "nombre": "Matucana 100",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "18:30"
-    }
-   },
-   "horarioTexto": "Jue y vie: 19:30 hrs · Sáb y dom: 18:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 7000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/08/secretarias-vicaría_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-vicaria.jpg",
-   "huellaImagen": "bec2945c4aaedb6c30523e052c4643231db4d52b",
-   "entradas": "https://www.m100.cl/programacion/teatro/vicaria/",
-   "url": "https://www.m100.cl/programacion/teatro/vicaria/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-10-24",
-    "dias": [
-     0,
-     2,
-     3,
-     4
-    ],
-    "horas": {
-     "0": "13:00",
-     "2": "13:00",
-     "3": "13:00",
-     "4": "13:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
-   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "puente-la-noche-de-las-espaldas",
-   "titulo": "La noche de las espaldas",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-12-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "14 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -2480,6 +2704,55 @@
    }
   },
   {
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
+   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
+   "genero": "danza",
+   "compania": "XI Encuentros Coreográficos Nacionales",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-15",
+    "hasta": "2026-10-24",
+    "dias": [
+     0,
+     2,
+     3,
+     4
+    ],
+    "horas": {
+     "0": "13:00",
+     "2": "13:00",
+     "3": "13:00",
+     "4": "13:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
+   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "nescafe-zarzuela-y-flamenco",
    "titulo": "Zarzuela y Flamenco",
    "subtitulo": null,
@@ -2627,9 +2900,9 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/2_u0it2of.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.png",
-   "huellaImagen": "60153193ff3ecc72beb0c1c4aeb26bebfc9d5658",
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
    "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
    "fuente": {
