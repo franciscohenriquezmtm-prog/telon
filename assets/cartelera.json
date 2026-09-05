@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-04T23:31:35.834Z",
+ "actualizado": "2026-09-05T23:27:45.622Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 14,
+   "obras": 7,
    "error": null
   },
   {
@@ -694,279 +694,6 @@
    }
   },
   {
-   "id": "lascondes-aqui-me-bajo-yo",
-   "titulo": "Aquí me bajo yo",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/08/AQUI-ME-BAJO-YO-1.jpg",
-   "imagenLocal": "assets/img/lascondes-aqui-me-bajo-yo.jpg",
-   "huellaImagen": "ff41b98072f9f23f0423869047a4d5e77e96d326",
-   "entradas": "https://tmlascondes.cl/aqui-me-bajo-yo/",
-   "url": "https://tmlascondes.cl/aqui-me-bajo-yo/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-educando-a-rita",
-   "titulo": "Educando a Rita",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/EDUCANDO-A-RITA-1.jpg",
-   "imagenLocal": "assets/img/lascondes-educando-a-rita.jpg",
-   "huellaImagen": "6f60268a05c1a809c32656025c2de9b37c2d1744",
-   "entradas": "https://tmlascondes.cl/educando-a-rita/",
-   "url": "https://tmlascondes.cl/educando-a-rita/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-es-por-amor",
-   "titulo": "Es por amor",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/es-por-amor-1.jpg",
-   "imagenLocal": "assets/img/lascondes-es-por-amor.jpg",
-   "huellaImagen": "85570e10da4b614f91fc35368c0a1d057b7d4f5c",
-   "entradas": "https://tmlascondes.cl/es-por-amor/",
-   "url": "https://tmlascondes.cl/es-por-amor/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-esta-obra-es-un-desastre",
-   "titulo": "Esta obra es un desastre",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/ESTA-OBRA-ES-UN-DESASTRE-5.jpg",
-   "imagenLocal": "assets/img/lascondes-esta-obra-es-un-desastre.jpg",
-   "huellaImagen": "45366f5c3584835ae55d7bcb3248fc73b2d5f3bf",
-   "entradas": "https://tmlascondes.cl/esta-obra-es-un-desastre/",
-   "url": "https://tmlascondes.cl/esta-obra-es-un-desastre/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-footloose-el-musical",
-   "titulo": "Footloose, el musical",
-   "subtitulo": null,
-   "sinopsis": "En esos años todo era gigante. La frase que más usábamos era “entre más grande, mejor”. Los peinados, las hombreras, las radios… Todo! Teatro Municipal de Las Condes y Cultura...",
-   "genero": "musical",
-   "compania": null,
-   "director": "Natalia Grez",
-   "dramaturgo": "Claudia Hidalgo / Natalia Grez",
-   "elenco": [],
-   "duracion": 30,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/07/Footloose-2.jpg",
-   "imagenLocal": "assets/img/lascondes-footloose-el-musical.jpg",
-   "huellaImagen": "4d689a5e614da168d82ef0fd136b5538a6b7d799",
-   "entradas": "https://tmlascondes.cl/footloose-el-musical/",
-   "url": "https://tmlascondes.cl/footloose-el-musical/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-la-flauta-magica",
-   "titulo": "La Flauta Mágica",
-   "subtitulo": null,
-   "sinopsis": "En vacaciones de invierno llega “La Flauta Mágica”, una de las óperas más queridas de todos los tiempos, ahora en una versión especial para toda la familia situada en mundo...",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "niños:"
-   ],
-   "duracion": 30,
-   "edad": 0,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/08/la-flauta-magica-1.jpg",
-   "imagenLocal": "assets/img/lascondes-la-flauta-magica.jpg",
-   "huellaImagen": "169d9a1c4a23f199b57f66e8e25e5188d351ed5a",
-   "entradas": "https://tmlascondes.cl/la-flauta-magica/",
-   "url": "https://tmlascondes.cl/la-flauta-magica/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-la-hora-azul-banch",
-   "titulo": "La Hora Azul Banch",
-   "subtitulo": null,
-   "sinopsis": "Para conmemorar sus 80 años, la compañía celebra con una función única en nuestra sala con la obra La hora azul (L’huere Bleue), una creación del coreógrafo francés y director...",
-   "genero": "danza",
-   "compania": null,
-   "director": "Mathieu Guilhaumon",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-04",
-    "sinHorario": true
-   },
-   "horarioTexto": "Consulta los horarios de cada función en el sitio del teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 16000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/07/LA-HORA-AZUL_WEB.jpg",
-   "imagenLocal": "assets/img/lascondes-la-hora-azul-banch.jpg",
-   "huellaImagen": "11af318b68b711d090ef588375a4a43c0cbd5d65",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=470&#038;_gl=1*bzu7lw*_gcl_au*MTU0MDMxMjI2OS4xNzUyODY3Njky*_ga*MTQ0ODk5ODU4Mi4xNzUxMzAxMTc3*_ga_CVGYBTEEL6*czE3NTUxMDEzNDMkbzMwJGcxJHQxNzU1MTAxMzY4JGozNSRsMCRoMA..",
-   "url": "https://tmlascondes.cl/la-hora-azul-banch/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
    "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
    "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
    "subtitulo": "Presentado por LOS HÉROES",
@@ -989,7 +716,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-09-04",
+    "desde": "2026-09-05",
     "hasta": "2026-09-13",
     "dias": [
      0,
@@ -1038,7 +765,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-09-04",
+    "desde": "2026-09-05",
     "hasta": "2026-09-06",
     "dias": [
      0,
@@ -1073,54 +800,6 @@
    "huellaImagen": "c36ff3c9db751c65897152fb927a5d83df9594e9",
    "entradas": "https://gam.ticketplus.cl/events/sismo?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sismo/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-tres-marias-y-una-rosa",
-   "titulo": "Tres Marías y una Rosa",
-   "subtitulo": null,
-   "sinopsis": "Inspirada en hechos reales de la dictadura chilena, la obra dirigida por Loreto Valenzuela y con dramaturgia de David Benavente y el Taller de Investigación ...",
-   "genero": "drama",
-   "compania": "Tres Marías y una Rosa",
-   "director": "Loreto Valenzuela",
-   "dramaturgo": "David Benavente y TIT",
-   "elenco": [
-    "Malucha Pinto",
-    "Carolina Paulsen",
-    "Luciana Ibáñez",
-    "Constanza Mora"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-04",
-    "hasta": "2026-09-13",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:30"
-    }
-   },
-   "horarioTexto": "Do— 19.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/portada3maria.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-tres-marias-y-una-rosa.png",
-   "huellaImagen": "87743091719712b78d0a1afd3cabb02db1dab0b0",
-   "entradas": "https://gam.ticketplus.cl/events/tres-maria-y-una-rosa?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tres-marias-y-una-rosa/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1172,6 +851,54 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-tres-marias-y-una-rosa",
+   "titulo": "Tres Marías y una Rosa",
+   "subtitulo": null,
+   "sinopsis": "Inspirada en hechos reales de la dictadura chilena, la obra dirigida por Loreto Valenzuela y con dramaturgia de David Benavente y el Taller de Investigación ...",
+   "genero": "drama",
+   "compania": "Tres Marías y una Rosa",
+   "director": "Loreto Valenzuela",
+   "dramaturgo": "David Benavente y TIT",
+   "elenco": [
+    "Malucha Pinto",
+    "Carolina Paulsen",
+    "Luciana Ibáñez",
+    "Constanza Mora"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-05",
+    "hasta": "2026-09-13",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:30"
+    }
+   },
+   "horarioTexto": "Do— 19.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/portada3maria.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-tres-marias-y-una-rosa.png",
+   "huellaImagen": "87743091719712b78d0a1afd3cabb02db1dab0b0",
+   "entradas": "https://gam.ticketplus.cl/events/tres-maria-y-una-rosa?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tres-marias-y-una-rosa/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1428,7 +1155,7 @@
      "3": "20:00"
     }
    },
-   "horarioTexto": "9 DE SEPTIEMBRE | ÚLTIMAS ENTRADAS · Miércoles | 20:00H · Comprar entrada",
+   "horarioTexto": "9 DE SEPTIEMBRE | ENTRADAS AGOTADAS · Miércoles | 20:00H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/1000206419.jpg",
    "imagenLocal": "assets/img/ictus-fernando-milagros.jpg",
@@ -2285,12 +2012,12 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · “Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
+   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/historiadeamor_paginaweb_1080X1140-1.jpg",
    "imagenLocal": "assets/img/ictus-historia-de-amor-para-un-alma-vieja.jpg",
    "huellaImagen": "41793d40c8dfacd9647b7d17dff9fb193787bb9e",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
+   "entradas": "https://ticketplus.cl/events/historia-de-amor-para-un-alma-vieja-2026-09-25-20-00-00-0300",
    "url": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
    "fuente": {
     "id": "ictus",
@@ -2950,9 +2677,9 @@
    },
    "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
    "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/Camila-Hirane-Mario-Horton_©Juan-Hoppe-45-1-scaled.jpg",
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-el-bosque.jpg",
-   "huellaImagen": "3a14dd3871e78e9c4f96f651f0ebabbd3a7e0993",
+   "huellaImagen": "63218894d5686880efa8646bc2d8e2e44c03111a",
    "entradas": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
    "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
    "fuente": {
