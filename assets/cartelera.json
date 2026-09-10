@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T16:11:24.281Z",
+ "actualizado": "2026-09-10T16:18:46.628Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
+   "obras": 0,
    "error": null
   },
   {
@@ -922,105 +922,6 @@
    }
   },
   {
-   "id": "ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
-   "titulo": "SIEMPRE ENCUENTRA CASA NUEVA, UN MUEBLE ANTIGUO EN LA BASURA",
-   "subtitulo": null,
-   "sinopsis": "&#8220;Es un relato familiar. Se trata de todo lo que una madre es capaz de sacrificar por el cuidado de su hijo&#8221; — Felipe Zambrano Miguieles",
-   "genero": "infantil",
-   "compania": null,
-   "director": "Felipe Zambrano Miguieles",
-   "dramaturgo": "Felipe Zambrano Miguieles",
-   "elenco": [
-    "Consuelo Holzapfel",
-    "Nicolás Eyzaguirre"
-   ],
-   "duracion": 65,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-12",
-    "hasta": "2026-09-12",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "ESTRENO | 3 AL 12 DE SEPTIEMBRE · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.jpg",
-   "huellaImagen": "1406bb88c546d07ddcb67d7e992ed0965ebf671f",
-   "entradas": "https://ticketplus.cl/events/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
-   "url": "https://teatroictus.cl/cartelera/proximamente-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basur/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "ictus-sigrid-y-los-claveles",
-   "titulo": "SIGRID Y LOS CLAVELES",
-   "subtitulo": null,
-   "sinopsis": "Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Sigrid Alegría",
-    "Alonso Velasco Alegría",
-    "Ignacio Andrade",
-    "Ignacio Puga",
-    "Esteban Cruz"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-16",
-    "hasta": "2026-09-16",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:30"
-    }
-   },
-   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIGRIDYLOSCLAVELES_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-sigrid-y-los-claveles.jpg",
-   "huellaImagen": "49871819f1fc4cb13bb5671c8de905fbee643df0",
-   "entradas": "https://ticketplus.cl/events/sigrid-y-los-claveles",
-   "url": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "mori-la-pergola-de-las-flores",
    "titulo": "La pérgola de las flores",
    "subtitulo": null,
@@ -1567,58 +1468,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "ictus-historia-de-amor-para-un-alma-vieja",
-   "titulo": "HISTORIA DE AMOR PARA UN ALMA VIEJA",
-   "subtitulo": null,
-   "sinopsis": "“Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
-   "genero": "drama",
-   "compania": null,
-   "director": "Felipe Zambrano Miguieles",
-   "dramaturgo": "Felipe Zambrano Miguieles",
-   "elenco": [
-    "Eduardo Barril",
-    "Luz Jiménez",
-    "Teresita Ríos",
-    "Pascale Zelaya"
-   ],
-   "duracion": 55,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-27",
-    "hasta": "2026-09-27",
-    "dias": [
-     0,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/historiadeamor_paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-historia-de-amor-para-un-alma-vieja.jpg",
-   "huellaImagen": "41793d40c8dfacd9647b7d17dff9fb193787bb9e",
-   "entradas": "https://ticketplus.cl/events/historia-de-amor-para-un-alma-vieja-2026-09-25-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2344,56 +2193,6 @@
    }
   },
   {
-   "id": "ictus-el-bosque",
-   "titulo": "EL BOSQUE",
-   "subtitulo": null,
-   "sinopsis": "Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
-   "genero": "infantil",
-   "compania": null,
-   "director": "Cristian Marambio",
-   "dramaturgo": "David Mamet",
-   "elenco": [
-    "Camila Hirane",
-    "Mario Horton"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-24",
-    "hasta": "2026-10-24",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-el-bosque.jpg",
-   "huellaImagen": "63218894d5686880efa8646bc2d8e2e44c03111a",
-   "entradas": "https://ticketplus.cl/events/el-bosque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "puente-epistolario-para-una-futurolog",
    "titulo": "Epistolario para una Futurolog…",
    "subtitulo": null,
@@ -2487,54 +2286,6 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-olivia-garcia",
-   "titulo": "OLIVIA GARCÍA",
-   "subtitulo": null,
-   "sinopsis": "Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Andrés Elgueta",
-    "Rocío Gatica",
-    "Constanza Valenzuela",
-    "Fernando Guarello"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "18:00"
-    }
-   },
-   "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/Olivia-Garcia-sesion-20-de-junio-02.jpg",
-   "imagenLocal": "assets/img/ictus-olivia-garcia.jpg",
-   "huellaImagen": "55deff58d0af96262c9b11883f59f991e7dd76d8",
-   "entradas": "https://ticketplus.cl/events/olivia-garcia",
-   "url": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
