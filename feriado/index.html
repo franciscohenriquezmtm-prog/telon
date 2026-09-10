@@ -385,7 +385,7 @@
   <section>
     <div class="sec-head">
       <h2>El trámite que hay que hacer sí o sí</h2>
-      <p>Para que el feriado pase a 2027 se pide como si se fuera a tomar, y la jefatura lo rechaza por buen servicio.</p>
+      <p>Primero se gasta el bloque obligatorio; lo que sobre se posterga pidiéndolo como si se fuera a tomar, y la jefatura lo rechaza por buen servicio.</p>
     </div>
 
     <div class="plazo" id="plazo">
@@ -408,6 +408,10 @@
       <div class="fk tope">
         <span class="q">Fecha tope para entregar la solicitud, con el margen de tramitación</span>
         <span class="a" id="fk-solicitud">—</span>
+      </div>
+      <div class="fk">
+        <span class="q">Bloque de <span class="mono" id="bloque-lbl">10</span> días hábiles seguidos de feriado, obligatorio en el año</span>
+        <span class="a" id="fk-bloque">—</span>
       </div>
     </div>
 
@@ -595,6 +599,7 @@
         <label>Saldo inicial permisos<input type="number" id="e-perm" step="0.5" min="0"></label>
         <label>Techo acumulable (30/40/50)<input type="number" id="e-techo" step="5" min="0"></label>
         <label>Feriado nuevo en 2027<input type="number" id="e-nuevo" step="1" min="0"></label>
+        <label>Bloque seguido obligatorio<input type="number" id="e-bloque" step="1" min="0"></label>
       </div>
       <p class="note">Son los <strong>saldos iniciales</strong> del año, no los disponibles: el tablero descuenta solo lo que aparece en el registro. Si los números de arriba no calzan con Autoatención, falta o sobra un día en el registro. El techo depende de tu antigüedad: 30 días hábiles con menos de 15 años de servicio, 40 entre 15 y 20, 50 con más de 20.</p>
       <button class="ghost" id="reset" type="button">Volver al registro original de Autoatención</button>
@@ -708,8 +713,8 @@
 
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
-    techo:30, nuevo:15, margen:15, postergar:null,
-    sello:"2026-09-10 12:44",
+    techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
+    sello:"2026-09-10 13:07",
     reg: SEMILLA.slice()
   };
 
@@ -784,14 +789,53 @@
     var excede = Math.max(0, B.vigente.libre + state.nuevo - state.techo);
     var vigSalvo = Math.max(0, B.vigente.libre - excede);
 
-    /* lo que muere el 31-12-2026 pase lo que pase */
-    var obligado = B.acum25.libre + B.permiso.libre;
+    /* Feriado que hay que gastar sí o sí dentro del año:
+       - el acumulado del año pasado, que ya no puede volver a acumularse;
+       - lo que exceda el techo;
+       - y el bloque de diez días hábiles seguidos, que va igual aunque lo
+         anterior sume menos. El bloque se arma primero con el acumulado. */
+    var feriadoLibre = B.vigente.libre + B.acum25.libre + B.b2022.libre;
+    var obligadoFeriado = Math.min(feriadoLibre,
+      Math.max(B.acum25.libre + excede, state.bloque||0));
+    var desdeVigente = Math.max(0, obligadoFeriado - B.acum25.libre);
+
+    var obligado = obligadoFeriado + B.permiso.libre;
 
     var postergar = (state.postergar===null || state.postergar===undefined)
-      ? Math.round(B.vigente.libre) : state.postergar;
+      ? Math.round(Math.max(0, B.vigente.libre - desdeVigente)) : state.postergar;
 
     return { B:B, excede:excede, vigSalvo:vigSalvo, obligado:obligado,
-             total:obligado+excede, postergar:Math.max(0,postergar) };
+             obligadoFeriado:obligadoFeriado, desdeVigente:desdeVigente,
+             feriadoLibre:feriadoLibre, bloque:bloqueDeFeriado(),
+             total:obligado, postergar:Math.max(0,postergar) };
+  }
+
+  /* Corre una fecha al día hábil anterior o siguiente. */
+  function corre(f, paso){
+    var p=f.split("-"), d=new Date(+p[0], +p[1]-1, +p[2]);
+    var g=0;
+    do{ d.setDate(d.getDate()+paso); g++; }while(!esHabil(d) && g<40);
+    return iso(d);
+  }
+
+  /* La racha más larga de días hábiles seguidos de feriado marcados en 2026.
+     Los permisos no cuentan: la ley pide que sea feriado. */
+  function bloqueDeFeriado(){
+    var set={}, lista=[];
+    state.reg.forEach(function(x){
+      if(x.b==="permiso" || x.d!==1) return;
+      if(x.f.slice(0,4)!=="2026") return;
+      set[x.f]=true; lista.push(x.f);
+    });
+    lista.sort();
+    var mejor={largo:0};
+    lista.forEach(function(f){
+      if(set[corre(f,-1)]) return;      /* no es el comienzo de una racha */
+      var n=0, cur=f, ultimo=f, g=0;
+      while(set[cur] && g<200){ n++; ultimo=cur; cur=corre(cur,1); g++; }
+      if(n>mejor.largo) mejor={largo:n, desde:f, hasta:ultimo};
+    });
+    return mejor;
   }
 
   function habilAtras(n, hasta){
@@ -937,11 +981,10 @@
       claim.textContent="tienes que gastar dentro de 2026";
     }
     var trozos=[];
-    if(B.acum25.libre>0) trozos.push('acumulado <b style="color:var(--c-acum)">'+nf(B.acum25.libre)+'</b>');
+    if(d.obligadoFeriado>0) trozos.push('feriado <b style="color:var(--c-vig)">'+nf(d.obligadoFeriado)+'</b>');
     if(B.permiso.libre>0) trozos.push('permisos <b style="color:var(--c-perm)">'+nf(B.permiso.libre)+'</b>');
-    if(d.excede>0) trozos.push('feriado sobre el techo <b style="color:var(--c-vig)">'+nf(d.excede)+'</b>');
     $("v-riesgo-desglose").innerHTML = trozos.length ? trozos.join(" · ")
-      : 'el feriado 2026 y la bolsa 2022 pasan enteros a 2027';
+      : 'no queda nada obligatorio por gastar este año';
 
     /* plazo del trámite */
     var nPost=Math.max(1, Math.round(d.postergar));
@@ -964,6 +1007,19 @@
       $("dl-titulo").textContent="días para presentar la solicitud de postergación";
       $("dl-sub").innerHTML="Postergar <b>"+nf(d.postergar)+"</b> días del feriado 2026 obliga a pedir un período que empiece a más tardar el <b>"+largo(fInicio)+"</b>. Con "+(state.margen||0)+" días de margen, la solicitud entra antes del <b>"+largo(fSol)+"</b>.";
     }
+    var bl=d.bloque, fkb=$("fk-bloque");
+    $("bloque-lbl").textContent=nf(state.bloque);
+    if(bl.largo>=state.bloque){
+      fkb.textContent="✓ "+fmtFecha(bl.desde).slice(0,5)+" al "+fmtFecha(bl.hasta).slice(0,5);
+      fkb.style.color="var(--safe)";
+    } else if(bl.largo>0){
+      fkb.textContent="incompleto: "+nf(bl.largo)+" de "+nf(state.bloque);
+      fkb.style.color="var(--risk)";
+    } else {
+      fkb.textContent="sin armar";
+      fkb.style.color="var(--risk)";
+    }
+
     $("tl0-date").textContent=corto(fSol).replace(/-/g," · ");
     $("c-corridos").textContent=t.corridos;
     $("c-habiles").textContent=t.habiles;
@@ -979,7 +1035,7 @@
     chA.textContent = B.acum25.libre>0 ? nf(B.acum25.libre)+" en riesgo" : "todo cubierto";
     chA.className="chip "+(B.acum25.libre>0?"chip-risk":"chip-safe");
     $("n-acum").innerHTML = B.acum25.libre>0
-      ? "Estos días vienen arrastrados del año pasado, así que ya son el segundo período consecutivo: <strong>no pueden volver a acumularse</strong>. Es la bolsa que hay que vaciar primero."
+      ? "Vienen arrastrados del año pasado, así que ya son el segundo período consecutivo: <strong>no pueden volver a acumularse</strong>. Conviene que sean los primeros días del bloque obligatorio de "+nf(state.bloque)+"."
       : "Vaciada. Era la única bolsa de feriado que no podía cruzar a 2027.";
 
     tarjeta("vigente", {f:"f-vig",a:"a-vig",bar:"bar-vig",leg:"leg-vig"},
@@ -990,7 +1046,7 @@
     chV.className="chip "+(d.excede>0?"chip-risk":"chip-safe");
     $("n-vig").innerHTML = d.excede>0
       ? "Con <strong>"+nf(state.nuevo)+"</strong> días nuevos en enero y un techo de <strong>"+nf(state.techo)+"</strong>, a 2027 solo caben <strong>"+nf(state.techo-state.nuevo)+"</strong>: sobran <strong>"+nf(d.excede)+"</strong>."
-      : "Si tomas los <strong>"+nf(B.acum25.libre)+"</strong> del acumulado junto con <strong>"+nf(Math.max(0,10-B.acum25.libre))+"</strong> de esta bolsa, armas el bloque de diez días que exige la ley y te quedan <strong>"+nf(Math.max(0,B.vigente.libre-Math.max(0,10-B.acum25.libre)))+"</strong> para acumular a 2027.";
+      : "El bloque obligatorio se lleva <strong>"+nf(d.desdeVigente)+"</strong> días de esta bolsa, después de agotar el acumulado. Quedan <strong>"+nf(Math.max(0,B.vigente.libre-d.desdeVigente))+"</strong> para postergar a 2027.";
 
     tarjeta("b2022", {f:"f-2022",a:"a-2022",bar:"bar-2022",leg:"leg-2022"},
       { segs:[{v:B.b2022.libre,cls:"seg-safe",t:"Vive hasta 2027"}],
@@ -1020,7 +1076,7 @@
 
     $("e-vig").value=state.ini.vigente; $("e-acum").value=state.ini.acum25;
     $("e-2022").value=state.ini.b2022; $("e-perm").value=state.ini.permiso;
-    $("e-techo").value=state.techo; $("e-nuevo").value=state.nuevo;
+    $("e-techo").value=state.techo; $("e-nuevo").value=state.nuevo; $("e-bloque").value=state.bloque;
     if(document.activeElement!==$("i-postergar")) $("i-postergar").value=Math.round(d.postergar);
     if(document.activeElement!==$("i-margen")) $("i-margen").value=state.margen;
     pintaHint();
@@ -1110,7 +1166,7 @@
       state.ini[par[1]]=v; state.postergar=null; persist();
     });
   });
-  [["e-techo","techo"],["e-nuevo","nuevo"]].forEach(function(par){
+  [["e-techo","techo"],["e-nuevo","nuevo"],["e-bloque","bloque"]].forEach(function(par){
     $(par[0]).addEventListener("input", function(){
       var v=parseFloat(this.value); if(isNaN(v)||v<0) return;
       state[par[1]]=v; state.postergar=null; persist();

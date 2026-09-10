@@ -1,7 +1,7 @@
 /* Deja la pagina funcionando sin senal, pero sin quedarse pegada en una
    version vieja: la pagina se pide siempre al servidor y el cache solo entra
    cuando no hay red. */
-const CACHE = "feriado-2026-09-10-1244";
+const CACHE = "feriado-2026-09-10-1307";
 const BASE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
