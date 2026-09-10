@@ -1,5 +1,5 @@
 /* Deja la página funcionando sin señal: red primero, caché si no hay. */
-const CACHE = "feriado-v1";
+const CACHE = "feriado-v3";
 const BASE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
@@ -16,8 +16,11 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  // La página misma se revalida siempre contra el servidor: si no, una versión
+  // vieja guardada en el navegador puede quedarse pegada durante horas.
+  const esPagina = e.request.mode === "navigate";
   e.respondWith(
-    fetch(e.request)
+    fetch(esPagina ? new Request(e.request, { cache: "reload" }) : e.request)
       .then((r) => {
         const copia = r.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copia)).catch(() => {});
