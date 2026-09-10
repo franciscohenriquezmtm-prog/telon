@@ -39,7 +39,7 @@
     --c-desc:#4F646C; --c-desc-soft:#E0E9EB;
     --on-fill:#FFFFFF;
     --radius:5px;
-    --fs-num:clamp(2.1rem,11.5vw,3.4rem);
+    --fs-num:clamp(1.65rem,8.4vw,2.9rem);
     --fs-h1:clamp(1.45rem,5.4vw,1.9rem);
     --maxw:44rem;
   }
@@ -93,9 +93,9 @@
   .head .sub{color:var(--muted); font-size:.86rem}
 
   .verdict{display:flex; flex-direction:column; gap:16px}
-  .tiles{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .tiles{display:grid; grid-template-columns:repeat(3,1fr); gap:11px}
   .tile{display:flex; flex-direction:column; gap:5px; min-width:0}
-  .tile + .tile{border-left:1px solid var(--line); padding-left:14px}
+  .tile + .tile{border-left:1px solid var(--line); padding-left:11px}
   .tile .num{
     font-family:Archivo,sans-serif; font-weight:700; font-size:var(--fs-num);
     line-height:.86; letter-spacing:-.045em; color:var(--ink); font-variant-numeric:tabular-nums;
@@ -105,6 +105,8 @@
   .tile .claim{font-size:.88rem; font-weight:600; line-height:1.3; text-wrap:balance}
   .tile.riesgo .claim{color:var(--risk)}
   .tile.riesgo .claim.ok{color:var(--safe)}
+  .tile.salvo .num{color:var(--safe)}
+  .tile.salvo .claim{color:var(--safe)}
   .tile .mini{font-size:.71rem; color:var(--muted); line-height:1.45}
   .tile .mini b{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-2); font-variant-numeric:tabular-nums}
   .countdown{display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
@@ -362,6 +364,11 @@
         <span class="num" id="v-num">15,5</span>
         <p class="claim" id="v-claim">tienes que gastar dentro de 2026</p>
         <p class="mini" id="v-riesgo-desglose"></p>
+      </div>
+      <div class="tile salvo">
+        <span class="num" id="v-pasan">16</span>
+        <p class="claim">días de feriado pasan a 2027</p>
+        <p class="mini" id="v-pasan-desglose"></p>
       </div>
     </div>
     <div class="countdown">
@@ -625,7 +632,7 @@
       <div class="tl-item b22">
         <div class="tl-date">DURANTE 2027</div>
         <div class="tl-what" id="tl2">Último año para la bolsa 2022</div>
-        <p class="tl-why">Es la única bolsa que se puede gastar en trozos cortos, sin el bloque de diez días.</p>
+        <p class="tl-why">A eso se le suman los 15 días nuevos del año. La bolsa 2022 es la única que se puede gastar en trozos cortos, sin el bloque de diez días, y es la que vence primero: conviene gastarla antes que el resto.</p>
       </div>
       <div class="tl-item">
         <div class="tl-date">31 · DIC · 2027</div>
@@ -714,7 +721,7 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-10 13:15",
+    sello:"2026-09-10 14:19",
     reg: SEMILLA.slice()
   };
 
@@ -808,9 +815,15 @@
     var postergar = (state.postergar===null || state.postergar===undefined)
       ? Math.round(Math.max(0, B.vigente.libre - desdeVigente)) : state.postergar;
 
+    /* Lo que efectivamente llega al año siguiente: lo que sobra del feriado
+       del año una vez cubierto el bloque, más la bolsa 2022 entera, que se
+       traspasa por ley. */
+    var pasan2027 = Math.max(0, B.vigente.libre - desdeVigente) + B.b2022.libre;
+
     return { B:B, excede:excede, vigSalvo:vigSalvo, obligado:obligado,
              obligadoFeriado:obligadoFeriado, desdeVigente:desdeVigente,
              feriadoLibre:feriadoLibre, bloque:racha, bloquePendiente:bloquePendiente,
+             pasan2027:pasan2027, delVigente:Math.max(0, B.vigente.libre - desdeVigente),
              total:obligado, postergar:Math.max(0,postergar) };
   }
 
@@ -984,6 +997,11 @@
       num.classList.remove("zero"); claim.classList.remove("ok");
       claim.textContent="tienes que gastar dentro de 2026";
     }
+    $("v-pasan").textContent = nf(d.pasan2027);
+    $("v-pasan-desglose").innerHTML =
+      'feriado 2026 <b style="color:var(--c-vig)">'+nf(d.delVigente)+'</b> · '+
+      'bolsa 2022 <b style="color:var(--c-b22)">'+nf(B.b2022.libre)+'</b>';
+
     var trozos=[];
     if(d.obligadoFeriado>0) trozos.push('feriado <b style="color:var(--c-vig)">'+nf(d.obligadoFeriado)+'</b>');
     if(B.permiso.libre>0) trozos.push('permisos <b style="color:var(--c-perm)">'+nf(B.permiso.libre)+'</b>');
@@ -1067,7 +1085,7 @@
       : "Los seis días del año calendario ya están tomados o comprometidos.";
 
     $("tl1").textContent = d.total>0 ? "Se pierden "+nf(d.total)+" días" : "No pierdes días";
-    $("tl2").textContent = "Último año para la bolsa 2022 · "+nf(B.b2022.libre)+" días";
+    $("tl2").textContent = "Llegas con "+nf(d.pasan2027)+" días de feriado";
 
     $("cuadratura").innerHTML = BOLSAS.map(function(b){
       return '<div><span>'+CORTOS[b]+': '+nf(B[b].ini)+' inicial − '+nf(B[b].res)+' resueltos</span><b>'+nf(B[b].disponible)+'</b></div>';
