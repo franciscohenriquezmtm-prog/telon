@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T15:15:56.908Z",
+ "actualizado": "2026-09-10T15:25:04.955Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
