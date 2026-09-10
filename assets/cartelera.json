@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-09-05T23:27:45.622Z",
+ "actualizado": "2026-09-10T14:59:18.446Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 12,
+   "obras": 11,
    "error": null
   },
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 2,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -34,14 +34,14 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 7,
+   "obras": 1,
    "error": null
   },
   {
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 17,
+   "obras": 15,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 6,
+   "obras": 5,
    "error": null
   },
   {
@@ -162,7 +162,7 @@
    },
    "temporada": {
     "desde": "2026-07-02",
-    "hasta": "2026-09-05",
+    "hasta": "2026-09-12",
     "dias": [
      4,
      5,
@@ -194,62 +194,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "lascondes-close-to-me",
-   "titulo": "Close To Me",
-   "subtitulo": null,
-   "sinopsis": "De los creadores de los exitosos musicales “Hit, un musical de los 80” y “Es por Amor, el musical de Rock Latino”, llega “Close To Me”, una emocionante, romántica y...",
-   "genero": "musical",
-   "compania": null,
-   "director": "Paula Barraza y Martín Erazo",
-   "dramaturgo": "Rodrigo Muñoz Medina, Paula Barraza y Martín Erazo",
-   "elenco": [
-    "Francisca Walker"
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-06",
-    "hasta": "2026-09-06",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "20 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 22000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/05/WEB_CLOSETOME_SLIDE-1-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-close-to-me.jpg",
-   "huellaImagen": "8fda91295a7eac87221acae55c404ba628f005b1",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30777",
-   "url": "https://tmlascondes.cl/close-to-me/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
@@ -414,51 +358,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "teatrouc-l-s-nin-s-del-winnipeg",
-   "titulo": "L@s niñ@s del Winnipeg",
-   "subtitulo": null,
-   "sinopsis": "Del 3 al 12 de septiembre, Teatro UC presenta L@s niñ@s del Winnipeg, un emotivo montaje dirigido por Edurne Rankin García y Álvaro Morales Lifschitz que rinde homenaje a los refugiados de la Guerra Civil española y a la hazaña impulsada por Pablo Neruda. A partir de una rigurosa investigación histórica y testimonios de sobrevivientes, la obra reconstruye el histórico viaje del \"barco de la esperanza\" desde la inocente, sensible y conmovedora mirada de cuatro niños.",
-   "genero": "infantil",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 45,
-   "edad": 8,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-09-12",
-    "dias": [
-     4,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/08/EDU-MARIO.-Foto-Cristian-Cornejo-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-l-s-nin-s-del-winnipeg.jpg",
-   "huellaImagen": "cbf6fc6dcf06028d32a3e09cbc13d0fcea9af59d",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/los-ninos-del-winnipeg/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
@@ -632,276 +531,6 @@
    }
   },
   {
-   "id": "m100-vicaria",
-   "titulo": "Vicaría",
-   "subtitulo": null,
-   "sinopsis": "Unipersonal que rescata las memorias invisibilizadas de trabajadoras de la Vicaría, explorando la memoria, la pérdida y la resistencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ignacia González Torres",
-   "dramaturgo": "Leonardo González",
-   "elenco": [],
-   "duracion": 70,
-   "edad": null,
-   "sala": {
-    "nombre": "Matucana 100",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "18:30"
-    }
-   },
-   "horarioTexto": "Jue y vie: 19:30 hrs · Sáb y dom: 18:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 7000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/08/secretarias-vicaría_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-vicaria.jpg",
-   "huellaImagen": "bec2945c4aaedb6c30523e052c4643231db4d52b",
-   "entradas": "https://www.m100.cl/programacion/teatro/vicaria/",
-   "url": "https://www.m100.cl/programacion/teatro/vicaria/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
-   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
-   "subtitulo": "Presentado por LOS HÉROES",
-   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
-   "genero": "drama",
-   "compania": "Piedad Noguera",
-   "director": "Cuti Aste",
-   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
-   "elenco": [
-    "Bernardita Nassar"
-   ],
-   "duracion": 120,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-05",
-    "hasta": "2026-09-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "18:30"
-    }
-   },
-   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
-   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
-   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-sismo",
-   "titulo": "Sismo",
-   "subtitulo": null,
-   "sinopsis": "La nueva creación escénica multidisciplinar del Colectivo Artístico Circo Virtual, aborda los movimientos telúricos desde una perspectiva material, filosófic...",
-   "genero": "drama",
-   "compania": "Mila Casanova",
-   "director": "Katiuska Valenzuela y Isadora Guital",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-05",
-    "hasta": "2026-09-06",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "17:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5850
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/_PRO0614.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-sismo.jpg",
-   "huellaImagen": "c36ff3c9db751c65897152fb927a5d83df9594e9",
-   "entradas": "https://gam.ticketplus.cl/events/sismo?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/sismo/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-tengo-miedo-torero",
-   "titulo": "Tengo miedo torero",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES y Compañía Chilean Business presentarán el regreso a las tablas de la obra “Tengo miedo torero”, desde el miércoles 2 de septiembre.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Claudia Pérez",
-   "dramaturgo": "Pedro Lemebel",
-   "elenco": [
-    "José Luis Aguilera Minaya",
-    "Mario Ocampo",
-    "Daniela Gala",
-    "Claudia Vergara",
-    "Otilio Castro",
-    "Claudia Pérez"
-   ],
-   "duracion": 10,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-05",
-    "hasta": "2026-09-05",
-    "dias": [
-     6
-    ]
-   },
-   "horarioTexto": "2 al 5 de septiembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_02_tengo-miedo-torero_s.jpg",
-   "imagenLocal": "assets/img/nescafe-tengo-miedo-torero.jpg",
-   "huellaImagen": "47463055fd4fd87bec18f9a9df40a97431a7b139",
-   "entradas": "https://www.ticketmaster.cl/event/tengo-miedo-torero-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/tengo-miedo-torero/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-tres-marias-y-una-rosa",
-   "titulo": "Tres Marías y una Rosa",
-   "subtitulo": null,
-   "sinopsis": "Inspirada en hechos reales de la dictadura chilena, la obra dirigida por Loreto Valenzuela y con dramaturgia de David Benavente y el Taller de Investigación ...",
-   "genero": "drama",
-   "compania": "Tres Marías y una Rosa",
-   "director": "Loreto Valenzuela",
-   "dramaturgo": "David Benavente y TIT",
-   "elenco": [
-    "Malucha Pinto",
-    "Carolina Paulsen",
-    "Luciana Ibáñez",
-    "Constanza Mora"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-05",
-    "hasta": "2026-09-13",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:30"
-    }
-   },
-   "horarioTexto": "Do— 19.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/portada3maria.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-tres-marias-y-una-rosa.png",
-   "huellaImagen": "87743091719712b78d0a1afd3cabb02db1dab0b0",
-   "entradas": "https://gam.ticketplus.cl/events/tres-maria-y-una-rosa?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tres-marias-y-una-rosa/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-golden-las-guerreras-del-kpop-tributo",
    "titulo": "Golden: las Guerreras del KPOP Tributo",
    "subtitulo": null,
@@ -1006,47 +635,6 @@
    }
   },
   {
-   "id": "nescafe-felipe-avello",
-   "titulo": "Felipe Avello",
-   "subtitulo": null,
-   "sinopsis": "Felipe Avello llega nuevamente al TEATRO NESCAFÉ DE LAS ARTES, con un show de monólogos dinámico y cercano, que invita al público a ser parte activa de la experiencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-07",
-    "hasta": "2026-09-08",
-    "dias": [
-     1,
-     2
-    ]
-   },
-   "horarioTexto": "7 y 8 de septiembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/11/2026_08_03_avello_s.jpg",
-   "imagenLocal": "assets/img/nescafe-felipe-avello.jpg",
-   "huellaImagen": "cff50340e46929673a6584a0fb82b6d348e4cc3a",
-   "entradas": "https://www.ticketmaster.cl/event/felipe-avello-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/felipe-avello/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "zoco-honor",
    "titulo": "HONOR",
    "subtitulo": null,
@@ -1122,97 +710,6 @@
    }
   },
   {
-   "id": "ictus-fernando-milagros",
-   "titulo": "FERNANDO MILAGROS",
-   "subtitulo": null,
-   "sinopsis": "A 15 de su publicación, Fernando Milagros vuelve a su disco “San Sebastián” , uno de los discos fundamentales de su trayectoria, para interpretarlo completo en un concierto íntimo y excepcional en Teatro ICTUS. Acompañado por el guitarrista Felipe Ruz, Milagros revisitará las canciones SAN SEBASTIÁN en un formato de dos guitarras, cercano y despojado, recuperando el espíritu con el que muchas de ellas fueron creadas. Será una oportunidad única para volver a escuchar este repertorio desde el presente y descubrir cómo el tiempo ha transformado sus letras, sus sonidos y su significado. Este aniversario también marca el regreso de San Sebastián como objeto, el disco será reeditado en vinilo en una edición especial celebrando sus 15 años.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Fernando Milagros",
-    "Simón Campusano",
-    "Felipe Ruiz"
-   ],
-   "duracion": 120,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-09",
-    "hasta": "2026-09-09",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "9 DE SEPTIEMBRE | ENTRADAS AGOTADAS · Miércoles | 20:00H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/1000206419.jpg",
-   "imagenLocal": "assets/img/ictus-fernando-milagros.jpg",
-   "huellaImagen": "a67ffeb12dca3b4ed873b238cdc5533d8733f801",
-   "entradas": "https://ticketplus.cl/events/fernando-milagros",
-   "url": "https://teatroictus.cl/cartelera/fernando-milagros/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "nescafe-mrs-warren-s-profession",
-   "titulo": "Mrs. Warren's Profession",
-   "subtitulo": null,
-   "sinopsis": "Como ya es tradición, TEATRO NESCAFÉ DE LAS ARTES continúa en 2026 con las transmisiones del ciclo National Theatre Live, obras de altísima calidad artística producidas por el Teatro Nacional de Londres.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Justin Martin",
-   "dramaturgo": null,
-   "elenco": [
-    "Rosamund Pike",
-    "Jamie Glover",
-    "Jasper Talbot"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-09",
-    "hasta": "2026-09-09",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "9 de septiembre - 19:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_09_09_warren_s.jpg",
-   "imagenLocal": "assets/img/nescafe-mrs-warren-s-profession.jpg",
-   "huellaImagen": "77188fc6c5a644c5fd9f6db21f3fee4142c3e822",
-   "entradas": "https://www.ticketmaster.cl/event/477-mrs-warrens-profession-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-mrs-warrens-profession/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "nescafe-la-negra-ester",
    "titulo": "La Negra Ester",
    "subtitulo": null,
@@ -1263,6 +760,105 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-la-pergola-de-las-flores-presentado-por-los-heroes",
+   "titulo": "La pérgola de las flores: Presentado por LOS HÉROES",
+   "subtitulo": "Presentado por LOS HÉROES",
+   "sinopsis": "La aclamada versión de Héctor Noguera regresa a GAM con más de 30 intérpretes que llevan a escena uno de los grandes hitos del teatro nacional. Con texto ori...",
+   "genero": "drama",
+   "compania": "Piedad Noguera",
+   "director": "Cuti Aste",
+   "dramaturgo": "Isidora Aguirre Música original : Francisco Flores del Campo Dirección : Héctor Noguera Asistencia de dirección: María de los Ángeles Calvo Dirección Audiovisual : Carlos Moena",
+   "elenco": [
+    "Bernardita Nassar"
+   ],
+   "duracion": 120,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-10",
+    "hasta": "2026-09-13",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "18:30"
+    }
+   },
+   "horarioTexto": "Ju y Vi— 19.30 h Sá y Do— 18.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/PORTADAPergola.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-la-pergola-de-las-flores-presentado-por-los-heroes.png",
+   "huellaImagen": "1562cf23aefd815564f82a27f574cd61cbe19690",
+   "entradas": "https://gam.ticketplus.cl/events/la-pergola-de-las-flores-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-pergola-de-las-flores/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-tres-marias-y-una-rosa",
+   "titulo": "Tres Marías y una Rosa",
+   "subtitulo": null,
+   "sinopsis": "Inspirada en hechos reales de la dictadura chilena, la obra dirigida por Loreto Valenzuela y con dramaturgia de David Benavente y el Taller de Investigación ...",
+   "genero": "drama",
+   "compania": "Tres Marías y una Rosa",
+   "director": "Loreto Valenzuela",
+   "dramaturgo": "David Benavente y TIT",
+   "elenco": [
+    "Malucha Pinto",
+    "Carolina Paulsen",
+    "Luciana Ibáñez",
+    "Constanza Mora"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-09-10",
+    "hasta": "2026-09-13",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:30"
+    }
+   },
+   "horarioTexto": "Do— 19.30 h",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/portada3maria.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-tres-marias-y-una-rosa.png",
+   "huellaImagen": "87743091719712b78d0a1afd3cabb02db1dab0b0",
+   "entradas": "https://gam.ticketplus.cl/events/tres-maria-y-una-rosa?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tres-marias-y-una-rosa/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1338,7 +934,7 @@
     "Consuelo Holzapfel",
     "Nicolás Eyzaguirre"
    ],
-   "duracion": 50,
+   "duracion": 65,
    "edad": 14,
    "sala": {
     "nombre": "Teatro Ictus — Sala La Comedia",
@@ -1667,9 +1263,9 @@
    },
    "horarioTexto": null,
    "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/DSC_0529©Melian_Riffo-@_fantasmadeunafoto-scaled.jpg",
-   "imagenLocal": null,
-   "huellaImagen": null,
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/DSC6718-©Felipe_Garay-quienmelorobo-1.jpg",
+   "imagenLocal": "assets/img/teatrouc-cabeza-de-elefante.jpg",
+   "huellaImagen": "ea1b0cc1ff82a99a3a2a6e35f13b0662b1d8f86e",
    "entradas": null,
    "url": "https://teatrouc.uc.cl/evento/cabeza-de-elefante/",
    "fuente": {
@@ -2221,7 +1817,7 @@
    "id": "gam-furias",
    "titulo": "Furias",
    "subtitulo": "Coproducción GAM",
-   "sinopsis": "Escrita por Manuela Oyarzún y dirigida por Víctor Carrasco, la obra cruza los mundos del arte, la ciencia y la salud mental para cuestionar sus jerarquías y ...",
+   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
    "genero": "drama",
    "compania": "Furias",
    "director": "Víctor Carrasco",
@@ -2267,9 +1863,9 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/Portada_furia.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-furias.png",
-   "huellaImagen": "9f3e99cf09f98a783a234537366bafa472dcfff7",
+   "imagen": "https://gam.cl/media/images/Banner_Furias.53e48872.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-furias.jpg",
+   "huellaImagen": "61516cfe93d84bfe24f6f6cac2c5b4fc0fb9dc21",
    "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
@@ -2319,6 +1915,53 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "teatrouc-nimiedades",
+   "titulo": "Nimiedades",
+   "subtitulo": null,
+   "sinopsis": "Por primera vez en Chile, Teatro UC presenta Nimiedades, un clásico fundamental del realismo estadounidense escrito por Susan Glaspell en 1916. Enmarcada en el género policial, la historia comienza tras el asesinato de un campesino en su propia cama, dejando a su viuda como la única sospechosa. Una pieza tan sensible como aguda que nos ofrece una mirada vigente sobre la opresión a la mujer. Presentada gracias a la Línea de Apoyo a Teatros Universitarios 2025, la obra dirigida por Rodrigo Pérez estará en cartelera entre el 7 de octubre y el 7 de noviembre de 2026.",
+   "genero": "clasico",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 70,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Sala Ana González",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-07",
+    "hasta": "2026-11-07",
+    "dias": [
+     0,
+     3,
+     6
+    ],
+    "horas": {
+     "0": "20:30",
+     "3": "20:30",
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/nimiedades-susan-glaspell-teatro-uc-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-nimiedades.jpg",
+   "huellaImagen": "20c7788a3081f582a0574fea89ed1cce68523a18",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/nimiedades/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
@@ -2428,6 +2071,68 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "m100-matadero-alma",
+   "titulo": "Matadero Alma",
+   "subtitulo": null,
+   "sinopsis": "Matadero Alma es una radiografía urbana que explora las imágenes de nostalgia e injusticia que atraviesan la identidad del país.",
+   "genero": "danza",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-14",
+    "hasta": "2026-10-17",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Jue a dom: 19:30 hrs.",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 8000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 7000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "url": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
    }
   },
   {
@@ -2675,12 +2380,12 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
+   "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-el-bosque.jpg",
    "huellaImagen": "63218894d5686880efa8646bc2d8e2e44c03111a",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
+   "entradas": "https://ticketplus.cl/events/el-bosque",
    "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
    "fuente": {
     "id": "ictus",
@@ -3392,7 +3097,7 @@
    },
    "temporada": {
     "desde": "2026-11-27",
-    "hasta": "2026-12-06",
+    "hasta": "2026-12-13",
     "dias": [
      0,
      5,
@@ -3547,274 +3252,43 @@
    }
   },
   {
-   "id": "lascondes-tu-amaras",
-   "titulo": "Tú Amarás",
+   "id": "nescafe-el-invencible-verano-de-liliana",
+   "titulo": "El invencible verano de Liliana",
    "subtitulo": null,
-   "sinopsis": "Abrimos el año con un ciclo retrospectivo de la compañía Bonobo, teatro que no deja indiferente, que mezcla fuerza dramática, crítica social, humor corrosivo y una estética provocadora e inteligente....",
-   "genero": "comedia",
-   "compania": "Bonobo",
-   "director": "Pablo Manzi y Andreina Olivari",
-   "dramaturgo": "Pablo Manzi",
-   "elenco": [
-    "Paulina Giglio",
-    "Gabriel Urzúa",
-    "Guilherme Sepúlveda",
-    "Carlos Donoso",
-    "Gabriel Cañas"
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2027-01-08",
-    "hasta": "2027-01-11",
-    "dias": [
-     0,
-     1,
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "4 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_TUAMARAS-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-tu-amaras.jpg",
-   "huellaImagen": "bcf1525d370483548592621c783dbb3d9c7aedd4",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30750&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=tu_amaras",
-   "url": "https://tmlascondes.cl/tu-amaras/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-temis",
-   "titulo": "Temis",
-   "subtitulo": null,
-   "sinopsis": "Dentro del ciclo especial de la compañía Bonobo, en enero presentaremos Temis -cuyo título hace alusión a la diosa griega de la justicia y la equivalencia- que es la tercera...",
-   "genero": "drama",
-   "compania": "Bonobo",
-   "director": "Pablo Manzi y Andreina Olivari",
-   "dramaturgo": "Pablo Manzi",
-   "elenco": [
-    "Paulina Giglio",
-    "Gabriel Urzúa",
-    "Guilherme Sepúlveda",
-    "Carlos Donoso",
-    "Gabriel Cañasny Marcela Salinas"
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2027-01-15",
-    "hasta": "2027-01-18",
-    "dias": [
-     0,
-     1,
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "4 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_TEMIS-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-temis.jpg",
-   "huellaImagen": "6ccc12be6d2c5f729ab574c1e743bfed9cb7c5cb",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30749&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=temis",
-   "url": "https://tmlascondes.cl/temis/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-teatro-a-mil-acreedores",
-   "titulo": "Teatro a Mil: Acreedores",
-   "subtitulo": null,
-   "sinopsis": "A más de 130 años de su escritura, este texto del sueco August Strindberg revive en escena, luego de la adaptación que hace el dramaturgo y director Alexis Moreno, desplegando...",
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES nuevamente se integrará a la red de salas que participarán en la 34ª edición del Festival Internacional Teatro a Mil, certamen que presentará destacados montajes nacionales e internacionales durante enero de 2027.",
    "genero": "drama",
    "compania": null,
-   "director": "Alexis Moreno",
+   "director": "Juan Carlos Fisher",
    "dramaturgo": null,
-   "elenco": [
-    "Francisco Reyes",
-    "Paloma Moreno",
-    "Mario Horton"
-   ],
-   "duracion": 100,
-   "edad": 14,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 15,
    "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
     "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    },
    "temporada": {
-    "desde": "2027-01-19",
-    "hasta": "2027-01-20",
+    "desde": "2027-01-21",
+    "hasta": "2027-01-21",
     "dias": [
-     2,
-     3
-    ]
-   },
-   "horarioTexto": "2 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/10/Acreedores-Slider-Web_TMLC_TAM26.png",
-   "imagenLocal": "assets/img/lascondes-teatro-a-mil-acreedores.png",
-   "huellaImagen": "b77c87cc1e506f7f67693bbf1f9c609e9465594c",
-   "entradas": "https://teatro-a-mil.ticketplus.cl/events/acreedores-TAM2026/?utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_web_acreedores",
-   "url": "https://tmlascondes.cl/teatro-a-mil-acreedores/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-teatro-a-mil-mam",
-   "titulo": "Teatro a Mil: MÁM",
-   "subtitulo": null,
-   "sinopsis": "Reuniendo en escena al virtuoso concertinista irlandés Cormac Begley, a la orquesta Europea de música contemporánea S t a r g a z e y a doce bailarines internacionales de...",
-   "genero": "danza",
-   "compania": null,
-   "director": "Michael Keegan-Dolan",
-   "dramaturgo": null,
-   "elenco": [
-    "Imogen Alvares",
-    "Cormac Begley",
-    "Romain Bly",
-    "Tyler Carney",
-    "Kim Ceysens",
-    "Lisa De Boos",
-    "Aki Iwamoto",
-    "Zen Jefferson",
-    "Mayah Kadish",
-    "Amit Noy",
-    "James O’Hara",
-    "Keir Patrick",
-    "Rachel Poirier",
-    "Connor Scott"
-   ],
-   "duracion": 80,
-   "edad": 10,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2027-01-23",
-    "hasta": "2027-01-25",
-    "dias": [
-     0,
-     1,
-     6
-    ]
-   },
-   "horarioTexto": "3 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 30000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/10/MAM-Slider-Web_TMLC_TAM26.png",
-   "imagenLocal": "assets/img/lascondes-teatro-a-mil-mam.png",
-   "huellaImagen": "c896c518dd8209c22bbce3ad8462e305eda33e48",
-   "entradas": "https://teatro-a-mil.ticketplus.cl/events/mam-FITAM2026?utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_web_mam",
-   "url": "https://tmlascondes.cl/teatro-a-mil-mam/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "lascondes-la-verdad",
-   "titulo": "La Verdad",
-   "subtitulo": null,
-   "sinopsis": "Este 27 y 28 de enero no te pierdas las dos únicas funciones que presentaremos de la exitosa obra “La Verdad”. Una cena, una amistad y un secreto a voces:...",
-   "genero": "drama",
-   "compania": null,
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Florian Zeller",
-   "elenco": [
-    "Camila Hirane",
-    "María Gracia Omegna",
-    "Álvaro Espinoza",
-    "Nicolás Saavedra."
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2027-01-27",
-    "hasta": "2027-01-28",
-    "dias": [
-     3,
      4
     ]
    },
-   "horarioTexto": "2 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2025/12/WEB_PROXIMOS-ESPECTACULOS_SLIDE-MARQUESINA_LAVERDAD-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-la-verdad.jpg",
-   "huellaImagen": "2c9f55a680bb397369f899c77eb4fc60fb198388",
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30754&#038;utm_source=tmlc&#038;utm_medium=referral&#038;utm_campaign=tmlc_referral&#038;utm_content=la_verdad",
-   "url": "https://tmlascondes.cl/la-verdad/",
+   "horarioTexto": "19 al 21 de enero - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/09/2026_01_19_liliana_s.jpg",
+   "imagenLocal": "assets/img/nescafe-el-invencible-verano-de-liliana.jpg",
+   "huellaImagen": "1d3bfb9e3ba93bd835e39de6cb3404b2ee6df5ef",
+   "entradas": "https://www.ticketmaster.cl/event/el-invencible-verano-de-liliana-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/fitam-el-invencible-verano-de-liliana/",
    "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
