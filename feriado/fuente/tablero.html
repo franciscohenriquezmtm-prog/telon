@@ -1,29 +1,7 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Control de feriado legal y permisos administrativos segun el Estatuto Administrativo.">
-<meta name="theme-color" content="#0B6B62" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#091211" media="(prefers-color-scheme: dark)">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Feriado">
+<title>Feriado y Permisos 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon.svg">
-<style>
-  html{color-scheme:light dark}
-  body{margin:0; font:14px system-ui, sans-serif}
-  img{max-width:100%}
-  [hidden]{display:none!important}
-</style>
-<title>Feriado y permisos · control de días</title>
-</head>
-<body>
 <style>
   :root{
     --ground:#EDF1F0; --surface:#FFFFFF; --surface-2:#F4F8F7;
@@ -320,7 +298,7 @@
 
   footer{border-top:1px solid var(--line); padding-top:14px; font-size:.74rem; color:var(--muted); display:flex; flex-direction:column; gap:5px; line-height:1.5}
   .sync{display:flex; align-items:center; gap:7px}
-  .sync .d2{width:7px; height:7px; border-radius:50%; background:var(--safe); flex:none}
+  .sync .d2{width:7px; height:7px; border-radius:50%; background:var(--line-strong); flex:none}
   .sync.on .d2{background:var(--safe)}
 
   /* acumulado del período anterior */
@@ -692,8 +670,8 @@
   </section>
 
   <footer>
-    <div class="sync" id="sync"><span class="d2"></span><span id="sync-t">Publicado el <span class="mono" id="sello">—</span> · se actualiza solo</span></div>
-    <div>Este mismo enlace se mantiene al día: lo que corrija aparece la próxima vez que lo abras, en el computador y en el teléfono. Lo que marques queda guardado en el aparato donde lo marcaste.</div>
+    <div class="sync" id="sync"><span class="d2"></span><span id="sync-t">Guardado en este dispositivo</span></div>
+    <div>Los saldos salen del registro de días. Los cinco movimientos iniciales vienen de tus pantallas de Autoatención del 10-09-2026.</div>
   </footer>
 
 </div>
@@ -721,7 +699,6 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-10 18:45",
     reg: SEMILLA.slice()
   };
 
@@ -757,20 +734,11 @@
   function hoy0(){ var h=new Date(); h.setHours(0,0,0,0); return h; }
   function fmtFecha(f){ var t=f.split("-"); return t[2]+"-"+t[1]+"-"+t[0]; }
 
-  /* Lo que marcas queda guardado en este aparato. Pero si la página trae una
-     publicación más nueva que la guardada aquí, gana la página: así una
-     corrección llega sola a todos los aparatos, sin cargar nada a mano. */
   function loadLocal(){
-    try{
-      var raw=localStorage.getItem("dias2026v4");
-      if(raw){
-        var g=JSON.parse(raw);
-        if(g && g.sello===DEFAULTS.sello) return Object.assign(clone(DEFAULTS), g);
-      }
-    }catch(e){}
+    try{ var raw=localStorage.getItem("dias2026v3"); if(raw) return Object.assign(clone(DEFAULTS), JSON.parse(raw)); }catch(e){}
     return clone(DEFAULTS);
   }
-  function saveLocal(){ try{ localStorage.setItem("dias2026v4", JSON.stringify(state)); }catch(e){} }
+  function saveLocal(){ try{ localStorage.setItem("dias2026v3", JSON.stringify(state)); }catch(e){} }
   function guarda(){ saveLocal(); if(docRef){ docRef.set(clone(state)).catch(function(){}); } }
   function persist(){ guarda(); render(); }
 
@@ -1199,17 +1167,26 @@
   $("btn-antes").addEventListener("click", function(){ verAntes=!verAntes; render(); });
   $("btn-2027").addEventListener("click", function(){ ver2027=!ver2027; render(); });
 
-  /* ---------- funcionar sin señal ---------- */
-  if("serviceWorker" in navigator){
-    window.addEventListener("load", function(){
-      navigator.serviceWorker.register("./sw.js").catch(function(){});
-    });
-  }
-
-  $("sello").textContent = DEFAULTS.sello;
+  /* ---------- sincronización entre dispositivos ---------- */
+  (async function(){
+    if(!window.claude || !window.claude.use) return;
+    var db;
+    try{ db = await window.claude.use("db"); }catch(e){ return; }
+    if(!db) return;
+    docRef = db.doc("estado/v3");
+    docRef.onSnapshot(function(snap){
+      if(snap.exists){
+        state=Object.assign(clone(DEFAULTS), snap.data());
+        if(!Array.isArray(state.reg)) state.reg=SEMILLA.slice();
+        if(!state.ini) state.ini=clone(DEFAULTS.ini);
+        saveLocal(); render();
+      } else {
+        docRef.set(clone(state)).catch(function(){});
+      }
+      $("sync").classList.add("on");
+      $("sync-t").textContent="Sincronizado en vivo · lo ves igual en el celular";
+    }, function(){});
+  })();
 
 })();
 </script>
-
-</body>
-</html>

@@ -1,7 +1,7 @@
-/* Deja la pagina funcionando sin senal, pero sin quedarse pegada en una
-   version vieja: la pagina se pide siempre al servidor y el cache solo entra
+/* Deja la página funcionando sin señal, pero sin quedarse pegada en una
+   versión vieja: la página se pide siempre al servidor y el caché solo entra
    cuando no hay red. */
-const CACHE = "feriado-2026-09-10-1419";
+const CACHE = "feriado-2026-09-10-1845";
 const BASE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
