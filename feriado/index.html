@@ -714,7 +714,7 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-10 13:07",
+    sello:"2026-09-10 13:15",
     reg: SEMILLA.slice()
   };
 
@@ -795,8 +795,12 @@
        - y el bloque de diez días hábiles seguidos, que va igual aunque lo
          anterior sume menos. El bloque se arma primero con el acumulado. */
     var feriadoLibre = B.vigente.libre + B.acum25.libre + B.b2022.libre;
+    /* O ya existe una fracción de diez días seguidos, o se debe entera: una
+       racha más corta no cuenta como avance, la ley pide UNA fracción de 10. */
+    var racha = bloqueDeFeriado();
+    var bloquePendiente = racha.largo >= (state.bloque||0) ? 0 : (state.bloque||0);
     var obligadoFeriado = Math.min(feriadoLibre,
-      Math.max(B.acum25.libre + excede, state.bloque||0));
+      Math.max(B.acum25.libre + excede, bloquePendiente));
     var desdeVigente = Math.max(0, obligadoFeriado - B.acum25.libre);
 
     var obligado = obligadoFeriado + B.permiso.libre;
@@ -806,7 +810,7 @@
 
     return { B:B, excede:excede, vigSalvo:vigSalvo, obligado:obligado,
              obligadoFeriado:obligadoFeriado, desdeVigente:desdeVigente,
-             feriadoLibre:feriadoLibre, bloque:bloqueDeFeriado(),
+             feriadoLibre:feriadoLibre, bloque:racha, bloquePendiente:bloquePendiente,
              total:obligado, postergar:Math.max(0,postergar) };
   }
 
@@ -1013,7 +1017,7 @@
       fkb.textContent="✓ "+fmtFecha(bl.desde).slice(0,5)+" al "+fmtFecha(bl.hasta).slice(0,5);
       fkb.style.color="var(--safe)";
     } else if(bl.largo>0){
-      fkb.textContent="incompleto: "+nf(bl.largo)+" de "+nf(state.bloque);
+      fkb.textContent="falta · la racha más larga es "+nf(bl.largo);
       fkb.style.color="var(--risk)";
     } else {
       fkb.textContent="sin armar";
