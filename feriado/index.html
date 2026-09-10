@@ -113,6 +113,12 @@
   .countdown .k.urge{color:var(--risk)}
   .countdown .l{font-size:.7rem; color:var(--muted); line-height:1.25}
 
+  .vacio{
+    display:flex; flex-direction:column; gap:7px; padding:13px 15px; border-radius:var(--radius);
+    background:var(--c-perm-soft); border:1px solid var(--c-perm); line-height:1.45;
+  }
+  .vacio b{color:var(--ink); font-size:.9rem}
+  .vacio p{font-size:.79rem; color:var(--ink-2)}
   .clave{display:flex; flex-direction:column; gap:7px}
   .codigo{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px}
   .codigo li{font-size:.71rem; font-weight:600; padding:5px 11px; border-radius:100px; letter-spacing:.01em}
@@ -373,6 +379,11 @@
       <div><span class="k" id="c-habiles">76</span><span class="l">hábiles que quedan del año</span></div>
       <div><span class="k" id="c-solicitud">76</span><span class="l">para pedir la postergación</span></div>
     </div>
+  </div>
+
+  <div class="vacio" id="aviso-vacio" hidden>
+    <b>Este tablero todavía está vacío</b>
+    <p>Los números de arriba son los que fija la ley para cualquier funcionario: 15 días hábiles de feriado y 6 de permiso administrativo. <strong>No son tus saldos.</strong> Para que lo sean, abre el enlace con tus datos, o escribe tus saldos en «Saldos iniciales y supuestos» y marca en el calendario los días que ya tomaste.</p>
   </div>
 
   <div class="clave">
@@ -1043,6 +1054,9 @@
       return '<div><span>'+CORTOS[b]+': '+nf(B[b].ini)+' inicial − '+nf(B[b].res)+' resueltos</span><b>'+nf(B[b].disponible)+'</b></div>';
     }).join("") +
     '<div><span><b>Feriado disponible total</b> (lo que muestra la pantalla)</span><b>'+nf(B.vigente.disponible+B.acum25.disponible)+'</b></div>';
+
+    var _av = document.getElementById("aviso-vacio");
+    if (_av) _av.hidden = state.reg.length > 0;
 
     pintaCalendario([iso(fInicio), iso(fSol)]);
     pintaPendientes();
