@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-10T17:22:55.830Z",
+ "actualizado": "2026-09-10T21:48:00.549Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
+   "obras": 6,
    "error": null
   },
   {
@@ -1918,6 +1918,49 @@
    }
   },
   {
+   "id": "ictus-milena-antonia",
+   "titulo": "MILENA ANTONIA",
+   "subtitulo": null,
+   "sinopsis": "Milena Antonia es una cantautora e intérprete chilena y se ha dedicado a estudiar e interpretar boleros desde el 2016 hasta la actualidad. En este estilo musical, se desenvuelve con naturalidad y ha gestionado junto a su equipo, presentaciones de gran convocatoria. Para esta fecha, Milena viene con lo mejor de su repertorio de boleros, de esos que te harán suspirar y conectarte en profundidad con sus melodías. Escucharás una voz de primer nivel, suave y profunda que te harán encantarte con lo más lindo que tiene el género.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-07",
+    "hasta": "2026-10-07",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "7 DE OCTUBRE · Miércoles | 20:00 H · Milena Antonia es una cantautora e intérprete chilena y se ha dedicado a estudiar e interpretar boleros desde el 2016 hasta la actualidad. En este estilo musical, se desenvuelve con naturalidad y ha gestionado junto a su equipo, presentaciones de gran convocatoria. Para esta fecha, Milena viene con lo mejor de su repertorio de boleros, de esos que te harán suspirar y conectarte en profundidad con sus melodías. Escucharás una voz de primer nivel, suave y profunda que te harán encantarte con lo más lindo que tiene el género.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/IMG_9644.JPG.jpeg",
+   "imagenLocal": "assets/img/ictus-milena-antonia.jpeg",
+   "huellaImagen": "4eccc750c61d66dc19cbf41866c4d79cada667a4",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-milena-antonia/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-milena-antonia/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "teatrouc-nimiedades",
    "titulo": "Nimiedades",
    "subtitulo": null,
@@ -1941,10 +1984,12 @@
     "desde": "2026-10-07",
     "hasta": "2026-11-07",
     "dias": [
+     0,
      3,
      6
     ],
     "horas": {
+     "0": "20:30",
      "3": "20:30",
      "6": "20:30"
     }
