@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Control de feriado legal y permisos administrativos para funcionarios públicos de Chile, con las reglas del Estatuto Administrativo.">
+<meta name="theme-color" content="#0B6B62" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#091211" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Feriado">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<style>
+  html{color-scheme:light dark}
+  body{margin:0; font:14px system-ui, sans-serif}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>Feriado y permisos · control de días</title>
+</head>
+<body>
+<style>
+  :root{
+    --ground:#EDF1F0; --surface:#FFFFFF; --surface-2:#F4F8F7;
+    --ink:#0E1C1A; --ink-2:#3B4F4C; --muted:#687A78;
+    --line:#D2DEDC; --line-strong:#B6C6C3;
+    --accent:#0B6B62; --accent-soft:#DAEBE8;
+    --risk:#A93A14; --risk-soft:#F4DED2;
+    --safe:#2C6E4E; --safe-soft:#DBEDE2;
+    --c-vig:#0B6B62; --c-vig-soft:#D7E9E6;
+    --c-b22:#4A4A9E; --c-b22-soft:#E1E1F3;
+    --c-acum:#8E3B63; --c-acum-soft:#F3DEE7;
+    --c-perm:#8A6A12; --c-perm-soft:#F0E6C6;
+    --c-desc:#4F646C; --c-desc-soft:#E0E9EB;
+    --on-fill:#FFFFFF;
+    --radius:5px;
+    --fs-num:clamp(2.1rem,11.5vw,3.4rem);
+    --fs-h1:clamp(1.45rem,5.4vw,1.9rem);
+    --maxw:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#091211; --surface:#111C1B; --surface-2:#162321;
+      --ink:#E7EEEC; --ink-2:#B6C7C4; --muted:#829793;
+      --line:#22302E; --line-strong:#31423F;
+      --accent:#3FBAAC; --accent-soft:#10312D;
+      --risk:#E8825A; --risk-soft:#381C11;
+      --safe:#5FB98A; --safe-soft:#102E1E;
+      --c-vig:#3FBAAC; --c-vig-soft:#0F312D;
+      --c-b22:#9A9AEE; --c-b22-soft:#1D1D3C;
+      --c-acum:#E48DB0; --c-acum-soft:#331A25;
+      --c-perm:#D6B053; --c-perm-soft:#2F2510;
+      --c-desc:#93A9B1; --c-desc-soft:#192427;
+      --on-fill:#08130F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#091211; --surface:#111C1B; --surface-2:#162321;
+    --ink:#E7EEEC; --ink-2:#B6C7C4; --muted:#829793;
+    --line:#22302E; --line-strong:#31423F;
+    --accent:#3FBAAC; --accent-soft:#10312D;
+    --risk:#E8825A; --risk-soft:#381C11;
+    --safe:#5FB98A; --safe-soft:#102E1E;
+    --c-vig:#3FBAAC; --c-vig-soft:#0F312D;
+    --c-b22:#9A9AEE; --c-b22-soft:#1D1D3C;
+      --c-acum:#E48DB0; --c-acum-soft:#331A25;
+    --c-perm:#D6B053; --c-perm-soft:#2F2510;
+    --c-desc:#93A9B1; --c-desc-soft:#192427;
+    --on-fill:#08130F;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px; line-height:1.55; -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:22px 18px 64px; display:flex; flex-direction:column; gap:30px}
+  h1,h2,h3{font-family:Archivo,"IBM Plex Sans",sans-serif; text-wrap:balance; margin:0; letter-spacing:-.012em}
+  p{margin:0}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+  .eyebrow{font-family:"IBM Plex Mono",monospace; font-size:.68rem; letter-spacing:.13em; text-transform:uppercase; color:var(--muted)}
+  a{color:var(--accent); text-underline-offset:2px}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:3px}
+
+  .head{display:flex; flex-direction:column; gap:6px; border-bottom:1px solid var(--line); padding-bottom:18px}
+  .head h1{font-size:var(--fs-h1); font-weight:700}
+  .head .sub{color:var(--muted); font-size:.86rem}
+
+  .verdict{display:flex; flex-direction:column; gap:16px}
+  .tiles{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .tile{display:flex; flex-direction:column; gap:5px; min-width:0}
+  .tile + .tile{border-left:1px solid var(--line); padding-left:14px}
+  .tile .num{
+    font-family:Archivo,sans-serif; font-weight:700; font-size:var(--fs-num);
+    line-height:.86; letter-spacing:-.045em; color:var(--ink); font-variant-numeric:tabular-nums;
+  }
+  .tile.riesgo .num{color:var(--risk)}
+  .tile.riesgo .num.zero{color:var(--safe)}
+  .tile .claim{font-size:.88rem; font-weight:600; line-height:1.3; text-wrap:balance}
+  .tile.riesgo .claim{color:var(--risk)}
+  .tile.riesgo .claim.ok{color:var(--safe)}
+  .tile .mini{font-size:.71rem; color:var(--muted); line-height:1.45}
+  .tile .mini b{font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink-2); font-variant-numeric:tabular-nums}
+  .countdown{display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .countdown div{flex:1; padding:11px 4px 12px; display:flex; flex-direction:column; gap:2px}
+  .countdown div + div{border-left:1px solid var(--line)}
+  .countdown .k{font-family:"IBM Plex Mono",monospace; font-size:1.28rem; font-weight:600; font-variant-numeric:tabular-nums; line-height:1.1}
+  .countdown .k.urge{color:var(--risk)}
+  .countdown .l{font-size:.7rem; color:var(--muted); line-height:1.25}
+
+  .clave{display:flex; flex-direction:column; gap:7px}
+  .codigo{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px}
+  .codigo li{font-size:.71rem; font-weight:600; padding:5px 11px; border-radius:100px; letter-spacing:.01em}
+  .codigo li.b-vigente{background:var(--c-vig-soft); color:var(--c-vig)}
+  .codigo li.b-b2022{background:var(--c-b22-soft); color:var(--c-b22)}
+  .codigo li.b-permiso{background:var(--c-perm-soft); color:var(--c-perm)}
+  .codigo li.b-desc{background:var(--c-desc-soft); color:var(--c-desc)}
+
+  .bolsas{display:flex; flex-direction:column; gap:14px}
+  .bolsa{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:16px 16px 18px; display:flex; flex-direction:column; gap:13px}
+  .bolsa.quiet{background:transparent; border-style:dashed}
+  .bolsa-head{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
+  .bolsa h3{font-size:1.02rem; font-weight:600; display:flex; align-items:center; gap:8px}
+  .bolsa .venc{font-size:.74rem; color:var(--muted); margin-top:2px}
+  .chip{flex:none; font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:600; padding:4px 8px; border-radius:100px; white-space:nowrap}
+  .chip-risk{background:var(--risk-soft); color:var(--risk)}
+  .chip-safe{background:var(--safe-soft); color:var(--safe)}
+
+  .idot{width:10px; height:10px; border-radius:3px; flex:none; display:inline-block}
+  .b-vigente .idot{background:var(--c-vig)}
+  .b-b2022 .idot{background:var(--c-b22)}
+  .b-permiso .idot{background:var(--c-perm)}
+  .b-desc .idot{background:var(--c-desc)}
+  .bolsa.b-vigente .figure .big{color:var(--c-vig)}
+  .bolsa.b-b2022 .figure .big{color:var(--c-b22)}
+  .bolsa.b-permiso .figure .big{color:var(--c-perm)}
+  .bolsa.b-vigente .seg-sol{background:var(--c-vig)}
+  .bolsa.b-b2022 .seg-sol{background:var(--c-b22)}
+  .bolsa.b-permiso .seg-sol{background:var(--c-perm)}
+  .bolsa.b-vigente .seg-plan{background:var(--c-vig); opacity:.4}
+  .bolsa.b-b2022 .seg-plan{background:var(--c-b22); opacity:.4}
+  .bolsa.b-permiso .seg-plan{background:var(--c-perm); opacity:.4}
+
+  .figure{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap}
+  .figure .big{font-family:Archivo,sans-serif; font-weight:700; font-size:2.3rem; line-height:1; letter-spacing:-.035em; font-variant-numeric:tabular-nums}
+  .figure .unit{font-size:.82rem; color:var(--muted)}
+  .autoat{font-size:.72rem; color:var(--muted); font-family:"IBM Plex Mono",monospace}
+  .bar{display:flex; height:11px; border-radius:100px; overflow:hidden; background:var(--surface-2); border:1px solid var(--line)}
+  .bar span{display:block; min-width:0}
+  .seg-risk{background:var(--risk)} .seg-safe{background:var(--safe)}
+  .legend{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px 16px; font-size:.78rem; color:var(--ink-2)}
+  .legend li{display:flex; align-items:center; gap:6px}
+  .dot{width:8px; height:8px; border-radius:2px; flex:none}
+  .legend b{font-family:"IBM Plex Mono",monospace; font-weight:600; font-variant-numeric:tabular-nums; color:var(--ink)}
+  .note{font-size:.79rem; color:var(--muted); line-height:1.45}
+  .note strong{color:var(--ink-2); font-weight:600}
+
+  .plazo{display:flex; gap:16px; align-items:flex-start; padding:16px 0; border-top:2px solid var(--risk); border-bottom:1px solid var(--line)}
+  .plazo.ok{border-top-color:var(--safe)}
+  .plazo .dl{font-family:Archivo,sans-serif; font-weight:700; font-size:clamp(2.4rem,13vw,3.6rem); line-height:.85; letter-spacing:-.045em; color:var(--risk); font-variant-numeric:tabular-nums; flex:none}
+  .plazo.ok .dl{color:var(--safe)}
+  .plazo .txt{display:flex; flex-direction:column; gap:5px; min-width:0}
+  .plazo .txt h3{font-size:.95rem; font-weight:600; line-height:1.3}
+  .plazo .txt p{font-size:.79rem; color:var(--muted); line-height:1.45}
+  .fechas-clave{display:flex; flex-direction:column; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  .fk{display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:11px 13px; background:var(--surface)}
+  .fk + .fk{border-top:1px solid var(--line)}
+  .fk .q{font-size:.79rem; color:var(--ink-2); line-height:1.35}
+  .fk .a{font-family:"IBM Plex Mono",monospace; font-size:.82rem; font-weight:600; text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+  .fk.tope .a{color:var(--risk)}
+  .controles{display:grid; grid-template-columns:1fr 1fr; gap:9px}
+  .controles label{display:flex; flex-direction:column; gap:4px; font-family:"IBM Plex Mono",monospace; font-size:.64rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase; line-height:1.3}
+  .pasos{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; counter-reset:paso}
+  .pasos li{display:flex; gap:10px; font-size:.82rem; line-height:1.45; color:var(--ink-2)}
+  .pasos li::before{
+    counter-increment:paso; content:counter(paso);
+    font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:600; color:var(--muted);
+    border:1px solid var(--line-strong); border-radius:50%; width:20px; height:20px; flex:none;
+    display:flex; align-items:center; justify-content:center; margin-top:1px;
+  }
+
+  .tl{display:flex; flex-direction:column; border-left:2px solid var(--line-strong); margin-left:5px}
+  .tl-item{position:relative; padding:0 0 20px 20px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:""; position:absolute; left:-7px; top:5px; width:12px; height:12px; border-radius:50%; background:var(--ground); border:2px solid var(--line-strong)}
+  .tl-item.hot::before{background:var(--risk); border-color:var(--risk)}
+  .tl-item.b22::before{background:var(--c-b22); border-color:var(--c-b22)}
+  .tl-date{font-family:"IBM Plex Mono",monospace; font-size:.76rem; font-weight:600; color:var(--muted); letter-spacing:.02em}
+  .tl-what{font-size:.9rem; font-weight:600; margin-top:1px}
+  .tl-why{font-size:.79rem; color:var(--muted); margin-top:2px; line-height:1.45}
+
+  section{display:flex; flex-direction:column; gap:13px}
+  .sec-head{display:flex; flex-direction:column; gap:3px; border-bottom:1px solid var(--line); padding-bottom:9px}
+  .sec-head h2{font-size:1.05rem; font-weight:600}
+  .sec-head p{font-size:.79rem; color:var(--muted)}
+
+  .picker{display:flex; flex-direction:column; gap:8px}
+  .segs{display:flex; gap:6px; flex-wrap:wrap}
+  .seg{
+    flex:1 1 auto; min-width:0; font-family:"IBM Plex Sans",sans-serif; font-size:.76rem; font-weight:600;
+    background:var(--surface); color:var(--ink-2); border:1px solid var(--line-strong);
+    border-radius:100px; padding:9px 11px; min-height:40px; cursor:pointer; white-space:nowrap;
+    display:flex; align-items:center; justify-content:center; gap:7px;
+  }
+  .seg .sw{width:9px; height:9px; border-radius:50%; flex:none}
+  .seg[data-b="vigente"][aria-pressed="true"]{background:var(--c-vig); color:var(--on-fill); border-color:var(--c-vig)}
+  .seg[data-b="b2022"][aria-pressed="true"]{background:var(--c-b22); color:var(--on-fill); border-color:var(--c-b22)}
+  .seg[data-b="permiso"][aria-pressed="true"]{background:var(--c-perm); color:var(--on-fill); border-color:var(--c-perm)}
+  .segs.plain .seg[aria-pressed="true"]{background:var(--ink); color:var(--ground); border-color:var(--ink)}
+  .segs.plain .seg{flex:1 1 auto}
+  .hint{font-size:.78rem; color:var(--muted); line-height:1.45}
+
+  .cal{display:flex; flex-direction:column; gap:16px}
+  .meses{display:grid; grid-template-columns:1fr; gap:18px}
+  .mes{display:flex; flex-direction:column; gap:7px}
+  .mes h3{font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2)}
+  .dow, .dias{display:grid; grid-template-columns:repeat(7,1fr); gap:3px}
+  .dow span{font-family:"IBM Plex Mono",monospace; font-size:.62rem; color:var(--muted); text-align:center; padding-bottom:2px}
+  .d{
+    aspect-ratio:1/1; min-height:36px; border:0; padding:0; background:transparent; color:var(--ink-2);
+    font-family:"IBM Plex Mono",monospace; font-size:.8rem; font-variant-numeric:tabular-nums;
+    border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    position:relative; line-height:1;
+  }
+  .d.void{visibility:hidden; cursor:default}
+  .d.libre{color:var(--muted); opacity:.45; cursor:default}
+  .d.pasado{opacity:.32; cursor:default}
+  .d.hoy{box-shadow:inset 0 0 0 1px var(--line-strong)}
+  .d.half::after{content:"½"; position:absolute; bottom:0; right:1px; font-size:.55rem; line-height:1; opacity:.85}
+  .d.e-res{font-weight:600; color:var(--on-fill)}
+  .d.e-res.b-vigente{background:var(--c-vig)}
+  .d.e-res.b-b2022{background:var(--c-b22)}
+  .d.e-res.b-permiso{background:var(--c-perm)}
+  .d.e-sol{font-weight:600}
+  .d.e-sol.b-vigente{background:var(--c-vig-soft); box-shadow:inset 0 0 0 2px var(--c-vig); color:var(--c-vig)}
+  .d.e-sol.b-b2022{background:var(--c-b22-soft); box-shadow:inset 0 0 0 2px var(--c-b22); color:var(--c-b22)}
+  .d.e-sol.b-permiso{background:var(--c-perm-soft); box-shadow:inset 0 0 0 2px var(--c-perm); color:var(--c-perm)}
+  .d.e-plan.b-vigente{box-shadow:inset 0 0 0 1px var(--c-vig); color:var(--c-vig)}
+  .d.e-plan.b-b2022{box-shadow:inset 0 0 0 1px var(--c-b22); color:var(--c-b22)}
+  .d.e-plan.b-permiso{box-shadow:inset 0 0 0 1px var(--c-perm); color:var(--c-perm)}
+  .d.hito{outline:2px dashed var(--risk); outline-offset:-2px; color:var(--risk); font-weight:600}
+  .d:not(.libre):not(.pasado):not(.void):hover{background:var(--surface-2)}
+  .d.e-res:hover, .d.e-sol:hover, .d.e-plan:hover{filter:brightness(1.08)}
+  .cal-legend ul{display:flex; flex-wrap:wrap; gap:8px 15px; margin:0; padding:0; font-size:.75rem; color:var(--muted)}
+  .cal-legend li{display:flex; align-items:center; gap:6px; list-style:none}
+  .cal-legend .k{width:14px; height:14px; border-radius:50%; flex:none; display:inline-block}
+  .cal-nav{display:flex; gap:8px; flex-wrap:wrap}
+
+  button{font-family:"IBM Plex Sans",sans-serif; font-size:.9rem; font-weight:600; background:var(--accent); color:var(--on-fill); border:0; border-radius:var(--radius); padding:11px 14px; min-height:42px; cursor:pointer}
+  button.ghost{background:transparent; color:var(--ink-2); border:1px solid var(--line-strong); font-weight:500; font-size:.8rem; padding:8px 12px; min-height:38px; border-radius:100px}
+  button:hover{filter:brightness(1.06)}
+
+  .form{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+  .form label{display:flex; flex-direction:column; gap:4px; font-family:"IBM Plex Mono",monospace; font-size:.64rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase}
+  .form .full{grid-column:1 / -1}
+  input[type="date"], input[type="number"], input[type="text"]{
+    font-family:"IBM Plex Sans",sans-serif; font-size:.92rem; color:var(--ink); background:var(--surface);
+    border:1px solid var(--line-strong); border-radius:var(--radius); padding:9px 10px; width:100%; min-height:42px;
+    text-transform:none; letter-spacing:0;
+  }
+
+  .resumen{display:flex; flex-direction:column; gap:12px}
+  .rgrupo{display:flex; flex-direction:column; gap:6px}
+  .rgrupo .t{font-size:.78rem; font-weight:600; color:var(--ink-2)}
+  .rgrupo .t small{font-family:"IBM Plex Mono",monospace; color:var(--muted); font-weight:500}
+  .fechas{display:flex; flex-wrap:wrap; gap:5px}
+  .fechas button{
+    font-family:"IBM Plex Mono",monospace; font-size:.73rem; font-weight:500; background:var(--surface);
+    border:1px solid var(--line-strong); border-radius:100px; padding:4px 9px; min-height:0;
+    display:flex; align-items:center; gap:6px;
+  }
+  .fechas button .sw{width:8px; height:8px; border-radius:50%; flex:none}
+  .fechas button:hover{border-color:var(--risk); color:var(--risk)}
+  .empty{font-size:.82rem; color:var(--muted); padding:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+
+  .mov{width:100%; border-collapse:collapse; font-size:.83rem}
+  .mov th{text-align:left; font-family:"IBM Plex Mono",monospace; font-size:.64rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:500; padding:0 8px 7px 0; border-bottom:1px solid var(--line)}
+  .mov td{padding:9px 8px 9px 0; border-bottom:1px solid var(--line); vertical-align:middle}
+  .mov td:last-child, .mov th:last-child{padding-right:0; text-align:right}
+  .mov .fecha{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .mov .idot{width:8px; height:8px; vertical-align:1px; margin-right:5px}
+  .mov .n{font-family:"IBM Plex Mono",monospace; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .mov input[type="text"]{
+    font-family:"IBM Plex Mono",monospace; font-size:.72rem; padding:5px 7px; min-height:0;
+    background:transparent; border:1px solid transparent; color:var(--muted); min-width:11em;
+  }
+  .mov input[type="text"]:hover{border-color:var(--line)}
+  .mov input[type="text"]:focus{border-color:var(--line-strong); background:var(--surface); color:var(--ink)}
+  .scroll{overflow-x:auto}
+
+  .rule{border-top:1px solid var(--line); padding-top:13px; display:flex; flex-direction:column; gap:7px}
+  .rule h3{font-size:.94rem; font-weight:600}
+  blockquote{margin:0; padding:10px 13px; background:var(--accent-soft); border-radius:var(--radius); font-size:.83rem; line-height:1.5; color:var(--ink-2)}
+  .src{font-size:.74rem; color:var(--muted); line-height:1.45}
+  .src code{font-family:"IBM Plex Mono",monospace; font-size:.92em; background:var(--surface-2); border:1px solid var(--line); border-radius:3px; padding:1px 4px; color:var(--ink-2)}
+  .flag{font-size:.79rem; line-height:1.5; color:var(--ink-2); background:var(--c-perm-soft); border-radius:var(--radius); padding:11px 13px}
+  .flag b{color:var(--ink)}
+
+  details.edit{border:1px solid var(--line); border-radius:var(--radius); background:var(--surface)}
+  details.edit summary{cursor:pointer; padding:12px 14px; font-size:.86rem; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:8px}
+  details.edit summary::-webkit-details-marker{display:none}
+  details.edit summary::after{content:"+"; font-family:"IBM Plex Mono",monospace; color:var(--muted); font-size:1.1rem}
+  details.edit[open] summary::after{content:"\2212"}
+  details.edit .body{padding:14px; display:flex; flex-direction:column; gap:12px; border-top:1px solid var(--line)}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:9px}
+  .grid2 label{display:flex; flex-direction:column; gap:4px; font-family:"IBM Plex Mono",monospace; font-size:.63rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase; line-height:1.3}
+  .cuadratura{display:flex; flex-direction:column; gap:5px; font-size:.78rem; color:var(--ink-2); background:var(--surface-2); border-radius:var(--radius); padding:11px 13px}
+  .cuadratura div{display:flex; justify-content:space-between; gap:10px}
+  .cuadratura b{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums}
+  .toggle{display:flex; align-items:center; gap:9px; font-size:.78rem; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:9px 11px; cursor:pointer; line-height:1.35}
+  .toggle input{margin:0; flex:none; accent-color:var(--accent); width:16px; height:16px}
+
+  textarea{
+    font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-2); background:var(--surface-2);
+    border:1px solid var(--line-strong); border-radius:var(--radius); padding:9px 10px; width:100%;
+    resize:vertical; line-height:1.4; word-break:break-all;
+  }
+  footer{border-top:1px solid var(--line); padding-top:14px; font-size:.74rem; color:var(--muted); display:flex; flex-direction:column; gap:5px; line-height:1.5}
+  .sync{display:flex; align-items:center; gap:7px}
+  .sync .d2{width:7px; height:7px; border-radius:50%; background:var(--safe); flex:none}
+  .sync.on .d2{background:var(--safe)}
+
+  /* acumulado del período anterior */
+  .b-acum25 .idot{background:var(--c-acum)}
+  .bolsa.b-acum25 .figure .big{color:var(--c-acum)}
+  .bolsa.b-acum25 .seg-sol{background:var(--c-acum)}
+  .bolsa.b-acum25 .seg-plan{background:var(--c-acum); opacity:.4}
+  .codigo li.b-acum25{background:var(--c-acum-soft); color:var(--c-acum)}
+  .seg[data-b="acum25"][aria-pressed="true"]{background:var(--c-acum); color:var(--on-fill); border-color:var(--c-acum)}
+  .d.e-res.b-acum25{background:var(--c-acum)}
+  .d.e-sol.b-acum25{background:var(--c-acum-soft); box-shadow:inset 0 0 0 2px var(--c-acum); color:var(--c-acum)}
+  .d.e-plan.b-acum25{box-shadow:inset 0 0 0 1px var(--c-acum); color:var(--c-acum)}
+
+  @media (min-width:640px){
+    .bolsas{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    .bolsas .span2{grid-column:1 / -1}
+    .meses{grid-template-columns:1fr 1fr}
+    .form{grid-template-columns:1.3fr .8fr auto}
+    .form .full{grid-column:auto}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+  <header class="head">
+    <span class="eyebrow">Autoatención SIRH · Instituto Nacional del Cáncer</span>
+    <h1>Feriado legal y permisos administrativos</h1>
+    <p class="sub">Los saldos se calculan desde el registro de días. Marca uno y todo se recalcula.</p>
+  </header>
+
+  <div class="verdict">
+    <div class="tiles">
+      <div class="tile">
+        <span class="num" id="v-total">30,5</span>
+        <p class="claim">días libres te quedan</p>
+        <p class="mini" id="v-desglose"></p>
+        <p class="mini" id="v-marcados"></p>
+      </div>
+      <div class="tile riesgo">
+        <span class="num" id="v-num">15,5</span>
+        <p class="claim" id="v-claim">tienes que gastar dentro de 2026</p>
+        <p class="mini" id="v-riesgo-desglose"></p>
+      </div>
+    </div>
+    <div class="countdown">
+      <div><span class="k" id="c-corridos">112</span><span class="l">días corridos al 31-dic</span></div>
+      <div><span class="k" id="c-habiles">76</span><span class="l">hábiles que quedan del año</span></div>
+      <div><span class="k" id="c-solicitud">76</span><span class="l">para pedir la postergación</span></div>
+    </div>
+  </div>
+
+  <div class="clave">
+    <span class="eyebrow">Código de colores</span>
+    <ul class="codigo">
+      <li class="b-vigente">Feriado legal 2026</li>
+      <li class="b-acum25">Acumulado del año pasado</li>
+      <li class="b-b2022">Bolsa 2022</li>
+      <li class="b-permiso">Permisos administrativos</li>
+      <li class="b-desc">Descansos complementarios</li>
+    </ul>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <h2>El trámite que hay que hacer sí o sí</h2>
+      <p>Para que el feriado pase a 2027 se pide como si se fuera a tomar, y la jefatura lo rechaza por buen servicio.</p>
+    </div>
+
+    <div class="plazo" id="plazo">
+      <span class="dl" id="dl-num">76</span>
+      <div class="txt">
+        <h3 id="dl-titulo">días para presentar la solicitud de postergación</h3>
+        <p id="dl-sub"></p>
+      </div>
+    </div>
+
+    <div class="fechas-clave">
+      <div class="fk">
+        <span class="q">Días de feriado que vas a postergar</span>
+        <span class="a" id="fk-dias">15</span>
+      </div>
+      <div class="fk">
+        <span class="q">Último día en que ese período todavía cabe antes del 31-dic</span>
+        <span class="a" id="fk-inicio">—</span>
+      </div>
+      <div class="fk tope">
+        <span class="q">Fecha tope para entregar la solicitud, con el margen de tramitación</span>
+        <span class="a" id="fk-solicitud">—</span>
+      </div>
+    </div>
+
+    <div class="controles">
+      <label>Días a postergar<input type="number" id="i-postergar" min="1" max="60" step="1"></label>
+      <label>Margen de tramitación (días corridos)<input type="number" id="i-margen" min="0" max="90" step="1"></label>
+    </div>
+
+    <ol class="pasos">
+      <li>Acuerda antes con tu jefatura que la solicitud se va a rechazar por razones de buen servicio.</li>
+      <li>Ingresa en Autoatención un feriado de <b id="p-dias">15</b> días hábiles que empiece a más tardar el <b id="p-inicio">—</b>. Sábados, domingos y feriados de calendario no cuentan como hábiles.</li>
+      <li>La jefatura lo deniega por buen servicio y esos días quedan postergados al año siguiente.</li>
+      <li>Vuelve aquí, marca esos días como <b>solicitados</b> y guarda el número de resolución.</li>
+    </ol>
+
+    <p class="note">El cálculo cuenta hacia atrás desde el <strong>31 de diciembre de 2026</strong> saltando fines de semana y los feriados que quedan del año: 12 de octubre, 8 y 25 de diciembre.</p>
+  </section>
+
+  <div class="bolsas">
+
+    <article class="bolsa b-acum25">
+      <div class="bolsa-head">
+        <div>
+          <h3><span class="idot"></span>Acumulado del año pasado</h3>
+          <p class="venc">Muere el <span class="mono">31-12-2026</span>. Ya es el segundo período.</p>
+        </div>
+        <span class="chip chip-risk" id="ch-acum">4 en riesgo</span>
+      </div>
+      <div class="figure">
+        <span class="big" id="f-acum">4</span><span class="unit">días libres</span>
+        <span class="autoat" id="a-acum"></span>
+      </div>
+      <div class="bar" id="bar-acum"></div>
+      <ul class="legend" id="leg-acum"></ul>
+      <p class="note" id="n-acum"></p>
+    </article>
+
+    <article class="bolsa b-vigente">
+      <div class="bolsa-head">
+        <div>
+          <h3><span class="idot"></span>Feriado legal · año 2026</h3>
+          <p class="venc">Se puede acumular entero a 2027</p>
+        </div>
+        <span class="chip chip-safe" id="ch-vig">todo cubierto</span>
+      </div>
+      <div class="figure">
+        <span class="big" id="f-vig">19</span><span class="unit">días libres</span>
+        <span class="autoat" id="a-vig"></span>
+      </div>
+      <div class="bar" id="bar-vig"></div>
+      <ul class="legend" id="leg-vig"></ul>
+      <p class="note" id="n-vig"></p>
+    </article>
+
+    <article class="bolsa b-b2022">
+      <div class="bolsa-head">
+        <div>
+          <h3><span class="idot"></span>Feriado legal · bolsa 2022</h3>
+          <p class="venc">Plazo legal: hasta el <span class="mono">31-12-2027</span></p>
+        </div>
+        <span class="chip chip-safe" id="ch-2022">a salvo en 2026</span>
+      </div>
+      <div class="figure">
+        <span class="big" id="f-2022">7</span><span class="unit">días libres</span>
+        <span class="autoat" id="a-2022"></span>
+      </div>
+      <div class="bar" id="bar-2022"></div>
+      <ul class="legend" id="leg-2022"></ul>
+      <p class="note">Feriados acumulados bajo la ley 21.526. El artículo 60 de la ley 21.647 les fijó plazo hasta el <strong>31 de diciembre de 2027 inclusive</strong>, y permite fraccionar el bloque de diez días <strong>solo</strong> para estos días, si tú lo pides y la autoridad lo resuelve.</p>
+    </article>
+
+    <article class="bolsa b-permiso">
+      <div class="bolsa-head">
+        <div>
+          <h3><span class="idot"></span>Permisos administrativos</h3>
+          <p class="venc">Se extinguen el <span class="mono">31-12-2026</span>. No se postergan.</p>
+        </div>
+        <span class="chip chip-risk" id="ch-perm">4,5 en riesgo</span>
+      </div>
+      <div class="figure">
+        <span class="big" id="f-perm">4,5</span><span class="unit">días libres</span>
+        <span class="autoat" id="a-perm"></span>
+      </div>
+      <div class="bar" id="bar-perm"></div>
+      <ul class="legend" id="leg-perm"></ul>
+      <p class="note" id="n-perm"></p>
+    </article>
+
+    <article class="bolsa quiet span2 b-desc">
+      <div class="bolsa-head">
+        <div>
+          <h3><span class="idot"></span>Descansos complementarios</h3>
+          <p class="venc">Horas compensadas del turno</p>
+        </div>
+        <span class="chip chip-risk">00:15 vencidas</span>
+      </div>
+      <ul class="legend">
+        <li><span class="dot" style="background:var(--c-desc)"></span>Autorizadas <b class="mono">23:15</b></li>
+        <li><span class="dot" style="background:var(--safe)"></span>Utilizadas <b class="mono">23:00</b></li>
+        <li><span class="dot" style="background:var(--risk)"></span>Vencidas <b class="mono">00:15</b></li>
+        <li><span class="dot" style="background:var(--line-strong)"></span>Disponibles <b class="mono">00:00</b></li>
+      </ul>
+      <p class="note">Nada por gastar aquí. Los 15 minutos vencidos son el aviso: estas horas caducan solas, conviene pedirlas apenas quedan reconocidas.</p>
+    </article>
+
+  </div>
+
+  <!-- CALENDARIO -->
+  <section>
+    <div class="sec-head">
+      <h2>Marca aquí y todo se recalcula</h2>
+      <p>Elige bolsa, estado y fracción; después toca los días. Vuelve a tocar para soltarlos.</p>
+    </div>
+
+    <div class="picker">
+      <div class="segs" id="segs-bolsa" role="group" aria-label="Bolsa">
+        <button class="seg" data-b="vigente" aria-pressed="true" type="button"><span class="sw" style="background:var(--c-vig)"></span>Feriado 2026</button>
+        <button class="seg" data-b="acum25" aria-pressed="false" type="button"><span class="sw" style="background:var(--c-acum)"></span>Acumulado 2025</button>
+        <button class="seg" data-b="b2022" aria-pressed="false" type="button"><span class="sw" style="background:var(--c-b22)"></span>Bolsa 2022</button>
+        <button class="seg" data-b="permiso" aria-pressed="false" type="button"><span class="sw" style="background:var(--c-perm)"></span>Permiso</button>
+      </div>
+      <div class="segs plain" id="segs-estado" role="group" aria-label="Estado">
+        <button class="seg" data-e="plan" aria-pressed="true" type="button">Planificado</button>
+        <button class="seg" data-e="sol" aria-pressed="false" type="button">Solicitado</button>
+        <button class="seg" data-e="res" aria-pressed="false" type="button">Resuelto</button>
+      </div>
+      <div class="segs plain" id="segs-frac" role="group" aria-label="Fracción">
+        <button class="seg" data-f="1" aria-pressed="true" type="button">Día completo</button>
+        <button class="seg" data-f="0.5" aria-pressed="false" type="button">Media jornada</button>
+      </div>
+      <p class="hint" id="hint"></p>
+    </div>
+
+    <div class="cal">
+      <div class="meses" id="meses"></div>
+      <div class="cal-nav">
+        <button class="ghost" id="btn-antes" type="button">◂ Ver enero–agosto</button>
+        <button class="ghost" id="btn-2027" type="button">Ver 2027 ▸</button>
+      </div>
+      <div class="cal-legend">
+        <ul>
+          <li><span class="k" style="background:var(--c-vig)"></span>resuelto, ya descontado</li>
+          <li><span class="k" style="background:var(--c-vig-soft); box-shadow:inset 0 0 0 2px var(--c-vig)"></span>solicitado, en trámite</li>
+          <li><span class="k" style="box-shadow:inset 0 0 0 1px var(--c-vig)"></span>planificado</li>
+          <li><span class="k" style="outline:2px dashed var(--risk); outline-offset:-2px"></span>fecha tope del trámite</li>
+          <li>½ = media jornada</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="form" id="form">
+      <label class="full">Bloque seguido desde<input type="date" id="i-fecha" min="2026-01-01" max="2027-12-31"></label>
+      <label>Días hábiles<input type="number" id="i-dias" value="10" min="1" max="30" step="1"></label>
+      <div class="full" style="display:flex; align-items:flex-end">
+        <button type="submit" style="width:100%">Marcar bloque</button>
+      </div>
+    </form>
+
+    <div class="resumen" id="resumen"></div>
+    <p class="empty" id="plan-empty">Todavía no marcas ningún día pendiente.</p>
+    <p class="note">Si fraccionas el feriado ordinario, una de las fracciones no puede bajar de <strong>diez días hábiles</strong>. Por eso el bloque parte en 10. La bolsa 2022 está exenta de esa regla hasta el 31-12-2027.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Registro de días</h2>
+      <p>Todo lo que marcaste, con su estado. De aquí salen los saldos.</p>
+    </div>
+    <div class="scroll">
+      <table class="mov">
+        <thead><tr><th>Fecha</th><th>Concepto</th><th>Resolución</th><th>Días</th></tr></thead>
+        <tbody id="mov-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <details class="edit">
+    <summary>Saldos iniciales y supuestos</summary>
+    <div class="body">
+      <div class="cuadratura" id="cuadratura"></div>
+      <div class="grid2">
+        <label>Feriado 2026 (inicial)<input type="number" id="e-vig" step="0.5" min="0"></label>
+        <label>Acumulado 2025 (inicial)<input type="number" id="e-acum" step="0.5" min="0"></label>
+        <label>Saldo inicial bolsa 2022<input type="number" id="e-2022" step="0.5" min="0"></label>
+        <label>Saldo inicial permisos<input type="number" id="e-perm" step="0.5" min="0"></label>
+        <label>Techo acumulable (30/40/50)<input type="number" id="e-techo" step="5" min="0"></label>
+        <label>Feriado nuevo en 2027<input type="number" id="e-nuevo" step="1" min="0"></label>
+      </div>
+      <p class="note">Son los <strong>saldos iniciales</strong> del año, no los disponibles: el tablero descuenta solo lo que aparece en el registro. Si los números de arriba no calzan con Autoatención, falta o sobra un día en el registro. El techo depende de tu antigüedad: 30 días hábiles con menos de 15 años de servicio, 40 entre 15 y 20, 50 con más de 20.</p>
+      <button class="ghost" id="reset" type="button">Volver al registro original de Autoatención</button>
+    </div>
+  </details>
+
+  <section>
+    <div class="sec-head">
+      <h2>Qué vence y cuándo</h2>
+      <p>Cuatro cortes, en orden.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item hot">
+        <div class="tl-date" id="tl0-date">—</div>
+        <div class="tl-what">Entra la solicitud de postergación</div>
+        <p class="tl-why">Si esta fecha pasa sin la solicitud ingresada, el período ya no cabe completo antes del 31 de diciembre y esos días no alcanzan a postergarse.</p>
+      </div>
+      <div class="tl-item hot">
+        <div class="tl-date">31 · DIC · 2026</div>
+        <div class="tl-what" id="tl1">Se pierden 15,5 días</div>
+        <p class="tl-why">Los permisos administrativos se extinguen completos. Del feriado se pierde lo que exceda el techo de acumulación cuando en enero se sumen los días nuevos.</p>
+      </div>
+      <div class="tl-item b22">
+        <div class="tl-date">DURANTE 2027</div>
+        <div class="tl-what" id="tl2">Último año para la bolsa 2022</div>
+        <p class="tl-why">Es la única bolsa que se puede gastar en trozos cortos, sin el bloque de diez días.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">31 · DIC · 2027</div>
+        <div class="tl-what">La bolsa 2022 se cierra</div>
+        <p class="tl-why">Plazo legal, no interno. Lo que quede ahí no pasa a 2028.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Las reglas, con su fuente</h2>
+      <p>Texto literal de la ley, no interpretación.</p>
+    </div>
+
+    <div class="rule">
+      <h3>La jefatura no puede negarte el feriado, pero sí correrlo dentro del año</h3>
+      <blockquote>«El funcionario solicitará su feriado indicando la fecha en que hará uso de este derecho, el cual no podrá en ningún caso ser denegado discrecionalmente. // Cuando las necesidades del servicio así lo aconsejen el jefe superior de la institución… podrá anticipar o postergar la época del feriado, a condición de que éste quede comprendido dentro del año respectivo, salvo que el funcionario en este caso pidiere expresamente hacer uso conjunto de su feriado con el que corresponda al año siguiente.»</blockquote>
+      <p class="src">Art. 104, incisos 1º y 2º — <a href="https://leyes-cl.com/ley_sobre_estatuto_administrativo/104.htm" target="_blank" rel="noopener">Ley 18.834, art. 104</a>. Ctrl+F: <code>no podrá en ningún caso ser denegado discrecionalmente</code>. El jefe solo puede mover la fecha <strong>dentro del año</strong>; para que los días crucen a 2027 tiene que existir tu petición expresa.</p>
+    </div>
+
+    <div class="rule">
+      <h3>El techo: dos períodos, y un total de 30, 40 o 50 días hábiles</h3>
+      <blockquote>«Sin embargo, no podrán acumularse más de dos períodos consecutivos de feriados. // Si el funcionario no hubiese hecho uso del período acumulado… podrá autorizarse la acumulación al año siguiente, de la fracción pendiente de dicho feriado, siempre que ello no implique exceder en conjunto de un total de 30, 40 o 50 días hábiles, según el caso.»</blockquote>
+      <p class="src">Art. 104, incisos 2º y 3º — misma fuente. Ctrl+F: <code>exceder en conjunto de un total de 30, 40 o 50</code></p>
+    </div>
+
+    <div class="rule">
+      <h3>De dónde salen esos 30, 40 o 50</h3>
+      <blockquote>«El feriado corresponderá a cada año calendario y será de quince días hábiles para los funcionarios con menos de quince años de servicios, de veinte días hábiles para los funcionarios con quince o más años de servicios y menos de veinte, y de veinticinco días hábiles para los funcionarios con veinte o más años de servicio. // Para estos efectos, no se considerarán como días hábiles los días sábado…»</blockquote>
+      <p class="src">Art. 103 — <a href="https://leyes-cl.com/ley_sobre_estatuto_administrativo/103.htm" target="_blank" rel="noopener">Ley 18.834, art. 103</a>. Ctrl+F: <code>no se considerarán como días hábiles los días sábado</code>. Tu saldo legal es 15, así que estás en el primer tramo y tu techo es <strong>30 días hábiles</strong>.</p>
+    </div>
+
+    <div class="rule">
+      <h3>El bloque de diez días es una condición para fraccionar, no una obligación de la jefatura</h3>
+      <blockquote>«Los funcionarios podrán solicitar hacer uso del feriado en forma fraccionada, pero una de las fracciones no podrá ser inferior a diez días. La autoridad correspondiente autorizará dicho fraccionamiento de acuerdo a las necesidades del servicio.»</blockquote>
+      <p class="src">Art. 104, inciso 4º — misma fuente. Ctrl+F: <code>no podrá ser inferior a diez días</code>. Quien <em>solicita</em> el fraccionamiento eres tú; los diez días son el límite de esa solicitud, no una facultad de la jefatura para obligarte a tomarlos.</p>
+    </div>
+
+    <div class="rule">
+      <h3>Tu bolsa 2022 tiene plazo legal propio: 31 de diciembre de 2027</h3>
+      <blockquote>«Los funcionarios y funcionarias que hayan acumulado sus feriados conforme a los incisos primero y quinto del artículo 51 de la ley N° 21.526, podrán hacer uso de ellos hasta el 31 de diciembre de 2027 inclusive. […] se permitirá respecto del feriado señalado en el inciso primero el fraccionamiento del lapso de diez días hábiles que los incisos finales de los artículos 104 de la ley N° 18.834 y 103 de la ley N° 18.883 imponen tomarse de manera ininterrumpida, si así lo pide el funcionario o funcionaria y haya sido resuelto por la autoridad.»</blockquote>
+      <p class="src">Art. 60 de la ley 21.647 (reajuste del sector público, diciembre de 2023) — <a href="https://leyes-cl.com/otorga_reajuste_general_de_remuneraciones_a_las_y_los_trabajadores_del_sector_publico/60.htm" target="_blank" rel="noopener">texto del artículo 60</a>. Ctrl+F: <code>hasta el 31 de diciembre de 2027 inclusive</code>. El mismo artículo cierra: «A los feriados generados a partir del 1 de enero del año 2023 se aplicarán las normas permanentes».</p>
+    </div>
+
+    <div class="rule">
+      <h3>Permisos administrativos: seis días, por días o medios días, del año calendario</h3>
+      <blockquote>«Los funcionarios podrán solicitar permisos para ausentarse de sus labores por motivos particulares hasta por seis días hábiles en el año calendario, con goce de remuneraciones. Estos permisos podrán fraccionarse por días o medios días.»</blockquote>
+      <p class="src">Art. 109 — <a href="https://leyes-cl.com/ley_sobre_estatuto_administrativo/109.htm" target="_blank" rel="noopener">Ley 18.834, art. 109</a>. Ctrl+F: <code>fraccionarse por días o medios días</code>. Atados al <strong>año calendario</strong>: no hay mecanismo de postergación para ellos.</p>
+    </div>
+
+    <div class="rule">
+      <h3>Lo que sigue sin confirmar</h3>
+      <p class="flag"><b>A qué bolsa se cargaron los dos días ya tomados.</b> Autoatención no dice si el 02-01 y el 17-07 salieron del feriado 2026 o del acumulado del año pasado. El tablero los carga al <b>acumulado</b>, que es lo habitual —se gasta primero lo más viejo— y además es lo que cuadra con tu lectura: 15 intactos + 4 que sobran del arrastre = los 19 que muestra la pantalla. Si en Personal te dicen otra cosa, cambia esos dos días en el calendario.</p>
+      <p class="flag"><b>Si el techo de 30 días cuenta la bolsa 2022 junto con el feriado ordinario.</b> El artículo 60 repite la fórmula «en conjunto», pero la bolsa 2022 tiene su propio plazo legal. El tablero la trata aparte y aplica el techo solo al feriado ordinario: los 15 de 2026 más los 15 que se generan en 2027 dan exactamente 30, que es tu tope.</p>
+    </div>
+  </section>
+
+  <details class="edit">
+    <summary>Llevar mis datos a otro aparato</summary>
+    <div class="body">
+      <p class="note">Todo lo que marcas se guarda <strong>solo en este navegador</strong>: no viaja a ningún servidor. Para tenerlo también en el teléfono, genera un enlace y ábrelo allá una vez.</p>
+      <button id="btn-exportar" type="button">Generar enlace con mis datos</button>
+      <textarea id="salida" rows="3" readonly hidden aria-label="Enlace con tus datos"></textarea>
+      <p class="note" id="exp-msg" hidden></p>
+      <p class="note">El enlace lleva tus datos dentro, así que trátalo como algo privado: no lo publiques ni lo mandes a un grupo.</p>
+    </div>
+  </details>
+
+  <footer>
+    <div class="sync" id="sync"><span class="d2"></span><span id="sync-t">Guardado solo en este navegador · sin cuentas ni servidores</span></div>
+    <div>Los saldos salen del registro de días que llevas aquí. Página sin publicidad, sin seguimiento y sin cuenta: el código vive en GitHub.</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Registro sembrado con lo que muestra Autoatención al 10-09-2026.
+     Los dos días de feriado ya tomados se cargan al acumulado del año
+     anterior, que es lo que cuadra: 15 intactos + 4 de arrastre = 19. */
+  /* La pagina publica no trae datos de nadie: parte con lo que dice la ley
+     (15 dias habiles de feriado y 6 de permiso administrativo) y el registro vacio. */
+  var SEMILLA = [];
+
+  var DEFAULTS = {
+    ini:{ vigente:15, acum25:0, b2022:0, permiso:6 },
+    techo:30, nuevo:15, margen:15, postergar:null,
+    reg: []
+  };
+
+  var BOLSAS = ["vigente","acum25","b2022","permiso"];
+
+  var FERIADOS = [
+    "2026-01-01","2026-04-03","2026-04-04","2026-05-01","2026-05-21","2026-06-21","2026-06-29",
+    "2026-07-16","2026-08-15","2026-09-18","2026-09-19","2026-10-12","2026-10-31","2026-11-01",
+    "2026-12-08","2026-12-25",
+    "2027-01-01","2027-03-26","2027-03-27","2027-05-01","2027-05-21","2027-06-21","2027-06-28",
+    "2027-07-16","2027-08-15","2027-09-18","2027-09-19","2027-10-11","2027-10-31","2027-11-01",
+    "2027-12-08","2027-12-25"
+  ];
+
+  var CORTOS = { vigente:"Feriado legal 2026", acum25:"Acumulado del año pasado",
+                 b2022:"Feriado legal (bolsa 2022)", permiso:"Permiso administrativo" };
+  var COLOR  = { vigente:"var(--c-vig)", acum25:"var(--c-acum)",
+                 b2022:"var(--c-b22)", permiso:"var(--c-perm)" };
+  var ESTADO = { plan:"planificado", sol:"solicitado", res:"resuelto" };
+  var MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var CIERRE = new Date(2026,11,31);
+
+  var state=null, docRef=null, editando=false;
+  var bolsaSel="vigente", estadoSel="plan", fracSel=1, verAntes=false, ver2027=false;
+
+  function clone(o){ return JSON.parse(JSON.stringify(o)); }
+  function $(id){ return document.getElementById(id); }
+  function nf(n){ return (Math.round(n*10)/10).toLocaleString("es-CL",{maximumFractionDigits:1}); }
+  function iso(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+  function esHabil(d){ var w=d.getDay(); return w!==0 && w!==6 && FERIADOS.indexOf(iso(d))===-1; }
+  function largo(d){ return d.toLocaleDateString("es-CL",{weekday:"long", day:"numeric", month:"long"}); }
+  function corto(d){ return String(d.getDate()).padStart(2,"0")+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+d.getFullYear(); }
+  function hoy0(){ var h=new Date(); h.setHours(0,0,0,0); return h; }
+  function fmtFecha(f){ var t=f.split("-"); return t[2]+"-"+t[1]+"-"+t[0]; }
+
+  /* Un enlace con #c=... carga datos y los deja guardados en este aparato. */
+  function importaDesdeURL(){
+    try{
+      var h=location.hash || "";
+      if(h.indexOf("#c=")!==0) return;
+      var json=decodeURIComponent(escape(atob(decodeURIComponent(h.slice(3)))));
+      var datos=JSON.parse(json);
+      if(datos && typeof datos==="object"){
+        localStorage.setItem("dias2026v3", JSON.stringify(datos));
+      }
+    }catch(e){}
+    try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){}
+  }
+
+  function exportaEnlace(){
+    var json=JSON.stringify(state);
+    var b64=btoa(unescape(encodeURIComponent(json)));
+    return location.origin+location.pathname+"#c="+encodeURIComponent(b64);
+  }
+
+  function loadLocal(){
+    try{ var raw=localStorage.getItem("dias2026v3"); if(raw) return Object.assign(clone(DEFAULTS), JSON.parse(raw)); }catch(e){}
+    return clone(DEFAULTS);
+  }
+  function saveLocal(){ try{ localStorage.setItem("dias2026v3", JSON.stringify(state)); }catch(e){} }
+  function guarda(){ saveLocal(); if(docRef){ docRef.set(clone(state)).catch(function(){}); } }
+  function persist(){ guarda(); render(); }
+
+  /* ---------- cálculo: todo sale del registro ---------- */
+  function derive(){
+    var acc={};
+    BOLSAS.forEach(function(b){ acc[b]={res:0,sol:0,plan:0}; });
+    state.reg.forEach(function(x){
+      if(acc[x.b] && acc[x.b][x.e]!==undefined) acc[x.b][x.e]+=x.d;
+    });
+
+    var B={};
+    BOLSAS.forEach(function(b){
+      var ini=state.ini[b]||0, a=acc[b];
+      var disponible=Math.max(0, ini-a.res);
+      var comprometido=a.sol+a.plan;
+      B[b]={ ini:ini, res:a.res, sol:a.sol, plan:a.plan, disponible:disponible,
+             comprometido:comprometido, libre:Math.max(0, disponible-comprometido) };
+    });
+
+    /* el feriado 2026 se acumula a 2027; junto con el que se genera en enero
+       no puede pasar del techo de dos períodos */
+    var excede = Math.max(0, B.vigente.libre + state.nuevo - state.techo);
+    var vigSalvo = Math.max(0, B.vigente.libre - excede);
+
+    /* lo que muere el 31-12-2026 pase lo que pase */
+    var obligado = B.acum25.libre + B.permiso.libre;
+
+    var postergar = (state.postergar===null || state.postergar===undefined)
+      ? Math.round(B.vigente.libre) : state.postergar;
+
+    return { B:B, excede:excede, vigSalvo:vigSalvo, obligado:obligado,
+             total:obligado+excede, postergar:Math.max(0,postergar) };
+  }
+
+  function habilAtras(n, hasta){
+    var d=new Date(hasta.getTime()), c=0, g=0;
+    while(g<3000){ if(esHabil(d)) c++; if(c>=n) return d; d.setDate(d.getDate()-1); g++; }
+    return d;
+  }
+  function restaDias(a,b){ return Math.round((a-b)/86400000); }
+  function cuenta(){
+    var h=hoy0(), corridos=Math.max(0, restaDias(CIERRE,h));
+    var habiles=0, d=new Date(h); d.setDate(d.getDate()+1);
+    while(d<=CIERRE){ if(esHabil(d)) habiles++; d.setDate(d.getDate()+1); }
+    return { corridos:corridos, habiles:habiles };
+  }
+
+  function segs(el, parts, total){
+    el.innerHTML="";
+    if(total<=0){ el.innerHTML='<span style="flex:1"></span>'; return; }
+    var suma=0;
+    parts.forEach(function(p){
+      if(p.v<=0) return;
+      suma+=p.v;
+      var x=document.createElement("span"); x.className=p.cls; x.style.flex=p.v; x.title=p.t+": "+nf(p.v);
+      el.appendChild(x);
+    });
+    if(total-suma>0.001){ var g=document.createElement("span"); g.style.flex=total-suma; el.appendChild(g); }
+  }
+  function legend(el, items){
+    el.innerHTML = items.filter(function(i){return i.v>0;}).map(function(i){
+      return '<li><span class="dot" style="background:'+i.c+(i.op?';opacity:'+i.op:'')+'"></span>'+i.l+' <b>'+nf(i.v)+'</b></li>';
+    }).join("");
+  }
+
+  /* ---------- calendario ---------- */
+  function mesesVisibles(){
+    var l=[], m;
+    if(verAntes){ for(m=0;m<8;m++) l.push({y:2026,m:m}); }
+    for(m=8;m<12;m++) l.push({y:2026,m:m});
+    if(ver2027){ for(m=0;m<12;m++) l.push({y:2027,m:m}); }
+    return l;
+  }
+
+  function pintaCalendario(hitos){
+    var h=hoy0(), mapa={};
+    state.reg.forEach(function(x){ mapa[x.f]=x; });
+
+    $("meses").innerHTML = mesesVisibles().map(function(mm){
+      var pad=(new Date(mm.y,mm.m,1).getDay()+6)%7;
+      var dim=new Date(mm.y,mm.m+1,0).getDate();
+      var celdas="";
+      for(var i=0;i<pad;i++) celdas+='<span class="d void"></span>';
+      for(var day=1; day<=dim; day++){
+        var fecha=new Date(mm.y,mm.m,day), k=iso(fecha);
+        var cls="d", label="", dis="";
+        var x=mapa[k];
+        if(x){
+          cls+=" e-"+x.e+" b-"+x.b+(x.d===0.5?" half":"");
+          label=CORTOS[x.b]+" · "+ESTADO[x.e]+" · "+nf(x.d)+" día";
+        } else if(!esHabil(fecha)){ cls+=" libre"; dis=" disabled"; }
+        else if(fecha<h){ cls+=" pasado"; dis=" disabled"; }
+        if(hitos.indexOf(k)!==-1){ cls+=" hito"; label = label || "fecha tope de la solicitud"; }
+        if(+fecha===+h) cls+=" hoy";
+        celdas+='<button type="button" class="'+cls+'" data-f="'+k+'"'+dis+(label?' title="'+label+'"':'')+'>'+day+'</button>';
+      }
+      return '<div class="mes"><h3>'+MESES[mm.m]+" "+mm.y+'</h3>'+
+             '<div class="dow"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>'+
+             '<div class="dias">'+celdas+'</div></div>';
+    }).join("");
+    $("btn-antes").textContent = verAntes ? "Ocultar enero–agosto" : "◂ Ver enero–agosto";
+    $("btn-2027").textContent = ver2027 ? "Ocultar 2027" : "Ver 2027 ▸";
+  }
+
+  function pintaPendientes(){
+    var cont=$("resumen"), vacio=$("plan-empty");
+    var pend=state.reg.filter(function(x){ return x.e!=="res"; }).sort(function(a,b){ return a.f<b.f?-1:1; });
+    if(!pend.length){ cont.innerHTML=""; vacio.hidden=false; return; }
+    vacio.hidden=true;
+    cont.innerHTML = ["sol","plan"].filter(function(e){
+      return pend.filter(function(x){ return x.e===e; }).length;
+    }).map(function(e){
+      var items=pend.filter(function(x){ return x.e===e; });
+      var total=items.reduce(function(a,x){ return a+x.d; },0);
+      var chips=items.map(function(x){
+        return '<button type="button" data-del="'+x.f+'" title="Quitar"><span class="sw" style="background:'+COLOR[x.b]+'"></span>'+
+               fmtFecha(x.f).slice(0,5)+(x.d===0.5?" ½":"")+' ×</button>';
+      }).join("");
+      var titulo = e==="sol" ? "Solicitados, esperando resolución" : "Planificados, todavía sin pedir";
+      return '<div class="rgrupo"><div class="t">'+titulo+' <small>'+nf(total)+' días</small></div>'+
+             '<div class="fechas">'+chips+'</div></div>';
+    }).join("");
+  }
+
+  function pintaRegistro(){
+    var filas=state.reg.slice().sort(function(a,b){ return a.f<b.f?1:-1; });
+    $("mov-body").innerHTML = filas.map(function(x){
+      var est = x.e==="res" ? "" : '<br><span class="autoat">'+ESTADO[x.e]+'</span>';
+      return '<tr class="b-'+x.b+'">'+
+        '<td class="fecha">'+fmtFecha(x.f).slice(0,5)+'</td>'+
+        '<td><span class="idot"></span>'+CORTOS[x.b]+est+'</td>'+
+        '<td><input type="text" data-folio="'+x.f+'" value="'+(x.r||"")+'" placeholder="n.º resolución" aria-label="Número de resolución"></td>'+
+        '<td class="n">'+nf(x.d)+'</td></tr>';
+    }).join("");
+  }
+
+  function tarjeta(b, ids, extra){
+    var d=derive(), B=d.B[b];
+    $(ids.f).textContent=nf(B.libre);
+    $(ids.a).textContent="Autoatención: "+nf(B.disponible)+" disponibles";
+    var partes=[
+      {v:B.sol,cls:"seg-sol",t:"Solicitado"},
+      {v:B.plan,cls:"seg-plan",t:"Planificado"}
+    ].concat(extra.segs);
+    segs($(ids.bar), partes, B.disponible);
+    legend($(ids.leg), [
+      {l:"solicitado",v:B.sol,c:COLOR[b]},
+      {l:"planificado",v:B.plan,c:COLOR[b],op:".4"}
+    ].concat(extra.leg));
+  }
+
+  /* ---------- render ---------- */
+  function render(){
+    var d=derive(), t=cuenta(), h=hoy0(), B=d.B;
+
+    var totalLibre=0, comprometido=0;
+    BOLSAS.forEach(function(b){ totalLibre+=B[b].libre; comprometido+=B[b].comprometido; });
+    $("v-total").textContent = nf(totalLibre);
+    $("v-desglose").innerHTML =
+      'feriado 2026 <b style="color:var(--c-vig)">'+nf(B.vigente.libre)+'</b> · '+
+      'acumulado <b style="color:var(--c-acum)">'+nf(B.acum25.libre)+'</b> · '+
+      'bolsa 2022 <b style="color:var(--c-b22)">'+nf(B.b2022.libre)+'</b> · '+
+      'permisos <b style="color:var(--c-perm)">'+nf(B.permiso.libre)+'</b>';
+    $("v-marcados").innerHTML = comprometido>0
+      ? 'tienes <b>'+nf(comprometido)+'</b> días ya comprometidos'
+      : 'sin días comprometidos todavía';
+
+    var num=$("v-num"), claim=$("v-claim");
+    num.textContent=nf(d.total);
+    if(d.total<=0){
+      num.classList.add("zero"); claim.classList.add("ok");
+      claim.textContent="días obligados: con lo que marcaste el año cierra limpio";
+    } else {
+      num.classList.remove("zero"); claim.classList.remove("ok");
+      claim.textContent="tienes que gastar dentro de 2026";
+    }
+    var trozos=[];
+    if(B.acum25.libre>0) trozos.push('acumulado <b style="color:var(--c-acum)">'+nf(B.acum25.libre)+'</b>');
+    if(B.permiso.libre>0) trozos.push('permisos <b style="color:var(--c-perm)">'+nf(B.permiso.libre)+'</b>');
+    if(d.excede>0) trozos.push('feriado sobre el techo <b style="color:var(--c-vig)">'+nf(d.excede)+'</b>');
+    $("v-riesgo-desglose").innerHTML = trozos.length ? trozos.join(" · ")
+      : 'el feriado 2026 y la bolsa 2022 pasan enteros a 2027';
+
+    /* plazo del trámite */
+    var nPost=Math.max(1, Math.round(d.postergar));
+    var fInicio=habilAtras(nPost, CIERRE);
+    var fSol=new Date(fInicio.getTime()); fSol.setDate(fSol.getDate()-(state.margen||0));
+    var faltan=restaDias(fSol,h), vencido=faltan<0;
+
+    $("fk-dias").textContent=nf(d.postergar)+(d.postergar===1?" día":" días");
+    $("fk-inicio").textContent=corto(fInicio);
+    $("fk-solicitud").textContent=corto(fSol);
+    $("p-dias").textContent=nf(d.postergar);
+    $("p-inicio").textContent=largo(fInicio);
+
+    $("dl-num").textContent = vencido ? "0" : faltan;
+    $("plazo").classList.toggle("ok", !vencido && faltan>30);
+    if(vencido){
+      $("dl-titulo").textContent="la fecha tope de la solicitud ya pasó";
+      $("dl-sub").textContent="Un período de "+nf(d.postergar)+" días hábiles ya no cabe con el margen que pusiste. Baja los días a postergar o el margen para ver qué alcanza todavía.";
+    } else {
+      $("dl-titulo").textContent="días para presentar la solicitud de postergación";
+      $("dl-sub").innerHTML="Postergar <b>"+nf(d.postergar)+"</b> días del feriado 2026 obliga a pedir un período que empiece a más tardar el <b>"+largo(fInicio)+"</b>. Con "+(state.margen||0)+" días de margen, la solicitud entra antes del <b>"+largo(fSol)+"</b>.";
+    }
+    $("tl0-date").textContent=corto(fSol).replace(/-/g," · ");
+    $("c-corridos").textContent=t.corridos;
+    $("c-habiles").textContent=t.habiles;
+    var cs=$("c-solicitud");
+    cs.textContent = vencido ? "0" : faltan;
+    cs.classList.toggle("urge", vencido || faltan<=30);
+
+    /* tarjetas */
+    tarjeta("acum25", {f:"f-acum",a:"a-acum",bar:"bar-acum",leg:"leg-acum"},
+      { segs:[{v:B.acum25.libre,cls:"seg-risk",t:"Se pierde"}],
+        leg:[{l:"se pierde",v:B.acum25.libre,c:"var(--risk)"}] });
+    var chA=$("ch-acum");
+    chA.textContent = B.acum25.libre>0 ? nf(B.acum25.libre)+" en riesgo" : "todo cubierto";
+    chA.className="chip "+(B.acum25.libre>0?"chip-risk":"chip-safe");
+    $("n-acum").innerHTML = B.acum25.libre>0
+      ? "Estos días vienen arrastrados del año pasado, así que ya son el segundo período consecutivo: <strong>no pueden volver a acumularse</strong>. Es la bolsa que hay que vaciar primero."
+      : "Vaciada. Era la única bolsa de feriado que no podía cruzar a 2027.";
+
+    tarjeta("vigente", {f:"f-vig",a:"a-vig",bar:"bar-vig",leg:"leg-vig"},
+      { segs:[{v:d.vigSalvo,cls:"seg-safe",t:"Se posterga a 2027"},{v:d.excede,cls:"seg-risk",t:"Excede el techo"}],
+        leg:[{l:"se posterga",v:d.vigSalvo,c:"var(--safe)"},{l:"excede el techo",v:d.excede,c:"var(--risk)"}] });
+    var chV=$("ch-vig");
+    chV.textContent = d.excede>0 ? nf(d.excede)+" en riesgo" : "se posterga entero";
+    chV.className="chip "+(d.excede>0?"chip-risk":"chip-safe");
+    $("n-vig").innerHTML = d.excede>0
+      ? "Con <strong>"+nf(state.nuevo)+"</strong> días nuevos en enero y un techo de <strong>"+nf(state.techo)+"</strong>, a 2027 solo caben <strong>"+nf(state.techo-state.nuevo)+"</strong>: sobran <strong>"+nf(d.excede)+"</strong>."
+      : "Si tomas los <strong>"+nf(B.acum25.libre)+"</strong> del acumulado junto con <strong>"+nf(Math.max(0,10-B.acum25.libre))+"</strong> de esta bolsa, armas el bloque de diez días que exige la ley y te quedan <strong>"+nf(Math.max(0,B.vigente.libre-Math.max(0,10-B.acum25.libre)))+"</strong> para acumular a 2027.";
+
+    tarjeta("b2022", {f:"f-2022",a:"a-2022",bar:"bar-2022",leg:"leg-2022"},
+      { segs:[{v:B.b2022.libre,cls:"seg-safe",t:"Vive hasta 2027"}],
+        leg:[{l:"vive hasta 2027",v:B.b2022.libre,c:"var(--safe)"}] });
+
+    tarjeta("permiso", {f:"f-perm",a:"a-perm",bar:"bar-perm",leg:"leg-perm"},
+      { segs:[{v:B.permiso.libre,cls:"seg-risk",t:"Se pierde"}],
+        leg:[{l:"se pierde",v:B.permiso.libre,c:"var(--risk)"}] });
+    var chP=$("ch-perm");
+    chP.textContent = B.permiso.libre>0 ? nf(B.permiso.libre)+" en riesgo" : "todo cubierto";
+    chP.className="chip "+(B.permiso.libre>0?"chip-risk":"chip-safe");
+    $("n-perm").innerHTML = B.permiso.libre>0
+      ? "Fraccionables por días o medios días: te quedan <strong>"+nf(B.permiso.libre*2)+" medias jornadas</strong> por gastar antes de fin de año."
+      : "Los seis días del año calendario ya están tomados o comprometidos.";
+
+    $("tl1").textContent = d.total>0 ? "Se pierden "+nf(d.total)+" días" : "No pierdes días";
+    $("tl2").textContent = "Último año para la bolsa 2022 · "+nf(B.b2022.libre)+" días";
+
+    $("cuadratura").innerHTML = BOLSAS.map(function(b){
+      return '<div><span>'+CORTOS[b]+': '+nf(B[b].ini)+' inicial − '+nf(B[b].res)+' resueltos</span><b>'+nf(B[b].disponible)+'</b></div>';
+    }).join("") +
+    '<div><span><b>Feriado disponible total</b> (lo que muestra la pantalla)</span><b>'+nf(B.vigente.disponible+B.acum25.disponible)+'</b></div>';
+
+    pintaCalendario([iso(fInicio), iso(fSol)]);
+    pintaPendientes();
+    if(!editando) pintaRegistro();
+
+    $("e-vig").value=state.ini.vigente; $("e-acum").value=state.ini.acum25;
+    $("e-2022").value=state.ini.b2022; $("e-perm").value=state.ini.permiso;
+    $("e-techo").value=state.techo; $("e-nuevo").value=state.nuevo;
+    if(document.activeElement!==$("i-postergar")) $("i-postergar").value=Math.round(d.postergar);
+    if(document.activeElement!==$("i-margen")) $("i-margen").value=state.margen;
+    pintaHint();
+  }
+
+  function pintaHint(){
+    var txt="Toca un día para marcarlo como <b>"+ESTADO[estadoSel]+"</b> en <b>"+CORTOS[bolsaSel]+"</b>. Tócalo otra vez con los mismos ajustes para soltarlo.";
+    if(bolsaSel==="acum25") txt+=" Esta es la bolsa que vence en diciembre: conviene gastarla primero.";
+    if(bolsaSel==="b2022") txt+=" La bolsa 2022 no necesita el bloque de diez días.";
+    $("hint").innerHTML=txt;
+  }
+
+  /* ---------- interacción ---------- */
+  importaDesdeURL();
+  state = loadLocal();
+  render();
+
+  $("meses").addEventListener("click", function(e){
+    var b=e.target.closest("button.d"); if(!b || b.disabled) return;
+    var f=b.getAttribute("data-f");
+    var x=state.reg.filter(function(y){ return y.f===f; })[0];
+    if(x){
+      if(x.b===bolsaSel && x.e===estadoSel && x.d===fracSel){
+        state.reg=state.reg.filter(function(y){ return y.f!==f; });
+      } else { x.b=bolsaSel; x.e=estadoSel; x.d=fracSel; }
+    } else {
+      state.reg.push({ f:f, b:bolsaSel, e:estadoSel, d:fracSel, r:"" });
+    }
+    persist();
+  });
+
+  $("resumen").addEventListener("click", function(e){
+    var b=e.target.closest("button[data-del]"); if(!b) return;
+    var f=b.getAttribute("data-del");
+    state.reg=state.reg.filter(function(y){ return y.f!==f; });
+    persist();
+  });
+
+  $("mov-body").addEventListener("focusin", function(){ editando=true; });
+  $("mov-body").addEventListener("focusout", function(){ editando=false; });
+  $("mov-body").addEventListener("input", function(e){
+    var i=e.target.closest("input[data-folio]"); if(!i) return;
+    var x=state.reg.filter(function(y){ return y.f===i.getAttribute("data-folio"); })[0];
+    if(x){ x.r=i.value; guarda(); }
+  });
+
+  function grupo(id, attr, cb){
+    $(id).addEventListener("click", function(e){
+      var b=e.target.closest("button["+attr+"]"); if(!b) return;
+      [].forEach.call(this.querySelectorAll("button"),function(x){ x.setAttribute("aria-pressed", x===b?"true":"false"); });
+      cb(b.getAttribute(attr));
+    });
+  }
+  grupo("segs-bolsa","data-b",function(v){ bolsaSel=v; pintaHint(); });
+  grupo("segs-estado","data-e",function(v){ estadoSel=v; pintaHint(); });
+  grupo("segs-frac","data-f",function(v){ fracSel=parseFloat(v); });
+
+  $("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var v=$("i-fecha").value, n=parseInt($("i-dias").value,10);
+    if(!v || !(n>0)) return;
+    var pp=v.split("-"), d=new Date(+pp[0], +pp[1]-1, +pp[2]);
+    var puestos=0, g=0;
+    while(puestos<n && g<400){
+      if(esHabil(d)){
+        var k=iso(d);
+        state.reg=state.reg.filter(function(y){ return y.f!==k; });
+        state.reg.push({ f:k, b:bolsaSel, e:estadoSel, d:1, r:"" });
+        puestos++;
+      }
+      d.setDate(d.getDate()+1); g++;
+    }
+    persist();
+  });
+
+  $("i-postergar").addEventListener("input", function(){
+    var v=parseInt(this.value,10); if(isNaN(v)||v<0) return;
+    state.postergar=v; persist();
+  });
+  $("i-margen").addEventListener("input", function(){
+    var v=parseInt(this.value,10); if(isNaN(v)||v<0) return;
+    state.margen=v; persist();
+  });
+
+  [["e-vig","vigente"],["e-acum","acum25"],["e-2022","b2022"],["e-perm","permiso"]].forEach(function(par){
+    $(par[0]).addEventListener("input", function(){
+      var v=parseFloat(this.value); if(isNaN(v)||v<0) return;
+      state.ini[par[1]]=v; state.postergar=null; persist();
+    });
+  });
+  [["e-techo","techo"],["e-nuevo","nuevo"]].forEach(function(par){
+    $(par[0]).addEventListener("input", function(){
+      var v=parseFloat(this.value); if(isNaN(v)||v<0) return;
+      state[par[1]]=v; state.postergar=null; persist();
+    });
+  });
+
+  $("reset").addEventListener("click", function(){ state=clone(DEFAULTS); persist(); });
+  $("btn-antes").addEventListener("click", function(){ verAntes=!verAntes; render(); });
+  $("btn-2027").addEventListener("click", function(){ ver2027=!ver2027; render(); });
+
+  /* ---------- mover los datos a otro aparato ---------- */
+  $("btn-exportar").addEventListener("click", function(){
+    var url=exportaEnlace();
+    $("salida").value=url;
+    $("salida").hidden=false;
+    var msg=$("exp-msg");
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        msg.textContent="Enlace copiado. Ábrelo en el otro aparato y los datos quedan cargados allá.";
+        msg.hidden=false;
+      }).catch(function(){
+        msg.textContent="Copia el enlace de arriba y ábrelo en el otro aparato.";
+        msg.hidden=false;
+      });
+    } else {
+      $("salida").select();
+      msg.textContent="Copia el enlace de arriba y ábrelo en el otro aparato.";
+      msg.hidden=false;
+    }
+  });
+
+  /* ---------- funcionar sin señal ---------- */
+  if("serviceWorker" in navigator){
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("./sw.js").catch(function(){});
+    });
+  }
+
+})();
+</script>
+
+</body>
+</html>

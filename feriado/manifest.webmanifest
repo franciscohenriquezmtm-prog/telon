@@ -1,0 +1,19 @@
+{
+  "name": "Feriado y permisos",
+  "short_name": "Feriado",
+  "description": "Control de feriado legal y permisos administrativos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EDF1F0",
+  "theme_color": "#0B6B62",
+  "lang": "es-CL",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
