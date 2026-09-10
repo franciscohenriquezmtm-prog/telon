@@ -1,5 +1,7 @@
-/* Deja la página funcionando sin señal: red primero, caché si no hay. */
-const CACHE = "feriado-v3";
+/* Deja la pagina funcionando sin senal, pero sin quedarse pegada en una
+   version vieja: la pagina se pide siempre al servidor y el cache solo entra
+   cuando no hay red. */
+const CACHE = "feriado-2026-09-10-1244";
 const BASE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {
@@ -16,8 +18,6 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
-  // La página misma se revalida siempre contra el servidor: si no, una versión
-  // vieja guardada en el navegador puede quedarse pegada durante horas.
   const esPagina = e.request.mode === "navigate";
   e.respondWith(
     fetch(esPagina ? new Request(e.request, { cache: "reload" }) : e.request)

@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Control de feriado legal y permisos administrativos para funcionarios públicos de Chile, con las reglas del Estatuto Administrativo.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Control de feriado legal y permisos administrativos segun el Estatuto Administrativo.">
 <meta name="theme-color" content="#0B6B62" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#091211" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -113,12 +114,6 @@
   .countdown .k.urge{color:var(--risk)}
   .countdown .l{font-size:.7rem; color:var(--muted); line-height:1.25}
 
-  .vacio{
-    display:flex; flex-direction:column; gap:7px; padding:13px 15px; border-radius:var(--radius);
-    background:var(--c-perm-soft); border:1px solid var(--c-perm); line-height:1.45;
-  }
-  .vacio b{color:var(--ink); font-size:.9rem}
-  .vacio p{font-size:.79rem; color:var(--ink-2)}
   .clave{display:flex; flex-direction:column; gap:7px}
   .codigo{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px}
   .codigo li{font-size:.71rem; font-weight:600; padding:5px 11px; border-radius:100px; letter-spacing:.01em}
@@ -321,11 +316,6 @@
   .toggle{display:flex; align-items:center; gap:9px; font-size:.78rem; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius); padding:9px 11px; cursor:pointer; line-height:1.35}
   .toggle input{margin:0; flex:none; accent-color:var(--accent); width:16px; height:16px}
 
-  textarea{
-    font-family:"IBM Plex Mono",monospace; font-size:.72rem; color:var(--ink-2); background:var(--surface-2);
-    border:1px solid var(--line-strong); border-radius:var(--radius); padding:9px 10px; width:100%;
-    resize:vertical; line-height:1.4; word-break:break-all;
-  }
   footer{border-top:1px solid var(--line); padding-top:14px; font-size:.74rem; color:var(--muted); display:flex; flex-direction:column; gap:5px; line-height:1.5}
   .sync{display:flex; align-items:center; gap:7px}
   .sync .d2{width:7px; height:7px; border-radius:50%; background:var(--safe); flex:none}
@@ -379,11 +369,6 @@
       <div><span class="k" id="c-habiles">76</span><span class="l">hábiles que quedan del año</span></div>
       <div><span class="k" id="c-solicitud">76</span><span class="l">para pedir la postergación</span></div>
     </div>
-  </div>
-
-  <div class="vacio" id="aviso-vacio" hidden>
-    <b>Este tablero todavía está vacío</b>
-    <p>Los números de arriba son los que fija la ley para cualquier funcionario: 15 días hábiles de feriado y 6 de permiso administrativo. <strong>No son tus saldos.</strong> Para que lo sean, abre el enlace con tus datos, o escribe tus saldos en «Saldos iniciales y supuestos» y marca en el calendario los días que ya tomaste.</p>
   </div>
 
   <div class="clave">
@@ -694,20 +679,9 @@
     </div>
   </section>
 
-  <details class="edit">
-    <summary>Llevar mis datos a otro aparato</summary>
-    <div class="body">
-      <p class="note">Todo lo que marcas se guarda <strong>solo en este navegador</strong>: no viaja a ningún servidor. Para tenerlo también en el teléfono, genera un enlace y ábrelo allá una vez.</p>
-      <button id="btn-exportar" type="button">Generar enlace con mis datos</button>
-      <textarea id="salida" rows="3" readonly hidden aria-label="Enlace con tus datos"></textarea>
-      <p class="note" id="exp-msg" hidden></p>
-      <p class="note">El enlace lleva tus datos dentro, así que trátalo como algo privado: no lo publiques ni lo mandes a un grupo.</p>
-    </div>
-  </details>
-
   <footer>
-    <div class="sync" id="sync"><span class="d2"></span><span id="sync-t">Guardado solo en este navegador · sin cuentas ni servidores</span></div>
-    <div>Los saldos salen del registro de días que llevas aquí. Página sin publicidad, sin seguimiento y sin cuenta: el código vive en GitHub.</div>
+    <div class="sync" id="sync"><span class="d2"></span><span id="sync-t">Publicado el <span class="mono" id="sello">—</span> · se actualiza solo</span></div>
+    <div>Este mismo enlace se mantiene al día: lo que corrija aparece la próxima vez que lo abras, en el computador y en el teléfono. Lo que marques queda guardado en el aparato donde lo marcaste.</div>
   </footer>
 
 </div>
@@ -719,14 +693,24 @@
   /* Registro sembrado con lo que muestra Autoatención al 10-09-2026.
      Los dos días de feriado ya tomados se cargan al acumulado del año
      anterior, que es lo que cuadra: 15 intactos + 4 de arrastre = 19. */
-  /* La pagina publica no trae datos de nadie: parte con lo que dice la ley
-     (15 dias habiles de feriado y 6 de permiso administrativo) y el registro vacio. */
-  var SEMILLA = [];
+  var SEMILLA = [
+    { f:"2026-01-02", b:"acum25",  d:1,   e:"res", r:"2026134602003099" },
+    { f:"2026-01-16", b:"permiso", d:0.5, e:"res", r:"2026134601003342" },
+    { f:"2026-02-02", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-02-03", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-02-04", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-02-05", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-02-06", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-02-09", b:"b2022",   d:1,   e:"res", r:"2026134602003101" },
+    { f:"2026-03-18", b:"permiso", d:1,   e:"res", r:"2026134601012616" },
+    { f:"2026-07-17", b:"acum25",  d:1,   e:"res", r:"2026134602021192" }
+  ];
 
   var DEFAULTS = {
-    ini:{ vigente:15, acum25:0, b2022:0, permiso:6 },
+    ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, margen:15, postergar:null,
-    reg: []
+    sello:"2026-09-10 12:44",
+    reg: SEMILLA.slice()
   };
 
   var BOLSAS = ["vigente","acum25","b2022","permiso"];
@@ -761,45 +745,20 @@
   function hoy0(){ var h=new Date(); h.setHours(0,0,0,0); return h; }
   function fmtFecha(f){ var t=f.split("-"); return t[2]+"-"+t[1]+"-"+t[0]; }
 
-  /* Un enlace con #c=... carga datos y los deja guardados en este aparato. */
-  function limpiaHash(){
-    try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){}
-  }
-
-  function importaDesdeURL(){
-    var ok=false;
+  /* Lo que marcas queda guardado en este aparato. Pero si la pagina trae una
+     publicacion mas nueva que la guardada aqui, gana la pagina: asi una
+     correccion llega sola a todos los aparatos, sin cargar nada a mano. */
+  function loadLocal(){
     try{
-      var h=location.hash || "";
-      if(h.indexOf("#c=")!==0) return false;
-      var json=decodeURIComponent(escape(atob(decodeURIComponent(h.slice(3)))));
-      var datos=JSON.parse(json);
-      if(datos && typeof datos==="object" && datos.ini){
-        var previo=null;
-        try{ previo=localStorage.getItem("dias2026v3"); }catch(e){}
-        var nuevo=JSON.stringify(datos);
-        if(previo && previo!==nuevo &&
-           !confirm("Este enlace trae datos distintos a los que ya tienes guardados en este aparato. ¿Reemplazarlos?")){
-          limpiaHash(); return false;
-        }
-        localStorage.setItem("dias2026v3", nuevo);
-        ok=true;
+      var raw=localStorage.getItem("dias2026v4");
+      if(raw){
+        var g=JSON.parse(raw);
+        if(g && g.sello===DEFAULTS.sello) return Object.assign(clone(DEFAULTS), g);
       }
     }catch(e){}
-    limpiaHash();
-    return ok;
-  }
-
-  function exportaEnlace(){
-    var json=JSON.stringify(state);
-    var b64=btoa(unescape(encodeURIComponent(json)));
-    return location.origin+location.pathname+"#c="+encodeURIComponent(b64);
-  }
-
-  function loadLocal(){
-    try{ var raw=localStorage.getItem("dias2026v3"); if(raw) return Object.assign(clone(DEFAULTS), JSON.parse(raw)); }catch(e){}
     return clone(DEFAULTS);
   }
-  function saveLocal(){ try{ localStorage.setItem("dias2026v3", JSON.stringify(state)); }catch(e){} }
+  function saveLocal(){ try{ localStorage.setItem("dias2026v4", JSON.stringify(state)); }catch(e){} }
   function guarda(){ saveLocal(); if(docRef){ docRef.set(clone(state)).catch(function(){}); } }
   function persist(){ guarda(); render(); }
 
@@ -1055,9 +1014,6 @@
     }).join("") +
     '<div><span><b>Feriado disponible total</b> (lo que muestra la pantalla)</span><b>'+nf(B.vigente.disponible+B.acum25.disponible)+'</b></div>';
 
-    var _av = document.getElementById("aviso-vacio");
-    if (_av) _av.hidden = state.reg.length > 0;
-
     pintaCalendario([iso(fInicio), iso(fSol)]);
     pintaPendientes();
     if(!editando) pintaRegistro();
@@ -1078,7 +1034,6 @@
   }
 
   /* ---------- interacción ---------- */
-  importaDesdeURL();
   state = loadLocal();
   render();
 
@@ -1166,39 +1121,14 @@
   $("btn-antes").addEventListener("click", function(){ verAntes=!verAntes; render(); });
   $("btn-2027").addEventListener("click", function(){ ver2027=!ver2027; render(); });
 
-  /* ---------- mover los datos a otro aparato ---------- */
-  $("btn-exportar").addEventListener("click", function(){
-    var url=exportaEnlace();
-    $("salida").value=url;
-    $("salida").hidden=false;
-    var msg=$("exp-msg");
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(url).then(function(){
-        msg.textContent="Enlace copiado. Ábrelo en el otro aparato y los datos quedan cargados allá.";
-        msg.hidden=false;
-      }).catch(function(){
-        msg.textContent="Copia el enlace de arriba y ábrelo en el otro aparato.";
-        msg.hidden=false;
-      });
-    } else {
-      $("salida").select();
-      msg.textContent="Copia el enlace de arriba y ábrelo en el otro aparato.";
-      msg.hidden=false;
-    }
-  });
-
-  /* Abrir el enlace con la página ya abierta solo cambia el fragmento y no
-     recarga nada, así que hay que atender ese caso a mano. */
-  window.addEventListener("hashchange", function(){
-    if(importaDesdeURL()){ state=loadLocal(); render(); }
-  });
-
   /* ---------- funcionar sin señal ---------- */
   if("serviceWorker" in navigator){
     window.addEventListener("load", function(){
       navigator.serviceWorker.register("./sw.js").catch(function(){});
     });
   }
+
+  $("sello").textContent = DEFAULTS.sello;
 
 })();
 </script>
