@@ -751,17 +751,31 @@
   function fmtFecha(f){ var t=f.split("-"); return t[2]+"-"+t[1]+"-"+t[0]; }
 
   /* Un enlace con #c=... carga datos y los deja guardados en este aparato. */
+  function limpiaHash(){
+    try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){}
+  }
+
   function importaDesdeURL(){
+    var ok=false;
     try{
       var h=location.hash || "";
-      if(h.indexOf("#c=")!==0) return;
+      if(h.indexOf("#c=")!==0) return false;
       var json=decodeURIComponent(escape(atob(decodeURIComponent(h.slice(3)))));
       var datos=JSON.parse(json);
-      if(datos && typeof datos==="object"){
-        localStorage.setItem("dias2026v3", JSON.stringify(datos));
+      if(datos && typeof datos==="object" && datos.ini){
+        var previo=null;
+        try{ previo=localStorage.getItem("dias2026v3"); }catch(e){}
+        var nuevo=JSON.stringify(datos);
+        if(previo && previo!==nuevo &&
+           !confirm("Este enlace trae datos distintos a los que ya tienes guardados en este aparato. ¿Reemplazarlos?")){
+          limpiaHash(); return false;
+        }
+        localStorage.setItem("dias2026v3", nuevo);
+        ok=true;
       }
     }catch(e){}
-    try{ history.replaceState(null,"",location.pathname+location.search); }catch(e){}
+    limpiaHash();
+    return ok;
   }
 
   function exportaEnlace(){
@@ -1157,6 +1171,12 @@
       msg.textContent="Copia el enlace de arriba y ábrelo en el otro aparato.";
       msg.hidden=false;
     }
+  });
+
+  /* Abrir el enlace con la página ya abierta solo cambia el fragmento y no
+     recarga nada, así que hay que atender ese caso a mano. */
+  window.addEventListener("hashchange", function(){
+    if(importaDesdeURL()){ state=loadLocal(); render(); }
   });
 
   /* ---------- funcionar sin señal ---------- */
