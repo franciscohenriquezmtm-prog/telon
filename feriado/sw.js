@@ -1,7 +1,7 @@
 /* Deja la página funcionando sin señal, pero sin quedarse pegada en una
    versión vieja: la página se pide siempre al servidor y el caché solo entra
    cuando no hay red. */
-const CACHE = "feriado-2026-09-10-1914";
+const CACHE = "feriado-2026-09-13-2022";
 const BASE = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (e) => {

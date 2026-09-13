@@ -10,14 +10,21 @@ herramienta de Apple (`shortcuts sign --mode anyone`), listo para mandar por
 **AirDrop** al iPhone — al recibirlo se abre en la app Atajos y solo hay que
 tocar «Agregar atajo».
 
-Al ejecutarlo pregunta tres cosas:
+Al ejecutarlo pregunta:
 
-1. **¿Qué te tomaste?** — permiso completo, medio permiso, feriado 2026,
-   acumulado 2025 o bolsa 2022. El medio permiso pregunta además **¿mañana o
-   tarde?** (el descuento es medio día igual; la diferencia queda en el
-   título del evento del calendario).
-2. **¿Desde qué día?**
-3. **¿Hasta qué día?** — si fue uno solo, la misma fecha.
+1. **¿Cuántos tramos vas a marcar?** — normalmente 1; más si mezclaste
+   (p. ej. 4 días de feriado + 1 administrativo). Repite lo que sigue por
+   cada tramo.
+2. **¿Qué te tomaste?** — permiso completo, medio permiso, feriado 2026,
+   acumulado 2025, bolsa 2022, o **borrar días marcados** (deshacer). El
+   medio permiso pregunta además **¿mañana o tarde?** (el descuento es medio
+   día igual; la diferencia queda en el título del evento del calendario).
+3. **¿Desde qué día?**
+4. **¿Hasta qué día?** — si fue uno solo, la misma fecha.
+
+El evento se crea directo en el calendario por defecto del iPhone, sin
+preguntar. Al borrar días, el tablero se limpia solo; el evento del
+calendario del teléfono hay que borrarlo a mano.
 
 El período se pide **corrido, como uno lo piensa**: «del 17 al 22 de
 septiembre» descuenta solo los hábiles (17, 21 y 22) y deja intactos el 18,

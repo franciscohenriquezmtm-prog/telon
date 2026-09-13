@@ -106,14 +106,15 @@ def a_abrir_url(desde_uuid):
 
 def a_evento(desde_uuid, hasta_uuid):
     """Evento de día completo en el calendario del iPhone, del primer al
-    último día del período. Se abre la hoja de confirmación, así se puede
-    elegir el calendario antes de guardar."""
+    último día del período. Se crea directo en el calendario por defecto,
+    sin hoja de confirmación."""
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.addnewevent",
             "WFWorkflowActionParameters": {
                 "WFCalendarItemTitle": texto_con([variable("Titulo")]),
                 "WFCalendarItemStartDate": texto_con([salida(desde_uuid, "Provided Input")]),
                 "WFCalendarItemEndDate": texto_con([salida(hasta_uuid, "Provided Input")]),
-                "WFCalendarItemAllDay": True}}
+                "WFCalendarItemAllDay": True,
+                "ShowWhenRun": False}}
 
 
 def menu(prompt, ramas):
@@ -152,13 +153,32 @@ def rama_titulo(titulo_evento):
     return [a_texto(texto_plano(titulo_evento), u), a_variable("Titulo", u)]
 
 
-def a_ejecutar_atajo():
-    """Vuelve a ejecutar este mismo atajo (sirve para encadenar tramos)."""
-    return {"WFWorkflowActionIdentifier": "is.workflow.actions.runworkflow",
-            "WFWorkflowActionParameters": {
-                "WFWorkflow": {
-                    "Value": {"isSelfReference": True},
-                    "WFSerializationType": "WFTextTokenAttachment"}}}
+def repetir(veces_uuid, dentro):
+    """Repite un bloque tantas veces como diga la salida de una pregunta."""
+    gid = nuevo_uuid()
+    return [{"WFWorkflowActionIdentifier": "is.workflow.actions.repeat.count",
+             "WFWorkflowActionParameters": {
+                 "GroupingIdentifier": gid, "WFControlFlowMode": 0,
+                 "WFRepeatCount": adjunto(salida(veces_uuid, "Provided Input"))}}] + dentro + [
+            {"WFWorkflowActionIdentifier": "is.workflow.actions.repeat.count",
+             "WFWorkflowActionParameters": {
+                 "GroupingIdentifier": gid, "WFControlFlowMode": 2}}]
+
+
+def si_titulo_no_es(marca, dentro):
+    """Ejecuta un bloque solo si la variable Titulo no es la marca dada."""
+    gid = nuevo_uuid()
+    return [{"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+             "WFWorkflowActionParameters": {
+                 "GroupingIdentifier": gid, "WFControlFlowMode": 0,
+                 "WFInput": {"Type": "Variable",
+                             "Variable": {"Value": {"Type": "Variable", "VariableName": "Titulo"},
+                                          "WFSerializationType": "WFTextTokenAttachment"}},
+                 "WFCondition": 5,
+                 "WFConditionalActionString": marca}}] + dentro + [
+            {"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+             "WFWorkflowActionParameters": {
+                 "GroupingIdentifier": gid, "WFControlFlowMode": 2}}]
 
 
 def envuelve(acciones, color, glifo):
@@ -191,8 +211,10 @@ def dia_libre():
         ("Acumulado 2025", rama_con_variables("bolsa=acum25&frac=1", "Feriado legal (acumulado)")),
         ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
     ]
+    ramas.append(("Borrar días marcados", rama_con_variables("quitar=1", "×")))
+    u_n = nuevo_uuid()
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url = (nuevo_uuid() for _ in range(5))
-    acciones = menu("¿Qué te tomaste?", ramas) + [
+    tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
         a_formatear_fecha(u_desde, u_fmt_d),
         a_preguntar("¿Hasta qué día? (si es uno solo, la misma fecha)", "Date", u_hasta),
@@ -201,11 +223,8 @@ def dia_libre():
                            "&hasta=", salida(u_fmt_h, "Formatted Date"),
                            "&", variable("Parametros")]), u_url),
         a_abrir_url(u_url),
-        a_evento(u_desde, u_hasta),
-    ] + menu("¿Marcar otro tramo? (p. ej. mezclaste feriado con un administrativo)", [
-        ("Sí, otro tramo", [a_ejecutar_atajo()]),
-        ("No, listo", []),
-    ])
+    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)])
+    acciones = [a_preguntar("¿Cuántos tramos vas a marcar? (normalmente 1; más si mezclaste, p. ej. feriado + administrativo)", "Number", u_n)] + repetir(u_n, tramo)
     return envuelve(acciones, 431817727, 61553)
 
 

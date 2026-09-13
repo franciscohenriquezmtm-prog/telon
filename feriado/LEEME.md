@@ -121,6 +121,7 @@ https://franciscohenriquezmtm-prog.github.io/telon/feriado/?dias=2026-11-09&bols
 | `frac` | `0.5` para media jornada | día completo |
 | `estado` | `plan` · `sol` · `res` | `res` |
 | `folio` | número de resolución | vacío |
+| `quitar` | `1` = borra esos días del registro (deshacer) | — |
 
 Sábados, domingos y feriados de calendario se saltan solos —«del 17 al 22 de
 septiembre» descuenta solo el 17, 21 y 22— y un día repetido se sobreescribe,
