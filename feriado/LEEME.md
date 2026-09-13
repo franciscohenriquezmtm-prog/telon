@@ -103,17 +103,30 @@ Todos son editables también desde la página, en «Saldos iniciales y supuestos
 
 ## Atajo de iPhone
 
-Un `.shortcut` es un archivo firmado por Apple: se crea en la app Atajos, no a
-mano. Para esto probablemente no haga falta ninguno — **Agregar a pantalla de
-inicio** ya deja la página como app, a pantalla completa y sin conexión.
+La página **lee parámetros de la dirección**: un atajo de la app Atajos puede
+marcar un día (o un bloque) sin abrir el calendario a mano. Al abrirse, el
+tablero registra los días, descuenta los saldos, los pinta en su calendario y
+muestra un aviso de confirmación.
 
-Un atajo sí tiene sentido si quieres algo que la página no hace sola, por
-ejemplo:
+```
+https://franciscohenriquezmtm-prog.github.io/telon/feriado/?dias=2026-11-09&bolsa=permiso&frac=0.5
+```
 
-- **Abrir el tablero** con un widget o desde el Back Tap → acción *Abrir URL*.
-- **Recordatorio del trámite** → un atajo de automatización que el 25 de
-  noviembre te abra el tablero y te muestre la cuenta regresiva.
-- **Marcar un día desde el teléfono** sin abrir la página: eso necesitaría que
-  la página leyera parámetros de la dirección (algo como
-  `?marcar=2026-11-09&bolsa=vigente`). Hoy no lo hace; es un cambio chico en
-  `fuente/tablero.html` si lo quieres.
+| Parámetro | Valores | Si falta |
+|---|---|---|
+| `desde` + `hasta` | período corrido; se marcan solo los hábiles | — |
+| `desde` + `habiles` | inicio + cuántos días hábiles contar | `habiles=1` |
+| `dias` | una fecha `AAAA-MM-DD`, o varias separadas por coma | — |
+| `bolsa` | `vigente` · `acum25` · `b2022` · `permiso` | `permiso` |
+| `frac` | `0.5` para media jornada | día completo |
+| `estado` | `plan` · `sol` · `res` | `res` |
+| `folio` | número de resolución | vacío |
+
+Sábados, domingos y feriados de calendario se saltan solos —«del 17 al 22 de
+septiembre» descuenta solo el 17, 21 y 22— y un día repetido se sobreescribe,
+no se duplica.
+
+El atajo **ya está construido y firmado** en esta carpeta: `Día
+libre.shortcut`, listo para mandar por AirDrop al iPhone. Lo genera
+`fuente/atajo.py` (la firma necesita macOS). Detalles y receta manual en
+**[ATAJO-IPHONE.md](ATAJO-IPHONE.md)**.

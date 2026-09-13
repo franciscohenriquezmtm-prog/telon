@@ -282,6 +282,14 @@
   .flag{font-size:.79rem; line-height:1.5; color:var(--ink-2); background:var(--c-perm-soft); border-radius:var(--radius); padding:11px 13px}
   .flag b{color:var(--ink)}
 
+  .aviso{
+    position:sticky; top:10px; z-index:5;
+    background:var(--accent); color:var(--on-fill);
+    border-radius:var(--radius); padding:12px 14px;
+    font-size:.86rem; font-weight:600; line-height:1.4;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+  }
+
   details.edit{border:1px solid var(--line); border-radius:var(--radius); background:var(--surface)}
   details.edit summary{cursor:pointer; padding:12px 14px; font-size:.86rem; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:8px}
   details.edit summary::-webkit-details-marker{display:none}
@@ -1079,9 +1087,90 @@
     $("hint").innerHTML=txt;
   }
 
+  /* ---------- marcar desde la dirección (atajo de iPhone) ----------
+     La página acepta parámetros para que un atajo marque días sin abrir
+     el calendario a mano:
+
+       ?dias=2026-11-09              un día (o varios: 2026-11-09,2026-11-10)
+       ?desde=2026-09-17&hasta=2026-09-22  un período corrido: se marcan solo
+                                     los hábiles; feriados de calendario y
+                                     fines de semana de por medio se saltan
+       ?desde=2026-11-09&habiles=10  o un bloque contado en días hábiles
+       &bolsa=permiso                vigente · acum25 · b2022 · permiso
+       &frac=0.5                     media jornada (si falta: día completo)
+       &estado=res                   plan · sol · res (si falta: res)
+       &folio=2026134601...          n.º de resolución, opcional
+
+     Los sábados, domingos y feriados de calendario se saltan solos.
+     El mismo día pedido de nuevo se sobreescribe, no se duplica. */
+  function aplicaURL(){
+    var q;
+    try{ q = new URLSearchParams(location.search); }catch(e){ return null; }
+    if(!q.get("dias") && !q.get("desde")) return null;
+
+    var bolsa = q.get("bolsa")||"permiso";
+    if(BOLSAS.indexOf(bolsa)===-1) bolsa="permiso";
+    var estado = q.get("estado")||"res";
+    if(!ESTADO[estado]) estado="res";
+    var frac = q.get("frac")==="0.5" ? 0.5 : 1;
+    var folio = q.get("folio")||"";
+    var RE=/^\d{4}-\d{2}-\d{2}$/, fechas=[];
+
+    (q.get("dias")||"").split(",").forEach(function(f){
+      f=f.trim();
+      if(!RE.test(f)) return;
+      var p=f.split("-"), d=new Date(+p[0],+p[1]-1,+p[2]);
+      if(esHabil(d)) fechas.push(f);
+    });
+    var desde=q.get("desde"), hasta=q.get("hasta");
+    if(desde && RE.test(desde)){
+      var p2=desde.split("-"), d2=new Date(+p2[0],+p2[1]-1,+p2[2]), g=0;
+      if(hasta && RE.test(hasta) && hasta>=desde){
+        /* período corrido: se marcan solo los hábiles que caen dentro */
+        var p3=hasta.split("-"), d3=new Date(+p3[0],+p3[1]-1,+p3[2]);
+        while(d2<=d3 && g<400){
+          if(esHabil(d2)) fechas.push(iso(d2));
+          d2.setDate(d2.getDate()+1); g++;
+        }
+      } else {
+        var n=parseInt(q.get("habiles")||"1",10); if(!(n>0)) n=1; if(n>60) n=60;
+        var puestos=0;
+        while(puestos<n && g<400){
+          if(esHabil(d2)){ fechas.push(iso(d2)); puestos++; }
+          d2.setDate(d2.getDate()+1); g++;
+        }
+      }
+    }
+    try{ history.replaceState(null,"",location.pathname); }catch(e){}
+    if(!fechas.length) return null;
+
+    fechas.sort();
+    fechas.forEach(function(f){
+      state.reg = state.reg.filter(function(y){ return y.f!==f; });
+      state.reg.push({ f:f, b:bolsa, e:estado, d:frac, r:folio });
+    });
+    guarda();
+    return { fechas:fechas, bolsa:bolsa, estado:estado, dias:fechas.length*frac };
+  }
+
+  function avisaURL(hecho){
+    var el=document.createElement("div");
+    el.className="aviso";
+    el.setAttribute("role","status");
+    var cuando = hecho.fechas.length===1
+      ? "el "+fmtFecha(hecho.fechas[0])
+      : hecho.fechas.length+" días, del "+fmtFecha(hecho.fechas[0]).slice(0,5)+" al "+fmtFecha(hecho.fechas[hecho.fechas.length-1]).slice(0,5);
+    el.textContent="✓ Marcado desde el atajo: "+CORTOS[hecho.bolsa]+" · "+ESTADO[hecho.estado]+" · "+nf(hecho.dias)+(hecho.dias===1?" día ":" días ")+cuando+". Saldos ya descontados.";
+    var w=document.querySelector(".wrap");
+    w.insertBefore(el, w.firstChild);
+    setTimeout(function(){ el.remove(); }, 9000);
+  }
+
   /* ---------- interacción ---------- */
   state = loadLocal();
+  var desdeAtajo = aplicaURL();
   render();
+  if(desdeAtajo) avisaURL(desdeAtajo);
 
   $("meses").addEventListener("click", function(e){
     var b=e.target.closest("button.d"); if(!b || b.disabled) return;
