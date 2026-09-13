@@ -217,7 +217,7 @@ def dia_libre():
         ("Acumulado 2025", rama_con_variables("bolsa=acum25&frac=1", "Feriado legal (acumulado)")),
         ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
     ]
-    ramas.append(("Borrar días marcados", rama_con_variables("quitar=1", "×")))
+    ramas.append(("Cancelar días", rama_con_variables("quitar=1", "×")))
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url = (nuevo_uuid() for _ in range(5))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
