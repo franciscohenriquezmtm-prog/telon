@@ -211,8 +211,8 @@ def dia_libre():
         ("Tarde (½ PM)", rama_titulo("Permiso administrativo (½ PM)")),
     ])
     ramas = [
-        ("Permiso completo", rama_con_variables("bolsa=permiso&frac=1", "Permiso administrativo")),
-        ("Medio permiso", medio),
+        ("Permiso administrativo completo", rama_con_variables("bolsa=permiso&frac=1", "Permiso administrativo")),
+        ("Medio permiso administrativo", medio),
         ("Feriado 2026", rama_con_variables("bolsa=vigente&frac=1", "Feriado legal")),
         ("Acumulado 2025", rama_con_variables("bolsa=acum25&frac=1", "Feriado legal (acumulado)")),
         ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
