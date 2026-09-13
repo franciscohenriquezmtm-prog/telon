@@ -153,16 +153,22 @@ def rama_titulo(titulo_evento):
     return [a_texto(texto_plano(titulo_evento), u), a_variable("Titulo", u)]
 
 
-def repetir(veces_uuid, dentro):
-    """Repite un bloque tantas veces como diga la salida de una pregunta."""
+def repetir(veces, dentro):
+    """Repite un bloque una cantidad fija de veces."""
     gid = nuevo_uuid()
     return [{"WFWorkflowActionIdentifier": "is.workflow.actions.repeat.count",
              "WFWorkflowActionParameters": {
                  "GroupingIdentifier": gid, "WFControlFlowMode": 0,
-                 "WFRepeatCount": adjunto(salida(veces_uuid, "Provided Input"))}}] + dentro + [
+                 "WFRepeatCount": veces}}] + dentro + [
             {"WFWorkflowActionIdentifier": "is.workflow.actions.repeat.count",
              "WFWorkflowActionParameters": {
                  "GroupingIdentifier": gid, "WFControlFlowMode": 2}}]
+
+
+def a_terminar():
+    """Detiene el atajo (el «No, listo» del ciclo de tramos)."""
+    return {"WFWorkflowActionIdentifier": "is.workflow.actions.exit",
+            "WFWorkflowActionParameters": {}}
 
 
 def si_titulo_no_es(marca, dentro):
@@ -212,7 +218,6 @@ def dia_libre():
         ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
     ]
     ramas.append(("Borrar días marcados", rama_con_variables("quitar=1", "×")))
-    u_n = nuevo_uuid()
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url = (nuevo_uuid() for _ in range(5))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
@@ -223,9 +228,12 @@ def dia_libre():
                            "&hasta=", salida(u_fmt_h, "Formatted Date"),
                            "&", variable("Parametros")]), u_url),
         a_abrir_url(u_url),
-    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)])
-    acciones = [a_preguntar("¿Cuántos tramos vas a marcar? (normalmente 1; más si mezclaste, p. ej. feriado + administrativo)", "Number", u_n)] + repetir(u_n, tramo)
-    return envuelve(acciones, 431817727, 61553)
+    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)]) + menu("¿Marcar otro tramo?", [
+        ("Sí, otro tramo", []),
+        ("No, listo", [a_terminar()]),
+    ])
+    # tope de 10 tramos por ejecución; el «No, listo» corta antes
+    return envuelve(repetir(10, tramo), 431817727, 61553)
 
 
 def escribe_y_firma(nombre, flujo):
