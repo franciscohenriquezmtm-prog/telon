@@ -119,16 +119,22 @@ def a_portapapeles(desde_uuid):
                 "WFInput": adjunto(salida(desde_uuid, "Text"))}}
 
 
+# Calendario de Google (cuenta franciscohenriquezmtm@gmail.com) donde van los
+# eventos. Probado: el selector solo funciona con el nombre como texto simple;
+# como dict WFCalendarDescriptor se ignora y el evento cae al por defecto.
+CALENDARIO = "Vacaciones, permisos, feriados, etc"
+
+
 def a_evento(desde_uuid, hasta_uuid):
-    """Evento de día completo en el calendario del iPhone, del primer al
-    último día del período. Se crea directo en el calendario por defecto,
-    sin hoja de confirmación."""
+    """Evento de día completo, del primer al último día del período, creado
+    directo (sin hoja de confirmación) en el calendario CALENDARIO."""
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.addnewevent",
             "WFWorkflowActionParameters": {
                 "WFCalendarItemTitle": texto_con([variable("Titulo")]),
                 "WFCalendarItemStartDate": texto_con([salida(desde_uuid, "Ask for Input")]),
                 "WFCalendarItemEndDate": texto_con([salida(hasta_uuid, "Ask for Input")]),
                 "WFCalendarItemAllDay": True,
+                "WFCalendarDescriptor": CALENDARIO,
                 "ShowWhenRun": False}}
 
 
