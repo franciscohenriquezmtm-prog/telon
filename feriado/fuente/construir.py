@@ -101,7 +101,6 @@ doc = '''<!doctype html>
 <meta name="description" content="Control de feriado legal y permisos administrativos segun el Estatuto Administrativo.">
 <meta name="theme-color" content="#0B6B62" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#091211" media="(prefers-color-scheme: dark)">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Feriado">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -140,7 +139,10 @@ manifest = {
     "description": "Control de feriado legal y permisos administrativos.",
     "start_url": "./",
     "scope": "./",
-    "display": "standalone",
+    # "browser" a propósito: el ícono de pantalla de inicio abre en Safari,
+    # compartiendo la misma memoria donde marca el atajo. Con "standalone",
+    # iOS crea una app con datos propios y lo marcado por el atajo no se ve.
+    "display": "browser",
     "background_color": "#EDF1F0",
     "theme_color": "#0B6B62",
     "lang": "es-CL",

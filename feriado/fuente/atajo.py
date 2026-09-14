@@ -95,7 +95,7 @@ def a_formatear_fecha(desde_uuid, uid):
                 "UUID": uid,
                 "WFDateFormatStyle": "Custom",
                 "WFDateFormat": "yyyy-MM-dd",
-                "WFDate": adjunto(salida(desde_uuid, "Provided Input"))}}
+                "WFDate": adjunto(salida(desde_uuid, "Ask for Input"))}}
 
 
 def a_abrir_url(desde_uuid):
@@ -111,8 +111,8 @@ def a_evento(desde_uuid, hasta_uuid):
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.addnewevent",
             "WFWorkflowActionParameters": {
                 "WFCalendarItemTitle": texto_con([variable("Titulo")]),
-                "WFCalendarItemStartDate": texto_con([salida(desde_uuid, "Provided Input")]),
-                "WFCalendarItemEndDate": texto_con([salida(hasta_uuid, "Provided Input")]),
+                "WFCalendarItemStartDate": texto_con([salida(desde_uuid, "Ask for Input")]),
+                "WFCalendarItemEndDate": texto_con([salida(hasta_uuid, "Ask for Input")]),
                 "WFCalendarItemAllDay": True,
                 "ShowWhenRun": False}}
 

@@ -7,7 +7,6 @@
 <meta name="description" content="Control de feriado legal y permisos administrativos segun el Estatuto Administrativo.">
 <meta name="theme-color" content="#0B6B62" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#091211" media="(prefers-color-scheme: dark)">
-<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Feriado">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -729,7 +728,7 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-13 20:22",
+    sello:"2026-09-13 21:25",
     reg: SEMILLA.slice()
   };
 
@@ -1140,7 +1139,9 @@
   function aplicaURL(){
     var q;
     try{ q = new URLSearchParams(location.search); }catch(e){ return null; }
-    if(!q.get("dias") && !q.get("desde")) return null;
+    /* basta que la llave venga en la dirección, aunque llegue vacía: así un
+       atajo defectuoso se delata con el aviso rojo en vez de pasar piola */
+    if(!q.has("dias") && !q.has("desde") && !q.has("quitar")) return null;
     var crudo = location.search;
 
     var bolsa=(q.get("bolsa")||"permiso").trim();

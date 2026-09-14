@@ -1108,7 +1108,9 @@
   function aplicaURL(){
     var q;
     try{ q = new URLSearchParams(location.search); }catch(e){ return null; }
-    if(!q.get("dias") && !q.get("desde")) return null;
+    /* basta que la llave venga en la dirección, aunque llegue vacía: así un
+       atajo defectuoso se delata con el aviso rojo en vez de pasar piola */
+    if(!q.has("dias") && !q.has("desde") && !q.has("quitar")) return null;
     var crudo = location.search;
 
     var bolsa=(q.get("bolsa")||"permiso").trim();

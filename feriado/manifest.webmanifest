@@ -4,7 +4,7 @@
   "description": "Control de feriado legal y permisos administrativos.",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#EDF1F0",
   "theme_color": "#0B6B62",
   "lang": "es-CL",
