@@ -728,7 +728,7 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-13 21:25",
+    sello:"2026-09-13 21:40",
     reg: SEMILLA.slice()
   };
 
@@ -1211,7 +1211,7 @@
         ? "el "+fmtFecha(hecho.fechas[0])
         : hecho.fechas.length+" días, del "+fmtFecha(hecho.fechas[0]).slice(0,5)+" al "+fmtFecha(hecho.fechas[hecho.fechas.length-1]).slice(0,5);
       el.textContent = hecho.quitar
-        ? "✓ Borrado desde el atajo: "+nf(hecho.dias)+(hecho.dias===1?" marca":" marcas")+", "+cuando+". Saldos recalculados. Si había evento en el calendario del teléfono, bórralo a mano."
+        ? "✓ Borrado desde el atajo: "+nf(hecho.dias)+(hecho.dias===1?" marca":" marcas")+", "+cuando+". Saldos recalculados. Si había evento en el calendario del teléfono, bórralo ahí (el atajo abre el Calendario)."
         : "✓ Marcado desde el atajo: "+CORTOS[hecho.bolsa]+" · "+ESTADO[hecho.estado]+" · "+nf(hecho.dias)+(hecho.dias===1?" día ":" días ")+cuando+". Saldos ya descontados.";
     }
     var w=document.querySelector(".wrap");

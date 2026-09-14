@@ -171,20 +171,27 @@ def a_terminar():
             "WFWorkflowActionParameters": {}}
 
 
-def si_titulo_no_es(marca, dentro):
-    """Ejecuta un bloque solo si la variable Titulo no es la marca dada."""
+def si_titulo_no_es(marca, dentro, sino=None):
+    """Ejecuta un bloque si la variable Titulo no es la marca dada; si lo es,
+    ejecuta el bloque «sino» (la rama De lo contrario)."""
     gid = nuevo_uuid()
-    return [{"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
-             "WFWorkflowActionParameters": {
-                 "GroupingIdentifier": gid, "WFControlFlowMode": 0,
-                 "WFInput": {"Type": "Variable",
-                             "Variable": {"Value": {"Type": "Variable", "VariableName": "Titulo"},
-                                          "WFSerializationType": "WFTextTokenAttachment"}},
-                 "WFCondition": 5,
-                 "WFConditionalActionString": marca}}] + dentro + [
-            {"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
-             "WFWorkflowActionParameters": {
-                 "GroupingIdentifier": gid, "WFControlFlowMode": 2}}]
+    acciones = [{"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+                 "WFWorkflowActionParameters": {
+                     "GroupingIdentifier": gid, "WFControlFlowMode": 0,
+                     "WFInput": {"Type": "Variable",
+                                 "Variable": {"Value": {"Type": "Variable", "VariableName": "Titulo"},
+                                              "WFSerializationType": "WFTextTokenAttachment"}},
+                     "WFCondition": 5,
+                     "WFConditionalActionString": marca}}] + dentro
+    if sino:
+        acciones.append({"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+                         "WFWorkflowActionParameters": {
+                             "GroupingIdentifier": gid, "WFControlFlowMode": 1}})
+        acciones.extend(sino)
+    acciones.append({"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+                     "WFWorkflowActionParameters": {
+                         "GroupingIdentifier": gid, "WFControlFlowMode": 2}})
+    return acciones
 
 
 def envuelve(acciones, color, glifo):
@@ -218,7 +225,7 @@ def dia_libre():
         ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
     ]
     ramas.append(("Cancelar días", rama_con_variables("quitar=1", "×")))
-    u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url = (nuevo_uuid() for _ in range(5))
+    u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url, u_cal = (nuevo_uuid() for _ in range(6))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
         a_formatear_fecha(u_desde, u_fmt_d),
@@ -228,7 +235,9 @@ def dia_libre():
                            "&hasta=", salida(u_fmt_h, "Formatted Date"),
                            "&", variable("Parametros")]), u_url),
         a_abrir_url(u_url),
-    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)]) + menu("¿Marcar otro tramo?", [
+    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)],
+                        sino=[a_texto(texto_plano("calshow:"), u_cal), a_abrir_url(u_cal)]
+    ) + menu("¿Marcar otro tramo?", [
         ("Sí, otro tramo", []),
         ("No, listo", [a_terminar()]),
     ])
