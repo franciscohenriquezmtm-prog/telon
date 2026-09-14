@@ -106,6 +106,13 @@ def a_abrir_url(desde_uuid):
                 "WFInput": adjunto(salida(desde_uuid, "Text"))}}
 
 
+def a_portapapeles(desde_uuid):
+    """Copia el texto al portapapeles (para poder inspeccionar la URL)."""
+    return {"WFWorkflowActionIdentifier": "is.workflow.actions.setclipboard",
+            "WFWorkflowActionParameters": {
+                "WFInput": adjunto(salida(desde_uuid, "Text"))}}
+
+
 def a_evento(desde_uuid, hasta_uuid):
     """Evento de día completo en el calendario del iPhone, del primer al
     último día del período. Se crea directo en el calendario por defecto,
@@ -238,6 +245,7 @@ def dia_libre():
         a_texto(texto_con([BASE + "?desde=", variable("FechaDesde"),
                            "&hasta=", variable("FechaHasta"),
                            "&", variable("Parametros")]), u_url),
+        a_portapapeles(u_url),
         a_abrir_url(u_url),
     ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)],
                         sino=[a_texto(texto_plano("calshow:"), u_cal), a_abrir_url(u_cal)]
