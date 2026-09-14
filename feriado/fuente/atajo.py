@@ -76,11 +76,11 @@ def a_texto(contenido, uid):
             "WFWorkflowActionParameters": {"UUID": uid, "WFTextActionText": contenido}}
 
 
-def a_variable(nombre, desde_uuid):
+def a_variable(nombre, desde_uuid, salida_nombre="Text"):
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
             "WFWorkflowActionParameters": {
                 "WFVariableName": nombre,
-                "WFInput": adjunto(salida(desde_uuid, "Text"))}}
+                "WFInput": adjunto(salida(desde_uuid, salida_nombre))}}
 
 
 def a_preguntar(prompt, tipo, uid):
@@ -89,13 +89,15 @@ def a_preguntar(prompt, tipo, uid):
                 "UUID": uid, "WFAskActionPrompt": prompt, "WFInputType": tipo}}
 
 
-def a_formatear_fecha(desde_uuid, uid):
+def a_formatear_fecha(uid):
+    """Formatea a AAAA-MM-DD la fecha que entrega la acción anterior (por eso
+    va siempre justo después de su pregunta: el enlace explícito de entrada
+    resultó frágil y la entrada automática es lo que usa la propia app)."""
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.format.date",
             "WFWorkflowActionParameters": {
                 "UUID": uid,
                 "WFDateFormatStyle": "Custom",
-                "WFDateFormat": "yyyy-MM-dd",
-                "WFDate": adjunto(salida(desde_uuid, "Ask for Input"))}}
+                "WFDateFormat": "yyyy-MM-dd"}}
 
 
 def a_abrir_url(desde_uuid):
@@ -228,11 +230,13 @@ def dia_libre():
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url, u_cal = (nuevo_uuid() for _ in range(6))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
-        a_formatear_fecha(u_desde, u_fmt_d),
+        a_formatear_fecha(u_fmt_d),
+        a_variable("FechaDesde", u_fmt_d, "Formatted Date"),
         a_preguntar("¿Hasta qué día? (si es uno solo, la misma fecha)", "Date", u_hasta),
-        a_formatear_fecha(u_hasta, u_fmt_h),
-        a_texto(texto_con([BASE + "?desde=", salida(u_fmt_d, "Formatted Date"),
-                           "&hasta=", salida(u_fmt_h, "Formatted Date"),
+        a_formatear_fecha(u_fmt_h),
+        a_variable("FechaHasta", u_fmt_h, "Formatted Date"),
+        a_texto(texto_con([BASE + "?desde=", variable("FechaDesde"),
+                           "&hasta=", variable("FechaHasta"),
                            "&", variable("Parametros")]), u_url),
         a_abrir_url(u_url),
     ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)],
