@@ -76,11 +76,14 @@ def a_texto(contenido, uid):
             "WFWorkflowActionParameters": {"UUID": uid, "WFTextActionText": contenido}}
 
 
-def a_variable(nombre, desde_uuid, salida_nombre="Text"):
+def a_variable(nombre, desde_uuid=None, salida_nombre="Text"):
+    """Guarda en una variable. Sin desde_uuid toma la salida de la acción
+    anterior (entrada automática, como lo hace la propia app)."""
+    p = {"WFVariableName": nombre}
+    if desde_uuid:
+        p["WFInput"] = adjunto(salida(desde_uuid, salida_nombre))
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
-            "WFWorkflowActionParameters": {
-                "WFVariableName": nombre,
-                "WFInput": adjunto(salida(desde_uuid, salida_nombre))}}
+            "WFWorkflowActionParameters": p}
 
 
 def a_preguntar(prompt, tipo, uid):
@@ -237,11 +240,9 @@ def dia_libre():
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url, u_cal = (nuevo_uuid() for _ in range(6))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
-        a_formatear_fecha(u_fmt_d),
-        a_variable("FechaDesde", u_fmt_d, "Formatted Date"),
+        a_variable("FechaDesde"),
         a_preguntar("¿Hasta qué día? (si es uno solo, la misma fecha)", "Date", u_hasta),
-        a_formatear_fecha(u_fmt_h),
-        a_variable("FechaHasta", u_fmt_h, "Formatted Date"),
+        a_variable("FechaHasta"),
         a_texto(texto_con([BASE + "?desde=", variable("FechaDesde"),
                            "&hasta=", variable("FechaHasta"),
                            "&", variable("Parametros")]), u_url),

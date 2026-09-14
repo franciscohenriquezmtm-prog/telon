@@ -728,7 +728,7 @@
   var DEFAULTS = {
     ini:{ vigente:15, acum25:6, b2022:13, permiso:6 },
     techo:30, nuevo:15, bloque:10, margen:15, postergar:null,
-    sello:"2026-09-13 21:52",
+    sello:"2026-09-13 21:58",
     reg: SEMILLA.slice()
   };
 
@@ -1151,10 +1151,21 @@
     var frac=(q.get("frac")||"").trim()==="0.5" ? 0.5 : 1;
     var folio=(q.get("folio")||"").trim();
     var quitar=(q.get("quitar")||"").trim()==="1";
-    var RE=/^(\d{4})-(\d{1,2})-(\d{1,2})$/, fechas=[];
+    var fechas=[];
+    /* Acepta lo que mande el atajo en el formato local que sea:
+       2026-09-14 · 14-09-2026 · 14/9/26 · con hora al final da lo mismo. */
     function normal(f){
-      var m=RE.exec((f||"").trim()); if(!m) return null;
-      return m[1]+"-"+String(+m[2]).padStart(2,"0")+"-"+String(+m[3]).padStart(2,"0");
+      f=(f||"").trim(); if(!f) return null;
+      f=f.split(/[T ]/)[0];
+      var y,mo,d,m=/^(\d{4})[-\/.](\d{1,2})[-\/.](\d{1,2})$/.exec(f);
+      if(m){ y=+m[1]; mo=+m[2]; d=+m[3]; }
+      else{
+        m=/^(\d{1,2})[-\/.](\d{1,2})[-\/.](\d{2,4})$/.exec(f);
+        if(!m) return null;
+        d=+m[1]; mo=+m[2]; y=+m[3]; if(y<100) y+=2000;
+      }
+      if(mo<1||mo>12||d<1||d>31) return null;
+      return y+"-"+String(mo).padStart(2,"0")+"-"+String(d).padStart(2,"0");
     }
     function fecha(fISO){ var p=fISO.split("-"); return new Date(+p[0],+p[1]-1,+p[2]); }
 
@@ -1163,6 +1174,7 @@
       if(quitar || esHabil(fecha(f1))) fechas.push(f1);
     });
     var desde=normal(q.get("desde")), hasta=normal(q.get("hasta"));
+    if(desde && hasta && hasta<desde){ var tmp=desde; desde=hasta; hasta=tmp; }
     if(desde){
       var d2=fecha(desde), g=0;
       if(hasta && hasta>=desde){
