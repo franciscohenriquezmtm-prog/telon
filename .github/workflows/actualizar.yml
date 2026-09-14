@@ -94,6 +94,12 @@ jobs:
         # publicación: el resto de la cartelera sigue estando fresca.
         continue-on-error: true
 
+      # Si mientras la corrida trabaja alguien sube otro commit, GitHub rechaza el
+      # push por venir de una copia vieja. Pasó el 13-09-2026 con tres commits en tres
+      # minutos. En vez de fallar, se traen los commits nuevos, se pone la cartelera
+      # encima y se reintenta. No hay conflicto posible: la corrida solo escribe
+      # assets/cartelera.json y assets/img, y el grupo de concurrency impide que otra
+      # corrida los toque a la vez. Si aun así algo choca, falla y avisa como antes.
       - name: Guardar la cartelera nueva en el repositorio
         run: |
           git config user.name  "Telón"
@@ -101,10 +107,19 @@ jobs:
           git add assets/cartelera.json assets/img
           if git diff --staged --quiet; then
             echo "La cartelera no cambió desde la última corrida."
-          else
-            git commit -m "Cartelera al $(TZ=America/Santiago date '+%d-%m-%Y %H:%M')"
-            git push
+            exit 0
           fi
+          git commit -m "Cartelera al $(TZ=America/Santiago date '+%d-%m-%Y %H:%M')"
+
+          for intento in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Llegaron cambios mientras corría: traigo lo nuevo y reintento ($intento de 3)."
+            git pull --rebase origin main
+            sleep 5
+          done
+
+          echo "No se pudo guardar la cartelera después de 3 intentos."
+          exit 1
 
       # El sitio publicado lleva solo lo que la app necesita para funcionar;
       # los scripts de Node se quedan en el repositorio.
