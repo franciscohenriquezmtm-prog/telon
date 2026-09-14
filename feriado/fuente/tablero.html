@@ -1091,6 +1091,10 @@
      La página acepta parámetros para que un atajo marque días sin abrir
      el calendario a mano:
 
+       ?t=permiso,0.5,2026-09-16,2026-09-16   un tramo empaquetado:
+                                     bolsa,fracción,desde,hasta — repetible
+                                     (&t=...&t=...) para marcar varios tramos
+                                     de una sola pasada; bolsa "quitar" borra
        ?dias=2026-11-09              un día (o varios: 2026-11-09,2026-11-10)
        ?desde=2026-09-17&hasta=2026-09-22  un período corrido: se marcan solo
                                      los hábiles; feriados de calendario y
@@ -1108,19 +1112,12 @@
   function aplicaURL(){
     var q;
     try{ q = new URLSearchParams(location.search); }catch(e){ return null; }
+    var ts=q.getAll("t");
     /* basta que la llave venga en la dirección, aunque llegue vacía: así un
        atajo defectuoso se delata con el aviso rojo en vez de pasar piola */
-    if(!q.has("dias") && !q.has("desde") && !q.has("quitar")) return null;
+    if(!ts.length && !q.has("dias") && !q.has("desde") && !q.has("quitar")) return null;
     var crudo = location.search;
 
-    var bolsa=(q.get("bolsa")||"permiso").trim();
-    if(BOLSAS.indexOf(bolsa)===-1) bolsa="permiso";
-    var estado=(q.get("estado")||"res").trim();
-    if(!ESTADO[estado]) estado="res";
-    var frac=(q.get("frac")||"").trim()==="0.5" ? 0.5 : 1;
-    var folio=(q.get("folio")||"").trim();
-    var quitar=(q.get("quitar")||"").trim()==="1";
-    var fechas=[];
     /* Acepta lo que mande el atajo en el formato local que sea:
        2026-09-14 · 14-09-2026 · 14/9/26 · con hora al final da lo mismo. */
     function normal(f){
@@ -1137,47 +1134,81 @@
       return y+"-"+String(mo).padStart(2,"0")+"-"+String(d).padStart(2,"0");
     }
     function fecha(fISO){ var p=fISO.split("-"); return new Date(+p[0],+p[1]-1,+p[2]); }
+    function rango(desde, hasta, todo){
+      var out=[], d=fecha(desde), h=fecha(hasta), g=0;
+      while(d<=h && g<400){ if(todo||esHabil(d)) out.push(iso(d)); d.setDate(d.getDate()+1); g++; }
+      return out;
+    }
 
-    (q.get("dias")||"").split(",").forEach(function(f){
-      var f1=normal(f); if(!f1) return;
-      if(quitar || esHabil(fecha(f1))) fechas.push(f1);
-    });
-    var desde=normal(q.get("desde")), hasta=normal(q.get("hasta"));
-    if(desde && hasta && hasta<desde){ var tmp=desde; desde=hasta; hasta=tmp; }
-    if(desde){
-      var d2=fecha(desde), g=0;
-      if(hasta && hasta>=desde){
-        /* período corrido: se marcan solo los hábiles que caen dentro */
-        var d3=fecha(hasta);
-        while(d2<=d3 && g<400){
-          if(quitar || esHabil(d2)) fechas.push(iso(d2));
-          d2.setDate(d2.getDate()+1); g++;
-        }
-      } else {
-        var n=parseInt(q.get("habiles")||"1",10); if(!(n>0)) n=1; if(n>60) n=60;
-        var puestos=0;
-        while(puestos<n && g<400){
-          if(esHabil(d2)){ fechas.push(iso(d2)); puestos++; }
-          d2.setDate(d2.getDate()+1); g++;
+    var ops=[];
+    if(ts.length){
+      /* tramos empaquetados: t=bolsa,frac,desde,hasta — bolsa "quitar" borra */
+      ts.forEach(function(t){
+        var p=t.split(","); if(p.length<3) return;
+        var b=(p[0]||"").trim();
+        var fr=(p[1]||"").trim()==="0.5" ? 0.5 : 1;
+        var d1=normal(p[2]), d2=normal(p[3])||d1;
+        if(!d1) return;
+        if(d2<d1){ var tt=d1; d1=d2; d2=tt; }
+        if(b==="quitar") ops.push({ quitar:true, fechas:rango(d1,d2,true) });
+        else if(BOLSAS.indexOf(b)!==-1) ops.push({ b:b, e:"res", d:fr, r:"", fechas:rango(d1,d2,false) });
+      });
+    } else {
+      var bolsa=(q.get("bolsa")||"permiso").trim();
+      if(BOLSAS.indexOf(bolsa)===-1) bolsa="permiso";
+      var estado=(q.get("estado")||"res").trim();
+      if(!ESTADO[estado]) estado="res";
+      var frac=(q.get("frac")||"").trim()==="0.5" ? 0.5 : 1;
+      var folio=(q.get("folio")||"").trim();
+      var quitar=(q.get("quitar")||"").trim()==="1";
+      var fechas=[];
+      (q.get("dias")||"").split(",").forEach(function(f){
+        var f1=normal(f); if(!f1) return;
+        if(quitar || esHabil(fecha(f1))) fechas.push(f1);
+      });
+      var desde=normal(q.get("desde")), hasta=normal(q.get("hasta"));
+      if(desde && hasta && hasta<desde){ var tmp=desde; desde=hasta; hasta=tmp; }
+      if(desde){
+        if(hasta){ fechas=fechas.concat(rango(desde,hasta,quitar)); }
+        else {
+          var n=parseInt(q.get("habiles")||"1",10); if(!(n>0)) n=1; if(n>60) n=60;
+          var d2=fecha(desde), puestos=0, g=0;
+          while(puestos<n && g<400){
+            if(esHabil(d2)){ fechas.push(iso(d2)); puestos++; }
+            d2.setDate(d2.getDate()+1); g++;
+          }
         }
       }
+      fechas.sort();
+      if(fechas.length) ops.push(quitar ? { quitar:true, fechas:fechas }
+                                        : { b:bolsa, e:estado, d:frac, r:folio, fechas:fechas });
     }
-    try{ history.replaceState(null,"",location.pathname); }catch(e){}
-    if(!fechas.length) return { error:crudo };
 
-    fechas.sort();
-    if(quitar){
-      var habia=state.reg.length;
-      state.reg=state.reg.filter(function(y){ return fechas.indexOf(y.f)===-1; });
-      guarda();
-      return { fechas:fechas, quitar:true, dias:habia-state.reg.length };
+    try{ history.replaceState(null,"",location.pathname); }catch(e){}
+    ops=ops.filter(function(op){ return op.fechas.length; });
+    if(!ops.length) return { error:crudo };
+
+    var resumen=[], huboQuitar=false;
+    function lapso(fs){
+      return fmtFecha(fs[0]).slice(0,5)+(fs.length>1?" al "+fmtFecha(fs[fs.length-1]).slice(0,5):"");
     }
-    fechas.forEach(function(f){
-      state.reg=state.reg.filter(function(y){ return y.f!==f; });
-      state.reg.push({ f:f, b:bolsa, e:estado, d:frac, r:folio });
+    ops.forEach(function(op){
+      if(op.quitar){
+        var antes=state.reg.length;
+        state.reg=state.reg.filter(function(y){ return op.fechas.indexOf(y.f)===-1; });
+        var nb=antes-state.reg.length; huboQuitar=true;
+        resumen.push(nf(nb)+(nb===1?" marca borrada":" marcas borradas")+" ("+lapso(op.fechas)+")");
+      } else {
+        op.fechas.forEach(function(f){
+          state.reg=state.reg.filter(function(y){ return y.f!==f; });
+          state.reg.push({ f:f, b:op.b, e:op.e, d:op.d, r:op.r });
+        });
+        var dd=op.fechas.length*op.d;
+        resumen.push(CORTOS[op.b]+" "+nf(dd)+(dd===1?" día":" días")+" ("+lapso(op.fechas)+")");
+      }
     });
     guarda();
-    return { fechas:fechas, bolsa:bolsa, estado:estado, dias:fechas.length*frac };
+    return { resumen:resumen, quitar:huboQuitar };
   }
 
   function avisaURL(hecho){
@@ -1188,12 +1219,8 @@
       el.style.background="var(--risk)";
       el.textContent="El atajo abrió la página pero la orden no se entendió y no se marcó nada. Llegó: "+hecho.error;
     } else {
-      var cuando = hecho.fechas.length===1
-        ? "el "+fmtFecha(hecho.fechas[0])
-        : hecho.fechas.length+" días, del "+fmtFecha(hecho.fechas[0]).slice(0,5)+" al "+fmtFecha(hecho.fechas[hecho.fechas.length-1]).slice(0,5);
-      el.textContent = hecho.quitar
-        ? "✓ Borrado desde el atajo: "+nf(hecho.dias)+(hecho.dias===1?" marca":" marcas")+", "+cuando+". Saldos recalculados. Si había evento en el calendario del teléfono, bórralo ahí (el atajo abre el Calendario)."
-        : "✓ Marcado desde el atajo: "+CORTOS[hecho.bolsa]+" · "+ESTADO[hecho.estado]+" · "+nf(hecho.dias)+(hecho.dias===1?" día ":" días ")+cuando+". Saldos ya descontados.";
+      el.textContent="✓ Desde el atajo: "+hecho.resumen.join(" · ")+". Saldos recalculados."
+        +(hecho.quitar?" Los eventos del calendario del teléfono se borran a mano.":"");
     }
     el.textContent += " (toca este aviso para cerrarlo)";
     el.style.cursor="pointer";

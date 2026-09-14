@@ -192,15 +192,15 @@ def a_terminar():
             "WFWorkflowActionParameters": {}}
 
 
-def si_titulo_no_es(marca, dentro, sino=None):
-    """Ejecuta un bloque si la variable Titulo no es la marca dada; si lo es,
+def si_var_no_es(nombre_var, marca, dentro, sino=None):
+    """Ejecuta un bloque si la variable no es la marca dada; si lo es,
     ejecuta el bloque «sino» (la rama De lo contrario)."""
     gid = nuevo_uuid()
     acciones = [{"WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
                  "WFWorkflowActionParameters": {
                      "GroupingIdentifier": gid, "WFControlFlowMode": 0,
                      "WFInput": {"Type": "Variable",
-                                 "Variable": {"Value": {"Type": "Variable", "VariableName": "Titulo"},
+                                 "Variable": {"Value": {"Type": "Variable", "VariableName": nombre_var},
                                               "WFSerializationType": "WFTextTokenAttachment"}},
                      "WFCondition": 5,
                      "WFConditionalActionString": marca}}] + dentro
@@ -234,19 +234,28 @@ def envuelve(acciones, color, glifo):
 def dia_libre():
     # el medio permiso pregunta mañana o tarde; el descuento es ½ día igual,
     # la diferencia queda solo en el título del evento del calendario
-    medio = rama_con_variables("bolsa=permiso&frac=0.5") + menu("¿Mañana o tarde?", [
+    # Todos los eventos de calendario se crean ANTES de abrir Safari: probado
+    # en el iPhone, un evento creado después de un cambio de app pierde el
+    # calendario destino y cae al por defecto. Por eso cada tramo solo junta
+    # su pedazo de URL (&t=bolsa,frac,desde,hasta) y la página se abre UNA
+    # vez al final con todos los tramos.
+    u_si, u_hq0, u_base, u_hq, u_desde, u_fmt_d, u_hasta, u_fmt_h, \
+        u_acc, u_no, u_fin, u_cal = (nuevo_uuid() for _ in range(12))
+
+    medio = rama_con_variables("permiso,0.5") + menu("¿Mañana o tarde?", [
         ("Mañana (½ AM)", rama_titulo("Permiso administrativo (½ AM)")),
         ("Tarde (½ PM)", rama_titulo("Permiso administrativo (½ PM)")),
     ])
     ramas = [
-        ("Permiso administrativo completo", rama_con_variables("bolsa=permiso&frac=1", "Permiso administrativo")),
+        ("Permiso administrativo completo", rama_con_variables("permiso,1", "Permiso administrativo")),
         ("Medio permiso administrativo", medio),
-        ("Feriado 2026", rama_con_variables("bolsa=vigente&frac=1", "Feriado legal")),
-        ("Acumulado 2025", rama_con_variables("bolsa=acum25&frac=1", "Feriado legal (acumulado)")),
-        ("Bolsa 2022", rama_con_variables("bolsa=b2022&frac=1", "Feriado legal (bolsa 2022)")),
+        ("Feriado 2026", rama_con_variables("vigente,1", "Feriado legal")),
+        ("Acumulado 2025", rama_con_variables("acum25,1", "Feriado legal (acumulado)")),
+        ("Bolsa 2022", rama_con_variables("b2022,1", "Feriado legal (bolsa 2022)")),
+        ("Cancelar días", rama_con_variables("quitar,1", "×") + [
+            a_texto(texto_plano("si"), u_hq), a_variable("HuboQuitar", u_hq)]),
     ]
-    ramas.append(("Cancelar días", rama_con_variables("quitar=1", "×")))
-    u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url, u_cal = (nuevo_uuid() for _ in range(6))
+
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
         a_formatear_fecha(u_fmt_d, u_desde),
@@ -254,19 +263,27 @@ def dia_libre():
         a_preguntar("¿Hasta qué día? (si es uno solo, la misma fecha)", "Date", u_hasta),
         a_formatear_fecha(u_fmt_h, u_hasta),
         a_variable("FechaHasta", u_fmt_h, "Formatted Date"),
-        a_texto(texto_con([BASE + "?desde=", variable("FechaDesde"),
-                           "&hasta=", variable("FechaHasta"),
-                           "&", variable("Parametros")]), u_url),
-        a_portapapeles(u_url),
-        a_abrir_url(u_url),
-    ] + si_titulo_no_es("×", [a_evento(u_desde, u_hasta)],
-                        sino=[a_texto(texto_plano("calshow:"), u_cal), a_abrir_url(u_cal)]
-    ) + menu("¿Marcar otro tramo?", [
+        a_texto(texto_con([variable("URL"), "&t=", variable("Parametros"),
+                           ",", variable("FechaDesde"), ",", variable("FechaHasta")]), u_acc),
+        a_variable("URL", u_acc),
+    ] + si_var_no_es("Titulo", "×", [a_evento(u_desde, u_hasta)]) \
+      + menu("¿Marcar otro tramo?", [
         ("Sí, otro tramo", []),
-        ("No, listo", [a_terminar()]),
+        ("No, listo", [a_texto(texto_plano("no"), u_no), a_variable("Seguir", u_no)]),
     ])
-    # tope de 10 tramos por ejecución; el «No, listo» corta antes
-    return envuelve(repetir(10, tramo), 431817727, 61553)
+
+    acciones = [
+        a_texto(texto_plano("si"), u_si), a_variable("Seguir", u_si),
+        a_texto(texto_plano("no"), u_hq0), a_variable("HuboQuitar", u_hq0),
+        a_texto(texto_plano(BASE + "?m=1"), u_base), a_variable("URL", u_base),
+    ] + repetir(10, si_var_no_es("Seguir", "no", tramo)) + [
+        a_texto(texto_con([variable("URL")]), u_fin),
+        a_portapapeles(u_fin),
+        a_abrir_url(u_fin),
+    ] + si_var_no_es("HuboQuitar", "no", [
+        a_texto(texto_plano("calshow:"), u_cal), a_abrir_url(u_cal),
+    ])
+    return envuelve(acciones, 431817727, 61553)
 
 
 def escribe_y_firma(nombre, flujo):
