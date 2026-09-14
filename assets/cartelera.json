@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T01:37:32.753Z",
+ "actualizado": "2026-09-14T01:54:35.050Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -1522,10 +1522,12 @@
     "desde": "2026-10-07",
     "hasta": "2026-11-07",
     "dias": [
+     0,
      3,
      6
     ],
     "horas": {
+     "0": "20:30",
      "3": "20:30",
      "6": "20:30"
     }
@@ -1568,10 +1570,12 @@
     "hasta": "2026-10-25",
     "dias": [
      3,
+     4,
      6
     ],
     "horas": {
      "3": "20:00",
+     "4": "20:00",
      "6": "20:00"
     }
    },
