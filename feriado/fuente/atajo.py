@@ -92,15 +92,18 @@ def a_preguntar(prompt, tipo, uid):
                 "UUID": uid, "WFAskActionPrompt": prompt, "WFInputType": tipo}}
 
 
-def a_formatear_fecha(uid):
-    """Formatea a AAAA-MM-DD la fecha que entrega la acción anterior (por eso
-    va siempre justo después de su pregunta: el enlace explícito de entrada
-    resultó frágil y la entrada automática es lo que usa la propia app)."""
+def a_formatear_fecha(uid, desde_uuid):
+    """Formatea a AAAA-MM-DD la fecha de una pregunta anterior.
+
+    Ojo con el cableado: probado en la práctica, esta acción IGNORA tanto la
+    entrada automática como la referencia cruda (WFTextTokenAttachment); solo
+    funciona con la fecha incrustada en un texto (WFTextTokenString)."""
     return {"WFWorkflowActionIdentifier": "is.workflow.actions.format.date",
             "WFWorkflowActionParameters": {
                 "UUID": uid,
                 "WFDateFormatStyle": "Custom",
-                "WFDateFormat": "yyyy-MM-dd"}}
+                "WFDateFormat": "yyyy-MM-dd",
+                "WFDate": texto_con([salida(desde_uuid, "Ask for Input")])}}
 
 
 def a_abrir_url(desde_uuid):
@@ -240,9 +243,11 @@ def dia_libre():
     u_desde, u_fmt_d, u_hasta, u_fmt_h, u_url, u_cal = (nuevo_uuid() for _ in range(6))
     tramo = menu("¿Qué te tomaste?", ramas) + [
         a_preguntar("¿Desde qué día?", "Date", u_desde),
-        a_variable("FechaDesde"),
+        a_formatear_fecha(u_fmt_d, u_desde),
+        a_variable("FechaDesde", u_fmt_d, "Formatted Date"),
         a_preguntar("¿Hasta qué día? (si es uno solo, la misma fecha)", "Date", u_hasta),
-        a_variable("FechaHasta"),
+        a_formatear_fecha(u_fmt_h, u_hasta),
+        a_variable("FechaHasta", u_fmt_h, "Formatted Date"),
         a_texto(texto_con([BASE + "?desde=", variable("FechaDesde"),
                            "&hasta=", variable("FechaHasta"),
                            "&", variable("Parametros")]), u_url),
