@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T01:02:45.385Z",
+ "actualizado": "2026-09-14T01:15:26.670Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -27,7 +27,7 @@
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 0,
+   "obras": 3,
    "error": null
   },
   {
@@ -1178,6 +1178,68 @@
    }
   },
   {
+   "id": "m100-re-producirse",
+   "titulo": "RE-PRODUCIRSE",
+   "subtitulo": null,
+   "sinopsis": "Una mujer solitaria, obsesionada con replicarse materialmente, busca convertirse en la sombra que controle el destino de sus propias creaciones.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Catalina Bize del Campo",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 50,
+   "edad": 16,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-01",
+    "hasta": "2026-10-04",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Jue a dom: 20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 7000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/re-producirse_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-re-producirse.jpg",
+   "huellaImagen": "163300b12d0350b650cbd386d69c4336dd5ae554",
+   "entradas": "https://www.m100.cl/programacion/teatro/re-producirse/",
+   "url": "https://www.m100.cl/programacion/teatro/re-producirse/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
+   }
+  },
+  {
    "id": "finisterrae-un-enemigo-del-pueblo",
    "titulo": "Un enemigo del pueblo",
    "subtitulo": null,
@@ -1460,12 +1522,10 @@
     "desde": "2026-10-07",
     "hasta": "2026-11-07",
     "dias": [
-     0,
      3,
      6
     ],
     "horas": {
-     "0": "20:30",
      "3": "20:30",
      "6": "20:30"
     }
@@ -1508,12 +1568,10 @@
     "hasta": "2026-10-25",
     "dias": [
      3,
-     4,
      6
     ],
     "horas": {
      "3": "20:00",
-     "4": "20:00",
      "6": "20:00"
     }
    },
@@ -1640,6 +1698,68 @@
    }
   },
   {
+   "id": "m100-matadero-alma",
+   "titulo": "Matadero Alma",
+   "subtitulo": null,
+   "sinopsis": "Matadero Alma es una radiografía urbana que explora las imágenes de nostalgia e injusticia que atraviesan la identidad del país.",
+   "genero": "danza",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-14",
+    "hasta": "2026-10-17",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Jue a dom: 19:30 hrs.",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 8000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 7000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "url": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
+   }
+  },
+  {
    "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
    "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
    "subtitulo": "Residencia de creación El rumor del agua",
@@ -1726,6 +1846,64 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "m100-vigia",
+   "titulo": "Vigía",
+   "subtitulo": null,
+   "sinopsis": "Vigía explora la vigilancia contemporánea, reivindicando el cuerpo, el error, la emoción y lo colectivo frente a la medición algorítmica.",
+   "genero": "danza",
+   "compania": null,
+   "director": "Luna Ivanoff",
+   "dramaturgo": "Luna Ivanoff",
+   "elenco": [],
+   "duracion": 45,
+   "edad": 14,
+   "sala": {
+    "nombre": "Matucana 100 — Espacio Patricio Bunster",
+    "comuna": "Estación Central",
+    "direccion": "Av. Matucana 100",
+    "metro": "Quinta Normal (L5) / Estación Central (L1)",
+    "mapa": "Centro Cultural Matucana 100",
+    "sitio": "https://www.m100.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-22",
+    "hasta": "2026-10-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Jue a dom: 19:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 5000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 3000
+    }
+   ],
+   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/vigía_slidehome_1920x1488.jpg",
+   "imagenLocal": "assets/img/m100-vigia.jpg",
+   "huellaImagen": "4da2d64e233d6bf385b95bc5d06e15e86a86cbce",
+   "entradas": "https://www.m100.cl/programacion/danza-circo/vigia/",
+   "url": "https://www.m100.cl/programacion/danza-circo/vigia/",
+   "fuente": {
+    "id": "m100",
+    "nombre": "Matucana 100",
+    "sitio": "https://www.m100.cl"
    }
   },
   {
