@@ -1,0 +1,14 @@
+# Resultados generados al ejecutar
+salida/
+salida_*/
+videos/*
+!videos/.gitkeep
+videos_*/
+
+# Clave de API y ajustes locales
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
