@@ -2,19 +2,21 @@
 
 Cubre la subida a la Files API, el prompt y el esquema JSON de respuesta, el
 análisis síncrono (por tramos en videos largos y con una escalera de fallbacks
-para modelos que no admiten alguna opción), el redactor opcional, el modo
-batch, el parseo robusto del JSON devuelto, la normalización de momentos y la
-estimación de costo.  Las estructuras compartidas son solo las de ``modelos``.
+para modelos que no admiten alguna opción), el refinado con las capturas en
+alta resolución, el redactor opcional, el modo batch, el parseo robusto del
+JSON devuelto, la normalización de momentos y la estimación de costo.  Las
+estructuras compartidas son solo las de ``modelos``.
 """
 from __future__ import annotations
 
 import copy
+import io
 import json
 import math
 import os
 import re
 import time
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Callable
 
@@ -37,6 +39,9 @@ Con tu respuesta se armará un manual o protocolo sencillo con capturas del vide
 
 RIGOR
 Es documentación clínica: sé fiel a lo que se dice y a lo que se ve. Usa los valores, unidades, nombres de botones, menús y ajustes exactos que se mencionen o se lean en pantalla. No inventes ni completes con conocimiento general del equipo. Si algo no se ve o no se oye con claridad, dilo en la descripción (por ejemplo "valor no audible", "botón no visible con claridad"). No des por hecho nada que el video no muestre.
+
+TEXTOS E ICONOS EN PANTALLA
+Gran parte de la información está escrita en la imagen: pantallas del equipo, menús, campos de datos, etiquetas de botones e interruptores, valores con sus unidades, indicadores luminosos e iconos. Cuando sean legibles, léelos y cópialos tal cual en el título o la descripción (por ejemplo "kV 70 / mA 2,5", "botón FLUORO", "icono de candado activado"). El video puede ser una copia reducida: si un texto o icono no se alcanza a leer, no lo adivines; escribe "texto en pantalla no legible" o describe solo lo que sí se distingue.
 
 CUÁNTOS MOMENTOS
 La cantidad la decide el contenido del video, no una cuota: si en 10 minutos se enseñan 30 cosas, devuelve 30; si solo se dicen 3 cosas importantes, devuelve 3. No rellenes con momentos triviales (encuadres de transición, pausas, repeticiones sin información nueva) ni omitas ninguno importante. Presta tanta atención a lo que se DICE como a lo que se VE: si la persona explica algo relevante sin que cambie la imagen, es un momento igual; si muestra o señala algo sin comentarlo, también lo es. Si una misma acción se repite, conserva la ocasión en que mejor se ve o mejor se explica.
@@ -89,6 +94,42 @@ Devuelve el mismo JSON, con la misma estructura y el mismo número de pasos. Esp
 
 PROMPT_REDACTOR_USUARIO = "Borrador del protocolo (JSON):\n"
 
+#: Instrucción de sistema del refinado con capturas.  ``{equipo}`` se sustituye con ``construir_prompt_refinado``.
+PROMPT_REFINADO = """\
+Eres un instructor clínico experto en la operación de {equipo}. Estás revisando el borrador de un manual con capturas extraído de un video: recibirás la lista de pasos ya identificados (número, tiempo, título, descripción, sección y zona señalada) y, para cada paso, su captura en alta resolución tomada del video original.
+Es documentación clínica: sé fiel a lo que se ve. Usa los textos, valores, unidades, nombres de botones, menús, iconos e indicadores exactamente como se leen en la captura. No inventes ni completes con conocimiento general del equipo; si algo sigue sin leerse con claridad, dilo.
+Formato de cada paso: titulo de máximo 8 palabras, estilo manual, en imperativo; descripcion de 1 o 2 frases y máximo 260 caracteres; zona opcional {"x": 0-1000, "y": 0-1000} con x de izquierda a derecha e y de arriba abajo sobre la captura.
+Responde únicamente con el JSON pedido. Español neutro, sin emojis ni símbolos especiales.
+"""
+
+#: Instrucción que acompaña a las capturas en cada petición del refinado.
+PROMPT_REFINADO_USUARIO = (
+    "Estas son las capturas en alta resolución de pasos ya identificados en el video. Corrige y completa el título "
+    "y la descripción de cada paso con lo que ahora se lee con claridad: texto en pantalla, valores y unidades, "
+    "nombres de botones, iconos, indicadores. Ajusta la zona señalada si con la imagen se ve mejor dónde está lo "
+    "importante. NO cambies los tiempos, NO agregues ni quites pasos, NO inventes: si en la captura no se lee nada "
+    "nuevo, deja el texto igual. Devuelve el mismo JSON (lista de momentos con el mismo número)."
+)
+
+#: Sufijo del refinado cuando el modelo no admite esquema de respuesta.
+PROMPT_REFINADO_SIN_ESQUEMA = (
+    "Responde SOLO con el JSON: un único objeto con la clave momentos (lista de objetos con numero, titulo, "
+    'descripcion y zona opcional {"x", "y"}), sin texto adicional ni marcas de código.'
+)
+
+#: Texto que precede a cada imagen en el refinado.
+PROMPT_CAPTURA = "Captura del paso {numero} ({tiempo})"
+
+#: Sub-esquema de la zona señalada (punto 0-1000), compartido por los dos esquemas.
+ESQUEMA_ZONA: dict = {
+    "type": "object",
+    "properties": {
+        "x": {"type": "integer", "minimum": 0, "maximum": 1000},
+        "y": {"type": "integer", "minimum": 0, "maximum": 1000},
+    },
+    "required": ["x", "y"],
+}
+
 #: JSON Schema plano para ``response_json_schema`` (copiar con ``copy.deepcopy`` en cada petición).
 ESQUEMA_RESPUESTA: dict = {
     "type": "object",
@@ -106,20 +147,41 @@ ESQUEMA_RESPUESTA: dict = {
                     "importancia": {"type": "integer", "minimum": 1, "maximum": 5},
                     "fuente": {"type": "string", "enum": ["visual", "audio", "ambos"]},
                     "seccion": {"type": "string"},
-                    "zona": {
-                        "type": "object",
-                        "properties": {
-                            "x": {"type": "integer", "minimum": 0, "maximum": 1000},
-                            "y": {"type": "integer", "minimum": 0, "maximum": 1000},
-                        },
-                        "required": ["x", "y"],
-                    },
+                    "zona": ESQUEMA_ZONA,
                 },
                 "required": ["tiempo", "titulo", "descripcion", "importancia", "fuente", "seccion"],
             },
         },
     },
     "required": ["titulo_video", "resumen", "momentos"],
+}
+
+#: JSON Schema de la respuesta del refinado con capturas (se fusiona por ``numero``).
+ESQUEMA_REFINADO: dict = {
+    "type": "object",
+    "properties": {
+        "momentos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "numero": {"type": "integer", "description": "Número del paso, el mismo que se recibió"},
+                    "titulo": {"type": "string"},
+                    "descripcion": {"type": "string"},
+                    "zona": ESQUEMA_ZONA,
+                },
+                "required": ["numero", "titulo", "descripcion"],
+            },
+        },
+    },
+    "required": ["momentos"],
+}
+
+#: Resolución con la que Gemini mira el video, por nombre (``--resolucion baja|media|alta``).
+RESOLUCIONES = {
+    "baja": types.MediaResolution.MEDIA_RESOLUTION_LOW,
+    "media": types.MediaResolution.MEDIA_RESOLUTION_MEDIUM,
+    "alta": types.MediaResolution.MEDIA_RESOLUTION_HIGH,
 }
 
 FUENTES_VALIDAS = ("visual", "audio", "ambos")
@@ -141,12 +203,26 @@ def construir_prompt_sistema(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
     return PROMPT_SISTEMA.replace("{equipo}", texto)
 
 
+def construir_prompt_refinado(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
+    """Instrucción de sistema del refinado con el equipo insertado."""
+    texto = (equipo or "").strip() or config.EQUIPO_POR_DEFECTO
+    return PROMPT_REFINADO.replace("{equipo}", texto)
+
+
 def construir_prompt_usuario(tramo: tuple[float, float] | None = None) -> str:
     """Texto del usuario; con el aviso de tramo cuando se analiza un fragmento."""
     if tramo is None:
         return PROMPT_USUARIO
     inicio, fin = tramo
     return PROMPT_USUARIO + "\n\n" + PROMPT_TRAMO.format(inicio=formatear_tiempo(inicio), fin=formatear_tiempo(fin))
+
+
+def _validar_resolucion(resolucion: str) -> str:
+    """Clave de ``RESOLUCIONES`` normalizada; ``ValueError`` si el nombre no es baja, media o alta."""
+    clave = str(resolucion or "").strip().lower()
+    if clave not in RESOLUCIONES:
+        raise ValueError(f"Resolución {resolucion!r} no válida; usa una de: {', '.join(RESOLUCIONES)}.")
+    return clave
 
 
 # ----------------------------------------------------------------------------
@@ -231,12 +307,27 @@ def eliminar_archivo(cliente, archivo, *, log: Callable[[str], None] = print) ->
 
 @dataclass
 class _Variante:
-    """Combinación modelo + opciones con la que se intenta una generación."""
+    """Combinación modelo + opciones con la que se intenta una generación.
+
+    ``thinking``, ``con_resolucion`` y ``esquema`` son los peldaños que la escalera de fallbacks va apagando;
+    ``resolucion`` (clave de ``RESOLUCIONES``, None = sin ``media_resolution``), ``esquema_json`` y
+    ``prompt_sin_esquema`` describen la petición y se conservan al cambiar de modelo.
+    """
 
     modelo: str
     thinking: bool = True
-    resolucion: bool = True
+    con_resolucion: bool = True
     esquema: bool = True
+    resolucion: str | None = config.RESOLUCION_VIDEO
+    esquema_json: dict = field(default_factory=lambda: ESQUEMA_RESPUESTA)
+    prompt_sin_esquema: str = PROMPT_SIN_ESQUEMA
+
+
+def _variante_para(modelo: str, base: _Variante | None) -> _Variante:
+    """Variante con todas las opciones activas para ``modelo``, conservando resolución y formato de ``base``."""
+    if base is None:
+        return _Variante(modelo=modelo)
+    return replace(base, modelo=modelo, thinking=True, con_resolucion=True, esquema=True)
 
 
 def _segundos_texto(segundos: float) -> str:
@@ -261,15 +352,16 @@ def _construir_contenido(archivo, prompt_usuario: str, fps: float | None = None,
 
 
 def _construir_config(prompt_sistema: str, max_tokens: int, *, esquema: bool = True, thinking: bool = True,
-                      resolucion: bool = True) -> "types.GenerateContentConfig":
-    """``GenerateContentConfig`` con una copia nueva del esquema."""
+                      resolucion: str | None = config.RESOLUCION_VIDEO,
+                      esquema_json: dict = ESQUEMA_RESPUESTA) -> "types.GenerateContentConfig":
+    """``GenerateContentConfig`` con una copia nueva del esquema; ``resolucion`` None = sin ``media_resolution``."""
     return types.GenerateContentConfig(
         system_instruction=prompt_sistema,
         temperature=config.TEMPERATURA,
         max_output_tokens=int(max_tokens),
         response_mime_type="application/json",
-        response_json_schema=copy.deepcopy(ESQUEMA_RESPUESTA) if esquema else None,
-        media_resolution=types.MediaResolution.MEDIA_RESOLUTION_LOW if resolucion else None,
+        response_json_schema=copy.deepcopy(esquema_json) if esquema else None,
+        media_resolution=RESOLUCIONES[_validar_resolucion(resolucion)] if resolucion else None,
         thinking_config=types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW) if thinking else None,
     )
 
@@ -277,9 +369,10 @@ def _construir_config(prompt_sistema: str, max_tokens: int, *, esquema: bool = T
 def _generar(cliente, variante: _Variante, construir_contents: Callable[[str], list], prompt_sistema: str,
              max_tokens: int) -> "types.GenerateContentResponse":
     """Una llamada a ``generate_content`` con la variante indicada."""
-    sufijo = "" if variante.esquema else "\n\n" + PROMPT_SIN_ESQUEMA
-    cfg = _construir_config(prompt_sistema, max_tokens, esquema=variante.esquema,
-                            thinking=variante.thinking, resolucion=variante.resolucion)
+    sufijo = "" if variante.esquema else "\n\n" + variante.prompt_sin_esquema
+    cfg = _construir_config(prompt_sistema, max_tokens, esquema=variante.esquema, thinking=variante.thinking,
+                            resolucion=variante.resolucion if variante.con_resolucion else None,
+                            esquema_json=variante.esquema_json)
     return cliente.models.generate_content(model=variante.modelo, contents=construir_contents(sufijo), config=cfg)
 
 
@@ -290,7 +383,7 @@ def _accion_fallback(exc: errors.ClientError, variante: _Variante, hay_otro_mode
     if exc.code == 400:
         if variante.thinking and "thinking" in mensaje:
             return "sin_thinking"
-        if variante.resolucion and re.search(r"media[_ ]?resolution", mensaje):
+        if variante.con_resolucion and variante.resolucion and re.search(r"media[_ ]?resolution", mensaje):
             return "sin_resolucion"
         if variante.esquema and "schema" in mensaje:
             return "sin_esquema"
@@ -314,7 +407,7 @@ def _generar_con_fallbacks(cliente, modelos: list[str], construir_contents: Call
         if variante_inicial is not None and posicion == indice:
             variante = replace(variante_inicial)
         else:
-            variante = _Variante(modelo=modelos[posicion])
+            variante = _variante_para(modelos[posicion], variante_inicial)
         hay_otro = posicion + 1 < len(modelos)
         while True:
             try:
@@ -326,7 +419,7 @@ def _generar_con_fallbacks(cliente, modelos: list[str], construir_contents: Call
                     variante.thinking = False
                     aviso = f"El modelo {variante.modelo} rechazó thinking_config ({detalle}); se reintenta sin él."
                 elif accion == "sin_resolucion":
-                    variante.resolucion = False
+                    variante.con_resolucion = False
                     aviso = f"El modelo {variante.modelo} rechazó media_resolution ({detalle}); se reintenta sin él."
                 elif accion == "sin_esquema":
                     variante.esquema = False
@@ -865,20 +958,25 @@ def _resultado_desde_partes(partes: list[_Parte], info: InfoVideo, modelo: str, 
 
 def analizar_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODELO_POR_DEFECTO,
                    fps: float | None = None, tramo_max_seg: float = config.TRAMO_MAX_MIN * 60,
-                   precios: dict | None = None, equipo: str = config.EQUIPO_POR_DEFECTO, *,
+                   precios: dict | None = None, equipo: str = config.EQUIPO_POR_DEFECTO,
+                   resolucion: str = config.RESOLUCION_VIDEO, *,
                    max_momentos: int | None = None, importancia_minima: int = 1,
                    log: Callable[[str], None] = print) -> ResultadoAnalisis:
-    """Analiza un video ya subido (por tramos si es muy largo) y devuelve el ``ResultadoAnalisis``."""
+    """Analiza un video ya subido (por tramos si es muy largo) y devuelve el ``ResultadoAnalisis``.
+
+    ``resolucion`` ("baja" | "media" | "alta") es la ``media_resolution`` con la que el modelo mira el video; con
+    textos e iconos en pantalla conviene al menos "media".
+    """
     modelos = [modelo] + [m for m in config.MODELOS_ALTERNATIVOS if m != modelo]
     prompt_sistema = construir_prompt_sistema(equipo)
     tramos = calcular_tramos(info.duracion, tramo_max_seg)
     avisos: list[str] = []
     partes: list[_Parte] = []
-    variante: _Variante | None = None
+    variante = _Variante(modelo=modelo, resolucion=_validar_resolucion(resolucion))
     for k, (inicio, fin) in enumerate(tramos, start=1):
         tramo = (inicio, fin) if len(tramos) > 1 else None
         etiqueta = f" (tramo {k}/{len(tramos)}: {formatear_tiempo(inicio)}–{formatear_tiempo(fin)})" if tramo else ""
-        log(f"Analizando {info.nombre} con {variante.modelo if variante else modelo}{etiqueta}…")
+        log(f"Analizando {info.nombre} con {variante.modelo}{etiqueta} (resolución {variante.resolucion})…")
         prompt_usuario = construir_prompt_usuario(tramo)
         datos, truncado, texto, uso, variante = _generar_y_parsear(
             cliente, modelos, prompt_sistema,
@@ -890,6 +988,151 @@ def analizar_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODEL
                                         max_momentos=max_momentos, importancia_minima=importancia_minima)
     log(f"Análisis terminado: {len(resultado.momentos)} momentos.")
     return resultado
+
+
+# ----------------------------------------------------------------------------
+# 4.3a Refinado con las capturas en alta resolución
+# ----------------------------------------------------------------------------
+
+def _jpeg_reducido(ruta: Path, max_lado_px: int) -> bytes:
+    """Bytes JPEG (calidad 85, en memoria) de la captura con el lado mayor reducido a ``max_lado_px``."""
+    from PIL import Image   # import perezoso: así un Pillow ausente solo desactiva el refinado (con aviso)
+
+    with Image.open(ruta) as imagen:
+        imagen = imagen.convert("RGB")
+        imagen.thumbnail((max_lado_px, max_lado_px), Image.LANCZOS)   # conserva el aspecto; solo reduce
+        salida = io.BytesIO()
+        imagen.save(salida, format="JPEG", quality=85, optimize=True)
+    return salida.getvalue()
+
+
+def _zona_para_modelo(zona: dict | None) -> dict | None:
+    """Zona normalizada 0-1 → el formato que el modelo conoce (punto 0-1000 o caja [ymin, xmin, ymax, xmax])."""
+    if not isinstance(zona, dict):
+        return None
+    if "caja" in zona:
+        x1, y1, x2, y2 = zona["caja"]
+        return {"caja": [round(y1 * 1000), round(x1 * 1000), round(y2 * 1000), round(x2 * 1000)]}
+    return {"x": round(zona["x"] * 1000), "y": round(zona["y"] * 1000)}
+
+
+def _paso_para_refinado(numero: int, momento: Momento) -> dict:
+    paso = {"numero": numero, "tiempo": momento.tiempo, "titulo": momento.titulo,
+            "descripcion": momento.descripcion, "seccion": momento.seccion or ""}
+    zona = _zona_para_modelo(momento.zona)
+    if zona is not None:
+        paso["zona"] = zona
+    return paso
+
+
+def _contenido_refinado(grupo: list[tuple[int, Momento, bytes]], sufijo: str) -> list:
+    """``contents`` del refinado: por cada paso un rótulo y su imagen, y al final la instrucción con el JSON."""
+    partes = []
+    for numero, momento, datos in grupo:
+        partes.append(types.Part.from_text(text=PROMPT_CAPTURA.format(numero=numero, tiempo=momento.tiempo)))
+        partes.append(types.Part.from_bytes(data=datos, mime_type="image/jpeg"))
+    pasos = json.dumps({"momentos": [_paso_para_refinado(n, m) for n, m, _ in grupo]}, ensure_ascii=False, indent=1)
+    partes.append(types.Part.from_text(text=f"{PROMPT_REFINADO_USUARIO}\n\nPasos (JSON):\n{pasos}{sufijo}"))
+    return [types.Content(role="user", parts=partes)]
+
+
+def _refinar_momento(momento: Momento, bruto: dict) -> tuple[Momento, bool]:
+    """Aplica al momento el título, la descripción y la zona devueltos (normalizados); (momento, cambió)."""
+    titulo = _recortar(str(bruto.get("titulo") or ""), config.MAX_TITULO) or momento.titulo
+    descripcion = _recortar(str(bruto.get("descripcion") or ""), config.MAX_DESCRIPCION) or momento.descripcion
+    zona = _normalizar_zona(bruto.get("zona")) or momento.zona
+    nuevo = replace(momento, titulo=titulo, descripcion=descripcion, zona=zona)
+    return nuevo, (titulo, descripcion, zona) != (momento.titulo, momento.descripcion, momento.zona)
+
+
+def _fusionar_refinado(momentos: list[Momento], numeros: list[int], datos) -> int:
+    """Actualiza en sitio los momentos devueltos (por ``numero``; respaldo: por orden); devuelve cuántos cambiaron.
+
+    ``ValueError`` si la respuesta no trae la lista de pasos o no se puede emparejar con los enviados.
+    """
+    brutos = _desglosar_datos(datos)[0]
+    brutos = [b for b in brutos if isinstance(b, dict)]
+    if not brutos:
+        raise ValueError("la respuesta del refinado no contiene la lista de pasos")
+    enviados = set(numeros)
+    por_numero = all(isinstance(b.get("numero"), int) and not isinstance(b.get("numero"), bool)
+                     and b["numero"] in enviados for b in brutos)
+    if por_numero:
+        pares = [(b["numero"], b) for b in brutos]
+    elif len(brutos) == len(numeros):
+        pares = list(zip(numeros, brutos))
+    else:
+        raise ValueError(f"la respuesta del refinado trae {len(brutos)} pasos sin número reconocible "
+                         f"(se enviaron {len(numeros)})")
+    cambiados = 0
+    for numero, bruto in pares:
+        momentos[numero - 1], cambio = _refinar_momento(momentos[numero - 1], bruto)
+        cambiados += cambio
+    return cambiados
+
+
+def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, precios: dict | None = None,
+                         equipo: str = config.EQUIPO_POR_DEFECTO, max_lado_px: int = config.REFINADO_MAX_LADO_PX,
+                         lote: int = config.REFINADO_LOTE, *,
+                         log: Callable[[str], None] = print) -> ResultadoAnalisis:
+    """Segunda pasada con las capturas en alta resolución (sacadas del video original).
+
+    Envía, en lotes de ``lote`` imágenes, las capturas de los momentos con ``ruta_captura`` junto con su JSON, y
+    solo corrige ``titulo``, ``descripcion`` y ``zona`` con lo que ahora se lee en pantalla (textos, valores,
+    botones, iconos).  Los tiempos y el número de momentos no cambian.  El ``Uso`` se suma al del análisis.
+    Ante cualquier fallo devuelve el resultado original con un aviso.
+    """
+    con_captura = [(n, m) for n, m in enumerate(resultado.momentos, start=1) if m.ruta_captura]
+    if not con_captura:
+        return replace(resultado, avisos=resultado.avisos + ["Refinado omitido: ningún momento tiene captura."])
+    lote = max(1, int(lote))
+    avisos: list[str] = []
+    momentos = list(resultado.momentos)
+    uso_refinado = Uso(modelo=modelo)
+    cambiados = enviados = peticiones = 0
+    log(f"Refinando con {modelo} los textos de {len(con_captura)} pasos a partir de sus capturas "
+        f"({math.ceil(len(con_captura) / lote)} petición(es) de hasta {lote} imágenes)…")
+    try:
+        # Sin media_resolution: para imágenes fijas el valor por defecto del modelo es el de mejor calidad.
+        variante = _Variante(modelo=modelo, resolucion=None, esquema_json=ESQUEMA_REFINADO,
+                             prompt_sin_esquema=PROMPT_REFINADO_SIN_ESQUEMA)
+        prompt_sistema = construir_prompt_refinado(equipo)
+        for inicio in range(0, len(con_captura), lote):
+            grupo: list[tuple[int, Momento, bytes]] = []
+            for numero, momento in con_captura[inicio:inicio + lote]:
+                try:
+                    grupo.append((numero, momento, _jpeg_reducido(Path(momento.ruta_captura), max_lado_px)))
+                except (OSError, ValueError) as exc:
+                    avisos.append(f"Refinado: no se pudo leer la captura del paso {numero} ({exc}); se omite.")
+            if not grupo:
+                continue
+            numeros = [n for n, _, _ in grupo]
+            datos, truncado, _texto, uso, variante = _generar_y_parsear(
+                cliente, [modelo], prompt_sistema, lambda sufijo, g=grupo: _contenido_refinado(g, sufijo),
+                avisos, variante_inicial=variante, log=log)
+            uso.costo_usd = estimar_costo(uso, precios)
+            uso_refinado.sumar(uso)
+            peticiones += 1
+            if truncado:
+                raise ValueError("la respuesta del refinado llegó cortada")
+            cambiados += _fusionar_refinado(momentos, numeros, datos)
+            enviados += len(numeros)
+        if not peticiones:
+            raise ValueError("ninguna captura se pudo leer")
+    except Exception as exc:  # noqa: BLE001 - por contrato: cualquier fallo devuelve el original
+        aviso = f"No se pudo refinar con las capturas ({exc}); se conserva el análisis original."
+        log("Aviso: " + aviso)
+        return replace(resultado, avisos=resultado.avisos + avisos + [aviso])
+
+    uso_total = Uso(modelo=f"{modelo} (+refinado)")
+    if resultado.uso is not None:
+        uso_total.sumar(resultado.uso)
+        uso_total.batch = resultado.uso.batch
+    uso_total.sumar(uso_refinado)
+    aviso = (f"Refinado con capturas ({variante.modelo}): {enviados} pasos revisados en {peticiones} petición(es), "
+             f"{cambiados} con cambios ({uso_refinado.tokens_total} tokens).")
+    log(aviso)
+    return replace(resultado, momentos=momentos, uso=uso_total, avisos=resultado.avisos + avisos + [aviso])
 
 
 # ----------------------------------------------------------------------------
@@ -945,7 +1188,7 @@ def pulir_redaccion(cliente, resultado: ResultadoAnalisis, modelo_redactor: str,
         datos, truncado, _texto, uso, variante = _generar_y_parsear(
             cliente, [modelo_redactor], PROMPT_REDACTOR,
             lambda sufijo: [types.Content(role="user", parts=[types.Part.from_text(text=texto_usuario + sufijo)])],
-            avisos, variante_inicial=_Variante(modelo=modelo_redactor, resolucion=False), log=log)
+            avisos, variante_inicial=_Variante(modelo=modelo_redactor, resolucion=None), log=log)
         if truncado:
             raise ValueError("la respuesta del redactor llegó cortada")
         momentos, titulo, resumen = _aplicar_redaccion(resultado, datos)
@@ -980,15 +1223,17 @@ def _tramo_desde(valor) -> tuple[float, float] | None:
 
 def enviar_lote(cliente, peticiones: list[dict], modelo: str, nombre_lote: str, *,
                 equipo: str = config.EQUIPO_POR_DEFECTO, fps: float | None = None,
+                resolucion: str = config.RESOLUCION_VIDEO,
                 log: Callable[[str], None] = print) -> "types.BatchJob":
     """Crea un trabajo batch con una petición por video (o por tramo).
 
     ``peticiones``: ``[{"archivo": types.File, "info": InfoVideo, "tramo": (a, b) | None}]``; cada dict puede
-    traer además ``"equipo"`` y ``"fps"`` propios.  Los metadatos (video, tramo, inicio, fin) permiten mapear las
-    respuestas al recoger el lote.
+    traer además ``"equipo"`` y ``"fps"`` propios.  ``resolucion`` ("baja" | "media" | "alta") vale para todas.
+    Los metadatos (video, tramo, inicio, fin) permiten mapear las respuestas al recoger el lote.
     """
     if not peticiones:
         raise ValueError("No hay peticiones que enviar al lote.")
+    resolucion = _validar_resolucion(resolucion)
     contador: dict[str, int] = {}
     solicitudes = []
     for peticion in peticiones:
@@ -999,7 +1244,8 @@ def enviar_lote(cliente, peticiones: list[dict], modelo: str, nombre_lote: str, 
         inicio, fin = tramo if tramo else (0.0, float(info.duracion))
         contenido = _construir_contenido(peticion["archivo"], construir_prompt_usuario(tramo),
                                          peticion.get("fps", fps), tramo)
-        cfg = _construir_config(construir_prompt_sistema(peticion.get("equipo", equipo)), config.MAX_TOKENS_SALIDA)
+        cfg = _construir_config(construir_prompt_sistema(peticion.get("equipo", equipo)), config.MAX_TOKENS_SALIDA,
+                                resolucion=resolucion)
         solicitudes.append(types.InlinedRequest(
             contents=contenido, config=cfg,
             metadata={"video": info.nombre, "tramo": str(k), "inicio": f"{inicio:g}", "fin": f"{fin:g}"}))

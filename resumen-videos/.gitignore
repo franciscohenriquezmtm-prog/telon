@@ -12,3 +12,9 @@ videos_*/
 __pycache__/
 *.pyc
 .pytest_cache/
+.venv/
+venv/
+
+# Sistema
+.DS_Store
+Thumbs.db

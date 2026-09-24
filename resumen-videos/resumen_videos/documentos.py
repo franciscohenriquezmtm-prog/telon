@@ -765,7 +765,7 @@ def _portada_pdf(c, D: _Datos, L: Layout, F: dict) -> None:
 
 def _pagina_indice_pdf(c, columnas: list, k: int, num_pagina: int, total: int, D: _Datos, L: Layout,
                        F: dict) -> None:
-    W, H = L.pag_w_cm * cm, L.pag_h_cm * cm
+    H = L.pag_h_cm * cm
     mg = MARGEN_CM * cm
     _cabecera_pdf(c, L, F, D.titulo, f"Índice · Página {num_pagina} de {total}")
     y_top = H - mg - CABECERA_CM * cm
@@ -845,7 +845,7 @@ def _celda_pdf(c, m: Momento, numero: int, x0: float, y1: float, L: Layout, F: d
 
 def _pagina_contenido_pdf(c, pagina: list, k: int, num_pagina: int, total: int, D: _Datos, L: Layout,
                           F: dict, log: Callable[[str], None]) -> None:
-    W, H = L.pag_w_cm * cm, L.pag_h_cm * cm
+    H = L.pag_h_cm * cm
     mg = MARGEN_CM * cm
     ini = k * L.por_pagina + 1
     fin = ini + len(pagina) - 1

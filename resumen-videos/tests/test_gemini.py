@@ -150,6 +150,16 @@ def registro():
     return lineas, lineas.append
 
 
+def resolucion_en_wire(cfg) -> str | None:
+    """``generationConfig.mediaResolution`` tal como el SDK lo serializa para la API (respaldo: el campo)."""
+    try:
+        from google.genai.models import _GenerateContentConfig_to_mldev
+        valor = _GenerateContentConfig_to_mldev(None, cfg, {}).get("mediaResolution")
+    except Exception:  # noqa: BLE001 - función privada del SDK: si cambia, vale el campo del objeto
+        valor = cfg.media_resolution
+    return None if valor is None else getattr(valor, "value", str(valor))
+
+
 # ----------------------------------------------------------------------------
 # Prompt y esquema
 # ----------------------------------------------------------------------------
@@ -211,9 +221,47 @@ class TestPromptYEsquema:
         assert cfg.response_json_schema is not gemini.ESQUEMA_RESPUESTA
         assert cfg.response_json_schema["properties"] is not gemini.ESQUEMA_RESPUESTA["properties"]
         assert cfg.response_mime_type == "application/json"
-        assert cfg.media_resolution == types.MediaResolution.MEDIA_RESOLUTION_LOW
+        assert cfg.media_resolution == types.MediaResolution.MEDIA_RESOLUTION_MEDIUM     # config.RESOLUCION_VIDEO
         assert cfg.thinking_config.thinking_level == types.ThinkingLevel.LOW
         assert cfg.temperature == config.TEMPERATURA and cfg.max_output_tokens == 100
+
+    def test_prompt_pide_leer_textos_e_iconos(self):
+        sistema = gemini.PROMPT_SISTEMA.lower()
+        assert "texto" in sistema and "icono" in sistema and "no legible" in sistema
+        assert "valores" in sistema and "unidades" in sistema
+
+    def test_prompt_refinado(self):
+        sistema = gemini.construir_prompt_refinado("arco en C")
+        assert "arco en C" in sistema and "{equipo}" not in sistema
+        assert config.EQUIPO_POR_DEFECTO in gemini.construir_prompt_refinado("")
+        usuario = gemini.PROMPT_REFINADO_USUARIO
+        assert "NO cambies los tiempos" in usuario and "NO agregues ni quites pasos" in usuario and "NO inventes" in usuario
+        assert "mismo número" in usuario
+        assert gemini.PROMPT_CAPTURA.format(numero=3, tiempo="01:05") == "Captura del paso 3 (01:05)"
+        assert re.search(r"[\U0001F300-\U0001FAFF☀-➿]", sistema + usuario) is None
+
+    def test_esquema_refinado(self):
+        esquema = gemini.ESQUEMA_REFINADO
+        json.dumps(esquema)
+        assert esquema["required"] == ["momentos"]
+        item = esquema["properties"]["momentos"]["items"]
+        assert item["required"] == ["numero", "titulo", "descripcion"]
+        assert item["properties"]["numero"]["type"] == "integer"
+        assert item["properties"]["zona"] == gemini.ESQUEMA_RESPUESTA["properties"]["momentos"]["items"]["properties"]["zona"]
+        assert "tiempo" not in item["properties"]
+        cfg = gemini._construir_config("sistema", 100, esquema_json=esquema)
+        assert cfg.response_json_schema == esquema and cfg.response_json_schema is not esquema
+
+    def test_resoluciones_publicas(self):
+        assert gemini.RESOLUCIONES == {
+            "baja": types.MediaResolution.MEDIA_RESOLUTION_LOW,
+            "media": types.MediaResolution.MEDIA_RESOLUTION_MEDIUM,
+            "alta": types.MediaResolution.MEDIA_RESOLUTION_HIGH,
+        }
+        assert config.RESOLUCION_VIDEO in gemini.RESOLUCIONES
+        assert gemini._construir_config("s", 1, resolucion=None).media_resolution is None
+        with pytest.raises(ValueError, match="baja, media, alta"):
+            gemini._construir_config("s", 1, resolucion="ultra")
 
 
 # ----------------------------------------------------------------------------
@@ -328,7 +376,7 @@ class TestAnalizarVideo:
         assert "arco en C" in cfg.system_instruction and "instructor" in cfg.system_instruction
         assert cfg.response_json_schema == gemini.ESQUEMA_RESPUESTA and cfg.response_json_schema is not gemini.ESQUEMA_RESPUESTA
         assert cfg.response_mime_type == "application/json"
-        assert cfg.media_resolution == types.MediaResolution.MEDIA_RESOLUTION_LOW
+        assert cfg.media_resolution == types.MediaResolution.MEDIA_RESOLUTION_MEDIUM     # config.RESOLUCION_VIDEO
         assert cfg.thinking_config.thinking_level == types.ThinkingLevel.LOW
         assert cfg.max_output_tokens == config.MAX_TOKENS_SALIDA and cfg.temperature == config.TEMPERATURA
         partes = llamada["contents"][0].parts
@@ -498,6 +546,70 @@ class TestEscaleraFallbacks:
         servidor = errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}})
         with pytest.raises(errors.ServerError):
             gemini.analizar_video(ClienteFalso([servidor]), archivo_remoto(), info_video(), log=lambda _: None)
+
+
+# ----------------------------------------------------------------------------
+# Resolución del video (media_resolution)
+# ----------------------------------------------------------------------------
+
+class TestResolucion:
+    def test_media_por_defecto(self):
+        cliente = ClienteFalso([respuesta(documento_json([momento_json("00:05")]))])
+        lineas, log = registro()
+        gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=log)
+        cfg = cliente.generaciones()[0]["config"]
+        assert config.RESOLUCION_VIDEO == "media"
+        assert cfg.media_resolution == types.MediaResolution.MEDIA_RESOLUTION_MEDIUM
+        assert resolucion_en_wire(cfg) == "MEDIA_RESOLUTION_MEDIUM"
+        assert any("resolución media" in l for l in lineas)
+
+    @pytest.mark.parametrize("nombre, esperado", [
+        ("baja", "MEDIA_RESOLUTION_LOW"), ("media", "MEDIA_RESOLUTION_MEDIUM"), ("alta", "MEDIA_RESOLUTION_HIGH"),
+        (" Alta ", "MEDIA_RESOLUTION_HIGH"),
+    ])
+    def test_baja_media_alta(self, nombre, esperado):
+        cliente = ClienteFalso([respuesta(documento_json([momento_json("00:05")]))])
+        gemini.analizar_video(cliente, archivo_remoto(), info_video(), resolucion=nombre, log=lambda _: None)
+        cfg = cliente.generaciones()[0]["config"]
+        assert resolucion_en_wire(cfg) == esperado and cfg.media_resolution == types.MediaResolution(esperado)
+
+    def test_resolucion_invalida_no_llama(self):
+        cliente = ClienteFalso([respuesta(documento_json([momento_json("00:05")]))])
+        with pytest.raises(ValueError, match="ultra"):
+            gemini.analizar_video(cliente, archivo_remoto(), info_video(), resolucion="ultra", log=lambda _: None)
+        assert cliente.generaciones() == []
+        with pytest.raises(ValueError):
+            gemini.enviar_lote(cliente, [{"archivo": archivo_remoto(), "info": info_video(), "tramo": None}], MODELO,
+                               "lote", resolucion="", log=lambda _: None)
+        assert cliente.llamadas == []
+
+    def test_fallback_quita_media_resolution_con_cualquier_valor(self):
+        exito = respuesta(documento_json([momento_json("00:10")]))
+        cliente = ClienteFalso([error_cliente(400, "media_resolution is not supported"),
+                                error_cliente(404, "not found"), exito])
+        resultado = gemini.analizar_video(cliente, archivo_remoto(), info_video(), resolucion="alta", log=lambda _: None)
+        llamadas = cliente.generaciones()
+        assert [l["modelo"] for l in llamadas] == [MODELO, MODELO, ALTERNATIVO]
+        assert resolucion_en_wire(llamadas[0]["config"]) == "MEDIA_RESOLUTION_HIGH"
+        assert llamadas[1]["config"].media_resolution is None and llamadas[1]["config"].thinking_config is not None
+        # el siguiente modelo vuelve a empezar con la resolución pedida, no con la de config
+        assert resolucion_en_wire(llamadas[2]["config"]) == "MEDIA_RESOLUTION_HIGH"
+        assert resultado.modelo == ALTERNATIVO and any("media_resolution" in a for a in resultado.avisos)
+
+    def test_tramos_conservan_la_resolucion(self):
+        cliente = ClienteFalso([respuesta(documento_json([momento_json("00:10")])),
+                                respuesta(documento_json([momento_json("00:10")]))])
+        gemini.analizar_video(cliente, archivo_remoto(), info_video(duracion=5500.0), resolucion="baja", log=lambda _: None)
+        assert [resolucion_en_wire(l["config"]) for l in cliente.generaciones()] == ["MEDIA_RESOLUTION_LOW"] * 2
+
+    def test_enviar_lote_con_resolucion(self):
+        cliente = ClienteFalso()
+        peticiones = [{"archivo": archivo_remoto(), "info": info_video(), "tramo": None}]
+        gemini.enviar_lote(cliente, peticiones, MODELO, "lote", log=lambda _: None)
+        gemini.enviar_lote(cliente, peticiones, MODELO, "lote", resolucion="alta", log=lambda _: None)
+        lotes = [l for l in cliente.llamadas if l["tipo"] == "batch_create"]
+        assert resolucion_en_wire(lotes[0]["src"][0].config) == "MEDIA_RESOLUTION_MEDIUM"
+        assert resolucion_en_wire(lotes[1]["src"][0].config) == "MEDIA_RESOLUTION_HIGH"
 
 
 # ----------------------------------------------------------------------------
@@ -725,6 +837,234 @@ class TestPulirRedaccion:
         local = ResultadoAnalisis(momentos=[Momento(10.0, "a", "b")], modo="local", modelo="scdet", uso=None)
         nuevo = gemini.pulir_redaccion(ClienteFalso([respuesta(pulido)]), local, MODELO, log=lambda _: None)
         assert nuevo.uso.llamadas == 1 and nuevo.uso.modelo == f"scdet+{MODELO}" and nuevo.uso.costo_usd > 0
+
+
+# ----------------------------------------------------------------------------
+# Refinado con capturas
+# ----------------------------------------------------------------------------
+
+def captura_jpeg(ruta: Path, ancho: int, alto: int) -> Path:
+    """JPEG real (Pillow) con un rótulo, como una captura sacada del video original."""
+    from PIL import Image, ImageDraw
+    imagen = Image.new("RGB", (ancho, alto), (40, 44, 52))
+    dibujo = ImageDraw.Draw(imagen)
+    dibujo.rectangle([ancho * 0.6, alto * 0.4, ancho * 0.85, alto * 0.5], fill=(230, 200, 40))
+    dibujo.text((ancho * 0.62, alto * 0.42), "kV 70  mA 2.5", fill=(0, 0, 0))
+    imagen.save(ruta, format="JPEG", quality=90)
+    return ruta
+
+
+def momento_con_captura(carpeta: Path, numero: int, tiempo: float, titulo: str, ancho: int = 1920, alto: int = 1080,
+                        zona: dict | None = None, ruta: str | None = None) -> Momento:
+    if ruta is None:
+        ruta = str(captura_jpeg(carpeta / f"{numero:02d}.jpg", ancho, alto))
+    return Momento(tiempo, titulo, f"Descripción de {titulo}.", 3, "ambos", "Ajustes", zona, ruta_captura=ruta,
+                   tiempo_real_seg=tiempo + 0.4)
+
+
+def resultado_con_capturas(carpeta: Path) -> ResultadoAnalisis:
+    """3 momentos: el 1 (horizontal) y el 3 (vertical) con captura real; el 2 sin captura."""
+    momentos = [momento_con_captura(carpeta, 1, 10.0, "Encender", zona={"x": 0.5, "y": 0.5}),
+                Momento(30.0, "Colimar", "Se ajusta el colimador.", 4, "audio", "Ajustes"),
+                momento_con_captura(carpeta, 3, 65.0, "Guardar", ancho=900, alto=1400)]
+    return ResultadoAnalisis(momentos=momentos, modo="gemini", modelo=MODELO, resumen="resumen", titulo="Manual",
+                             uso=Uso(modelo=MODELO, tokens_entrada=1000, tokens_salida=100, tokens_total=1100,
+                                     llamadas=1, costo_usd=0.001), avisos=["previo"])
+
+
+def refinado_json(momentos: list[dict]) -> str:
+    return json.dumps({"momentos": momentos}, ensure_ascii=False)
+
+
+def imagenes_de(llamada: dict) -> list[tuple[str, "types.Blob"]]:
+    """[(rótulo previo, inline_data)] de las imágenes enviadas en una generación."""
+    partes = llamada["contents"][0].parts
+    return [(partes[i - 1].text, p.inline_data) for i, p in enumerate(partes) if p.inline_data is not None]
+
+
+def tamano_imagen(datos: bytes) -> tuple[int, int]:
+    from PIL import Image
+    import io
+    with Image.open(io.BytesIO(datos)) as imagen:
+        assert imagen.format == "JPEG"
+        return imagen.size
+
+
+class TestRefinarConCapturas:
+    def test_exito_solo_cambia_lo_devuelto(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso([respuesta(refinado_json([
+            {"numero": 1, "titulo": "Ajustar kV a 70 y mA a 2,5", "descripcion": "Descripción de Encender.",
+             "zona": {"x": 700, "y": 450}},
+            {"numero": 3, "titulo": "Guardar", "descripcion": "Guardar la imagen con el botón SAVE (icono de disquete).",
+             "zona": {"x": 2000, "y": 5}},                                          # zona inválida: se conserva la original
+        ]), entrada=800, salida=120, pensamiento=0)])
+        lineas, log = registro()
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, equipo="arco en C", max_lado_px=640, log=log)
+
+        # ni los tiempos ni el número de momentos cambian; el 2 (sin captura) queda intacto
+        assert len(nuevo.momentos) == 3
+        assert [m.tiempo_seg for m in nuevo.momentos] == [10.0, 30.0, 65.0]
+        assert [m.tiempo_real_seg for m in nuevo.momentos] == [10.4, None, 65.4]
+        assert nuevo.momentos[1] == original.momentos[1]
+        m1, m3 = nuevo.momentos[0], nuevo.momentos[2]
+        assert m1.titulo == "Ajustar kV a 70 y mA a 2,5" and m1.descripcion == "Descripción de Encender."
+        assert m1.zona == {"x": 0.7, "y": 0.45}
+        assert (m1.importancia, m1.fuente, m1.seccion, m1.ruta_captura) == (3, "ambos", "Ajustes", original.momentos[0].ruta_captura)
+        assert m3.titulo == "Guardar" and m3.descripcion.startswith("Guardar la imagen con el botón SAVE") and m3.zona is None
+        # el original no se modifica
+        assert original.momentos[0].titulo == "Encender" and original.momentos[0].zona == {"x": 0.5, "y": 0.5}
+        assert original.uso.llamadas == 1 and original.avisos == ["previo"]
+        # uso sumado y modelo del documento sin cambios
+        assert nuevo.modelo == MODELO and nuevo.uso.modelo == f"{MODELO} (+refinado)"
+        assert nuevo.uso.llamadas == 2 and nuevo.uso.tokens_entrada == 1800 and nuevo.uso.tokens_salida == 220
+        assert nuevo.uso.costo_usd == pytest.approx(0.001 + (800 * 0.25 + 120 * 1.50) / 1e6)
+        assert nuevo.avisos[0] == "previo" and any("Refinado con capturas" in a and "2 pasos" in a for a in nuevo.avisos)
+        assert any("Refinando" in l for l in lineas)
+
+        # una sola petición: rótulo + imagen por paso, y al final la instrucción con el JSON de esos pasos
+        llamadas = cliente.generaciones()
+        assert len(llamadas) == 1 and llamadas[0]["modelo"] == MODELO
+        cfg = llamadas[0]["config"]
+        assert cfg.response_json_schema == gemini.ESQUEMA_REFINADO and cfg.response_json_schema is not gemini.ESQUEMA_REFINADO
+        assert cfg.media_resolution is None and cfg.thinking_config.thinking_level == types.ThinkingLevel.LOW
+        assert "arco en C" in cfg.system_instruction and "no inventes" in cfg.system_instruction.lower()
+        imagenes = imagenes_de(llamadas[0])
+        assert [rotulo for rotulo, _ in imagenes] == ["Captura del paso 1 (00:10)", "Captura del paso 3 (01:05)"]
+        assert all(blob.mime_type == "image/jpeg" for _, blob in imagenes)
+        assert tamano_imagen(imagenes[0][1].data) == (640, 360)
+        ancho, alto = tamano_imagen(imagenes[1][1].data)
+        assert alto == 640 and ancho < 640
+        partes = llamadas[0]["contents"][0].parts
+        assert partes[0].text.startswith("Captura del paso 1") and partes[1].inline_data is not None
+        texto = partes[-1].text
+        assert texto.startswith(gemini.PROMPT_REFINADO_USUARIO)
+        pasos = json.loads(texto[texto.index("{"):])["momentos"]
+        assert [p["numero"] for p in pasos] == [1, 3]
+        assert pasos[0] == {"numero": 1, "tiempo": "00:10", "titulo": "Encender", "descripcion": "Descripción de Encender.",
+                            "seccion": "Ajustes", "zona": {"x": 500, "y": 500}}
+        assert "zona" not in pasos[1] and "tiempo_seg" not in pasos[1]
+
+    def test_lotes_ceil_n_entre_lote(self, tmp_path):
+        momentos = [momento_con_captura(tmp_path, n, 10.0 * n, f"Paso {n}", ancho=320, alto=200) for n in range(1, 6)]
+        original = ResultadoAnalisis(momentos=momentos, modo="gemini", modelo=MODELO, uso=None)
+        respuestas = [refinado_json([{"numero": n, "titulo": f"Título {n}", "descripcion": f"Descripción de Paso {n}."}
+                                     for n in grupo]) for grupo in ([1, 2], [3, 4], [5])]
+        cliente = ClienteFalso([respuesta(r) for r in respuestas])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, lote=2, log=lambda _: None)
+        llamadas = cliente.generaciones()
+        assert len(llamadas) == 3       # ceil(5 / 2)
+        enviados = [[p["numero"] for p in json.loads(l["contents"][0].parts[-1].text.split("Pasos (JSON):\n")[1])["momentos"]]
+                    for l in llamadas]
+        assert enviados == [[1, 2], [3, 4], [5]]
+        assert [len(imagenes_de(l)) for l in llamadas] == [2, 2, 1]
+        assert [m.titulo for m in nuevo.momentos] == [f"Título {n}" for n in range(1, 6)]
+        assert [m.tiempo_seg for m in nuevo.momentos] == [10.0, 20.0, 30.0, 40.0, 50.0]
+        assert nuevo.uso.llamadas == 3 and nuevo.uso.modelo == f"{MODELO} (+refinado)"
+        assert any("5 pasos revisados en 3 petición" in a for a in nuevo.avisos)
+        # la imagen no se agranda si ya es pequeña
+        assert tamano_imagen(imagenes_de(llamadas[0])[0][1].data) == (320, 200)
+
+    def test_fusion_por_orden_si_faltan_numeros(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso([respuesta(refinado_json([{"titulo": "Uno", "descripcion": "D1."},
+                                                         {"titulo": "Tres", "descripcion": "D3."}]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert [m.titulo for m in nuevo.momentos] == ["Uno", "Colimar", "Tres"]
+        assert nuevo.momentos[0].zona == {"x": 0.5, "y": 0.5}      # sin zona devuelta: se conserva
+
+    def test_recorta_textos_largos_y_conserva_vacios(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "x" * 300, "descripcion": ""},
+                                                         {"numero": 3, "titulo": "", "descripcion": "y " * 400}]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert len(nuevo.momentos[0].titulo) == config.MAX_TITULO and nuevo.momentos[0].titulo.endswith("…")
+        assert nuevo.momentos[0].descripcion == "Descripción de Encender."
+        assert nuevo.momentos[2].titulo == "Guardar" and len(nuevo.momentos[2].descripcion) == config.MAX_DESCRIPCION
+
+    @pytest.mark.parametrize("texto", [
+        "No puedo leer las capturas.",                                                   # sin JSON
+        json.dumps({"resultado": "ok"}),                                                 # sin lista de pasos
+        json.dumps({"momentos": [{"numero": 9, "titulo": "a", "descripcion": "b"},
+                                 {"titulo": "c", "descripcion": "d"},
+                                 {"titulo": "e", "descripcion": "f"}]}),                 # números ajenos y cantidad distinta
+    ])
+    def test_respuesta_invalida_devuelve_original(self, tmp_path, texto):
+        original = resultado_con_capturas(tmp_path)
+        lineas, log = registro()
+        nuevo = gemini.refinar_con_capturas(ClienteFalso([respuesta(texto)]), original, MODELO, log=log)
+        assert nuevo.momentos == original.momentos and nuevo.uso == original.uso and nuevo.modelo == MODELO
+        assert any("No se pudo refinar" in a for a in nuevo.avisos) and nuevo.avisos[0] == "previo"
+        assert any("Aviso" in l for l in lineas)
+
+    def test_excepcion_del_cliente_devuelve_original(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        for excepcion in (error_cliente(400, "API key not valid. Please pass a valid API key."),
+                          errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}}),
+                          error_cliente(404, "not found")):
+            cliente = ClienteFalso([excepcion])
+            nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+            assert nuevo.momentos == original.momentos and nuevo.uso == original.uso
+            assert any("No se pudo refinar" in a for a in nuevo.avisos)
+            assert len(cliente.generaciones()) == 1
+
+    def test_respuesta_cortada_devuelve_original(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        completo = refinado_json([{"numero": 1, "titulo": "A", "descripcion": "a"}, {"numero": 3, "titulo": "B", "descripcion": "b"}])
+        cortado = completo[: completo.index('"numero": 3') + 5]
+        cliente = ClienteFalso([respuesta(cortado, finish=types.FinishReason.MAX_TOKENS),
+                                respuesta(cortado, finish=types.FinishReason.MAX_TOKENS)])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert len(cliente.generaciones()) == 2
+        assert nuevo.momentos == original.momentos and any("cortada" in a for a in nuevo.avisos)
+
+    def test_fallback_sin_esquema_usa_prompt_del_refinado(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso([error_cliente(400, "responseJsonSchema is not supported"),
+                                respuesta(refinado_json([{"numero": 1, "titulo": "Uno", "descripcion": "d"}]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        llamadas = cliente.generaciones()
+        assert llamadas[1]["config"].response_json_schema is None
+        assert llamadas[1]["contents"][0].parts[-1].text.endswith(gemini.PROMPT_REFINADO_SIN_ESQUEMA)
+        assert gemini.PROMPT_SIN_ESQUEMA not in llamadas[1]["contents"][0].parts[-1].text
+        assert nuevo.momentos[0].titulo == "Uno" and nuevo.momentos[2].titulo == "Guardar"
+
+    def test_sin_capturas_no_se_envia_nada(self, tmp_path):
+        sin = ResultadoAnalisis(momentos=[Momento(10.0, "a", "b"), Momento(20.0, "c", "d")], modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso()
+        nuevo = gemini.refinar_con_capturas(cliente, sin, MODELO, log=lambda _: None)
+        assert cliente.llamadas == [] and nuevo.momentos == sin.momentos and any("omitido" in a for a in nuevo.avisos)
+        vacio = gemini.refinar_con_capturas(cliente, ResultadoAnalisis(momentos=[], modo="gemini"), MODELO, log=lambda _: None)
+        assert vacio.momentos == [] and cliente.llamadas == []
+
+    def test_captura_ilegible_se_omite(self, tmp_path):
+        roto = tmp_path / "roto.jpg"
+        roto.write_bytes(b"esto no es un jpeg")
+        momentos = [momento_con_captura(tmp_path, 1, 10.0, "Uno", ancho=200, alto=100),
+                    momento_con_captura(tmp_path, 2, 20.0, "Dos", ruta=str(tmp_path / "no_existe.jpg")),
+                    momento_con_captura(tmp_path, 3, 30.0, "Tres", ruta=str(roto))]
+        original = ResultadoAnalisis(momentos=momentos, modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "Uno bis", "descripcion": "d"}]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        llamadas = cliente.generaciones()
+        assert len(llamadas) == 1 and [r for r, _ in imagenes_de(llamadas[0])] == ["Captura del paso 1 (00:10)"]
+        assert [m.titulo for m in nuevo.momentos] == ["Uno bis", "Dos", "Tres"]
+        assert sum("no se pudo leer la captura" in a for a in nuevo.avisos) == 2
+        assert nuevo.uso is not None and nuevo.uso.llamadas == 1
+        # si ninguna captura se puede leer no hay petición y se conserva el original con aviso
+        cliente = ClienteFalso()
+        nuevo = gemini.refinar_con_capturas(cliente, ResultadoAnalisis(momentos=momentos[1:], modo="gemini"), MODELO,
+                                            log=lambda _: None)
+        assert cliente.llamadas == [] and any("No se pudo refinar" in a for a in nuevo.avisos)
+
+    def test_zona_caja_se_envia_en_formato_del_modelo(self, tmp_path):
+        momento = momento_con_captura(tmp_path, 1, 10.0, "Uno", ancho=200, alto=100, zona={"caja": [0.2, 0.1, 0.4, 0.3]})
+        original = ResultadoAnalisis(momentos=[momento], modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "Uno", "descripcion": "Descripción de Uno."}]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        texto = cliente.generaciones()[0]["contents"][0].parts[-1].text
+        assert json.loads(texto[texto.index("{"):])["momentos"][0]["zona"] == {"caja": [100, 200, 300, 400]}
+        assert nuevo.momentos[0].zona == {"caja": [0.2, 0.1, 0.4, 0.3]} and any("0 con cambios" in a for a in nuevo.avisos)
 
 
 # ----------------------------------------------------------------------------

@@ -1,0 +1,10 @@
+# Dependencias de resumen_videos (Python >= 3.10).  Instalar con: pip install -r requirements.txt
+google-genai>=2.25      # API de Gemini (Files API, JSON estructurado, batch)
+python-docx>=1.1        # manual .docx
+reportlab>=4            # manual .pdf
+python-dotenv           # carga de .env (GEMINI_API_KEY, GEMINI_MODELO, FFMPEG_BIN...)
+pillow                  # capturas: nitidez, anotaciones, tamaño de imagen
+numpy                   # nitidez (varianza del laplaciano)
+pymupdf                 # contar páginas del PDF generado
+imageio-ffmpeg          # binario ffmpeg incluido (sin instalar nada más)
+av                      # lectura de metadatos de video de respaldo (PyAV)
