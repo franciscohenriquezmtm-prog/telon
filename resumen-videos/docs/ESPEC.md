@@ -218,6 +218,32 @@ def analizar_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODEL
   `truncado=True`.
 - Uso: `uso_desde_respuesta(resp, modelo, batch=False) -> Uso` (usage_metadata puede ser None → ceros;
   `prompt_tokens_details` → `detalle_entrada` por `modality.value`); `estimar_costo(uso, precios, batch)`.
+### 4.3a Resolución de análisis y refinado con capturas en alta (IMPORTANTE: hay texto e iconos en pantalla)
+- `analizar_video(..., resolucion: str = config.RESOLUCION_VIDEO, ...)`: "baja" → `MEDIA_RESOLUTION_LOW`, "media" →
+  `MEDIA_RESOLUTION_MEDIUM`, "alta" → `MEDIA_RESOLUTION_HIGH`. Por defecto **media**. Constante pública
+  `RESOLUCIONES = {"baja": ..., "media": ..., "alta": ...}`. (Igual en las peticiones batch: `enviar_lote(..., resolucion=...)`.)
+- La copia ligera que se sube es 720p por defecto (`config.TRANSCODIFICAR_ALTO`); la CLI expone `--copia-alto 480|720|1080`
+  y `--subir-original` (sube el archivo tal cual si cabe en `MAX_SUBIDA_MB` y su extensión está en `MIME_SUBIDA`).
+```python
+def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, precios: dict | None = None,
+                         equipo: str = config.EQUIPO_POR_DEFECTO, max_lado_px: int = config.REFINADO_MAX_LADO_PX,
+                         lote: int = config.REFINADO_LOTE, *, log=print) -> ResultadoAnalisis
+```
+Segunda pasada tras extraer las capturas del ORIGINAL (alta resolución). Para los momentos con `ruta_captura`: carga el
+JPEG con Pillow, lo reduce a `max_lado_px` de lado mayor (JPEG calidad 85, en memoria) y lo envía como
+`types.Part.from_bytes(data=..., mime_type="image/jpeg")`, en lotes de `lote` capturas por petición, precedida cada
+imagen de un texto "Captura del paso N (mm:ss)". Junto con las imágenes va el JSON de esos momentos (número, tiempo,
+título, descripción, sección, zona) y la instrucción: "Estas son las capturas en alta resolución de pasos ya
+identificados en el video. Corrige y completa el título y la descripción de cada paso con lo que ahora se lee con
+claridad: texto en pantalla, valores y unidades, nombres de botones, iconos, indicadores. Ajusta la zona señalada si
+con la imagen se ve mejor dónde está lo importante. NO cambies los tiempos, NO agregues ni quites pasos, NO inventes:
+si en la captura no se lee nada nuevo, deja el texto igual. Devuelve el mismo JSON (lista de momentos con el mismo
+número)". Esquema: `ESQUEMA_REFINADO` (objeto con `momentos`: lista de {numero:int, titulo, descripcion, zona?}).
+Fusión: por `numero` (respaldo: por orden); solo se actualizan `titulo`, `descripcion` y `zona` (normalizados con las
+mismas reglas de §4.5); los demás campos se conservan. `Uso` se suma (`modelo` = "<modelo> (+refinado)"). Cualquier
+excepción → se devuelve el resultado original con un aviso y se sigue. Se usa por defecto (`config.REFINAR_CON_CAPTURAS`);
+la CLI expone `--sin-refinado`. Orden en pipeline: análisis → capturas → **refinado** → anotaciones → documentos.
+
 ### 4.3b Redactor opcional (segunda pasada solo de texto)
 ```python
 def pulir_redaccion(cliente, resultado: ResultadoAnalisis, modelo_redactor: str, precios=None, *, log=print) -> ResultadoAnalisis
@@ -367,6 +393,8 @@ class Opciones:   # espejo de la CLI; todos con valores por defecto de config
     carpeta_videos: Path; carpeta_salida: Path; modo: str = "gemini"  # gemini | batch | batch-recoger | local | simulado
     modelo: str = config.MODELO_POR_DEFECTO; fps: float | None = None; api_key: str | None = None
     equipo: str = config.EQUIPO_POR_DEFECTO; redactor: str | None = None
+    resolucion: str = config.RESOLUCION_VIDEO; copia_alto: int = config.TRANSCODIFICAR_ALTO; subir_original: bool = False
+    refinar: bool = config.REFINAR_CON_CAPTURAS; regenerar: bool = False
     lote_id: str | None = None; esperar_lote: bool = False
     whisper_modelo: str | None = config.WHISPER_MODELO; offline: bool = False
     ffmpeg: str | None = None; ffprobe: str | None = None
@@ -402,7 +430,12 @@ Flujo de `procesar_video`:
 4. **Guardar `momentos.json` inmediatamente** tras el análisis (antes de capturas: no perder un resultado
    pagado). Estructura: `{"video": info.a_dict(), "generado": iso, "version": __version__, "analisis":
    analisis.a_dict(base=carpeta), "documentos": {...}}`.
-5. `capturar_momentos` → `generar_documentos` → actualizar JSON con rutas docx/pdf y páginas.
+5. `capturar_momentos` (sin anotar todavía) → si `op.refinar` y el modo usa Gemini: `gemini.refinar_con_capturas`
+   (guardar JSON de nuevo) → anotaciones (`anotar.anotar_captura` para los momentos con zona) → `generar_documentos`
+   → actualizar JSON con rutas docx/pdf y páginas.
+   `--regenerar`: si existe `momentos.json`, se carga (`cargar_json`) y se salta el análisis (sin API); se rehacen
+   capturas, anotaciones y documentos a partir de él (permite corregir el JSON a mano o pegar un análisis hecho en el
+   chat de Gemini). Sin refinado en ese caso salvo que haya cliente y el usuario no pase `--sin-refinado`.
 6. Cualquier excepción: `error.txt` con traza y mensaje amable, `exito=False`, se sigue con el siguiente video.
    Errores de API (`errors.APIError`): mensaje con `code`/`status`/`message`.
 Modo **batch**: `procesar_carpeta` sube todos (con transcodificación si toca), prepara peticiones (con tramos),
@@ -418,7 +451,9 @@ o simulado, costo 0 y "sin API".
 
 `resumir_videos.py` (argparse, `description` en español, ejemplos en `epilog`):
 ```
-python resumir_videos.py [CARPETA] [--salida DIR] [--modelo M] [--equipo TEXTO] [--redactor M] [--fps F] [--batch] [--batch-recoger ID] [--esperar]
+python resumir_videos.py [CARPETA] [--salida DIR] [--modelo M] [--equipo TEXTO] [--redactor M] [--fps F]
+   [--resolucion baja|media|alta] [--copia-alto 480|720|1080] [--subir-original] [--sin-refinado] [--regenerar]
+   [--batch] [--batch-recoger ID] [--esperar]
    [--local] [--simular] [--whisper-modelo M] [--sin-whisper] [--offline] [--ffmpeg RUTA] [--ffprobe RUTA]
    [--max-subida-mb N] [--timeout-procesado S] [--precio-entrada X] [--precio-salida Y] [--conservar-subida]
    [--pausa S] [--max-momentos N] [--importancia-minima 1-5] [--por-pagina auto|1|2|3|4] [--sin-indice]

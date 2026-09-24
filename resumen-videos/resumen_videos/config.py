@@ -35,6 +35,13 @@ INTERVALO_SONDEO_LOTE_SEG = 60
 MAX_TOKENS_SALIDA = 16384        # si la respuesta llega cortada (MAX_TOKENS) se reintenta con el doble
 TEMPERATURA = 0.2
 FPS_POR_DEFECTO = None           # None = el muestreo por defecto de Gemini (1 fotograma/s)
+RESOLUCION_VIDEO = "media"       # resolución con la que Gemini mira el video: baja | media | alta
+                                 # (baja ≈ 100 tokens/s, media ≈ 300 tokens/s).  Con textos e iconos en pantalla
+                                 # conviene "media"; "baja" solo para ahorrar cuando basta reconocer la máquina.
+REFINAR_CON_CAPTURAS = True      # segunda pasada: se envían las capturas en alta resolución (imágenes fijas,
+                                 # muy baratas) para corregir textos con lo que se lee en pantalla. --sin-refinado
+REFINADO_MAX_LADO_PX = 1280      # las capturas se reducen a este lado mayor antes de enviarlas
+REFINADO_LOTE = 15               # capturas por petición en el refinado
 TRAMO_MAX_MIN = 45               # videos más largos se analizan por tramos (start_offset/end_offset)
 EQUIPO_POR_DEFECTO = "un equipo médico (por ejemplo un arco en C de fluoroscopía o una máquina de radioterapia)"
 REDACTOR_MODELO = None           # opcional (--redactor M): segunda pasada SOLO de texto con un modelo más potente
@@ -65,7 +72,8 @@ MIME_SUBIDA = {
 EXTENSIONES_SUBIDA_DIRECTA = {".mp4", ".m4v", ".webm"}
 UMBRAL_TRANSCODIFICAR_MB = 300   # aunque sea .mp4, por encima de este tamaño se sube la copia ligera
 MAX_SUBIDA_MB = 1900             # límite de la Files API: 2 GB por archivo
-TRANSCODIFICAR_ALTO = 480        # resolución de la copia ligera (Gemini la analiza en baja resolución igual)
+TRANSCODIFICAR_ALTO = 720        # resolución de la copia ligera (--copia-alto 480|720|1080); hay texto e iconos
+                                 # en pantalla, así que 720p es el mínimo razonable. --subir-original la evita.
 TRANSCODIFICAR_FPS = 2           # fotogramas/s de la copia ligera (Gemini muestrea 1/s por defecto)
 TRANSCODIFICAR_AUDIO_KBPS = 64   # el audio importa (lo que se dice): mono AAC 64 kbps
 

@@ -187,3 +187,4 @@ class ResultadoVideo:
     paginas_pdf: Optional[int] = None
     error: Optional[str] = None
     segundos: float = 0.0               # duración del procesamiento
+    omitido: bool = False               # ya estaba procesado (momentos.json existente): se cargó sin volver a analizar
