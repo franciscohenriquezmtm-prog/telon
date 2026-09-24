@@ -157,11 +157,13 @@ class ResultadoAnalisis:
     avisos: list = field(default_factory=list)      # list[str]
     transcripcion: Optional[list] = None            # modo local: [{"inicio": s, "fin": s, "texto": str}]
     tramos: int = 1                     # en cuántos tramos se analizó el video (videos muy largos)
+    titulo: Optional[str] = None        # título corto del manual propuesto por el modelo (titulo_video)
 
     def a_dict(self, base: Optional[Path] = None) -> dict:
         return {
             "modo": self.modo,
             "modelo": self.modelo,
+            "titulo": self.titulo,
             "resumen": self.resumen,
             "truncado": self.truncado,
             "tramos": self.tramos,
