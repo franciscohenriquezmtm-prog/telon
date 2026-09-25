@@ -12,16 +12,19 @@ from __future__ import annotations
 
 import math
 from pathlib import Path
+from typing import Callable
 
 from PIL import Image, ImageDraw
 
 COLOR_MARCA = (255, 59, 48)        # rojo-naranja (#FF3B30)
 COLOR_HALO = (255, 255, 255)
 CALIDAD_JPEG = 90
+AREA_MAXIMA_CAJA = 0.8             # una caja que cubre más de esto es "toda la pantalla": no se anota
 _SUPERMUESTREO = 3                 # factor de la capa de dibujo (suaviza los bordes)
 _RADIO_FRAC = 0.07                 # radio del círculo: 7 % del ancho
 _TRAZO_FRAC = 0.006                # grosor del trazo: 0.6 % del ancho (mínimo 3 px)
 _FLECHA_FRAC = 0.18                # longitud de la flecha: ~18 % del ancho
+_LADO_MINIMO_CAJA = 0.005          # con los dos lados por debajo, la caja es un punto: círculo con flecha
 _ESTILOS = ("circulo", "flecha")
 
 
@@ -51,9 +54,17 @@ def _caja(zona: dict) -> tuple[float, float, float, float] | None:
         return None
     x1, x2 = sorted((valores[0], valores[2]))
     y1, y2 = sorted((valores[1], valores[3]))
-    if x2 - x1 < 0.005 and y2 - y1 < 0.005:
-        return None
     return x1, y1, x2, y2
+
+
+def _caja_es_punto(caja: tuple[float, float, float, float]) -> bool:
+    """True si los dos lados son minúsculos: se anota como punto (centro de la caja)."""
+    return caja[2] - caja[0] < _LADO_MINIMO_CAJA and caja[3] - caja[1] < _LADO_MINIMO_CAJA
+
+
+def _caja_demasiado_amplia(caja: tuple[float, float, float, float]) -> bool:
+    """True si la caja cubre casi toda la captura (el modelo la devuelve así cuando no está seguro)."""
+    return (caja[2] - caja[0]) * (caja[3] - caja[1]) > AREA_MAXIMA_CAJA
 
 
 def _esquina_mas_lejana(px: float, py: float, ancho: int, alto: int) -> tuple[float, float]:
@@ -106,33 +117,47 @@ def _dibujar_punto(dibujo: ImageDraw.ImageDraw, x: float, y: float, ancho: int, 
 
 def _dibujar_caja(dibujo: ImageDraw.ImageDraw, caja: tuple[float, float, float, float],
                   ancho: int, alto: int, trazo: float, halo: float) -> None:
-    """Rectángulo redondeado con halo; una caja minúscula se ensancha para que se vea."""
+    """Rectángulo redondeado con halo; una caja minúscula se ensancha para que se vea, sin salirse de la imagen."""
     x1, y1, x2, y2 = caja[0] * ancho, caja[1] * alto, caja[2] * ancho, caja[3] * alto
     minimo = 0.04 * ancho
+    borde = halo + trazo / 2   # lo que sobresale el halo por fuera del rectángulo
     if x2 - x1 < minimo:
         cx = (x1 + x2) / 2
         x1, x2 = cx - minimo / 2, cx + minimo / 2
     if y2 - y1 < minimo:
         cy = (y1 + y2) / 2
         y1, y2 = cy - minimo / 2, cy + minimo / 2
+    # una caja pegada a un borde o esquina se desplaza hacia adentro: si no, la marca queda casi fuera
+    dx = max(0.0, borde - x1) - max(0.0, x2 + borde - ancho)
+    dy = max(0.0, borde - y1) - max(0.0, y2 + borde - alto)
+    x1, x2, y1, y2 = x1 + dx, x2 + dx, y1 + dy, y2 + dy
     radio = max(2.0 * trazo, 0.01 * ancho)
     for color, ancho_linea, extra in ((COLOR_HALO, trazo + 2 * halo, halo), (COLOR_MARCA, trazo, 0.0)):
         dibujo.rounded_rectangle([x1 - extra, y1 - extra, x2 + extra, y2 + extra], radius=radio + extra,
                                  outline=color, width=int(round(ancho_linea)))
 
 
-def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "circulo") -> Path | None:
+def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "circulo", *,
+                   log: Callable[[str], None] | None = None) -> Path | None:
     """Dibuja la zona señalada sobre la captura y guarda el resultado en ``destino`` (JPEG, calidad 90).
 
     ``zona`` es ``{"x": 0-1, "y": 0-1}`` (círculo rojo-naranja con halo blanco y una flecha
     corta que llega desde la esquina más lejana; con ``estilo="flecha"`` solo la flecha) o
-    ``{"caja": [x1, y1, x2, y2]}`` 0-1 (rectángulo redondeado).  Devuelve ``destino`` o
+    ``{"caja": [x1, y1, x2, y2]}`` 0-1 (rectángulo redondeado).  Una caja minúscula se anota como
+    punto (su centro); una que cubre más de ``AREA_MAXIMA_CAJA`` de la imagen no se anota (sería un marco
+    alrededor de toda la captura: ruido) y se explica por ``log`` si se pasa.  Devuelve ``destino`` o
     ``None`` si la zona es inválida o la imagen no se puede leer; nunca lanza por eso.
     """
     if not isinstance(zona, dict):
         return None
     punto = _punto(zona) if "x" in zona or "y" in zona else None
     caja = _caja(zona) if punto is None else None
+    if caja is not None and _caja_es_punto(caja):
+        punto, caja = ((caja[0] + caja[2]) / 2, (caja[1] + caja[3]) / 2), None
+    if caja is not None and _caja_demasiado_amplia(caja):
+        if log is not None:
+            log(f"  aviso: la zona señalada cubre casi toda la captura ({Path(ruta_jpg).name}): no se anota")
+        return None
     if punto is None and caja is None:
         return None
     estilo = estilo if estilo in _ESTILOS else "circulo"

@@ -68,6 +68,8 @@ class Momento:
     ruta_captura_anotada: Optional[str] = None  # JPEG con flecha/círculo dibujado (si hay zona), o None
     tiempo_real_seg: Optional[float] = None  # instante exacto del fotograma elegido (puede diferir ±1 s)
     puntaje: Optional[float] = None     # relevancia numérica (solo modo local)
+    titulo_original: Optional[str] = None       # título anterior si el refinado con capturas lo cambió (auditoría)
+    descripcion_original: Optional[str] = None  # descripción anterior si el refinado con capturas la cambió
 
     @property
     def tiempo(self) -> str:
@@ -88,7 +90,7 @@ class Momento:
                 except ValueError:
                     return str(ruta)
             return ruta
-        return {
+        datos = {
             "tiempo": self.tiempo,
             "tiempo_seg": round(self.tiempo_seg, 3),
             "titulo": self.titulo,
@@ -102,6 +104,11 @@ class Momento:
             "tiempo_real_seg": None if self.tiempo_real_seg is None else round(self.tiempo_real_seg, 3),
             "puntaje": None if self.puntaje is None else round(self.puntaje, 3),
         }
+        if self.titulo_original is not None:        # solo cuando el refinado cambió el texto
+            datos["titulo_original"] = self.titulo_original
+        if self.descripcion_original is not None:
+            datos["descripcion_original"] = self.descripcion_original
+        return datos
 
 
 @dataclass
@@ -158,9 +165,11 @@ class ResultadoAnalisis:
     transcripcion: Optional[list] = None            # modo local: [{"inicio": s, "fin": s, "texto": str}]
     tramos: int = 1                     # en cuántos tramos se analizó el video (videos muy largos)
     titulo: Optional[str] = None        # título corto del manual propuesto por el modelo (titulo_video)
+    descartados: list = field(default_factory=list)  # list[Momento] apartados por --max-momentos/--importancia-minima
+                                                     # al regenerar desde momentos.json (se conservan en el JSON)
 
     def a_dict(self, base: Optional[Path] = None) -> dict:
-        return {
+        datos = {
             "modo": self.modo,
             "modelo": self.modelo,
             "titulo": self.titulo,
@@ -172,6 +181,9 @@ class ResultadoAnalisis:
             "momentos": [m.a_dict(base) for m in self.momentos],
             "transcripcion": self.transcripcion,
         }
+        if self.descartados:
+            datos["momentos_descartados"] = [m.a_dict(base) for m in self.descartados]
+        return datos
 
 
 @dataclass
@@ -188,3 +200,5 @@ class ResultadoVideo:
     error: Optional[str] = None
     segundos: float = 0.0               # duración del procesamiento
     omitido: bool = False               # ya estaba procesado (momentos.json existente): se cargó sin volver a analizar
+    uso_ejecucion: Optional[Uso] = None   # tokens pagados a la API EN ESTA ejecución (None si no se llamó a la API)
+    uso_acumulado: Optional[Uso] = None   # tokens pagados por este video en todas las ejecuciones (momentos.json)

@@ -116,13 +116,21 @@ def test_segmentar_frases_por_puntuacion_y_pausas():
 def test_puntuar_frase_y_escena():
     assert local.puntuar_frase("hola a todos") == pytest.approx(0.8)
     assert local.puntuar_frase("hola a todos", cerca_de_escena=True) == pytest.approx(1.8)
-    # primero + debe + verificar + "10 cm" = 4 palabras clave; 10 palabras
-    assert local.puntuar_frase(FRASES_CLAVE[0]) == pytest.approx(5.5)
+    # primero + debe + verificar + "10 cm" = 4 palabras clave; 10 palabras (longitud acotada a 0.9)
+    assert local.puntuar_frase(FRASES_CLAVE[0]) == pytest.approx(5.4)
     # nunca + presione (conjugación de presionar) = 2; 7 palabras
     assert local.puntuar_frase(FRASES_CLAVE[1]) == pytest.approx(3.2)
     # ajuste + "70 kV" + "2,5 mAs" = 3; 9 palabras
     assert local.puntuar_frase("ajuste el kilovoltaje a 70 kV y 2,5 mAs") == pytest.approx(0.5 + 0.9 + 3)
-    assert local.puntuar_frase(" ".join(["palabra"] * 40)) == pytest.approx(2.5)   # 0.1·palabras acotado a 2
+    # P-H7: la longitud sola nunca llega a PUNTAJE_MINIMO (0.1·palabras acotado a 0.9)
+    assert local.puntuar_frase(" ".join(["palabra"] * 40)) == pytest.approx(1.4)
+    assert local.puntuar_frase(" ".join(["palabra"] * 40)) < local.PUNTAJE_MINIMO
+    assert local.puntuar_frase(" ".join(["palabra"] * 40), cerca_de_escena=True) >= local.PUNTAJE_MINIMO
+    # "no" suelto ya no es palabra clave; como prohibición sí
+    assert local.puntuar_frase("esto no cambia nada y no es lo mismo") == pytest.approx(0.5 + 0.9)   # 9 palabras, sin clave
+    assert local.puntuar_frase("no presione este botón") == pytest.approx(0.5 + 0.4 + 1)
+    assert local.puntuar_frase("no debe tocar el pedal") == pytest.approx(0.5 + 0.5 + 1)
+    assert local.puntuar_frase("no hay que forzar el brazo") == pytest.approx(0.5 + 0.6 + 1)
     assert local.puntuar_escena(30.3) == pytest.approx(4.0)         # score/10 acotado a 3, más 1
     assert local.puntuar_escena(4.29) == pytest.approx(1.429)
     assert local.puntuar_escena(0.0) == pytest.approx(1.0)
@@ -264,3 +272,81 @@ def test_deteccion_de_escenas_privada(ffmpeg, video_prueba):
     falso.write_text("no es un video", encoding="utf-8")
     with pytest.raises(RuntimeError):
         local._detectar_escenas(falso, ffmpeg, 3.0)
+
+
+# ----------------------------------------------------------------------------
+# Modo local sin ffmpeg: escenas inyectadas (P-H7, P-H8)
+# ----------------------------------------------------------------------------
+FRASES_NEUTRAS = [
+    "Entonces lo que hacemos acá es simplemente mirar la pantalla y ver qué nos muestra el equipo en este momento.",
+    "Como les decía, esto es lo mismo que vimos antes, no cambia nada, solo se ve desde otro lado.",
+    "Bueno, ahora vamos a seguir con la explicación de esta parte que ya conocen de la clase anterior.",
+    "Esto lo menciono de pasada para que lo tengan presente cuando lo vean en la práctica.",
+    "Acá la persona que graba se acerca un poco más para que se vea mejor lo que estoy mostrando.",
+    "Y básicamente eso es todo lo que hay en esta parte, no tiene mucho más misterio.",
+]
+FRASES_CON_CONTENIDO = {
+    300.0: "Primero debe verificar que el colimador esté a 10 cm.",
+    600.0: "Nunca presione este botón durante la exposición.",
+    900.0: "No debe apagar el equipo con el pedal pisado.",
+}
+
+
+def _segmentos_charla_neutra(duracion: float) -> list:
+    """20 min de charla continua (una frase cada ~6 s) con solo tres frases con contenido."""
+    segmentos, t, k = [], 0.0, 0
+    while t < duracion:
+        texto = FRASES_NEUTRAS[k % len(FRASES_NEUTRAS)]
+        for inicio, frase in FRASES_CON_CONTENIDO.items():
+            if inicio <= t < inicio + 6.5:
+                texto = frase
+        segmentos.append((t, t + 5.5, " " + texto))
+        t += 6.0
+        k += 1
+    return segmentos
+
+
+def test_charla_neutra_sin_cortes_produce_pocos_momentos(monkeypatch, registro):
+    """P-H7: en una toma continua, una frase sin palabra clave ni cambio de plano no es un momento."""
+    monkeypatch.setitem(sys.modules, "faster_whisper", _modulo_whisper_falso(_segmentos_charla_neutra(1200.0)))
+    monkeypatch.setattr(local, "_detectar_escenas_video", lambda ruta, ffmpeg, umbral: [])
+    info = _info_falsa(1200.0, "charla")
+    resultado = local.analizar_local(Path("/no/existe.mp4"), info, "ffmpeg", whisper_modelo="base", log=registro)
+    momentos = resultado.momentos
+    assert len(resultado.transcripcion) == 200
+    assert len(momentos) == len(FRASES_CON_CONTENIDO), [m.descripcion for m in momentos]
+    for inicio, frase in FRASES_CON_CONTENIDO.items():
+        encontrados = [m for m in momentos if m.descripcion == frase]
+        assert len(encontrados) == 1 and abs(encontrados[0].tiempo_seg - inicio) < 6
+    assert all(m.fuente == "audio" and m.puntaje >= local.PUNTAJE_MINIMO for m in momentos)
+    assert not any("intervalos regulares" in a for a in resultado.avisos)
+    _comprobar_momentos_basicos(momentos, 1200.0)
+
+
+def test_charla_neutra_sin_nada_relevante_usa_rejilla(monkeypatch, registro):
+    segmentos = [(t, t + 5.5, " " + FRASES_NEUTRAS[k % len(FRASES_NEUTRAS)]) for k, t in enumerate(range(0, 600, 6))]
+    monkeypatch.setitem(sys.modules, "faster_whisper", _modulo_whisper_falso(segmentos))
+    monkeypatch.setattr(local, "_detectar_escenas_video", lambda ruta, ffmpeg, umbral: [])
+    resultado = local.analizar_local(Path("/no/existe.mp4"), _info_falsa(600.0), "ffmpeg", whisper_modelo="base", log=registro)
+    assert [m.tiempo_seg for m in resultado.momentos] == [25.0, 75.0, 125.0, 175.0, 225.0, 275.0, 325.0, 375.0, 425.0,
+                                                          475.0, 525.0, 575.0]     # cada max(30 s, 600/12) = 50 s
+    assert all(m.titulo.startswith("Vista a los") for m in resultado.momentos)
+    assert any("intervalos regulares" in a for a in resultado.avisos)
+
+
+def test_cambios_de_plano_numerados_sin_huecos(monkeypatch, registro):
+    """P-H8: los títulos "Cambio de plano k" van 1..n sobre los momentos definitivos."""
+    escenas = [(10.0, 30.0), (20.0, 4.0), (30.0, 4.5), (40.0, 12.0), (50.0, 3.5), (60.0, 25.0)]
+    monkeypatch.setattr(local, "_detectar_escenas_video", lambda ruta, ffmpeg, umbral: escenas)
+    resultado = local.analizar_local(Path("/no/existe.mp4"), _info_falsa(90.0), "ffmpeg", whisper_modelo=None, log=registro)
+    assert [m.titulo for m in resultado.momentos] == ["Cambio de plano 1", "Cambio de plano 2", "Cambio de plano 3"]
+    assert [m.tiempo_seg for m in resultado.momentos] == [10.5, 40.5, 60.5]
+    assert all(m.descripcion == f"Cambio de plano a los {m.tiempo}." for m in resultado.momentos)
+    # con frases: un plano fundido con una frase conserva su numeración consecutiva
+    segmentos = [(9.0, 12.0, " Primero debe verificar que el colimador esté a 10 cm.")]
+    monkeypatch.setitem(sys.modules, "faster_whisper", _modulo_whisper_falso(segmentos))
+    resultado = local.analizar_local(Path("/no/existe.mp4"), _info_falsa(90.0), "ffmpeg", whisper_modelo="base", log=registro)
+    titulos = [m.titulo for m in resultado.momentos]
+    planos = [t for t in titulos if t.startswith("Cambio de plano")]
+    assert planos == [f"Cambio de plano {k}" for k in range(1, len(planos) + 1)]
+    assert resultado.momentos[0].fuente == "ambos"

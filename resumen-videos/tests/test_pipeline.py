@@ -65,6 +65,8 @@ class DoblesGemini:
 
     def __init__(self, monkeypatch, n: int = 5, fallo: Exception | None = None):
         self.llamadas: list[tuple] = []
+        self.conservar: list[bool] = []            # conservar_subida recibido en cada subida
+        self.temperaturas: list = []               # temperatura recibida en cada llamada a la API
         self.n = n
         self.fallo = fallo
         monkeypatch.setattr(gemini, "crear_cliente", lambda api_key, timeout_ms=0: SimpleNamespace(clave=api_key))
@@ -77,16 +79,18 @@ class DoblesGemini:
     def de_tipo(self, tipo: str) -> list[tuple]:
         return [l for l in self.llamadas if l[0] == tipo]
 
-    def subir_video(self, cliente, ruta, nombre, timeout_procesado=0, intervalo=0, *, log=print):
+    def subir_video(self, cliente, ruta, nombre, timeout_procesado=0, intervalo=0, *, conservar_subida=False, log=print):
         ruta = Path(ruta)
         assert ruta.is_file(), "se intenta subir un archivo que no existe"
         self.llamadas.append(("subir", ruta, nombre))
+        self.conservar.append(conservar_subida)
         log(f"(doble) subido {ruta.name}")
         return types.File(name=f"files/{nombre}", uri=f"https://x/files/{nombre}", mime_type="video/mp4",
                           state=types.FileState.ACTIVE)
 
     def analizar_video(self, cliente, archivo, info, modelo=MODELO, **kw):
         self.llamadas.append(("analizar", archivo.name, dict(kw, modelo=modelo)))
+        self.temperaturas.append(kw.get("temperatura"))
         if self.fallo is not None:
             raise self.fallo
         kw["log"](f"(doble) análisis de {info.nombre}")
@@ -96,21 +100,28 @@ class DoblesGemini:
         self.llamadas.append(("eliminar", archivo if isinstance(archivo, str) else archivo.name))
 
     def refinar_con_capturas(self, cliente, resultado, modelo, precios=None, equipo="", max_lado_px=1280, lote=15, *,
-                             log=print):
+                             temperatura=None, log=print):
         # En este punto las capturas ya existen y todavía no hay anotaciones (orden de la especificación).
         capturas = [m.ruta_captura for m in resultado.momentos]
         assert all(c and Path(c).is_file() for c in capturas), "el refinado debe llegar tras las capturas"
         assert all(m.ruta_captura_anotada is None for m in resultado.momentos), "las anotaciones van después"
+        assert not any(m.titulo.endswith("(pulido)") for m in resultado.momentos), "el refinado va antes que el redactor"
         self.llamadas.append(("refinar", modelo, len(capturas)))
+        self.temperaturas.append(temperatura)
         nuevos = [replace(m, titulo=m.titulo + " (refinado)") for m in resultado.momentos]
         uso = Uso(modelo=f"{modelo} (+refinado)", batch=resultado.uso.batch)
         uso.sumar(resultado.uso)
         uso.sumar(Uso(modelo=modelo, tokens_entrada=1500, tokens_salida=300, tokens_total=1800, llamadas=1, costo_usd=0.0008))
         return replace(resultado, momentos=nuevos, uso=uso)
 
-    def pulir_redaccion(self, cliente, resultado, modelo_redactor, precios=None, *, log=print):
+    def pulir_redaccion(self, cliente, resultado, modelo_redactor, precios=None, *, temperatura=None, log=print):
+        # G5: el redactor va DESPUÉS del refinado y de las capturas, y antes de las anotaciones.
+        assert all(m.ruta_captura and Path(m.ruta_captura).is_file() for m in resultado.momentos), "el redactor va tras las capturas"
+        assert all(m.ruta_captura_anotada is None for m in resultado.momentos), "las anotaciones van después del redactor"
         self.llamadas.append(("redactor", modelo_redactor))
-        return replace(resultado, resumen="Resumen pulido.")
+        self.temperaturas.append(temperatura)
+        nuevos = [replace(m, titulo=m.titulo + " (pulido)") for m in resultado.momentos]
+        return replace(resultado, momentos=nuevos, resumen="Resumen pulido.")
 
 
 def paginas_esperadas(momentos: list, por_pagina="auto", incluir_indice: bool = True) -> int:
@@ -227,6 +238,65 @@ class TestSimulado:
         assert not r.exito and config.NOMBRE_JSON in r.error
         assert (carpeta / config.NOMBRE_ERROR).is_file()
 
+    def test_regenerar_exige_momentos_json(self, carpeta_videos, tmp_path, monkeypatch):
+        """U1: --regenerar nunca analiza; sin momentos.json es un error claro."""
+        def no_analizar(*a, **k):
+            raise AssertionError("con --regenerar no se debe analizar")
+        monkeypatch.setattr(local, "analizar_simulado", no_analizar)
+        r = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, regenerar=True)).resultados[0]
+        assert not r.exito and "--regenerar" in r.error and config.NOMBRE_JSON in r.error
+
+    def test_regenerar_y_forzar_incompatibles(self, carpeta_videos, tmp_path):
+        with pytest.raises(ValueError, match="incompatibles"):
+            pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, regenerar=True, forzar=True))
+
+    def test_regenerar_aplica_filtros_sin_perder_momentos(self, carpeta_videos, tmp_path):
+        """H3: --max-momentos e --importancia-minima actúan con --regenerar; lo apartado queda en el JSON."""
+        op = opciones(carpeta_videos, tmp_path)
+        primero = pipeline.procesar_carpeta(op).resultados[0]
+        todos = [m.tiempo_seg for m in primero.analisis.momentos]
+        assert len(todos) >= 5
+        lineas, log = registro()
+        r = pipeline.procesar_carpeta(replace(op, regenerar=True, max_momentos=2, importancia_minima=3), log=log).resultados[0]
+        datos = comprobar_salida(r.carpeta_salida, "maquina", r)
+        assert len(r.analisis.momentos) == 2 and all(m.importancia >= 3 for m in r.analisis.momentos)
+        assert r.paginas_pdf == paginas_esperadas(r.analisis.momentos)
+        assert len(datos["analisis"]["momentos"]) == 2
+        descartados = datos["analisis"]["momentos_descartados"]
+        assert len(descartados) == len(todos) - 2 and all(m["captura"] is None for m in descartados)
+        assert sorted(m["tiempo_seg"] for m in datos["analisis"]["momentos"] + descartados) == todos
+        assert any("--max-momentos" in l for l in lineas) and any("momentos_descartados" in a for a in datos["analisis"]["avisos"])
+        capturas = [c for c in (r.carpeta_salida / config.CARPETA_CAPTURAS).glob("*.jpg") if "_anotada" not in c.name]
+        assert len(capturas) == 2
+        # regenerar de nuevo sin filtros recupera el análisis completo
+        r2 = pipeline.procesar_carpeta(replace(op, regenerar=True)).resultados[0]
+        datos2 = comprobar_salida(r2.carpeta_salida, "maquina", r2)
+        assert [m.tiempo_seg for m in r2.analisis.momentos] == todos and "momentos_descartados" not in datos2["analisis"]
+
+    def test_fallo_tras_el_json_se_retoma(self, carpeta_videos, tmp_path, monkeypatch):
+        """P-H4: momentos.json sin documentos no es "ya procesado": la siguiente ejecución retoma desde el JSON."""
+        op = opciones(carpeta_videos, tmp_path)
+
+        def roto(*a, **k):
+            raise RuntimeError("fuente no encontrada")
+        monkeypatch.setattr(documentos, "generar_documentos", roto)
+        r1 = pipeline.procesar_carpeta(op).resultados[0]
+        carpeta = r1.carpeta_salida
+        assert not r1.exito and (carpeta / config.NOMBRE_JSON).is_file() and (carpeta / config.NOMBRE_ERROR).is_file()
+        monkeypatch.undo()
+        llamadas = []
+        original = local.analizar_simulado
+        monkeypatch.setattr(local, "analizar_simulado", lambda info, *, log=print: (llamadas.append(1), original(info, log=log))[1])
+        lineas, log = registro()
+        resumen = pipeline.procesar_carpeta(op, log=log)
+        r2 = resumen.resultados[0]
+        datos = comprobar_salida(carpeta, "maquina", r2)
+        assert not r2.omitido and llamadas == [] and r2.uso_ejecucion is None
+        assert any("se retoma" in l for l in lineas) and any("Retomado desde" in a for a in datos["analisis"]["avisos"])
+        assert "| OK" in resumen.tabla() and "omitido" not in resumen.tabla().splitlines()[2]
+        # ahora sí está completo: la tercera ejecución lo omite
+        assert pipeline.procesar_carpeta(op).resultados[0].omitido
+
     def test_opciones_de_documento(self, carpeta_videos, tmp_path):
         op = opciones(carpeta_videos, tmp_path, por_pagina=4, incluir_indice=False, anotar=False)
         r = pipeline.procesar_carpeta(op).resultados[0]
@@ -267,18 +337,37 @@ class TestGeminiConDobles:
         assert resumen.uso_total is not None and resumen.uso_total.tokens_total == 11700
         assert abs(resumen.uso_total.costo_usd - 0.0033) < 1e-9
         tabla = resumen.tabla()
-        assert "US$ 0.0033" in tabla and "11700" in tabla and "ESTIMACIÓN de costo total: US$ 0.0033" in tabla
+        assert "US$ 0.0033" in tabla and "11700" in tabla
+        assert "ESTIMACIÓN de costo de esta ejecución: US$ 0.0033 (11700 tokens)" in tabla
+        assert "acumulado de estos videos en todas las ejecuciones: US$ 0.0033 (11700 tokens)" in tabla
+        # P-H5: esta ejecución y acumulado del video (primer análisis: iguales), también en el JSON
+        assert r.uso_ejecucion.tokens_total == 11700 and r.uso_acumulado.tokens_total == 11700
+        assert datos["uso_acumulado"]["tokens_total"] == 11700 and datos["uso_acumulado"]["costo_usd"] == 0.0033
+        assert dobles.temperaturas == [None, None] and dobles.conservar == [False]      # G10 por defecto, G9
         assert r.paginas_pdf == paginas_esperadas(r.analisis.momentos)
 
     def test_sin_refinado_y_redactor(self, carpeta_videos, tmp_path, monkeypatch):
         dobles = DoblesGemini(monkeypatch)
         op = opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave", refinar=False, redactor="modelo-pro",
-                      conservar_subida=True)
+                      conservar_subida=True, temperatura=0.3)
         r = pipeline.procesar_carpeta(op).resultados[0]
         assert r.exito
         assert [l[0] for l in dobles.llamadas] == ["subir", "analizar", "redactor"]
         assert dobles.llamadas[2][1] == "modelo-pro" and r.analisis.resumen == "Resumen pulido."
         assert not any(m.titulo.endswith("(refinado)") for m in r.analisis.momentos)
+        assert dobles.temperaturas == [0.3, 0.3] and dobles.conservar == [True]      # --temperatura llega a todo
+
+    def test_refinado_antes_que_redactor(self, carpeta_videos, tmp_path, monkeypatch):
+        """G5: análisis → capturas → refinado → redactor → anotaciones → documentos."""
+        dobles = DoblesGemini(monkeypatch)
+        op = opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave", redactor="modelo-pro")
+        r = pipeline.procesar_carpeta(op).resultados[0]
+        assert r.exito, r.error
+        assert [l[0] for l in dobles.llamadas] == ["subir", "analizar", "eliminar", "refinar", "redactor"]
+        assert all(m.titulo.endswith("(refinado) (pulido)") for m in r.analisis.momentos)
+        assert all(m.ruta_captura_anotada for m in r.analisis.momentos) and r.analisis.resumen == "Resumen pulido."
+        datos = json.loads((r.carpeta_salida / config.NOMBRE_JSON).read_text(encoding="utf-8"))
+        assert all(m["titulo"].endswith("(pulido)") for m in datos["analisis"]["momentos"])
 
     def test_refinado_que_falla_conserva_el_analisis(self, carpeta_videos, tmp_path, monkeypatch):
         dobles = DoblesGemini(monkeypatch)
@@ -309,6 +398,58 @@ class TestGeminiConDobles:
         monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
         with pytest.raises(RuntimeError, match="GEMINI_API_KEY"):
             pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="gemini"))
+
+    def test_regenerar_nunca_llama_a_la_api(self, carpeta_videos, tmp_path, monkeypatch):
+        """U1 / P-H2: con clave presente, --regenerar no refina ni analiza; respeta correcciones a mano."""
+        dobles = DoblesGemini(monkeypatch)
+        op = opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave", redactor="modelo-pro")
+        r1 = pipeline.procesar_carpeta(op).resultados[0]
+        carpeta = r1.carpeta_salida
+        ruta_json = carpeta / config.NOMBRE_JSON
+        datos = json.loads(ruta_json.read_text(encoding="utf-8"))
+        datos["analisis"]["momentos"][0]["titulo"] = "Título corregido a mano"
+        ruta_json.write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
+        dobles.llamadas.clear()
+        lineas, log = registro()
+        resumen = pipeline.procesar_carpeta(replace(op, regenerar=True), log=log)
+        r2 = resumen.resultados[0]
+        nuevo = comprobar_salida(carpeta, "maquina", r2)
+        assert dobles.llamadas == [] and not r2.omitido
+        assert nuevo["analisis"]["momentos"][0]["titulo"] == "Título corregido a mano"
+        assert any("no se llama a la API" in l for l in lineas)
+        # P-H5: esta ejecución no costó nada; el acumulado del video es el del análisis original (no crece)
+        assert resumen.uso_total is None and r2.uso_ejecucion is None
+        assert r2.uso_acumulado.tokens_total == 11700 and nuevo["uso_acumulado"]["tokens_total"] == 11700
+        assert nuevo["analisis"]["uso"]["tokens_total"] == 11700
+        tabla = resumen.tabla()
+        assert "esta ejecución: US$ 0.0000 (sin API)" in tabla and "todas las ejecuciones: US$ 0.0033" in tabla
+        fila = [c.strip() for c in tabla.splitlines()[2].split("|")]
+        assert fila[3] == "-" and fila[4] == "-" and fila[5] == "US$ 0.0033" and fila[6] == "OK"
+        # tercera regeneración: sigue sin API y sin acumular
+        r3 = pipeline.procesar_carpeta(replace(op, regenerar=True)).resultados[0]
+        assert dobles.llamadas == [] and r3.uso_acumulado.tokens_total == 11700
+
+    def test_regenerar_de_un_analisis_local_no_sube_capturas(self, carpeta_videos, tmp_path, monkeypatch):
+        """P-H2 (privacidad): análisis --local y luego --regenerar en modo gemini con clave → ninguna llamada."""
+        dobles = DoblesGemini(monkeypatch)
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="local", whisper_modelo=None))
+        r = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave", regenerar=True)).resultados[0]
+        assert r.exito and dobles.llamadas == [] and r.analisis.modo == "local"
+
+    def test_forzar_acumula_lo_ya_pagado(self, carpeta_videos, tmp_path, monkeypatch):
+        """P-H5: al volver a analizar con --forzar, el acumulado del video suma las dos ejecuciones."""
+        DoblesGemini(monkeypatch)
+        op = opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave")
+        pipeline.procesar_carpeta(op)
+        resumen = pipeline.procesar_carpeta(replace(op, forzar=True))
+        r = resumen.resultados[0]
+        assert r.uso_ejecucion.tokens_total == 11700 and r.uso_acumulado.tokens_total == 23400
+        assert abs(r.uso_acumulado.costo_usd - 0.0066) < 1e-9
+        datos = json.loads((r.carpeta_salida / config.NOMBRE_JSON).read_text(encoding="utf-8"))
+        assert datos["uso_acumulado"]["tokens_total"] == 23400 and datos["analisis"]["uso"]["tokens_total"] == 11700
+        assert "esta ejecución: US$ 0.0033" in resumen.tabla() and "todas las ejecuciones: US$ 0.0066" in resumen.tabla()
+        omitido = pipeline.procesar_carpeta(op).resultados[0]
+        assert omitido.omitido and omitido.uso_ejecucion is None and omitido.uso_acumulado.tokens_total == 23400
 
     def test_regenerar_sin_clave_no_falla(self, carpeta_videos, tmp_path, monkeypatch):
         monkeypatch.delenv("GEMINI_API_KEY", raising=False)
@@ -382,15 +523,19 @@ class TestBatch:
     @pytest.fixture
     def lote(self, monkeypatch):
         dobles = DoblesGemini(monkeypatch)
-        estado = {"state": types.JobState.JOB_STATE_RUNNING, "consultas": 0}
+        estado = {"state": types.JobState.JOB_STATE_RUNNING, "consultas": 0, "lotes": 0}
 
-        def enviar_lote(cliente, peticiones, modelo, nombre_lote, *, equipo="", fps=None, resolucion="", log=print):
-            dobles.llamadas.append(("lote", [(p["info"].nombre, p["tramo"]) for p in peticiones], modelo, resolucion, equipo))
-            return types.BatchJob(name="batches/abc-123", state=types.JobState.JOB_STATE_PENDING, model=f"models/{modelo}")
+        def enviar_lote(cliente, peticiones, modelo, nombre_lote, *, equipo="", fps=None, resolucion="", temperatura=None,
+                        opciones_lote=None, log=print):
+            dobles.llamadas.append(("lote", [(p["info"].nombre, p["tramo"]) for p in peticiones], modelo, resolucion, equipo,
+                                    [p.get("clave") for p in peticiones], opciones_lote))
+            estado["lotes"] += 1
+            return types.BatchJob(name=f"batches/abc-{123 * estado['lotes']}", state=types.JobState.JOB_STATE_PENDING,
+                                  model=f"models/{modelo}")
 
         def estado_lote(cliente, nombre_job):
             estado["consultas"] += 1
-            assert nombre_job == "batches/abc-123"
+            assert nombre_job.startswith("batches/abc-")
             return types.BatchJob(name=nombre_job, state=estado["state"])
 
         def recoger_lote(cliente, job, mapa_videos, precios=None, *, log=print):
@@ -439,6 +584,28 @@ class TestBatch:
         assert sorted(l[1] for l in dobles.de_tipo("eliminar")) == ["files/maquina", "files/segundo"]
         assert listo.uso_total.batch and "batch" in listo.tabla()
         assert "recogido" in json.loads(ruta_lote.read_text(encoding="utf-8"))
+        assert "escalera" in datos and datos["escalera"]["thinking"] is True and "nota" in datos["escalera"]   # G7
+        assert isinstance(dobles.llamadas[2][6], gemini.OpcionesLote) and dobles.llamadas[2][5] == ["maquina", "segundo"]
+
+        # P-H6: recoger otra vez el mismo lote no repite refinado, capturas ni borrados, y respeta el JSON
+        ruta_json = tmp_path / "salida" / "maquina" / config.NOMBRE_JSON
+        editado = json.loads(ruta_json.read_text(encoding="utf-8"))
+        editado["analisis"]["momentos"][0]["titulo"] = "Corregido a mano"
+        ruta_json.write_text(json.dumps(editado, ensure_ascii=False), encoding="utf-8")
+        dobles.llamadas.clear()
+        lineas3, log3 = registro()
+        repetido = pipeline.procesar_carpeta(op2, log=log3)
+        assert [l[0] for l in dobles.llamadas] == ["recoger"]
+        assert all(r.omitido and r.exito for r in repetido.resultados) and repetido.uso_total is None
+        assert repetido.uso_acumulado is not None and repetido.uso_acumulado.batch
+        assert json.loads(ruta_json.read_text(encoding="utf-8"))["analisis"]["momentos"][0]["titulo"] == "Corregido a mano"
+        assert any("ya se recogió" in l for l in lineas3)
+        # con --forzar sí se rehace desde el lote (refinado incluido)
+        dobles.llamadas.clear()
+        forzado = pipeline.procesar_carpeta(replace(op2, forzar=True))
+        assert [l[0] for l in dobles.llamadas] == ["recoger", "refinar", "refinar"]
+        assert all(r.exito and not r.omitido for r in forzado.resultados)
+        assert forzado.resultados[0].uso_acumulado.tokens_total == 2 * forzado.resultados[0].uso_ejecucion.tokens_total
 
     def test_recoger_esperando_y_sin_id(self, carpeta_videos, tmp_path, lote, monkeypatch):
         dobles, estado = lote
@@ -480,6 +647,143 @@ class TestBatch:
         resumen = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"))
         assert resumen.resultados[0].omitido and dobles.llamadas == []
         assert not (tmp_path / "salida" / config.CARPETA_LOTES).exists()
+
+    def test_incompleto_no_se_envia_se_retoma(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """P-H4 en batch: momentos.json sin documentos se retoma desde el JSON en vez de omitirse o resubirse."""
+        dobles, _ = lote
+        op_sim = opciones(carpeta_videos, tmp_path)
+        monkeypatch.setattr(documentos, "generar_documentos", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("roto")))
+        assert not pipeline.procesar_carpeta(op_sim).resultados[0].exito
+        monkeypatch.undo()
+        r = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave")).resultados[0]
+        assert r.exito and not r.omitido and r.ruta_pdf.is_file() and dobles.llamadas == []
+
+    def test_opciones_del_envio_valen_al_recoger(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """P-H6: --max-momentos / --importancia-minima del envío se aplican al recoger si la CLI no dice otra cosa."""
+        dobles, estado = lote
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave", max_momentos=3,
+                                           importancia_minima=2))
+        mapas = []
+        original = gemini.recoger_lote
+        monkeypatch.setattr(gemini, "recoger_lote", lambda c, j, m, p=None, *, log=print: (mapas.append(m), original(c, j, m, p, log=log))[1])
+        estado["state"] = types.JobState.JOB_STATE_SUCCEEDED
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave"))
+        assert mapas[0]["maquina"]["max_momentos"] == 3 and mapas[0]["maquina"]["importancia_minima"] == 2
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave", forzar=True,
+                                           lote_id="abc-123", max_momentos=1, importancia_minima=4))   # ya recogido: por id
+        assert mapas[1]["maquina"]["max_momentos"] == 1 and mapas[1]["maquina"]["importancia_minima"] == 4
+
+    def test_nombres_repetidos_en_el_lote(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """P-H9: IMG_0001.mp4 e IMG_0001.mov no comparten carpeta ni clave; al recoger son dos videos."""
+        dobles, estado = lote
+        (carpeta_videos / "maquina.mp4").rename(carpeta_videos / "IMG_0001.mp4")
+        shutil.copy(carpeta_videos / "IMG_0001.mp4", carpeta_videos / "IMG_0001.mov")
+        monkeypatch.setattr(video, "transcodificar_para_subida",
+                            lambda ruta_video, destino, ffmpeg, alto=720, fps=2, *, log=print: (shutil.copy(ruta_video, destino), Path(destino))[1])
+        op = opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave")
+        resumen = pipeline.procesar_carpeta(op)
+        carpetas = sorted(r.carpeta_salida.name for r in resumen.resultados)
+        assert carpetas[0] == "IMG_0001" and carpetas[1].startswith("IMG_0001-") and len(carpetas[1]) == len("IMG_0001-") + 6
+        claves = dobles.de_tipo("lote")[0][5]
+        assert sorted(claves) == carpetas
+        datos = json.loads(next((tmp_path / "salida" / config.CARPETA_LOTES).glob("*.json")).read_text(encoding="utf-8"))
+        assert sorted(v["nombre"] for v in datos["videos"]) == carpetas
+        assert {v["info"]["nombre"] for v in datos["videos"]} == {"IMG_0001"}
+        estado["state"] = types.JobState.JOB_STATE_SUCCEEDED
+        listo = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave"))
+        assert sorted(dobles.de_tipo("recoger")[0][1]) == carpetas
+        assert len(listo.resultados) == 2 and all(r.exito for r in listo.resultados)
+        assert sorted(r.carpeta_salida.name for r in listo.resultados) == carpetas
+        assert {r.info.ruta.name for r in listo.resultados} == {"IMG_0001.mp4", "IMG_0001.mov"}
+        assert all((r.carpeta_salida / "IMG_0001.pdf").is_file() for r in listo.resultados)
+
+    def test_lote_expirado_orienta_al_usuario(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """P-H10: lote EXPIRED/FAILED → aviso claro con el paso siguiente (--batch)."""
+        dobles, estado = lote
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"))
+        monkeypatch.setattr(gemini, "estado_lote", lambda c, n: types.BatchJob(name=n, state=types.JobState.JOB_STATE_EXPIRED))
+        monkeypatch.setattr(gemini, "recoger_lote", gemini.__dict__["recoger_lote"].__wrapped__
+                            if hasattr(gemini.recoger_lote, "__wrapped__") else _recoger_lote_real)
+        lineas, log = registro()
+        r = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave"), log=log).resultados[0]
+        assert not r.exito and "JOB_STATE_EXPIRED" in r.error and "--batch" in r.error
+        assert any("AVISO" in l and "JOB_STATE_EXPIRED" in l and "--batch" in l for l in lineas)
+        assert dobles.de_tipo("eliminar") == [("eliminar", "files/maquina")]
+        # relanzar --batch reenvía solo el video sin momentos.json
+        dobles.llamadas.clear()
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"))
+        assert [l[0] for l in dobles.llamadas] == ["subir", "lote"]
+
+    def test_ctrl_c_durante_las_subidas_borra_lo_subido(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """G9 / P-H3: una interrupción a mitad del envío no deja copias del video en Google."""
+        dobles, _ = lote
+        shutil.copy(carpeta_videos / "maquina.mp4", carpeta_videos / "segundo.mp4")
+        original = dobles.subir_video
+
+        def subir(cliente, ruta, nombre, *a, **k):
+            if nombre == "segundo":
+                raise KeyboardInterrupt
+            return original(cliente, ruta, nombre, *a, **k)
+        monkeypatch.setattr(gemini, "subir_video", subir)
+        lineas, log = registro()
+        with pytest.raises(KeyboardInterrupt):
+            pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"), log=log)
+        assert dobles.de_tipo("eliminar") == [("eliminar", "files/maquina")]
+        assert not (tmp_path / "salida" / config.CARPETA_LOTES).exists()
+        assert any("interrumpido" in l for l in lineas)
+        # si falla la creación del lote también se borran (salvo --conservar-subida)
+        monkeypatch.setattr(gemini, "subir_video", original)
+        monkeypatch.setattr(gemini, "enviar_lote", lambda *a, **k: (_ for _ in ()).throw(errors.APIError(400, {"error": {"code": 400, "message": "mal", "status": "INVALID_ARGUMENT"}})))
+        dobles.llamadas.clear()
+        resumen = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"))
+        assert sorted(l[1] for l in dobles.de_tipo("eliminar")) == ["files/maquina", "files/segundo"]
+        assert all(not r.exito and "400" in r.error for r in resumen.resultados)
+        dobles.llamadas.clear()
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave", conservar_subida=True))
+        assert dobles.de_tipo("eliminar") == [] and dobles.conservar[-2:] == [True, True]
+
+    def test_lote_rechazado_por_una_opcion_se_reenvia(self, carpeta_videos, tmp_path, lote, monkeypatch):
+        """G7: si todas las respuestas del lote son un 400 de configuración, se reenvía sin esa opción (máx. 2)."""
+        dobles, estado = lote
+        shutil.copy(carpeta_videos / "maquina.mp4", carpeta_videos / "segundo.mp4")
+        pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch", api_key="clave"))
+        carpeta_lotes = tmp_path / "salida" / config.CARPETA_LOTES
+        rechazo = lambda c, j, m, p=None, *, log=print: {n: gemini.ErrorItemLote(n, 0, 3, "thinking_level is not supported") for n in m}  # noqa: E731
+        monkeypatch.setattr(gemini, "recoger_lote", rechazo)
+        recuperados = []
+        monkeypatch.setattr(gemini, "obtener_archivo", lambda c, nombre: (recuperados.append(nombre),
+                                                                          types.File(name=nombre, uri=f"https://x/{nombre}", mime_type="video/mp4"))[1])
+        estado["state"] = types.JobState.JOB_STATE_SUCCEEDED
+        lineas, log = registro()
+        resumen = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", lote_id="abc-123",
+                                                     api_key="clave"), log=log)
+        # el lote se reenvió con los mismos archivos remotos, sin borrarlos ni refinar nada
+        assert [l[0] for l in dobles.llamadas if l[0] != "subir"][-2:] == ["lote", "lote"] or dobles.de_tipo("lote")
+        reenvio = dobles.de_tipo("lote")[-1]
+        assert sorted(reenvio[5]) == ["maquina", "segundo"] and reenvio[6].thinking is False and reenvio[6].reintentos == 1
+        assert sorted(recuperados) == ["files/maquina", "files/segundo"] and dobles.de_tipo("eliminar") == []
+        assert all(r.exito and r.analisis is None for r in resumen.resultados) and "pendiente (lote)" in resumen.tabla()
+        assert any("se reenvía" in l and "sin thinking" in l for l in lineas)
+        viejo = json.loads((carpeta_lotes / "abc-123.json").read_text(encoding="utf-8"))
+        assert viejo["reenviado_como"] == "abc-246" and "recogido" in viejo
+        nuevo = json.loads((carpeta_lotes / "abc-246.json").read_text(encoding="utf-8"))
+        assert nuevo["reenvio_de"] == "abc-123" and nuevo["escalera"]["thinking"] is False and nuevo["escalera"]["reintentos"] == 1
+        assert [v["nombre"] for v in nuevo["videos"]] == ["maquina", "segundo"] and "recogido" not in nuevo
+        # el lote nuevo es el único pendiente; si vuelve a fallar por el esquema se reenvía una segunda vez…
+        monkeypatch.setattr(gemini, "recoger_lote", lambda c, j, m, p=None, *, log=print: {n: gemini.ErrorItemLote(n, 0, 3, "response_json_schema unsupported") for n in m})
+        segundo = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave"))
+        assert all(r.exito and r.analisis is None for r in segundo.resultados)
+        tercero_datos = json.loads((carpeta_lotes / "abc-369.json").read_text(encoding="utf-8"))
+        assert tercero_datos["escalera"]["esquema"] is False and tercero_datos["escalera"]["reintentos"] == 2
+        # …y a la tercera ya no: se registran los errores y se borran los archivos remotos
+        dobles.llamadas.clear()
+        tercero = pipeline.procesar_carpeta(opciones(carpeta_videos, tmp_path, modo="batch-recoger", api_key="clave"))
+        assert all(not r.exito and "schema" in r.error for r in tercero.resultados)
+        assert sorted(l[1] for l in dobles.de_tipo("eliminar")) == ["files/maquina", "files/segundo"]
+        assert not dobles.de_tipo("lote")
+
+
+_recoger_lote_real = gemini.recoger_lote
 
 
 # ----------------------------------------------------------------------------
@@ -524,18 +828,25 @@ class TestPiezas:
         info_largo = info_falsa("/v/b.mp4", "nombre " * 12)
         analisis_ok = analisis_falso(info_ok, 12)
         analisis_sin_precio = analisis_falso(info_largo, 3, modelo="modelo-x", costo=None)
+        acumulado_d = Uso(modelo=MODELO, tokens_total=20000, llamadas=2, costo_usd=0.005)
         resultados = [
-            ResultadoVideo(info=info_ok, carpeta_salida=Path("/s/a"), exito=True, analisis=analisis_ok, paginas_pdf=8),
-            ResultadoVideo(info=info_largo, carpeta_salida=Path("/s/b"), exito=True, analisis=analisis_sin_precio, paginas_pdf=-1),
+            ResultadoVideo(info=info_ok, carpeta_salida=Path("/s/a"), exito=True, analisis=analisis_ok, paginas_pdf=8,
+                           uso_ejecucion=analisis_ok.uso, uso_acumulado=analisis_ok.uso),
+            ResultadoVideo(info=info_largo, carpeta_salida=Path("/s/b"), exito=True, analisis=analisis_sin_precio, paginas_pdf=-1,
+                           uso_ejecucion=analisis_sin_precio.uso, uso_acumulado=analisis_sin_precio.uso),
             ResultadoVideo(info=info_falsa("/v/c.mp4", "c"), carpeta_salida=Path("/s/c"), exito=False, error="falló\n  todo"),
-            ResultadoVideo(info=info_falsa("/v/d.mp4", "d"), carpeta_salida=Path("/s/d"), exito=True, analisis=analisis_ok, omitido=True),
+            ResultadoVideo(info=info_falsa("/v/d.mp4", "d"), carpeta_salida=Path("/s/d"), exito=True, analisis=analisis_ok,
+                           omitido=True, uso_acumulado=acumulado_d),
             ResultadoVideo(info=info_falsa("/v/e.mp4", "e"), carpeta_salida=Path("/s/e"), exito=True),
         ]
-        resumen = pipeline.ResumenEjecucion(resultados, pipeline.sumar_uso(resultados, MODELO), 3725)
+        resumen = pipeline.ResumenEjecucion(resultados, pipeline.sumar_uso(resultados, MODELO), 3725,
+                                            pipeline.sumar_acumulado(resultados, MODELO))
         assert resumen.uso_total.tokens_total == 9900 * 2 and resumen.uso_total.costo_usd is None    # un precio desconocido
+        assert resumen.uso_acumulado.tokens_total == 9900 * 2 + 20000 and resumen.uso_acumulado.costo_usd is None
         lineas = resumen.tabla().splitlines()
         cabecera, separador, filas = lineas[0], lineas[1], lineas[2:7]
         assert cabecera.startswith("Video") and len(separador) >= len(cabecera)
+        assert "Costo est." in cabecera and "Acumulado" in cabecera
         posiciones = [i for i, c in enumerate(cabecera) if c == "|"]
         assert [i for i, c in enumerate(separador) if c == "+"] == posiciones
         for fila in filas:
@@ -543,10 +854,15 @@ class TestPiezas:
         assert "…" in filas[1] and "?" in filas[1] and "ERROR: falló todo" in filas[2]
         assert "ya procesado (omitido)" in filas[3] and "pendiente (lote)" in filas[4]
         assert "US$ 0.0025" in filas[0] and "8 |" in filas[0]
-        assert any(l.startswith("ESTIMACIÓN de costo total: desconocida") for l in lineas)
+        # P-H5: el omitido no cuenta en esta ejecución (Tokens/Costo "-") pero sí muestra su acumulado
+        celdas_d = [c.strip() for c in filas[3].split("|")]
+        assert celdas_d[3] == "-" and celdas_d[4] == "-" and celdas_d[5] == "US$ 0.0050"
+        assert any(l.startswith("ESTIMACIÓN de costo de esta ejecución: desconocida") for l in lineas)
+        assert any("acumulado de estos videos en todas las ejecuciones: desconocida" in l for l in lineas)
         assert any("1 h 2 min" in l and "1 con error" in l and "1 omitido" in l for l in lineas)
         vacio = pipeline.ResumenEjecucion([], None, 5).tabla()
-        assert "(ningún video)" in vacio and "US$ 0.0000" in vacio
+        assert "(ningún video)" in vacio and "esta ejecución: US$ 0.0000 (sin API)" in vacio
+        assert "todas las ejecuciones: US$ 0.0000 (sin API)" in vacio
 
     def test_seleccionar_videos_con_solo(self, tmp_path):
         carpeta = tmp_path / "videos"
@@ -591,16 +907,33 @@ class TestPiezas:
         archivo = (tmp_path / config.NOMBRE_LOG).read_text(encoding="utf-8").splitlines()
         assert lineas == archivo and all(l.endswith((" hola", " mundo")) and l[2] == ":" for l in archivo)
 
+    def test_anotar_momentos_explica_en_el_log_la_zona_que_no_se_anota(self, tmp_path):
+        """D8: el aviso de ``anotar_captura`` ("cubre casi toda la captura") debe llegar al log del video."""
+        from PIL import Image
+
+        captura = tmp_path / "01_00-10.jpg"
+        Image.new("RGB", (320, 180), (90, 120, 150)).save(captura, "JPEG")
+        marco = Momento(tiempo_seg=10.0, titulo="Marco", descripcion="", zona={"caja": [0, 0, 1, 1]},
+                        ruta_captura=str(captura))
+        punto = Momento(tiempo_seg=20.0, titulo="Punto", descripcion="", zona={"x": 0.5, "y": 0.5},
+                        ruta_captura=str(captura))
+        lineas, consola = registro()
+        assert pipeline.anotar_momentos([marco, punto], log=consola) == 1
+        assert marco.ruta_captura_anotada is None and punto.ruta_captura_anotada is not None
+        assert any("casi toda la captura" in l for l in lineas) and lineas[-1].startswith("Anotaciones: 1 ")
+
 
 # ----------------------------------------------------------------------------
 # CLI (subprocess)
 # ----------------------------------------------------------------------------
-def ejecutar_cli(*args, cwd=None, sin_clave: bool = False) -> subprocess.CompletedProcess:
+def ejecutar_cli(*args, cwd=None, sin_clave: bool = True) -> subprocess.CompletedProcess:
+    """Ejecuta la CLI en un subproceso SIN clave de Gemini: las variables van vacías (no basta quitarlas, porque
+    ``load_dotenv`` rellenaría las ausentes con el ``.env`` del usuario y el test llamaría a la API real)."""
     entorno = dict(os.environ)
     entorno["PYTHONIOENCODING"] = "utf-8"
     if sin_clave:
-        entorno.pop("GEMINI_API_KEY", None)
-        entorno.pop("GOOGLE_API_KEY", None)
+        entorno["GEMINI_API_KEY"] = ""
+        entorno["GOOGLE_API_KEY"] = ""
     return subprocess.run([sys.executable, str(CLI), *map(str, args)], capture_output=True, encoding="utf-8",
                           errors="replace", cwd=cwd or RAIZ, env=entorno, timeout=300)
 
@@ -626,16 +959,36 @@ class TestCLI:
         sin_clave = ejecutar_cli(carpeta_videos, "--salida", tmp_path / "s", cwd=tmp_path, sin_clave=True)
         assert sin_clave.returncode == 2 and "GEMINI_API_KEY" in sin_clave.stderr and ".env" in sin_clave.stderr
         assert "--simular" in sin_clave.stderr
+        assert not (tmp_path / "s").exists() or not list((tmp_path / "s").rglob(config.NOMBRE_LOG))   # nunca llegó a subir nada
         mal_solo = ejecutar_cli(carpeta_videos, "--simular", "--solo", "nada", "--salida", tmp_path / "s")
         assert mal_solo.returncode == 2 and "--solo" in mal_solo.stderr
         mala_importancia = ejecutar_cli(carpeta_videos, "--simular", "--importancia-minima", "9")
         assert mala_importancia.returncode == 2 and "1 a 5" in mala_importancia.stderr
 
+    def test_cli_sin_clave_con_env_del_usuario(self, tmp_path, carpeta_videos):
+        """P-H1: aunque exista un .env con clave junto al script, el test 'sin clave' no debe tocar la API."""
+        copia = tmp_path / "proyecto"
+        for nombre in ("resumen_videos", "tools"):
+            shutil.copytree(RAIZ / nombre, copia / nombre, ignore=shutil.ignore_patterns("__pycache__"))
+        shutil.copy(CLI, copia / CLI.name)
+        (copia / ".env").write_text("GEMINI_API_KEY=clave-de-prueba-que-no-debe-usarse\n", encoding="utf-8")
+        entorno = dict(os.environ, PYTHONIOENCODING="utf-8", GEMINI_API_KEY="", GOOGLE_API_KEY="")
+        proceso = subprocess.run([sys.executable, str(copia / CLI.name), str(carpeta_videos), "--salida", str(tmp_path / "s")],
+                                 capture_output=True, encoding="utf-8", errors="replace", cwd=copia, env=entorno, timeout=300)
+        assert proceso.returncode == 2 and "GEMINI_API_KEY" in proceso.stderr, proceso.stdout + proceso.stderr
+        assert not list((tmp_path / "s").rglob("log.txt")) if (tmp_path / "s").exists() else True
+
+    def test_temperatura_en_la_cli(self):
+        import resumir_videos
+        parser = resumir_videos.crear_parser()
+        assert parser.parse_args([]).temperatura is None
+        assert parser.parse_args(["--temperatura", "0.2"]).temperatura == 0.2
+
     def test_simular_completo(self, tmp_path, carpeta_videos):
         salida = tmp_path / "salida"
         proceso = ejecutar_cli(carpeta_videos, "--simular", "--salida", salida, "--por-pagina", "2", "--sin-indice")
         assert proceso.returncode == 0, proceso.stderr
-        assert "ESTIMACIÓN de costo total: US$ 0.0000" in proceso.stdout and "| OK" in proceso.stdout
+        assert "ESTIMACIÓN de costo de esta ejecución: US$ 0.0000 (sin API)" in proceso.stdout and "| OK" in proceso.stdout
         assert (salida / "maquina" / config.NOMBRE_JSON).is_file() and (salida / "maquina" / "maquina.pdf").is_file()
         datos = json.loads((salida / "maquina" / config.NOMBRE_JSON).read_text(encoding="utf-8"))
         assert datos["documentos"]["paginas"] == 1 + math.ceil(len(datos["analisis"]["momentos"]) / 2)

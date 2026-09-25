@@ -8,9 +8,13 @@ textos, valores e iconos de pantalla), anotaciones (círculo/flecha si el modelo
 indica una zona) y documentos ``.docx`` + ``.pdf``.  Cada video escribe su propio
 ``log.txt`` (y ``error.txt`` si falla) y un fallo nunca detiene a los demás.
 
-``--regenerar``: si ya existe ``momentos.json`` se salta el análisis (sin API) y
-se rehacen capturas, anotaciones y documentos a partir de él (permite corregir
-el JSON a mano o pegar un análisis hecho en el chat de Gemini).
+``--regenerar``: exige que exista ``momentos.json`` y NUNCA llama a la API (ni
+análisis, ni refinado, ni redactor): rehace capturas, anotaciones y documentos a
+partir del JSON tal cual (permite corregir el JSON a mano o pegar un análisis
+hecho en el chat de Gemini), aplicando ``--max-momentos`` e ``--importancia-minima``
+si se indican.  Un video con ``momentos.json`` pero sin documentos (una ejecución
+anterior falló a medias) no cuenta como "ya procesado": se retoma desde el JSON,
+también sin API.
 
 El modo batch va en dos pasos: ``procesar_carpeta`` con ``modo="batch"`` sube
 los videos, envía el lote y guarda ``salida/_lotes/<id>.json``; más tarde, con
@@ -97,6 +101,7 @@ class Opciones:
     forzar: bool = False
     solo: Optional[list] = None
     verbose: bool = False
+    temperatura: Optional[float] = config.TEMPERATURA   # None = no se envía (valor por defecto del modelo)
 
 
 @dataclass
@@ -104,8 +109,9 @@ class ResumenEjecucion:
     """Resultado de una ejecución completa: un ``ResultadoVideo`` por video más totales."""
 
     resultados: list                        # list[ResultadoVideo]
-    uso_total: Optional[Uso]                # suma de los análisis pagados en esta ejecución (None sin API)
+    uso_total: Optional[Uso]                # suma de lo pagado a la API EN ESTA ejecución (None sin API)
     segundos: float
+    uso_acumulado: Optional[Uso] = None     # suma de lo pagado por estos videos en todas las ejecuciones (JSON)
 
     def exitosos(self) -> list:
         return [r for r in self.resultados if r.exito]
@@ -114,11 +120,15 @@ class ResumenEjecucion:
         return [r for r in self.resultados if not r.exito]
 
     def tabla(self) -> str:
-        """Tabla alineada para consola (Video | Momentos | Págs | Tokens | Costo est. | Estado) y totales."""
-        cabecera = ("Video", "Momentos", "Págs", "Tokens", "Costo est.", "Estado")
+        """Tabla alineada para consola (Video | Momentos | Págs | Tokens | Costo est. | Acumulado | Estado) y totales.
+
+        ``Tokens`` y ``Costo est.`` son de ESTA ejecución; ``Acumulado`` es todo lo pagado por el video (según su
+        ``momentos.json``), también en los omitidos y regenerados.
+        """
+        cabecera = ("Video", "Momentos", "Págs", "Tokens", "Costo est.", "Acumulado", "Estado")
         filas = [_fila_tabla(r) for r in self.resultados]
         anchos = [max([len(c)] + [len(f[i]) for f in filas]) for i, c in enumerate(cabecera)]
-        numericas = {1, 2, 3, 4}
+        numericas = {1, 2, 3, 4, 5}
 
         def formatear(fila) -> str:
             celdas = [v.rjust(anchos[i]) if i in numericas else v.ljust(anchos[i]) for i, v in enumerate(fila)]
@@ -132,14 +142,10 @@ class ResumenEjecucion:
         return "\n".join(lineas)
 
     def _linea_costo(self) -> str:
-        uso = self.uso_total
-        if uso is None:
-            return "ESTIMACIÓN de costo total: US$ 0.0000 (sin API: modo local o simulado)"
-        if uso.costo_usd is None:
-            return (f"ESTIMACIÓN de costo total: desconocida ({uso.tokens_total} tokens; el modelo {uso.modelo!r} "
-                    "no tiene precio en config: use --precio-entrada y --precio-salida)")
-        return (f"ESTIMACIÓN de costo total: US$ {uso.costo_usd:.4f} ({uso.tokens_total} tokens"
-                f"{', batch' if uso.batch else ''}; precios de config, verificar en ai.google.dev)")
+        """Distingue lo pagado en ESTA ejecución de lo acumulado por los videos listados (todas las ejecuciones)."""
+        return (f"ESTIMACIÓN de costo de esta ejecución: {_describir_uso(self.uso_total)}; "
+                f"acumulado de estos videos en todas las ejecuciones: {_describir_uso(self.uso_acumulado)} "
+                "(precios de config, verificar en ai.google.dev)")
 
     def _linea_totales(self) -> str:
         omitidos = sum(1 for r in self.resultados if r.omitido)
@@ -148,21 +154,32 @@ class ResumenEjecucion:
                 f"{omitidos} omitido(s); tiempo {_duracion_legible(self.segundos)}")
 
 
+def _describir_uso(uso: Uso | None) -> str:
+    if uso is None:
+        return "US$ 0.0000 (sin API)"
+    if uso.costo_usd is None:
+        return (f"desconocida ({uso.tokens_total} tokens; el modelo {uso.modelo!r} no tiene precio en config: "
+                "use --precio-entrada y --precio-salida)")
+    return f"US$ {uso.costo_usd:.4f} ({uso.tokens_total} tokens{', batch' if uso.batch else ''})"
+
+
+def _costo_corto(uso: Uso | None) -> str:
+    if uso is None:
+        return "-"
+    return "?" if uso.costo_usd is None else f"US$ {uso.costo_usd:.4f}"
+
+
 def _fila_tabla(r: ResultadoVideo) -> tuple:
     analisis = r.analisis
-    uso = analisis.uso if analisis is not None else None
+    uso = r.uso_ejecucion                   # lo pagado en ESTA ejecución (None: omitido, regenerado, local, simulado)
     nombre = r.info.nombre
     if len(nombre) > _ANCHO_NOMBRE_TABLA:
         nombre = nombre[:_ANCHO_NOMBRE_TABLA - 1] + "…"
     momentos = str(len(analisis.momentos)) if analisis is not None else "-"
     paginas = str(r.paginas_pdf) if isinstance(r.paginas_pdf, int) and r.paginas_pdf >= 0 else "-"
     tokens = str(uso.tokens_total) if uso is not None else "-"
-    if uso is None:
-        costo = "-"
-    elif uso.costo_usd is None:
-        costo = "?"
-    else:
-        costo = f"US$ {uso.costo_usd:.4f}"
+    costo = _costo_corto(uso)
+    acumulado = _costo_corto(r.uso_acumulado)
     if r.omitido:
         estado = "ya procesado (omitido)"
     elif not r.exito:
@@ -171,7 +188,7 @@ def _fila_tabla(r: ResultadoVideo) -> tuple:
         estado = "pendiente (lote)"
     else:
         estado = "OK" + (" (respuesta cortada)" if analisis.truncado else "")
-    return nombre, momentos, paginas, tokens, costo, estado
+    return nombre, momentos, paginas, tokens, costo, acumulado, estado
 
 
 def _una_linea(texto: str) -> str:
@@ -188,9 +205,19 @@ def _duracion_legible(segundos: float) -> str:
 
 
 def sumar_uso(resultados: list, modelo: str) -> Uso | None:
-    """Suma el ``Uso`` de los análisis pagados en esta ejecución (omitidos y fallidos no cuentan)."""
-    usos = [r.analisis.uso for r in resultados
-            if r.exito and not r.omitido and r.analisis is not None and r.analisis.uso is not None]
+    """Suma lo pagado a la API EN ESTA ejecución (``ResultadoVideo.uso_ejecucion``): los omitidos, los regenerados
+    desde ``momentos.json`` y los fallidos no cuentan."""
+    return _sumar_usos([r.uso_ejecucion for r in resultados if r.exito and not r.omitido and r.uso_ejecucion is not None],
+                       modelo)
+
+
+def sumar_acumulado(resultados: list, modelo: str) -> Uso | None:
+    """Suma lo pagado por los videos listados en TODAS las ejecuciones (``ResultadoVideo.uso_acumulado``, según su
+    ``momentos.json``), incluidos los omitidos y regenerados."""
+    return _sumar_usos([r.uso_acumulado for r in resultados if r.uso_acumulado is not None], modelo)
+
+
+def _sumar_usos(usos: list, modelo: str) -> Uso | None:
     if not usos:
         return None
     total = Uso(modelo=modelo, batch=all(u.batch for u in usos))
@@ -198,6 +225,19 @@ def sumar_uso(resultados: list, modelo: str) -> Uso | None:
         total.sumar(uso)
     if any(u.costo_usd is None for u in usos):
         total.costo_usd = None      # una suma parcial engañaría: mejor "desconocido"
+    return total
+
+
+def _acumular(previo: Uso | None, actual: Uso | None) -> Uso | None:
+    """Uso acumulado de un video: lo registrado en su ``momentos.json`` más lo pagado ahora (None si nada)."""
+    presentes = [u for u in (previo, actual) if u is not None]
+    if not presentes:
+        return None
+    total = Uso(modelo=presentes[-1].modelo, batch=all(u.batch for u in presentes))
+    for uso in presentes:
+        total.sumar(uso)
+    if any(u.costo_usd is None for u in presentes):
+        total.costo_usd = None
     return total
 
 
@@ -307,6 +347,8 @@ def _momento_desde_dict(datos: dict, base: Path) -> Momento:
         ruta_captura_anotada=absoluta(datos.get("captura_anotada")),
         tiempo_real_seg=datos.get("tiempo_real_seg"),
         puntaje=datos.get("puntaje"),
+        titulo_original=datos.get("titulo_original"),
+        descripcion_original=datos.get("descripcion_original"),
     )
 
 
@@ -320,19 +362,63 @@ def _uso_desde_dict(datos) -> Uso | None:
 
 
 def cargar_json(carpeta: Path) -> tuple[ResultadoAnalisis | None, dict]:
-    """Lee el ``momentos.json`` de un video ya procesado: ``(análisis, documentos)``; ``(None, {})`` si no se puede."""
+    """Lee el ``momentos.json`` de un video ya procesado: ``(análisis, documentos)``; ``(None, {})`` si no se puede.
+
+    Los ``momentos_descartados`` por un filtro de una regeneración anterior vuelven a la lista completa (en orden
+    cronológico): el análisis nunca se pierde por regenerar con ``--max-momentos`` / ``--importancia-minima``.
+    """
     carpeta = Path(carpeta)
     try:
         datos = json.loads((carpeta / config.NOMBRE_JSON).read_text(encoding="utf-8"))
         a = datos["analisis"]
+        momentos = [_momento_desde_dict(m, carpeta) for m in (a.get("momentos") or []) + (a.get("momentos_descartados") or [])]
+        momentos.sort(key=lambda m: m.tiempo_seg)
         analisis = ResultadoAnalisis(
-            momentos=[_momento_desde_dict(m, carpeta) for m in a.get("momentos") or []],
+            momentos=momentos,
             modo=str(a.get("modo") or ""), modelo=str(a.get("modelo") or ""), resumen=a.get("resumen"),
             uso=_uso_desde_dict(a.get("uso")), truncado=bool(a.get("truncado")), avisos=list(a.get("avisos") or []),
             transcripcion=a.get("transcripcion"), tramos=int(a.get("tramos") or 1), titulo=a.get("titulo"))
         return analisis, dict(datos.get("documentos") or {})
     except (OSError, ValueError, KeyError, TypeError, AttributeError):
         return None, {}
+
+
+def _uso_acumulado_previo(carpeta: Path) -> Uso | None:
+    """Uso acumulado que registra el ``momentos.json`` existente (clave ``uso_acumulado``; en JSON antiguos, el uso
+    del análisis); None si no hay JSON o no tiene uso."""
+    try:
+        datos = json.loads((Path(carpeta) / config.NOMBRE_JSON).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if not isinstance(datos, dict):
+        return None
+    if isinstance(datos.get("uso_acumulado"), dict):
+        return _uso_desde_dict(datos["uso_acumulado"])
+    analisis = datos.get("analisis")
+    return _uso_desde_dict(analisis.get("uso")) if isinstance(analisis, dict) else None
+
+
+def _estado_salida(carpeta: Path) -> str | None:
+    """None si no hay ``momentos.json``; "completo" si además existen el .docx y el .pdf registrados y no hay
+    ``error.txt``; "incompleto" si el análisis se guardó pero una ejecución anterior falló antes de los documentos."""
+    carpeta = Path(carpeta)
+    if not (carpeta / config.NOMBRE_JSON).is_file():
+        return None
+    _, docs = cargar_json(carpeta)
+    completo = (bool(docs.get("docx")) and bool(docs.get("pdf")) and (carpeta / str(docs["docx"])).is_file()
+                and (carpeta / str(docs["pdf"])).is_file() and not (carpeta / config.NOMBRE_ERROR).exists())
+    return "completo" if completo else "incompleto"
+
+
+def _json_posterior_a(carpeta: Path, enviado_iso: str) -> bool:
+    """True si el ``momentos.json`` de la carpeta se generó después del instante ISO dado (o no se puede saber)."""
+    try:
+        generado = str(json.loads((Path(carpeta) / config.NOMBRE_JSON).read_text(encoding="utf-8")).get("generado") or "")
+    except (OSError, ValueError, AttributeError):
+        return True
+    if not generado or not enviado_iso:
+        return True
+    return generado >= enviado_iso
 
 
 def _info_desde_dict(datos: dict) -> InfoVideo:
@@ -396,7 +482,7 @@ def anotar_momentos(momentos: list, *, log: Callable[[str], None] = print) -> in
             continue
         origen = Path(momento.ruta_captura)
         destino = origen.with_name(origen.stem + "_anotada.jpg")
-        if anotar_captura(origen, momento.zona, destino) is not None:
+        if anotar_captura(origen, momento.zona, destino, log=log) is not None:
             momento.ruta_captura_anotada = str(destino)
             anotadas += 1
     log(f"Anotaciones: {anotadas} capturas con círculo/flecha.")
@@ -490,7 +576,8 @@ def _subir(info: InfoVideo, op: Opciones, cliente, ffmpeg: str, log: Callable[[s
     temporal = Path(tempfile.mkdtemp(prefix="resumen_videos_"))
     try:
         ruta_subida = _preparar_subida(info, op, ffmpeg, temporal, log)
-        return gemini.subir_video(cliente, ruta_subida, info.nombre, timeout_procesado=op.timeout_procesado, log=log)
+        return gemini.subir_video(cliente, ruta_subida, info.nombre, timeout_procesado=op.timeout_procesado,
+                                  conservar_subida=op.conservar_subida, log=log)
     finally:
         shutil.rmtree(temporal, ignore_errors=True)
 
@@ -500,22 +587,20 @@ def _subir(info: InfoVideo, op: Opciones, cliente, ffmpeg: str, log: Callable[[s
 # ----------------------------------------------------------------------------
 def _analizar_con_gemini(info: InfoVideo, op: Opciones, cliente, ffmpeg: str,
                          log: Callable[[str], None]) -> ResultadoAnalisis:
-    """Subida → ``analizar_video`` → borrado del archivo remoto (salvo ``conservar_subida``) → redactor opcional."""
+    """Subida → ``analizar_video`` → borrado del archivo remoto (salvo ``conservar_subida``; el ``finally`` cubre
+    también Ctrl+C).  El refinado y el redactor van después de las capturas (``_finalizar_video``)."""
     precios = precios_de(op)
     archivo = _subir(info, op, cliente, ffmpeg, log)
     try:
-        resultado = gemini.analizar_video(
+        return gemini.analizar_video(
             cliente, archivo, info, modelo=op.modelo, fps=op.fps, tramo_max_seg=op.tramo_min * 60,
             precios=precios, equipo=op.equipo, resolucion=op.resolucion, max_momentos=op.max_momentos,
-            importancia_minima=op.importancia_minima, log=log)
+            importancia_minima=op.importancia_minima, temperatura=op.temperatura, log=log)
     finally:
         if op.conservar_subida:
             log(f"Archivo remoto conservado (--conservar-subida): {archivo.name}")
         else:
             gemini.eliminar_archivo(cliente, archivo, log=log)
-    if op.redactor:
-        resultado = gemini.pulir_redaccion(cliente, resultado, op.redactor, precios, log=log)
-    return resultado
 
 
 def _analizar(info: InfoVideo, op: Opciones, cliente, ffmpeg: str, log: Callable[[str], None]) -> ResultadoAnalisis:
@@ -538,7 +623,7 @@ def _analizar(info: InfoVideo, op: Opciones, cliente, ffmpeg: str, log: Callable
 
 def _modelo_refinado(analisis: ResultadoAnalisis, op: Opciones) -> str:
     """Modelo para el refinado: el que realmente respondió el análisis (tras fallbacks; sin el sufijo del
-    redactor ``a+b``) si el análisis viene de Gemini, y si no (local/simulado regenerados) el de la CLI."""
+    redactor ``a+b``) si el análisis viene de Gemini, y si no el de la CLI."""
     if analisis.modo.startswith("gemini") and analisis.modelo:
         return analisis.modelo.split("+", 1)[0].strip() or op.modelo
     return op.modelo
@@ -553,26 +638,54 @@ def _refinar(cliente, analisis: ResultadoAnalisis, op: Opciones, log: Callable[[
     modelo = _modelo_refinado(analisis, op)
     log(f"Refinando títulos y descripciones con {con_captura} capturas en alta resolución ({modelo})…")
     try:
-        return gemini.refinar_con_capturas(cliente, analisis, modelo, precios_de(op), equipo=op.equipo, log=log)
+        return gemini.refinar_con_capturas(cliente, analisis, modelo, precios_de(op), equipo=op.equipo,
+                                           temperatura=op.temperatura, log=log)
     except Exception as exc:  # noqa: BLE001 - el refinado es opcional: nunca debe tirar un análisis ya pagado
         log(f"Aviso: el refinado falló y se conserva el análisis original ({exc}).")
         analisis.avisos.append(f"Refinado con capturas omitido: {exc}")
         return analisis
 
 
+def _pulir(cliente, analisis: ResultadoAnalisis, op: Opciones, log: Callable[[str], None]) -> ResultadoAnalisis:
+    """Redactor opcional (``--redactor``), DESPUÉS del refinado para que este no deshaga su trabajo."""
+    try:
+        return gemini.pulir_redaccion(cliente, analisis, op.redactor, precios_de(op), temperatura=op.temperatura, log=log)
+    except Exception as exc:  # noqa: BLE001 - opcional: nunca debe tirar un análisis ya pagado
+        log(f"Aviso: el redactor falló y se conserva el texto anterior ({exc}).")
+        analisis.avisos.append(f"Redactor omitido: {exc}")
+        return analisis
+
+
 def _finalizar_video(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis, op: Opciones, cliente,
-                     ffmpeg: str, log: Callable[[str], None]) -> tuple[ResultadoAnalisis, Path, Path, int]:
-    """Del análisis a los documentos: JSON → capturas → refinado → anotaciones → docx/pdf → JSON actualizado."""
-    guardar_json(carpeta, info, analisis)
+                     ffmpeg: str, log: Callable[[str], None], *, uso_previo: Uso | None = None,
+                     con_api: bool = True) -> tuple[ResultadoAnalisis, Path, Path, int, Uso | None]:
+    """Del análisis a los documentos: JSON → capturas → refinado → redactor → JSON → anotaciones → docx/pdf → JSON.
+
+    ``con_api`` False (``--regenerar`` o retomar desde el JSON): no se llama a la API (ni refinado ni redactor) y
+    el uso acumulado del video no cambia.  Devuelve ``(análisis, docx, pdf, páginas, uso acumulado)``; el uso
+    acumulado (``uso_previo`` + lo pagado ahora) se guarda en el JSON bajo ``uso_acumulado``.
+    """
+    def acumulado_de(a: ResultadoAnalisis) -> Uso | None:
+        return _acumular(uso_previo, a.uso) if con_api else uso_previo
+
+    def guardar(a: ResultadoAnalisis, **extra) -> None:
+        acumulado = acumulado_de(a)
+        guardar_json(carpeta, info, a, extra={"uso_acumulado": None if acumulado is None else acumulado.a_dict(), **extra})
+
+    guardar(analisis)
     log(f"{config.NOMBRE_JSON} guardado ({len(analisis.momentos)} momentos).")
     if not analisis.momentos:
         raise RuntimeError("El análisis no encontró ningún momento: no hay nada que documentar "
                            "(revise el video o los filtros --max-momentos / --importancia-minima).")
     capturar_momentos(info, analisis.momentos, carpeta, ffmpeg, anotar=False, log=log)
-    if op.refinar and cliente is not None:
-        analisis = _refinar(cliente, analisis, op, log)
-        guardar_json(carpeta, info, analisis)
-    elif op.refinar and analisis.modo.startswith("gemini"):
+    if con_api and cliente is not None:
+        if op.refinar:
+            analisis = _refinar(cliente, analisis, op, log)
+        if op.redactor:
+            analisis = _pulir(cliente, analisis, op, log)
+        if op.refinar or op.redactor:
+            guardar(analisis)
+    elif con_api and op.refinar and analisis.modo.startswith("gemini"):
         log("Refinado con capturas omitido: no hay cliente de Gemini (sin clave).")
     if op.anotar:
         anotar_momentos(analisis.momentos, log=log)
@@ -580,27 +693,80 @@ def _finalizar_video(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis
         info.nombre, analisis.momentos, carpeta, titulo=analisis.titulo, resumen=analisis.resumen,
         duracion=info.duracion, modo=analisis.modo, modelo=analisis.modelo, por_pagina=op.por_pagina,
         incluir_indice=op.incluir_indice, log=log)
-    guardar_json(carpeta, info, analisis, extra={"documentos": {"docx": docx.name, "pdf": pdf.name, "paginas": paginas}})
+    guardar(analisis, documentos={"docx": docx.name, "pdf": pdf.name, "paginas": paginas})
     (Path(carpeta) / config.NOMBRE_ERROR).unlink(missing_ok=True)   # un error de una ejecución anterior ya no aplica
-    return analisis, docx, pdf, paginas
+    return analisis, docx, pdf, paginas, acumulado_de(analisis)
 
 
 def _log_cabecera(info: InfoVideo, carpeta: Path, log: Callable[[str], None]) -> None:
     log(f"=== {info.ruta.name}: {formatear_tiempo(info.duracion)}, {info.ancho}x{info.alto}, {info.fps:g} fps, "
-        f"{info.tamano_bytes / _MB:.0f} MB → {carpeta}")
+        f"{info.tamano_bytes / _MB:.0f} MB -> {carpeta}")
 
 
 def _resultado_omitido(info: InfoVideo, carpeta: Path, inicio: float, log: Callable[[str], None]) -> ResultadoVideo:
-    """Video ya procesado: se carga lo que hay en ``momentos.json`` sin volver a analizar."""
+    """Video ya procesado (JSON y documentos completos): se carga lo que hay en ``momentos.json`` sin volver a analizar."""
     analisis, docs = cargar_json(carpeta)
-    log(f"Ya procesado ({config.NOMBRE_JSON} existe): se omite. Use --forzar para repetir el análisis o "
-        "--regenerar para rehacer capturas y documentos sin volver a analizar.")
+    log(f"Ya procesado ({config.NOMBRE_JSON} y documentos existen): se omite. Use --forzar para repetir el análisis "
+        "o --regenerar para rehacer capturas y documentos sin volver a analizar.")
     paginas = docs.get("paginas")
     return ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True, analisis=analisis,
                           ruta_docx=carpeta / docs["docx"] if docs.get("docx") else None,
                           ruta_pdf=carpeta / docs["pdf"] if docs.get("pdf") else None,
                           paginas_pdf=paginas if isinstance(paginas, int) else None,
-                          omitido=True, segundos=time.monotonic() - inicio)
+                          omitido=True, segundos=time.monotonic() - inicio, uso_acumulado=_uso_acumulado_previo(carpeta))
+
+
+def _resultado_listo(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis, docx: Path, pdf: Path, paginas: int,
+                     acumulado: Uso | None, inicio: float, con_api: bool, log: Callable[[str], None]) -> ResultadoVideo:
+    segundos = time.monotonic() - inicio
+    log(f"Listo en {_duracion_legible(segundos)}: {len(analisis.momentos)} momentos, "
+        f"{paginas if paginas >= 0 else '?'} páginas -> {docx.name}, {pdf.name}")
+    return ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True, analisis=analisis, ruta_docx=docx,
+                          ruta_pdf=pdf, paginas_pdf=paginas, segundos=segundos,
+                          uso_ejecucion=analisis.uso if con_api else None, uso_acumulado=acumulado)
+
+
+def _analisis_desde_json(carpeta: Path, op: Opciones, log: Callable[[str], None], *, retomar: bool) -> ResultadoAnalisis:
+    """Carga ``momentos.json`` para regenerar (o retomar) sin API y aplica los filtros de la CLI.
+
+    Los momentos apartados por ``--max-momentos`` / ``--importancia-minima`` van a ``analisis.descartados`` y se
+    conservan en el JSON (``momentos_descartados``): una regeneración posterior sin filtros los recupera.
+    """
+    analisis, _ = cargar_json(carpeta)
+    if analisis is None:
+        raise RuntimeError(f"No se pudo leer {carpeta / config.NOMBRE_JSON}: revise que sea un JSON válido "
+                           "con la estructura original (clave 'analisis' con su lista 'momentos').")
+    etiqueta = "Retomado" if retomar else "Regenerado"
+    log(f"{'Se retoma' if retomar else '--regenerar: se reutiliza'} el análisis de {config.NOMBRE_JSON} "
+        f"({len(analisis.momentos)} momentos, modo {analisis.modo or '?'}); no se vuelve a analizar el video "
+        "ni se llama a la API.")
+    filtrados, avisos = gemini.filtrar_momentos(analisis.momentos, max_momentos=op.max_momentos,
+                                                importancia_minima=op.importancia_minima)
+    if len(filtrados) < len(analisis.momentos):
+        conservados = {id(m) for m in filtrados}
+        analisis.descartados = [m for m in analisis.momentos if id(m) not in conservados]
+        for m in analisis.descartados:       # sus capturas se borran al extraer las nuevas
+            m.ruta_captura = m.ruta_captura_anotada = None
+        analisis.momentos = filtrados
+        for aviso in avisos:
+            log("Aviso: " + aviso)
+        avisos.append(f"{len(analisis.descartados)} momento(s) apartados por los filtros quedan en momentos_descartados "
+                      "(se recuperan regenerando sin filtros).")
+    analisis.avisos.extend(avisos)
+    analisis.avisos.append(f"{etiqueta} desde {config.NOMBRE_JSON} el {datetime.now():%Y-%m-%d %H:%M}")
+    return analisis
+
+
+def _desde_json(info: InfoVideo, carpeta: Path, op: Opciones, ffmpeg: str, inicio: float,
+                log: Callable[[str], None], *, retomar: bool) -> ResultadoVideo:
+    """Capturas, anotaciones y documentos a partir de ``momentos.json``, sin llamar a la API."""
+    if retomar:
+        log(f"{config.NOMBRE_JSON} existe pero faltan los documentos (una ejecución anterior falló a medias): "
+            "se retoma desde el JSON sin volver a analizar (use --forzar para repetir el análisis).")
+    analisis = _analisis_desde_json(carpeta, op, log, retomar=retomar)
+    analisis, docx, pdf, paginas, acumulado = _finalizar_video(info, carpeta, analisis, op, None, ffmpeg, log,
+                                                               uso_previo=_uso_acumulado_previo(carpeta), con_api=False)
+    return _resultado_listo(info, carpeta, analisis, docx, pdf, paginas, acumulado, inicio, False, log)
 
 
 def procesar_video(ruta: Path, op: Opciones, cliente=None, *, log: Callable[[str], None] = print) -> ResultadoVideo:
@@ -611,31 +777,25 @@ def procesar_video(ruta: Path, op: Opciones, cliente=None, *, log: Callable[[str
     carpeta = _carpeta_para(info, op)
     try:
         ffmpeg = video.localizar_ffmpeg(op.ffmpeg)
-        info = video.obtener_info(ruta, ffmpeg, video.localizar_ffprobe(op.ffprobe))
+        info = video.obtener_info(ruta, ffmpeg, video.localizar_ffprobe(op.ffprobe, ffmpeg=ffmpeg))
         carpeta = preparar_carpeta_salida(info, op)
         log = crear_log(carpeta, consola)
         _log_cabecera(info, carpeta, log)
-        existe_json = (carpeta / config.NOMBRE_JSON).is_file()
-        if existe_json and not op.regenerar and not op.forzar:
+        estado = _estado_salida(carpeta)
+        if op.regenerar:
+            if estado is None:
+                raise RuntimeError(f"--regenerar: no existe {carpeta / config.NOMBRE_JSON}; ejecute sin --regenerar "
+                                   "para analizar el video.")
+            return _desde_json(info, carpeta, op, ffmpeg, inicio, log, retomar=False)
+        if estado == "completo" and not op.forzar:
             return _resultado_omitido(info, carpeta, inicio, log)
-        if op.regenerar and existe_json:
-            analisis, _ = cargar_json(carpeta)
-            if analisis is None:
-                raise RuntimeError(f"No se pudo leer {carpeta / config.NOMBRE_JSON}: revise que sea un JSON válido "
-                                   "con la estructura original (clave 'analisis' con su lista 'momentos').")
-            log(f"--regenerar: se reutiliza el análisis de {config.NOMBRE_JSON} ({len(analisis.momentos)} momentos, "
-                f"modo {analisis.modo or '?'}); no se vuelve a analizar el video.")
-            analisis.avisos.append(f"Regenerado desde {config.NOMBRE_JSON} el {datetime.now():%Y-%m-%d %H:%M}")
-        else:
-            if op.regenerar:
-                log(f"--regenerar: todavía no hay {config.NOMBRE_JSON}; se analiza el video de forma normal.")
-            analisis = _analizar(info, op, cliente, ffmpeg, log)
-        analisis, docx, pdf, paginas = _finalizar_video(info, carpeta, analisis, op, cliente, ffmpeg, log)
-        segundos = time.monotonic() - inicio
-        log(f"Listo en {_duracion_legible(segundos)}: {len(analisis.momentos)} momentos, "
-            f"{paginas if paginas >= 0 else '?'} páginas → {docx.name}, {pdf.name}")
-        return ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True, analisis=analisis, ruta_docx=docx,
-                              ruta_pdf=pdf, paginas_pdf=paginas, segundos=segundos)
+        if estado == "incompleto" and not op.forzar:
+            return _desde_json(info, carpeta, op, ffmpeg, inicio, log, retomar=True)
+        uso_previo = _uso_acumulado_previo(carpeta) if estado else None      # --forzar: se acumula lo ya pagado
+        analisis = _analizar(info, op, cliente, ffmpeg, log)
+        analisis, docx, pdf, paginas, acumulado = _finalizar_video(info, carpeta, analisis, op, cliente, ffmpeg, log,
+                                                                   uso_previo=uso_previo, con_api=True)
+        return _resultado_listo(info, carpeta, analisis, docx, pdf, paginas, acumulado, inicio, True, log)
     except Exception as exc:  # noqa: BLE001 - por contrato: se registra y se sigue con el siguiente video
         if log is consola:      # falló antes de abrir log.txt (archivo ilegible): que el error quede también allí
             log = crear_log(carpeta, consola)
@@ -667,18 +827,18 @@ def seleccionar_videos(op: Opciones, log: Callable[[str], None] = print) -> list
 
 
 def _cliente_para(op: Opciones, log: Callable[[str], None]):
-    """Cliente de Gemini para los modos con API (None en local/simulado o al regenerar sin clave)."""
+    """Cliente de Gemini para los modos con API; None en local/simulado y SIEMPRE con ``--regenerar`` (que no
+    llama a la API: ni análisis, ni refinado, ni redactor)."""
     if op.modo not in ("gemini", "batch"):
+        return None
+    if op.regenerar:
+        log(f"--regenerar: no se llama a la API de Gemini (se reutiliza {config.NOMBRE_JSON}: sin análisis, "
+            "sin refinado ni redactor).")
         return None
     api_key = op.api_key or gemini.obtener_api_key()
     if not api_key:
-        if op.regenerar:
-            log("Aviso: sin clave de Gemini; --regenerar rehará capturas y documentos sin refinado.")
-            return None
         raise RuntimeError("Falta la clave de API de Gemini: cree un archivo .env con GEMINI_API_KEY=... "
                            "(ver .env.ejemplo) o use --local / --simular.")
-    if op.regenerar and not op.refinar:
-        return None      # nada que pedir a la API
     return gemini.crear_cliente(api_key)
 
 
@@ -687,6 +847,9 @@ def procesar_carpeta(op: Opciones, *, log: Callable[[str], None] = print) -> Res
     inicio = time.monotonic()
     if op.modo not in MODOS:
         raise ValueError(f"Modo desconocido: {op.modo!r} (use {', '.join(MODOS)}).")
+    if op.regenerar and op.forzar:
+        raise ValueError("--forzar y --regenerar son incompatibles: --forzar vuelve a analizar el video (API) y "
+                         f"--regenerar reutiliza {config.NOMBRE_JSON} sin llamar a la API. Use solo una de las dos.")
     if op.modo == "batch-recoger":
         resultados = _recoger_lote(op, log)
     else:
@@ -706,12 +869,19 @@ def procesar_carpeta(op: Opciones, *, log: Callable[[str], None] = print) -> Res
                     log(f"Pausa de {op.pausa:g} s antes del siguiente video…")
                     time.sleep(op.pausa)
     return ResumenEjecucion(resultados=resultados, uso_total=sumar_uso(resultados, op.modelo),
-                            segundos=time.monotonic() - inicio)
+                            segundos=time.monotonic() - inicio, uso_acumulado=sumar_acumulado(resultados, op.modelo))
 
 
 # ----------------------------------------------------------------------------
 # Modo batch: envío y recogida
 # ----------------------------------------------------------------------------
+NOTA_ESCALERA_LOTE = ("El modo batch no tiene la escalera de fallbacks del modo síncrono: si el modelo rechaza una "
+                      "opción (thinking, media_resolution, esquema JSON) el rechazo llega al recoger el lote, en todas "
+                      "sus respuestas; en ese caso el lote se reenvía automáticamente sin esa opción (máximo "
+                      f"{gemini.MAX_REINTENTOS_LOTE} reenvíos) y queda anotado aquí.")
+ESTADOS_LOTE_FALLIDO = ("JOB_STATE_FAILED", "JOB_STATE_CANCELLED", "JOB_STATE_EXPIRED")
+
+
 def _id_lote(nombre_job: str) -> str:
     """Identificador corto y seguro para el nombre de archivo (``batches/abc-123`` → ``abc-123``)."""
     cola = re.sub(r"[^A-Za-z0-9_-]+", "", str(nombre_job or "").rsplit("/", 1)[-1])
@@ -723,73 +893,124 @@ def _estado_lote_legible(job) -> str:
     return getattr(estado, "name", str(estado)) if estado is not None else "desconocido"
 
 
+def _carpeta_lote(info: InfoVideo, op: Opciones, ocupadas: dict) -> Path:
+    """Como ``preparar_carpeta_salida``, y además evita que dos videos del mismo lote con el mismo nombre base
+    (``IMG_0001.mp4`` e ``IMG_0001.mov``) compartan carpeta y clave: en batch aún no hay ``momentos.json`` que
+    delate la colisión.  ``ocupadas``: carpeta → ruta del video que la usa en este lote."""
+    carpeta = preparar_carpeta_salida(info, op)
+    ocupante = ocupadas.get(carpeta)
+    if ocupante is not None and ocupante != info.ruta:
+        carpeta = _carpeta_para(info, op, con_sufijo=True)
+        carpeta.mkdir(parents=True, exist_ok=True)
+    ocupadas[carpeta] = info.ruta
+    return carpeta
+
+
+def _borrar_subidas(cliente, entradas: list, op: Opciones, log: Callable[[str], None]) -> None:
+    """Borra los archivos remotos de los videos ya subidos a un lote que no llegó a crearse (salvo --conservar-subida)."""
+    for entrada in entradas:
+        if op.conservar_subida:
+            log(f"Archivo remoto conservado (--conservar-subida): {entrada['archivo']}")
+        else:
+            gemini.eliminar_archivo(cliente, entrada["archivo"], log=log)
+
+
+def _registrar_lote(op: Opciones, job, entradas: list, opciones_lote, log: Callable[[str], None], *,
+                    modelo: str, opciones: dict, reenvio_de: str | None = None) -> Path:
+    """Escribe ``salida/_lotes/<id>.json`` (job, modelo, opciones, escalera y videos) y explica cómo recogerlo."""
+    id_corto = _id_lote(job.name)
+    carpeta_lotes = Path(op.carpeta_salida) / config.CARPETA_LOTES
+    carpeta_lotes.mkdir(parents=True, exist_ok=True)
+    datos = {"id": id_corto, "job": job.name, "estado": _estado_lote_legible(job), "modelo": modelo,
+             "enviado": datetime.now().isoformat(timespec="seconds"), "version": __version__,
+             "carpeta_salida": str(Path(op.carpeta_salida).resolve()),
+             "opciones": opciones,
+             "escalera": {"nota": NOTA_ESCALERA_LOTE, **opciones_lote.a_dict()},
+             "videos": entradas}
+    if reenvio_de:
+        datos["reenvio_de"] = reenvio_de
+    ruta_lote = carpeta_lotes / f"{id_corto}.json"
+    _escribir_json(ruta_lote, datos)
+    peticiones = sum(len(e.get("tramos") or []) or 1 for e in entradas)
+    log(f"Lote {id_corto} enviado con {peticiones} petición(es) de {len(entradas)} video(s); "
+        f"registro en {ruta_lote}. Puede tardar minutos u horas.")
+    log(f"Para recoger los resultados: python resumir_videos.py --batch-recoger {id_corto} [--esperar]")
+    return ruta_lote
+
+
 def _enviar_lote(videos: list, op: Opciones, cliente, log: Callable[[str], None]) -> list:
-    """Sube cada video (copia ligera si toca), envía el lote y guarda ``salida/_lotes/<id>.json``."""
+    """Sube cada video (copia ligera si toca), envía el lote y guarda ``salida/_lotes/<id>.json``.
+
+    Si algo interrumpe el envío (Ctrl+C, fallo al crear el lote) se borran los archivos ya subidos (salvo
+    ``--conservar-subida``): son videos clínicos y no deben quedar en Google sin un lote que los use.
+    """
     ffmpeg = video.localizar_ffmpeg(op.ffmpeg)
-    ffprobe = video.localizar_ffprobe(op.ffprobe)
+    ffprobe = video.localizar_ffprobe(op.ffprobe, ffmpeg=ffmpeg)
     resultados, peticiones, entradas = [], [], []
-    for i, ruta in enumerate(videos, 1):
-        inicio = time.monotonic()
-        log(f"[{i}/{len(videos)}] {ruta.name}")
-        info = _info_minima(ruta)
-        carpeta = _carpeta_para(info, op)
-        log_v = log
-        try:
-            info = video.obtener_info(ruta, ffmpeg, ffprobe)
-            carpeta = preparar_carpeta_salida(info, op)
-            log_v = crear_log(carpeta, log)
-            _log_cabecera(info, carpeta, log_v)
-            if (carpeta / config.NOMBRE_JSON).is_file() and not op.forzar:
-                resultados.append(_resultado_omitido(info, carpeta, inicio, log_v))
-                continue
-            archivo = _subir(info, op, cliente, ffmpeg, log_v)
-            tramos = gemini.calcular_tramos(info.duracion, op.tramo_min * 60)
-            peticiones.extend({"archivo": archivo, "info": info, "tramo": t if len(tramos) > 1 else None}
-                              for t in tramos)
-            entradas.append({"nombre": info.nombre, "ruta": str(info.ruta), "archivo": archivo.name,
-                             "duracion": info.duracion, "tramos": [list(t) for t in tramos] if len(tramos) > 1 else [],
-                             "carpeta": str(carpeta), "info": info.a_dict()})
-            log_v(f"En espera del lote ({len(tramos)} petición(es)).")
-            resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True,
-                                             segundos=time.monotonic() - inicio))
-        except Exception as exc:  # noqa: BLE001 - un video que no se puede subir no detiene al resto
-            if log_v is log:    # falló antes de abrir log.txt (archivo ilegible)
+    ocupadas: dict = {}
+    try:
+        for i, ruta in enumerate(videos, 1):
+            inicio = time.monotonic()
+            log(f"[{i}/{len(videos)}] {ruta.name}")
+            info = _info_minima(ruta)
+            carpeta = _carpeta_para(info, op)
+            log_v = log
+            try:
+                info = video.obtener_info(ruta, ffmpeg, ffprobe)
+                carpeta = _carpeta_lote(info, op, ocupadas)
                 log_v = crear_log(carpeta, log)
-            resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=False,
-                                             error=registrar_error(carpeta, exc, info, op.verbose, log_v),
-                                             segundos=time.monotonic() - inicio))
+                _log_cabecera(info, carpeta, log_v)
+                estado = _estado_salida(carpeta)
+                if estado == "completo" and not op.forzar:
+                    resultados.append(_resultado_omitido(info, carpeta, inicio, log_v))
+                    continue
+                if estado == "incompleto" and not op.forzar:
+                    resultados.append(_desde_json(info, carpeta, op, ffmpeg, inicio, log_v, retomar=True))
+                    continue
+                archivo = _subir(info, op, cliente, ffmpeg, log_v)
+                tramos = gemini.calcular_tramos(info.duracion, op.tramo_min * 60)
+                clave = carpeta.name        # única dentro del lote (P-H9); info.nombre puede repetirse
+                peticiones.extend({"archivo": archivo, "info": info, "clave": clave,
+                                   "tramo": t if len(tramos) > 1 else None} for t in tramos)
+                entradas.append({"nombre": clave, "ruta": str(info.ruta), "archivo": archivo.name,
+                                 "duracion": info.duracion, "tramos": [list(t) for t in tramos] if len(tramos) > 1 else [],
+                                 "carpeta": str(carpeta), "info": info.a_dict()})
+                log_v(f"En espera del lote ({len(tramos)} petición(es)).")
+                resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True,
+                                                 segundos=time.monotonic() - inicio))
+            except Exception as exc:  # noqa: BLE001 - un video que no se puede subir no detiene al resto
+                if log_v is log:    # falló antes de abrir log.txt (archivo ilegible)
+                    log_v = crear_log(carpeta, log)
+                resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=False,
+                                                 error=registrar_error(carpeta, exc, info, op.verbose, log_v),
+                                                 segundos=time.monotonic() - inicio))
+    except BaseException:       # Ctrl+C (u otro fallo no controlado) a mitad de las subidas
+        log("Envío del lote interrumpido: se borran los archivos ya subidos.")
+        _borrar_subidas(cliente, entradas, op, log)
+        raise
     if not peticiones:
         log("No hay videos que enviar al lote.")
         return resultados
 
     nombre_lote = f"resumen_videos {datetime.now():%Y-%m-%d %H:%M}"
+    opciones_lote = gemini.OpcionesLote()
     try:
         job = gemini.enviar_lote(cliente, peticiones, op.modelo, nombre_lote, equipo=op.equipo, fps=op.fps,
-                                 resolucion=op.resolucion, log=log)
-    except Exception as exc:  # noqa: BLE001 - el lote no se creó: los videos subidos quedan sin análisis
+                                 resolucion=op.resolucion, temperatura=op.temperatura, opciones_lote=opciones_lote,
+                                 log=log)
+    except BaseException as exc:  # noqa: BLE001 - el lote no se creó: los videos subidos quedan sin análisis
+        _borrar_subidas(cliente, entradas, op, log)
+        if not isinstance(exc, Exception):
+            raise
         pendientes = {e["nombre"] for e in entradas}
         for r in resultados:
-            if r.exito and not r.omitido and r.info.nombre in pendientes:
+            if r.exito and not r.omitido and r.carpeta_salida.name in pendientes:
                 r.exito = False
                 r.error = registrar_error(r.carpeta_salida, exc, r.info, op.verbose, crear_log(r.carpeta_salida, log))
-        for entrada in entradas:
-            gemini.eliminar_archivo(cliente, entrada["archivo"], log=log)
         return resultados
-
-    id_corto = _id_lote(job.name)
-    carpeta_lotes = Path(op.carpeta_salida) / config.CARPETA_LOTES
-    carpeta_lotes.mkdir(parents=True, exist_ok=True)
-    datos = {"id": id_corto, "job": job.name, "estado": _estado_lote_legible(job), "modelo": op.modelo,
-             "enviado": datetime.now().isoformat(timespec="seconds"), "version": __version__,
-             "carpeta_salida": str(Path(op.carpeta_salida).resolve()),
-             "opciones": {"equipo": op.equipo, "fps": op.fps, "resolucion": op.resolucion, "tramo_min": op.tramo_min,
-                          "max_momentos": op.max_momentos, "importancia_minima": op.importancia_minima},
-             "videos": entradas}
-    ruta_lote = carpeta_lotes / f"{id_corto}.json"
-    _escribir_json(ruta_lote, datos)
-    log(f"Lote {id_corto} enviado con {len(peticiones)} petición(es) de {len(entradas)} video(s); "
-        f"registro en {ruta_lote}. Puede tardar minutos u horas.")
-    log(f"Para recoger los resultados: python resumir_videos.py --batch-recoger {id_corto} [--esperar]")
+    _registrar_lote(op, job, entradas, opciones_lote, log, modelo=op.modelo,
+                    opciones={"equipo": op.equipo, "fps": op.fps, "resolucion": op.resolucion, "tramo_min": op.tramo_min,
+                              "max_momentos": op.max_momentos, "importancia_minima": op.importancia_minima})
     return resultados
 
 
@@ -818,8 +1039,57 @@ def localizar_lote(carpeta_salida: Path, lote_id: str | None) -> tuple[Path, dic
                      + ", ".join(a.stem for a in pendientes))
 
 
+def _reenviar_lote(op: Opciones, cliente, ruta_lote: Path, datos: dict, accion: str, opciones_lote, infos: dict,
+                   log: Callable[[str], None]) -> list | None:
+    """El modelo rechazó una opción en todas las peticiones: se reenvía el lote sin ella (mismos archivos remotos).
+
+    Devuelve los resultados "pendiente (lote)" del lote nuevo, o None si no se pudo reenviar (entonces se
+    registran los errores del lote como siempre).
+    """
+    if not opciones_lote.aplicar(accion):
+        return None
+    opciones_lote.reintentos += 1
+    aviso = (f"El modelo rechazó una opción en todas las peticiones del lote; se reenvía automáticamente "
+             f"{accion.replace('_', ' ')} (reenvío {opciones_lote.reintentos}/{gemini.MAX_REINTENTOS_LOTE}).")
+    opciones_lote.avisos.append(aviso)
+    log("Aviso: " + aviso)
+    peticiones, entradas = [], []
+    for v in datos.get("videos") or []:
+        try:
+            archivo = gemini.obtener_archivo(cliente, v["archivo"])
+        except Exception as exc:  # noqa: BLE001 - archivo caducado o borrado: ese video se resube con --batch
+            log(f"No se pudo recuperar el archivo remoto {v['archivo']} de {v['nombre']} ({exc}): no se reenvía; "
+                "vuelva a ejecutar --batch para subirlo de nuevo.")
+            continue
+        tramos = [tuple(t) for t in v.get("tramos") or []] or [None]
+        peticiones.extend({"archivo": archivo, "info": infos[v["nombre"]], "clave": v["nombre"], "tramo": t} for t in tramos)
+        entradas.append(dict(v))
+    if not peticiones:
+        return None
+    opciones = dict(datos.get("opciones") or {})
+    modelo = str(datos.get("modelo") or op.modelo)
+    try:
+        job = gemini.enviar_lote(cliente, peticiones, modelo, f"resumen_videos {datetime.now():%Y-%m-%d %H:%M} (reenvío)",
+                                 equipo=opciones.get("equipo") or op.equipo, fps=opciones.get("fps"),
+                                 resolucion=opciones.get("resolucion") or op.resolucion, temperatura=op.temperatura,
+                                 opciones_lote=opciones_lote, log=log)
+    except Exception as exc:  # noqa: BLE001 - no se pudo reenviar: se informan los errores originales
+        log(f"Aviso: el reenvío automático del lote falló ({exc}); se registran los errores del lote original.")
+        return None
+    ruta_nueva = _registrar_lote(op, job, entradas, opciones_lote, log, modelo=modelo, opciones=opciones,
+                                 reenvio_de=str(datos.get("id") or ruta_lote.stem))
+    datos["recogido"] = datetime.now().isoformat(timespec="seconds")
+    datos["reenviado_como"] = ruta_nueva.stem
+    _escribir_json(ruta_lote, datos)
+    return [ResultadoVideo(info=infos[e["nombre"]], carpeta_salida=Path(e["carpeta"]), exito=True) for e in entradas]
+
+
 def _recoger_lote(op: Opciones, log: Callable[[str], None]) -> list:
-    """Lee ``salida/_lotes/<id>.json``, espera (si ``esperar_lote``) y termina cada video desde el análisis."""
+    """Lee ``salida/_lotes/<id>.json``, espera (si ``esperar_lote``) y termina cada video desde el análisis.
+
+    Un video que ya tiene sus documentos (generados después del envío del lote, p. ej. en una recogida anterior)
+    se omite salvo ``--forzar``: recoger dos veces no repite el refinado ni pisa correcciones a mano.
+    """
     ruta_lote, datos = localizar_lote(op.carpeta_salida, op.lote_id)
     api_key = op.api_key or gemini.obtener_api_key()
     if not api_key:
@@ -830,6 +1100,10 @@ def _recoger_lote(op: Opciones, log: Callable[[str], None]) -> list:
     nombre_job = str(datos.get("job") or "")
     job = gemini.estado_lote(cliente, nombre_job)
     log(f"Lote {datos.get('id', ruta_lote.stem)} ({nombre_job}, {len(videos)} video(s)): estado {_estado_lote_legible(job)}.")
+    ya_recogido = bool(datos.get("recogido"))
+    if ya_recogido:
+        log(f"Aviso: este lote ya se recogió el {datos['recogido']}: los videos que ya tienen sus documentos se "
+            "omiten (use --forzar para rehacerlos).")
     while not gemini.lote_terminado(job):
         if not op.esperar_lote:
             log("El lote todavía no ha terminado: vuelva a ejecutar el mismo comando más tarde "
@@ -840,14 +1114,30 @@ def _recoger_lote(op: Opciones, log: Callable[[str], None]) -> list:
         if intervalo > 0:
             time.sleep(intervalo)
         job = gemini.estado_lote(cliente, nombre_job)
-    log(f"Lote terminado con estado {_estado_lote_legible(job)}.")
+    estado_final = _estado_lote_legible(job)
+    log(f"Lote terminado con estado {estado_final}.")
+    if estado_final in ESTADOS_LOTE_FALLIDO:
+        log(f"AVISO: el lote terminó con estado {estado_final} (falló, se canceló o expiró sin recogerse a tiempo): "
+            f"sus videos quedan sin análisis. Vuelva a ejecutar --batch: se reenviarán solo los videos que sigan "
+            f"sin {config.NOMBRE_JSON}.")
 
+    opciones = dict(datos.get("opciones") or {})
+    max_momentos = op.max_momentos if op.max_momentos is not None else opciones.get("max_momentos")
+    importancia_minima = op.importancia_minima if op.importancia_minima > 1 else int(opciones.get("importancia_minima") or 1)
     mapa = {v["nombre"]: {"info": infos[v["nombre"]], "tramos": [tuple(t) for t in v.get("tramos") or []] or None,
-                          "modelo": datos.get("modelo"), "max_momentos": op.max_momentos,
-                          "importancia_minima": op.importancia_minima} for v in videos}
+                          "modelo": datos.get("modelo"), "max_momentos": max_momentos,
+                          "importancia_minima": importancia_minima} for v in videos}
     analisis_por_video = gemini.recoger_lote(cliente, job, mapa, precios_de(op), log=log)
+    opciones_lote = gemini.OpcionesLote.desde_dict(datos.get("escalera"))
+    accion = gemini.opcion_rechazada_en_lote(analisis_por_video, opciones_lote, str(datos.get("modelo") or op.modelo),
+                                             str(opciones.get("resolucion") or op.resolucion))
+    if accion and opciones_lote.reintentos < gemini.MAX_REINTENTOS_LOTE:
+        reenviados = _reenviar_lote(op, cliente, ruta_lote, datos, accion, opciones_lote, infos, log)
+        if reenviados is not None:
+            return reenviados
     ffmpeg = video.localizar_ffmpeg(op.ffmpeg)
     resultados = []
+    enviado = str(datos.get("enviado") or "")
     for v in videos:
         inicio = time.monotonic()
         info = infos[v["nombre"]]
@@ -855,23 +1145,32 @@ def _recoger_lote(op: Opciones, log: Callable[[str], None]) -> list:
         carpeta.mkdir(parents=True, exist_ok=True)
         log_v = crear_log(carpeta, log)
         try:
+            estado = _estado_salida(carpeta)
+            if estado and not op.forzar and _json_posterior_a(carpeta, enviado):
+                if estado == "completo":
+                    resultados.append(_resultado_omitido(info, carpeta, inicio, log_v))
+                else:
+                    resultados.append(_desde_json(info, carpeta, op, ffmpeg, inicio, log_v, retomar=True))
+                continue
             resultado = analisis_por_video.get(v["nombre"])
             if resultado is None:
                 raise RuntimeError("El lote no contiene ninguna respuesta para este video.")
             if isinstance(resultado, Exception):
                 raise resultado
-            analisis, docx, pdf, paginas = _finalizar_video(info, carpeta, resultado, op, cliente, ffmpeg, log_v)
-            resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=True, analisis=analisis,
-                                             ruta_docx=docx, ruta_pdf=pdf, paginas_pdf=paginas,
-                                             segundos=time.monotonic() - inicio))
+            analisis, docx, pdf, paginas, acumulado = _finalizar_video(
+                info, carpeta, resultado, op, cliente, ffmpeg, log_v,
+                uso_previo=_uso_acumulado_previo(carpeta) if estado else None, con_api=True)
+            resultados.append(_resultado_listo(info, carpeta, analisis, docx, pdf, paginas, acumulado, inicio, True, log_v))
         except Exception as exc:  # noqa: BLE001 - se registra y se sigue con el siguiente video del lote
             resultados.append(ResultadoVideo(info=info, carpeta_salida=carpeta, exito=False,
                                              error=registrar_error(carpeta, exc, info, op.verbose, log_v),
                                              segundos=time.monotonic() - inicio))
         finally:
-            if v.get("archivo") and not op.conservar_subida:
+            # en la primera recogida se borran los archivos remotos de todos los videos del lote (salvo
+            # --conservar-subida); en una recogida repetida ya no existen
+            if v.get("archivo") and not op.conservar_subida and not ya_recogido:
                 gemini.eliminar_archivo(cliente, v["archivo"], log=log_v)
     datos["recogido"] = datetime.now().isoformat(timespec="seconds")
-    datos["estado"] = _estado_lote_legible(job)
+    datos["estado"] = estado_final
     _escribir_json(ruta_lote, datos)
     return resultados

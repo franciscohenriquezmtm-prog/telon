@@ -27,10 +27,15 @@ from PIL import Image
 from . import config
 from .modelos import InfoVideo, formatear_tiempo
 
-# Cadena de filtros que convierte HDR (PQ o HLG) a SDR bt709 antes de escalar.
+# Cadena de filtros que convierte HDR (PQ o HLG) a SDR bt709.  Va SIEMPRE al final de la cadena, después
+# de ``fps`` y ``scale``: así se aplica solo a los fotogramas que se conservan y ya reducidos (en un 4K60
+# HDR es ~10 veces más rápido que aplicarla antes, con la misma salida).
 FILTRO_TONEMAP = ("zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,"
                   "tonemap=hable,zscale=t=bt709:m=bt709:r=tv,format=yuv420p")
 TRANSFERENCIAS_HDR = {"smpte2084", "arib-std-b67"}
+# ``--sin-tonemap`` lo pone en False: los videos HDR se procesan tal cual (capturas y copia ligera).
+TONEMAP_HDR = True
+_ROTACIONES_VERTICALES = {90.0, 270.0}
 
 # PyAV devuelve ``color_trc`` como entero (AVColorTransferCharacteristic); 2 = sin especificar.
 _NOMBRES_TRANSFERENCIA = {1: "bt709", 4: "bt470m", 5: "bt470bg", 6: "smpte170m", 7: "smpte240m",
@@ -44,7 +49,8 @@ _PATRON_PROGRESO = re.compile(r"^out_time_(?:us|ms)=(\d+)")
 # En el stderr de ffmpeg, dentro del paréntesis del pix_fmt, estos valores no son colorimetría.
 _NO_COLORIMETRIA = ("tv", "pc", "progressive", "first", "coded", "unknown")
 
-_avisos_hdr: set[str] = set()   # videos HDR de los que ya se avisó que no hay tonemap
+_avisos_hdr: set[str] = set()   # videos HDR de los que ya se registró qué se hace con ellos (una línea por video)
+_ffmpeg_resuelto: str | None = None   # último ffmpeg localizado (para buscar ffprobe a su lado)
 
 
 # ----------------------------------------------------------------------------
@@ -74,46 +80,76 @@ def _es_ejecutable(ruta: str | None) -> str | None:
 # ----------------------------------------------------------------------------
 # Binarios
 # ----------------------------------------------------------------------------
+@functools.lru_cache(maxsize=1)
+def _ffmpeg_imageio() -> str | None:
+    """Ruta del ffmpeg estático que trae ``imageio-ffmpeg`` (import perezoso), o None si no está."""
+    try:
+        import imageio_ffmpeg  # paquete opcional; get_ffmpeg_exe() ejecuta `ffmpeg -version`: se cachea
+
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:  # noqa: BLE001 - ImportError o binario no disponible
+        return None
+
+
 def localizar_ffmpeg(ruta: str | None = None) -> str:
-    """Ruta a ffmpeg: argumento → FFMPEG_BIN → PATH → imageio-ffmpeg.  RuntimeError si no hay ninguno."""
+    """Ruta a ffmpeg: argumento -> FFMPEG_BIN -> imageio-ffmpeg (incluido) -> PATH.  RuntimeError si no hay ninguno.
+
+    El ffmpeg incluido con ``imageio-ffmpeg`` va antes que el del PATH: un ffmpeg viejo de otro programa
+    (p. ej. el de Anaconda) puede no tener ``libx264``, ``scdet`` o ``zscale``.  Quien quiera usar otro lo
+    indica con ``--ffmpeg`` o ``FFMPEG_BIN``.
+    """
+    global _ffmpeg_resuelto
     if ruta:
         encontrado = _es_ejecutable(ruta)
         if not encontrado:
             raise RuntimeError(f"No existe el ffmpeg indicado: {ruta}")
+        _ffmpeg_resuelto = encontrado
         return encontrado
-    for candidato in (os.environ.get("FFMPEG_BIN"), "ffmpeg"):
+    for candidato in (os.environ.get("FFMPEG_BIN"), _ffmpeg_imageio(), "ffmpeg"):
         encontrado = _es_ejecutable(candidato)
         if encontrado:
+            _ffmpeg_resuelto = encontrado
             return encontrado
-    try:
-        import imageio_ffmpeg  # import perezoso: paquete opcional que trae un ffmpeg estático
-
-        return imageio_ffmpeg.get_ffmpeg_exe()
-    except Exception as exc:  # ImportError o binario no disponible
-        raise RuntimeError(
-            "No se encontró ffmpeg. Opciones: instálalo y ponlo en el PATH, indica su ruta con "
-            "--ffmpeg o con la variable de entorno FFMPEG_BIN, o ejecuta "
-            f"'pip install imageio-ffmpeg' (detalle: {exc})") from exc
+    raise RuntimeError(
+        "No se encontró ffmpeg. Opciones: ejecute 'pip install imageio-ffmpeg' (trae un ffmpeg incluido), "
+        "instálelo y póngalo en el PATH, o indique su ruta con --ffmpeg o con la variable de entorno FFMPEG_BIN.")
 
 
-def localizar_ffprobe(ruta: str | None = None) -> str | None:
-    """Ruta a ffprobe (argumento → FFPROBE_BIN → junto a ffmpeg → PATH) o None: no es obligatorio."""
+def localizar_ffprobe(ruta: str | None = None, ffmpeg: str | None = None) -> str | None:
+    """Ruta a ffprobe (argumento -> FFPROBE_BIN -> junto a ``ffmpeg`` -> PATH) o None: no es obligatorio.
+
+    ``ffmpeg`` es el ffmpeg ya elegido (el de ``--ffmpeg``, por ejemplo): ffprobe suele estar a su lado.
+    Si no se pasa, se usa el último que devolvió ``localizar_ffmpeg`` (o se localiza uno).
+    """
     candidatos = [ruta, os.environ.get("FFPROBE_BIN")]
-    try:
-        ffmpeg = Path(localizar_ffmpeg())
-    except RuntimeError:
-        ffmpeg = None
-    if ffmpeg is not None:
-        sufijo = ffmpeg.suffix if ffmpeg.suffix.lower() == ".exe" else ""
-        candidatos.append(str(ffmpeg.with_name("ffprobe" + sufijo)))
-        if "ffmpeg" in ffmpeg.name:   # p. ej. ffmpeg-win64-v7.0.exe → ffprobe-win64-v7.0.exe
-            candidatos.append(str(ffmpeg.with_name(ffmpeg.name.replace("ffmpeg", "ffprobe", 1))))
+    if not ffmpeg:
+        try:
+            ffmpeg = _ffmpeg_resuelto or localizar_ffmpeg()
+        except RuntimeError:
+            ffmpeg = None
+    if ffmpeg:
+        ruta_ffmpeg = Path(ffmpeg)
+        sufijo = ruta_ffmpeg.suffix if ruta_ffmpeg.suffix.lower() == ".exe" else ""
+        candidatos.append(str(ruta_ffmpeg.with_name("ffprobe" + sufijo)))
+        if "ffmpeg" in ruta_ffmpeg.name:   # p. ej. ffmpeg-win64-v7.0.exe -> ffprobe-win64-v7.0.exe
+            candidatos.append(str(ruta_ffmpeg.with_name(ruta_ffmpeg.name.replace("ffmpeg", "ffprobe", 1))))
     candidatos.append("ffprobe")
     for candidato in candidatos:
         encontrado = _es_ejecutable(candidato)
         if encontrado:
             return encontrado
     return None
+
+
+@functools.lru_cache(maxsize=8)
+def version_ffmpeg(ffmpeg: str) -> str:
+    """Versión que declara este ffmpeg (``ffmpeg -version``, p. ej. ``7.0.2-static``); ``"?"`` si no responde."""
+    try:
+        primera = (_ejecutar([ffmpeg, "-version"]).stdout or "").splitlines()[:1]
+    except (OSError, IndexError):
+        return "?"
+    m = re.match(r"ffmpeg version\s+(\S+)", primera[0]) if primera else None
+    return m[1] if m else "?"
 
 
 @functools.lru_cache(maxsize=8)
@@ -301,9 +337,13 @@ def obtener_info(ruta: Path, ffmpeg: str, ffprobe: str | None = None) -> InfoVid
         if datos.get("duracion"):
             extra = {k: v for k, v in (datos.get("extra") or {}).items() if v not in (None, "")}
             extra["origen_info"] = origen
+            ancho, alto = int(datos.get("ancho") or 0), int(datos.get("alto") or 0)
+            if abs(_a_float(extra.get("rotacion")) or 0.0) % 180 in _ROTACIONES_VERTICALES:
+                # grabado en vertical (iPhone): el archivo guarda 1920x1080 con rotación ±90; se ve como 1080x1920
+                ancho, alto = alto, ancho
             return InfoVideo(ruta=ruta, nombre=sanear_nombre(ruta.stem), duracion=float(datos["duracion"]),
-                             fps=float(datos.get("fps") or 0.0), ancho=int(datos.get("ancho") or 0),
-                             alto=int(datos.get("alto") or 0), tamano_bytes=ruta.stat().st_size, extra=extra)
+                             fps=float(datos.get("fps") or 0.0), ancho=ancho, alto=alto,
+                             tamano_bytes=ruta.stat().st_size, extra=extra)
         errores.append(f"{origen}: no informa la duración")
     raise RuntimeError(f"No se pudo leer la información de {ruta.name} ({'; '.join(errores)})")
 
@@ -334,22 +374,44 @@ def _es_hdr_archivo(ruta_video: Path, ffmpeg: str) -> bool:
     return _es_hdr_cacheado(str(ruta_video), ffmpeg, st.st_size, st.st_mtime_ns)
 
 
-def _prefijo_tonemap(ruta_video: Path, ffmpeg: str, log: Callable[[str], None] | None) -> str:
-    """``FILTRO_TONEMAP + ","`` si el video es HDR y este ffmpeg puede convertirlo; si no, ``""``."""
+def _sufijo_tonemap(ruta_video: Path, ffmpeg: str, log: Callable[[str], None] | None) -> str:
+    """``"," + FILTRO_TONEMAP`` si el video es HDR, el tonemap está activo y este ffmpeg puede aplicarlo; si no, ``""``.
+
+    Se registra una sola línea por video diciendo qué se hace con él (conversión a SDR, desactivada
+    con ``--sin-tonemap``, o ffmpeg sin los filtros).
+    """
     if not _es_hdr_archivo(ruta_video, ffmpeg):
         return ""
-    if _tonemap_disponible(ffmpeg):
-        return FILTRO_TONEMAP + ","
+    nombre = Path(ruta_video).name
+    if not TONEMAP_HDR:
+        aplicar, mensaje = False, f"  {nombre} es HDR: conversión a SDR desactivada (--sin-tonemap); se procesa tal cual"
+    elif _tonemap_disponible(ffmpeg):
+        aplicar, mensaje = True, (f"  {nombre} es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la "
+                                  "copia ligera; si salen oscuras pruebe --sin-tonemap")
+    else:
+        aplicar, mensaje = False, (f"  aviso: {nombre} es HDR y este ffmpeg no tiene los filtros zscale/tonemap; "
+                                   "las capturas pueden verse lavadas")
     clave = str(ruta_video)
     if log is not None and clave not in _avisos_hdr:
         _avisos_hdr.add(clave)
-        log(f"  aviso: {Path(ruta_video).name} es HDR y este ffmpeg no tiene los filtros zscale/tonemap; "
-            "las capturas pueden verse lavadas")
-    return ""
+        log(mensaje)
+    return "," + FILTRO_TONEMAP if aplicar else ""
 
 
 def _filtro_escala(ancho_max: int) -> str:
     return f"scale='min({int(ancho_max)},iw)':-2"
+
+
+def _filtro_escala_copia(lado_menor: int) -> str:
+    """Escala de la copia ligera: el lado MENOR queda en ``lado_menor`` (sin ampliar).
+
+    Horizontal 1920x1080 -> 1280x720; vertical 1080x1920 (iPhone en vertical, ya autorrotado por ffmpeg) ->
+    720x1280, con la misma cantidad de píxeles para leer los textos de pantalla.  Limitar solo el alto dejaría
+    el video vertical en 406x720.
+    """
+    lado = int(lado_menor)
+    return (f"scale=w='if(gt(iw,ih),-2,2*trunc(min({lado},iw)/2))'"
+            f":h='if(gt(iw,ih),2*trunc(min({lado},ih)/2),-2)'")
 
 
 # ----------------------------------------------------------------------------
@@ -365,7 +427,7 @@ def extraer_fotograma(ruta_video: Path, t: float, destino: Path, ffmpeg: str,
     if not ruta_video.is_file():
         raise FileNotFoundError(f"No existe el video: {ruta_video}")
     destino.parent.mkdir(parents=True, exist_ok=True)
-    filtro = _prefijo_tonemap(ruta_video, ffmpeg, None) + _filtro_escala(ancho_max)
+    filtro = _filtro_escala(ancho_max) + _sufijo_tonemap(ruta_video, ffmpeg, None)
     _ejecutar([ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{max(0.0, float(t)):.3f}",
                "-i", ruta_video, "-frames:v", "1", "-vf", filtro, "-pix_fmt", "yuvj420p", "-q:v", "2", destino])
     if destino.is_file() and destino.stat().st_size > 0:
@@ -405,7 +467,8 @@ def extraer_mejor_fotograma(ruta_video: Path, t: float, destino: Path, ffmpeg: s
         t = min(max(0.0, float(t)), max(0.0, float(duracion) - 0.5))
         inicio = max(0.0, t - ventana)
         destino.parent.mkdir(parents=True, exist_ok=True)
-        filtro = f"{_prefijo_tonemap(ruta_video, ffmpeg, log)}fps={fps_rafaga},{_filtro_escala(ancho_max)}"
+        # fps y scale primero: el tonemap (caro) solo trabaja sobre los fotogramas conservados y ya reducidos
+        filtro = f"fps={fps_rafaga},{_filtro_escala(ancho_max)}{_sufijo_tonemap(ruta_video, ffmpeg, log)}"
         with tempfile.TemporaryDirectory(prefix="rafaga_") as tmp:
             r = _ejecutar([ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-ss", f"{inicio:.3f}",
                            "-t", f"{2 * ventana:.3f}", "-i", ruta_video, "-vf", filtro,
@@ -496,17 +559,18 @@ def _ejecutar_con_progreso(cmd: list, duracion: float | None, log: Callable[[str
 def transcodificar_para_subida(ruta_video: Path, destino_mp4: Path, ffmpeg: str,
                                alto: int = config.TRANSCODIFICAR_ALTO, fps: int = config.TRANSCODIFICAR_FPS,
                                *, log: Callable[[str], None] = print) -> Path:
-    """Copia ligera MP4 (H.264 ≤ ``alto`` p, ``fps`` fotogramas/s, AAC mono) para subir a Gemini.
+    """Copia ligera MP4 (H.264, lado menor ≤ ``alto`` px, ``fps`` fotogramas/s, AAC mono) para subir a Gemini.
 
-    Conserva los tiempos (no corta nada), no amplía videos más pequeños, aplica tonemap si el original
-    es HDR y solo copia la primera pista de video y de audio (los .MOV de iPhone traen pistas de datos
-    que el mp4 no admite).  RuntimeError si ffmpeg falla.
+    ``alto`` es el lado MENOR de la copia: 720 -> 1280x720 en horizontal y 720x1280 en vertical (ver
+    ``_filtro_escala_copia``).  Conserva los tiempos (no corta nada), no amplía videos más pequeños, aplica
+    tonemap si el original es HDR (después de fps/scale: mucho más rápido) y solo copia la primera pista de
+    video y de audio (los .MOV de iPhone traen pistas de datos que el mp4 no admite).  RuntimeError si ffmpeg falla.
     """
     ruta_video, destino = Path(ruta_video), Path(destino_mp4)
     if not ruta_video.is_file():
         raise FileNotFoundError(f"No existe el video: {ruta_video}")
     destino.parent.mkdir(parents=True, exist_ok=True)
-    filtro = f"{_prefijo_tonemap(ruta_video, ffmpeg, log)}scale=-2:'2*trunc(min({int(alto)},ih)/2)',fps={fps}"
+    filtro = f"fps={fps},{_filtro_escala_copia(alto)}{_sufijo_tonemap(ruta_video, ffmpeg, log)}"
     cmd = [ffmpeg, "-hide_banner", "-loglevel", "error", "-nostats", "-y", "-i", ruta_video,
            "-map", "0:v:0", "-map", "0:a:0?",
            "-vf", filtro, "-c:v", "libx264", "-preset", "veryfast", "-crf", "30", "-pix_fmt", "yuv420p",
@@ -516,8 +580,8 @@ def transcodificar_para_subida(ruta_video: Path, destino_mp4: Path, ffmpeg: str,
         duracion = _info_ffmpeg_stderr(ruta_video, ffmpeg).get("duracion")
     except Exception:
         duracion = None
-    log(f"  transcodificando {ruta_video.name} → {destino.name} ({alto}p, {fps} fps, audio mono "
-        f"{config.TRANSCODIFICAR_AUDIO_KBPS} kbps)…")
+    log(f"  transcodificando {ruta_video.name} -> {destino.name} (lado menor {alto} px, {fps} fps, audio mono "
+        f"{config.TRANSCODIFICAR_AUDIO_KBPS} kbps)...")
     codigo, stderr = _ejecutar_con_progreso(cmd, duracion, log)
     if codigo != 0 or not destino.is_file() or destino.stat().st_size == 0:
         destino.unlink(missing_ok=True)

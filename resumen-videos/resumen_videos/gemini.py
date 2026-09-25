@@ -10,6 +10,7 @@ estructuras compartidas son solo las de ``modelos``.
 from __future__ import annotations
 
 import copy
+import difflib
 import io
 import json
 import math
@@ -44,7 +45,7 @@ TEXTOS E ICONOS EN PANTALLA
 Gran parte de la información está escrita en la imagen: pantallas del equipo, menús, campos de datos, etiquetas de botones e interruptores, valores con sus unidades, indicadores luminosos e iconos. Cuando sean legibles, léelos y cópialos tal cual en el título o la descripción (por ejemplo "kV 70 / mA 2,5", "botón FLUORO", "icono de candado activado"). El video puede ser una copia reducida: si un texto o icono no se alcanza a leer, no lo adivines; escribe "texto en pantalla no legible" o describe solo lo que sí se distingue.
 
 CUÁNTOS MOMENTOS
-La cantidad la decide el contenido del video, no una cuota: si en 10 minutos se enseñan 30 cosas, devuelve 30; si solo se dicen 3 cosas importantes, devuelve 3. No rellenes con momentos triviales (encuadres de transición, pausas, repeticiones sin información nueva) ni omitas ninguno importante. Presta tanta atención a lo que se DICE como a lo que se VE: si la persona explica algo relevante sin que cambie la imagen, es un momento igual; si muestra o señala algo sin comentarlo, también lo es. Si una misma acción se repite, conserva la ocasión en que mejor se ve o mejor se explica.
+La cantidad la decide el contenido del video, no una cuota: si en 10 minutos se enseñan 30 cosas, devuelve 30; si solo se dicen 3 cosas importantes, devuelve 3. No rellenes con momentos triviales (encuadres de transición, pausas, repeticiones sin información nueva) ni omitas ninguno importante. Presta tanta atención a lo que se DICE como a lo que se VE: si la persona explica algo relevante sin que cambie la imagen, es un momento igual; si muestra o señala algo sin comentarlo, también lo es. Si una misma acción se repite, conserva la ocasión en que mejor se ve o mejor se explica. Si varios valores o acciones se dicen en la misma frase o se ven en el mismo encuadre, agrúpalos en un solo momento con todos los valores en la descripción; dos momentos distintos deben ir separados en el tiempo.
 
 CADA MOMENTO
 - tiempo: "mm:ss" contado desde el inicio del video (nunca hh:mm:ss; si el video supera la hora, los minutos pasan de 59, por ejemplo "75:03"). Elige el instante en que MEJOR SE VE lo descrito (encuadre estable, botón o pantalla legibles, sin movimiento), no necesariamente el instante en que se empieza a hablar de ello.
@@ -96,9 +97,10 @@ PROMPT_REDACTOR_USUARIO = "Borrador del protocolo (JSON):\n"
 
 #: Instrucción de sistema del refinado con capturas.  ``{equipo}`` se sustituye con ``construir_prompt_refinado``.
 PROMPT_REFINADO = """\
-Eres un instructor clínico experto en la operación de {equipo}. Estás revisando el borrador de un manual con capturas extraído de un video: recibirás la lista de pasos ya identificados (número, tiempo, título, descripción, sección y zona señalada) y, para cada paso, su captura en alta resolución tomada del video original.
-Es documentación clínica: sé fiel a lo que se ve. Usa los textos, valores, unidades, nombres de botones, menús, iconos e indicadores exactamente como se leen en la captura. No inventes ni completes con conocimiento general del equipo; si algo sigue sin leerse con claridad, dilo.
-Formato de cada paso: titulo de máximo 8 palabras, estilo manual, en imperativo; descripcion de 1 o 2 frases y máximo 260 caracteres; zona opcional {"x": 0-1000, "y": 0-1000} con x de izquierda a derecha e y de arriba abajo sobre la captura.
+Eres un instructor clínico experto en la operación de {equipo}. Estás revisando el borrador de un manual con capturas extraído de un video: recibirás la lista de pasos ya identificados (número, tiempo, título, descripción, importancia, fuente, sección y zona señalada) y, para cada paso, su captura en alta resolución tomada del video original.
+Es documentación clínica: sé fiel a lo que se ve en la captura y a lo que se dijo en el video. Usa los textos, valores, unidades, nombres de botones, menús, iconos e indicadores exactamente como se leen en la captura. No inventes ni completes con conocimiento general del equipo; si algo sigue sin leerse con claridad, dilo.
+La descripción puede contener información DICHA en el audio que no se ve en la captura (valores, advertencias, "valor no audible"): consérvala siempre; la captura es un solo fotograma y la pantalla puede mostrar otro valor en otro instante. Solo añade o corrige lo que la captura muestre con claridad. Si lo que se lee en pantalla contradice lo dicho, escribe ambos ("en pantalla se lee X; se indica Y") en vez de sustituir. Los pasos con fuente "audio" solo se completan (se les añade lo que se lea), nunca se corrigen.
+Formato de cada paso: titulo de máximo 8 palabras, estilo manual, en imperativo; descripcion de 1 o 2 frases y máximo 260 caracteres; zona {"x": 0-1000, "y": 0-1000} con x de izquierda a derecha e y de arriba abajo sobre la captura, o null si el elemento señalado no aparece en la captura.
 Responde únicamente con el JSON pedido. Español neutro, sin emojis ni símbolos especiales.
 """
 
@@ -106,18 +108,21 @@ Responde únicamente con el JSON pedido. Español neutro, sin emojis ni símbolo
 PROMPT_REFINADO_USUARIO = (
     "Estas son las capturas en alta resolución de pasos ya identificados en el video. Corrige y completa el título "
     "y la descripción de cada paso con lo que ahora se lee con claridad: texto en pantalla, valores y unidades, "
-    "nombres de botones, iconos, indicadores. Ajusta la zona señalada si con la imagen se ve mejor dónde está lo "
-    "importante. NO cambies los tiempos, NO agregues ni quites pasos, NO inventes: si en la captura no se lee nada "
-    "nuevo, deja el texto igual. Devuelve el mismo JSON (lista de momentos con el mismo número)."
+    "nombres de botones, iconos, indicadores. Conserva siempre lo que la descripción dice que se DIJO en el audio "
+    "(la captura no lo muestra); si la pantalla contradice lo dicho, escribe ambos. Los pasos con fuente \"audio\" "
+    "solo se completan, no se corrigen. Ajusta la zona señalada si con la imagen se ve mejor dónde está lo "
+    "importante; si el elemento señalado no aparece en la captura, devuelve zona null; si no devuelves zona se "
+    "conserva la actual. NO cambies los tiempos, NO agregues ni quites pasos, NO inventes: si en la captura no se "
+    "lee nada nuevo, deja el texto igual. Devuelve el mismo JSON (lista de momentos con el mismo número)."
 )
 
 #: Sufijo del refinado cuando el modelo no admite esquema de respuesta.
 PROMPT_REFINADO_SIN_ESQUEMA = (
     "Responde SOLO con el JSON: un único objeto con la clave momentos (lista de objetos con numero, titulo, "
-    'descripcion y zona opcional {"x", "y"}), sin texto adicional ni marcas de código.'
+    'descripcion y zona opcional {"x", "y"} o null), sin texto adicional ni marcas de código.'
 )
 
-#: Texto que precede a cada imagen en el refinado.
+#: Texto que precede a cada imagen en el refinado (``tiempo`` = instante real del fotograma elegido).
 PROMPT_CAPTURA = "Captura del paso {numero} ({tiempo})"
 
 #: Sub-esquema de la zona señalada (punto 0-1000), compartido por los dos esquemas.
@@ -168,7 +173,8 @@ ESQUEMA_REFINADO: dict = {
                     "numero": {"type": "integer", "description": "Número del paso, el mismo que se recibió"},
                     "titulo": {"type": "string"},
                     "descripcion": {"type": "string"},
-                    "zona": ESQUEMA_ZONA,
+                    # null = "no señalar nada" (el elemento no aparece en la captura); ausente = conservar la zona
+                    "zona": {"anyOf": [ESQUEMA_ZONA, {"type": "null"}]},
                 },
                 "required": ["numero", "titulo", "descripcion"],
             },
@@ -195,6 +201,8 @@ ESTADOS_LOTE_TERMINADO = (
 MARGEN_TIEMPOS_ABSOLUTOS_SEG = 5.0     # heurística de tramos (§4.4)
 MINIMO_ULTIMO_TRAMO_SEG = 300.0        # un último tramo más corto se fusiona con el anterior
 TOLERANCIA_TIEMPO_REDACTOR_SEG = 1.5   # el redactor no puede mover los tiempos más que esto
+SIMILITUD_TITULOS_DUPLICADOS = 0.8     # dos momentos cercanos solo son duplicados si sus títulos se parecen así
+MAX_REINTENTOS_LOTE = 2                # reenvíos automáticos de un lote rechazado por una opción no soportada
 
 
 def construir_prompt_sistema(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
@@ -247,9 +255,14 @@ def obtener_api_key() -> str | None:
 
 
 def subir_video(cliente, ruta: Path, nombre: str, timeout_procesado: int = config.TIMEOUT_PROCESADO_SEG,
-                intervalo: int = config.INTERVALO_SONDEO_ARCHIVO_SEG, *,
+                intervalo: int = config.INTERVALO_SONDEO_ARCHIVO_SEG, *, conservar_subida: bool = False,
                 log: Callable[[str], None] = print) -> "types.File":
-    """Sube el archivo a la Files API y espera a que Gemini termine de procesarlo."""
+    """Sube el archivo a la Files API y espera a que Gemini termine de procesarlo.
+
+    Si el procesado falla (FAILED), se agota ``timeout_procesado`` o algo interrumpe la espera (error de red,
+    Ctrl+C), el archivo remoto se borra antes de propagar el error (salvo ``conservar_subida``): son datos
+    clínicos y no deben quedar en Google sin que el programa los use.
+    """
     ruta = Path(ruta)
     if not ruta.is_file():
         raise FileNotFoundError(f"No existe el archivo a subir: {ruta}")
@@ -263,7 +276,24 @@ def subir_video(cliente, ruta: Path, nombre: str, timeout_procesado: int = confi
     log(f"Subiendo {ruta.name} ({tamano_mb:.1f} MB, {mime}) a la Files API…")
     archivo = cliente.files.upload(file=str(ruta), config=types.UploadFileConfig(mime_type=mime, display_name=nombre))
     log(f"Subido como {archivo.name}; esperando a que Gemini lo procese…")
+    try:
+        archivo = _esperar_procesado(cliente, archivo, timeout_procesado, intervalo, log)
+    except BaseException:       # RuntimeError propio, error de red o KeyboardInterrupt: no dejar la copia en Google
+        if conservar_subida:
+            log(f"Archivo remoto conservado pese al fallo (--conservar-subida): {archivo.name}")
+        else:
+            eliminar_archivo(cliente, archivo, log=log)
+        raise
+    if archivo.state != types.FileState.ACTIVE:
+        log(f"Aviso: el archivo {archivo.name} quedó en estado {archivo.state}, se intenta usar igual.")
+    else:
+        log(f"Archivo {archivo.name} listo (ACTIVE).")
+    return archivo
 
+
+def _esperar_procesado(cliente, archivo, timeout_procesado: int, intervalo: int,
+                       log: Callable[[str], None]) -> "types.File":
+    """Sondea ``files.get`` mientras el archivo está en PROCESSING; RuntimeError si falla o se agota el tiempo."""
     inicio = time.monotonic()
     sondeos = 0
     while archivo.state == types.FileState.PROCESSING:
@@ -282,11 +312,12 @@ def subir_video(cliente, ruta: Path, nombre: str, timeout_procesado: int = confi
     if archivo.state == types.FileState.FAILED:
         motivo = archivo.error.message if archivo.error is not None and archivo.error.message else "motivo desconocido"
         raise RuntimeError(f"Gemini no pudo procesar el archivo subido {archivo.name}: {motivo}")
-    if archivo.state != types.FileState.ACTIVE:
-        log(f"Aviso: el archivo {archivo.name} quedó en estado {archivo.state}, se intenta usar igual.")
-    else:
-        log(f"Archivo {archivo.name} listo (ACTIVE).")
     return archivo
+
+
+def obtener_archivo(cliente, nombre: str) -> "types.File":
+    """Vuelve a leer un archivo remoto por su nombre (``files/...``), p. ej. para reenviar un lote."""
+    return cliente.files.get(name=nombre)
 
 
 def eliminar_archivo(cliente, archivo, *, log: Callable[[str], None] = print) -> None:
@@ -310,8 +341,8 @@ class _Variante:
     """Combinación modelo + opciones con la que se intenta una generación.
 
     ``thinking``, ``con_resolucion`` y ``esquema`` son los peldaños que la escalera de fallbacks va apagando;
-    ``resolucion`` (clave de ``RESOLUCIONES``, None = sin ``media_resolution``), ``esquema_json`` y
-    ``prompt_sin_esquema`` describen la petición y se conservan al cambiar de modelo.
+    ``resolucion`` (clave de ``RESOLUCIONES``, None = sin ``media_resolution``), ``temperatura`` (None = no se
+    envía), ``esquema_json`` y ``prompt_sin_esquema`` describen la petición y se conservan al cambiar de modelo.
     """
 
     modelo: str
@@ -319,6 +350,7 @@ class _Variante:
     con_resolucion: bool = True
     esquema: bool = True
     resolucion: str | None = config.RESOLUCION_VIDEO
+    temperatura: float | None = config.TEMPERATURA
     esquema_json: dict = field(default_factory=lambda: ESQUEMA_RESPUESTA)
     prompt_sin_esquema: str = PROMPT_SIN_ESQUEMA
 
@@ -352,12 +384,13 @@ def _construir_contenido(archivo, prompt_usuario: str, fps: float | None = None,
 
 
 def _construir_config(prompt_sistema: str, max_tokens: int, *, esquema: bool = True, thinking: bool = True,
-                      resolucion: str | None = config.RESOLUCION_VIDEO,
+                      resolucion: str | None = config.RESOLUCION_VIDEO, temperatura: float | None = config.TEMPERATURA,
                       esquema_json: dict = ESQUEMA_RESPUESTA) -> "types.GenerateContentConfig":
-    """``GenerateContentConfig`` con una copia nueva del esquema; ``resolucion`` None = sin ``media_resolution``."""
+    """``GenerateContentConfig`` con una copia nueva del esquema; ``resolucion`` None = sin ``media_resolution``;
+    ``temperatura`` None = no se envía ``temperature`` (vale el valor por defecto del modelo)."""
     return types.GenerateContentConfig(
         system_instruction=prompt_sistema,
-        temperature=config.TEMPERATURA,
+        temperature=None if temperatura is None else float(temperatura),
         max_output_tokens=int(max_tokens),
         response_mime_type="application/json",
         response_json_schema=copy.deepcopy(esquema_json) if esquema else None,
@@ -372,8 +405,20 @@ def _generar(cliente, variante: _Variante, construir_contents: Callable[[str], l
     sufijo = "" if variante.esquema else "\n\n" + variante.prompt_sin_esquema
     cfg = _construir_config(prompt_sistema, max_tokens, esquema=variante.esquema, thinking=variante.thinking,
                             resolucion=variante.resolucion if variante.con_resolucion else None,
-                            esquema_json=variante.esquema_json)
+                            temperatura=variante.temperatura, esquema_json=variante.esquema_json)
     return cliente.models.generate_content(model=variante.modelo, contents=construir_contents(sufijo), config=cfg)
+
+
+def _accion_por_mensaje(mensaje: str, variante: _Variante) -> str | None:
+    """Peldaño de opciones (``sin_thinking`` | ``sin_resolucion`` | ``sin_esquema``) que corresponde a un rechazo 400."""
+    mensaje = mensaje.lower()
+    if variante.thinking and "thinking" in mensaje:
+        return "sin_thinking"
+    if variante.con_resolucion and variante.resolucion and re.search(r"media[_ ]?resolution", mensaje):
+        return "sin_resolucion"
+    if variante.esquema and "schema" in mensaje:
+        return "sin_esquema"
+    return None
 
 
 def _accion_fallback(exc: errors.ClientError, variante: _Variante, hay_otro_modelo: bool) -> str | None:
@@ -381,12 +426,9 @@ def _accion_fallback(exc: errors.ClientError, variante: _Variante, hay_otro_mode
     mensaje = f"{exc.message or ''} {exc.details or ''}".lower()
     estado = (exc.status or "").upper()
     if exc.code == 400:
-        if variante.thinking and "thinking" in mensaje:
-            return "sin_thinking"
-        if variante.con_resolucion and variante.resolucion and re.search(r"media[_ ]?resolution", mensaje):
-            return "sin_resolucion"
-        if variante.esquema and "schema" in mensaje:
-            return "sin_esquema"
+        accion = _accion_por_mensaje(mensaje, variante)
+        if accion:
+            return accion
     no_encontrado = exc.code == 404 or estado == "NOT_FOUND" or "not found" in mensaje or "not supported" in mensaje
     if hay_otro_modelo and no_encontrado:
         return "siguiente_modelo"
@@ -470,6 +512,18 @@ def _parsear_respuesta(resp) -> tuple[dict | list | None, bool, str]:
         return parsed, False, texto
     datos, truncado = extraer_json(texto)
     return datos, truncado, texto
+
+
+def _parsear_o_vacio_por_tokens(resp) -> tuple[dict | list | None, bool, str]:
+    """Como ``_parsear_respuesta``, pero una respuesta cortada por MAX_TOKENS SIN texto (el pensamiento consumió
+    todo el presupuesto de salida) cuenta como truncada vacía ``(None, True, "")`` en vez de fallar: así llega al
+    reintento con el doble de tokens.  Los demás casos sin texto (bloqueo, RECITATION…) siguen lanzando."""
+    try:
+        return _parsear_respuesta(resp)
+    except RuntimeError:
+        if _razon_fin(resp) == types.FinishReason.MAX_TOKENS:
+            return None, True, ""
+        raise
 
 
 def uso_desde_respuesta(resp, modelo: str, batch: bool = False) -> Uso:
@@ -774,25 +828,46 @@ def normalizar_momentos(brutos: list[dict], duracion: float, max_momentos: int |
 
     momentos.sort(key=lambda m: m.tiempo_seg)   # estable: empates en el orden original
     unicos: list[Momento] = []
-    fusionados = 0
     for momento in momentos:
-        if unicos and momento.tiempo_seg - unicos[-1].tiempo_seg < separacion_min:
-            fusionados += 1
-            if momento.importancia > unicos[-1].importancia:
-                unicos[-1] = momento
+        # Duplicado = mismo instante (< separacion_min) Y título casi igual.  Dos momentos cercanos con títulos
+        # distintos ("Seleccionar modo FLUORO" a 00:10 y "Fijar kV en 70" a 00:11) son contenido, no repetición.
+        if unicos and momento.tiempo_seg - unicos[-1].tiempo_seg < separacion_min \
+                and titulos_casi_iguales(momento.titulo, unicos[-1].titulo):
+            previo = unicos[-1]
+            ganador, perdedor = (momento, previo) if momento.importancia > previo.importancia else (previo, momento)
+            unicos[-1] = ganador
+            avisos.append(f"Momento duplicado fusionado: {perdedor.titulo!r} ({perdedor.tiempo}) con "
+                          f"{ganador.titulo!r} ({ganador.tiempo}), a menos de {separacion_min:g} s.")
             continue
         unicos.append(momento)
-    if fusionados:
-        avisos.append(f"{fusionados} momento(s) duplicados (a menos de {separacion_min:g} s) se fusionaron.")
+    filtrados, avisos_filtro = filtrar_momentos(unicos, max_momentos=max_momentos, importancia_minima=importancia_minima)
+    return filtrados, avisos + avisos_filtro
 
+
+def titulos_casi_iguales(a: str, b: str, umbral: float = SIMILITUD_TITULOS_DUPLICADOS) -> bool:
+    """True si los dos títulos son (casi) el mismo texto: ``difflib`` sobre minúsculas sin espacios repetidos."""
+    def limpio(texto: str) -> str:
+        return " ".join(str(texto or "").lower().split()).rstrip(".!…")
+    x, y = limpio(a), limpio(b)
+    if not x or not y:
+        return x == y
+    return difflib.SequenceMatcher(None, x, y).ratio() >= umbral
+
+
+def filtrar_momentos(momentos: list[Momento], max_momentos: int | None = None,
+                     importancia_minima: int = 1) -> tuple[list[Momento], list[str]]:
+    """Filtros opcionales del usuario sobre ``Momento`` ya normalizados (también al regenerar desde momentos.json):
+    descarta importancia < ``importancia_minima`` y, si ``max_momentos``, conserva los N más importantes (empate:
+    mayor puntaje local, luego el más temprano) en orden cronológico.  Devuelve ``(momentos, avisos)``."""
+    avisos: list[str] = []
+    unicos = list(momentos)
     if importancia_minima > 1:
         filtrados = [m for m in unicos if m.importancia >= importancia_minima]
         if len(filtrados) != len(unicos):
             avisos.append(f"{len(unicos) - len(filtrados)} momento(s) con importancia < {importancia_minima} se descartaron.")
         unicos = filtrados
-
     if max_momentos and len(unicos) > max_momentos:
-        mejores = sorted(unicos, key=lambda m: (-m.importancia, m.tiempo_seg))[:max_momentos]
+        mejores = sorted(unicos, key=lambda m: (-m.importancia, -(m.puntaje or 0.0), m.tiempo_seg))[:max_momentos]
         avisos.append(f"Se conservan los {max_momentos} momentos más importantes de {len(unicos)} (--max-momentos).")
         unicos = sorted(mejores, key=lambda m: m.tiempo_seg)
     return unicos, avisos
@@ -888,21 +963,31 @@ def _generar_y_parsear(cliente, modelos: list[str], prompt_sistema: str, constru
     resp, variante = _generar_con_fallbacks(cliente, modelos, construir_contents, prompt_sistema, max_tokens, avisos,
                                             variante_inicial=variante_inicial, log=log)
     uso = uso_desde_respuesta(resp, variante.modelo)
-    datos, truncado, texto = _parsear_respuesta(resp)
+    datos, truncado, texto = _parsear_o_vacio_por_tokens(resp)
     cortada_por_tokens = _razon_fin(resp) == types.FinishReason.MAX_TOKENS
     if truncado or cortada_por_tokens:
         motivo = "finish_reason=MAX_TOKENS" if cortada_por_tokens else "JSON incompleto"
+        if cortada_por_tokens and not texto:
+            motivo += ", sin texto: el pensamiento consumió el presupuesto"
         log(f"Respuesta cortada ({motivo}); se reintenta con max_output_tokens={max_tokens * 2}.")
         try:
             resp2 = _generar(cliente, variante, construir_contents, prompt_sistema, max_tokens * 2)
             uso.sumar(uso_desde_respuesta(resp2, variante.modelo))
-            datos2, truncado2, texto2 = _parsear_respuesta(resp2)
+            datos2, truncado2, texto2 = _parsear_o_vacio_por_tokens(resp2)
         except (errors.APIError, RuntimeError) as exc:
             avisos.append(f"El reintento con más tokens falló ({exc}); se conserva lo rescatado.")
         else:
             datos, truncado, texto = _elegir_mejor((datos, truncado, texto), (datos2, truncado2, texto2))
     if datos is None:
-        raise RuntimeError(f"La respuesta del modelo no contiene JSON utilizable: {texto[:200]!r}")
+        if cortada_por_tokens and not texto:
+            error = RuntimeError(
+                f"Gemini no devolvió texto (finish_reason=MAX_TOKENS) ni siquiera con max_output_tokens="
+                f"{max_tokens * 2}: el pensamiento del modelo {variante.modelo} consumió todo el presupuesto de "
+                "salida. Pruebe con otro --modelo o divida el video (--tramo-min).")
+        else:
+            error = RuntimeError(f"La respuesta del modelo no contiene JSON utilizable: {texto[:200]!r}")
+        error.uso = uso        # las llamadas ya se pagaron: quien capture el error puede contabilizarlas
+        raise error
     return datos, truncado, texto, uso, variante
 
 
@@ -961,18 +1046,19 @@ def analizar_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODEL
                    precios: dict | None = None, equipo: str = config.EQUIPO_POR_DEFECTO,
                    resolucion: str = config.RESOLUCION_VIDEO, *,
                    max_momentos: int | None = None, importancia_minima: int = 1,
+                   temperatura: float | None = config.TEMPERATURA,
                    log: Callable[[str], None] = print) -> ResultadoAnalisis:
     """Analiza un video ya subido (por tramos si es muy largo) y devuelve el ``ResultadoAnalisis``.
 
     ``resolucion`` ("baja" | "media" | "alta") es la ``media_resolution`` con la que el modelo mira el video; con
-    textos e iconos en pantalla conviene al menos "media".
+    textos e iconos en pantalla conviene al menos "media".  ``temperatura`` None = la del modelo (no se envía).
     """
     modelos = [modelo] + [m for m in config.MODELOS_ALTERNATIVOS if m != modelo]
     prompt_sistema = construir_prompt_sistema(equipo)
     tramos = calcular_tramos(info.duracion, tramo_max_seg)
     avisos: list[str] = []
     partes: list[_Parte] = []
-    variante = _Variante(modelo=modelo, resolucion=_validar_resolucion(resolucion))
+    variante = _Variante(modelo=modelo, resolucion=_validar_resolucion(resolucion), temperatura=temperatura)
     for k, (inicio, fin) in enumerate(tramos, start=1):
         tramo = (inicio, fin) if len(tramos) > 1 else None
         etiqueta = f" (tramo {k}/{len(tramos)}: {formatear_tiempo(inicio)}–{formatear_tiempo(fin)})" if tramo else ""
@@ -1017,32 +1103,77 @@ def _zona_para_modelo(zona: dict | None) -> dict | None:
 
 
 def _paso_para_refinado(numero: int, momento: Momento) -> dict:
+    """JSON de un paso para el refinado: incluye ``fuente`` e ``importancia`` para que el modelo sepa qué parte
+    de la descripción viene del audio (y no debe "corregirla" con la captura)."""
     paso = {"numero": numero, "tiempo": momento.tiempo, "titulo": momento.titulo,
-            "descripcion": momento.descripcion, "seccion": momento.seccion or ""}
+            "descripcion": momento.descripcion, "importancia": momento.importancia, "fuente": momento.fuente,
+            "seccion": momento.seccion or ""}
     zona = _zona_para_modelo(momento.zona)
     if zona is not None:
         paso["zona"] = zona
     return paso
 
 
+def _tiempo_captura(momento: Momento) -> str:
+    """``mm:ss`` del fotograma realmente capturado (puede diferir ±1 s del tiempo pedido)."""
+    return formatear_tiempo(momento.tiempo_real_seg) if momento.tiempo_real_seg is not None else momento.tiempo
+
+
 def _contenido_refinado(grupo: list[tuple[int, Momento, bytes]], sufijo: str) -> list:
-    """``contents`` del refinado: por cada paso un rótulo y su imagen, y al final la instrucción con el JSON."""
+    """``contents`` del refinado: por cada paso un rótulo (con el tiempo real del fotograma) y su imagen, y al
+    final la instrucción con el JSON."""
     partes = []
     for numero, momento, datos in grupo:
-        partes.append(types.Part.from_text(text=PROMPT_CAPTURA.format(numero=numero, tiempo=momento.tiempo)))
+        partes.append(types.Part.from_text(text=PROMPT_CAPTURA.format(numero=numero, tiempo=_tiempo_captura(momento))))
         partes.append(types.Part.from_bytes(data=datos, mime_type="image/jpeg"))
     pasos = json.dumps({"momentos": [_paso_para_refinado(n, m) for n, m, _ in grupo]}, ensure_ascii=False, indent=1)
     partes.append(types.Part.from_text(text=f"{PROMPT_REFINADO_USUARIO}\n\nPasos (JSON):\n{pasos}{sufijo}"))
     return [types.Content(role="user", parts=partes)]
 
 
+def _texto_normalizado(texto: str) -> str:
+    return " ".join(str(texto or "").lower().split()).rstrip(".…")
+
+
+def _completa(original: str, nuevo: str) -> bool:
+    """True si ``nuevo`` conserva el texto original (solo añade): es lo único que se admite con fuente "audio"."""
+    return _texto_normalizado(original) in _texto_normalizado(nuevo)
+
+
 def _refinar_momento(momento: Momento, bruto: dict) -> tuple[Momento, bool]:
-    """Aplica al momento el título, la descripción y la zona devueltos (normalizados); (momento, cambió)."""
+    """Aplica al momento el título, la descripción y la zona devueltos (normalizados); ``(momento, cambió)``.
+
+    - Con ``fuente == "audio"`` el texto solo se completa: un título/descripción que no contenga el original se
+      descarta (la captura no puede corregir lo que se dijo).
+    - ``zona``: ausente → se conserva; ``null`` → se quita (el elemento no aparece en la captura); inválida → se
+      conserva; válida → se reemplaza.
+    - Si el título o la descripción cambian, se guarda el texto previo en ``titulo_original`` /
+      ``descripcion_original`` (una sola vez: se conserva el más antiguo) para poder auditar el cambio.
+    """
     titulo = _recortar(str(bruto.get("titulo") or ""), config.MAX_TITULO) or momento.titulo
     descripcion = _recortar(str(bruto.get("descripcion") or ""), config.MAX_DESCRIPCION) or momento.descripcion
-    zona = _normalizar_zona(bruto.get("zona")) or momento.zona
-    nuevo = replace(momento, titulo=titulo, descripcion=descripcion, zona=zona)
-    return nuevo, (titulo, descripcion, zona) != (momento.titulo, momento.descripcion, momento.zona)
+    if momento.fuente == "audio":
+        if not _completa(momento.titulo, titulo):
+            titulo = momento.titulo
+        if not _completa(momento.descripcion, descripcion):
+            descripcion = momento.descripcion
+    if "zona" not in bruto:
+        zona = momento.zona
+    elif bruto["zona"] is None:
+        zona = None
+    else:
+        zona = _normalizar_zona(bruto["zona"]) or momento.zona
+    cambios = {}
+    if titulo != momento.titulo:
+        cambios["titulo"] = titulo
+        cambios["titulo_original"] = momento.titulo_original if momento.titulo_original is not None else momento.titulo
+    if descripcion != momento.descripcion:
+        cambios["descripcion"] = descripcion
+        cambios["descripcion_original"] = (momento.descripcion_original if momento.descripcion_original is not None
+                                           else momento.descripcion)
+    if zona != momento.zona:
+        cambios["zona"] = zona
+    return replace(momento, **cambios), bool(cambios)
 
 
 def _fusionar_refinado(momentos: list[Momento], numeros: list[int], datos) -> int:
@@ -1073,14 +1204,15 @@ def _fusionar_refinado(momentos: list[Momento], numeros: list[int], datos) -> in
 
 def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, precios: dict | None = None,
                          equipo: str = config.EQUIPO_POR_DEFECTO, max_lado_px: int = config.REFINADO_MAX_LADO_PX,
-                         lote: int = config.REFINADO_LOTE, *,
+                         lote: int = config.REFINADO_LOTE, *, temperatura: float | None = config.TEMPERATURA,
                          log: Callable[[str], None] = print) -> ResultadoAnalisis:
     """Segunda pasada con las capturas en alta resolución (sacadas del video original).
 
     Envía, en lotes de ``lote`` imágenes, las capturas de los momentos con ``ruta_captura`` junto con su JSON, y
     solo corrige ``titulo``, ``descripcion`` y ``zona`` con lo que ahora se lee en pantalla (textos, valores,
-    botones, iconos).  Los tiempos y el número de momentos no cambian.  El ``Uso`` se suma al del análisis.
-    Ante cualquier fallo devuelve el resultado original con un aviso.
+    botones, iconos), conservando lo dicho en el audio (ver ``_refinar_momento``).  Los tiempos y el número de
+    momentos no cambian.  El ``Uso`` se suma al del análisis.  Ante cualquier fallo devuelve el resultado original
+    con un aviso, sumando igualmente los tokens ya gastados (``modelo`` "<modelo> (+refinado fallido)").
     """
     con_captura = [(n, m) for n, m in enumerate(resultado.momentos, start=1) if m.ruta_captura]
     if not con_captura:
@@ -1094,7 +1226,7 @@ def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, pre
         f"({math.ceil(len(con_captura) / lote)} petición(es) de hasta {lote} imágenes)…")
     try:
         # Sin media_resolution: para imágenes fijas el valor por defecto del modelo es el de mejor calidad.
-        variante = _Variante(modelo=modelo, resolucion=None, esquema_json=ESQUEMA_REFINADO,
+        variante = _Variante(modelo=modelo, resolucion=None, temperatura=temperatura, esquema_json=ESQUEMA_REFINADO,
                              prompt_sin_esquema=PROMPT_REFINADO_SIN_ESQUEMA)
         prompt_sistema = construir_prompt_refinado(equipo)
         for inicio in range(0, len(con_captura), lote):
@@ -1121,8 +1253,16 @@ def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, pre
             raise ValueError("ninguna captura se pudo leer")
     except Exception as exc:  # noqa: BLE001 - por contrato: cualquier fallo devuelve el original
         aviso = f"No se pudo refinar con las capturas ({exc}); se conserva el análisis original."
+        uso_fallido = resultado.uso
+        if isinstance(getattr(exc, "uso", None), Uso):     # respuesta pagada pero sin JSON utilizable
+            exc.uso.costo_usd = estimar_costo(exc.uso, precios)
+            uso_refinado.sumar(exc.uso)
+        if uso_refinado.llamadas:       # lo ya pagado se contabiliza aunque no se aplique ningún cambio
+            aviso += (f" Se gastaron {uso_refinado.tokens_total} tokens en {uso_refinado.llamadas} petición(es) "
+                      "del refinado sin aplicar cambios.")
+            uso_fallido = _sumar_usos(resultado.uso, uso_refinado, f"{modelo} (+refinado fallido)")
         log("Aviso: " + aviso)
-        return replace(resultado, avisos=resultado.avisos + avisos + [aviso])
+        return replace(resultado, uso=uso_fallido, avisos=resultado.avisos + avisos + [aviso])
 
     uso_total = Uso(modelo=f"{modelo} (+refinado)")
     if resultado.uso is not None:
@@ -1130,9 +1270,20 @@ def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, pre
         uso_total.batch = resultado.uso.batch
     uso_total.sumar(uso_refinado)
     aviso = (f"Refinado con capturas ({variante.modelo}): {enviados} pasos revisados en {peticiones} petición(es), "
-             f"{cambiados} con cambios ({uso_refinado.tokens_total} tokens).")
+             f"{cambiados} con cambios ({uso_refinado.tokens_total} tokens); el texto previo de cada paso cambiado "
+             "queda en titulo_original/descripcion_original.")
     log(aviso)
     return replace(resultado, momentos=momentos, uso=uso_total, avisos=resultado.avisos + avisos + [aviso])
+
+
+def _sumar_usos(base: Uso | None, extra: Uso, modelo: str) -> Uso:
+    """``Uso`` nuevo con ``modelo`` = ``base`` (si lo hay) + ``extra``; conserva la marca ``batch`` de ``base``."""
+    total = Uso(modelo=modelo)
+    if base is not None:
+        total.sumar(base)
+        total.batch = base.batch
+    total.sumar(extra)
+    return total
 
 
 # ----------------------------------------------------------------------------
@@ -1173,37 +1324,46 @@ def _aplicar_redaccion(resultado: ResultadoAnalisis, datos) -> tuple[list[Moment
 
 
 def pulir_redaccion(cliente, resultado: ResultadoAnalisis, modelo_redactor: str, precios: dict | None = None, *,
+                    temperatura: float | None = config.TEMPERATURA,
                     log: Callable[[str], None] = print) -> ResultadoAnalisis:
     """Segunda pasada solo de texto: mejora títulos, descripciones, secciones y resumen sin tocar tiempos.
 
-    Si algo falla devuelve el resultado original con un aviso.
+    Si algo falla devuelve el resultado original con un aviso (sumando los tokens de la llamada si la hubo).
     """
     if not resultado.momentos:
         return replace(resultado, avisos=resultado.avisos + ["Redactor omitido: no hay momentos que pulir."])
     borrador = json.dumps(_borrador_para_redactor(resultado), ensure_ascii=False, indent=1)
     texto_usuario = PROMPT_REDACTOR_USUARIO + borrador
     avisos: list[str] = []
+    uso: Uso | None = None
     log(f"Puliendo la redacción con {modelo_redactor} ({len(resultado.momentos)} pasos, solo texto)…")
     try:
         datos, truncado, _texto, uso, variante = _generar_y_parsear(
             cliente, [modelo_redactor], PROMPT_REDACTOR,
             lambda sufijo: [types.Content(role="user", parts=[types.Part.from_text(text=texto_usuario + sufijo)])],
-            avisos, variante_inicial=_Variante(modelo=modelo_redactor, resolucion=None), log=log)
+            avisos, variante_inicial=_Variante(modelo=modelo_redactor, resolucion=None, temperatura=temperatura),
+            log=log)
+        uso.costo_usd = estimar_costo(uso, precios)
         if truncado:
             raise ValueError("la respuesta del redactor llegó cortada")
         momentos, titulo, resumen = _aplicar_redaccion(resultado, datos)
     except Exception as exc:  # noqa: BLE001 - por contrato: cualquier fallo devuelve el original
         aviso = f"No se pudo pulir la redacción con {modelo_redactor} ({exc}); se conserva el borrador original."
+        uso_fallido = resultado.uso
+        if uso is None and isinstance(getattr(exc, "uso", None), Uso):
+            uso = exc.uso
+            uso.costo_usd = estimar_costo(uso, precios)
+        if uso is not None and uso.llamadas:    # la llamada se pagó aunque el resultado no sirva
+            aviso += f" Se gastaron {uso.tokens_total} tokens en el redactor sin aplicar cambios."
+            uso_fallido = _sumar_usos(resultado.uso, uso, f"{resultado.uso.modelo if resultado.uso else resultado.modelo}"
+                                                          f"+{modelo_redactor} (fallido)")
         log("Aviso: " + aviso)
-        return replace(resultado, avisos=resultado.avisos + avisos + [aviso])
+        return replace(resultado, uso=uso_fallido, avisos=resultado.avisos + avisos + [aviso])
 
-    uso.costo_usd = estimar_costo(uso, precios)
     modelo_combinado = f"{resultado.modelo}+{variante.modelo}" if resultado.modelo else variante.modelo
-    uso_total = Uso(modelo=modelo_combinado)
-    if resultado.uso is not None:
-        uso_total.sumar(resultado.uso)
-        uso_total.batch = resultado.uso.batch
-    uso_total.sumar(uso)
+    # el Uso conserva la historia completa ("a (+refinado)+b") aunque el modelo del documento sea "a+b"
+    base_uso = resultado.uso.modelo if resultado.uso is not None and resultado.uso.modelo else resultado.modelo
+    uso_total = _sumar_usos(resultado.uso, uso, f"{base_uso}+{variante.modelo}" if base_uso else variante.modelo)
     log(f"Redacción pulida ({uso.tokens_total} tokens).")
     return replace(resultado, momentos=momentos, modelo=modelo_combinado, uso=uso_total,
                    resumen=resumen or resultado.resumen, titulo=titulo or resultado.titulo,
@@ -1221,37 +1381,137 @@ def _tramo_desde(valor) -> tuple[float, float] | None:
     return float(inicio), float(fin)
 
 
+@dataclass
+class OpcionesLote:
+    """Opciones con las que se construyen las peticiones de un lote y registro de sus reenvíos.
+
+    El modo batch NO tiene la escalera de fallbacks del modo síncrono (el rechazo de una opción llega horas
+    después, en todas las respuestas).  Por eso se guarda qué opciones se usaron: si el lote falla por una opción
+    no soportada por el modelo, se reenvía automáticamente sin ella (hasta ``MAX_REINTENTOS_LOTE`` veces).
+    """
+
+    thinking: bool = True
+    con_resolucion: bool = True
+    esquema: bool = True
+    reintentos: int = 0
+    avisos: list = field(default_factory=list)
+
+    def a_dict(self) -> dict:
+        return {"thinking": self.thinking, "con_resolucion": self.con_resolucion, "esquema": self.esquema,
+                "reintentos": self.reintentos, "avisos": list(self.avisos)}
+
+    @classmethod
+    def desde_dict(cls, datos) -> "OpcionesLote":
+        if not isinstance(datos, dict):
+            return cls()
+        return cls(thinking=bool(datos.get("thinking", True)), con_resolucion=bool(datos.get("con_resolucion", True)),
+                   esquema=bool(datos.get("esquema", True)), reintentos=int(datos.get("reintentos") or 0),
+                   avisos=list(datos.get("avisos") or []))
+
+    def aplicar(self, accion: str) -> bool:
+        """Apaga la opción que indica ``accion`` (``sin_thinking`` | ``sin_resolucion`` | ``sin_esquema``);
+        False si no aplica (ya estaba apagada o la acción no es de opciones)."""
+        campo = {"sin_thinking": "thinking", "sin_resolucion": "con_resolucion", "sin_esquema": "esquema"}.get(accion)
+        if campo is None or not getattr(self, campo):
+            return False
+        setattr(self, campo, False)
+        return True
+
+    def variante(self, modelo: str, resolucion: str | None, temperatura: float | None = config.TEMPERATURA) -> _Variante:
+        return _Variante(modelo=modelo, thinking=self.thinking, con_resolucion=self.con_resolucion, esquema=self.esquema,
+                         resolucion=resolucion, temperatura=temperatura)
+
+
+class ErrorItemLote(RuntimeError):
+    """Error que la API devolvió para una petición del lote (``inlined.error``), con su código y mensaje."""
+
+    def __init__(self, nombre: str, tramo: int, codigo, mensaje: str):
+        super().__init__(f"Gemini devolvió un error para {nombre} (tramo {tramo}): {codigo} {mensaje}")
+        self.codigo = codigo
+        self.mensaje = mensaje or ""
+
+
+def opcion_rechazada_en_lote(resultados: dict, opciones: OpcionesLote, modelo: str,
+                             resolucion: str = config.RESOLUCION_VIDEO) -> str | None:
+    """Si TODAS las respuestas de un lote son errores y alguna es un rechazo de configuración (código 400 /
+    INVALID_ARGUMENT que menciona thinking, media_resolution o schema), devuelve el peldaño a aplicar para
+    reenviar el lote sin esa opción; None si el lote no falló por eso."""
+    if not resultados or not all(isinstance(r, Exception) for r in resultados.values()):
+        return None
+    variante = opciones.variante(modelo, _validar_resolucion(resolucion) if resolucion else None)
+    for error in resultados.values():
+        if isinstance(error, ErrorItemLote) and str(error.codigo) in ("3", "400", "INVALID_ARGUMENT"):
+            accion = _accion_por_mensaje(error.mensaje, variante)
+            if accion:
+                return accion
+    return None
+
+
 def enviar_lote(cliente, peticiones: list[dict], modelo: str, nombre_lote: str, *,
                 equipo: str = config.EQUIPO_POR_DEFECTO, fps: float | None = None,
-                resolucion: str = config.RESOLUCION_VIDEO,
+                resolucion: str = config.RESOLUCION_VIDEO, temperatura: float | None = config.TEMPERATURA,
+                opciones_lote: OpcionesLote | None = None,
                 log: Callable[[str], None] = print) -> "types.BatchJob":
     """Crea un trabajo batch con una petición por video (o por tramo).
 
     ``peticiones``: ``[{"archivo": types.File, "info": InfoVideo, "tramo": (a, b) | None}]``; cada dict puede
-    traer además ``"equipo"`` y ``"fps"`` propios.  ``resolucion`` ("baja" | "media" | "alta") vale para todas.
-    Los metadatos (video, tramo, inicio, fin) permiten mapear las respuestas al recoger el lote.
+    traer además ``"equipo"`` y ``"fps"`` propios y ``"clave"`` (nombre único del video dentro del lote; por defecto
+    ``info.nombre``).  ``resolucion`` ("baja" | "media" | "alta") vale para todas.  Los metadatos (video = clave,
+    tramo, inicio, fin) permiten mapear las respuestas al recoger el lote.
+
+    ``opciones_lote`` dice con qué opciones se construyen las peticiones (thinking, media_resolution, esquema).  Si
+    ``batches.create`` rechaza una de ellas (400) se apaga y se reintenta, hasta ``MAX_REINTENTOS_LOTE`` veces,
+    dejando constancia en ``opciones_lote`` (que el pipeline guarda en ``salida/_lotes/<id>.json``).
     """
     if not peticiones:
         raise ValueError("No hay peticiones que enviar al lote.")
     resolucion = _validar_resolucion(resolucion)
+    opciones = opciones_lote if opciones_lote is not None else OpcionesLote()
+    while True:
+        variante = opciones.variante(modelo, resolucion, temperatura)
+        solicitudes = _solicitudes_lote(peticiones, variante, equipo, fps)
+        try:
+            job = cliente.batches.create(model=modelo, src=solicitudes,
+                                         config=types.CreateBatchJobConfig(display_name=nombre_lote))
+        except errors.ClientError as exc:
+            accion = _accion_por_mensaje(f"{exc.message or ''} {exc.details or ''}", variante) if exc.code == 400 else None
+            if accion is None or opciones.reintentos >= MAX_REINTENTOS_LOTE or not opciones.aplicar(accion):
+                raise
+            opciones.reintentos += 1
+            aviso = (f"El modelo {modelo} rechazó el lote ({exc.code} {exc.status or ''}: {exc.message or exc.details}); "
+                     f"se reenvía {accion.replace('_', ' ')} (reintento {opciones.reintentos}/{MAX_REINTENTOS_LOTE}).")
+            opciones.avisos.append(aviso)
+            log("Aviso: " + aviso)
+            continue
+        log(f"Lote enviado: {job.name} ({len(solicitudes)} peticiones, modelo {modelo}, estado {job.state}"
+            + ("" if variante.thinking and variante.con_resolucion and variante.esquema else
+               f"; opciones: thinking={variante.thinking}, media_resolution={variante.con_resolucion}, "
+               f"esquema={variante.esquema}") + ").")
+        return job
+
+
+def _solicitudes_lote(peticiones: list[dict], variante: _Variante, equipo: str, fps: float | None) -> list:
+    """``InlinedRequest`` por petición con la configuración de ``variante`` (y el sufijo del prompt si va sin esquema)."""
     contador: dict[str, int] = {}
     solicitudes = []
+    sufijo = "" if variante.esquema else "\n\n" + variante.prompt_sin_esquema
     for peticion in peticiones:
         info: InfoVideo = peticion["info"]
+        clave = str(peticion.get("clave") or info.nombre)
         tramo = _tramo_desde(peticion.get("tramo"))
-        k = contador.get(info.nombre, 0)
-        contador[info.nombre] = k + 1
+        k = contador.get(clave, 0)
+        contador[clave] = k + 1
         inicio, fin = tramo if tramo else (0.0, float(info.duracion))
-        contenido = _construir_contenido(peticion["archivo"], construir_prompt_usuario(tramo),
+        contenido = _construir_contenido(peticion["archivo"], construir_prompt_usuario(tramo) + sufijo,
                                          peticion.get("fps", fps), tramo)
         cfg = _construir_config(construir_prompt_sistema(peticion.get("equipo", equipo)), config.MAX_TOKENS_SALIDA,
-                                resolucion=resolucion)
+                                esquema=variante.esquema, thinking=variante.thinking,
+                                resolucion=variante.resolucion if variante.con_resolucion else None,
+                                temperatura=variante.temperatura)
         solicitudes.append(types.InlinedRequest(
             contents=contenido, config=cfg,
-            metadata={"video": info.nombre, "tramo": str(k), "inicio": f"{inicio:g}", "fin": f"{fin:g}"}))
-    job = cliente.batches.create(model=modelo, src=solicitudes, config=types.CreateBatchJobConfig(display_name=nombre_lote))
-    log(f"Lote enviado: {job.name} ({len(solicitudes)} peticiones, modelo {modelo}, estado {job.state}).")
-    return job
+            metadata={"video": clave, "tramo": str(k), "inicio": f"{inicio:g}", "fin": f"{fin:g}"}))
+    return solicitudes
 
 
 def estado_lote(cliente, nombre_job: str) -> "types.BatchJob":
@@ -1278,9 +1538,12 @@ def recoger_lote(cliente, job, mapa_videos: dict, precios: dict | None = None, *
     respuestas = list(getattr(destino, "inlined_responses", None) or [])
     if not respuestas:
         error = getattr(job, "error", None)
-        motivo = error.message if error is not None and error.message else f"estado {getattr(job, 'state', None)}"
+        estado = getattr(job, "state", None)
+        motivo = error.message if error is not None and error.message else f"estado {getattr(estado, 'name', estado)}"
         for nombre in mapa_videos:
-            resultados[nombre] = RuntimeError(f"El lote no devolvió respuestas ({motivo}).")
+            resultados[nombre] = RuntimeError(
+                f"El lote no devolvió respuestas ({motivo}). Vuelva a ejecutar --batch: se reenviarán solo los videos "
+                f"que sigan sin {config.NOMBRE_JSON}.")
         return resultados
 
     esperados: list[tuple[str, int, tuple[float, float] | None]] = []
@@ -1311,8 +1574,7 @@ def recoger_lote(cliente, job, mapa_videos: dict, precios: dict | None = None, *
             tramo = _tramo_desde(tramos_mapa[k]) if k < len(tramos_mapa) else None
         modelo =_nombre_modelo(mapa_videos[nombre].get("modelo") or getattr(job, "model", None))
         if inlined.error is not None:
-            partes.setdefault(nombre, {})[k] = RuntimeError(
-                f"Gemini devolvió un error para {nombre} (tramo {k}): {inlined.error.code} {inlined.error.message}")
+            partes.setdefault(nombre, {})[k] = ErrorItemLote(nombre, k, inlined.error.code, inlined.error.message or "")
             continue
         try:
             datos, truncado, texto = _parsear_respuesta(inlined.response)

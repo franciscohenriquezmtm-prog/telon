@@ -104,11 +104,43 @@ def test_caja_con_esquinas_invertidas_o_minuscula(tmp_path):
     assert _contar(tmp_path / "b.jpg", _mascara_roja) > 50
 
 
+def test_caja_puntual_se_anota_como_punto(tmp_path):
+    """Una caja con los dos lados minúsculos (o nulos) es un punto: círculo con flecha en su centro."""
+    origen = _imagen(tmp_path)
+    for nombre, caja in (("c", [0.5, 0.5, 0.503, 0.503]), ("d", [0.5, 0.5, 0.5, 0.5])):
+        destino = tmp_path / f"{nombre}.jpg"
+        assert anotar_captura(origen, {"caja": caja}, destino) == destino
+        assert _es_rojo(_pixel(destino, 320, 180 - 43)) and not _es_rojo(_pixel(destino, 320, 180))
+
+
+def test_caja_que_cubre_toda_la_captura_no_se_anota(tmp_path):
+    origen = _imagen(tmp_path)
+    mensajes: list = []
+    for caja in ([0, 0, 1, 1], [0.05, 0.05, 0.95, 0.95]):
+        destino = tmp_path / "marco.jpg"
+        assert anotar_captura(origen, {"caja": caja}, destino, log=mensajes.append) is None
+        assert not destino.exists()
+    assert len(mensajes) == 2 and all("casi toda la captura" in m for m in mensajes)
+    # una franja ancha pero de poca altura sí es una zona concreta
+    assert anotar_captura(origen, {"caja": [0, 0.1, 1, 0.5]}, tmp_path / "franja.jpg") is not None
+
+
+def test_caja_en_borde_o_esquina_queda_dentro(tmp_path):
+    origen = _imagen(tmp_path)
+    for nombre, caja in (("esquina", [0.99, 0.99, 1, 1]), ("borde", [0.998, 0.3, 1, 0.7]), ("origen", [0, 0, 0.005, 0.01])):
+        destino = tmp_path / f"{nombre}.jpg"
+        assert anotar_captura(origen, {"caja": caja}, destino) == destino
+        mascara = _mascara_roja(_rgb(destino))
+        assert mascara.sum() > 150, nombre                          # la marca completa (los 4 lados) está en la imagen
+        ys, xs = np.nonzero(mascara)
+        assert xs.min() >= 1 and xs.max() <= 638 and ys.min() >= 1 and ys.max() <= 358, nombre
+
+
 @pytest.mark.parametrize("zona", [
     None, {}, [], "0.5,0.5", {"x": 0.5}, {"y": 0.5}, {"x": 1.5, "y": 0.2}, {"x": -0.1, "y": 0.2},
     {"x": "0.5", "y": 0.5}, {"x": True, "y": 0.5}, {"x": float("nan"), "y": 0.1},
     {"caja": [0.1, 0.2]}, {"caja": [0.1, 0.2, 1.5, 0.9]}, {"caja": ["a", 0, 1, 1]},
-    {"caja": [0.5, 0.5, 0.5, 0.5]}, {"caja": None},
+    {"caja": None},
 ])
 def test_zona_invalida_devuelve_none(tmp_path, zona):
     origen = _imagen(tmp_path)

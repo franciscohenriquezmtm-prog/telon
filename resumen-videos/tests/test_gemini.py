@@ -225,6 +225,24 @@ class TestPromptYEsquema:
         assert cfg.thinking_config.thinking_level == types.ThinkingLevel.LOW
         assert cfg.temperature == config.TEMPERATURA and cfg.max_output_tokens == 100
 
+    def test_temperatura_por_defecto_no_se_envia(self):
+        assert config.TEMPERATURA is None      # G10: el valor por defecto del modelo (Google lo recomienda en Gemini 3)
+        assert gemini._construir_config("s", 1).temperature is None
+        assert gemini._construir_config("s", 1, temperatura=0.3).temperature == 0.3
+        assert gemini._construir_config("s", 1, temperatura=0).temperature == 0.0
+
+    def test_prompt_refinado_conserva_el_audio_y_admite_zona_null(self):
+        sistema = gemini.PROMPT_REFINADO.lower()
+        usuario = gemini.PROMPT_REFINADO_USUARIO.lower()
+        assert "audio" in sistema and "consérvala siempre" in sistema and "escribe ambos" in sistema
+        assert 'fuente "audio"' in sistema and "solo se completan" in sistema
+        assert "null" in sistema and "null" in usuario
+        assert "conserva siempre" in usuario and "escribe ambos" in usuario and "solo se completan" in usuario
+        assert "null" in gemini.PROMPT_REFINADO_SIN_ESQUEMA
+
+    def test_prompt_pide_agrupar_valores_de_la_misma_frase(self):
+        assert "misma frase" in gemini.PROMPT_SISTEMA and "un solo momento" in gemini.PROMPT_SISTEMA
+
     def test_prompt_pide_leer_textos_e_iconos(self):
         sistema = gemini.PROMPT_SISTEMA.lower()
         assert "texto" in sistema and "icono" in sistema and "no legible" in sistema
@@ -247,7 +265,9 @@ class TestPromptYEsquema:
         item = esquema["properties"]["momentos"]["items"]
         assert item["required"] == ["numero", "titulo", "descripcion"]
         assert item["properties"]["numero"]["type"] == "integer"
-        assert item["properties"]["zona"] == gemini.ESQUEMA_RESPUESTA["properties"]["momentos"]["items"]["properties"]["zona"]
+        # zona: la del análisis o null ("no señalar": el elemento no aparece en la captura)
+        assert item["properties"]["zona"] == {"anyOf": [gemini.ESQUEMA_ZONA, {"type": "null"}]}
+        assert gemini.ESQUEMA_RESPUESTA["properties"]["momentos"]["items"]["properties"]["zona"] == gemini.ESQUEMA_ZONA
         assert "tiempo" not in item["properties"]
         cfg = gemini._construir_config("sistema", 100, esquema_json=esquema)
         assert cfg.response_json_schema == esquema and cfg.response_json_schema is not esquema
@@ -316,6 +336,7 @@ class TestClienteYSubida:
         with pytest.raises(RuntimeError, match="códec no soportado"):
             gemini.subir_video(cliente, ruta, "video", intervalo=0, log=lambda _: None)
         assert cliente.llamadas[0]["config"].mime_type == "video/quicktime"
+        assert cliente.files.eliminados == ["files/subido"]      # G9: la copia no se queda en Google
 
     def test_subida_timeout(self, tmp_path):
         ruta = tmp_path / "video.mp4"
@@ -323,6 +344,30 @@ class TestClienteYSubida:
         cliente = ClienteFalso(estados_archivo=[types.FileState.PROCESSING])
         with pytest.raises(RuntimeError, match="PROCESSING"):
             gemini.subir_video(cliente, ruta, "video", timeout_procesado=0, intervalo=0, log=lambda _: None)
+        assert cliente.files.eliminados == ["files/subido"]
+
+    def test_subida_interrumpida_borra_el_remoto(self, tmp_path, monkeypatch):
+        ruta = tmp_path / "video.mp4"
+        ruta.write_bytes(b"0" * 100)
+        cliente = ClienteFalso(estados_archivo=[types.FileState.PROCESSING, types.FileState.PROCESSING])
+
+        def ctrl_c(**kw):
+            raise KeyboardInterrupt
+        monkeypatch.setattr(cliente.files, "get", ctrl_c)
+        with pytest.raises(KeyboardInterrupt):
+            gemini.subir_video(cliente, ruta, "video", timeout_procesado=60, intervalo=0, log=lambda _: None)
+        assert cliente.files.eliminados == ["files/subido"]
+        # con --conservar-subida no se borra (y se avisa)
+        cliente = ClienteFalso(estados_archivo=[types.FileState.PROCESSING, types.FileState.FAILED])
+        lineas, log = registro()
+        with pytest.raises(RuntimeError):
+            gemini.subir_video(cliente, ruta, "video", intervalo=0, conservar_subida=True, log=log)
+        assert cliente.files.eliminados == [] and any("conservado" in l for l in lineas)
+        # el borrado que falla no oculta el error original
+        cliente = ClienteFalso(estados_archivo=[types.FileState.PROCESSING, types.FileState.FAILED])
+        cliente.files.fallar_delete = True
+        with pytest.raises(RuntimeError, match="códec no soportado"):
+            gemini.subir_video(cliente, ruta, "video", intervalo=0, log=lambda _: None)
 
     def test_subida_extension_sin_mime(self, tmp_path):
         ruta = tmp_path / "video.mkv"
@@ -450,6 +495,31 @@ class TestAnalizarVideo:
         resultado = gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
         assert len(cliente.generaciones()) == 2 and len(resultado.momentos) == 1 and not resultado.truncado
 
+    @pytest.mark.parametrize("partes", [[], None, [types.Part(text="pensando…", thought=True)]])
+    def test_max_tokens_sin_texto_reintenta_una_vez(self, partes):
+        """G1: el pensamiento consumió el presupuesto (sin texto) → reintento con el doble de tokens, no error."""
+        vacia = types.GenerateContentResponse(
+            candidates=[types.Candidate(content=types.Content(role="model", parts=partes), finish_reason=types.FinishReason.MAX_TOKENS)],
+            usage_metadata=types.GenerateContentResponseUsageMetadata(prompt_token_count=1000, thoughts_token_count=16000,
+                                                                      total_token_count=17000))
+        completo = documento_json([momento_json("00:10", "A"), momento_json("00:20", "B")])
+        cliente = ClienteFalso([vacia, respuesta(completo)])
+        lineas, log = registro()
+        resultado = gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=log)
+        llamadas = cliente.generaciones()
+        assert len(llamadas) == 2 and llamadas[1]["config"].max_output_tokens == config.MAX_TOKENS_SALIDA * 2
+        assert [m.titulo for m in resultado.momentos] == ["A", "B"] and not resultado.truncado
+        assert resultado.uso.llamadas == 2 and resultado.uso.tokens_pensamiento == 16050
+        assert any("MAX_TOKENS" in l and "pensamiento" in l for l in lineas)
+
+    def test_max_tokens_sin_texto_dos_veces_propaga(self):
+        vacia = types.GenerateContentResponse(
+            candidates=[types.Candidate(content=types.Content(role="model", parts=[]), finish_reason=types.FinishReason.MAX_TOKENS)])
+        cliente = ClienteFalso([vacia, vacia])
+        with pytest.raises(RuntimeError, match="MAX_TOKENS.*pensamiento"):
+            gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
+        assert len(cliente.generaciones()) == 2
+
     def test_reintento_falla_conserva_rescatado(self):
         completo = documento_json([momento_json("00:10", "A"), momento_json("00:20", "B")])
         cortado = completo[: completo.index('"tiempo": "00:20"') + 5]
@@ -474,6 +544,30 @@ class TestAnalizarVideo:
         cliente = ClienteFalso([respuesta("No puedo analizar este video.")])
         with pytest.raises(RuntimeError, match="JSON"):
             gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
+
+
+class TestTemperatura:
+    def test_analisis_refinado_redactor_y_lote(self, tmp_path):
+        cliente = ClienteFalso([respuesta(documento_json([momento_json("00:05")]))] * 2)
+        gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
+        gemini.analizar_video(cliente, archivo_remoto(), info_video(), temperatura=0.4, log=lambda _: None)
+        assert [l["config"].temperature for l in cliente.generaciones()] == [None, 0.4]
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "Uno", "descripcion": "d"}]))])
+        gemini.refinar_con_capturas(cliente, original, MODELO, temperatura=0.2, log=lambda _: None)
+        assert cliente.generaciones()[0]["config"].temperature == 0.2
+        pulido = json.dumps({"titulo_video": "T", "resumen": "R", "momentos": [
+            {"tiempo": "00:10", "titulo": "X", "descripcion": "Y", "importancia": 5, "fuente": "ambos", "seccion": "S"},
+            {"tiempo": "00:30", "titulo": "X", "descripcion": "Y", "importancia": 4, "fuente": "audio", "seccion": "S"}]})
+        cliente = ClienteFalso([respuesta(pulido)])
+        gemini.pulir_redaccion(cliente, resultado_base(), "gemini-pro", temperatura=1.0, log=lambda _: None)
+        assert cliente.generaciones()[0]["config"].temperature == 1.0
+        cliente = ClienteFalso()
+        peticiones = [{"archivo": archivo_remoto(), "info": info_video(), "tramo": None}]
+        gemini.enviar_lote(cliente, peticiones, MODELO, "lote", log=lambda _: None)
+        gemini.enviar_lote(cliente, peticiones, MODELO, "lote", temperatura=0.5, log=lambda _: None)
+        lotes = [l for l in cliente.llamadas if l["tipo"] == "batch_create"]
+        assert [l["src"][0].config.temperature for l in lotes] == [None, 0.5]
 
 
 class TestEscaleraFallbacks:
@@ -751,6 +845,90 @@ class TestBatch:
         job = types.BatchJob(state=types.JobState.JOB_STATE_FAILED, error=types.JobError(code=8, message="cuota agotada"))
         resultados = gemini.recoger_lote(ClienteFalso(), job, {"v": {"info": info_video()}}, log=lambda _: None)
         assert isinstance(resultados["v"], Exception) and "cuota agotada" in str(resultados["v"])
+        assert "--batch" in str(resultados["v"])        # P-H10: qué hacer a continuación
+        expirado = types.BatchJob(state=types.JobState.JOB_STATE_EXPIRED)
+        error = gemini.recoger_lote(ClienteFalso(), expirado, {"v": {"info": info_video()}}, log=lambda _: None)["v"]
+        assert "JOB_STATE_EXPIRED" in str(error) and "JobState." not in str(error) and "--batch" in str(error)
+
+    def test_enviar_lote_reintenta_sin_la_opcion_rechazada(self):
+        """G7: el batch no tiene escalera; si ``batches.create`` rechaza una opción se reenvía sin ella (máx. 2)."""
+        class LotesQueRechazan(_Lotes):
+            def __init__(self, cliente, errores):
+                super().__init__(cliente)
+                self.errores = list(errores)
+
+            def create(self, *, model, src, config=None):
+                self._cliente.llamadas.append({"tipo": "batch_create", "modelo": model, "src": src, "config": config})
+                if self.errores:
+                    raise self.errores.pop(0)
+                return types.BatchJob(name="batches/lote1", state=types.JobState.JOB_STATE_PENDING, model=f"models/{model}")
+
+        cliente = ClienteFalso()
+        cliente.batches = LotesQueRechazan(cliente, [error_cliente(400, "thinking_level is not supported"),
+                                                    error_cliente(400, "responseJsonSchema is not supported")])
+        peticiones = [{"archivo": archivo_remoto(), "info": info_video(), "tramo": None}]
+        opciones = gemini.OpcionesLote()
+        lineas, log = registro()
+        job = gemini.enviar_lote(cliente, peticiones, MODELO, "lote", opciones_lote=opciones, log=log)
+        lotes = [l for l in cliente.llamadas if l["tipo"] == "batch_create"]
+        assert job.name == "batches/lote1" and len(lotes) == 3
+        assert lotes[0]["src"][0].config.thinking_config is not None and lotes[0]["src"][0].config.response_json_schema is not None
+        assert lotes[1]["src"][0].config.thinking_config is None and lotes[1]["src"][0].config.response_json_schema is not None
+        assert lotes[2]["src"][0].config.thinking_config is None and lotes[2]["src"][0].config.response_json_schema is None
+        assert lotes[2]["src"][0].config.media_resolution is not None
+        assert "Responde SOLO con el JSON" in lotes[2]["src"][0].contents[0].parts[1].text
+        assert gemini.PROMPT_SIN_ESQUEMA not in lotes[1]["src"][0].contents[0].parts[1].text
+        assert (opciones.thinking, opciones.esquema, opciones.con_resolucion, opciones.reintentos) == (False, False, True, 2)
+        assert len(opciones.avisos) == 2 and all("se reenvía" in a for a in opciones.avisos)
+        assert opciones.a_dict()["reintentos"] == 2 and gemini.OpcionesLote.desde_dict(opciones.a_dict()) == opciones
+        assert sum("Aviso" in l for l in lineas) == 2
+        # tercer rechazo: ya no quedan reintentos → se propaga
+        cliente = ClienteFalso()
+        cliente.batches = LotesQueRechazan(cliente, [error_cliente(400, "thinking not supported"),
+                                                    error_cliente(400, "mediaResolution not supported"),
+                                                    error_cliente(400, "schema not supported")])
+        with pytest.raises(errors.ClientError):
+            gemini.enviar_lote(cliente, peticiones, MODELO, "lote", log=lambda _: None)
+        assert len([l for l in cliente.llamadas if l["tipo"] == "batch_create"]) == 3
+        # otros errores se propagan sin reintentar
+        cliente = ClienteFalso()
+        cliente.batches = LotesQueRechazan(cliente, [error_cliente(400, "API key not valid")])
+        with pytest.raises(errors.ClientError):
+            gemini.enviar_lote(cliente, peticiones, MODELO, "lote", log=lambda _: None)
+        assert len([l for l in cliente.llamadas if l["tipo"] == "batch_create"]) == 1
+
+    def test_opcion_rechazada_en_lote(self):
+        info = info_video()
+        rechazo = gemini.ErrorItemLote("v", 0, 3, "Invalid value at 'generation_config.thinking_config.thinking_level'")
+        assert isinstance(rechazo, RuntimeError) and "thinking_level" in str(rechazo)
+        assert gemini.opcion_rechazada_en_lote({"v": rechazo, "w": rechazo}, gemini.OpcionesLote(), MODELO) == "sin_thinking"
+        # ya sin thinking → el siguiente peldaño que mencione el mensaje
+        assert gemini.opcion_rechazada_en_lote({"v": rechazo}, gemini.OpcionesLote(thinking=False), MODELO) is None
+        esquema = gemini.ErrorItemLote("v", 0, "INVALID_ARGUMENT", "response_json_schema is not supported")
+        assert gemini.opcion_rechazada_en_lote({"v": esquema}, gemini.OpcionesLote(thinking=False), MODELO) == "sin_esquema"
+        # un video que sí respondió, un error de otro tipo o un lote vacío → no es un rechazo de configuración
+        ok = ResultadoAnalisis(momentos=[], modo="gemini-batch")
+        assert gemini.opcion_rechazada_en_lote({"v": rechazo, "w": ok}, gemini.OpcionesLote(), MODELO) is None
+        assert gemini.opcion_rechazada_en_lote({"v": gemini.ErrorItemLote("v", 0, 13, "internal error")}, gemini.OpcionesLote(), MODELO) is None
+        assert gemini.opcion_rechazada_en_lote({"v": RuntimeError("thinking")}, gemini.OpcionesLote(), MODELO) is None
+        assert gemini.opcion_rechazada_en_lote({}, gemini.OpcionesLote(), MODELO) is None
+        respuestas = [types.InlinedResponse(error=types.JobError(code=3, message="thinking_level not supported"),
+                                            metadata={"video": "v", "tramo": "0"})]
+        job = types.BatchJob(state=types.JobState.JOB_STATE_FAILED, dest=types.BatchJobDestination(inlined_responses=respuestas))
+        recogido = gemini.recoger_lote(ClienteFalso(), job, {"v": {"info": info}}, log=lambda _: None)
+        assert isinstance(recogido["v"], gemini.ErrorItemLote) and recogido["v"].codigo == 3
+        assert gemini.opcion_rechazada_en_lote(recogido, gemini.OpcionesLote(), MODELO) == "sin_thinking"
+
+    def test_enviar_lote_con_clave_propia(self):
+        """P-H9: dos videos con el mismo nombre base van con claves distintas en los metadatos."""
+        cliente = ClienteFalso()
+        a, b = info_video(90, "IMG_0001"), info_video(90, "IMG_0001")
+        peticiones = [{"archivo": archivo_remoto("files/a"), "info": a, "tramo": None, "clave": "IMG_0001"},
+                      {"archivo": archivo_remoto("files/b"), "info": b, "tramo": None, "clave": "IMG_0001-abc123"}]
+        gemini.enviar_lote(cliente, peticiones, MODELO, "lote", log=lambda _: None)
+        src = cliente.llamadas[-1]["src"]
+        assert [s.metadata["video"] for s in src] == ["IMG_0001", "IMG_0001-abc123"]
+        assert [s.metadata["tramo"] for s in src] == ["0", "0"]
 
     def test_recoger_lote_respuesta_sin_json(self):
         respuestas = [types.InlinedResponse(response=respuesta("nada"), metadata={"video": "v", "tramo": "0"})]
@@ -816,9 +994,13 @@ class TestPulirRedaccion:
     def test_estructura_alterada_devuelve_original(self):
         # quita un paso
         cliente = ClienteFalso([respuesta(json.dumps({"titulo_video": "T", "resumen": "R", "momentos": [
-            {"tiempo": "00:10", "titulo": "X", "descripcion": "Y", "importancia": 5, "fuente": "ambos", "seccion": "S"}]}))])
+            {"tiempo": "00:10", "titulo": "X", "descripcion": "Y", "importancia": 5, "fuente": "ambos", "seccion": "S"}]}),
+            entrada=7000, salida=100, pensamiento=0)])
         nuevo = gemini.pulir_redaccion(cliente, resultado_base(), "gemini-pro", log=lambda _: None)
         assert [m.titulo for m in nuevo.momentos] == ["encender", "colimador"] and any("No se pudo pulir" in a for a in nuevo.avisos)
+        # G8: la llamada pagada se contabiliza aunque no se aplique
+        assert nuevo.uso.llamadas == 2 and nuevo.uso.tokens_entrada == 8000 and nuevo.uso.modelo.endswith("(fallido)")
+        assert nuevo.modelo == MODELO and any("7100 tokens" in a for a in nuevo.avisos)
         # cambia un tiempo
         cliente = ClienteFalso([respuesta(json.dumps({"titulo_video": "T", "resumen": "R", "momentos": [
             {"tiempo": "00:10", "titulo": "X", "descripcion": "Y", "importancia": 5, "fuente": "ambos", "seccion": "S"},
@@ -837,6 +1019,19 @@ class TestPulirRedaccion:
         local = ResultadoAnalisis(momentos=[Momento(10.0, "a", "b")], modo="local", modelo="scdet", uso=None)
         nuevo = gemini.pulir_redaccion(ClienteFalso([respuesta(pulido)]), local, MODELO, log=lambda _: None)
         assert nuevo.uso.llamadas == 1 and nuevo.uso.modelo == f"scdet+{MODELO}" and nuevo.uso.costo_usd > 0
+
+    def test_tras_el_refinado_el_uso_conserva_la_historia(self):
+        """G5: el redactor va después del refinado; el Uso queda "a (+refinado)+b" y el documento "a+b"."""
+        pulido = json.dumps({"titulo_video": "T", "resumen": "R", "momentos": [
+            {"tiempo": "00:10", "titulo": "X", "descripcion": "Y", "importancia": 5, "fuente": "ambos", "seccion": "S"},
+            {"tiempo": "00:30", "titulo": "Z", "descripcion": "W", "importancia": 4, "fuente": "audio", "seccion": "S"}]})
+        refinado = resultado_base()
+        refinado.uso = Uso(modelo=f"{MODELO} (+refinado)", tokens_entrada=1800, llamadas=2, costo_usd=0.002)
+        nuevo = gemini.pulir_redaccion(ClienteFalso([respuesta(pulido, entrada=500, salida=50, pensamiento=0)]), refinado,
+                                       "gemini-pro", log=lambda _: None)
+        assert nuevo.modelo == f"{MODELO}+gemini-pro" and nuevo.uso.modelo == f"{MODELO} (+refinado)+gemini-pro"
+        assert nuevo.uso.llamadas == 3 and nuevo.uso.tokens_entrada == 2300
+        assert nuevo.momentos[0].zona == {"x": 0.5, "y": 0.5}      # el redactor no toca las zonas
 
 
 # ----------------------------------------------------------------------------
@@ -941,9 +1136,16 @@ class TestRefinarConCapturas:
         assert texto.startswith(gemini.PROMPT_REFINADO_USUARIO)
         pasos = json.loads(texto[texto.index("{"):])["momentos"]
         assert [p["numero"] for p in pasos] == [1, 3]
+        # G2: van también importancia y fuente, para que el modelo sepa qué viene del audio
         assert pasos[0] == {"numero": 1, "tiempo": "00:10", "titulo": "Encender", "descripcion": "Descripción de Encender.",
-                            "seccion": "Ajustes", "zona": {"x": 500, "y": 500}}
+                            "importancia": 3, "fuente": "ambos", "seccion": "Ajustes", "zona": {"x": 500, "y": 500}}
         assert "zona" not in pasos[1] and "tiempo_seg" not in pasos[1]
+        # G2: el texto previo de cada paso cambiado queda para auditar (solo el campo que cambió)
+        assert m1.titulo_original == "Encender" and m1.descripcion_original is None
+        assert m3.titulo_original is None and m3.descripcion_original == "Descripción de Guardar."
+        assert nuevo.momentos[1].titulo_original is None
+        assert "titulo_original" in m1.a_dict() and "descripcion_original" not in m1.a_dict()
+        assert "titulo_original" not in nuevo.momentos[1].a_dict()
 
     def test_lotes_ceil_n_entre_lote(self, tmp_path):
         momentos = [momento_con_captura(tmp_path, n, 10.0 * n, f"Paso {n}", ancho=320, alto=200) for n in range(1, 6)]
@@ -973,6 +1175,56 @@ class TestRefinarConCapturas:
         assert [m.titulo for m in nuevo.momentos] == ["Uno", "Colimar", "Tres"]
         assert nuevo.momentos[0].zona == {"x": 0.5, "y": 0.5}      # sin zona devuelta: se conserva
 
+    def test_fuente_audio_solo_se_completa(self, tmp_path):
+        """G2: lo dicho en el audio no se "corrige" con la captura; solo se admite añadir."""
+        dicho = "Se indica kV 70 y mA 2,5 (valor no audible del tiempo)."
+        momentos = [momento_con_captura(tmp_path, 1, 10.0, "Fijar kV en 70", ancho=320, alto=200),
+                    momento_con_captura(tmp_path, 2, 20.0, "Seleccionar modo", ancho=320, alto=200)]
+        for m in momentos:
+            m.fuente = "audio"
+            m.descripcion = dicho
+        original = ResultadoAnalisis(momentos=momentos, modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso([respuesta(refinado_json([
+            {"numero": 1, "titulo": "Fijar kV en 75", "descripcion": "En pantalla se lee kV 75."},   # sustituye: se rechaza
+            {"numero": 2, "titulo": "Seleccionar modo FLUORO",                                       # completa: se admite
+             "descripcion": dicho + " En pantalla se lee modo FLUORO."},
+        ]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert nuevo.momentos[0].titulo == "Fijar kV en 70" and nuevo.momentos[0].descripcion == dicho
+        assert nuevo.momentos[0].titulo_original is None
+        assert nuevo.momentos[1].titulo == "Seleccionar modo FLUORO" and nuevo.momentos[1].titulo_original == "Seleccionar modo"
+        assert nuevo.momentos[1].descripcion.endswith("modo FLUORO.") and nuevo.momentos[1].descripcion_original == dicho
+        assert any("1 con cambios" in a for a in nuevo.avisos)
+        # el JSON enviado lleva la fuente
+        texto = cliente.generaciones()[0]["contents"][0].parts[-1].text
+        assert all(p["fuente"] == "audio" for p in json.loads(texto[texto.index("{"):])["momentos"])
+
+    def test_zona_null_quita_la_zona_y_ausente_la_conserva(self, tmp_path):
+        """G3: null = el elemento no aparece en la captura (no señalar); sin campo = conservar."""
+        momentos = [momento_con_captura(tmp_path, n, 10.0 * n, f"Paso {n}", ancho=320, alto=200, zona={"x": 0.5, "y": 0.5})
+                    for n in (1, 2, 3)]
+        original = ResultadoAnalisis(momentos=momentos, modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso([respuesta(refinado_json([
+            {"numero": 1, "titulo": "Paso 1", "descripcion": "Descripción de Paso 1.", "zona": None},
+            {"numero": 2, "titulo": "Paso 2", "descripcion": "Descripción de Paso 2."},
+            {"numero": 3, "titulo": "Paso 3", "descripcion": "Descripción de Paso 3.", "zona": {"x": 100, "y": 200}},
+        ]))])
+        nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert [m.zona for m in nuevo.momentos] == [None, {"x": 0.5, "y": 0.5}, {"x": 0.1, "y": 0.2}]
+        assert all(m.titulo_original is None for m in nuevo.momentos)     # textos iguales: nada que auditar
+        assert any("2 con cambios" in a for a in nuevo.avisos)
+
+    def test_rotulo_con_el_tiempo_real_del_fotograma(self, tmp_path):
+        """G3: el rótulo de cada captura lleva el instante real del fotograma, no el pedido."""
+        momento = momento_con_captura(tmp_path, 1, 10.0, "Uno", ancho=320, alto=200)
+        momento.tiempo_real_seg = 11.6
+        sin_real = momento_con_captura(tmp_path, 2, 20.0, "Dos", ancho=320, alto=200)
+        sin_real.tiempo_real_seg = None
+        original = ResultadoAnalisis(momentos=[momento, sin_real], modo="gemini", modelo=MODELO)
+        cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "Uno", "descripcion": "Descripción de Uno."}]))])
+        gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert [r for r, _ in imagenes_de(cliente.generaciones()[0])] == ["Captura del paso 1 (00:12)", "Captura del paso 2 (00:20)"]
+
     def test_recorta_textos_largos_y_conserva_vacios(self, tmp_path):
         original = resultado_con_capturas(tmp_path)
         cliente = ClienteFalso([respuesta(refinado_json([{"numero": 1, "titulo": "x" * 300, "descripcion": ""},
@@ -992,10 +1244,16 @@ class TestRefinarConCapturas:
     def test_respuesta_invalida_devuelve_original(self, tmp_path, texto):
         original = resultado_con_capturas(tmp_path)
         lineas, log = registro()
-        nuevo = gemini.refinar_con_capturas(ClienteFalso([respuesta(texto)]), original, MODELO, log=log)
-        assert nuevo.momentos == original.momentos and nuevo.uso == original.uso and nuevo.modelo == MODELO
+        nuevo = gemini.refinar_con_capturas(ClienteFalso([respuesta(texto, entrada=5000, salida=100, pensamiento=0)]),
+                                            original, MODELO, log=log)
+        assert nuevo.momentos == original.momentos and nuevo.modelo == MODELO
         assert any("No se pudo refinar" in a for a in nuevo.avisos) and nuevo.avisos[0] == "previo"
         assert any("Aviso" in l for l in lineas)
+        # G8: la petición pagada se suma aunque no se aplique ningún cambio
+        assert nuevo.uso.llamadas == 2 and nuevo.uso.tokens_entrada == 6000 and nuevo.uso.modelo == f"{MODELO} (+refinado fallido)"
+        assert nuevo.uso.costo_usd == pytest.approx(0.001 + (5000 * 0.25 + 100 * 1.50) / 1e6)
+        assert any("5100 tokens" in a and "sin aplicar cambios" in a for a in nuevo.avisos)
+        assert original.uso.llamadas == 1
 
     def test_excepcion_del_cliente_devuelve_original(self, tmp_path):
         original = resultado_con_capturas(tmp_path)
@@ -1017,6 +1275,7 @@ class TestRefinarConCapturas:
         nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
         assert len(cliente.generaciones()) == 2
         assert nuevo.momentos == original.momentos and any("cortada" in a for a in nuevo.avisos)
+        assert nuevo.uso.llamadas == 3 and nuevo.uso.modelo.endswith("(+refinado fallido)")     # G8: 2 llamadas pagadas
 
     def test_fallback_sin_esquema_usa_prompt_del_refinado(self, tmp_path):
         original = resultado_con_capturas(tmp_path)
@@ -1132,11 +1391,41 @@ class TestExtraerJson:
 
 class TestNormalizarMomentos:
     def test_duplicados_conserva_mayor_importancia(self):
-        brutos = [momento_json("00:10", "A", 2), momento_json("00:11", "B", 4), momento_json("00:20", "C", 3),
-                  momento_json("00:21.5", "D", 1)]
+        brutos = [momento_json("00:10", "Encender el equipo", 2), momento_json("00:11", "Encender el equipo.", 4),
+                  momento_json("00:20", "Ajustar el colimador", 3), momento_json("00:21.5", "ajustar el  colimador", 1)]
         momentos, avisos = gemini.normalizar_momentos(brutos, 90.0)
-        assert [m.titulo for m in momentos] == ["B", "C"]
-        assert any("fusionaron" in a for a in avisos)
+        assert [m.titulo for m in momentos] == ["Encender el equipo.", "Ajustar el colimador"]
+        assert [m.tiempo_seg for m in momentos] == [11.0, 20.0]
+        assert len(avisos) == 2 and all("fusionado" in a for a in avisos)
+        assert "'Encender el equipo' (00:10)" in avisos[0] and "'Encender el equipo.' (00:11)" in avisos[0]
+
+    def test_cercanos_con_titulos_distintos_se_conservan(self):
+        """G4: dos momentos a 1 s con contenido distinto no son duplicados (valor dicho en la misma frase)."""
+        brutos = [momento_json("00:10", "Seleccionar modo FLUORO", 4),
+                  momento_json("00:11", "Fijar kV en 70", 4, descripcion="Se indica kV 70.", fuente="audio"),
+                  momento_json("00:11.5", "Fijar kV en 70", 3)]
+        momentos, avisos = gemini.normalizar_momentos(brutos, 90.0)
+        assert [m.titulo for m in momentos] == ["Seleccionar modo FLUORO", "Fijar kV en 70"]
+        assert momentos[1].importancia == 4 and momentos[1].descripcion == "Se indica kV 70."
+        assert len(avisos) == 1 and "'Fijar kV en 70' (00:12)" in avisos[0]
+
+    def test_titulos_casi_iguales(self):
+        assert gemini.titulos_casi_iguales("Encender el equipo", "encender el equipo.")
+        assert gemini.titulos_casi_iguales("Ajustar el colimador a 10 cm", "Ajustar el colimador a 10 cm…")
+        assert not gemini.titulos_casi_iguales("Seleccionar modo FLUORO", "Fijar kV en 70")
+        assert not gemini.titulos_casi_iguales("Abrir el colimador", "Cerrar el colimador a 10 cm")
+        assert gemini.titulos_casi_iguales("", "") and not gemini.titulos_casi_iguales("", "algo")
+
+    def test_filtrar_momentos(self):
+        momentos = [Momento(5.0, "A", "", 2, puntaje=1.0), Momento(15.0, "B", "", 5), Momento(25.0, "C", "", 3, puntaje=2.0),
+                    Momento(35.0, "D", "", 5), Momento(45.0, "E", "", 3, puntaje=3.0)]
+        assert gemini.filtrar_momentos(momentos) == (momentos, [])
+        filtrados, avisos = gemini.filtrar_momentos(momentos, max_momentos=3)
+        assert [m.titulo for m in filtrados] == ["B", "D", "E"]        # empate 3-3: mayor puntaje local
+        assert len(avisos) == 1 and "--max-momentos" in avisos[0]
+        filtrados, avisos = gemini.filtrar_momentos(momentos, importancia_minima=3, max_momentos=0)
+        assert [m.titulo for m in filtrados] == ["B", "C", "D", "E"] and "importancia < 3" in avisos[0]
+        assert gemini.filtrar_momentos([], max_momentos=2, importancia_minima=4) == ([], [])
 
     def test_acotado_y_orden(self):
         brutos = [momento_json("05:00", "tarde"), momento_json("-3", "negativo"), momento_json("00:30", "medio")]

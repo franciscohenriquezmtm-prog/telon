@@ -33,11 +33,16 @@ TIMEOUT_PROCESADO_SEG = 1800     # espera máxima a que el archivo subido pase d
 INTERVALO_SONDEO_ARCHIVO_SEG = 10
 INTERVALO_SONDEO_LOTE_SEG = 60
 MAX_TOKENS_SALIDA = 16384        # si la respuesta llega cortada (MAX_TOKENS) se reintenta con el doble
-TEMPERATURA = 0.2
+TEMPERATURA = None               # None = no se envía temperature (valor por defecto del modelo).  Google recomienda
+                                 # no bajarla en los modelos Gemini 3 (valores bajos pueden degradar el razonamiento
+                                 # y provocar respuestas cortadas por MAX_TOKENS).  --temperatura T para fijarla.
 FPS_POR_DEFECTO = None           # None = el muestreo por defecto de Gemini (1 fotograma/s)
-RESOLUCION_VIDEO = "media"       # resolución con la que Gemini mira el video: baja | media | alta
-                                 # (baja ≈ 100 tokens/s, media ≈ 300 tokens/s).  Con textos e iconos en pantalla
-                                 # conviene "media"; "baja" solo para ahorrar cuando basta reconocer la máquina.
+RESOLUCION_VIDEO = "media"       # resolución con la que Gemini mira el video: baja | media | alta.  Con textos e
+                                 # iconos en pantalla conviene al menos "media"; "baja" solo para ahorrar cuando basta
+                                 # reconocer la máquina.  Los tokens por segundo de video dependen de la familia del
+                                 # modelo (en Gemini 3 "baja" y "media" pueden costar lo mismo y "alta" ser la
+                                 # recomendada para video con mucho texto): *** VERIFICAR *** en la guía de Gemini
+                                 # (ai.google.dev, "media resolution") antes de fiarse de una cifra.
 REFINAR_CON_CAPTURAS = True      # segunda pasada: se envían las capturas en alta resolución (imágenes fijas,
                                  # muy baratas) para corregir textos con lo que se lee en pantalla. --sin-refinado
 REFINADO_MAX_LADO_PX = 1280      # las capturas se reducen a este lado mayor antes de enviarlas
@@ -52,7 +57,8 @@ REDACTOR_MODELO = None           # opcional (--redactor M): segunda pasada SOLO 
 # ----------------------------------------------------------------------------
 MAX_MOMENTOS = None              # None = sin límite.  --max-momentos N para limitar (se quedan los más importantes)
 IMPORTANCIA_MINIMA = 1           # 1 = conservar todos los momentos que devuelva el modelo
-SEPARACION_MINIMA_SEG = 2.0      # dos momentos más cercanos que esto son duplicados: se conserva el más importante
+SEPARACION_MINIMA_SEG = 2.0      # dos momentos más cercanos que esto Y con títulos casi iguales son duplicados:
+                                 # se conserva el más importante (con títulos distintos se conservan los dos)
 MAX_TITULO = 80                  # caracteres
 MAX_DESCRIPCION = 260            # caracteres (~2 frases)
 

@@ -29,6 +29,8 @@ except ImportError:      # video.py no disponible: se usa la copia privada de m�
 
 # Parámetros de la puntuación (§6 de la especificación).
 PUNTAJE_MINIMO = 1.5            # los candidatos por debajo se descartan; no hay mínimo ni máximo de momentos
+PUNTOS_LONGITUD_MAX = 0.9       # tope de 0.1·palabras: una frase larga sin palabra clave ni cambio de plano cerca
+                                # se queda en 0.5 + 0.9 = 1.4 < PUNTAJE_MINIMO (el contenido decide, no la longitud)
 PAUSA_FRASE_SEG = 1.0           # un silencio mayor entre segmentos de Whisper cierra la frase
 VENTANA_ESCENA_SEG = 5.0        # una frase con un cambio de plano a menos de esto suma 1 punto
 DESFASE_ESCENA_SEG = 0.5        # la captura de un cambio de plano se toma un poco después del corte
@@ -36,9 +38,14 @@ ADELANTO_FRASE_MAX_SEG = 3.0    # el momento de una frase es su mitad, como much
 PALABRAS_TITULO = 8             # el título de una frase son sus primeras palabras
 _INTERVALO_PROGRESO_SEG = 300   # cada cuánto audio transcrito se informa el avance
 
-# Palabras clave (con sus conjugaciones y derivados más habituales).
+# Palabras clave (con sus conjugaciones y derivados más habituales).  "no" solo cuenta como prohibición ("no debe",
+# "no presione", "no hay que"…): suelto es la palabra más común del español y convertía cualquier frase en momento.
 _CLAVES = [
-    r"importantes?", r"cuidado", r"nunca", r"siempre", r"debe\w*", r"no", r"pasos?", r"primer[oa]?",
+    r"importantes?", r"cuidado", r"nunca", r"siempre", r"debe\w*", r"pasos?", r"primer[oa]?",
+    r"no\s+(?:se\s+)?(?:debe\w*|hay\s+que|toque\w*|presione\w*|pulse\w*|apriete\w*|mueva\w*|retire\w*|"
+    r"olvide\w*|use\w*|utilice\w*|coloque\w*|active\w*|desactive\w*|conecte\w*|desconecte\w*|abra\w*|cierre\w*|"
+    r"gire\w*|deje\w*|permita\w*|exponga\w*|dispare\w*|encienda\w*|apague\w*|suelte\w*|fuerce\w*|intente\w*|"
+    r"ponga\w*|quite\w*|levante\w*|baje\w*|suba\w*)",
     r"luego", r"despu[eé]s", r"ajust\w*", r"verific\w*", r"coloc\w*", r"presi[oó]n\w*", r"activ\w*",
     r"revis\w*", r"posici[oó]n\w*", r"aline\w*", r"med(?:ir|idas?|imos|ici[oó]n|iciones|idos?)",
     r"mid(?:a|e|an|en|as|es|iendo|i[oó])", r"selecci[oó]n\w*", r"gir[aeo]\w*",
@@ -197,11 +204,11 @@ def puntuar_escena(score: float) -> float:
 
 
 def puntuar_frase(texto: str, cerca_de_escena: bool = False) -> float:
-    """Puntaje de una frase: 0.5 + 0.1·palabras (máx. 2) + 1 por palabra clave o número con unidad
-    + 1 si hay un cambio de plano cerca."""
+    """Puntaje de una frase: 0.5 + 0.1·palabras (máx. ``PUNTOS_LONGITUD_MAX``) + 1 por palabra clave o número con
+    unidad + 1 si hay un cambio de plano cerca.  Sin clave ni cambio de plano nunca llega a ``PUNTAJE_MINIMO``."""
     palabras = len(texto.split())
     claves = len(_PATRON_CLAVE.findall(texto)) + len(_PATRON_NUMERO_UNIDAD.findall(texto))
-    return 0.5 + min(2.0, 0.1 * palabras) + claves + (1.0 if cerca_de_escena else 0.0)
+    return 0.5 + min(PUNTOS_LONGITUD_MAX, 0.1 * palabras) + claves + (1.0 if cerca_de_escena else 0.0)
 
 
 def _importancia(puntaje: float) -> int:
@@ -232,13 +239,26 @@ def _distancia(t: float, inicio: float, fin: float) -> float:
     return 0.0 if inicio <= t <= fin else min(abs(t - inicio), abs(t - fin))
 
 
+TITULO_PLANO = "Cambio de plano"
+
+
 def _candidatos_escenas(escenas: list, duracion: float) -> list:
     candidatos = []
-    for n, (t, score) in enumerate(escenas, 1):
+    for t, score in escenas:
         tiempo = _acotar(t + DESFASE_ESCENA_SEG, duracion)
-        candidatos.append(_Candidato(tiempo, f"Cambio de plano {n}", f"Cambio de plano a los {formatear_tiempo(tiempo)}.",
+        candidatos.append(_Candidato(tiempo, TITULO_PLANO, f"{TITULO_PLANO} a los {formatear_tiempo(tiempo)}.",
                                      puntuar_escena(score), {"visual"}))
     return candidatos
+
+
+def _numerar_planos(momentos: list) -> None:
+    """Títulos "Cambio de plano k" consecutivos (1..n) sobre los momentos definitivos, sin huecos por los
+    candidatos descartados o fundidos."""
+    k = 0
+    for m in momentos:
+        if m.titulo == TITULO_PLANO or m.titulo.startswith(TITULO_PLANO + " "):
+            k += 1
+            m.titulo = f"{TITULO_PLANO} {k}"
 
 
 def _candidatos_frases(frases: list, tiempos_escenas: list, duracion: float) -> list:
@@ -351,6 +371,7 @@ def analizar_local(ruta_video: Path, info: InfoVideo, ffmpeg: str, *,
                  f"se toman {len(momentos)} capturas a intervalos regulares.")
         avisos.append(aviso)
         log("AVISO: " + aviso)
+    _numerar_planos(momentos)
     _asignar_secciones(momentos, duracion)
 
     modelo_whisper = str(whisper_modelo) if transcripcion is not None else None

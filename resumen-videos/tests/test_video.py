@@ -116,21 +116,65 @@ def test_es_hdr():
 # ----------------------------------------------------------------------------
 # Binarios
 # ----------------------------------------------------------------------------
-def test_localizar_ffmpeg(ffmpeg, monkeypatch):
+def _binarios_falsos(carpeta: Path) -> tuple[Path, Path]:
+    """Archivos ``ffmpeg`` y ``ffprobe`` (vacíos, ejecutables) en una carpeta: para probar la búsqueda, no se ejecutan."""
+    carpeta.mkdir(parents=True, exist_ok=True)
+    sufijo = ".exe" if sys.platform == "win32" else ""
+    ff, fp = carpeta / f"ffmpeg{sufijo}", carpeta / f"ffprobe{sufijo}"
+    for archivo in (ff, fp):
+        archivo.write_text("", encoding="utf-8")
+        archivo.chmod(0o755)
+    return ff, fp
+
+
+def test_localizar_ffmpeg(ffmpeg, monkeypatch, tmp_path):
+    monkeypatch.setattr(video, "_ffmpeg_resuelto", None)
     assert video.localizar_ffmpeg(ffmpeg) == ffmpeg
     with pytest.raises(RuntimeError, match="No existe el ffmpeg"):
         video.localizar_ffmpeg(str(Path(ffmpeg).parent / "no_existe_ffmpeg"))
     monkeypatch.setenv("FFMPEG_BIN", ffmpeg)
     assert video.localizar_ffmpeg() == ffmpeg
+    # orden: --ffmpeg -> FFMPEG_BIN -> imageio-ffmpeg (incluido) -> PATH.  Un ffmpeg viejo en el PATH no gana.
+    ff_path, _ = _binarios_falsos(tmp_path / "anaconda")
+    ff_env, _ = _binarios_falsos(tmp_path / "env")
+    monkeypatch.setenv("PATH", str(tmp_path / "anaconda"))
+    monkeypatch.setenv("FFMPEG_BIN", str(ff_env))
+    assert video.localizar_ffmpeg() == str(ff_env)
+    assert video.localizar_ffmpeg(ffmpeg) == ffmpeg
+    monkeypatch.delenv("FFMPEG_BIN")
+    incluido = video._ffmpeg_imageio()
+    assert video.localizar_ffmpeg() == (incluido if incluido else str(ff_path))
+    monkeypatch.setattr(video, "_ffmpeg_imageio", lambda: None)
+    assert video.localizar_ffmpeg() == str(ff_path)               # sin imageio-ffmpeg: el del PATH
+    monkeypatch.setenv("PATH", str(tmp_path / "vacia"))
+    with pytest.raises(RuntimeError, match="No se encontró ffmpeg"):
+        video.localizar_ffmpeg()
+    monkeypatch.setattr(video, "_ffmpeg_resuelto", None)
 
 
-def test_localizar_ffprobe(ffmpeg, monkeypatch):
+def test_localizar_ffprobe(ffmpeg, monkeypatch, tmp_path):
+    monkeypatch.setattr(video, "_ffmpeg_resuelto", None)
     assert video.localizar_ffprobe(ffmpeg) == ffmpeg               # el argumento manda (aquí usamos ffmpeg como doble)
     monkeypatch.setenv("FFPROBE_BIN", ffmpeg)
     assert video.localizar_ffprobe() == ffmpeg
     monkeypatch.setenv("FFPROBE_BIN", str(Path(ffmpeg).parent / "no_existe_ffprobe"))
     resultado = video.localizar_ffprobe()
     assert resultado is None or Path(resultado).name != "no_existe_ffprobe"
+    # ffprobe se busca junto al ffmpeg elegido (el de --ffmpeg), también cuando ese ffmpeg no es el del entorno
+    monkeypatch.delenv("FFPROBE_BIN")
+    monkeypatch.setenv("PATH", str(tmp_path / "vacia"))
+    ff, fp = _binarios_falsos(tmp_path / "con espacio")
+    assert video.localizar_ffprobe(None, ffmpeg=str(ff)) == str(fp)
+    assert video.localizar_ffmpeg(str(ff)) == str(ff)
+    assert video.localizar_ffprobe() == str(fp)                     # recuerda el último ffmpeg localizado
+    assert video.localizar_ffprobe(str(ff), ffmpeg=str(ff)) == str(ff)
+    monkeypatch.setattr(video, "_ffmpeg_resuelto", None)
+
+
+def test_version_ffmpeg(ffmpeg, tmp_path):
+    version = video.version_ffmpeg(ffmpeg)
+    assert version != "?" and version[0].isdigit()
+    assert video.version_ffmpeg(str(tmp_path / "no_existe")) == "?"
 
 
 def test_filtros_disponibles(ffmpeg):
@@ -308,11 +352,24 @@ def _filtro_vf(cmd: list[str]) -> str:
 def test_captura_hdr_real(ffmpeg, video_hdr, tmp_path, registro):
     if not video._tonemap_disponible(ffmpeg):
         pytest.skip("este ffmpeg no tiene zscale/tonemap")
+    video._avisos_hdr.discard(str(video_hdr))
     ruta, t_real = video.extraer_mejor_fotograma(video_hdr, 1.0, tmp_path / "hdr.jpg", ffmpeg, 3.0, log=registro)
     assert ruta and ruta.is_file() and 0.0 <= t_real <= 2.0
     with Image.open(ruta) as img:
         assert img.size == (320, 180)
-    assert registro.lineas == []                                 # con tonemap no hay aviso
+    # con tonemap no hay aviso, solo una línea que dice que el video HDR se convierte a SDR
+    assert not any("aviso" in l for l in registro.lineas)
+    assert sum(1 for l in registro.lineas if "es HDR" in l and "SDR" in l) == 1
+
+
+def test_captura_hdr_sin_tonemap(ffmpeg, video_hdr, tmp_path, monkeypatch, registro):
+    """--sin-tonemap: el video HDR se captura tal cual y el log lo dice."""
+    monkeypatch.setattr(video, "TONEMAP_HDR", False)
+    monkeypatch.setattr(video, "_avisos_hdr", set())
+    comandos = _comandos_ffmpeg(monkeypatch)
+    video.extraer_mejor_fotograma(video_hdr, 1.0, tmp_path / "x.jpg", ffmpeg, 3.0, log=registro)
+    assert all("zscale" not in _filtro_vf(cmd) for cmd in comandos)
+    assert sum(1 for l in registro.lineas if "--sin-tonemap" in l and "es HDR" in l) == 1
 
 
 def test_transcodificar_hdr_real(ffmpeg, video_hdr, tmp_path, registro):
@@ -324,17 +381,31 @@ def test_transcodificar_hdr_real(ffmpeg, video_hdr, tmp_path, registro):
 
 
 def test_hdr_con_filtros_usa_tonemap(ffmpeg, video_prueba, tmp_path, monkeypatch, registro):
-    """Doble: video marcado como HDR y ffmpeg con zscale/tonemap → la cadena de filtros va antes de scale."""
+    """Doble: video marcado como HDR y ffmpeg con zscale/tonemap → la cadena de tonemap va DESPUÉS de fps y scale.
+
+    Así el tonemap (caro) solo trabaja sobre los fotogramas conservados y ya reducidos: en un 4K60 HDR es
+    unas 10 veces más rápido y la salida es la misma.
+    """
     monkeypatch.setattr(video, "_es_hdr_archivo", lambda *_a: True)
     monkeypatch.setattr(video, "_filtros_disponibles", lambda _f: frozenset({"zscale", "tonemap", "scale"}))
     monkeypatch.setattr(video, "_avisos_hdr", set())
     comandos = _comandos_ffmpeg(monkeypatch)
     assert video.extraer_mejor_fotograma(video_prueba, 10.0, tmp_path / "x.jpg", ffmpeg, DURACION_PRUEBA,
                                          log=registro) == (None, None)
-    rafaga = _filtro_vf(comandos[0])
-    assert rafaga.startswith(video.FILTRO_TONEMAP + ",fps=") and rafaga.endswith("scale='min(1280,iw)':-2")
-    assert _filtro_vf(comandos[1]) == video.FILTRO_TONEMAP + ",scale='min(1280,iw)':-2"   # fotograma simple
+    assert _filtro_vf(comandos[0]) == f"fps={config.FPS_RAFAGA},scale='min(1280,iw)':-2,{video.FILTRO_TONEMAP}"
+    assert _filtro_vf(comandos[1]) == f"scale='min(1280,iw)':-2,{video.FILTRO_TONEMAP}"   # fotograma simple
     assert not any("aviso" in l for l in registro.lineas)
+    assert sum(1 for l in registro.lineas if "es HDR" in l and "SDR" in l) == 1        # se registra una vez
+    # la copia ligera: fps y escala primero, tonemap al final
+    def falso(cmd, duracion, log):
+        comandos.append([str(c) for c in cmd])
+        Path(cmd[-1]).write_bytes(b"mp4")
+        return 0, ""
+
+    monkeypatch.setattr(video, "_ejecutar_con_progreso", falso)
+    video.transcodificar_para_subida(video_prueba, tmp_path / "l.mp4", ffmpeg, log=registro)
+    assert _filtro_vf(comandos[-1]).startswith("fps=2,scale=") and _filtro_vf(comandos[-1]).endswith(video.FILTRO_TONEMAP)
+    assert sum(1 for l in registro.lineas if "es HDR" in l) == 1
 
 
 def test_hdr_sin_filtros_avisa_una_vez(ffmpeg, video_prueba, tmp_path, monkeypatch, registro):
@@ -413,13 +484,47 @@ def test_transcodificar_comando(ffmpeg, video_prueba, tmp_path, monkeypatch, reg
     monkeypatch.setattr(video, "_ejecutar_con_progreso", falso)
     video.transcodificar_para_subida(video_prueba, tmp_path / "l.mp4", ffmpeg, alto=480, fps=2, log=registro)
     cmd = capturado["cmd"]
-    assert _filtro_vf(cmd) == "scale=-2:'2*trunc(min(480,ih)/2)',fps=2"
+    # fps primero (menos fotogramas que escalar) y el lado MENOR limitado a 480 (horizontal 854x480, vertical 480x854)
+    assert _filtro_vf(cmd) == ("fps=2,scale=w='if(gt(iw,ih),-2,2*trunc(min(480,iw)/2))'"
+                               ":h='if(gt(iw,ih),2*trunc(min(480,ih)/2),-2)'")
     pares = list(zip(cmd, cmd[1:]))
     for esperado in (("-c:v", "libx264"), ("-preset", "veryfast"), ("-crf", "30"), ("-pix_fmt", "yuv420p"),
                      ("-c:a", "aac"), ("-b:a", f"{config.TRANSCODIFICAR_AUDIO_KBPS}k"), ("-ac", "1"),
                      ("-movflags", "+faststart"), ("-map", "0:v:0"), ("-map", "0:a:0?")):
         assert esperado in pares, f"falta {esperado} en {cmd}"
     assert "shell" not in cmd and cmd[-1] == str(tmp_path / "l.mp4")
+
+
+@pytest.fixture(scope="session")
+def video_vertical(tmp_path_factory, ffmpeg, video_prueba) -> Path:
+    """El video de prueba (640x360) marcado con rotación -90, como graba el iPhone en vertical (se ve 360x640)."""
+    destino = tmp_path_factory.mktemp("vertical") / "vertical.mp4"
+    r = subprocess.run([ffmpeg, "-hide_banner", "-loglevel", "error", "-y", "-display_rotation", "-90",
+                        "-i", str(video_prueba), "-t", "6", "-c", "copy", str(destino)],
+                       capture_output=True, encoding="utf-8", errors="replace")
+    if r.returncode != 0 or not destino.is_file():
+        pytest.skip("este ffmpeg no admite -display_rotation")
+    return destino
+
+
+def test_video_vertical_info_y_copia_ligera(ffmpeg, video_vertical, tmp_path, registro):
+    """Grabado en vertical: la información se da ya rotada y la copia ligera conserva el lado MENOR (no el alto)."""
+    info = video.obtener_info(video_vertical, ffmpeg, ffprobe=None)
+    assert (info.ancho, info.alto) == (360, 640) and info.extra["rotacion"] == -90.0
+    ffprobe = video.localizar_ffprobe(ffmpeg=ffmpeg)
+    if ffprobe:
+        con_probe = video.obtener_info(video_vertical, ffmpeg, ffprobe)
+        assert (con_probe.ancho, con_probe.alto) == (360, 640) and con_probe.extra["origen_info"] == "ffprobe"
+    copia = video.transcodificar_para_subida(video_vertical, tmp_path / "copia200.mp4", ffmpeg, alto=200, log=registro)
+    ligero = video.obtener_info(copia, ffmpeg, ffprobe=None)
+    assert ligero.ancho == 200 and 354 <= ligero.alto <= 358           # antes: 112x200 (el alto limitado a 200)
+    copia = video.transcodificar_para_subida(video_vertical, tmp_path / "copia720.mp4", ffmpeg, alto=720, log=registro)
+    ligero = video.obtener_info(copia, ffmpeg, ffprobe=None)
+    assert (ligero.ancho, ligero.alto) == (360, 640)                     # no se amplía
+    captura = video.extraer_fotograma(video_vertical, 2.0, tmp_path / "v.jpg", ffmpeg)
+    with Image.open(captura) as img:
+        assert img.size == (360, 640)
+    assert any("lado menor 200" in l for l in registro.lineas)
 
 
 # ----------------------------------------------------------------------------

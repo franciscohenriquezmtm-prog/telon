@@ -1,22 +1,29 @@
 """Generación del manual didáctico: ``.docx`` (python-docx) y ``.pdf`` (reportlab).
 
-Estructura de ambos documentos: portada, índice por secciones (opcional) y las
-páginas de pasos en rejilla (1x1, 1x2, 1x3 en A4 vertical; 2x2 en A4
-horizontal).  Cada celda lleva la captura, la línea "PASO N · SECCIÓN · mm:ss",
-el título en negrita y una descripción corta.
+Estructura de ambos documentos: portada, índice por secciones (opcional; una
+columna, títulos completos y número de página de cada paso) y las páginas de
+pasos en rejilla (1x1, 1x2, 1x3 en A4 vertical; 2x2 en A4 horizontal; con
+capturas verticales, 2x1 en A4 horizontal).  Cada celda lleva la captura, la
+línea "PASO N · SECCIÓN · mm:ss", el título en negrita y la descripción.
+
+Los textos nunca se recortan en silencio: en cada celda la imagen se reduce lo
+justo para que quepan título y descripción completos (hasta un tope de líneas),
+luego se baja 1 pt la fuente y solo en último término se recorta con "…" y se
+avisa con el número de paso (``avisos``).
 
 Técnicas heredadas del prototipo verificado: en el docx las filas tienen alto
 EXACTO y el ancho se fija en cada celda (paginación determinista), la tabla no
 lleva estilo (sin bordes), la cabecera de cada página fuerza el salto ANTES y el
 documento termina en un párrafo de 1 pt; en el PDF se dibuja sobre el canvas con
 coordenadas absolutas, los textos se miden con ``Paragraph.wrap`` (con las
-mismas fuentes DejaVu se recortan igual para docx y pdf) y las capturas JPEG se
+mismas fuentes TrueType se maquetan igual para docx y pdf) y las capturas JPEG se
 incrustan sin recodificar.
 """
 from __future__ import annotations
 
 import datetime as _dt
 import math
+import os
 import re
 import statistics
 from dataclasses import dataclass
@@ -37,7 +44,7 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import cm
-from reportlab.lib.utils import ImageReader
+from reportlab.lib.utils import ImageReader, simpleSplit
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas as rl_canvas
@@ -56,17 +63,24 @@ SEGURIDAD_CM = 0.3          # holgura para redondeos de Word
 CELDA_MARGEN_LAT_CM = 0.15  # margen interno izquierdo/derecho de cada celda
 CELDA_MARGEN_SUP_CM = 0.05  # margen interno superior de cada celda
 INTERLINEADO = 1.2          # interlineado EXACTO (pt = tamaño x 1.2)
-PAD_TEXTO_PT = 6.0          # espacios entre imagen, línea de paso, título y descripción (suma)
+# Lo que ocupa una celda además de la imagen y las líneas de texto.  En el docx la fila es de alto EXACTO y
+# Word recorta lo que sobre, así que se reserva también el descendente de la línea de la imagen y una holgura.
+ESPACIO_TRAS_IMAGEN_PT = 2.0      # space_after del párrafo de la imagen
+ESPACIO_ENTRE_PARRAFOS_PT = 1.0   # tras la línea de paso y tras el título
+DESCENDENTE_IMAGEN_PT = 3.0       # descendente de la línea que contiene la imagen (marca de párrafo a 2 pt)
+SEGURIDAD_CELDA_PT = 4.0          # holgura mínima que queda libre al pie de cada celda del docx
+PAD_TEXTO_PT = ESPACIO_TRAS_IMAGEN_PT + 2 * ESPACIO_ENTRE_PARRAFOS_PT + DESCENDENTE_IMAGEN_PT + SEGURIDAD_CELDA_PT
 RATIO_CAJA = 16 / 9         # aspecto de la caja de imagen si no se puede leer ninguna captura
 PT_CABECERA = 8.0
 PT_INDICE_TITULO = 18.0
 PT_INDICE_SECCION = 11.0
 PT_INDICE_PASO = 10.0
-ALTO_INDICE_SECCION_PT = 15.0
-ALTO_INDICE_PASO_PT = 14.0
+ALTO_INDICE_SECCION_PT = 15.0     # por línea
+ALTO_INDICE_PASO_PT = 14.0        # por línea (un título largo ocupa varias)
 ESPACIO_INDICE_SECCION_PT = 10.0
 ALTO_TITULO_INDICE_PT = PT_INDICE_TITULO * INTERLINEADO + 14.0
-INDICE_GAP_COL_CM = 1.0     # separación entre las 2 columnas del índice en A4 horizontal
+INDICE_ANCHO_DERECHA_CM = 3.2     # columna derecha del índice: "mm:ss · pág. NNN"
+MAX_LINEAS_TITULO = 3             # líneas que puede ocupar el título antes de bajar la fuente y recortar
 SECCION_POR_DEFECTO = "General"
 
 COLOR_GRIS = "#666666"      # metadatos, cabeceras, línea de paso
@@ -77,9 +91,28 @@ COLOR_CAJA = "#E5E5E5"      # caja "[sin captura]"
 
 # (título, descripción, línea de paso) en pt según pasos por página
 _FUENTES = {4: (10.5, 8.5, 7.5), 3: (11.5, 9.5, 8.0), 2: (13.0, 10.5, 8.5), 1: (15.0, 11.5, 9.0)}
-# líneas de descripción reservadas al calcular el alto de la imagen
+# líneas de descripción reservadas al calcular el alto de referencia de la imagen
 _LINEAS_DESC = {4: 3, 3: 2, 2: 3, 1: 4}
+# tope de líneas de descripción: la imagen de la celda se reduce hasta que quepan (nunca se recorta en silencio)
+_LINEAS_DESC_MAX = {4: 6, 3: 8, 2: 8, 1: 8}
 _CARACTERES_PROHIBIDOS = re.compile(r'[<>:"/\\|?*\x00-\x1f]')
+_CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")   # inválidos en XML (docx) y sin glifo en el PDF
+# Con fuentes estándar (cp1252) estos símbolos se escriben con un equivalente legible en vez de '?'.
+_SUSTITUCIONES_CP1252 = {"≤": "<=", "≥": ">=", "→": "->", "←": "<-", "−": "-", "′": "'", "″": '"',
+                         "≈": "~", "≠": "!=", "∆": "delta ", "Δ": "delta ", "∞": "inf."}
+# Fuentes TrueType del sistema que se usan en el PDF si falta la carpeta fuentes/ del proyecto:
+# (regular, negrita, nombre con el que se registra).  Se prueba en orden y se usa la primera que exista.
+_WINDIR = Path(os.environ.get("WINDIR") or os.environ.get("SystemRoot") or "C:/Windows")
+FUENTES_SISTEMA = (
+    (_WINDIR / "Fonts" / "arial.ttf", _WINDIR / "Fonts" / "arialbd.ttf", "Arial"),
+    (_WINDIR / "Fonts" / "segoeui.ttf", _WINDIR / "Fonts" / "segoeuib.ttf", "SegoeUI"),
+    (Path("/Library/Fonts/Arial.ttf"), Path("/Library/Fonts/Arial Bold.ttf"), "Arial"),
+    (Path("/System/Library/Fonts/Supplemental/Arial.ttf"), Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf"),
+     "Arial"),
+    (Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"), Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
+     "DejaVu"),
+)
+_aviso_fuentes_emitido = False
 
 
 @dataclass(frozen=True)
@@ -105,7 +138,15 @@ class Layout:
     pt_desc: float
     pt_meta: float
     pt_cabecera: float
-    lineas_desc: int           # líneas de descripción que caben realmente bajo la imagen
+    lineas_desc: int           # líneas de descripción que caben bajo la imagen de referencia
+    lineas_desc_max: int       # tope de líneas: la imagen se reduce hasta que quepan (luego fuente -1 pt, luego recorte)
+    ratio: float               # aspecto (ancho/alto) de la caja de imagen
+    vertical: bool             # las capturas son verticales (iPhone en vertical): rejilla adaptada
+
+    @property
+    def descripcion(self) -> str:
+        """Texto para el log: ``"A4 horizontal 2x2"`` (columnas x filas)."""
+        return f"A4 {'horizontal' if self.horizontal else 'vertical'} {self.cols}x{self.filas}"
 
 
 def normalizar_por_pagina(valor) -> str | int:
@@ -125,20 +166,26 @@ def normalizar_por_pagina(valor) -> str | int:
 def calcular_layout(n: int, por_pagina="auto", ratio: float = RATIO_CAJA) -> Layout:
     """Maqueta para ``n`` pasos.  ``"auto"``: n <= 5 -> 1; 6-10 -> 2; 11-15 -> 3; >= 16 -> 4 (2x2 horizontal).
 
-    ``ratio`` es el aspecto (ancho/alto) de la caja reservada a la captura; las
-    imágenes se ajustan dentro de ella conservando su propio aspecto.
+    ``ratio`` es el aspecto (ancho/alto) de la caja reservada a la captura; las imágenes se ajustan
+    dentro de ella conservando su propio aspecto.  Con capturas verticales (``ratio < 1``, iPhone en
+    vertical) "auto" usa como máximo 2 por página, lado a lado en A4 horizontal (2x1), con la imagen a
+    toda la altura que deja el texto: en 1x3/2x2 quedarían de menos de 4 cm de ancho.
+    ``img_w_cm``/``img_h_cm`` son la caja de referencia (máxima): en cada celda la imagen se reduce lo
+    justo para que el texto completo quepa (ver ``_maquetar_celda``).
     """
     n = max(1, int(n))
     pp = normalizar_por_pagina(por_pagina)
-    if pp == "auto":
-        pp = 1 if n <= 5 else 2 if n <= 10 else 3 if n <= 15 else 4
     ratio = min(max(float(ratio), 0.5), 2.4)
+    vertical = ratio < 1.0
+    if pp == "auto":
+        pp = 1 if n <= 5 else 2 if (vertical or n <= 10) else 3 if n <= 15 else 4
     if pp == 4:
         cols, filas, horizontal = 2, 2, True
-        pag_w, pag_h = A4_ALTO_CM, A4_ANCHO_CM
+    elif pp == 2 and vertical:
+        cols, filas, horizontal = 2, 1, True
     else:
         cols, filas, horizontal = 1, pp, False
-        pag_w, pag_h = A4_ANCHO_CM, A4_ALTO_CM
+    pag_w, pag_h = (A4_ALTO_CM, A4_ANCHO_CM) if horizontal else (A4_ANCHO_CM, A4_ALTO_CM)
     util_w = pag_w - 2 * MARGEN_CM
     util_h = pag_h - 2 * MARGEN_CM - CABECERA_CM - SEGURIDAD_CM
     celda_w = (util_w - (cols - 1) * GAP_X_CM) / cols
@@ -152,12 +199,13 @@ def calcular_layout(n: int, por_pagina="auto", ratio: float = RATIO_CAJA) -> Lay
     img_w = img_h * ratio
     alto_libre_pt = ((celda_h - CELDA_MARGEN_SUP_CM - img_h) / 2.54 * 72
                      - (pt_meta + pt_titulo) * INTERLINEADO - PAD_TEXTO_PT)
-    lineas_reales = max(1, int((alto_libre_pt + 0.5) // (pt_desc * INTERLINEADO)))  # +0.5: 2.999 -> 3
+    lineas_reales = max(1, int(alto_libre_pt / (pt_desc * INTERLINEADO) + 1e-6))   # 2.9999999 -> 3, 2.9 -> 2
     return Layout(n=n, por_pagina=pp, cols=cols, filas=filas, horizontal=horizontal,
                   paginas_contenido=math.ceil(n / pp), pag_w_cm=pag_w, pag_h_cm=pag_h,
                   util_w_cm=util_w, util_h_cm=util_h, celda_w_cm=celda_w, celda_h_cm=celda_h,
                   interior_w_cm=interior_w, img_w_cm=img_w, img_h_cm=img_h, pt_titulo=pt_titulo,
-                  pt_desc=pt_desc, pt_meta=pt_meta, pt_cabecera=PT_CABECERA, lineas_desc=lineas_reales)
+                  pt_desc=pt_desc, pt_meta=pt_meta, pt_cabecera=PT_CABECERA, lineas_desc=lineas_reales,
+                  lineas_desc_max=max(lineas_reales, _LINEAS_DESC_MAX[pp]), ratio=ratio, vertical=vertical)
 
 
 # ----------------------------------------------------------------------------- utilidades
@@ -198,9 +246,14 @@ def _paginar(items: list, k: int) -> list[list]:
     return [items[i:i + k] for i in range(0, len(items), k)]
 
 
+def _limpiar(texto) -> str:
+    """Quita los caracteres de control (inválidos en el XML del docx) y colapsa los espacios."""
+    return " ".join(_CONTROL.sub("", str(texto or "")).split())
+
+
 def _recortar(texto, max_chars: int) -> str:
-    """Colapsa espacios y recorta en un límite de palabra añadiendo '…' si hace falta."""
-    texto = " ".join(str(texto or "").split())
+    """Limpia el texto y lo recorta en un límite de palabra añadiendo '…' si hace falta."""
+    texto = _limpiar(texto)
     if len(texto) <= max_chars:
         return texto
     corte = texto[:max_chars].rsplit(" ", 1)[0].rstrip(" ,;:.")
@@ -250,43 +303,64 @@ def _contar_secciones(momentos: list) -> int:
 
 
 def _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo,
-              por_pagina) -> tuple[_Datos, Layout, dict]:
+              por_pagina, log: Callable[[str], None] | None = None) -> tuple[_Datos, Layout, dict]:
     """Valida las entradas y calcula datos, maqueta y fuentes (común a docx y pdf)."""
     momentos = list(momentos or [])
     if not momentos:
         raise ValueError("no hay momentos: no se puede generar el documento")
-    datos = _Datos(nombre_video=str(nombre_video or "video"),
-                   titulo=_recortar(titulo or nombre_video or "video", 120),
+    datos = _Datos(nombre_video=_limpiar(nombre_video) or "video",
+                   titulo=_recortar(titulo or nombre_video or "video", 120) or "video",
                    resumen=_recortar(resumen, 700) or None,
-                   fecha=str(fecha or _dt.date.today().strftime("%d/%m/%Y")),
-                   duracion=duracion, modo=str(modo or ""), modelo=str(modelo or ""),
+                   fecha=_limpiar(fecha) or _dt.date.today().strftime("%d/%m/%Y"),
+                   duracion=duracion, modo=_limpiar(modo), modelo=_limpiar(modelo),
                    momentos=momentos, secciones=_contar_secciones(momentos))
     layout = calcular_layout(len(momentos), por_pagina, ratio=_ratio_capturas(momentos))
-    return datos, layout, _fuentes_pdf()
+    return datos, layout, _fuentes_pdf(log)
 
 
 # ----------------------------------------------------------------------------- fuentes y medidas (PDF)
-def _fuentes_pdf() -> dict:
-    """Registra DejaVu (Unicode) desde ``config.CARPETA_FUENTES``; si falta, Helvetica + cp1252."""
-    regular = Path(config.CARPETA_FUENTES) / "DejaVuSans.ttf"
-    negrita = Path(config.CARPETA_FUENTES) / "DejaVuSans-Bold.ttf"
-    if not regular.is_file():
-        return {"regular": "Helvetica", "negrita": "Helvetica-Bold", "latin1": True}
-    registradas = pdfmetrics.getRegisteredFontNames()
-    if "DejaVu" not in registradas:
-        pdfmetrics.registerFont(TTFont("DejaVu", str(regular)))
-    nombre_negrita = "DejaVu"
-    if negrita.is_file():
-        if "DejaVu-Bold" not in registradas:
-            pdfmetrics.registerFont(TTFont("DejaVu-Bold", str(negrita)))
-        nombre_negrita = "DejaVu-Bold"
-    return {"regular": "DejaVu", "negrita": nombre_negrita, "latin1": False}
+def _candidatas_fuentes() -> list[tuple[Path, Path, str]]:
+    """Fuentes TrueType a probar para el PDF, en orden: las del proyecto (``fuentes/``) y luego las del sistema."""
+    carpeta = Path(config.CARPETA_FUENTES)
+    return [(carpeta / "DejaVuSans.ttf", carpeta / "DejaVuSans-Bold.ttf", "DejaVu"), *FUENTES_SISTEMA]
+
+
+def _fuentes_pdf(log: Callable[[str], None] | None = None) -> dict:
+    """Registra la primera fuente TrueType disponible (Unicode) para el PDF.
+
+    Orden: DejaVu de ``config.CARPETA_FUENTES`` (incluida en el proyecto), luego las del sistema
+    (``FUENTES_SISTEMA``: Arial/Segoe UI en Windows, Arial en macOS, DejaVu en Linux).  Solo si no hay
+    ninguna se usa Helvetica con cp1252 (``latin1``: los símbolos fuera de cp1252 se sustituyen), y se avisa
+    una vez por ``log``.  Devuelve ``{"regular", "negrita", "latin1", "origen"}``.
+    """
+    global _aviso_fuentes_emitido
+    for regular, negrita, nombre in _candidatas_fuentes():
+        if not Path(regular).is_file():
+            continue
+        registradas = pdfmetrics.getRegisteredFontNames()
+        if nombre not in registradas:
+            pdfmetrics.registerFont(TTFont(nombre, str(regular)))
+        nombre_negrita = nombre
+        if Path(negrita).is_file():
+            nombre_negrita = f"{nombre}-Bold"
+            if nombre_negrita not in registradas:
+                pdfmetrics.registerFont(TTFont(nombre_negrita, str(negrita)))
+        return {"regular": nombre, "negrita": nombre_negrita, "latin1": False, "origen": str(regular)}
+    if log is not None and not _aviso_fuentes_emitido:
+        _aviso_fuentes_emitido = True
+        log(f"  aviso: no se encontró ninguna fuente TrueType ({Path(config.CARPETA_FUENTES) / 'DejaVuSans.ttf'} ni las "
+            "del sistema); el PDF usará Helvetica y los símbolos fuera de cp1252 (≤ ≥ →) se escribirán como "
+            "<= >= ->. Copie la carpeta fuentes/ del proyecto para evitarlo. El docx no se ve afectado.")
+    return {"regular": "Helvetica", "negrita": "Helvetica-Bold", "latin1": True, "origen": None}
 
 
 def _plano(texto, F: dict) -> str:
-    """Texto para ``drawString``: con fuentes estándar sustituye lo que no exista en cp1252."""
-    t = str(texto or "")
+    """Texto para ``drawString``: sin caracteres de control; con fuentes estándar, lo que no existe en cp1252
+    se sustituye por un equivalente legible (``≤`` -> ``<=``) o por ``?``."""
+    t = _CONTROL.sub("", str(texto or ""))
     if F["latin1"]:
+        for simbolo, equivalente in _SUSTITUCIONES_CP1252.items():
+            t = t.replace(simbolo, equivalente)
         t = t.encode("cp1252", "replace").decode("cp1252")
     return t
 
@@ -309,118 +383,205 @@ def _alto_parrafo(texto: str, estilo: ParagraphStyle, ancho_pt: float, F: dict) 
     return h
 
 
+def _lineas(texto: str, estilo: ParagraphStyle, ancho_pt: float, F: dict) -> int:
+    """Líneas que ocupa el texto en un párrafo de ``ancho_pt`` (0 si está vacío)."""
+    if not texto:
+        return 0
+    return max(1, int(round(_alto_parrafo(texto, estilo, ancho_pt, F) / estilo.leading)))
+
+
 def _recortar_a_lineas(texto, estilo: ParagraphStyle, ancho_pt: float, lineas_max: int, F: dict) -> str:
-    """Recorta el texto (con '…') hasta que ocupe como máximo ``lineas_max`` líneas de ``ancho_pt``."""
-    t = " ".join(str(texto or "").split())
-    while t and _alto_parrafo(t, estilo, ancho_pt, F) > lineas_max * estilo.leading + 0.5:
-        nuevo = _recortar(t, max(1, int(len(t) * 0.9)))
-        if len(nuevo) >= len(t):   # ya no se puede acortar más
-            break
-        t = nuevo
-    return t
+    """Recorta el texto (con '…') hasta que ocupe como máximo ``lineas_max`` líneas de ``ancho_pt``.
+
+    Se quitan palabras del final (búsqueda binaria sobre el número de palabras): se conserva todo lo que
+    cabe, sin perder de golpe un 10 % del texto.
+    """
+    t = _limpiar(texto)
+
+    def cabe(candidato: str) -> bool:
+        return _alto_parrafo(candidato, estilo, ancho_pt, F) <= lineas_max * estilo.leading + 0.5
+
+    if not t or cabe(t):
+        return t
+    palabras = t.split(" ")
+    bajo, alto = 0, len(palabras) - 1        # bajo palabras siempre caben (0 = solo '…'); alto no cabe entero
+    while alto - bajo > 1:
+        medio = (bajo + alto) // 2
+        if cabe(" ".join(palabras[:medio]).rstrip(" ,;:.") + "…"):
+            bajo = medio
+        else:
+            alto = medio
+    return " ".join(palabras[:bajo]).rstrip(" ,;:.") + "…"
 
 
 def _recortar_ancho(texto, fuente: str, pt: float, ancho_max: float, F: dict) -> str:
-    """Recorta a una sola línea de ``ancho_max`` puntos medida con la fuente real."""
-    t = " ".join(str(_plano(texto, F)).split())
-    if pdfmetrics.stringWidth(t, fuente, pt) <= ancho_max:
+    """Recorta a una sola línea de ``ancho_max`` puntos, medida con la fuente real.
+
+    Se mide el texto tal como se dibujará (``_plano``) pero se devuelven los caracteres originales:
+    el docx recibe siempre el texto Unicode íntegro.
+    """
+    t = _limpiar(texto)
+    if pdfmetrics.stringWidth(_plano(t, F), fuente, pt) <= ancho_max:
         return t
     while len(t) > 1:
         t = t[:-1].rstrip(" ,;:.")
-        if pdfmetrics.stringWidth(t + "…", fuente, pt) <= ancho_max:
+        if pdfmetrics.stringWidth(_plano(t + "…", F), fuente, pt) <= ancho_max:
             return t + "…"
     return "…"
 
 
-def _textos_celda(m: Momento, numero: int, L: Layout, F: dict, ancho_pt: float) -> tuple[str, str, str]:
-    """(línea de paso, título, descripción) ya recortados para caber en la celda."""
+@dataclass(frozen=True)
+class _Celda:
+    """Textos y medidas definitivos de una celda de paso (iguales en docx y pdf)."""
+
+    meta: str
+    titulo: str
+    descripcion: str
+    pt_titulo: float
+    pt_desc: float
+    img_w_cm: float
+    img_h_cm: float
+    aviso: str | None      # si hubo que recortar título o descripción, qué y cuánto
+
+
+def _linea_paso(m: Momento, numero: int, L: Layout, F: dict, ancho_pt: float) -> str:
+    """``"PASO N · SECCIÓN · mm:ss"``; la sección (lo único prescindible) se abrevia u omite si no cabe en una línea."""
     st_meta = _estilo(F, L.pt_meta)
-    st_titulo = _estilo(F, L.pt_titulo, negrita=True)
-    st_desc = _estilo(F, L.pt_desc)
-    seccion = " ".join(str(m.seccion or "").split()).upper()
+    seccion = _limpiar(m.seccion).upper()
     tiempo = m.tiempo
     meta = " · ".join(p for p in (f"PASO {numero}", seccion, tiempo) if p)
     while seccion and _alto_parrafo(meta, st_meta, ancho_pt, F) > st_meta.leading + 0.5:
-        # la sección es lo único recortable de la línea; si no cabe ni abreviada, se omite
         nueva = _recortar(seccion, int(len(seccion) * 0.8)) if len(seccion) > 6 else ""
         seccion = nueva if len(nueva) < len(seccion) else ""
         meta = " · ".join(p for p in (f"PASO {numero}", seccion, tiempo) if p)
-    titulo = _recortar_a_lineas(m.titulo or "(sin título)", st_titulo, ancho_pt, 2, F)
-    lineas_titulo = max(1, round(_alto_parrafo(titulo, st_titulo, ancho_pt, F) / st_titulo.leading))
-    lineas_desc = max(1, L.lineas_desc - (lineas_titulo - 1))
-    descripcion = _recortar_a_lineas(m.descripcion, st_desc, ancho_pt, lineas_desc, F)
-    return meta, titulo, descripcion
+    return meta
+
+
+def _maquetar_celda(m: Momento, numero: int, L: Layout, F: dict, ancho_pt: float) -> _Celda:
+    """Decide textos, tamaños de fuente y caja de imagen de una celda para que el texto COMPLETO quepa.
+
+    Orden: (1) con las fuentes de la maqueta, la imagen se reduce desde su tamaño de referencia hasta que
+    quepan el título (≤ ``MAX_LINEAS_TITULO`` líneas) y la descripción completa (≤ ``L.lineas_desc_max``
+    líneas); (2) si aun así no caben, se bajan 1 pt las fuentes; (3) solo entonces se recortan con '…' y se
+    devuelve un aviso con el número de paso (nunca se recorta en silencio).
+    """
+    meta = _linea_paso(m, numero, L, F, ancho_pt)
+    titulo0 = _limpiar(m.titulo) or "(sin título)"
+    desc0 = _limpiar(m.descripcion)
+    alto_celda_pt = (L.celda_h_cm - CELDA_MARGEN_SUP_CM) / 2.54 * 72
+    img_ref_pt = L.img_h_cm / 2.54 * 72
+    aviso = None
+    for intento, (pt_t, pt_d) in enumerate(((L.pt_titulo, L.pt_desc), (L.pt_titulo - 1.0, L.pt_desc - 1.0))):
+        st_t, st_d = _estilo(F, pt_t, negrita=True), _estilo(F, pt_d)
+        titulo, descripcion = titulo0, desc0
+        lt, ld = _lineas(titulo, st_t, ancho_pt, F), _lineas(descripcion, st_d, ancho_pt, F)
+        if lt <= MAX_LINEAS_TITULO and ld <= L.lineas_desc_max:
+            break
+        if intento == 0:
+            continue
+        # último recurso: recortar (con la fuente ya reducida) y avisar
+        recortes = []
+        if lt > MAX_LINEAS_TITULO:
+            titulo = _recortar_a_lineas(titulo0, st_t, ancho_pt, MAX_LINEAS_TITULO, F)
+            recortes.append(f"título de {len(titulo0)} a {len(titulo)} caracteres")
+        if ld > L.lineas_desc_max:
+            descripcion = _recortar_a_lineas(desc0, st_d, ancho_pt, L.lineas_desc_max, F)
+            recortes.append(f"descripción de {len(desc0)} a {len(descripcion)} caracteres")
+        lt, ld = _lineas(titulo, st_t, ancho_pt, F), _lineas(descripcion, st_d, ancho_pt, F)
+        aviso = (f"paso {numero}: no cabe el texto completo en la celda; se recortó " + " y ".join(recortes)
+                 + f" (el texto íntegro está en {config.NOMBRE_JSON})")
+    texto_pt = L.pt_meta * INTERLINEADO + lt * pt_t * INTERLINEADO + ld * pt_d * INTERLINEADO + PAD_TEXTO_PT
+    img_h_pt = max(0.0, min(img_ref_pt, alto_celda_pt - texto_pt))
+    img_h_cm = img_h_pt / 72 * 2.54
+    img_w_cm = min(L.interior_w_cm, img_h_cm * (L.img_w_cm / L.img_h_cm if L.img_h_cm > 0 else L.ratio))
+    return _Celda(meta=meta, titulo=titulo, descripcion=descripcion, pt_titulo=pt_t, pt_desc=pt_d,
+                  img_w_cm=img_w_cm, img_h_cm=img_h_cm, aviso=aviso)
 
 
 # ----------------------------------------------------------------------------- índice (paginado por medida)
 @dataclass(frozen=True)
 class _EntradaIndice:
     tipo: str        # "seccion" | "paso"
-    texto: str
+    texto: str       # título completo ("N. título"); ocupa ``lineas`` líneas
     tiempo: str
-    alto: float      # pt
-    antes: float     # pt de espacio previo (se omite al inicio de una columna)
+    numero: int      # número de paso (0 en las secciones)
+    lineas: int
+    alto: float      # pt (lineas x alto de línea)
+    antes: float     # pt de espacio previo (se omite al inicio de una página)
 
 
-def _entradas_indice(momentos: list) -> list[_EntradaIndice]:
+def _ancho_texto_indice(L: Layout) -> float:
+    """Ancho en pt de la columna de títulos del índice (una sola columna, también en A4 horizontal)."""
+    return (L.util_w_cm - INDICE_ANCHO_DERECHA_CM) * cm
+
+
+def _lineas_indice(texto: str, fuente: str, pt: float, ancho_pt: float, F: dict) -> int:
+    """Líneas que ocupa una entrada del índice (``simpleSplit``: la misma partición con la que se dibuja)."""
+    return max(1, len(simpleSplit(_plano(texto, F), fuente, pt, ancho_pt)))
+
+
+def _entradas_indice(momentos: list, L: Layout, F: dict) -> list[_EntradaIndice]:
+    """Entradas del índice con su alto medido: los títulos van completos (en varias líneas si hace falta)."""
+    ancho_texto = _ancho_texto_indice(L)
+    ancho_seccion = L.util_w_cm * cm
     entradas = []
     for nombre, pasos in _grupos_indice(momentos):
-        entradas.append(_EntradaIndice("seccion", nombre, "", ALTO_INDICE_SECCION_PT, ESPACIO_INDICE_SECCION_PT))
+        lineas = _lineas_indice(nombre, F["negrita"], PT_INDICE_SECCION, ancho_seccion, F)
+        entradas.append(_EntradaIndice("seccion", nombre, "", 0, lineas, lineas * ALTO_INDICE_SECCION_PT,
+                                       ESPACIO_INDICE_SECCION_PT))
         for i, m in pasos:
-            entradas.append(_EntradaIndice("paso", f"{i}. {m.titulo or ''}", m.tiempo, ALTO_INDICE_PASO_PT, 0.0))
+            texto = f"{i}. {_limpiar(m.titulo)}"
+            lineas = _lineas_indice(texto, F["regular"], PT_INDICE_PASO, ancho_texto, F)
+            entradas.append(_EntradaIndice("paso", texto, m.tiempo, i, lineas, lineas * ALTO_INDICE_PASO_PT, 0.0))
     return entradas
 
 
-def _columnas_indice(L: Layout) -> tuple[int, float]:
-    """(número de columnas, ancho de cada una en pt): 2 columnas en A4 horizontal."""
-    ncols = 2 if L.horizontal else 1
-    ancho = (L.util_w_cm - (ncols - 1) * INDICE_GAP_COL_CM) / ncols * cm
-    return ncols, ancho
-
-
-def _paginar_indice(entradas: list[_EntradaIndice], L: Layout) -> list[list[list[_EntradaIndice]]]:
-    """Reparte las entradas en páginas -> columnas por medida; una sección nunca queda sola al pie."""
-    ncols, _ancho = _columnas_indice(L)
-    util_h_pt = (L.pag_h_cm - 2 * MARGEN_CM - CABECERA_CM) * cm
+def _paginar_indice(entradas: list[_EntradaIndice], L: Layout) -> list[list[_EntradaIndice]]:
+    """Reparte las entradas en páginas por medida (una columna); una sección nunca queda sola al pie."""
+    util_h_pt = (L.pag_h_cm - 2 * MARGEN_CM - CABECERA_CM - SEGURIDAD_CM) * cm
 
     def disponible(idx_pagina: int) -> float:
         return util_h_pt - (ALTO_TITULO_INDICE_PT if idx_pagina == 0 else 0.0)
 
-    paginas: list[list[list[_EntradaIndice]]] = []
-    columnas: list[list[_EntradaIndice]] = []
-    columna: list[_EntradaIndice] = []
+    paginas: list[list[_EntradaIndice]] = []
+    pagina: list[_EntradaIndice] = []
     restante = disponible(0)
     i = 0
     while i < len(entradas):
         e = entradas[i]
-        antes = e.antes if columna else 0.0
+        antes = e.antes if pagina else 0.0
         necesario = antes + e.alto
         if e.tipo == "seccion" and i + 1 < len(entradas):
             necesario += entradas[i + 1].alto
-        if necesario > restante and columna:
-            columnas.append(columna)
-            columna = []
-            if len(columnas) == ncols:
-                paginas.append(columnas)
-                columnas = []
+        if necesario > restante and pagina:
+            paginas.append(pagina)
+            pagina = []
             restante = disponible(len(paginas))
             continue
-        columna.append(e)
+        pagina.append(e)
         restante -= antes + e.alto
         i += 1
-    if columna:
-        columnas.append(columna)
-    if columnas:
-        paginas.append(columnas)
+    if pagina:
+        paginas.append(pagina)
     return paginas
 
 
+def _pagina_del_paso(numero: int, n_indice: int, L: Layout) -> int:
+    """Número de página (portada = 1) en que queda el paso ``numero``: portada + índice + páginas de pasos."""
+    return 1 + n_indice + math.ceil(numero / L.por_pagina)
+
+
+def _texto_derecha_indice(e: _EntradaIndice, n_indice: int, L: Layout) -> str:
+    return f"{e.tiempo} · pág. {_pagina_del_paso(e.numero, n_indice, L)}"
+
+
 def contar_paginas_indice(momentos: list, por_pagina="auto") -> int:
-    """Páginas que ocupa el índice en el PDF (misma paginación por medida que usa el generador)."""
+    """Páginas que ocupa el índice (misma paginación por medida que usan el PDF y el docx)."""
     momentos = list(momentos or [])
     if not momentos:
         return 0
-    return len(_paginar_indice(_entradas_indice(momentos), calcular_layout(len(momentos), por_pagina)))
+    L = calcular_layout(len(momentos), por_pagina, ratio=_ratio_capturas(momentos))
+    return len(_paginar_indice(_entradas_indice(momentos, L, _fuentes_pdf()), L))
 
 
 # ============================================================================= DOCX
@@ -447,7 +608,7 @@ def _parrafo(p, *, linea_pt: float | None = None, antes: float = 0, despues: flo
 
 
 def _run(p, texto: str, pt: float, *, negrita: bool = False, cursiva: bool = False, color: str | None = None):
-    r = p.add_run(texto)
+    r = p.add_run(_CONTROL.sub("", str(texto or "")))   # un carácter de control haría fallar todo el docx
     r.font.size = Pt(pt)
     r.bold = negrita
     r.italic = cursiva
@@ -596,65 +757,103 @@ def _cabecera_docx(doc, L: Layout, izquierda: str, derecha: str):
     return cab
 
 
-def _indice_docx(doc, D: _Datos, L: Layout, F: dict) -> None:
-    _cabecera_docx(doc, L, D.titulo, "Índice")
-    p = _parrafo(doc.add_paragraph(), antes=6, despues=10)
-    _run(p, "Índice", PT_INDICE_TITULO, negrita=True, color=COLOR_TITULO)
-    ancho_titulo = (L.util_w_cm - 2.0) * cm
-    for nombre, pasos in _grupos_indice(D.momentos):
-        p = _parrafo(doc.add_paragraph(), linea_pt=ALTO_INDICE_SECCION_PT, antes=ESPACIO_INDICE_SECCION_PT,
-                     despues=1)
-        _run(p, nombre, PT_INDICE_SECCION, negrita=True, color=COLOR_TITULO)
-        for i, m in pasos:
-            p = _parrafo(doc.add_paragraph(), linea_pt=ALTO_INDICE_PASO_PT)
-            _tab_derecha(p, L.util_w_cm, puntos=True)
-            texto = _recortar_ancho(f"{i}. {m.titulo or ''}", F["regular"], PT_INDICE_PASO, ancho_titulo, F)
-            _run(p, texto, PT_INDICE_PASO, color=COLOR_TEXTO)
-            _run(p, "\t" + m.tiempo, PT_INDICE_PASO, color=COLOR_GRIS)
+def _indice_docx(doc, D: _Datos, L: Layout, paginas_indice: list) -> None:
+    """Índice paginado igual que en el PDF: una tabla sin bordes por página (títulos | mm:ss · pág.), filas EXACTAS.
+
+    Cada página de índice empieza con la cabecera (salto de página antes) y las filas tienen el alto medido con
+    las fuentes del PDF (Calibri es más estrecha: nunca necesita más líneas), así docx y pdf coinciden página a
+    página y el número de página de cada paso es el mismo en ambos.
+    """
+    n_indice = len(paginas_indice)
+    ancho_der_cm = INDICE_ANCHO_DERECHA_CM
+    ancho_izq_cm = L.util_w_cm - ancho_der_cm
+    for k, entradas in enumerate(paginas_indice):
+        _cabecera_docx(doc, L, D.titulo, "Índice" if n_indice == 1 else f"Índice ({k + 1} de {n_indice})")
+        if k == 0:
+            p = _parrafo(doc.add_paragraph(), linea_pt=PT_INDICE_TITULO * INTERLINEADO,
+                         despues=ALTO_TITULO_INDICE_PT - PT_INDICE_TITULO * INTERLINEADO)
+            _run(p, "Índice", PT_INDICE_TITULO, negrita=True, color=COLOR_TITULO)
+        tabla = doc.add_table(rows=len(entradas), cols=2)
+        tabla.alignment = WD_TABLE_ALIGNMENT.CENTER
+        tabla.autofit = False
+        _tabla_margenes_celda(tabla, 0.0, 0.0)
+        for j, e in enumerate(entradas):
+            antes = e.antes if j else 0.0
+            fila = tabla.rows[j]
+            fila.height = Pt(antes + e.alto)
+            fila.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
+            izq, der = fila.cells
+            izq.width, der.width = Cm(ancho_izq_cm), Cm(ancho_der_cm)
+            if e.tipo == "seccion":
+                p = _parrafo(izq.paragraphs[0], linea_pt=ALTO_INDICE_SECCION_PT, antes=antes)
+                _run(p, e.texto, PT_INDICE_SECCION, negrita=True, color=COLOR_TITULO)
+                continue
+            p = _parrafo(izq.paragraphs[0], linea_pt=ALTO_INDICE_PASO_PT, antes=antes)
+            _run(p, e.texto, PT_INDICE_PASO, color=COLOR_TEXTO)
+            # tiempo y página alineados con la ÚLTIMA línea del título, con puntos de guía
+            p = _parrafo(der.paragraphs[0], linea_pt=ALTO_INDICE_PASO_PT,
+                         antes=antes + (e.lineas - 1) * ALTO_INDICE_PASO_PT, alineacion=WD_ALIGN_PARAGRAPH.RIGHT)
+            _tab_derecha(p, ancho_der_cm - 0.1, puntos=True)
+            _run(p, "\t" + _texto_derecha_indice(e, n_indice, L), PT_INDICE_PASO, color=COLOR_GRIS)
 
 
-def _caja_sin_captura_docx(celda, L: Layout) -> None:
+def _caja_sin_captura_docx(celda, C: _Celda, L: Layout) -> None:
     """Caja gris del alto de la imagen con '[sin captura]' centrado (tres párrafos sombreados)."""
-    img_h_pt = L.img_h_cm / 2.54 * 72
-    alto_texto = L.pt_desc * INTERLINEADO
+    img_h_pt = C.img_h_cm / 2.54 * 72
+    alto_texto = C.pt_desc * INTERLINEADO
     relleno = max(1.0, (img_h_pt - alto_texto) / 2)
     partes = ((celda.paragraphs[0], relleno, ""), (celda.add_paragraph(), alto_texto, "[sin captura]"),
               (celda.add_paragraph(), relleno, ""))
     for k, (p, alto, texto) in enumerate(partes):
-        _parrafo(p, linea_pt=alto, despues=2 if k == 2 else 0, alineacion=WD_ALIGN_PARAGRAPH.CENTER)
-        p.paragraph_format.right_indent = Cm(max(0.0, L.interior_w_cm - L.img_w_cm))   # caja del ancho de la imagen
+        _parrafo(p, linea_pt=alto, despues=ESPACIO_TRAS_IMAGEN_PT if k == 2 else 0,
+                 alineacion=WD_ALIGN_PARAGRAPH.CENTER)
+        p.paragraph_format.right_indent = Cm(max(0.0, L.interior_w_cm - C.img_w_cm))   # caja del ancho de la imagen
         _sombreado(p)
-        _run(p, texto, L.pt_desc if texto else 1, color=COLOR_GRIS)
+        _run(p, texto, C.pt_desc if texto else 1, color=COLOR_GRIS)
 
 
-def _celda_momento_docx(celda, m: Momento, numero: int, L: Layout, F: dict, log: Callable[[str], None]) -> None:
+def _marca_parrafo_pequena(p, pt: float = 2.0) -> None:
+    """Tamaño de la marca de párrafo (w:pPr/w:rPr/w:sz): en Word también fija el alto de la última línea."""
+    pPr = p._p.get_or_add_pPr()
+    rPr = OxmlElement("w:rPr")
+    sz = OxmlElement("w:sz")
+    sz.set(qn("w:val"), str(int(round(pt * 2))))
+    rPr.append(sz)
+    pPr.append(rPr)   # w:rPr va al final de w:pPr (solo le siguen sectPr y pPrChange)
+
+
+def _celda_momento_docx(celda, m: Momento, numero: int, L: Layout, F: dict, log: Callable[[str], None],
+                        avisos: list) -> None:
+    ancho_pt = (L.celda_w_cm - 2 * CELDA_MARGEN_LAT_CM) * cm
+    C = _maquetar_celda(m, numero, L, F, ancho_pt)
+    if C.aviso:
+        avisos.append(C.aviso)
     ruta = m.captura_para_documento
     tam = _tamano_imagen(ruta)
     insertada = False
-    if tam:
+    if tam and C.img_h_cm > 0:
         # imagen (párrafo 0 de la celda; sin interlineado exacto o Word recorta la imagen)
-        p_img = _parrafo(celda.paragraphs[0], despues=2, alineacion=WD_ALIGN_PARAGRAPH.LEFT)
+        p_img = _parrafo(celda.paragraphs[0], despues=ESPACIO_TRAS_IMAGEN_PT, alineacion=WD_ALIGN_PARAGRAPH.LEFT)
+        _marca_parrafo_pequena(p_img)   # la marca de párrafo hereda 10 pt y agrandaría la línea de la imagen
         run = p_img.add_run()
         run.font.size = Pt(2)   # minimiza el descendente de la línea que contiene la imagen
         try:
-            if tam[0] / tam[1] >= L.img_w_cm / L.img_h_cm:
-                run.add_picture(str(ruta), width=Cm(L.img_w_cm))
+            if tam[0] / tam[1] >= C.img_w_cm / C.img_h_cm:
+                run.add_picture(str(ruta), width=Cm(C.img_w_cm))
             else:
-                run.add_picture(str(ruta), height=Cm(L.img_h_cm))
+                run.add_picture(str(ruta), height=Cm(C.img_h_cm))
             insertada = True
         except (OSError, InvalidImageStreamError) as exc:
             log(f"  aviso: captura ilegible para el docx ({Path(str(ruta)).name}): {exc}")
             run._r.getparent().remove(run._r)
     if not insertada:
-        _caja_sin_captura_docx(celda, L)
-    ancho_pt = (L.celda_w_cm - 2 * CELDA_MARGEN_LAT_CM) * cm
-    meta, titulo, descripcion = _textos_celda(m, numero, L, F, ancho_pt)
-    p = _parrafo(celda.add_paragraph(), linea_pt=L.pt_meta * INTERLINEADO, despues=1)
-    _run(p, meta, L.pt_meta, color=COLOR_GRIS)
-    p = _parrafo(celda.add_paragraph(), linea_pt=L.pt_titulo * INTERLINEADO, despues=1)
-    _run(p, titulo, L.pt_titulo, negrita=True, color=COLOR_TITULO)
-    p = _parrafo(celda.add_paragraph(), linea_pt=L.pt_desc * INTERLINEADO)
-    _run(p, descripcion, L.pt_desc, color=COLOR_TEXTO)
+        _caja_sin_captura_docx(celda, C, L)
+    p = _parrafo(celda.add_paragraph(), linea_pt=L.pt_meta * INTERLINEADO, despues=ESPACIO_ENTRE_PARRAFOS_PT)
+    _run(p, C.meta, L.pt_meta, color=COLOR_GRIS)
+    p = _parrafo(celda.add_paragraph(), linea_pt=C.pt_titulo * INTERLINEADO, despues=ESPACIO_ENTRE_PARRAFOS_PT)
+    _run(p, C.titulo, C.pt_titulo, negrita=True, color=COLOR_TITULO)
+    p = _parrafo(celda.add_paragraph(), linea_pt=C.pt_desc * INTERLINEADO)
+    _run(p, C.descripcion, C.pt_desc, color=COLOR_TEXTO)
 
 
 def _texto_rango(ini: int, fin: int, n: int) -> str:
@@ -662,7 +861,7 @@ def _texto_rango(ini: int, fin: int, n: int) -> str:
 
 
 def _pagina_contenido_docx(doc, pagina: list, k: int, D: _Datos, L: Layout, F: dict,
-                           log: Callable[[str], None]) -> None:
+                           log: Callable[[str], None], avisos: list) -> None:
     ini = k * L.por_pagina + 1
     fin = ini + len(pagina) - 1
     _cabecera_docx(doc, L, D.titulo, _texto_rango(ini, fin, L.n))
@@ -681,22 +880,26 @@ def _pagina_contenido_docx(doc, pagina: list, k: int, D: _Datos, L: Layout, F: d
             celda.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.TOP
             idx = f * L.cols + c
             if idx < len(pagina):
-                _celda_momento_docx(celda, pagina[idx], ini + idx, L, F, log)
+                _celda_momento_docx(celda, pagina[idx], ini + idx, L, F, log, avisos)
 
 
 def generar_docx(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                  resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                  modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
-                 log: Callable[[str], None] = print) -> Path:
-    """Escribe ``<carpeta_salida>/<nombre_video>.docx`` y devuelve su ruta.  ``momentos`` vacío -> ValueError."""
-    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina)
+                 log: Callable[[str], None] = print, avisos: list | None = None) -> Path:
+    """Escribe ``<carpeta_salida>/<nombre_video>.docx`` y devuelve su ruta.  ``momentos`` vacío -> ValueError.
+
+    Si se pasa ``avisos`` (lista), se le añaden los recortes de texto que hubo que hacer (uno por paso).
+    """
+    avisos = avisos if avisos is not None else []
+    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log)
     doc = Document()
     _configurar_docx(doc, D, L)
     _portada_docx(doc, D, L)
     if incluir_indice:
-        _indice_docx(doc, D, L, F)
+        _indice_docx(doc, D, L, _paginar_indice(_entradas_indice(D.momentos, L, F), L))
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
-        _pagina_contenido_docx(doc, pagina, k, D, L, F, log)
+        _pagina_contenido_docx(doc, pagina, k, D, L, F, log, avisos)
     # Word exige un párrafo tras la última tabla; de 1 pt para que no genere una página más
     fin = _parrafo(doc.add_paragraph(), linea_pt=1)
     _run(fin, "", 1)
@@ -763,8 +966,9 @@ def _portada_pdf(c, D: _Datos, L: Layout, F: dict) -> None:
     c.drawString(x, 1.6 * cm, _recortar_ancho(D.pie, F["regular"], 8, ancho, F))
 
 
-def _pagina_indice_pdf(c, columnas: list, k: int, num_pagina: int, total: int, D: _Datos, L: Layout,
-                       F: dict) -> None:
+def _pagina_indice_pdf(c, entradas: list, k: int, num_pagina: int, total: int, n_indice: int, D: _Datos,
+                       L: Layout, F: dict) -> None:
+    """Una página del índice: una sola columna, títulos completos (varias líneas) y 'mm:ss · pág. N' a la derecha."""
     H = L.pag_h_cm * cm
     mg = MARGEN_CM * cm
     _cabecera_pdf(c, L, F, D.titulo, f"Índice · Página {num_pagina} de {total}")
@@ -774,33 +978,37 @@ def _pagina_indice_pdf(c, columnas: list, k: int, num_pagina: int, total: int, D
         c.setFillColor(colors.HexColor(COLOR_TITULO))
         c.drawString(mg, y_top - PT_INDICE_TITULO * INTERLINEADO + 4, "Índice")
         y_top -= ALTO_TITULO_INDICE_PT
-    _ncols, ancho_col = _columnas_indice(L)
+    ancho_col = L.util_w_cm * cm
+    ancho_texto = _ancho_texto_indice(L)
     punto_w = pdfmetrics.stringWidth(".", F["regular"], PT_INDICE_PASO)
-    for ci, columna in enumerate(columnas):
-        x = mg + ci * (ancho_col + INDICE_GAP_COL_CM * cm)
-        y = y_top
-        for j, e in enumerate(columna):
-            y -= (e.antes if j else 0.0) + e.alto
-            base = y + 0.3 * e.alto
-            if e.tipo == "seccion":
-                c.setFont(F["negrita"], PT_INDICE_SECCION)
-                c.setFillColor(colors.HexColor(COLOR_TITULO))
-                c.drawString(x, base, _recortar_ancho(e.texto, F["negrita"], PT_INDICE_SECCION, ancho_col, F))
-                continue
-            tiempo = _plano(e.tiempo, F)
-            tiempo_w = pdfmetrics.stringWidth(tiempo, F["regular"], PT_INDICE_PASO)
-            texto = _recortar_ancho(e.texto, F["regular"], PT_INDICE_PASO,
-                                    ancho_col - tiempo_w - 6 * punto_w - 6, F)
-            c.setFont(F["regular"], PT_INDICE_PASO)
-            c.setFillColor(colors.HexColor(COLOR_TEXTO))
-            c.drawString(x, base, texto)
-            x_fin_texto = x + pdfmetrics.stringWidth(texto, F["regular"], PT_INDICE_PASO) + 3
-            x_tiempo = x + ancho_col - tiempo_w
-            puntos = int((x_tiempo - 3 - x_fin_texto) // punto_w)
-            c.setFillColor(colors.HexColor(COLOR_GRIS))
-            if puntos > 0:
-                c.drawString(x_tiempo - 3 - puntos * punto_w, base, "." * puntos)
-            c.drawString(x_tiempo, base, tiempo)
+    x = mg
+    y = y_top
+    for j, e in enumerate(entradas):
+        y -= (e.antes if j else 0.0) + e.alto
+        alto_linea = e.alto / e.lineas
+        if e.tipo == "seccion":
+            c.setFont(F["negrita"], PT_INDICE_SECCION)
+            c.setFillColor(colors.HexColor(COLOR_TITULO))
+            lineas = simpleSplit(_plano(e.texto, F), F["negrita"], PT_INDICE_SECCION, ancho_col)
+            for li, linea in enumerate(lineas[:e.lineas]):
+                c.drawString(x, y + e.alto - (li + 1) * alto_linea + 0.3 * alto_linea, linea)
+            continue
+        lineas = simpleSplit(_plano(e.texto, F), F["regular"], PT_INDICE_PASO, ancho_texto)[:e.lineas]
+        c.setFont(F["regular"], PT_INDICE_PASO)
+        c.setFillColor(colors.HexColor(COLOR_TEXTO))
+        for li, linea in enumerate(lineas):
+            c.drawString(x, y + e.alto - (li + 1) * alto_linea + 0.3 * alto_linea, linea)
+        # puntos de guía, tiempo y página en la última línea del título
+        base = y + 0.3 * alto_linea
+        derecha = _plano(_texto_derecha_indice(e, n_indice, L), F)
+        derecha_w = pdfmetrics.stringWidth(derecha, F["regular"], PT_INDICE_PASO)
+        x_fin_texto = x + pdfmetrics.stringWidth(lineas[-1] if lineas else "", F["regular"], PT_INDICE_PASO) + 3
+        x_derecha = x + ancho_col - derecha_w
+        puntos = int((x_derecha - 3 - x_fin_texto) // punto_w)
+        c.setFillColor(colors.HexColor(COLOR_GRIS))
+        if puntos > 0:
+            c.drawString(x_derecha - 3 - puntos * punto_w, base, "." * puntos)
+        c.drawString(x_derecha, base, derecha)
 
 
 def _imagen_pdf(c, ruta, x: float, y: float, w: float, h: float, F: dict, log: Callable[[str], None]) -> None:
@@ -822,19 +1030,21 @@ def _imagen_pdf(c, ruta, x: float, y: float, w: float, h: float, F: dict, log: C
 
 
 def _celda_pdf(c, m: Momento, numero: int, x0: float, y1: float, L: Layout, F: dict,
-               log: Callable[[str], None]) -> None:
+               log: Callable[[str], None], avisos: list) -> None:
     cw, ch = L.celda_w_cm * cm, L.celda_h_cm * cm
     lat = CELDA_MARGEN_LAT_CM * cm
-    iw, ih = L.img_w_cm * cm, L.img_h_cm * cm
+    tx, tw = x0 + lat, cw - 2 * lat
+    C = _maquetar_celda(m, numero, L, F, tw)
+    if C.aviso:
+        avisos.append(C.aviso)
+    iw, ih = C.img_w_cm * cm, C.img_h_cm * cm
     # imagen y textos alineados al borde izquierdo interior de la celda (como en el docx)
     ix, iy = x0 + lat, y1 - CELDA_MARGEN_SUP_CM * cm - ih
     _imagen_pdf(c, m.captura_para_documento, ix, iy, iw, ih, F, log)
-    tx, tw = x0 + lat, cw - 2 * lat
-    meta, titulo, descripcion = _textos_celda(m, numero, L, F, tw)
     y = iy - 3
-    for texto, estilo in ((meta, _estilo(F, L.pt_meta, color=COLOR_GRIS)),
-                          (titulo, _estilo(F, L.pt_titulo, negrita=True, color=COLOR_TITULO)),
-                          (descripcion, _estilo(F, L.pt_desc))):
+    for texto, estilo in ((C.meta, _estilo(F, L.pt_meta, color=COLOR_GRIS)),
+                          (C.titulo, _estilo(F, C.pt_titulo, negrita=True, color=COLOR_TITULO)),
+                          (C.descripcion, _estilo(F, C.pt_desc))):
         if not texto:
             continue
         p = Paragraph(_txt(texto, F), estilo)
@@ -844,7 +1054,7 @@ def _celda_pdf(c, m: Momento, numero: int, x0: float, y1: float, L: Layout, F: d
 
 
 def _pagina_contenido_pdf(c, pagina: list, k: int, num_pagina: int, total: int, D: _Datos, L: Layout,
-                          F: dict, log: Callable[[str], None]) -> None:
+                          F: dict, log: Callable[[str], None], avisos: list) -> None:
     H = L.pag_h_cm * cm
     mg = MARGEN_CM * cm
     ini = k * L.por_pagina + 1
@@ -855,16 +1065,20 @@ def _pagina_contenido_pdf(c, pagina: list, k: int, num_pagina: int, total: int, 
         f, col = divmod(idx, L.cols)
         x0 = mg + col * (L.celda_w_cm + GAP_X_CM) * cm
         y1 = y_top - f * (L.celda_h_cm + GAP_Y_CM) * cm
-        _celda_pdf(c, m, ini + idx, x0, y1, L, F, log)
+        _celda_pdf(c, m, ini + idx, x0, y1, L, F, log, avisos)
 
 
 def generar_pdf(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                 resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                 modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
-                log: Callable[[str], None] = print) -> Path:
-    """Escribe ``<carpeta_salida>/<nombre_video>.pdf`` y devuelve su ruta.  ``momentos`` vacío -> ValueError."""
-    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina)
-    paginas_indice = _paginar_indice(_entradas_indice(D.momentos), L) if incluir_indice else []
+                log: Callable[[str], None] = print, avisos: list | None = None) -> Path:
+    """Escribe ``<carpeta_salida>/<nombre_video>.pdf`` y devuelve su ruta.  ``momentos`` vacío -> ValueError.
+
+    Si se pasa ``avisos`` (lista), se le añaden los recortes de texto que hubo que hacer (uno por paso).
+    """
+    avisos = avisos if avisos is not None else []
+    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log)
+    paginas_indice = _paginar_indice(_entradas_indice(D.momentos, L, F), L) if incluir_indice else []
     total = 1 + len(paginas_indice) + L.paginas_contenido
     ruta = Path(carpeta_salida) / f"{_nombre_archivo_seguro(nombre_video)}.pdf"
     ruta.parent.mkdir(parents=True, exist_ok=True)
@@ -875,12 +1089,12 @@ def generar_pdf(nombre_video: str, momentos: list, carpeta_salida: Path, *, titu
     _portada_pdf(c, D, L, F)
     c.showPage()
     numero = 2
-    for k, columnas in enumerate(paginas_indice):
-        _pagina_indice_pdf(c, columnas, k, numero, total, D, L, F)
+    for k, entradas in enumerate(paginas_indice):
+        _pagina_indice_pdf(c, entradas, k, numero, total, len(paginas_indice), D, L, F)
         c.showPage()
         numero += 1
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
-        _pagina_contenido_pdf(c, pagina, k, numero, total, D, L, F, log)
+        _pagina_contenido_pdf(c, pagina, k, numero, total, D, L, F, log, avisos)
         c.showPage()
         numero += 1
     c.save()
@@ -901,22 +1115,30 @@ def contar_paginas_pdf(ruta: Path) -> int:
 def generar_documentos(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                        resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                        modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
-                       log: Callable[[str], None] = print) -> tuple[Path, Path, int]:
+                       log: Callable[[str], None] = print, avisos: list | None = None) -> tuple[Path, Path, int]:
     """Genera ``<carpeta>/<nombre_video>.docx`` y ``.pdf``; devuelve ``(docx, pdf, paginas_pdf)``.
 
     ``paginas_pdf`` se cuenta con pymupdf (-1 si no está disponible).  ``momentos`` vacío -> ValueError.
+    Los textos nunca se recortan en silencio: si en algún paso hubo que recortar (tras reducir la imagen y
+    bajar la fuente), se escribe un aviso con el número de paso por ``log`` y se añade a ``avisos`` si se
+    pasa una lista.
     """
     momentos = list(momentos or [])
     if not momentos:
         raise ValueError("no hay momentos: no se puede generar el documento")
     comunes = dict(titulo=titulo, resumen=resumen, fecha=fecha, duracion=duracion, modo=modo, modelo=modelo,
                    por_pagina=por_pagina, incluir_indice=incluir_indice, log=log)
-    L = calcular_layout(len(momentos), por_pagina)
-    log(f"  documentos: {len(momentos)} pasos, {L.por_pagina} por página "
-        f"({'A4 horizontal 2x2' if L.horizontal else f'A4 vertical 1x{L.filas}'})")
-    ruta_docx = generar_docx(nombre_video, momentos, carpeta_salida, **comunes)
+    L = calcular_layout(len(momentos), por_pagina, ratio=_ratio_capturas(momentos))
+    log(f"  documentos: {len(momentos)} pasos, {L.por_pagina} por página ({L.descripcion}"
+        f"{'; capturas verticales' if L.vertical else ''})")
+    recortes: list = []
+    ruta_docx = generar_docx(nombre_video, momentos, carpeta_salida, avisos=recortes, **comunes)
     log(f"  docx: {ruta_docx.name}")
-    ruta_pdf = generar_pdf(nombre_video, momentos, carpeta_salida, **comunes)
+    ruta_pdf = generar_pdf(nombre_video, momentos, carpeta_salida, **comunes)   # mismas celdas: mismos recortes
     paginas = contar_paginas_pdf(ruta_pdf)
     log(f"  pdf: {ruta_pdf.name} ({paginas if paginas >= 0 else '?'} páginas)")
+    for recorte in recortes:
+        log(f"  aviso: {recorte}")
+    if avisos is not None:
+        avisos.extend(recortes)
     return ruta_docx, ruta_pdf, paginas
