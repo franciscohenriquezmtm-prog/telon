@@ -572,7 +572,7 @@
         "tiempo": "13:12",
         "tiempo_seg": 792.0,
         "titulo": "Desechar y reiniciar escanogramas abortados",
-        "descripcion": "Para realizar nuevamente los escanogramas despu s de abortar, se debe seleccionar el bot\u0002n 'Exit Exam' (indicado en pantalla como Exit Exam), descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo para el paciente ID 999999-001.",
+        "descripcion": "Para realizar nuevamente los escanogramas despu s de abortar, se debe seleccionar el botón 'Exit Exam' (indicado en pantalla como Exit Exam), descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo para el paciente ID 999999-001.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",

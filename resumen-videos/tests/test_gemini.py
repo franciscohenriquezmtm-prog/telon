@@ -1625,3 +1625,14 @@ class TestReintentosDeRed:
         with pytest.raises(httpx.ReadTimeout):
             gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
         assert len(cliente.generaciones()) == gemini.REINTENTOS_RED + 1
+
+
+
+def test_reparar_texto_vocales_mal_codificadas_y_controles():
+    assert gemini.reparar_texto("teclado f\x00\x13sico y bot\x02n") == "teclado físico y botón"
+    assert gemini.reparar_texto("sin\x07 control\x1f") == "sin control"
+    assert gemini._recortar("f\x00\x13sico  x", 50) == "físico x"
+    datos = json.dumps({"segmentos": [{"inicio": "00:01", "fin": "00:02", "texto": "bot\x02n f\x00\x13sico"}]})
+    cliente = ClienteFalso([respuesta(datos)])
+    segmentos, _uso = gemini.transcribir_video(cliente, archivo_remoto(), info_video(), MODELO, log=lambda _: None)
+    assert segmentos[0]["texto"] == "botón físico"

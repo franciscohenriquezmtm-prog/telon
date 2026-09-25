@@ -776,8 +776,21 @@ def parsear_tiempo(valor) -> float | None:
     return 0.0 if negativo else segundos
 
 
+#: Secuencias de control con las que el modelo a veces devuelve una vocal acentuada (visto en respuestas reales:
+#: "f\x00\x13sico" por "físico", "bot\x02n" por "botón").  Se reparan; cualquier otro carácter de control se quita.
+_REPARACIONES_TEXTO = (("\x00\x13", "í"), ("\x02", "ó"))
+_RE_CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+
+def reparar_texto(texto: str) -> str:
+    """Repara las vocales mal codificadas conocidas y elimina el resto de caracteres de control."""
+    for malo, bueno in _REPARACIONES_TEXTO:
+        texto = texto.replace(malo, bueno)
+    return _RE_CONTROL.sub("", texto)
+
+
 def _recortar(texto: str, maximo: int) -> str:
-    texto = re.sub(r"\s+", " ", texto).strip()
+    texto = re.sub(r"\s+", " ", reparar_texto(texto)).strip()
     if len(texto) <= maximo:
         return texto
     return texto[: max(1, maximo - 1)].rstrip() + "…"
@@ -1142,7 +1155,7 @@ def _segmentos_desde_bruto(datos, duracion: float, desplazamiento: float) -> lis
     for bruto in brutos if isinstance(brutos, list) else []:
         if not isinstance(bruto, dict):
             continue
-        texto = " ".join(str(bruto.get("texto") or "").split())
+        texto = " ".join(reparar_texto(str(bruto.get("texto") or "")).split())
         inicio = parsear_tiempo(bruto.get("inicio"))
         if not texto or inicio is None:
             continue
