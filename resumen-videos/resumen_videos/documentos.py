@@ -75,6 +75,9 @@ RATIO_CAJA = 16 / 9         # aspecto de la caja de imagen si no se puede leer n
 PT_CABECERA = 8.0
 PT_INDICE_TITULO = 18.0
 PT_INDICE_SECCION = 11.0
+PT_INDICE_CAPITULO = 13.0         # encabezado de capítulo (manual unido de varios videos)
+ALTO_INDICE_CAPITULO_PT = 18.0    # por línea
+ESPACIO_INDICE_CAPITULO_PT = 18.0
 PT_INDICE_PASO = 10.0
 ALTO_INDICE_SECCION_PT = 15.0     # por línea
 ALTO_INDICE_PASO_PT = 14.0        # por línea (un título largo ocupa varias)
@@ -294,13 +297,20 @@ def _ratio_capturas(momentos: list) -> float:
 
 
 def _grupos_indice(momentos: list) -> list[tuple[str, list[tuple[int, Momento]]]]:
-    """Agrupa los pasos por sección consecutiva: [(nombre, [(numero, momento), ...]), ...]."""
+    """Agrupa los pasos por sección consecutiva: [(nombre, [(numero, momento), ...]), ...].
+
+    Un cambio de capítulo (``Momento.capitulo``, manual unido) también cierra el grupo aunque la sección se llame
+    igual.
+    """
     grupos: list[tuple[str, list]] = []
+    capitulo_anterior = object()
     for i, m in enumerate(momentos, 1):
         nombre = " ".join(str(m.seccion or "").split()) or SECCION_POR_DEFECTO
-        if not grupos or grupos[-1][0] != nombre:
+        capitulo = _limpiar(m.capitulo) or None
+        if not grupos or grupos[-1][0] != nombre or capitulo != capitulo_anterior:
             grupos.append((nombre, []))
         grupos[-1][1].append((i, m))
+        capitulo_anterior = capitulo
     return grupos
 
 
@@ -532,7 +542,7 @@ def _maquetar_celda(m: Momento, numero: int, L: Layout, F: dict, ancho_pt: float
 # ----------------------------------------------------------------------------- índice (paginado por medida)
 @dataclass(frozen=True)
 class _EntradaIndice:
-    tipo: str        # "seccion" | "paso"
+    tipo: str        # "capitulo" | "seccion" | "paso"
     texto: str       # título completo ("N. título"); ocupa ``lineas`` líneas
     tiempo: str
     numero: int      # número de paso (0 en las secciones)
@@ -556,7 +566,14 @@ def _entradas_indice(momentos: list, L: Layout, F: dict) -> list[_EntradaIndice]
     ancho_texto = _ancho_texto_indice(L)
     ancho_seccion = L.util_w_cm * cm
     entradas = []
+    capitulo_anterior = None
     for nombre, pasos in _grupos_indice(momentos):
+        capitulo = _limpiar(pasos[0][1].capitulo) or None
+        if capitulo and capitulo != capitulo_anterior:
+            lineas = _lineas_indice(capitulo, F["negrita"], PT_INDICE_CAPITULO, ancho_seccion, F)
+            entradas.append(_EntradaIndice("capitulo", capitulo, "", 0, lineas, lineas * ALTO_INDICE_CAPITULO_PT,
+                                           ESPACIO_INDICE_CAPITULO_PT))
+        capitulo_anterior = capitulo
         lineas = _lineas_indice(nombre, F["negrita"], PT_INDICE_SECCION, ancho_seccion, F)
         entradas.append(_EntradaIndice("seccion", nombre, "", 0, lineas, lineas * ALTO_INDICE_SECCION_PT,
                                        ESPACIO_INDICE_SECCION_PT))
@@ -582,8 +599,10 @@ def _paginar_indice(entradas: list[_EntradaIndice], L: Layout) -> list[list[_Ent
         e = entradas[i]
         antes = e.antes if pagina else 0.0
         necesario = antes + e.alto
-        if e.tipo == "seccion" and i + 1 < len(entradas):
-            necesario += entradas[i + 1].alto
+        if e.tipo in ("seccion", "capitulo") and i + 1 < len(entradas):
+            necesario += entradas[i + 1].alto          # un encabezado nunca queda solo al pie de la página
+            if e.tipo == "capitulo" and i + 2 < len(entradas) and entradas[i + 1].tipo == "seccion":
+                necesario += entradas[i + 2].alto
         if necesario > restante and pagina:
             paginas.append(pagina)
             pagina = []
@@ -855,9 +874,12 @@ def _indice_docx(doc, D: _Datos, L: Layout, paginas_indice: list) -> None:
             fila.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
             izq, der = fila.cells
             izq.width, der.width = Cm(ancho_izq_cm), Cm(ancho_der_cm)
-            if e.tipo == "seccion":
-                p = _parrafo(izq.paragraphs[0], linea_pt=ALTO_INDICE_SECCION_PT, antes=antes)
-                _run(p, e.texto, PT_INDICE_SECCION, negrita=True, color=COLOR_TITULO)
+            if e.tipo in ("seccion", "capitulo"):
+                capitulo = e.tipo == "capitulo"
+                p = _parrafo(izq.paragraphs[0], antes=antes,
+                             linea_pt=ALTO_INDICE_CAPITULO_PT if capitulo else ALTO_INDICE_SECCION_PT)
+                _run(p, e.texto, PT_INDICE_CAPITULO if capitulo else PT_INDICE_SECCION, negrita=True,
+                     color=COLOR_TITULO)
                 continue
             p = _parrafo(izq.paragraphs[0], linea_pt=ALTO_INDICE_PASO_PT, antes=antes)
             _run(p, e.texto, PT_INDICE_PASO, color=COLOR_TEXTO)
@@ -1098,10 +1120,11 @@ def _pagina_indice_pdf(c, entradas: list, k: int, num_pagina: int, total: int, n
     for j, e in enumerate(entradas):
         y -= (e.antes if j else 0.0) + e.alto
         alto_linea = e.alto / e.lineas
-        if e.tipo == "seccion":
-            c.setFont(F["negrita"], PT_INDICE_SECCION)
+        if e.tipo in ("seccion", "capitulo"):
+            pt = PT_INDICE_CAPITULO if e.tipo == "capitulo" else PT_INDICE_SECCION
+            c.setFont(F["negrita"], pt)
             c.setFillColor(colors.HexColor(COLOR_TITULO))
-            lineas = simpleSplit(_plano(e.texto, F), F["negrita"], PT_INDICE_SECCION, ancho_col)
+            lineas = simpleSplit(_plano(e.texto, F), F["negrita"], pt, ancho_col)
             for li, linea in enumerate(lineas[:e.lineas]):
                 c.drawString(x, y + e.alto - (li + 1) * alto_linea + 0.3 * alto_linea, linea)
             continue

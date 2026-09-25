@@ -1,8 +1,8 @@
 """Unión de varios videos ya procesados en un solo manual con capítulos.
 
 Cada carpeta ``salida/<video>/`` (con su ``momentos.json`` y sus capturas) pasa a ser un capítulo: sus
-pasos conservan el tiempo ``mm:ss`` de su propio video y su sección se antepone con el número y el título
-del capítulo ("3. Bolus tracking · Adquisición"), así el índice del manual queda agrupado por capítulo.
+pasos conservan el tiempo ``mm:ss`` de su propio video, su sección y reciben ``capitulo`` ("3. Bolus
+tracking"), que el índice del manual muestra como encabezado antes de las secciones de ese capítulo.
 Las capturas se copian a la carpeta del manual unido, la transcripción de cada capítulo se encadena con un
 encabezado y se escribe un ``momentos.json`` propio (``video.capitulos`` lista el origen de cada uno).
 
@@ -50,17 +50,23 @@ def _copiar_captura(ruta: str | None, k: int, destino_capturas: Path) -> str | N
 
 def unir_manuales(nombre: str, carpetas: list, carpeta_salida: Path, *, titulo: str | None = None,
                   resumen: str | None = None, equipo: str = config.EQUIPO_POR_DEFECTO, por_pagina="auto",
-                  incluir_indice: bool = True, log: Callable[[str], None] = print) -> tuple[Path, Path, int, Path]:
+                  incluir_indice: bool = True, titulos_capitulos: list | None = None,
+                  log: Callable[[str], None] = print) -> tuple[Path, Path, int, Path]:
     """Une los videos procesados de ``carpetas`` (en ese orden) en ``<carpeta_salida>/<nombre>/``.
 
-    Devuelve ``(docx, pdf, páginas, carpeta del manual)``.  Lanza ``ValueError`` sin carpetas y
-    ``RuntimeError`` si alguna carpeta no está procesada.
+    ``titulos_capitulos`` (misma longitud que ``carpetas``; una entrada vacía conserva el título del
+    análisis) fija el título de cada capítulo.  Devuelve ``(docx, pdf, páginas, carpeta del manual)``.
+    Lanza ``ValueError`` sin carpetas o con una lista de títulos de otra longitud, y ``RuntimeError`` si
+    alguna carpeta no está procesada.
     """
     from . import pipeline
 
     carpetas = [Path(c) for c in carpetas]
     if not carpetas:
         raise ValueError("no hay videos procesados que unir")
+    titulos_capitulos = list(titulos_capitulos or [])
+    if titulos_capitulos and len(titulos_capitulos) != len(carpetas):
+        raise ValueError(f"se indicaron {len(titulos_capitulos)} títulos de capítulo para {len(carpetas)} videos")
     destino = Path(carpeta_salida) / documentos._nombre_archivo_seguro(nombre)
     destino_capturas = destino / config.CARPETA_CAPTURAS
     destino_capturas.mkdir(parents=True, exist_ok=True)
@@ -77,11 +83,13 @@ def unir_manuales(nombre: str, carpetas: list, carpeta_salida: Path, *, titulo: 
     for k, carpeta in enumerate(carpetas, start=1):
         analisis, video = _cargar_capitulo(carpeta)
         titulo_cap = _titulo_capitulo(analisis, video, carpeta)
+        if titulos_capitulos and str(titulos_capitulos[k - 1] or "").strip():
+            titulo_cap = str(titulos_capitulos[k - 1]).strip()
         log(f"Capítulo {k}: {titulo_cap} ({len(analisis.momentos)} pasos) <- {carpeta}")
         for m in analisis.momentos:
             seccion = (m.seccion or SECCION_POR_DEFECTO).strip() or SECCION_POR_DEFECTO
             momentos.append(replace(
-                m, seccion=f"{k}. {titulo_cap} · {seccion}",
+                m, seccion=seccion, capitulo=f"{k}. {titulo_cap}",
                 ruta_captura=_copiar_captura(m.ruta_captura, k, destino_capturas),
                 ruta_captura_anotada=_copiar_captura(m.ruta_captura_anotada, k, destino_capturas)))
         if analisis.transcripcion:

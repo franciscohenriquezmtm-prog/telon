@@ -59,8 +59,8 @@ def test_unir_dos_videos_en_un_manual_con_capitulos(tmp_path):
     datos = json.loads((destino / config.NOMBRE_JSON).read_text(encoding="utf-8"))
     an = datos["analisis"]
     assert an["modo"] == "unido" and an["titulo"] == "Manual de tomógrafo" and len(an["momentos"]) == 5
-    secciones = [m["seccion"] for m in an["momentos"]]
-    assert secciones[0] == "1. Encendido del equipo · Encendido" and secciones[-1] == "2. Worklist y envío · General"
+    assert [m["seccion"] for m in an["momentos"]] == ["Encendido", "Encendido", "General", "Encendido", "General"]
+    assert [m["capitulo"] for m in an["momentos"]][::3] == ["1. Encendido del equipo", "2. Worklist y envío"]
     # tiempos relativos a cada video, en el orden de los capítulos
     assert [m["tiempo"] for m in an["momentos"]] == ["00:00", "00:10", "00:20", "00:00", "00:10"]
     # capturas copiadas a la carpeta del manual (limpia y anotada), con prefijo de capítulo
@@ -75,7 +75,9 @@ def test_unir_dos_videos_en_un_manual_con_capitulos(tmp_path):
     assert datos["video"]["duracion"] == "08:20" and [c["numero"] for c in datos["video"]["extra"]["capitulos"]] == [1, 2]
     assert datos["documentos"]["pdf"] == "Manual TC.pdf" and datos["documentos"]["paginas"] == paginas
     textos = _texto_pdf(pdf)
-    assert "1. Encendido del equipo" in textos[1] and "2. Worklist y envío" in textos[1]      # índice
+    assert "1. Encendido del equipo" in textos[1] and "2. Worklist y envío" in textos[1]      # índice: capítulos
+    assert textos[1].count("Encendido\n") >= 2 and "General" in textos[1]                      # y secciones cortas
+    assert textos[1].index("1. Encendido del equipo") < textos[1].index("2. Worklist y envío")
     assert "Capítulo 2: Worklist y envío" in textos[-1] and "Audio de Encendido del equipo." in textos[-1]
     assert any("Capítulo 1: Encendido del equipo" in p.text for p in Document(str(docx)).paragraphs)
     assert registro[0].startswith("Capítulo 1: Encendido del equipo (3 pasos)")
@@ -108,7 +110,7 @@ def test_cli_unir_toma_los_procesados_en_orden_y_respeta_solo(tmp_path, monkeypa
     (tmp_path / "videos").mkdir()
     assert cli.main(["--unir", "Todo", "--salida", str(salida), "--titulo", "Manual completo"]) == 0
     an = json.loads((salida / "Todo" / config.NOMBRE_JSON).read_text(encoding="utf-8"))["analisis"]
-    assert [m["seccion"] for m in an["momentos"]] == ["1. Primero · Encendido", "2. Segundo · Encendido"]
+    assert [m["capitulo"] for m in an["momentos"]] == ["1. Primero", "2. Segundo"]
     assert an["titulo"] == "Manual completo"
     # una segunda unión no se incluye a sí misma como capítulo
     assert cli.main(["--unir", "Todo", "--salida", str(salida)]) == 0
@@ -116,6 +118,32 @@ def test_cli_unir_toma_los_procesados_en_orden_y_respeta_solo(tmp_path, monkeypa
     assert len(an["momentos"]) == 2
     assert cli.main(["--unir", "Solo b", "--salida", str(salida), "--solo", "b_segundo"]) == 0
     an = json.loads((salida / "Solo b" / config.NOMBRE_JSON).read_text(encoding="utf-8"))["analisis"]
-    assert [m["seccion"] for m in an["momentos"]] == ["1. Segundo · Encendido"]
+    assert [m["capitulo"] for m in an["momentos"]] == ["1. Segundo"]
     assert cli.main(["--unir", "Nada", "--salida", str(salida), "--solo", "no_existe"]) == 2
     assert "no hay videos procesados" in capsys.readouterr().err
+
+
+def test_titulos_de_capitulo_propios(tmp_path):
+    salida = tmp_path / "salida"
+    a = _video_procesado(salida, "uno", "Título del modelo", 1)
+    b = _video_procesado(salida, "dos", "Otro del modelo", 1)
+    _docx, _pdf, _paginas, destino = unir.unir_manuales("m", [a, b], salida, titulos_capitulos=["Mi capítulo", ""],
+                                                        log=lambda _: None)
+    an = json.loads((destino / config.NOMBRE_JSON).read_text(encoding="utf-8"))["analisis"]
+    assert [m["capitulo"] for m in an["momentos"]] == ["1. Mi capítulo", "2. Otro del modelo"]
+    with pytest.raises(ValueError, match="títulos"):
+        unir.unir_manuales("m", [a, b], salida, titulos_capitulos=["solo uno"], log=lambda _: None)
+
+
+def test_cli_unir_con_archivo_de_capitulos(tmp_path, monkeypatch, capsys):
+    salida = tmp_path / "salida"
+    _video_procesado(salida, "a", "A", 1)
+    _video_procesado(salida, "b", "B", 1)
+    (tmp_path / "videos").mkdir()
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "caps.txt").write_text("Primero\n\n", encoding="utf-8")
+    assert cli.main(["--unir", "U", "--salida", str(salida), "--capitulos", str(tmp_path / "caps.txt")]) == 0
+    an = json.loads((salida / "U" / config.NOMBRE_JSON).read_text(encoding="utf-8"))["analisis"]
+    assert [m["capitulo"] for m in an["momentos"]] == ["1. Primero", "2. B"]
+    assert cli.main(["--unir", "U", "--salida", str(salida), "--capitulos", str(tmp_path / "no_existe.txt")]) == 2
+    assert "--capitulos" in capsys.readouterr().err

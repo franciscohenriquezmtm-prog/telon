@@ -638,3 +638,23 @@ def test_jpeg_de_ffmpeg_sin_jfif_se_inserta_igual_en_el_docx(tmp_path):
     assert not any("ilegible" in r for r in registro)
     doc = Document(str(docx))
     assert len(doc.inline_shapes) == 2        # las dos capturas quedaron insertadas
+
+
+# ----------------------------------------------------------------------------- capítulos en el índice
+def test_indice_con_capitulos(tmp_path):
+    momentos = _momentos(6, tmp_path / "cap")
+    for i, m in enumerate(momentos):
+        m.seccion = "Encendido"                      # la misma sección en los dos capítulos: dos grupos
+        m.capitulo = "1. Primer video" if i < 3 else "2. Segundo video"
+    docx, pdf, paginas = _generar(tmp_path, momentos)
+    assert paginas == _paginas_esperadas(momentos)
+    indice = _texto_pdf(pdf)[1]
+    assert indice.index("1. Primer video") < indice.index("Encendido") < indice.index("2. Segundo video")
+    assert indice.count("Encendido") == 2
+    parrafos = [p.text for p in Document(str(docx)).paragraphs] + _celdas_docx(docx)
+    assert "1. Primer video" in parrafos and "2. Segundo video" in parrafos
+    # sin capítulo no cambia nada
+    for m in momentos:
+        m.capitulo = None
+    _docx2, pdf2, paginas2 = _generar(tmp_path, momentos)
+    assert "Primer video" not in _texto_pdf(pdf2)[1] and paginas2 == paginas

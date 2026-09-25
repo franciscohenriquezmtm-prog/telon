@@ -70,6 +70,7 @@ class Momento:
     puntaje: Optional[float] = None     # relevancia numérica (solo modo local)
     titulo_original: Optional[str] = None       # título anterior si el refinado con capturas lo cambió (auditoría)
     descripcion_original: Optional[str] = None  # descripción anterior si el refinado con capturas la cambió
+    capitulo: Optional[str] = None      # manual unido de varios videos: "N. Título del capítulo" (encabezado del índice)
 
     @property
     def tiempo(self) -> str:
@@ -108,6 +109,8 @@ class Momento:
             datos["titulo_original"] = self.titulo_original
         if self.descripcion_original is not None:
             datos["descripcion_original"] = self.descripcion_original
+        if self.capitulo is not None:               # solo en manuales unidos
+            datos["capitulo"] = self.capitulo
         return datos
 
 

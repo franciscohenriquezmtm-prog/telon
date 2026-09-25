@@ -351,6 +351,7 @@ def _momento_desde_dict(datos: dict, base: Path) -> Momento:
         puntaje=datos.get("puntaje"),
         titulo_original=datos.get("titulo_original"),
         descripcion_original=datos.get("descripcion_original"),
+        capitulo=datos.get("capitulo"),
     )
 
 

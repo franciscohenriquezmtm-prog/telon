@@ -164,6 +164,9 @@ def crear_parser() -> argparse.ArgumentParser:
                    help="sin API: une los videos YA procesados de la carpeta de salida (todos, o los de --solo, en "
                         "orden alfabético) en un solo manual con capítulos: salida/NOMBRE/")
     m.add_argument("--titulo", metavar="TEXTO", help="con --unir: título del manual unido (por defecto 'Manual de <equipo>')")
+    m.add_argument("--capitulos", metavar="ARCHIVO",
+                   help="con --unir: archivo de texto con el título de cada capítulo, uno por línea y en el mismo orden "
+                        "que los videos (una línea vacía conserva el título propuesto por el modelo)")
     m.add_argument("--solo", action="append", metavar="NOMBRE",
                    help="procesar solo este video (nombre con o sin extensión); repetible: --solo A --solo B")
 
@@ -292,10 +295,17 @@ def _unir(args: argparse.Namespace, op: pipeline.Opciones) -> int:
               + (f" que coincidan con --solo {' / '.join(op.solo)}" if op.solo else "") + ".", file=sys.stderr)
         return 2
     print(f"Uniendo {len(carpetas)} video(s) procesado(s): {', '.join(c.name for c in carpetas)}")
+    titulos = None
+    if args.capitulos:
+        try:
+            titulos = Path(args.capitulos).read_text(encoding="utf-8").splitlines()
+        except OSError as exc:
+            print(f"\nERROR de configuración: no se pudo leer --capitulos {args.capitulos}: {exc}", file=sys.stderr)
+            return 2
     try:
         docx, pdf, paginas, destino = unir.unir_manuales(
             args.unir, carpetas, op.carpeta_salida, titulo=args.titulo, equipo=op.equipo, por_pagina=op.por_pagina,
-            incluir_indice=op.incluir_indice)
+            incluir_indice=op.incluir_indice, titulos_capitulos=titulos)
     except Exception as exc:  # noqa: BLE001 - un capítulo sin JSON, capturas ilegibles…: mensaje claro y código 1
         print(f"\nERROR: {pipeline.mensaje_de_error(exc)}", file=sys.stderr)
         return 1
