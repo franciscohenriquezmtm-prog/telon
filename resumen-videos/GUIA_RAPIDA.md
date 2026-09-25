@@ -44,6 +44,9 @@ resultados están en `salida/<nombre del video>/`: `<nombre>.pdf`, `<nombre>.doc
 | procesar solo un video                             | `.\resumir.bat --solo "nombre del video"` (repetir `--solo` por video) |
 | videos en otra carpeta                             | `.\resumir.bat D:\grabaciones` (la carpeta va primero)                |
 | decir qué equipo es                                | `.\resumir.bat --equipo "arco en C"`                                 |
+| sin transcripción del audio al final del manual    | `.\resumir.bat --sin-transcripcion`                                  |
+| sin el recuadro de zoom en las capturas            | `.\resumir.bat --sin-lupa`                                           |
+| varios clips cortos como una sola capacitación     | editar la lista en `tools/unir_clips.sh` y ejecutarlo; luego procesar el video unido |
 | 50 % más barato (resultado en horas)               | `.\resumir.bat --batch` y luego `.\resumir.bat --batch-recoger ID` (el ID lo imprime el primero; `--batch-pendiente` si solo hay uno) |
 | capturas oscuras en un video HDR                   | `.\resumir.bat --sin-tonemap --regenerar`                            |
 | ver todas las opciones                             | `.\resumir.bat --help`                                               |

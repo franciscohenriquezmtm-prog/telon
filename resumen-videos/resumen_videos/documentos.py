@@ -26,7 +26,7 @@ import math
 import os
 import re
 import statistics
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Callable
 from xml.sax.saxutils import escape as _xml_escape
@@ -82,6 +82,10 @@ ALTO_TITULO_INDICE_PT = PT_INDICE_TITULO * INTERLINEADO + 14.0
 INDICE_ANCHO_DERECHA_CM = 3.2     # columna derecha del índice: "mm:ss · pág. NNN"
 MAX_LINEAS_TITULO = 3             # líneas que puede ocupar el título antes de bajar la fuente y recortar
 SECCION_POR_DEFECTO = "General"
+PT_TRANSCRIPCION = 9.5            # anexo de transcripción: cuerpo
+PT_TRANSCRIPCION_TITULO = 18.0
+TRANSCRIPCION_COL_CM = 1.5        # columna izquierda con el mm:ss de cada segmento
+ESPACIO_SEGMENTO_PT = 3.0         # separación entre segmentos
 
 COLOR_GRIS = "#666666"      # metadatos, cabeceras, línea de paso
 COLOR_TITULO = "#111111"    # títulos
@@ -222,6 +226,7 @@ class _Datos:
     modelo: str
     momentos: list
     secciones: int
+    transcripcion: list = field(default_factory=list)   # [{"inicio": s, "fin": s, "texto": str}] (anexo)
 
     @property
     def pie(self) -> str:
@@ -302,8 +307,24 @@ def _contar_secciones(momentos: list) -> int:
     return len({nombre for nombre, _ in _grupos_indice(momentos)})
 
 
+def _segmentos_transcripcion(transcripcion) -> list[tuple[str, str]]:
+    """``[(mm:ss, texto)]`` limpios y en orden a partir de la transcripción guardada; entradas raras se ignoran."""
+    segmentos: list[tuple[float, str]] = []
+    for s in transcripcion or []:
+        if not isinstance(s, dict):
+            continue
+        texto = _limpiar(s.get("texto"))
+        inicio = s.get("inicio")
+        if not texto or isinstance(inicio, bool) or not isinstance(inicio, (int, float)):
+            continue
+        segmentos.append((max(0.0, float(inicio)), texto))
+    segmentos.sort(key=lambda s: s[0])
+    return [(formatear_tiempo(t), texto) for t, texto in segmentos]
+
+
 def _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo,
-              por_pagina, log: Callable[[str], None] | None = None) -> tuple[_Datos, Layout, dict]:
+              por_pagina, log: Callable[[str], None] | None = None,
+              transcripcion: list | None = None) -> tuple[_Datos, Layout, dict]:
     """Valida las entradas y calcula datos, maqueta y fuentes (común a docx y pdf)."""
     momentos = list(momentos or [])
     if not momentos:
@@ -313,7 +334,8 @@ def _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, mo
                    resumen=_recortar(resumen, 700) or None,
                    fecha=_limpiar(fecha) or _dt.date.today().strftime("%d/%m/%Y"),
                    duracion=duracion, modo=_limpiar(modo), modelo=_limpiar(modelo),
-                   momentos=momentos, secciones=_contar_secciones(momentos))
+                   momentos=momentos, secciones=_contar_secciones(momentos),
+                   transcripcion=_segmentos_transcripcion(transcripcion))
     layout = calcular_layout(len(momentos), por_pagina, ratio=_ratio_capturas(momentos))
     return datos, layout, _fuentes_pdf(log)
 
@@ -573,6 +595,42 @@ def _pagina_del_paso(numero: int, n_indice: int, L: Layout) -> int:
 
 def _texto_derecha_indice(e: _EntradaIndice, n_indice: int, L: Layout) -> str:
     return f"{e.tiempo} · pág. {_pagina_del_paso(e.numero, n_indice, L)}"
+
+
+@dataclass
+class _Segmento:
+    """Un segmento del anexo de transcripción ya medido (alto en pt del párrafo de texto)."""
+
+    tiempo: str
+    texto: str
+    alto: float
+
+
+def _estilo_transcripcion(F: dict) -> ParagraphStyle:
+    return _estilo(F, PT_TRANSCRIPCION, color=COLOR_TEXTO)
+
+
+def _ancho_texto_transcripcion(L: Layout) -> float:
+    return (L.util_w_cm - TRANSCRIPCION_COL_CM) * cm
+
+
+def _paginar_transcripcion(D: _Datos, L: Layout, F: dict) -> list[list[_Segmento]]:
+    """Reparte los segmentos en páginas (la primera lleva el título); mismas páginas en docx y pdf."""
+    if not D.transcripcion:
+        return []
+    estilo = _estilo_transcripcion(F)
+    ancho = _ancho_texto_transcripcion(L)
+    disponible = (L.pag_h_cm - 2 * MARGEN_CM - CABECERA_CM - SEGURIDAD_CM) * cm
+    paginas: list[list[_Segmento]] = [[]]
+    usado = ALTO_TITULO_INDICE_PT
+    for tiempo, texto in D.transcripcion:
+        alto = max(_alto_parrafo(texto, estilo, ancho, F), estilo.leading)
+        if paginas[-1] and usado + alto + ESPACIO_SEGMENTO_PT > disponible:
+            paginas.append([])
+            usado = 0.0
+        paginas[-1].append(_Segmento(tiempo=tiempo, texto=texto, alto=alto))
+        usado += alto + ESPACIO_SEGMENTO_PT
+    return paginas
 
 
 def contar_paginas_indice(momentos: list, por_pagina="auto") -> int:
@@ -883,16 +941,39 @@ def _pagina_contenido_docx(doc, pagina: list, k: int, D: _Datos, L: Layout, F: d
                 _celda_momento_docx(celda, pagina[idx], ini + idx, L, F, log, avisos)
 
 
+def _transcripcion_docx(doc, D: _Datos, L: Layout, F: dict) -> None:
+    """Anexo con la transcripción: una página por grupo de ``_paginar_transcripcion`` (igual que el PDF)."""
+    paginas = _paginar_transcripcion(D, L, F)
+    n = len(paginas)
+    col = Cm(TRANSCRIPCION_COL_CM)
+    for k, segmentos in enumerate(paginas):
+        _cabecera_docx(doc, L, D.titulo, "Transcripción" if n == 1 else f"Transcripción ({k + 1} de {n})")
+        if k == 0:
+            p = _parrafo(doc.add_paragraph(), linea_pt=PT_TRANSCRIPCION_TITULO * INTERLINEADO,
+                         despues=ALTO_TITULO_INDICE_PT - PT_TRANSCRIPCION_TITULO * INTERLINEADO)
+            _run(p, "Transcripción del audio", PT_TRANSCRIPCION_TITULO, negrita=True, color=COLOR_TITULO)
+        for s in segmentos:
+            p = _parrafo(doc.add_paragraph(), linea_pt=PT_TRANSCRIPCION * INTERLINEADO, despues=ESPACIO_SEGMENTO_PT)
+            p.paragraph_format.left_indent = col
+            p.paragraph_format.first_line_indent = -col
+            p.paragraph_format.tab_stops.add_tab_stop(col, WD_TAB_ALIGNMENT.LEFT)
+            _run(p, s.tiempo + "\t", PT_TRANSCRIPCION, color=COLOR_GRIS)
+            _run(p, s.texto, PT_TRANSCRIPCION, color=COLOR_TEXTO)
+
+
 def generar_docx(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                  resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                  modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
+                 transcripcion: list | None = None,
                  log: Callable[[str], None] = print, avisos: list | None = None) -> Path:
     """Escribe ``<carpeta_salida>/<nombre_video>.docx`` y devuelve su ruta.  ``momentos`` vacío -> ValueError.
 
     Si se pasa ``avisos`` (lista), se le añaden los recortes de texto que hubo que hacer (uno por paso).
+    ``transcripcion`` (``[{"inicio": s, "fin": s, "texto": str}]``) se añade como anexo al final.
     """
     avisos = avisos if avisos is not None else []
-    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log)
+    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log,
+                        transcripcion=transcripcion)
     doc = Document()
     _configurar_docx(doc, D, L)
     _portada_docx(doc, D, L)
@@ -900,6 +981,7 @@ def generar_docx(nombre_video: str, momentos: list, carpeta_salida: Path, *, tit
         _indice_docx(doc, D, L, _paginar_indice(_entradas_indice(D.momentos, L, F), L))
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
         _pagina_contenido_docx(doc, pagina, k, D, L, F, log, avisos)
+    _transcripcion_docx(doc, D, L, F)
     # Word exige un párrafo tras la última tabla; de 1 pt para que no genere una página más
     fin = _parrafo(doc.add_paragraph(), linea_pt=1)
     _run(fin, "", 1)
@@ -1068,18 +1150,46 @@ def _pagina_contenido_pdf(c, pagina: list, k: int, num_pagina: int, total: int, 
         _celda_pdf(c, m, ini + idx, x0, y1, L, F, log, avisos)
 
 
+def _pagina_transcripcion_pdf(c, segmentos: list, k: int, n: int, num_pagina: int, total: int, D: _Datos,
+                              L: Layout, F: dict) -> None:
+    W, H = L.pag_w_cm * cm, L.pag_h_cm * cm
+    mg = MARGEN_CM * cm
+    etiqueta = "Transcripción" if n == 1 else f"Transcripción ({k + 1} de {n})"
+    _cabecera_pdf(c, L, F, D.titulo, f"{etiqueta} · Página {num_pagina} de {total}")
+    y = H - mg - CABECERA_CM * cm
+    if k == 0:
+        c.setFont(F["negrita"], PT_TRANSCRIPCION_TITULO)
+        c.setFillColor(colors.HexColor(COLOR_TITULO))
+        c.drawString(mg, y - PT_TRANSCRIPCION_TITULO * INTERLINEADO + 4, _plano("Transcripción del audio", F))
+        y -= ALTO_TITULO_INDICE_PT
+    estilo = _estilo_transcripcion(F)
+    ancho = _ancho_texto_transcripcion(L)
+    for s in segmentos:
+        parrafo = Paragraph(_txt(s.texto, F), estilo)
+        _w, h = parrafo.wrap(ancho, 100_000)
+        c.setFont(F["regular"], PT_TRANSCRIPCION)
+        c.setFillColor(colors.HexColor(COLOR_GRIS))
+        c.drawString(mg, y - estilo.leading + 3, _plano(s.tiempo, F))
+        parrafo.drawOn(c, mg + TRANSCRIPCION_COL_CM * cm, y - h)
+        y -= max(h, s.alto) + ESPACIO_SEGMENTO_PT
+
+
 def generar_pdf(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                 resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                 modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
+                transcripcion: list | None = None,
                 log: Callable[[str], None] = print, avisos: list | None = None) -> Path:
     """Escribe ``<carpeta_salida>/<nombre_video>.pdf`` y devuelve su ruta.  ``momentos`` vacío -> ValueError.
 
     Si se pasa ``avisos`` (lista), se le añaden los recortes de texto que hubo que hacer (uno por paso).
+    ``transcripcion`` (``[{"inicio": s, "fin": s, "texto": str}]``) se añade como anexo al final.
     """
     avisos = avisos if avisos is not None else []
-    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log)
+    D, L, F = _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo, por_pagina, log,
+                        transcripcion=transcripcion)
     paginas_indice = _paginar_indice(_entradas_indice(D.momentos, L, F), L) if incluir_indice else []
-    total = 1 + len(paginas_indice) + L.paginas_contenido
+    paginas_transcripcion = _paginar_transcripcion(D, L, F)
+    total = 1 + len(paginas_indice) + L.paginas_contenido + len(paginas_transcripcion)
     ruta = Path(carpeta_salida) / f"{_nombre_archivo_seguro(nombre_video)}.pdf"
     ruta.parent.mkdir(parents=True, exist_ok=True)
     c = rl_canvas.Canvas(str(ruta), pagesize=(L.pag_w_cm * cm, L.pag_h_cm * cm))
@@ -1095,6 +1205,10 @@ def generar_pdf(nombre_video: str, momentos: list, carpeta_salida: Path, *, titu
         numero += 1
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
         _pagina_contenido_pdf(c, pagina, k, numero, total, D, L, F, log, avisos)
+        c.showPage()
+        numero += 1
+    for k, segmentos in enumerate(paginas_transcripcion):
+        _pagina_transcripcion_pdf(c, segmentos, k, len(paginas_transcripcion), numero, total, D, L, F)
         c.showPage()
         numero += 1
     c.save()
@@ -1115,6 +1229,7 @@ def contar_paginas_pdf(ruta: Path) -> int:
 def generar_documentos(nombre_video: str, momentos: list, carpeta_salida: Path, *, titulo: str | None = None,
                        resumen: str | None = None, fecha: str | None = None, duracion: float | None = None,
                        modo: str = "", modelo: str = "", por_pagina="auto", incluir_indice: bool = True,
+                       transcripcion: list | None = None,
                        log: Callable[[str], None] = print, avisos: list | None = None) -> tuple[Path, Path, int]:
     """Genera ``<carpeta>/<nombre_video>.docx`` y ``.pdf``; devuelve ``(docx, pdf, paginas_pdf)``.
 
@@ -1127,7 +1242,7 @@ def generar_documentos(nombre_video: str, momentos: list, carpeta_salida: Path, 
     if not momentos:
         raise ValueError("no hay momentos: no se puede generar el documento")
     comunes = dict(titulo=titulo, resumen=resumen, fecha=fecha, duracion=duracion, modo=modo, modelo=modelo,
-                   por_pagina=por_pagina, incluir_indice=incluir_indice, log=log)
+                   por_pagina=por_pagina, incluir_indice=incluir_indice, transcripcion=transcripcion, log=log)
     L = calcular_layout(len(momentos), por_pagina, ratio=_ratio_capturas(momentos))
     log(f"  documentos: {len(momentos)} pasos, {L.por_pagina} por página ({L.descripcion}"
         f"{'; capturas verticales' if L.vertical else ''})")

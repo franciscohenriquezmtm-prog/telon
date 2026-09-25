@@ -26,6 +26,13 @@ _TRAZO_FRAC = 0.006                # grosor del trazo: 0.6 % del ancho (mínimo 
 _FLECHA_FRAC = 0.18                # longitud de la flecha: ~18 % del ancho
 _LADO_MINIMO_CAJA = 0.005          # con los dos lados por debajo, la caja es un punto: círculo con flecha
 _ESTILOS = ("circulo", "flecha")
+# Lupa: recuadro en la esquina más lejana con la zona señalada ampliada a resolución completa, para que los
+# iconos y textos pequeños (un candado, un valor en pantalla) se lean en el manual.  Medidas relativas al lado
+# menor de la captura: se recorta un cuadrado de LUPA_RECORTE_FRAC y se muestra a LUPA_TAMANO_FRAC (x2,5).
+LUPA_RECORTE_FRAC = 0.18
+LUPA_TAMANO_FRAC = 0.45
+_LUPA_MARGEN_FRAC = 0.02           # separación del recuadro con los bordes de la captura
+_LUPA_CAJA_MAXIMA = 0.30           # una caja más ancha que esto (del lado menor) ya se ve: sin lupa
 
 
 def _numero(valor) -> float | None:
@@ -94,9 +101,70 @@ def _dibujar_flecha(dibujo: ImageDraw.ImageDraw, origen: tuple[float, float], pu
             dibujo.polygon(triangulo, fill=color)
 
 
+def _rect_lupa(px: float, py: float, ancho: int, alto: int) -> tuple[int, int, int, int]:
+    """Rectángulo (x1, y1, x2, y2) del recuadro de la lupa, en la esquina más lejana del punto señalado."""
+    base = min(ancho, alto)
+    lado = int(round(LUPA_TAMANO_FRAC * base))
+    margen = int(round(_LUPA_MARGEN_FRAC * base))
+    ex, ey = _esquina_mas_lejana(px, py, ancho, alto)
+    x1 = margen if ex == 0 else ancho - margen - lado
+    y1 = margen if ey == 0 else alto - margen - lado
+    return x1, y1, x1 + lado, y1 + lado
+
+
+def _recorte_lupa(cx: float, cy: float, ancho: int, alto: int, lado: float) -> tuple[int, int, int, int]:
+    """Cuadrado de ``lado`` centrado en (cx, cy) y desplazado para no salirse de la captura."""
+    lado = int(round(min(lado, ancho, alto)))
+    x1 = int(round(min(max(cx - lado / 2, 0), ancho - lado)))
+    y1 = int(round(min(max(cy - lado / 2, 0), alto - lado)))
+    return x1, y1, x1 + lado, y1 + lado
+
+
+def _pegar_lupa(imagen: Image.Image, recorte: tuple[int, int, int, int], rect: tuple[int, int, int, int],
+                marca: tuple[float, float] | None) -> None:
+    """Pega en ``rect`` la zona ``recorte`` ampliada (sobre ``imagen``, en su sitio) con borde blanco y rojo.
+
+    ``marca`` (x, y en píxeles de la captura) dibuja dentro de la lupa un círculo fino sobre el punto señalado.
+    """
+    x1, y1, x2, y2 = rect
+    lado = x2 - x1
+    ampliada = imagen.crop(recorte).resize((lado, lado), Image.LANCZOS)
+    dibujo = ImageDraw.Draw(ampliada)
+    if marca is not None:
+        escala = lado / (recorte[2] - recorte[0])
+        mx, my = (marca[0] - recorte[0]) * escala, (marca[1] - recorte[1]) * escala
+        r = 0.22 * lado
+        grosor = max(2, int(round(lado * 0.012)))
+        dibujo.ellipse([mx - r - grosor, my - r - grosor, mx + r + grosor, my + r + grosor],
+                       outline=COLOR_HALO, width=grosor * 3)
+        dibujo.ellipse([mx - r, my - r, mx + r, my + r], outline=COLOR_MARCA, width=grosor)
+    imagen.paste(ampliada.convert("RGBA"), (x1, y1))
+    borde = max(3, int(round(lado * 0.02)))
+    marco = ImageDraw.Draw(imagen)
+    marco.rectangle([x1 - borde, y1 - borde, x2 + borde - 1, y2 + borde - 1], outline=COLOR_HALO, width=borde)
+    marco.rectangle([x1 - 1, y1 - 1, x2, y2], outline=COLOR_MARCA, width=max(2, borde // 2))
+
+
+def _borde_hacia(rect: tuple[int, int, int, int], destino: tuple[float, float]) -> tuple[float, float]:
+    """Punto del borde de ``rect`` por donde sale la recta desde su centro hacia ``destino``."""
+    x1, y1, x2, y2 = rect
+    cx, cy = (x1 + x2) / 2, (y1 + y2) / 2
+    dx, dy = destino[0] - cx, destino[1] - cy
+    if abs(dx) < 1e-6 and abs(dy) < 1e-6:
+        return cx, cy
+    tx = (x2 - cx) / abs(dx) if dx else math.inf
+    ty = (y2 - cy) / abs(dy) if dy else math.inf
+    t = min(tx, ty)
+    return cx + dx * t, cy + dy * t
+
+
 def _dibujar_punto(dibujo: ImageDraw.ImageDraw, x: float, y: float, ancho: int, alto: int,
-                   trazo: float, halo: float, estilo: str) -> None:
-    """Círculo con halo (salvo estilo 'flecha') y flecha corta desde la esquina más lejana."""
+                   trazo: float, halo: float, estilo: str,
+                   origen_flecha: tuple[float, float] | None = None) -> None:
+    """Círculo con halo (salvo estilo 'flecha') y flecha corta desde la esquina más lejana.
+
+    Con ``origen_flecha`` (píxeles), la flecha sale de ese punto (el borde de la lupa) en vez de la esquina.
+    """
     radio = _RADIO_FRAC * ancho
     if estilo == "flecha":
         radio = trazo  # la flecha apunta casi al punto exacto
@@ -106,12 +174,17 @@ def _dibujar_punto(dibujo: ImageDraw.ImageDraw, x: float, y: float, ancho: int, 
         for color, ancho_linea, extra in ((COLOR_HALO, trazo + 2 * halo, halo), (COLOR_MARCA, trazo, 0.0)):
             r = radio + extra
             dibujo.ellipse([x - r, y - r, x + r, y + r], outline=color, width=int(round(ancho_linea)))
-    ex, ey = _esquina_mas_lejana(x, y, ancho, alto)
+    ex, ey = origen_flecha if origen_flecha is not None else _esquina_mas_lejana(x, y, ancho, alto)
     dist = math.hypot(ex - x, ey - y) or 1.0
     ux, uy = (ex - x) / dist, (ey - y) / dist
-    largo = _FLECHA_FRAC * ancho
     punta = (x + ux * (radio + halo + trazo), y + uy * (radio + halo + trazo))
-    origen = (punta[0] + ux * largo, punta[1] + uy * largo)
+    if origen_flecha is not None:
+        origen = (ex - ux * halo, ey - uy * halo)
+        if math.hypot(origen[0] - punta[0], origen[1] - punta[1]) < 2 * trazo:
+            return
+    else:
+        largo = _FLECHA_FRAC * ancho
+        origen = (punta[0] + ux * largo, punta[1] + uy * largo)
     _dibujar_flecha(dibujo, origen, punta, trazo, halo)
 
 
@@ -137,9 +210,14 @@ def _dibujar_caja(dibujo: ImageDraw.ImageDraw, caja: tuple[float, float, float, 
                                  outline=color, width=int(round(ancho_linea)))
 
 
-def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "circulo", *,
+def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "circulo", *, lupa: bool = True,
                    log: Callable[[str], None] | None = None) -> Path | None:
     """Dibuja la zona señalada sobre la captura y guarda el resultado en ``destino`` (JPEG, calidad 90).
+
+    Con ``lupa`` (por defecto) se añade en la esquina más lejana un recuadro con la zona señalada ampliada x2,5
+    a partir de la captura a resolución completa, y la flecha sale de ese recuadro hacia el punto: así un icono
+    o un valor de pantalla pequeño se lee en el manual.  Una caja ancha (más de ``_LUPA_CAJA_MAXIMA`` del lado
+    menor) no lleva lupa: ya se ve.
 
     ``zona`` es ``{"x": 0-1, "y": 0-1}`` (círculo rojo-naranja con halo blanco y una flecha
     corta que llega desde la esquina más lejana; con ``estilo="flecha"`` solo la flecha) o
@@ -167,6 +245,21 @@ def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "cir
     except (OSError, ValueError):
         return None
     ancho, alto = imagen.size
+    base = min(ancho, alto)
+    origen_flecha = None
+    if lupa:
+        if punto is not None:
+            px, py = punto[0] * ancho, punto[1] * alto
+            rect = _rect_lupa(px, py, ancho, alto)
+            recorte = _recorte_lupa(px, py, ancho, alto, LUPA_RECORTE_FRAC * base)
+            _pegar_lupa(imagen, recorte, rect, (px, py))
+            origen_flecha = _borde_hacia(rect, (px, py))
+        elif max((caja[2] - caja[0]) * ancho, (caja[3] - caja[1]) * alto) <= _LUPA_CAJA_MAXIMA * base:
+            cx, cy = (caja[0] + caja[2]) / 2 * ancho, (caja[1] + caja[3]) / 2 * alto
+            lado_caja = max((caja[2] - caja[0]) * ancho, (caja[3] - caja[1]) * alto)
+            rect = _rect_lupa(cx, cy, ancho, alto)
+            recorte = _recorte_lupa(cx, cy, ancho, alto, max(LUPA_RECORTE_FRAC * base, lado_caja * 1.3))
+            _pegar_lupa(imagen, recorte, rect, None)
     S = _SUPERMUESTREO
     capa = Image.new("RGBA", (ancho * S, alto * S), (0, 0, 0, 0))
     dibujo = ImageDraw.Draw(capa)
@@ -174,7 +267,8 @@ def anotar_captura(ruta_jpg: Path, zona: dict, destino: Path, estilo: str = "cir
     halo = max(trazo * 0.6, 2.0 * S)   # borde blanco a cada lado del trazo
     if punto is not None:
         _dibujar_punto(dibujo, punto[0] * ancho * S, punto[1] * alto * S, ancho * S, alto * S,
-                       trazo, halo, estilo)
+                       trazo, halo, estilo,
+                       None if origen_flecha is None else (origen_flecha[0] * S, origen_flecha[1] * S))
     else:
         _dibujar_caja(dibujo, caja, ancho * S, alto * S, trazo, halo)
     capa = capa.resize((ancho, alto), Image.LANCZOS)

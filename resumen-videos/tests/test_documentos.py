@@ -557,3 +557,53 @@ def test_log_recibe_progreso(tmp_path):
     _generar(tmp_path, momentos, log=mensajes.append)
     assert any("docx" in m for m in mensajes) and any("pdf" in m for m in mensajes)
     assert any("A4 vertical 1x1" in m for m in mensajes)
+
+
+# ----------------------------------------------------------------------------- anexo de transcripción
+def _transcripcion(n: int) -> list:
+    return [{"inicio": 3.0 + 7.5 * i, "fin": 9.0 + 7.5 * i,
+             "texto": f"Segmento {i + 1}: acá se ve la palanca de bloqueo con el candado; se destraba para mover "
+                      "el arco hacia adelante y hacia atrás, y se vuelve a fijar antes de disparar."}
+            for i in range(n)]
+
+
+def test_transcripcion_va_como_anexo_al_final(tmp_path):
+    momentos = _momentos(3, tmp_path / "cap")
+    docx, pdf, paginas = _generar(tmp_path, momentos, transcripcion=_transcripcion(4))
+    assert paginas == _paginas_esperadas(momentos) + 1
+    textos = _texto_pdf(pdf)
+    assert "Transcripción del audio" in textos[-1] and "Segmento 4" in textos[-1] and "00:03" in textos[-1]
+    assert "Transcripción" not in textos[0]
+    parrafos = [p.text for p in Document(str(docx)).paragraphs]
+    assert any("Transcripción del audio" in p for p in parrafos)
+    assert any(p.startswith("00:03\t") and "Segmento 1" in p for p in parrafos)
+
+
+def test_transcripcion_larga_ocupa_varias_paginas_iguales_en_docx_y_pdf(tmp_path):
+    momentos = _momentos(2, tmp_path / "cap")
+    docx, pdf, paginas = _generar(tmp_path, momentos, transcripcion=_transcripcion(120))
+    extra = paginas - _paginas_esperadas(momentos)
+    assert extra >= 3
+    textos = _texto_pdf(pdf)
+    assert f"Transcripción (1 de {extra})" in textos[-extra] and f"Transcripción ({extra} de {extra})" in textos[-1]
+    assert "Segmento 120" in textos[-1]
+    parrafos = [p.text for p in Document(str(docx)).paragraphs]
+    assert sum(1 for p in parrafos if "\tTranscripción (" in p) == extra   # una cabecera por página
+
+
+def test_transcripcion_vacia_o_rara_no_cambia_el_documento(tmp_path):
+    momentos = _momentos(2, tmp_path / "cap")
+    base = _paginas_esperadas(momentos)
+    for transcripcion in (None, [], [{"texto": "sin tiempo"}, "x", {"inicio": True, "texto": "bool"},
+                                     {"inicio": 2.0, "texto": "   "}]):
+        _docx, _pdf, paginas = _generar(tmp_path, momentos, transcripcion=transcripcion)
+        assert paginas == base
+
+
+def test_transcripcion_se_ordena_y_limpia_controles(tmp_path):
+    momentos = _momentos(2, tmp_path / "cap")
+    transcripcion = [{"inicio": 65.0, "texto": "segundo\x07 segmento"}, {"inicio": 4.0, "texto": "primero"}]
+    _docx, pdf, _paginas = _generar(tmp_path, momentos, transcripcion=transcripcion)
+    ultima = _texto_pdf(pdf)[-1]
+    assert ultima.index("primero") < ultima.index("segundo segmento") and "\x07" not in ultima
+    assert "00:04" in ultima and "01:05" in ultima

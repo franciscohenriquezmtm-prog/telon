@@ -97,6 +97,8 @@ class Opciones:
     por_pagina: "str | int" = "auto"
     incluir_indice: bool = True
     anotar: bool = True
+    lupa: bool = True                                   # recuadro con la zona señalada ampliada en cada captura anotada
+    transcribir: bool = config.TRANSCRIBIR              # transcripción literal del audio con tiempos (Gemini)
     tramo_min: int = config.TRAMO_MAX_MIN
     forzar: bool = False
     solo: Optional[list] = None
@@ -443,7 +445,7 @@ def _info_minima(ruta: Path) -> InfoVideo:
 # Capturas y anotaciones
 # ----------------------------------------------------------------------------
 def capturar_momentos(info: InfoVideo, momentos: list, carpeta: Path, ffmpeg: str, *, anotar: bool = True,
-                      log: Callable[[str], None] = print) -> None:
+                      lupa: bool = True, log: Callable[[str], None] = print) -> None:
     """Extrae ``capturas/NN_mm-ss.jpg`` (el fotograma más nítido cerca del tiempo) y, si hay zona, la anotada.
 
     Rellena ``ruta_captura``, ``tiempo_real_seg`` y ``ruta_captura_anotada`` de cada momento.  Las
@@ -470,11 +472,13 @@ def capturar_momentos(info: InfoVideo, momentos: list, carpeta: Path, ffmpeg: st
             log(f"  {n}/{total} capturas")
     log(f"Capturas: {total - fallidas} extraídas, {fallidas} fallidas")
     if anotar:
-        anotar_momentos(momentos, log=log)
+        anotar_momentos(momentos, lupa=lupa, log=log)
 
 
-def anotar_momentos(momentos: list, *, log: Callable[[str], None] = print) -> int:
-    """Dibuja la zona señalada sobre las capturas ya extraídas (``NN_mm-ss_anotada.jpg``); devuelve cuántas."""
+def anotar_momentos(momentos: list, *, lupa: bool = True, log: Callable[[str], None] = print) -> int:
+    """Dibuja la zona señalada sobre las capturas ya extraídas (``NN_mm-ss_anotada.jpg``); devuelve cuántas.
+
+    Con ``lupa`` cada captura anotada lleva además un recuadro con la zona señalada ampliada."""
     anotadas = 0
     for momento in momentos:
         momento.ruta_captura_anotada = None
@@ -482,7 +486,7 @@ def anotar_momentos(momentos: list, *, log: Callable[[str], None] = print) -> in
             continue
         origen = Path(momento.ruta_captura)
         destino = origen.with_name(origen.stem + "_anotada.jpg")
-        if anotar_captura(origen, momento.zona, destino, log=log) is not None:
+        if anotar_captura(origen, momento.zona, destino, lupa=lupa, log=log) is not None:
             momento.ruta_captura_anotada = str(destino)
             anotadas += 1
     log(f"Anotaciones: {anotadas} capturas con círculo/flecha.")
@@ -592,15 +596,41 @@ def _analizar_con_gemini(info: InfoVideo, op: Opciones, cliente, ffmpeg: str,
     precios = precios_de(op)
     archivo = _subir(info, op, cliente, ffmpeg, log)
     try:
-        return gemini.analizar_video(
+        analisis = gemini.analizar_video(
             cliente, archivo, info, modelo=op.modelo, fps=op.fps, tramo_max_seg=op.tramo_min * 60,
             precios=precios, equipo=op.equipo, resolucion=op.resolucion, max_momentos=op.max_momentos,
             importancia_minima=op.importancia_minima, temperatura=op.temperatura, log=log)
+        if op.transcribir:
+            analisis = _transcribir(cliente, archivo, info, analisis, op, log)
+        return analisis
     finally:
         if op.conservar_subida:
             log(f"Archivo remoto conservado (--conservar-subida): {archivo.name}")
         else:
             gemini.eliminar_archivo(cliente, archivo, log=log)
+
+
+def _transcribir(cliente, archivo, info: InfoVideo, analisis: ResultadoAnalisis, op: Opciones,
+                 log: Callable[[str], None]) -> ResultadoAnalisis:
+    """Transcripción literal del audio con el archivo ya subido; un fallo deja un aviso y no tira el análisis."""
+    modelo = _modelo_refinado(analisis, op)
+    try:
+        segmentos, uso = gemini.transcribir_video(cliente, archivo, info, modelo, precios_de(op), equipo=op.equipo,
+                                                  tramo_max_seg=op.tramo_min * 60, temperatura=op.temperatura, log=log)
+    except Exception as exc:  # noqa: BLE001 - opcional: nunca debe tirar un análisis ya pagado
+        log(f"Aviso: la transcripción falló y el manual sale sin ella ({exc}).")
+        analisis.avisos.append(f"Transcripción omitida: {exc}")
+        uso_fallido = getattr(exc, "uso", None)
+        if isinstance(uso_fallido, Uso) and uso_fallido.llamadas:     # lo pagado se contabiliza igual
+            etiqueta = analisis.uso.modelo if analisis.uso is not None else uso_fallido.modelo
+            analisis.uso = _acumular(analisis.uso, uso_fallido)
+            analisis.uso.modelo = etiqueta
+        return analisis
+    analisis.transcripcion = segmentos
+    etiqueta = analisis.uso.modelo if analisis.uso is not None else uso.modelo
+    analisis.uso = _acumular(analisis.uso, uso)
+    analisis.uso.modelo = etiqueta          # la etiqueta del análisis manda (la transcripción no la cambia)
+    return analisis
 
 
 def _analizar(info: InfoVideo, op: Opciones, cliente, ffmpeg: str, log: Callable[[str], None]) -> ResultadoAnalisis:
@@ -688,11 +718,11 @@ def _finalizar_video(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis
     elif con_api and op.refinar and analisis.modo.startswith("gemini"):
         log("Refinado con capturas omitido: no hay cliente de Gemini (sin clave).")
     if op.anotar:
-        anotar_momentos(analisis.momentos, log=log)
+        anotar_momentos(analisis.momentos, lupa=op.lupa, log=log)
     docx, pdf, paginas = documentos.generar_documentos(
         info.nombre, analisis.momentos, carpeta, titulo=analisis.titulo, resumen=analisis.resumen,
         duracion=info.duracion, modo=analisis.modo, modelo=analisis.modelo, por_pagina=op.por_pagina,
-        incluir_indice=op.incluir_indice, log=log)
+        incluir_indice=op.incluir_indice, transcripcion=analisis.transcripcion, log=log)
     guardar(analisis, documentos={"docx": docx.name, "pdf": pdf.name, "paginas": paginas})
     (Path(carpeta) / config.NOMBRE_ERROR).unlink(missing_ok=True)   # un error de una ejecución anterior ya no aplica
     return analisis, docx, pdf, paginas, acumulado_de(analisis)

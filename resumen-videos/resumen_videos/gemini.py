@@ -125,6 +125,18 @@ PROMPT_REFINADO_SIN_ESQUEMA = (
 #: Texto que precede a cada imagen en el refinado (``tiempo`` = instante real del fotograma elegido).
 PROMPT_CAPTURA = "Captura del paso {numero} ({tiempo})"
 
+#: Transcripción literal del audio con tiempos (segunda llamada, con el video ya subido).
+PROMPT_TRANSCRIPCION = """\
+Eres un transcriptor profesional de audio clínico en español. Vas a escuchar un video de capacitación sobre {equipo}.
+
+Transcribe LITERALMENTE todo lo que se dice, sin resumir, sin corregir el estilo y sin añadir nada. Divide el texto en segmentos cortos (una o dos frases, como máximo unos 15 segundos cada uno) con su tiempo de inicio y fin en formato mm:ss contado desde el inicio del video (nunca hh:mm:ss). Conserva tal cual los nombres de botones, menús, valores y unidades que se pronuncien. Si una palabra no se entiende, escribe [inaudible]; si hablan varias personas, no hace falta identificarlas. No transcribas los textos que solo aparecen en pantalla, únicamente lo que se oye. Si nadie habla, devuelve la lista vacía. Responde únicamente con el JSON pedido.
+"""
+PROMPT_TRANSCRIPCION_USUARIO = "Transcribe el audio de este video con los tiempos de cada segmento."
+PROMPT_TRANSCRIPCION_SIN_ESQUEMA = (
+    'Devuelve solo un objeto JSON {"segmentos": [{"inicio": "mm:ss", "fin": "mm:ss", "texto": "..."}]}, '
+    "sin texto adicional ni marcas de código."
+)
+
 #: Sub-esquema de la zona señalada (punto 0-1000), compartido por los dos esquemas.
 ESQUEMA_ZONA: dict = {
     "type": "object",
@@ -183,6 +195,26 @@ ESQUEMA_REFINADO: dict = {
     "required": ["momentos"],
 }
 
+#: JSON Schema de la transcripción (segmentos con tiempos mm:ss).
+ESQUEMA_TRANSCRIPCION: dict = {
+    "type": "object",
+    "properties": {
+        "segmentos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "inicio": {"type": "string", "description": "mm:ss"},
+                    "fin": {"type": "string", "description": "mm:ss"},
+                    "texto": {"type": "string"},
+                },
+                "required": ["inicio", "fin", "texto"],
+            },
+        },
+    },
+    "required": ["segmentos"],
+}
+
 #: Resolución con la que Gemini mira el video, por nombre (``--resolucion baja|media|alta``).
 RESOLUCIONES = {
     "baja": types.MediaResolution.MEDIA_RESOLUTION_LOW,
@@ -215,6 +247,10 @@ def construir_prompt_refinado(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
     """Instrucción de sistema del refinado con el equipo insertado."""
     texto = (equipo or "").strip() or config.EQUIPO_POR_DEFECTO
     return PROMPT_REFINADO.replace("{equipo}", texto)
+
+
+def construir_prompt_transcripcion(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
+    return PROMPT_TRANSCRIPCION.format(equipo=equipo)
 
 
 def construir_prompt_usuario(tramo: tuple[float, float] | None = None) -> str:
@@ -1074,6 +1110,78 @@ def analizar_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODEL
                                         max_momentos=max_momentos, importancia_minima=importancia_minima)
     log(f"Análisis terminado: {len(resultado.momentos)} momentos.")
     return resultado
+
+
+# ----------------------------------------------------------------------------
+# 4.2b Transcripción literal del audio (con el mismo archivo subido)
+# ----------------------------------------------------------------------------
+
+def _segmentos_desde_bruto(datos, duracion: float, desplazamiento: float) -> list[dict]:
+    """Normaliza la respuesta de la transcripción: lista de ``{"inicio", "fin", "texto"}`` en segundos."""
+    if isinstance(datos, dict):
+        brutos = datos.get("segmentos") or datos.get("transcripcion") or []
+    else:
+        brutos = datos or []
+    segmentos: list[dict] = []
+    for bruto in brutos if isinstance(brutos, list) else []:
+        if not isinstance(bruto, dict):
+            continue
+        texto = " ".join(str(bruto.get("texto") or "").split())
+        inicio = parsear_tiempo(bruto.get("inicio"))
+        if not texto or inicio is None:
+            continue
+        fin = parsear_tiempo(bruto.get("fin"))
+        inicio = min(inicio + desplazamiento, duracion)
+        fin = inicio if fin is None else min(max(fin + desplazamiento, inicio), duracion)
+        segmentos.append({"inicio": round(inicio, 2), "fin": round(fin, 2), "texto": texto})
+    segmentos.sort(key=lambda s: s["inicio"])
+    return segmentos
+
+
+def transcribir_video(cliente, archivo, info: InfoVideo, modelo: str = config.MODELO_POR_DEFECTO,
+                      precios: dict | None = None, equipo: str = config.EQUIPO_POR_DEFECTO, *,
+                      tramo_max_seg: float = config.TRAMO_MAX_MIN * 60, temperatura: float | None = config.TEMPERATURA,
+                      log: Callable[[str], None] = print) -> tuple[list[dict], Uso]:
+    """Transcripción literal con tiempos del audio del video ya subido; ``(segmentos, uso)``.
+
+    Se mira el video a resolución "baja" (solo interesa el audio: cuesta una fracción del análisis).  Los videos
+    largos se transcriben por tramos como en ``analizar_video``.  Ante una respuesta sin JSON lanza
+    ``RuntimeError`` con ``.uso`` (lo pagado); quien llama decide si es un fallo grave (en el pipeline no lo es).
+    """
+    modelos = [modelo] + [m for m in config.MODELOS_ALTERNATIVOS if m != modelo]
+    prompt_sistema = construir_prompt_transcripcion(equipo)
+    tramos = calcular_tramos(info.duracion, tramo_max_seg)
+    avisos: list[str] = []
+    segmentos: list[dict] = []
+    uso_total = Uso(modelo=modelo)
+    variante = _Variante(modelo=modelo, resolucion="baja", temperatura=temperatura,
+                         esquema_json=ESQUEMA_TRANSCRIPCION, prompt_sin_esquema=PROMPT_TRANSCRIPCION_SIN_ESQUEMA)
+    for k, (inicio, fin) in enumerate(tramos, start=1):
+        tramo = (inicio, fin) if len(tramos) > 1 else None
+        etiqueta = f" (tramo {k}/{len(tramos)})" if tramo else ""
+        log(f"Transcribiendo el audio de {info.nombre} con {variante.modelo}{etiqueta}…")
+        prompt_usuario = PROMPT_TRANSCRIPCION_USUARIO
+        if tramo is not None:
+            prompt_usuario += " " + PROMPT_TRAMO.format(inicio=formatear_tiempo(inicio), fin=formatear_tiempo(fin))
+        try:
+            datos, truncado, _texto, uso, variante = _generar_y_parsear(
+                cliente, modelos, prompt_sistema,
+                lambda sufijo, pu=prompt_usuario, tr=tramo: _construir_contenido(archivo, pu + sufijo, None, tr),
+                avisos, variante_inicial=variante, log=log)
+        except RuntimeError as exc:
+            if isinstance(getattr(exc, "uso", None), Uso):
+                uso_total.sumar(exc.uso)
+            exc.uso = uso_total
+            raise
+        uso_total.sumar(uso)
+        if truncado:
+            avisos.append(f"La transcripción del tramo {k} llegó cortada; se conserva lo rescatado.")
+        segmentos.extend(_segmentos_desde_bruto(datos, info.duracion, inicio if tramo is not None else 0.0))
+    uso_total.costo_usd = estimar_costo(uso_total, precios)
+    for aviso in avisos:
+        log("  aviso: " + aviso)
+    log(f"Transcripción: {len(segmentos)} segmentos, {uso_total.tokens_total} tokens.")
+    return segmentos, uso_total
 
 
 # ----------------------------------------------------------------------------

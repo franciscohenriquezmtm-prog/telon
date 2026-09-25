@@ -126,6 +126,8 @@ def crear_parser() -> argparse.ArgumentParser:
                    help="sube el archivo tal cual (si cabe en --max-subida-mb) en vez de la copia ligera")
     g.add_argument("--sin-refinado", action="store_true",
                    help="no hacer la segunda pasada con las capturas en alta resolución")
+    g.add_argument("--sin-transcripcion", action="store_true",
+                   help="no transcribir el audio (por defecto se añade la transcripción con tiempos como anexo)")
     g.add_argument("--tramo-min", type=int, default=config.TRAMO_MAX_MIN, metavar="N",
                    help="videos más largos que N minutos se analizan por tramos (por defecto %(default)s)")
     g.add_argument("--max-subida-mb", type=int, default=config.MAX_SUBIDA_MB, metavar="N",
@@ -181,6 +183,8 @@ def crear_parser() -> argparse.ArgumentParser:
                    help="capturas por página (por defecto auto: según la cantidad de pasos)")
     h.add_argument("--sin-indice", action="store_true", help="no incluir el índice de pasos por sección")
     h.add_argument("--sin-anotaciones", action="store_true", help="no dibujar círculo/flecha en las capturas")
+    h.add_argument("--sin-lupa", action="store_true",
+                   help="no añadir en cada captura anotada el recuadro con la zona señalada ampliada")
     return p
 
 
@@ -209,7 +213,9 @@ def opciones_desde_args(args: argparse.Namespace) -> pipeline.Opciones:
         timeout_procesado=args.timeout_procesado, precio_entrada=args.precio_entrada, precio_salida=args.precio_salida,
         conservar_subida=args.conservar_subida, pausa=args.pausa, max_momentos=args.max_momentos,
         importancia_minima=args.importancia_minima, por_pagina=args.por_pagina, incluir_indice=not args.sin_indice,
-        anotar=not args.sin_anotaciones, tramo_min=args.tramo_min, forzar=args.forzar, solo=args.solo,
+        anotar=not args.sin_anotaciones, lupa=not args.sin_lupa,
+        transcribir=config.TRANSCRIBIR and not args.sin_transcripcion,
+        tramo_min=args.tramo_min, forzar=args.forzar, solo=args.solo,
         verbose=args.verbose)
 
 

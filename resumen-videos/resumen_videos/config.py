@@ -37,6 +37,9 @@ TEMPERATURA = None               # None = no se envía temperature (valor por de
                                  # no bajarla en los modelos Gemini 3 (valores bajos pueden degradar el razonamiento
                                  # y provocar respuestas cortadas por MAX_TOKENS).  --temperatura T para fijarla.
 FPS_POR_DEFECTO = None           # None = el muestreo por defecto de Gemini (1 fotograma/s)
+TRANSCRIBIR = True               # transcripción literal del audio con tiempos (segunda llamada barata, a
+                                 # resolución baja); --sin-transcripcion la desactiva.  Se guarda en momentos.json
+                                 # y va como anexo al final del manual.
 RESOLUCION_VIDEO = "media"       # resolución con la que Gemini mira el video: baja | media | alta.  Con textos e
                                  # iconos en pantalla conviene al menos "media"; "baja" solo para ahorrar cuando basta
                                  # reconocer la máquina.  Los tokens por segundo de video dependen de la familia del

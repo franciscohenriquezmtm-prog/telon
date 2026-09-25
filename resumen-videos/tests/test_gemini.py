@@ -1547,3 +1547,54 @@ class TestUsoYCosto:
         assert gemini.estimar_costo(Uso(modelo="x", tokens_entrada=1_000_000), {"x": {"entrada": 4.0, "salida": 1.0}}) == pytest.approx(4.0)
         # el Uso marcado como batch también aplica el descuento
         assert gemini.estimar_costo(Uso(modelo=MODELO, tokens_entrada=1_000_000, batch=True)) == pytest.approx(precio["entrada"] * 0.5)
+
+
+# ----------------------------------------------------------------------------
+# Transcripción literal del audio
+# ----------------------------------------------------------------------------
+class TestTranscripcion:
+    def test_prompt_y_esquema(self):
+        prompt = gemini.construir_prompt_transcripcion("arco en C")
+        assert "arco en C" in prompt and "LITERALMENTE" in prompt and "mm:ss" in prompt
+        assert "[inaudible]" in prompt
+        props = gemini.ESQUEMA_TRANSCRIPCION["properties"]["segmentos"]["items"]["properties"]
+        assert set(props) == {"inicio", "fin", "texto"}
+
+    def test_transcribir_devuelve_segmentos_en_segundos_y_suma_uso(self):
+        datos = json.dumps({"segmentos": [
+            {"inicio": "00:24", "fin": "00:30", "texto": "Acá tienen el freno de rotación."},
+            {"inicio": "00:01", "fin": "00:06", "texto": "  Esta es la palanca   de bloqueo. "},
+            {"inicio": "xx", "fin": "00:10", "texto": "sin tiempo válido"},
+            {"inicio": "00:40", "fin": "00:35", "texto": "fin antes del inicio"},
+        ]})
+        cliente = ClienteFalso([respuesta(datos, entrada=500, salida=80)])
+        segmentos, uso = gemini.transcribir_video(cliente, archivo_remoto(), info_video(90.0), MODELO,
+                                                  {"entrada": 1.0, "salida": 2.0}, log=lambda _: None)
+        assert [s["inicio"] for s in segmentos] == [1.0, 24.0, 40.0]
+        assert segmentos[0]["texto"] == "Esta es la palanca de bloqueo."
+        assert segmentos[2]["fin"] == 40.0            # fin < inicio se corrige
+        assert uso.llamadas == 1 and uso.tokens_entrada == 500 and uso.costo_usd is not None
+        cfg = cliente.generaciones()[0]["config"]
+        assert resolucion_en_wire(cfg) == gemini.RESOLUCIONES["baja"].value   # solo importa el audio
+        assert cfg.response_json_schema["properties"]["segmentos"]
+
+    def test_transcribir_por_tramos_desplaza_los_tiempos(self):
+        r1 = respuesta(json.dumps({"segmentos": [{"inicio": "00:10", "fin": "00:12", "texto": "uno"}]}))
+        r2 = respuesta(json.dumps({"segmentos": [{"inicio": "00:05", "fin": "00:07", "texto": "dos"}]}))
+        cliente = ClienteFalso([r1, r2])
+        segmentos, uso = gemini.transcribir_video(cliente, archivo_remoto(), info_video(1300.0), MODELO,
+                                                  tramo_max_seg=650.0, log=lambda _: None)
+        assert [(s["inicio"], s["texto"]) for s in segmentos] == [(10.0, "uno"), (655.0, "dos")]
+        assert uso.llamadas == 2
+
+    def test_transcribir_sin_json_propaga_con_uso(self):
+        cliente = ClienteFalso([respuesta("nada de JSON"), respuesta("tampoco")])
+        with pytest.raises(RuntimeError) as exc:
+            gemini.transcribir_video(cliente, archivo_remoto(), info_video(), MODELO, log=lambda _: None)
+        assert isinstance(exc.value.uso, Uso) and exc.value.uso.llamadas >= 1
+
+    def test_segmentos_desde_bruto_tolera_formas_raras(self):
+        assert gemini._segmentos_desde_bruto(None, 10.0, 0.0) == []
+        assert gemini._segmentos_desde_bruto({"segmentos": "x"}, 10.0, 0.0) == []
+        assert gemini._segmentos_desde_bruto([{"inicio": 3, "texto": "a"}, "b", {"texto": ""}], 10.0, 0.0) == [
+            {"inicio": 3.0, "fin": 3.0, "texto": "a"}]

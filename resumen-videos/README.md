@@ -25,7 +25,11 @@ usar el programa con doble clic (Windows y macOS).
 4. Extrae del **archivo original** el fotograma más nítido cerca de cada momento.
 5. Vuelve a enviar esas capturas en alta resolución para que el modelo corrija los
    textos con lo que ahora se lee en pantalla (refinado).
-6. Dibuja las anotaciones y genera el `.docx` y el `.pdf`.
+6. Transcribe literalmente el audio con tiempos (segunda llamada barata, a resolución
+   baja) y lo guarda en `momentos.json`; va como anexo al final del manual.
+7. Dibuja las anotaciones (círculo, flecha y una **lupa**: la zona señalada ampliada
+   x2,5 en un recuadro, para que los iconos y valores pequeños se lean) y genera el
+   `.docx` y el `.pdf`.
 
 ### Videos pesados de iPhone (.MOV HEVC)
 
@@ -148,8 +152,8 @@ a analizar. Los videos que fallan no detienen a los demás.
 |---|---|
 | `<video>.docx` | manual editable (Word): portada, índice por secciones, pasos con captura |
 | `<video>.pdf` | el mismo manual en PDF (misma paginación que el docx) |
-| `momentos.json` | el análisis completo: momentos, uso de tokens, avisos, rutas de las capturas |
-| `capturas\NN_mm-ss.jpg` | captura de cada paso; `..._anotada.jpg` si lleva círculo/flecha |
+| `momentos.json` | el análisis completo: momentos, transcripción con tiempos, uso de tokens, avisos, rutas de las capturas |
+| `capturas\NN_mm-ss.jpg` | captura de cada paso; `..._anotada.jpg` si lleva círculo/flecha (y lupa) |
 | `log.txt` | todo lo que se hizo, con hora (incluidos los avisos de maquetación) |
 | `error.txt` | solo si falló: mensaje claro y traza técnica |
 
@@ -182,6 +186,8 @@ a analizar. Los videos que fallan no detienen a los demás.
 | `--copia-alto 480\|720\|1080` | lado menor de la copia ligera que se sube (por defecto 720: 1280x720 en horizontal, 720x1280 en vertical) |
 | `--subir-original` | sube el archivo tal cual en vez de la copia ligera |
 | `--sin-refinado` | no hacer la segunda pasada con las capturas en alta |
+| `--sin-transcripcion` | no transcribir el audio (por defecto va como anexo con `mm:ss` por segmento) |
+| `--sin-lupa` | no añadir el recuadro con la zona señalada ampliada en las capturas anotadas |
 | `--redactor M` | segunda pasada solo de texto con un modelo más potente que pule la redacción |
 | `--temperatura T` | temperatura de muestreo del modelo (por defecto no se envía y vale la del modelo; Google recomienda no bajarla en Gemini 3) |
 | `--regenerar` | reutiliza `momentos.json` y rehace capturas y documentos **sin usar la API** |

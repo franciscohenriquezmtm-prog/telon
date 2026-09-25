@@ -173,3 +173,58 @@ def test_captura_vertical_y_acepta_rutas_str(tmp_path):
     with Image.open(destino) as im:
         assert im.size == (360, 640)
     assert _contar(destino, _mascara_roja) > 100
+
+
+# ----------------------------------------------------------------------------- lupa
+def _imagen_con_detalle(carpeta: Path, ancho: int = 640, alto: int = 360) -> Path:
+    """Fondo verde con un cuadrado azul pequeño en (0.2, 0.2): la lupa lo amplía en la esquina opuesta."""
+    ruta = _imagen(carpeta, ancho, alto, "detalle.jpg")
+    with Image.open(ruta) as im:
+        im = im.convert("RGB")
+        px = int(0.2 * ancho)
+        py = int(0.2 * alto)
+        for x in range(px - 6, px + 7):
+            for y in range(py - 6, py + 7):
+                im.putpixel((x, y), (30, 30, 220))
+        im.save(ruta, "JPEG", quality=95)
+    return ruta
+
+
+def _mascara_azul(rgb: np.ndarray) -> np.ndarray:
+    return (rgb[..., 2] > 150) & (rgb[..., 0] < 100) & (rgb[..., 1] < 100)
+
+
+def test_lupa_amplia_la_zona_en_la_esquina_mas_lejana(tmp_path):
+    origen = _imagen_con_detalle(tmp_path)
+    con = tmp_path / "con_lupa.jpg"
+    sin = tmp_path / "sin_lupa.jpg"
+    assert anotar_captura(origen, {"x": 0.2, "y": 0.2}, con) == con
+    assert anotar_captura(origen, {"x": 0.2, "y": 0.2}, sin, lupa=False) == sin
+    rgb_con, rgb_sin = _rgb(con), _rgb(sin)
+    # el cuadrado azul de 13 px ampliado x2,5 ocupa muchos más píxeles azules en la esquina inferior derecha
+    esquina = (slice(int(360 * 0.5), 360), slice(int(640 * 0.5), 640))
+    assert _mascara_azul(rgb_con[esquina]).sum() > 400
+    assert _mascara_azul(rgb_sin[esquina]).sum() == 0
+    # el recuadro lleva borde rojo y halo blanco en esa esquina; sin lupa no hay rojo allí (la flecha es corta)
+    assert _mascara_roja(rgb_con[esquina]).sum() > _mascara_roja(rgb_sin[esquina]).sum() + 200
+    # la lupa no tapa el punto señalado ni el círculo
+    assert _es_rojo(_pixel(con, int(0.2 * 640), int(0.2 * 360) - 43))
+
+
+def test_lupa_en_caja_pequena_y_no_en_caja_grande(tmp_path):
+    origen = _imagen_con_detalle(tmp_path)
+    pequena, grande = tmp_path / "caja_p.jpg", tmp_path / "caja_g.jpg"
+    assert anotar_captura(origen, {"caja": [0.18, 0.17, 0.22, 0.23]}, pequena) == pequena
+    assert anotar_captura(origen, {"caja": [0.1, 0.1, 0.6, 0.6]}, grande) == grande
+    esquina = (slice(180, 360), slice(320, 640))
+    assert _mascara_azul(_rgb(pequena)[esquina]).sum() > 400
+    assert _mascara_azul(_rgb(grande)[esquina]).sum() == 0
+
+
+def test_lupa_con_punto_cerca_del_borde_no_falla(tmp_path):
+    origen = _imagen(tmp_path)
+    for zona in ({"x": 0.0, "y": 0.0}, {"x": 1.0, "y": 1.0}, {"x": 0.99, "y": 0.01}):
+        destino = tmp_path / f"borde_{zona['x']}_{zona['y']}.jpg"
+        assert anotar_captura(origen, zona, destino) == destino
+        with Image.open(destino) as im:
+            assert im.size == (640, 360)

@@ -146,3 +146,10 @@ def test_avisos_env_txt_y_ejemplo(tmp_path, monkeypatch):
     avisos = cli._avisos_env([])
     assert len(avisos) == 1 and ".env.txt" in avisos[0] and "sin .txt" in avisos[0]
     assert cli._avisos_env([Path("/algo/.env")]) == []
+
+
+def test_sin_transcripcion_y_sin_lupa():
+    op = cli.opciones_desde_args(_args())
+    assert op.transcribir and op.lupa
+    op = cli.opciones_desde_args(_args("--sin-transcripcion", "--sin-lupa"))
+    assert not op.transcribir and not op.lupa
