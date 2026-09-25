@@ -1,0 +1,127 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4976.mov",
+    "nombre": "IMG_4976",
+    "duracion_seg": 80.33,
+    "duracion": "01:20",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 177962817,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:28:55",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Operación del arco en C",
+    "resumen": "El video explica los movimientos y bloqueos del brazo de un arco en C de fluoroscopía. Se detalla cómo manipular el brazo para realizar ajustes de posición durante el procedimiento.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 3 pasos revisados en 1 petición(es), 3 con cambios (6483 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 12879,
+      "tokens_salida": 602,
+      "tokens_pensamiento": 1978,
+      "tokens_total": 15459,
+      "detalle_entrada": {
+        "VIDEO": 7355,
+        "TEXT": 2224,
+        "IMAGE": 3300
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0071
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Bloquear movimiento horizontal del brazo",
+        "descripcion": "El operador acciona la palanca de bloqueo, marcada con el icono de candado, para inmovilizar el movimiento horizontal del brazo del arco en C.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.236,
+          "y": 0.27
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 0.4,
+        "puntaje": null,
+        "descripcion_original": "El operador muestra cómo accionar la palanca de bloqueo para inmovilizar el movimiento horizontal del brazo del arco en C."
+      },
+      {
+        "tiempo": "00:23",
+        "tiempo_seg": 23.0,
+        "titulo": "Asegurar posición mediante freno",
+        "descripcion": "Se muestra el mando de bloqueo situado en el brazo del arco, el cual permite asegurar la posición del equipo una vez realizado el ajuste.",
+        "importancia": 4,
+        "fuente": "visual",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.236,
+          "y": 0.27
+        },
+        "captura": "capturas/02_00-23.jpg",
+        "captura_anotada": "capturas/02_00-23_anotada.jpg",
+        "tiempo_real_seg": 22.0,
+        "puntaje": null,
+        "titulo_original": "Accionar el freno del brazo",
+        "descripcion_original": "Se muestra el mando de bloqueo del brazo para asegurar la posición deseada tras el ajuste."
+      },
+      {
+        "tiempo": "00:41",
+        "tiempo_seg": 41.0,
+        "titulo": "Liberar freno para movimiento angular",
+        "descripcion": "El operador sujeta la palanca de desbloqueo, permitiendo el movimiento angular del arco en C para ajustar la angulación necesaria.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.42,
+          "y": 0.35
+        },
+        "captura": "capturas/03_00-41.jpg",
+        "captura_anotada": "capturas/03_00-41_anotada.jpg",
+        "tiempo_real_seg": 41.6,
+        "puntaje": null,
+        "titulo_original": "Realizar movimiento angular",
+        "descripcion_original": "El operador libera el freno para permitir el movimiento angular del arco en C y ajustar la angulación necesaria."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4976.docx",
+    "pdf": "IMG_4976.pdf",
+    "paginas": 5
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 12879,
+    "tokens_salida": 602,
+    "tokens_pensamiento": 1978,
+    "tokens_total": 15459,
+    "detalle_entrada": {
+      "VIDEO": 7355,
+      "TEXT": 2224,
+      "IMAGE": 3300
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0071
+  }
+}

@@ -1,0 +1,31 @@
+13:27:48 === IMG_4976.mov: 01:20, 1080x1920, 59.96 fps, 170 MB -> salida/IMG_4976
+13:27:48 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+13:27:48   IMG_4976.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+13:27:48   transcodificando IMG_4976.mov -> IMG_4976_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+13:27:57      10 % (00:08 de 01:20)
+13:28:00      21 % (00:17 de 01:20)
+13:28:04      32 % (00:26 de 01:20)
+13:28:07      44 % (00:35 de 01:20)
+13:28:11      55 % (00:44 de 01:20)
+13:28:14      65 % (00:52 de 01:20)
+13:28:18      77 % (01:02 de 01:20)
+13:28:21      99 % (01:20 de 01:20)
+13:28:21   copia ligera lista: 5.4 MB
+13:28:21 Subiendo IMG_4976_subida.mp4 (5.6 MB, video/mp4) a la Files API…
+13:28:22 Subido como files/sepaq3p0lu4e; esperando a que Gemini lo procese…
+13:28:33 Archivo files/sepaq3p0lu4e listo (ACTIVE).
+13:28:33 Analizando IMG_4976 con gemini-3.1-flash-lite (resolución media)…
+13:28:36   3 momentos brutos, 8976 tokens.
+13:28:36 Análisis terminado: 3 momentos.
+13:28:37 Archivo remoto files/sepaq3p0lu4e eliminado.
+13:28:37 momentos.json guardado (3 momentos).
+13:28:37 Extrayendo 3 capturas de IMG_4976.mov…
+13:28:41 Capturas: 3 extraídas, 0 fallidas
+13:28:41 Refinando títulos y descripciones con 3 capturas en alta resolución (gemini-3.1-flash-lite)…
+13:28:41 Refinando con gemini-3.1-flash-lite los textos de 3 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+13:28:49 Refinado con capturas (gemini-3.1-flash-lite): 3 pasos revisados en 1 petición(es), 3 con cambios (6483 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+13:28:51 Anotaciones: 3 capturas con círculo/flecha.
+13:28:51   documentos: 3 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+13:28:51   docx: IMG_4976.docx
+13:28:55   pdf: IMG_4976.pdf (5 páginas)
+13:28:55 Listo en 1 min 7 s: 3 momentos, 5 páginas -> IMG_4976.docx, IMG_4976.pdf
