@@ -94,7 +94,9 @@ UMBRAL_ESCENA = 3.0              # puntuación mínima de scdet para considerar 
 # ----------------------------------------------------------------------------
 # Documentos
 # ----------------------------------------------------------------------------
-POR_PAGINA = "auto"              # "auto" | 1 | 2 | 3 | 4 capturas por página
+POR_PAGINA = 1                   # "auto" | 1 | 2 | 3 | 4 capturas por página.  1 (por defecto): cada captura ocupa
+                                 # una plana entera, con la hoja horizontal o vertical según la captura, para que las
+                                 # pantallas e iconos se lean.  "auto": rejilla según la cantidad de pasos.
 FUENTE_DOCX = "Calibri"
 INCLUIR_INDICE = True            # índice de pasos por sección tras la portada
 ANOTAR_CAPTURAS = True           # dibujar círculo/flecha cuando el modelo indica una zona

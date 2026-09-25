@@ -159,10 +159,12 @@ a analizar. Los videos que fallan no detienen a los demás.
 
 ### Cómo se maquetan los documentos
 
-- Rejilla según la cantidad de pasos: 1, 2 o 3 por página en A4 vertical y 4 (2x2)
-  en A4 horizontal (`--por-pagina` la fija). Con capturas **verticales** (iPhone en
-  vertical) se usan como máximo 2 por página, lado a lado en A4 horizontal, con la
-  imagen a toda la altura: así los textos de pantalla siguen legibles.
+- Por defecto **una captura por página**, con la hoja A4 horizontal si la captura es
+  apaisada y vertical si es vertical: así la imagen ocupa la plana entera y las
+  pantallas e iconos se leen. `--por-pagina auto` vuelve a la rejilla según la
+  cantidad de pasos (1, 2 o 3 por página en A4 vertical y 4 en 2x2 horizontal; con
+  capturas verticales, como máximo 2 lado a lado en A4 horizontal), y `2`, `3` o `4`
+  la fijan.
 - **El texto nunca se recorta en silencio.** Si un título o una descripción no
   caben bajo la captura, la imagen se reduce lo justo (la descripción puede ocupar
   hasta 6 líneas en 2x2 y 8 en las demás rejillas), después se baja 1 punto la
@@ -198,7 +200,7 @@ a analizar. Los videos que fallan no detienen a los demás.
 | `--local` / `--simular` | sin API (ver abajo) |
 | `--max-momentos N` | conservar solo los N más importantes (por defecto sin límite) |
 | `--importancia-minima 1-5` | descartar los momentos de importancia menor |
-| `--por-pagina auto\|1\|2\|3\|4` | capturas por página (auto: según la cantidad de pasos y su orientación) |
+| `--por-pagina auto\|1\|2\|3\|4` | capturas por página (por defecto 1: una plana por captura, hoja según su orientación; auto: rejilla según la cantidad de pasos) |
 | `--sin-indice`, `--sin-anotaciones` | omitir el índice o el círculo/flecha |
 | `--sin-tonemap` | no convertir los videos HDR a SDR (si las capturas salen oscuras) |
 | `--tramo-min N` | videos más largos que N minutos se analizan por tramos (por defecto 45) |

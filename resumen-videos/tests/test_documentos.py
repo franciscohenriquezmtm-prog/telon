@@ -148,7 +148,10 @@ def test_paginas_pdf_y_docx_recargable(tmp_path, n):
     assert all(fila.height_rule == WD_ROW_HEIGHT_RULE.EXACTLY for tabla in d.tables for fila in tabla.rows)
     assert d.sections[0].orientation == (WD_ORIENT.LANDSCAPE if L.horizontal else WD_ORIENT.PORTRAIT)
     saltos = sum(1 for p in d.paragraphs if p.paragraph_format.page_break_before)
-    assert saltos == L.paginas_contenido + n_indice               # una cabecera por página tras la portada
+    if L.por_pagina == 1:      # cada paso en su propia sección (hoja según la captura): sin salto en su cabecera
+        assert saltos == n_indice and len(d.sections) == 1 + L.paginas_contenido
+    else:
+        assert saltos == L.paginas_contenido + n_indice           # una cabecera por página tras la portada
     texto = "".join(_texto_pdf(pdf))
     assert f"PASO {n} · " in texto and "PASO 1 · PREPARACIÓN · 00:05" in texto
 
@@ -300,7 +303,7 @@ def test_jpeg_incrustado_sin_recodificar(tmp_path):
 def test_captura_con_aspecto_panoramico(tmp_path):
     momentos = _momentos(4, tmp_path / "capturas", ancho=1280, alto=360)
     docx, _pdf, _paginas = _generar(tmp_path, momentos)
-    L = calcular_layout(4, ratio=1280 / 360)
+    L = calcular_layout(4, 1, ratio=16 / 9, horizontal=True)     # 1 por página, captura apaisada: hoja horizontal
     d = Document(str(docx))
     for forma in d.inline_shapes:
         assert forma.width <= Cm(L.interior_w_cm) + 1000
@@ -322,7 +325,7 @@ def test_descripcion_y_titulo_completos_en_todas_las_rejillas(tmp_path, pp):
     assert texto.count(DESCRIPCION_252) >= 1 and TITULO_80 in texto
     celdas = _celdas_docx(docx)
     assert sum(1 for c in celdas if DESCRIPCION_252 in c and TITULO_80 in c) == 20
-    L = calcular_layout(20, pp)
+    L = calcular_layout(20, 1, ratio=16 / 9, horizontal=True) if pp == 1 else calcular_layout(20, pp)
     d = Document(str(docx))
     for forma in d.inline_shapes:      # la imagen se reduce como máximo hasta que quepan las líneas del tope
         assert Cm(L.img_h_cm * 0.6) <= forma.height <= Cm(L.img_h_cm) + 1000
@@ -658,3 +661,27 @@ def test_indice_con_capitulos(tmp_path):
         m.capitulo = None
     _docx2, pdf2, paginas2 = _generar(tmp_path, momentos)
     assert "Primer video" not in _texto_pdf(pdf2)[1] and paginas2 == paginas
+
+
+# ----------------------------------------------------------------------------- 1 por página: hoja según la captura
+def test_una_por_pagina_hoja_segun_orientacion_de_la_captura(tmp_path):
+    momentos = _momentos(2, tmp_path / "cap_h")                          # 640x360: apaisadas
+    momentos += _momentos(2, tmp_path / "cap_v", ancho=360, alto=640)    # verticales
+    momentos[3].ruta_captura = None                                      # sin captura: hoja base
+    for i, m in enumerate(momentos):
+        m.tiempo_seg = 10.0 * i
+    docx, pdf, paginas = _generar(tmp_path, momentos, por_pagina=1, transcripcion=_transcripcion(2))
+    n_indice = contar_paginas_indice(momentos, 1)
+    assert paginas == 1 + n_indice + 4 + 1
+    with pymupdf.open(str(pdf)) as doc:
+        orient = [doc[i].rect.width > doc[i].rect.height for i in range(doc.page_count)]
+    assert orient[0] is False and orient[1] is False                     # portada e índice: A4 vertical
+    assert orient[1 + n_indice:1 + n_indice + 4] == [True, True, False, False]
+    assert orient[-1] is False                                           # el anexo vuelve a la hoja base
+    d = Document(str(docx))
+    assert len(d.sections) == 1 + 4 + 1
+    assert [s.orientation == WD_ORIENT.LANDSCAPE for s in d.sections[1:5]] == [True, True, False, False]
+    assert len(d.inline_shapes) == 3
+    # la captura apaisada ocupa casi todo el ancho útil de la hoja horizontal
+    Lh = calcular_layout(4, 1, ratio=16 / 9, horizontal=True)
+    assert d.inline_shapes[0].width >= Cm(Lh.interior_w_cm * 0.9)

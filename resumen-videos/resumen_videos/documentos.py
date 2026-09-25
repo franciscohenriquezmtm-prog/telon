@@ -157,6 +157,26 @@ class Layout:
         return f"A4 {'horizontal' if self.horizontal else 'vertical'} {self.cols}x{self.filas}"
 
 
+def _layouts_por_orientacion(L: Layout) -> tuple[Layout, Layout] | None:
+    """Con 1 por página: ``(vertical, horizontal)``, las dos maquetas 1x1 entre las que se elige por captura."""
+    if L.por_pagina != 1:
+        return None
+    vertical = calcular_layout(L.n, 1, ratio=9 / 16, horizontal=False)
+    horizontal = calcular_layout(L.n, 1, ratio=16 / 9, horizontal=True)
+    return vertical, horizontal
+
+
+def _layout_de_captura(m: Momento, L: Layout, pares: tuple[Layout, Layout] | None) -> Layout:
+    """La maqueta de la página de ``m``: con 1 por página, hoja horizontal si la captura es apaisada, vertical si es
+    vertical (así la imagen ocupa la plana entera); sin captura legible, la base ``L``."""
+    if pares is None:
+        return L
+    tam = _tamano_imagen(m.captura_para_documento)
+    if not tam:
+        return L
+    return pares[1] if tam[0] > tam[1] else pares[0]
+
+
 def normalizar_por_pagina(valor) -> str | int:
     """Devuelve ``"auto"`` o un entero 1-4; acepta también cadenas (``"2"``).  ValueError si no vale."""
     if isinstance(valor, str):
@@ -171,8 +191,12 @@ def normalizar_por_pagina(valor) -> str | int:
     return valor
 
 
-def calcular_layout(n: int, por_pagina="auto", ratio: float = RATIO_CAJA) -> Layout:
+def calcular_layout(n: int, por_pagina="auto", ratio: float = RATIO_CAJA, *, horizontal: bool | None = None) -> Layout:
     """Maqueta para ``n`` pasos.  ``"auto"``: n <= 5 -> 1; 6-10 -> 2; 11-15 -> 3; >= 16 -> 4 (2x2 horizontal).
+
+    ``horizontal`` fuerza la orientación de la hoja con 1 por página (una hoja A4 horizontal para una captura
+    apaisada, vertical para una captura vertical: ver ``_layout_de_captura``); con más de una captura por página se
+    ignora.
 
     ``ratio`` es el aspecto (ancho/alto) de la caja reservada a la captura; las imágenes se ajustan
     dentro de ella conservando su propio aspecto.  Con capturas verticales (``ratio < 1``, iPhone en
@@ -191,6 +215,8 @@ def calcular_layout(n: int, por_pagina="auto", ratio: float = RATIO_CAJA) -> Lay
         cols, filas, horizontal = 2, 2, True
     elif pp == 2 and vertical:
         cols, filas, horizontal = 2, 1, True
+    elif pp == 1 and horizontal is not None:
+        cols, filas = 1, 1
     else:
         cols, filas, horizontal = 1, pp, False
     pag_w, pag_h = (A4_ALTO_CM, A4_ANCHO_CM) if horizontal else (A4_ANCHO_CM, A4_ALTO_CM)
@@ -836,10 +862,11 @@ def _portada_docx(doc, D: _Datos, L: Layout) -> None:
     _run(p, D.pie, 8, color=COLOR_GRIS)
 
 
-def _cabecera_docx(doc, L: Layout, izquierda: str, derecha: str):
-    """Párrafo de cabecera con salto de página ANTES y línea fina debajo."""
+def _cabecera_docx(doc, L: Layout, izquierda: str, derecha: str, *, salto: bool = True):
+    """Párrafo de cabecera con salto de página ANTES (salvo ``salto=False``: la sección nueva ya lo da) y línea fina
+    debajo."""
     cab = _parrafo(doc.add_paragraph(), linea_pt=L.pt_cabecera * INTERLINEADO, despues=4)
-    cab.paragraph_format.page_break_before = True
+    cab.paragraph_format.page_break_before = salto
     _tab_derecha(cab, L.util_w_cm)
     _run(cab, _recortar(izquierda, 90), L.pt_cabecera, color=COLOR_GRIS)
     _run(cab, "\t" + derecha, L.pt_cabecera, color=COLOR_GRIS)
@@ -965,11 +992,25 @@ def _texto_rango(ini: int, fin: int, n: int) -> str:
     return f"Paso {ini} de {n}" if ini == fin else f"Pasos {ini}–{fin} de {n}"
 
 
+def _seccion_docx(doc, L: Layout) -> None:
+    """Sección nueva (página nueva) con el tamaño y la orientación de ``L``; cabecera y pie enlazados a la anterior."""
+    from docx.enum.section import WD_SECTION   # noqa: PLC0415
+
+    sec = doc.add_section(WD_SECTION.NEW_PAGE)
+    sec.orientation = WD_ORIENT.LANDSCAPE if L.horizontal else WD_ORIENT.PORTRAIT
+    sec.page_width, sec.page_height = Cm(L.pag_w_cm), Cm(L.pag_h_cm)
+    sec.left_margin = sec.right_margin = sec.top_margin = sec.bottom_margin = Cm(MARGEN_CM)
+    sec.header_distance = sec.footer_distance = Cm(0.5)
+    sec.different_first_page_header_footer = False
+
+
 def _pagina_contenido_docx(doc, pagina: list, k: int, D: _Datos, L: Layout, F: dict,
-                           log: Callable[[str], None], avisos: list) -> None:
+                           log: Callable[[str], None], avisos: list, *, seccion_nueva: bool = False) -> None:
     ini = k * L.por_pagina + 1
     fin = ini + len(pagina) - 1
-    _cabecera_docx(doc, L, D.titulo, _texto_rango(ini, fin, L.n))
+    if seccion_nueva:
+        _seccion_docx(doc, L)
+    _cabecera_docx(doc, L, D.titulo, _texto_rango(ini, fin, L.n), salto=not seccion_nueva)
     # rejilla: tabla sin estilo (sin bordes), ancho fijo por celda, filas de alto EXACTO
     tabla = doc.add_table(rows=L.filas, cols=L.cols)
     tabla.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -988,13 +1029,14 @@ def _pagina_contenido_docx(doc, pagina: list, k: int, D: _Datos, L: Layout, F: d
                 _celda_momento_docx(celda, pagina[idx], ini + idx, L, F, log, avisos)
 
 
-def _transcripcion_docx(doc, D: _Datos, L: Layout, F: dict) -> None:
+def _transcripcion_docx(doc, D: _Datos, L: Layout, F: dict, *, primera_sin_salto: bool = False) -> None:
     """Anexo con la transcripción: una página por grupo de ``_paginar_transcripcion`` (igual que el PDF)."""
     paginas = _paginar_transcripcion(D, L, F)
     n = len(paginas)
     col = Cm(TRANSCRIPCION_COL_CM)
     for k, segmentos in enumerate(paginas):
-        _cabecera_docx(doc, L, D.titulo, "Transcripción" if n == 1 else f"Transcripción ({k + 1} de {n})")
+        _cabecera_docx(doc, L, D.titulo, "Transcripción" if n == 1 else f"Transcripción ({k + 1} de {n})",
+                       salto=not (primera_sin_salto and k == 0))
         if k == 0:
             p = _parrafo(doc.add_paragraph(), linea_pt=PT_TRANSCRIPCION_TITULO * INTERLINEADO,
                          despues=ALTO_TITULO_INDICE_PT - PT_TRANSCRIPCION_TITULO * INTERLINEADO)
@@ -1031,9 +1073,16 @@ def generar_docx(nombre_video: str, momentos: list, carpeta_salida: Path, *, tit
     _portada_docx(doc, D, L)
     if incluir_indice:
         _indice_docx(doc, D, L, _paginar_indice(_entradas_indice(D.momentos, L, F), L))
+    pares = _layouts_por_orientacion(L)
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
-        _pagina_contenido_docx(doc, pagina, k, D, L, F, log, avisos)
-    _transcripcion_docx(doc, D, L, F)
+        if pares is None:
+            _pagina_contenido_docx(doc, pagina, k, D, L, F, log, avisos)
+        else:   # 1 por página: cada paso en su propia sección, con la hoja según su captura
+            _pagina_contenido_docx(doc, pagina, k, D, _layout_de_captura(pagina[0], L, pares), F, log, avisos,
+                                   seccion_nueva=True)
+    if pares is not None and D.transcripcion:
+        _seccion_docx(doc, L)     # el anexo vuelve a la hoja base
+    _transcripcion_docx(doc, D, L, F, primera_sin_salto=pares is not None)
     # Word exige un párrafo tras la última tabla; de 1 pt para que no genere una página más
     fin = _parrafo(doc.add_paragraph(), linea_pt=1)
     _run(fin, "", 1)
@@ -1264,10 +1313,14 @@ def generar_pdf(nombre_video: str, momentos: list, carpeta_salida: Path, *, titu
         _pagina_indice_pdf(c, entradas, k, numero, total, len(paginas_indice), D, L, F)
         c.showPage()
         numero += 1
+    pares = _layouts_por_orientacion(L)
     for k, pagina in enumerate(_paginar(D.momentos, L.por_pagina)):
-        _pagina_contenido_pdf(c, pagina, k, numero, total, D, L, F, log, avisos)
+        Lk = _layout_de_captura(pagina[0], L, pares) if pares is not None else L
+        c.setPageSize((Lk.pag_w_cm * cm, Lk.pag_h_cm * cm))
+        _pagina_contenido_pdf(c, pagina, k, numero, total, D, Lk, F, log, avisos)
         c.showPage()
         numero += 1
+    c.setPageSize((L.pag_w_cm * cm, L.pag_h_cm * cm))
     for k, segmentos in enumerate(paginas_transcripcion):
         _pagina_transcripcion_pdf(c, segmentos, k, len(paginas_transcripcion), numero, total, D, L, F)
         c.showPage()
