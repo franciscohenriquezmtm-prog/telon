@@ -600,10 +600,15 @@ def test_transcripcion_vacia_o_rara_no_cambia_el_documento(tmp_path):
         assert paginas == base
 
 
-def test_transcripcion_se_ordena_y_limpia_controles(tmp_path):
+def test_transcripcion_conserva_el_orden_limpia_controles_y_admite_encabezados(tmp_path):
     momentos = _momentos(2, tmp_path / "cap")
-    transcripcion = [{"inicio": 65.0, "texto": "segundo\x07 segmento"}, {"inicio": 4.0, "texto": "primero"}]
-    _docx, pdf, _paginas = _generar(tmp_path, momentos, transcripcion=transcripcion)
+    transcripcion = [{"encabezado": "Capítulo 1: Encendido"}, {"inicio": 65.0, "texto": "segundo\x07 segmento"},
+                     {"encabezado": "Capítulo 2: Apagado"}, {"inicio": 4.0, "texto": "primero del dos"},
+                     {"encabezado": "   "}]
+    docx, pdf, _paginas = _generar(tmp_path, momentos, transcripcion=transcripcion)
     ultima = _texto_pdf(pdf)[-1]
-    assert ultima.index("primero") < ultima.index("segundo segmento") and "\x07" not in ultima
-    assert "00:04" in ultima and "01:05" in ultima
+    assert ultima.index("Capítulo 1") < ultima.index("segundo segmento") < ultima.index("Capítulo 2") \
+        < ultima.index("primero del dos")
+    assert "\x07" not in ultima and "01:05" in ultima and "00:04" in ultima
+    parrafos = [p.text for p in Document(str(docx)).paragraphs]
+    assert "Capítulo 2: Apagado" in parrafos and not any(p.startswith("\t") for p in parrafos)

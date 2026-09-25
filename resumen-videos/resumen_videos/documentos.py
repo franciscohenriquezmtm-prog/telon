@@ -308,18 +308,26 @@ def _contar_secciones(momentos: list) -> int:
 
 
 def _segmentos_transcripcion(transcripcion) -> list[tuple[str, str]]:
-    """``[(mm:ss, texto)]`` limpios y en orden a partir de la transcripción guardada; entradas raras se ignoran."""
-    segmentos: list[tuple[float, str]] = []
+    """``[(mm:ss, texto)]`` limpios, en el orden recibido, a partir de la transcripción guardada.
+
+    Una entrada ``{"encabezado": "Capítulo 2: ..."}`` (manual unido de varios videos) se conserva como
+    ``("", texto)`` y se dibuja en negrita sin tiempo.  Las entradas raras se ignoran.
+    """
+    segmentos: list[tuple[str, str]] = []
     for s in transcripcion or []:
         if not isinstance(s, dict):
+            continue
+        if isinstance(s.get("encabezado"), str):
+            encabezado = _limpiar(s["encabezado"])
+            if encabezado:
+                segmentos.append(("", encabezado))
             continue
         texto = _limpiar(s.get("texto"))
         inicio = s.get("inicio")
         if not texto or isinstance(inicio, bool) or not isinstance(inicio, (int, float)):
             continue
-        segmentos.append((max(0.0, float(inicio)), texto))
-    segmentos.sort(key=lambda s: s[0])
-    return [(formatear_tiempo(t), texto) for t, texto in segmentos]
+        segmentos.append((formatear_tiempo(max(0.0, float(inicio))), texto))
+    return segmentos
 
 
 def _preparar(nombre_video, momentos, titulo, resumen, fecha, duracion, modo, modelo,
@@ -619,12 +627,16 @@ def _paginar_transcripcion(D: _Datos, L: Layout, F: dict) -> list[list[_Segmento
     if not D.transcripcion:
         return []
     estilo = _estilo_transcripcion(F)
+    negrita = _estilo(F, PT_TRANSCRIPCION, negrita=True, color=COLOR_TITULO)
     ancho = _ancho_texto_transcripcion(L)
     disponible = (L.pag_h_cm - 2 * MARGEN_CM - CABECERA_CM - SEGURIDAD_CM) * cm
     paginas: list[list[_Segmento]] = [[]]
     usado = ALTO_TITULO_INDICE_PT
     for tiempo, texto in D.transcripcion:
-        alto = max(_alto_parrafo(texto, estilo, ancho, F), estilo.leading)
+        encabezado = tiempo == ""
+        alto = max(_alto_parrafo(texto, negrita if encabezado else estilo, ancho, F), estilo.leading)
+        if encabezado:
+            alto += ESPACIO_SEGMENTO_PT * 3      # aire antes de cada capítulo
         if paginas[-1] and usado + alto + ESPACIO_SEGMENTO_PT > disponible:
             paginas.append([])
             usado = 0.0
@@ -953,6 +965,11 @@ def _transcripcion_docx(doc, D: _Datos, L: Layout, F: dict) -> None:
                          despues=ALTO_TITULO_INDICE_PT - PT_TRANSCRIPCION_TITULO * INTERLINEADO)
             _run(p, "Transcripción del audio", PT_TRANSCRIPCION_TITULO, negrita=True, color=COLOR_TITULO)
         for s in segmentos:
+            if s.tiempo == "":      # encabezado de capítulo
+                p = _parrafo(doc.add_paragraph(), linea_pt=PT_TRANSCRIPCION * INTERLINEADO,
+                             antes=ESPACIO_SEGMENTO_PT * 3, despues=ESPACIO_SEGMENTO_PT)
+                _run(p, s.texto, PT_TRANSCRIPCION, negrita=True, color=COLOR_TITULO)
+                continue
             p = _parrafo(doc.add_paragraph(), linea_pt=PT_TRANSCRIPCION * INTERLINEADO, despues=ESPACIO_SEGMENTO_PT)
             p.paragraph_format.left_indent = col
             p.paragraph_format.first_line_indent = -col
@@ -1163,8 +1180,16 @@ def _pagina_transcripcion_pdf(c, segmentos: list, k: int, n: int, num_pagina: in
         c.drawString(mg, y - PT_TRANSCRIPCION_TITULO * INTERLINEADO + 4, _plano("Transcripción del audio", F))
         y -= ALTO_TITULO_INDICE_PT
     estilo = _estilo_transcripcion(F)
+    negrita = _estilo(F, PT_TRANSCRIPCION, negrita=True, color=COLOR_TITULO)
     ancho = _ancho_texto_transcripcion(L)
     for s in segmentos:
+        if s.tiempo == "":      # encabezado de capítulo: negrita, sin tiempo, con aire antes
+            y -= ESPACIO_SEGMENTO_PT * 3
+            parrafo = Paragraph(_txt(s.texto, F), negrita)
+            _w, h = parrafo.wrap(ancho + TRANSCRIPCION_COL_CM * cm, 100_000)
+            parrafo.drawOn(c, mg, y - h)
+            y -= h + ESPACIO_SEGMENTO_PT
+            continue
         parrafo = Paragraph(_txt(s.texto, F), estilo)
         _w, h = parrafo.wrap(ancho, 100_000)
         c.setFont(F["regular"], PT_TRANSCRIPCION)

@@ -191,6 +191,7 @@ a analizar. Los videos que fallan no detienen a los demás.
 | `--redactor M` | segunda pasada solo de texto con un modelo más potente que pule la redacción |
 | `--temperatura T` | temperatura de muestreo del modelo (por defecto no se envía y vale la del modelo; Google recomienda no bajarla en Gemini 3) |
 | `--regenerar` | reutiliza `momentos.json` y rehace capturas y documentos **sin usar la API** |
+| `--unir NOMBRE` [`--titulo T`] | **sin API**: une los videos ya procesados de `salida\` (todos, o los de `--solo`, en orden alfabético) en un solo manual con capítulos, `salida\NOMBRE\`; cada capítulo conserva sus tiempos, y la transcripción va encadenada con un encabezado por capítulo |
 | `--forzar` | volver a analizar videos ya procesados |
 | `--solo NOMBRE` | procesar solo ese video (nombre con o sin extensión); repetible: `--solo A --solo B` |
 | `--batch` / `--batch-recoger ID` / `--batch-pendiente` [`--esperar`] | modo batch (ver abajo) |

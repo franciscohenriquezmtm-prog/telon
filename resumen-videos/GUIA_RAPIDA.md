@@ -46,6 +46,7 @@ resultados están en `salida/<nombre del video>/`: `<nombre>.pdf`, `<nombre>.doc
 | decir qué equipo es                                | `.\resumir.bat --equipo "arco en C"`                                 |
 | sin transcripción del audio al final del manual    | `.\resumir.bat --sin-transcripcion`                                  |
 | sin el recuadro de zoom en las capturas            | `.\resumir.bat --sin-lupa`                                           |
+| un solo manual con varios videos ya procesados     | `.\resumir.bat --unir "Manual TC Canon"` (cada video es un capítulo; sin usar la API) |
 | varios clips cortos como una sola capacitación     | editar la lista en `tools/unir_clips.sh` y ejecutarlo; luego procesar el video unido |
 | 50 % más barato (resultado en horas)               | `.\resumir.bat --batch` y luego `.\resumir.bat --batch-recoger ID` (el ID lo imprime el primero; `--batch-pendiente` si solo hay uno) |
 | capturas oscuras en un video HDR                   | `.\resumir.bat --sin-tonemap --regenerar`                            |

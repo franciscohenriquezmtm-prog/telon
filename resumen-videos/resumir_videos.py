@@ -160,6 +160,10 @@ def crear_parser() -> argparse.ArgumentParser:
                    help="si existe momentos.json, salta el análisis y rehace capturas y documentos a partir de él "
                         "(sin usar la API)")
     m.add_argument("--forzar", action="store_true", help="volver a analizar videos ya procesados")
+    m.add_argument("--unir", metavar="NOMBRE",
+                   help="sin API: une los videos YA procesados de la carpeta de salida (todos, o los de --solo, en "
+                        "orden alfabético) en un solo manual con capítulos: salida/NOMBRE/")
+    m.add_argument("--titulo", metavar="TEXTO", help="con --unir: título del manual unido (por defecto 'Manual de <equipo>')")
     m.add_argument("--solo", action="append", metavar="NOMBRE",
                    help="procesar solo este video (nombre con o sin extensión); repetible: --solo A --solo B")
 
@@ -268,6 +272,37 @@ def comprobar(op: pipeline.Opciones, log=print) -> str | None:
     return None
 
 
+def _carpetas_para_unir(op: pipeline.Opciones) -> list:
+    """Carpetas de ``salida/`` con ``momentos.json`` (todas o las de ``--solo``), en orden alfabético."""
+    salida = Path(op.carpeta_salida)
+    carpetas = sorted(p.parent for p in salida.glob(f"*/{config.NOMBRE_JSON}"))
+    if op.solo:
+        pedidas = {Path(s).stem.lower() for s in op.solo} | {Path(s).name.lower() for s in op.solo}
+        carpetas = [c for c in carpetas if c.name.lower() in pedidas]
+    return carpetas
+
+
+def _unir(args: argparse.Namespace, op: pipeline.Opciones) -> int:
+    """``--unir NOMBRE``: manual con capítulos a partir de los videos ya procesados (sin API ni ffmpeg)."""
+    from resumen_videos import unir
+
+    carpetas = [c for c in _carpetas_para_unir(op) if c.name != documentos._nombre_archivo_seguro(args.unir)]
+    if not carpetas:
+        print(f"\nERROR de configuración: no hay videos procesados en {Path(op.carpeta_salida).resolve()}"
+              + (f" que coincidan con --solo {' / '.join(op.solo)}" if op.solo else "") + ".", file=sys.stderr)
+        return 2
+    print(f"Uniendo {len(carpetas)} video(s) procesado(s): {', '.join(c.name for c in carpetas)}")
+    try:
+        docx, pdf, paginas, destino = unir.unir_manuales(
+            args.unir, carpetas, op.carpeta_salida, titulo=args.titulo, equipo=op.equipo, por_pagina=op.por_pagina,
+            incluir_indice=op.incluir_indice)
+    except Exception as exc:  # noqa: BLE001 - un capítulo sin JSON, capturas ilegibles…: mensaje claro y código 1
+        print(f"\nERROR: {pipeline.mensaje_de_error(exc)}", file=sys.stderr)
+        return 1
+    print(f"Listo: {paginas} páginas -> {docx}\n              {pdf}")
+    return 0
+
+
 def main(argv: list | None = None) -> int:
     """Punto de entrada: 0 si todo salió bien, 1 si algún video falló, 2 si hay un error de configuración."""
     for flujo in (sys.stdout, sys.stderr):
@@ -279,6 +314,8 @@ def main(argv: list | None = None) -> int:
         video.TONEMAP_HDR = False
     op = opciones_desde_args(args)
     op.temperatura = args.temperatura      # --temperatura (bloque del corrector A, G10)
+    if args.unir:
+        return _unir(args, op)
     # Mensajes de consola solo con caracteres de cp1252/cp850 (nada de flechas): se leen bien aunque se redirijan.
     print(f"resumen_videos {__version__} - modo {op.modo}"
           + (f", modelo {op.modelo}, resolución {op.resolucion}" if op.modo in pipeline.MODOS_CON_API else "")
