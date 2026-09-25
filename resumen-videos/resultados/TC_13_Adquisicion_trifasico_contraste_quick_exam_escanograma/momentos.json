@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:51:02",
+  "generado": "2026-09-25T18:47:03",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 15 con cambios (22260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 15 con cambios (22260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:46",
+      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 16 con cambios (23544 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 188518,
-      "tokens_salida": 6332,
-      "tokens_pensamiento": 0,
-      "tokens_total": 194850,
+      "tokens_entrada": 21880,
+      "tokens_salida": 1256,
+      "tokens_pensamiento": 408,
+      "tokens_total": 23544,
       "detalle_entrada": {
-        "VIDEO": 166424,
-        "TEXT": 4494,
+        "TEXT": 4280,
         "IMAGE": 17600
       },
-      "llamadas": 4,
+      "llamadas": 2,
       "batch": false,
       "costo_usd": null
     },
@@ -49,7 +50,7 @@
         "tiempo": "00:02",
         "tiempo_seg": 2.0,
         "titulo": "Iniciar posicionamiento de camilla",
-        "descripcion": "El operador confirma el inicio del movimiento de la camilla a la posición de inicio a 274.0 mm, haciendo clic sobre el botón de inicio (flecha hacia adelante parpadeante) en la ventana flotante.",
+        "descripcion": "El operador confirma el inicio del movimiento de la camilla a la posicion de inicio a 274.0 mm, haciendo clic sobre el boton de inicio (flecha hacia adelante parpadeante) en la ventana flotante.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -67,8 +68,8 @@
       {
         "tiempo": "00:25",
         "tiempo_seg": 25.0,
-        "titulo": "Verificar preparación del escaneo",
-        "descripcion": "Una vez que la luz del botón de escaneo se queda fija en la consola, se presiona para iniciar la radiación. En la pantalla se observa que la ventana de advertencia de posicionamiento se ha cerrado.",
+        "titulo": "Verificar preparacion del escaneo",
+        "descripcion": "Una vez que la luz del boton de escaneo se queda fija en la consola, se presiona para iniciar la radiacion. En la pantalla se observa que la ventana de advertencia de posicionamiento se ha cerrado.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -84,7 +85,7 @@
         "tiempo": "00:33",
         "tiempo_seg": 33.0,
         "titulo": "Omitir el resto del escanograma",
-        "descripcion": "Se selecciona 'Scano Skip' en pantalla cuando el área de interés ya ha sido escaneada y el tubo se encuentra en el aire.",
+        "descripcion": "Se selecciona 'Scano Skip' en pantalla cuando el area de interes ya ha sido escaneada y el tubo se encuentra en el aire.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -95,13 +96,14 @@
         "captura": "capturas/03_00-33.jpg",
         "captura_anotada": "capturas/03_00-33_anotada.jpg",
         "tiempo_real_seg": 32.4,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se selecciona 'Scano Skip' en pantalla cuando el área de interés ya ha sido escaneada y el tubo se encuentra en el aire."
       },
       {
         "tiempo": "01:08",
         "tiempo_seg": 68.0,
-        "titulo": "Ajustar campo de visión global",
-        "descripcion": "Se seleccionan todas las cajas de escaneo de forma simultánea en el menú 'Change Scans' marcando 'All' para aplicar un mismo FOV uniforme.",
+        "titulo": "Ajustar campo de vision global",
+        "descripcion": "Se seleccionan todas las cajas de escaneo de forma simultanea en el menu 'Change Scans' marcando 'All' para aplicar un mismo FOV uniforme.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -120,7 +122,7 @@
         "tiempo": "01:29",
         "tiempo_seg": 89.0,
         "titulo": "Definir rango individual por fase",
-        "descripcion": "Se selecciona 'Individual' en el menú 'Change Scans' para ajustar de manera independiente el rango de escaneo arrastrando los marcadores en el escanograma.",
+        "descripcion": "Se selecciona 'Individual' en el menu 'Change Scans' para ajustar de manera independiente el rango de escaneo arrastrando los marcadores en el escanograma.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -138,8 +140,8 @@
       {
         "tiempo": "01:54",
         "tiempo_seg": 114.0,
-        "titulo": "Verificar parámetros de reconstrucción",
-        "descripcion": "Se accede a la pestaña de detalles de reconstrucción 'Recon Details' para verificar el grosor de corte, intervalo y áreas que se van a reconstruir.",
+        "titulo": "Verificar parametros de reconstruccion",
+        "descripcion": "Se accede a la pestaña de detalles de reconstruccion 'Recon Details' para verificar el grosor de corte, intervalo y areas que se van a reconstruir.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -151,13 +153,14 @@
         "captura_anotada": "capturas/06_01-54_anotada.jpg",
         "tiempo_real_seg": 113.0,
         "puntaje": null,
+        "titulo_original": "Verificar parámetros de reconstrucción",
         "descripcion_original": "Se accede a 'Recon Details' para verificar las zonas que se van a reconstruir, indicadas en color naranja."
       },
       {
         "tiempo": "02:32",
         "tiempo_seg": 152.0,
         "titulo": "Configurar D-FOV en Scan Details",
-        "descripcion": "Se hace clic sobre el campo 'D-FOV' en la pestaña 'Scan Details' para ajustar el diámetro del campo de visión, el cual muestra un valor de 421.1 (L).",
+        "descripcion": "Se hace clic sobre el campo 'D-FOV' en la pestaña 'Scan Details' para ajustar el diametro del campo de vision, el cual muestra un valor de 421.1 (L).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -176,7 +179,7 @@
         "tiempo": "02:40",
         "tiempo_seg": 160.0,
         "titulo": "Ajustar reconstrucciones en Multi View",
-        "descripcion": "Se accede a la pestaña 'Multi View' para configurar de manera específica el grosor y el intervalo de las reconstrucciones axiales, coronales o sagitales.",
+        "descripcion": "Se accede a la pestaña 'Multi View' para configurar de manera especifica el grosor y el intervalo de las reconstrucciones axiales, coronales o sagitales.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -194,8 +197,8 @@
       {
         "tiempo": "03:03",
         "tiempo_seg": 183.0,
-        "titulo": "Confirmar planificación de la fase",
-        "descripcion": "Se presiona el botón 'Confirm' ubicado en la esquina inferior derecha para validar y fijar la configuración de la fase de estudio planificada.",
+        "titulo": "Confirmar planificacion de la fase",
+        "descripcion": "Se presiona el boton 'Confirm' ubicado en la esquina inferior derecha para validar y fijar la configuracion de la fase de estudio planificada.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -213,8 +216,8 @@
       {
         "tiempo": "03:19",
         "tiempo_seg": 199.0,
-        "titulo": "Advertencia de límite de rango",
-        "descripcion": "Aparece la advertencia 'Sure Exp. mA could not be calculated because the scan range exceeds the scanogram area', indicando que el rango de escaneo planificado supera los límites del escanograma.",
+        "titulo": "Advertencia de limite de rango",
+        "descripcion": "Aparece la advertencia 'Sure Exp. mA could not be calculated because the scan range exceeds the scanogram area', indicando que el rango de escaneo planificado supera los limites del escanograma.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -226,13 +229,14 @@
         "captura_anotada": "capturas/10_03-19_anotada.jpg",
         "tiempo_real_seg": 198.4,
         "puntaje": null,
+        "titulo_original": "Advertencia de límite de rango",
         "descripcion_original": "Aparece un mensaje indicando que el modulador de mA no puede calcularse con precisión debido a que el rango planificado excede el área del escanograma."
       },
       {
         "tiempo": "03:40",
         "tiempo_seg": 220.0,
         "titulo": "Reducir rango de escaneo",
-        "descripcion": "Se regresa a la pantalla de planificación para reajustar y acortar los límites de las cajas amarillas de escaneo sobre el escanograma de referencia.",
+        "descripcion": "Se regresa a la pantalla de planificacion para reajustar y acortar los limites de las cajas amarillas de escaneo sobre el escanograma de referencia.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -250,7 +254,7 @@
         "tiempo": "04:02",
         "tiempo_seg": 242.0,
         "titulo": "Adquirir primera fase sin contraste",
-        "descripcion": "Se realiza el escaneo de la primera fase sin medio de contraste ('SIN CE') y se verifica que las imágenes se reconstruyen en tiempo real en la pantalla superior.",
+        "descripcion": "Se realiza el escaneo de la primera fase sin medio de contraste ('SIN CE') y se verifica que las imagenes se reconstruyen en tiempo real en la pantalla superior.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -268,7 +272,7 @@
         "tiempo": "04:26",
         "tiempo_seg": 266.0,
         "titulo": "Sincronizar escaneo e inyectora de contraste",
-        "descripcion": "Se inicia simultáneamente la adquisición de la fase arterial y la inyección del medio de contraste presionando ambos botones a la vez.",
+        "descripcion": "Se inicia simultaneamente la adquisicion de la fase arterial y la inyeccion del medio de contraste presionando ambos botones a la vez.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -276,19 +280,20 @@
         "captura": "capturas/13_04-26.jpg",
         "captura_anotada": null,
         "tiempo_real_seg": 266.2,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se inicia simultáneamente la adquisición de la fase arterial y la inyección del medio de contraste presionando ambos botones a la vez."
       },
       {
         "tiempo": "04:35",
         "tiempo_seg": 275.0,
         "titulo": "Monitorear tiempo en el gantry",
-        "descripcion": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomógrafo Canon.",
+        "descripcion": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomografo Canon.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.512,
-          "y": 0.535
+          "x": 0.487,
+          "y": 0.243
         },
         "captura": "capturas/14_04-35.jpg",
         "captura_anotada": "capturas/14_04-35_anotada.jpg",
@@ -300,7 +305,7 @@
         "tiempo": "05:49",
         "tiempo_seg": 349.0,
         "titulo": "Finalizar examen actual",
-        "descripcion": "Se hace clic sobre el botón 'Quit Exam' en la parte inferior de la pantalla para concluir definitivamente el protocolo del paciente.",
+        "descripcion": "Se hace clic sobre el boton 'Quit Exam' en la parte inferior de la pantalla para concluir definitivamente el protocolo del paciente.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Finalización y nuevos estudios",
@@ -317,19 +322,20 @@
       {
         "tiempo": "06:04",
         "tiempo_seg": 364.0,
-        "titulo": "Reutilizar escanograma para otro estudio",
-        "descripcion": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear. En la pantalla se visualizan los protocolos disponibles en el grupo RTP, como CEREBRO y CPN.",
+        "titulo": "Reutilice el escanograma para otro estudio",
+        "descripcion": "Es posible reutilizar el escanograma para planificar estudios adicionales sin volver a escanear. En la pantalla se muestran los protocolos disponibles bajo el grupo RTP, como CEREBRO, CPN, MAXILOFACIAL u OIDO.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Finalización y nuevos estudios",
         "zona": {
-          "x": 0.38,
-          "y": 0.59
+          "x": 0.35,
+          "y": 0.58
         },
         "captura": "capturas/16_06-04.jpg",
         "captura_anotada": "capturas/16_06-04_anotada.jpg",
         "tiempo_real_seg": 363.0,
         "puntaje": null,
+        "titulo_original": "Reutilizar escanograma para otro estudio",
         "descripcion_original": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear."
       }
     ],
@@ -609,20 +615,20 @@
   "documentos": {
     "docx": "TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx",
     "pdf": "TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf",
-    "paginas": 8
+    "paginas": 20
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 188518,
-    "tokens_salida": 6332,
-    "tokens_pensamiento": 0,
-    "tokens_total": 194850,
+    "tokens_entrada": 210398,
+    "tokens_salida": 7588,
+    "tokens_pensamiento": 408,
+    "tokens_total": 218394,
     "detalle_entrada": {
       "VIDEO": 166424,
-      "TEXT": 4494,
-      "IMAGE": 17600
+      "TEXT": 8774,
+      "IMAGE": 35200
     },
-    "llamadas": 4,
+    "llamadas": 6,
     "batch": false,
     "costo_usd": null
   }

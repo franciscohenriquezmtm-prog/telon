@@ -37,3 +37,59 @@
 16:17:34   docx: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx
 16:17:38   pdf: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf (21 páginas)
 16:17:38 Listo en 8 min 12 s: 29 momentos, 21 páginas -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx, TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf
+18:26:44 === TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov: 11:38, 1080x1920, 59.97 fps, 1476 MB -> salida/TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT
+18:26:44 --regenerar: se reutiliza el análisis de momentos.json (29 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:26:44 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:26:44 momentos.json guardado (29 momentos).
+18:26:44 Extrayendo 29 capturas de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov…
+18:26:44   TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:26:56   10/29 capturas
+18:27:08   20/29 capturas
+18:27:18 Capturas: 29 extraídas, 0 fallidas
+18:27:18 Refinando títulos y descripciones con 29 capturas en alta resolución (gemini-3.5-flash)…
+18:27:18 Refinando con gemini-3.5-flash los textos de 29 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:27:34 Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (40892 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:27:34 Capturas enderezadas: 29 (giradas según lo indicado por el refinado).
+18:27:47 Anotaciones: 26 capturas con círculo/flecha.
+18:27:47   documentos: 29 pasos, 1 por página (A4 vertical 1x1)
+18:27:48   docx: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx
+18:27:52   pdf: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf (34 páginas)
+18:27:52 Listo en 1 min 7 s: 29 momentos, 34 páginas -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx, TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf
+18:32:05 === TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov: 11:38, 1080x1920, 59.97 fps, 1476 MB -> salida/TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT
+18:32:05 --regenerar: se reutiliza el análisis de momentos.json (29 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:32:05 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:32:05 momentos.json guardado (29 momentos).
+18:32:05 Extrayendo 29 capturas de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov…
+18:32:05   TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:32:16   10/29 capturas
+18:32:27   20/29 capturas
+18:32:37 Capturas: 29 extraídas, 0 fallidas
+18:32:37 Refinando títulos y descripciones con 29 capturas en alta resolución (gemini-3.5-flash)…
+18:32:37 Refinando con gemini-3.5-flash los textos de 29 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:32:53 Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (41170 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:32:54 Capturas enderezadas: 29 (giradas según lo indicado por el refinado).
+18:33:06 Anotaciones: 26 capturas con círculo/flecha.
+18:33:06   documentos: 29 pasos, 1 por página (A4 vertical 1x1)
+18:33:07   docx: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx
+18:33:11   pdf: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf (34 páginas)
+18:33:11 Listo en 1 min 6 s: 29 momentos, 34 páginas -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx, TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf
+18:36:45 === TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov: 11:38, 1080x1920, 59.97 fps, 1476 MB -> salida/TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT
+18:36:45 --regenerar: se reutiliza el análisis de momentos.json (29 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:36:45 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:36:45 momentos.json guardado (29 momentos).
+18:36:45 Extrayendo 29 capturas de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov…
+18:36:45   TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:36:55   10/29 capturas
+18:37:07   20/29 capturas
+18:37:17 Capturas: 29 extraídas, 0 fallidas
+18:37:17 Refinando títulos y descripciones con 29 capturas en alta resolución (gemini-3.5-flash)…
+18:37:17 Refinando con gemini-3.5-flash los textos de 29 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:37:33 Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (41327 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:37:33 Confirmando la dirección del giro de 29 capturas con gemini-3.5-flash (dos versiones por captura)…
+18:37:47 Orientación confirmada: 29 capturas revisadas, 14 con el giro corregido (17849 tokens).
+18:37:48 Capturas enderezadas: 29 (giradas según lo indicado por el refinado).
+18:38:01 Anotaciones: 29 capturas con círculo/flecha.
+18:38:01   documentos: 29 pasos, 1 por página (A4 vertical 1x1)
+18:38:02   docx: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx
+18:38:06   pdf: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf (34 páginas)
+18:38:06 Listo en 1 min 21 s: 29 momentos, 34 páginas -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx, TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf

@@ -31,3 +31,17 @@
 16:01:53   docx: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx
 16:01:54   pdf: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf (7 páginas)
 16:01:54 Listo en 1 min 54 s: 8 momentos, 7 páginas -> TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx, TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf
+18:24:32 === TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov: 02:54, 1080x1920, 59.97 fps, 471 MB -> salida/TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry
+18:24:32 --regenerar: se reutiliza el análisis de momentos.json (8 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:24:32 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:24:32 momentos.json guardado (8 momentos).
+18:24:32 Extrayendo 8 capturas de TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov…
+18:24:37 Capturas: 8 extraídas, 0 fallidas
+18:24:37 Refinando títulos y descripciones con 8 capturas en alta resolución (gemini-3.5-flash)…
+18:24:37 Refinando con gemini-3.5-flash los textos de 8 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:24:41 Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 0 con cambios (11391 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:24:45 Anotaciones: 8 capturas con círculo/flecha.
+18:24:45   documentos: 8 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+18:24:45   docx: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx
+18:24:46   pdf: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf (11 páginas)
+18:24:46 Listo en 14 s: 8 momentos, 11 páginas -> TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx, TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf

@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T17:06:26",
+  "generado": "2026-09-25T18:48:39",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,19 +27,21 @@
     "truncado": false,
     "tramos": 4,
     "avisos": [
-      "No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original."
+      "No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:47",
+      "Refinado con capturas (gemini-3.5-flash): 33 pasos revisados en 3 petición(es), 24 con cambios (47060 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
-      "modelo": "gemini-3.5-flash",
-      "tokens_entrada": 432662,
-      "tokens_salida": 16677,
-      "tokens_pensamiento": 694,
-      "tokens_total": 450033,
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 43867,
+      "tokens_salida": 3193,
+      "tokens_pensamiento": 0,
+      "tokens_total": 47060,
       "detalle_entrada": {
-        "VIDEO": 426730,
-        "TEXT": 5932
+        "TEXT": 7567,
+        "IMAGE": 36300
       },
-      "llamadas": 8,
+      "llamadas": 3,
       "batch": false,
       "costo_usd": null
     },
@@ -53,8 +55,8 @@
         "fuente": "ambos",
         "seccion": "Seleccion de protocolo",
         "zona": {
-          "x": 0.395,
-          "y": 0.756
+          "x": 0.341,
+          "y": 0.724
         },
         "captura": "capturas/01_00-06.jpg",
         "captura_anotada": "capturas/01_00-06_anotada.jpg",
@@ -70,8 +72,8 @@
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.49,
-          "y": 0.427
+          "x": 0.439,
+          "y": 0.574
         },
         "captura": "capturas/02_00-26.jpg",
         "captura_anotada": "capturas/02_00-26_anotada.jpg",
@@ -82,52 +84,55 @@
         "tiempo": "00:58",
         "tiempo_seg": 58.0,
         "titulo": "Identificar los limites de adquisicion",
-        "descripcion": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color verde en la pantalla de planificacion.",
+        "descripcion": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color amarillo (en pantalla se ven amarillas; se indica verde) en la pantalla de planificacion.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.725,
-          "y": 0.149
+          "x": 0.639,
+          "y": 0.142
         },
         "captura": "capturas/03_00-58.jpg",
         "captura_anotada": "capturas/03_00-58_anotada.jpg",
         "tiempo_real_seg": 58.2,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color verde en la pantalla de planificacion."
       },
       {
         "tiempo": "01:27",
         "tiempo_seg": 87.0,
         "titulo": "Confirmar movimiento de camilla",
-        "descripcion": "Se confirma el cuadro de dialogo en pantalla para mover la camilla a la posicion del corte de prueba (target position 108.0 mm).",
+        "descripcion": "Se confirma el cuadro de dialogo en pantalla para mover la camilla presionando el boton Confirm.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Corte de prueba",
         "zona": {
-          "x": 0.56,
-          "y": 0.863
+          "x": 0.682,
+          "y": 0.966
         },
         "captura": "capturas/04_01-27.jpg",
         "captura_anotada": "capturas/04_01-27_anotada.jpg",
         "tiempo_real_seg": 86.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se confirma el cuadro de dialogo en pantalla para mover la camilla a la posicion del corte de prueba (target position 108.0 mm)."
       },
       {
         "tiempo": "01:40",
         "tiempo_seg": 100.0,
         "titulo": "Ajustar la region de interes (ROI)",
-        "descripcion": "Se demuestra como posicionar y redimensionar el ROI en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
+        "descripcion": "Se demuestra como posicionar y redimensionar el ROI (marcado con un pequeño circulo amarillo) en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.718,
-          "y": 0.361
+          "x": 0.625,
+          "y": 0.264
         },
         "captura": "capturas/05_01-40.jpg",
         "captura_anotada": "capturas/05_01-40_anotada.jpg",
         "tiempo_real_seg": 99.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se demuestra como posicionar y redimensionar el ROI en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen."
       },
       {
         "tiempo": "02:11",
@@ -138,8 +143,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.489,
-          "y": 0.966
+          "x": 0.49,
+          "y": 0.772
         },
         "captura": "capturas/06_02-11.jpg",
         "captura_anotada": "capturas/06_02-11_anotada.jpg",
@@ -150,18 +155,19 @@
         "tiempo": "02:23",
         "tiempo_seg": 143.0,
         "titulo": "Visualizar cortes con Scan Plan",
-        "descripcion": "Se presiona el boton Scan Plan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
+        "descripcion": "Se presiona el boton ScanPlan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.15,
-          "y": 0.956
+          "x": 0.118,
+          "y": 0.894
         },
         "captura": "capturas/07_02-23.jpg",
         "captura_anotada": "capturas/07_02-23_anotada.jpg",
         "tiempo_real_seg": 143.2,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se presiona el boton Scan Plan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP."
       },
       {
         "tiempo": "02:54",
@@ -172,8 +178,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.242,
-          "y": 0.141
+          "x": 0.236,
+          "y": 0.357
         },
         "captura": "capturas/08_02-54.jpg",
         "captura_anotada": "capturas/08_02-54_anotada.jpg",
@@ -184,18 +190,19 @@
         "tiempo": "03:15",
         "tiempo_seg": 195.0,
         "titulo": "Modificar el tiempo de espera (Wait)",
-        "descripcion": "Se ingresa un tiempo de espera (Wait) de 5.0 segundos en la secuencia para retrasar el inicio del escaneo y optimizar el uso de radiacion respecto a la llegada del contraste.",
+        "descripcion": "Se ingresa un tiempo de espera (Wait) en la secuencia para retrasar el inicio del escaneo; se selecciona la casilla correspondiente en la fila 2 de SureStart.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.218,
-          "y": 0.597
+          "x": 0.305,
+          "y": 0.542
         },
         "captura": "capturas/09_03-15.jpg",
         "captura_anotada": "capturas/09_03-15_anotada.jpg",
         "tiempo_real_seg": 194.8,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se ingresa un tiempo de espera (Wait) de 5.0 segundos en la secuencia para retrasar el inicio del escaneo y optimizar el uso de radiacion respecto a la llegada del contraste."
       },
       {
         "tiempo": "03:44",
@@ -206,8 +213,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.234,
-          "y": 0.305
+          "x": 0.285,
+          "y": 0.268
         },
         "captura": "capturas/10_03-44.jpg",
         "captura_anotada": "capturas/10_03-44_anotada.jpg",
@@ -222,9 +229,12 @@
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.815,
+          "y": 0.714
+        },
         "captura": "capturas/11_04-08.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/11_04-08_anotada.jpg",
         "tiempo_real_seg": 247.0,
         "puntaje": null
       },
@@ -232,15 +242,19 @@
         "tiempo": "04:18",
         "tiempo_seg": 258.0,
         "titulo": "Ajustar la región de interés (ROI)",
-        "descripcion": "El operador explica que durante los primeros 5 segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz.",
+        "descripcion": "El operador explica que durante los primeros segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz 'ROI Position'.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.427,
+          "y": 0.551
+        },
         "captura": "capturas/12_04-18.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/12_04-18_anotada.jpg",
         "tiempo_real_seg": 258.2,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "El operador explica que durante los primeros 5 segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz."
       },
       {
         "tiempo": "04:33",
@@ -250,9 +264,12 @@
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.586,
+          "y": 0.718
+        },
         "captura": "capturas/13_04-33.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/13_04-33_anotada.jpg",
         "tiempo_real_seg": 273.6,
         "puntaje": null
       },
@@ -260,15 +277,19 @@
         "tiempo": "05:05",
         "tiempo_seg": 305.0,
         "titulo": "Duración de la adquisición del Angio-TEP",
-        "descripcion": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3,3 segundos.",
+        "descripcion": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3.3 segundos.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.453,
+          "y": 0.719
+        },
         "captura": "capturas/14_05-05.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_05-05_anotada.jpg",
         "tiempo_real_seg": 304.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3,3 segundos."
       },
       {
         "tiempo": "05:37",
@@ -278,9 +299,12 @@
         "importancia": 4,
         "fuente": "audio",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.482,
+          "y": 0.625
+        },
         "captura": "capturas/15_05-37.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/15_05-37_anotada.jpg",
         "tiempo_real_seg": 337.2,
         "puntaje": null
       },
@@ -372,18 +396,19 @@
         "tiempo": "09:09",
         "tiempo_seg": 549.0,
         "titulo": "Acceder al menú SURE Subtraction",
-        "descripcion": "Se muestra la interfaz en pantalla donde se selecciona 'SURE Subtraction' para habilitar las opciones de sustracción digital en cerebro, cuello o angiografía.",
+        "descripcion": "Se muestra la interfaz en pantalla donde se selecciona el botón 'SURE Subtraction' en el panel lateral izquierdo para habilitar las opciones de sustracción digital.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de sustracción digital",
         "zona": {
-          "x": 0.139,
-          "y": 0.878
+          "x": 0.313,
+          "y": 0.556
         },
         "captura": "capturas/22_09-09.jpg",
         "captura_anotada": "capturas/22_09-09_anotada.jpg",
         "tiempo_real_seg": 549.6,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se muestra la interfaz en pantalla donde se selecciona 'SURE Subtraction' para habilitar las opciones de sustracción digital en cerebro, cuello o angiografía."
       },
       {
         "tiempo": "09:25",
@@ -417,18 +442,19 @@
         "tiempo": "10:37",
         "tiempo_seg": 637.0,
         "titulo": "Crear protocolo ANGIO AORTA DSA",
-        "descripcion": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA).",
+        "descripcion": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA). En la barra de título se visualiza ANGIO AORTA DSA.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Programación de protocolos",
         "zona": {
-          "x": 0.605,
-          "y": 0.141
+          "x": 0.371,
+          "y": 0.092
         },
         "captura": "capturas/25_10-37.jpg",
         "captura_anotada": "capturas/25_10-37_anotada.jpg",
         "tiempo_real_seg": 637.6,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA)."
       },
       {
         "tiempo": "11:05",
@@ -439,7 +465,7 @@
         "fuente": "ambos",
         "seccion": "Ajuste de parámetros de adquisición",
         "zona": {
-          "x": 0.56,
+          "x": 0.401,
           "y": 0.801
         },
         "captura": "capturas/26_11-05.jpg",
@@ -455,9 +481,12 @@
         "importancia": 3,
         "fuente": "audio",
         "seccion": "Ajuste de parámetros de adquisición",
-        "zona": null,
+        "zona": {
+          "x": 0.361,
+          "y": 0.725
+        },
         "captura": "capturas/27_11-15.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/27_11-15_anotada.jpg",
         "tiempo_real_seg": 674.4,
         "puntaje": null
       },
@@ -483,12 +512,9 @@
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
-        "zona": {
-          "x": 0.235,
-          "y": 0.745
-        },
+        "zona": null,
         "captura": "capturas/29_12-08.jpg",
-        "captura_anotada": "capturas/29_12-08_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 727.0,
         "puntaje": null
       },
@@ -496,18 +522,19 @@
         "tiempo": "13:10",
         "tiempo_seg": 790.0,
         "titulo": "Seleccionar el filtro de sustracción automática",
-        "descripcion": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular, indicando que el software realiza un registro rígido o deformable según corresponda.",
+        "descripcion": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.56,
-          "y": 0.75
+          "x": 0.625,
+          "y": 0.826
         },
         "captura": "capturas/30_13-10.jpg",
         "captura_anotada": "capturas/30_13-10_anotada.jpg",
         "tiempo_real_seg": 790.6,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular, indicando que el software realiza un registro rígido o deformable según corresponda."
       },
       {
         "tiempo": "13:34",
@@ -517,45 +544,52 @@
         "importancia": 5,
         "fuente": "audio",
         "seccion": "Posicionamiento y Seguridad",
-        "zona": null,
+        "zona": {
+          "x": 0.738,
+          "y": 0.532
+        },
         "captura": "capturas/31_13-34.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/31_13-34_anotada.jpg",
         "tiempo_real_seg": 813.0,
         "puntaje": null
       },
       {
         "tiempo": "14:30",
         "tiempo_seg": 870.0,
-        "titulo": "Diferenciar nombres de serie en reconstrucción",
-        "descripcion": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' (por ejemplo, 'ANGIO AORTA') para evitar confusiones en el análisis vascular posterior.",
+        "titulo": "Diferenciar nombres de serie en reconstruccion",
+        "descripcion": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' para evitar confusiones en el analisis vascular posterior. En pantalla se visualiza la configuracion del volumen de reconstruccion.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.56,
-          "y": 0.79
+          "x": 0.648,
+          "y": 0.704
         },
         "captura": "capturas/32_14-30.jpg",
         "captura_anotada": "capturas/32_14-30_anotada.jpg",
         "tiempo_real_seg": 870.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Diferenciar nombres de serie en reconstrucción",
+        "descripcion_original": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' (por ejemplo, 'ANGIO AORTA') para evitar confusiones en el análisis vascular posterior."
       },
       {
         "tiempo": "16:30",
         "tiempo_seg": 990.0,
-        "titulo": "Reiniciar la cola de reconstrucción",
-        "descripcion": "Para solucionar problemas cuando la reconstrucción se queda en estado de espera ('Hold'), se debe ir al menú Utility y seleccionar la opción 'Reconstruction Queue restart' para destrabar el proceso.",
+        "titulo": "Reiniciar la cola de reconstruccion",
+        "descripcion": "Para solucionar problemas cuando la reconstruccion se queda en estado de espera ('Hold'), se debe ir al menu Utility y seleccionar la opcion 'Reconstruction Queue restart' para destrabar el proceso.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Resolución de Problemas",
         "zona": {
-          "x": 0.19,
-          "y": 0.36
+          "x": 0.204,
+          "y": 0.387
         },
         "captura": "capturas/33_16-30.jpg",
         "captura_anotada": "capturas/33_16-30_anotada.jpg",
         "tiempo_real_seg": 989.0,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Reiniciar la cola de reconstrucción",
+        "descripcion_original": "Para solucionar problemas cuando la reconstrucción se queda en estado de espera ('Hold'), se debe ir al menú Utility y seleccionar la opción 'Reconstruction Queue restart' para destrabar el proceso."
       }
     ],
     "transcripcion": [
@@ -1689,19 +1723,20 @@
   "documentos": {
     "docx": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx",
     "pdf": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf",
-    "paginas": 19
+    "paginas": 42
   },
   "uso_acumulado": {
-    "modelo": "gemini-3.5-flash",
-    "tokens_entrada": 432662,
-    "tokens_salida": 16677,
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 476529,
+    "tokens_salida": 19870,
     "tokens_pensamiento": 694,
-    "tokens_total": 450033,
+    "tokens_total": 497093,
     "detalle_entrada": {
       "VIDEO": 426730,
-      "TEXT": 5932
+      "TEXT": 13499,
+      "IMAGE": 36300
     },
-    "llamadas": 8,
+    "llamadas": 11,
     "batch": false,
     "costo_usd": null
   }

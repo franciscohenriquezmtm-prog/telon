@@ -33,3 +33,19 @@
 16:51:01   docx: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx
 16:51:02   pdf: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf (8 páginas)
 16:51:02 Listo en 4 min 18 s: 16 momentos, 8 páginas -> TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx, TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf
+18:46:28 === TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov: 07:18, 1920x1080, 59.97 fps, 693 MB -> salida/TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma
+18:46:28 --regenerar: se reutiliza el análisis de momentos.json (16 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:46:28 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:46:28 momentos.json guardado (16 momentos).
+18:46:28 Extrayendo 16 capturas de TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov…
+18:46:28   TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:46:38   10/16 capturas
+18:46:43 Capturas: 16 extraídas, 0 fallidas
+18:46:43 Refinando títulos y descripciones con 16 capturas en alta resolución (gemini-3.5-flash)…
+18:46:43 Refinando con gemini-3.5-flash los textos de 16 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:46:58 Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 16 con cambios (23544 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:47:01 Anotaciones: 14 capturas con círculo/flecha.
+18:47:01   documentos: 16 pasos, 1 por página (A4 vertical 1x1)
+18:47:01   docx: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx
+18:47:03   pdf: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf (20 páginas)
+18:47:03 Listo en 35 s: 16 momentos, 20 páginas -> TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx, TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf

@@ -31,3 +31,17 @@
 15:59:50   docx: TC_02_Peso_maximo_gantry_switch_idiomas.docx
 15:59:51   pdf: TC_02_Peso_maximo_gantry_switch_idiomas.pdf (11 páginas)
 15:59:51 Listo en 2 min 54 s: 10 momentos, 11 páginas -> TC_02_Peso_maximo_gantry_switch_idiomas.docx, TC_02_Peso_maximo_gantry_switch_idiomas.pdf
+18:24:01 === TC_02_Peso_maximo_gantry_switch_idiomas.mov: 05:44, 1080x1920, 59.97 fps, 935 MB -> salida/TC_02_Peso_maximo_gantry_switch_idiomas
+18:24:01 --regenerar: se reutiliza el análisis de momentos.json (10 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:24:01 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:24:01 momentos.json guardado (10 momentos).
+18:24:01 Extrayendo 10 capturas de TC_02_Peso_maximo_gantry_switch_idiomas.mov…
+18:24:08 Capturas: 10 extraídas, 0 fallidas
+18:24:08 Refinando títulos y descripciones con 10 capturas en alta resolución (gemini-3.5-flash)…
+18:24:08 Refinando con gemini-3.5-flash los textos de 10 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:24:14 Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 4 con cambios (14363 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:24:17 Anotaciones: 8 capturas con círculo/flecha.
+18:24:17   documentos: 10 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+18:24:18   docx: TC_02_Peso_maximo_gantry_switch_idiomas.docx
+18:24:19   pdf: TC_02_Peso_maximo_gantry_switch_idiomas.pdf (15 páginas)
+18:24:19 Listo en 17 s: 10 momentos, 15 páginas -> TC_02_Peso_maximo_gantry_switch_idiomas.docx, TC_02_Peso_maximo_gantry_switch_idiomas.pdf

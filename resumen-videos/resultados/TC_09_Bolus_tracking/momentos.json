@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:30:03",
+  "generado": "2026-09-25T18:42:33",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 10 con cambios (15180 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 10 con cambios (15180 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:42",
+      "Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 0 con cambios (15965 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 153739,
-      "tokens_salida": 6297,
+      "tokens_entrada": 14723,
+      "tokens_salida": 1242,
       "tokens_pensamiento": 0,
-      "tokens_total": 160036,
+      "tokens_total": 15965,
       "detalle_entrada": {
-        "TEXT": 3699,
-        "VIDEO": 137940,
-        "IMAGE": 12100
+        "IMAGE": 12100,
+        "TEXT": 2623
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -602,20 +603,20 @@
   "documentos": {
     "docx": "TC_09_Bolus_tracking.docx",
     "pdf": "TC_09_Bolus_tracking.pdf",
-    "paginas": 8
+    "paginas": 15
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 153739,
-    "tokens_salida": 6297,
+    "tokens_entrada": 168462,
+    "tokens_salida": 7539,
     "tokens_pensamiento": 0,
-    "tokens_total": 160036,
+    "tokens_total": 176001,
     "detalle_entrada": {
-      "TEXT": 3699,
+      "TEXT": 6322,
       "VIDEO": 137940,
-      "IMAGE": 12100
+      "IMAGE": 24200
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

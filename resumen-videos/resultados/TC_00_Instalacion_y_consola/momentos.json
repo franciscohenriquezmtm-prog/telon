@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T15:53:12",
+  "generado": "2026-09-25T18:22:38",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -28,20 +28,21 @@
     "tramos": 2,
     "avisos": [
       "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 12 con cambios (22470 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
-      "Regenerado desde momentos.json el 2026-09-25 15:52"
+      "Regenerado desde momentos.json el 2026-09-25 15:52",
+      "Regenerado desde momentos.json el 2026-09-25 18:22",
+      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 1 con cambios (22797 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 294157,
-      "tokens_salida": 9121,
+      "tokens_entrada": 21692,
+      "tokens_salida": 1105,
       "tokens_pensamiento": 0,
-      "tokens_total": 303278,
+      "tokens_total": 22797,
       "detalle_entrada": {
-        "VIDEO": 270180,
-        "TEXT": 6377,
+        "TEXT": 4092,
         "IMAGE": 17600
       },
-      "llamadas": 6,
+      "llamadas": 2,
       "batch": false,
       "costo_usd": null
     },
@@ -299,16 +300,13 @@
         "tiempo": "09:43",
         "tiempo_seg": 583.0,
         "titulo": "Estabilizar temperatura antes de operar",
-        "descripcion": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen. El tomógrafo Canon Aquilion Exceed LB debe climatizarse.",
+        "descripcion": "Al restablecer la energia tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la camara de detectores alcance una temperatura estable y evitar artefactos en la imagen. El tomografo Canon Aquilion Exceed LB debe climatizarse.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Apagado y Seguridad",
-        "zona": {
-          "x": 0.709,
-          "y": 0.326
-        },
+        "zona": null,
         "captura": "capturas/16_09-43.jpg",
-        "captura_anotada": "capturas/16_09-43_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 583.2,
         "puntaje": null,
         "descripcion_original": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen."
@@ -710,20 +708,20 @@
   "documentos": {
     "docx": "TC_00_Instalacion_y_consola.docx",
     "pdf": "TC_00_Instalacion_y_consola.pdf",
-    "paginas": 14
+    "paginas": 21
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 294157,
-    "tokens_salida": 9121,
+    "tokens_entrada": 315849,
+    "tokens_salida": 10226,
     "tokens_pensamiento": 0,
-    "tokens_total": 303278,
+    "tokens_total": 326075,
     "detalle_entrada": {
       "VIDEO": 270180,
-      "TEXT": 6377,
-      "IMAGE": 17600
+      "TEXT": 10469,
+      "IMAGE": 35200
     },
-    "llamadas": 6,
+    "llamadas": 8,
     "batch": false,
     "costo_usd": null
   }

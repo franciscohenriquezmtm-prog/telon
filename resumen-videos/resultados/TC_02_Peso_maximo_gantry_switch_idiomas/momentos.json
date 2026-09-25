@@ -18,7 +18,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T15:59:51",
+  "generado": "2026-09-25T18:24:19",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -28,20 +28,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 10 con cambios (14102 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 10 con cambios (14102 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:24",
+      "Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 4 con cambios (14363 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 145149,
-      "tokens_salida": 8284,
+      "tokens_entrada": 13483,
+      "tokens_salida": 880,
       "tokens_pensamiento": 0,
-      "tokens_total": 153433,
+      "tokens_total": 14363,
       "detalle_entrada": {
-        "TEXT": 3431,
-        "VIDEO": 130718,
+        "TEXT": 2483,
         "IMAGE": 11000
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -55,7 +56,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.56,
+          "x": 0.555,
           "y": 0.298
         },
         "captura": "capturas/01_00-01.jpg",
@@ -91,12 +92,9 @@
         "importancia": 3,
         "fuente": "audio",
         "seccion": "Posicionamiento",
-        "zona": {
-          "x": 0.483,
-          "y": 0.42
-        },
+        "zona": null,
         "captura": "capturas/03_00-53.jpg",
-        "captura_anotada": "capturas/03_00-53_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 53.6,
         "puntaje": null
       },
@@ -127,7 +125,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.516,
+          "x": 0.505,
           "y": 0.585
         },
         "captura": "capturas/05_02-08.jpg",
@@ -163,12 +161,9 @@
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": {
-          "x": 0.456,
-          "y": 0.32
-        },
+        "zona": null,
         "captura": "capturas/07_02-27.jpg",
-        "captura_anotada": "capturas/07_02-27_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 146.0,
         "puntaje": null,
         "titulo_original": "Controlar radiación desde gantry",
@@ -865,20 +860,20 @@
   "documentos": {
     "docx": "TC_02_Peso_maximo_gantry_switch_idiomas.docx",
     "pdf": "TC_02_Peso_maximo_gantry_switch_idiomas.pdf",
-    "paginas": 11
+    "paginas": 15
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 145149,
-    "tokens_salida": 8284,
+    "tokens_entrada": 158632,
+    "tokens_salida": 9164,
     "tokens_pensamiento": 0,
-    "tokens_total": 153433,
+    "tokens_total": 167796,
     "detalle_entrada": {
-      "TEXT": 3431,
+      "TEXT": 5914,
       "VIDEO": 130718,
-      "IMAGE": 11000
+      "IMAGE": 22000
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

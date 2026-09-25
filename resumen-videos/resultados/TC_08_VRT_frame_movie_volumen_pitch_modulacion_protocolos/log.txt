@@ -42,3 +42,33 @@
 16:26:24   docx: TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx
 16:26:26   pdf: TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf (15 páginas)
 16:26:26 Listo en 8 min 23 s: 31 momentos, 15 páginas -> TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx, TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf
+18:28:15 === TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov: 13:54, 1920x1080, 59.97 fps, 1321 MB -> salida/TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos
+18:28:15 --regenerar: se reutiliza el análisis de momentos.json (31 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:28:15 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:28:15 momentos.json guardado (31 momentos).
+18:28:15 Extrayendo 31 capturas de TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov…
+18:28:15   TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:28:25   10/31 capturas
+18:28:36   20/31 capturas
+18:28:47   30/31 capturas
+18:28:48 Capturas: 31 extraídas, 0 fallidas
+18:28:48 Refinando títulos y descripciones con 31 capturas en alta resolución (gemini-3.5-flash)…
+18:28:48 Refinando con gemini-3.5-flash los textos de 31 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+18:40:52 === TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov: 13:54, 1920x1080, 59.97 fps, 1321 MB -> salida/TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos
+18:40:52 --regenerar: se reutiliza el análisis de momentos.json (31 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:40:52 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:40:52 momentos.json guardado (31 momentos).
+18:40:52 Extrayendo 31 capturas de TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov…
+18:40:52   TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:41:03   10/31 capturas
+18:41:13   20/31 capturas
+18:41:24   30/31 capturas
+18:41:25 Capturas: 31 extraídas, 0 fallidas
+18:41:25 Refinando títulos y descripciones con 31 capturas en alta resolución (gemini-3.5-flash)…
+18:41:25 Refinando con gemini-3.5-flash los textos de 31 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+18:41:46 Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 5 con cambios (45322 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:41:53 Anotaciones: 30 capturas con círculo/flecha.
+18:41:53   documentos: 31 pasos, 1 por página (A4 vertical 1x1)
+18:41:53   docx: TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx
+18:41:56   pdf: TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf (37 páginas)
+18:41:56 Listo en 1 min 3 s: 31 momentos, 37 páginas -> TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx, TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf

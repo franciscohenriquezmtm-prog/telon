@@ -1,0 +1,603 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov",
+    "nombre": "TC_15_Hold_recons_worklist_DICOM_infochange_orientacion",
+    "duracion_seg": 337.58,
+    "duracion": "05:38",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 960000645,
+    "extra": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T18:51:20",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Configuración y edición de datos en tomógrafo Canon",
+    "resumen": "Este video tutorial muestra cómo operar la interfaz del tomógrafo computado Canon Aquilion. Se detallan procesos clave como reiniciar la cola de reconstrucción, corregir información del paciente tras la adquisición y solucionar problemas comunes de software.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 13 pasos revisados en 1 petición(es), 11 con cambios (18431 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 146877,
+      "tokens_salida": 6291,
+      "tokens_pensamiento": 0,
+      "tokens_total": 153168,
+      "detalle_entrada": {
+        "TEXT": 4157,
+        "VIDEO": 128420,
+        "IMAGE": 14300
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:05",
+        "tiempo_seg": 5.0,
+        "titulo": "Reiniciar cola de reconstrucción",
+        "descripcion": "Si el sistema queda en Hold y no reconstruye, se debe acceder al menú Utility y seleccionar Reconstruction Queue restart para reiniciar el proceso.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.26,
+          "y": 0.387
+        },
+        "captura": "capturas/01_00-05.jpg",
+        "captura_anotada": "capturas/01_00-05_anotada.jpg",
+        "tiempo_real_seg": 5.2,
+        "puntaje": null,
+        "descripcion_original": "Si el sistema queda en Hold y no reconstruye, se debe acceder al menú Utility y seleccionar Reconstruction Queue Restart para reiniciar el proceso."
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Visualizar estado de reconstrucción",
+        "descripcion": "Al hacer clic en el icono correspondiente a la izquierda de Utility (icono de cola de reconstrucción), se despliega la pantalla que muestra todas las tareas de reconstrucción en cola.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.268,
+          "y": 0.264
+        },
+        "captura": "capturas/02_00-15.jpg",
+        "captura_anotada": "capturas/02_00-15_anotada.jpg",
+        "tiempo_real_seg": 15.2,
+        "puntaje": null,
+        "descripcion_original": "Al hacer clic en el icono correspondiente, se despliega la pantalla que muestra todas las tareas de reconstrucción en cola."
+      },
+      {
+        "tiempo": "00:26",
+        "tiempo_seg": 26.0,
+        "titulo": "Cerrar ventana de reconstrucción",
+        "descripcion": "Es fundamental cerrar la ventana de reconstrucción tras consultarla presionando Quit. Si se deja abierta, el sistema puede quedar bloqueado en Hold durante el escaneo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.807,
+          "y": 0.481
+        },
+        "captura": "capturas/03_00-26.jpg",
+        "captura_anotada": "capturas/03_00-26_anotada.jpg",
+        "tiempo_real_seg": 25.8,
+        "puntaje": null,
+        "descripcion_original": "Es fundamental cerrar la ventana de reconstrucción tras consultarla. Si se deja abierta, el sistema puede quedar bloqueado en Hold durante el escaneo."
+      },
+      {
+        "tiempo": "00:47",
+        "tiempo_seg": 47.0,
+        "titulo": "Recuperar estado tras bloqueo",
+        "descripcion": "Si el sistema se traba en Hold por un error de software, la solución habitual es volver a abrir la ventana de reconstrucción y cerrarla inmediatamente.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Resolución de problemas",
+        "zona": null,
+        "captura": "capturas/04_00-47.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 46.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:15",
+        "tiempo_seg": 75.0,
+        "titulo": "Cargar paciente desde servidor",
+        "descripcion": "Seleccionar Appoint, luego presionar Option para abrir la lista de la Patient Information, buscar el paciente requerido y cargarlo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.204,
+          "y": 0.574
+        },
+        "captura": "capturas/05_01-15.jpg",
+        "captura_anotada": "capturas/05_01-15_anotada.jpg",
+        "tiempo_real_seg": 75.6,
+        "puntaje": null,
+        "descripcion_original": "Seleccionar Appoint, luego From Server, presionar Reload para actualizar la lista de la Worklist y seleccionar el paciente requerido."
+      },
+      {
+        "tiempo": "01:29",
+        "tiempo_seg": 89.0,
+        "titulo": "Consultar detalles del estudio",
+        "descripcion": "Al ingresar en el botón Detail, se pueden revisar campos críticos como ID, Lastname, DOB, Sex y la descripción del estudio asociada.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.402,
+          "y": 0.509
+        },
+        "captura": "capturas/06_01-29.jpg",
+        "captura_anotada": "capturas/06_01-29_anotada.jpg",
+        "tiempo_real_seg": 88.8,
+        "puntaje": null,
+        "descripcion_original": "Al ingresar en Detail, se pueden revisar campos críticos como Study ID, Accession Number y la descripción del estudio asociada."
+      },
+      {
+        "tiempo": "01:44",
+        "tiempo_seg": 104.0,
+        "titulo": "Verificar Study Description",
+        "descripcion": "Se advierte que a veces el sistema de RIS no transfiere el código del Study Description correctamente debido a discrepancias en el mapeo de tags DICOM, mostrándose vacío bajo la pestaña Study.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.681,
+          "y": 0.353
+        },
+        "captura": "capturas/07_01-44.jpg",
+        "captura_anotada": "capturas/07_01-44_anotada.jpg",
+        "tiempo_real_seg": 103.4,
+        "puntaje": null,
+        "descripcion_original": "Se advierte que a veces el sistema de RIS no transfiere el código del Study Description correctamente debido a discrepancias en el mapeo de tags DICOM."
+      },
+      {
+        "tiempo": "02:32",
+        "tiempo_seg": 152.0,
+        "titulo": "Editar Accession Number manualmente",
+        "descripcion": "Si el sistema RIS falla, se pueden digitar o modificar de forma manual los campos como el Accession No. directamente desde la pestaña Study.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.709,
+          "y": 0.242
+        },
+        "captura": "capturas/08_02-32.jpg",
+        "captura_anotada": "capturas/08_02-32_anotada.jpg",
+        "tiempo_real_seg": 152.6,
+        "puntaje": null,
+        "descripcion_original": "Si el sistema RIS falla, se pueden digitar o modificar de forma manual los campos como el Accession Number directamente desde la pestaña Study."
+      },
+      {
+        "tiempo": "02:56",
+        "tiempo_seg": 176.0,
+        "titulo": "Modificar información de examen finalizado",
+        "descripcion": "Para corregir datos de un examen que ya ha sido adquirido, se debe ingresar a Utility y seleccionar Info. Change en el menú desplegable.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.311,
+          "y": 0.444
+        },
+        "captura": "capturas/09_02-56.jpg",
+        "captura_anotada": "capturas/09_02-56_anotada.jpg",
+        "tiempo_real_seg": 176.6,
+        "puntaje": null,
+        "descripcion_original": "Para corregir datos de un examen que ya ha sido adquirido, se debe ingresar a Utility y seleccionar Info. Change."
+      },
+      {
+        "tiempo": "03:13",
+        "tiempo_seg": 193.0,
+        "titulo": "Corregir datos del paciente",
+        "descripcion": "En la pantalla de Information retouch, es posible corregir el ID, el apellido (Lastname), el nombre (First) y otros datos demográficos esenciales.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.446,
+          "y": 0.165
+        },
+        "captura": "capturas/10_03-13.jpg",
+        "captura_anotada": "capturas/10_03-13_anotada.jpg",
+        "tiempo_real_seg": 192.8,
+        "puntaje": null,
+        "descripcion_original": "En la pantalla de Information Retouch, es posible corregir el apellido (Lastname), ID del paciente y otros datos demográficos esenciales."
+      },
+      {
+        "tiempo": "03:24",
+        "tiempo_seg": 204.0,
+        "titulo": "Modificar posición del paciente",
+        "descripcion": "Se permite cambiar la posición registrada (ej. Supine, Prone, Right Lateral o Left Lateral) bajo la pestaña Scan de Information retouch para evitar confusiones anatómicas.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.697,
+          "y": 0.278
+        },
+        "captura": "capturas/11_03-24.jpg",
+        "captura_anotada": "capturas/11_03-24_anotada.jpg",
+        "tiempo_real_seg": 203.0,
+        "puntaje": null,
+        "descripcion_original": "Se permite cambiar la posición registrada (ej. Supine a Prone) en caso de error durante la preparación del estudio, evitando confusiones anatómicas."
+      },
+      {
+        "tiempo": "03:38",
+        "tiempo_seg": 218.0,
+        "titulo": "Advertencia sobre reformateos",
+        "descripcion": "Se recomienda realizar la corrección de datos mediante Info. Change antes de generar reformateos de imágenes, para evitar inconsistencias en el envío al PACS.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Edición post-adquisición",
+        "zona": null,
+        "captura": "capturas/12_03-38.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 218.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:47",
+        "tiempo_seg": 287.0,
+        "titulo": "Registrar cambios y actualizar",
+        "descripcion": "Al hacer clic en el botón Register, el sistema actualiza todas las imágenes de la serie con la nueva información del paciente.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.849,
+          "y": 0.498
+        },
+        "captura": "capturas/13_04-47.jpg",
+        "captura_anotada": "capturas/13_04-47_anotada.jpg",
+        "tiempo_real_seg": 286.0,
+        "puntaje": null,
+        "descripcion_original": "Al hacer clic en Register, el sistema actualiza todas las imágenes de la serie. El cuadro Success muestra el progreso de actualización de los archivos."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 4.0,
+        "texto": "en hold y no reconstruye, y no reconstruye y pasa algo de aquí tú vas a utility"
+      },
+      {
+        "inicio": 4.0,
+        "fin": 8.0,
+        "texto": "y este reconstruction queue restart"
+      },
+      {
+        "inicio": 8.0,
+        "fin": 11.0,
+        "texto": "Sí."
+      },
+      {
+        "inicio": 11.0,
+        "fin": 16.0,
+        "texto": "Si yo hago clic acá para ver la reconstrucción y hago clic se va a abrir este menú"
+      },
+      {
+        "inicio": 16.0,
+        "fin": 19.0,
+        "texto": "y aquí van a aparecer todas."
+      },
+      {
+        "inicio": 19.0,
+        "fin": 27.0,
+        "texto": "Se detiene. No sigue reconstruyendo, entonces si ustedes lo dejan abierto y si lo abren ciérrelo."
+      },
+      {
+        "inicio": 27.0,
+        "fin": 36.0,
+        "texto": "Sí, ciérrelo porque a veces queda abierto y después yo le doy scan scan y paso a auto view ese, y como que se queda en scan, después voy para acá, para acá, vuelvo a scan"
+      },
+      {
+        "inicio": 36.0,
+        "fin": 43.0,
+        "texto": "y a veces por tema de software debo aceptar no vuelve a aparecer, entonces quedó escondido, entonces siempre queda en hold."
+      },
+      {
+        "inicio": 43.0,
+        "fin": 50.0,
+        "texto": "En ese caso también lo que yo he visto que funciona, volver a abrirlo y cerrarlo, y ahí y ahí recupera."
+      },
+      {
+        "inicio": 50.0,
+        "fin": 57.0,
+        "texto": "Y si ya no quiere, aquí utilidad reconstruction, que ya re-reinicia la la fila de reconstrucción."
+      },
+      {
+        "inicio": 57.0,
+        "fin": 60.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 60.0,
+        "fin": 64.0,
+        "texto": "Oh, no existe."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 69.0,
+        "texto": "Este es test de recursos tórax con contraste."
+      },
+      {
+        "inicio": 69.0,
+        "fin": 74.0,
+        "texto": "Y ahí uno cómo lo hace después, le hace para seleccionarlo y voy a voy a"
+      },
+      {
+        "inicio": 74.0,
+        "fin": 78.0,
+        "texto": "Appointment from server, reload."
+      },
+      {
+        "inicio": 78.0,
+        "fin": 81.0,
+        "texto": "Claro, de ahí vamos a aceptar paciente."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 84.0,
+        "texto": "Claro, era el tórax, ¿este?"
+      },
+      {
+        "inicio": 84.0,
+        "fin": 88.0,
+        "texto": "Okay o doble clic sobre él, y se carga."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 96.0,
+        "texto": "Y aquí en detail me aparecen los otros datos que pueden venir asociados,"
+      },
+      {
+        "inicio": 96.0,
+        "fin": 102.0,
+        "texto": "el accession number, study ID, study description por ejemplo,"
+      },
+      {
+        "inicio": 102.0,
+        "fin": 108.0,
+        "texto": "por ejemplo aquí no está tomando un study description sí que venía."
+      },
+      {
+        "inicio": 108.0,
+        "fin": 115.0,
+        "texto": "Entonces, tal vez lo tendría que escribir usted o con servicio técnico si es necesario ver el tag DICOM que viene del de la worklist."
+      },
+      {
+        "inicio": 115.0,
+        "fin": 124.0,
+        "texto": "El tag DICOM es como el study description, esta es la descripción, y son cuatro numeritos, 0110, 0011, son cuatro cuatro, es como el número de teléfono."
+      },
+      {
+        "inicio": 124.0,
+        "fin": 131.0,
+        "texto": "Entonces a veces el RIS no está enviando el study description en un número tag, pero Canon los trabaja en otro."
+      },
+      {
+        "inicio": 131.0,
+        "fin": 137.0,
+        "texto": "Entonces por eso no lo no lo no lo toma y cuando se va tampoco se va, pero nosotros internamente le podemos decir no sabes que ese tag"
+      },
+      {
+        "inicio": 137.0,
+        "fin": 144.0,
+        "texto": "es este otro número, y el equipo ah ya entonces, y ahí va a empezar a aparecer y se va a ir."
+      },
+      {
+        "inicio": 144.0,
+        "fin": 150.0,
+        "texto": "Pero eso todo eso se puede gestionar después con servicio. Pero de ahí aparece todo eso así que están trabajando, se echó a perder el RIS,"
+      },
+      {
+        "inicio": 150.0,
+        "fin": 156.0,
+        "texto": "pero ustedes tienen que continuar poniendo el el correlativo, acá ustedes lo pueden tipear y cambiar."
+      },
+      {
+        "inicio": 156.0,
+        "fin": 161.0,
+        "texto": "Y otra cosa, eh a ver una duda, por ejemplo tomé me pasaron un paciente"
+      },
+      {
+        "inicio": 161.0,
+        "fin": 165.0,
+        "texto": "Te equivocaste en el en el apellido."
+      },
+      {
+        "inicio": 165.0,
+        "fin": 171.0,
+        "texto": "No, tomé un paciente equivocado, y lo quiero pasar la imagen claro quiero ya sé que podemos corregir el nombre del paciente."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 175.0,
+        "texto": "Sí."
+      },
+      {
+        "inicio": 175.0,
+        "fin": 179.0,
+        "texto": "Acá, info change."
+      },
+      {
+        "inicio": 179.0,
+        "fin": 184.0,
+        "texto": "Yo presiono info change, pero eso del examen que ya está tomado."
+      },
+      {
+        "inicio": 184.0,
+        "fin": 190.0,
+        "texto": "Sí, que ya está tomado. Sí, una vez que ya se tomó es así, yo puedo modificar esto."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 194.0,
+        "texto": "Entonces por ejemplo voy acá a este que fue un fantoma, lo cargo, o sea el paciente que quiero,"
+      },
+      {
+        "inicio": 194.0,
+        "fin": 202.0,
+        "texto": "lo cargo, y acá por ejemplo yo corrijo, no sé, en mi caso Valenzuela por ejemplo."
+      },
+      {
+        "inicio": 202.0,
+        "fin": 212.0,
+        "texto": "Y registrar. Ah, y por ejemplo lo tomé supino pero era prono, me equivoqué también, ahí lo puede corregir."
+      },
+      {
+        "inicio": 212.0,
+        "fin": 216.0,
+        "texto": "Se fija, y todo."
+      },
+      {
+        "inicio": 216.0,
+        "fin": 223.0,
+        "texto": "Eso cambia la el eje, el lateral derecho con el izquierdo, es para que las banderas DICOM que están internamente que dicen como claro lo arregla."
+      },
+      {
+        "inicio": 223.0,
+        "fin": 228.0,
+        "texto": "Idealmente corregir esto antes de hacer reformateos de imágenes."
+      },
+      {
+        "inicio": 228.0,
+        "fin": 235.0,
+        "texto": "O sea al tiro corregirlo ojalá y después ya reformatear. Ahora le voy a poner registrar. Consulta, ¿entonces después habría que volver a reconstruir para que queden bien?"
+      },
+      {
+        "inicio": 235.0,
+        "fin": 242.0,
+        "texto": "Sí, porque a veces los reformateos quedan como con problemas, en mi experiencia por lo menos de las versiones anteriores,"
+      },
+      {
+        "inicio": 242.0,
+        "fin": 249.0,
+        "texto": "que ellos reformateaban y se daban cuenta al final, entonces y peor si ya enviaron esos reformateos al PACS con el anterior."
+      },
+      {
+        "inicio": 249.0,
+        "fin": 256.0,
+        "texto": "Oye ya es un conflicto porque después hacen el info change, lo corrigen, vuelven a reformatear o a tratar de enviarlo"
+      },
+      {
+        "inicio": 256.0,
+        "fin": 261.0,
+        "texto": "y quedan con los datos antiguos y el PACS ya recibió imágenes del mismo paciente con otros datos, es como un poco conflicto."
+      },
+      {
+        "inicio": 261.0,
+        "fin": 264.0,
+        "texto": "Aquí registrar."
+      },
+      {
+        "inicio": 264.0,
+        "fin": 271.0,
+        "texto": "Sí, okay."
+      },
+      {
+        "inicio": 271.0,
+        "fin": 276.0,
+        "texto": "Bueno voy de nuevo."
+      },
+      {
+        "inicio": 276.0,
+        "fin": 281.0,
+        "texto": "Cargar."
+      },
+      {
+        "inicio": 281.0,
+        "fin": 286.0,
+        "texto": "Para empezar a ver cardio CTA ahora."
+      },
+      {
+        "inicio": 286.0,
+        "fin": 290.0,
+        "texto": "Y un que cardio."
+      },
+      {
+        "inicio": 290.0,
+        "fin": 297.0,
+        "texto": "Ahí."
+      },
+      {
+        "inicio": 297.0,
+        "fin": 303.0,
+        "texto": "Y ahí están todas las imágenes que estaban asociadas. ¿No permite cambiar lo otro igual? Sí, sí se puede pero quizás fueron muchas cosas, quizás habría que ir de a uno."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 309.0,
+        "texto": "De nada."
+      },
+      {
+        "inicio": 309.0,
+        "fin": 315.0,
+        "texto": "Entonces ahí ya se ya se corrigió el apellido, el ID, lo que necesite."
+      },
+      {
+        "inicio": 315.0,
+        "fin": 321.0,
+        "texto": "Y si el nombre de una serie también se hace ahí o no, así como era arterial y le puse portovenoso."
+      },
+      {
+        "inicio": 321.0,
+        "fin": 326.0,
+        "texto": "Habría que crearla de nuevo y ponerle arterial, habría que reformatear lo demás, porque eso ya quedó, ahí no me permite modificar."
+      },
+      {
+        "inicio": 326.0,
+        "fin": 331.0,
+        "texto": "Ahí es fomo."
+      },
+      {
+        "inicio": 331.0,
+        "fin": 335.0,
+        "texto": "Acá, utility, info change."
+      },
+      {
+        "inicio": 335.0,
+        "fin": 337.58,
+        "texto": "Sí, y con eso pueden cambiar."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.docx",
+    "pdf": "TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.pdf",
+    "paginas": 17
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 146877,
+    "tokens_salida": 6291,
+    "tokens_pensamiento": 0,
+    "tokens_total": 153168,
+    "detalle_entrada": {
+      "TEXT": 4157,
+      "VIDEO": 128420,
+      "IMAGE": 14300
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

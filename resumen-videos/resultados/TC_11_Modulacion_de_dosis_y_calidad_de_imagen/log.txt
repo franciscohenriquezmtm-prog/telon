@@ -33,3 +33,22 @@
 16:37:24   docx: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx
 16:37:25   pdf: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf (10 páginas)
 16:37:25 Listo en 2 min 52 s: 12 momentos, 10 páginas -> TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx, TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf
+18:43:32 === TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov: 04:48, 1080x1920, 59.97 fps, 609 MB -> salida/TC_11_Modulacion_de_dosis_y_calidad_de_imagen
+18:43:32 --regenerar: se reutiliza el análisis de momentos.json (12 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:43:32 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:43:32 momentos.json guardado (12 momentos).
+18:43:32 Extrayendo 12 capturas de TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov…
+18:43:32   TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:43:43   10/12 capturas
+18:43:45 Capturas: 12 extraídas, 0 fallidas
+18:43:45 Refinando títulos y descripciones con 12 capturas en alta resolución (gemini-3.5-flash)…
+18:43:45 Refinando con gemini-3.5-flash los textos de 12 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:43:52 Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 12 con cambios (17060 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:43:52 Confirmando la dirección del giro de 12 capturas con gemini-3.5-flash (dos versiones por captura)…
+18:43:57 Orientación confirmada: 12 capturas revisadas, 0 con el giro corregido (6954 tokens).
+18:43:57 Capturas enderezadas: 12 (giradas según lo indicado por el refinado).
+18:44:03 Anotaciones: 12 capturas con círculo/flecha.
+18:44:03   documentos: 12 pasos, 1 por página (A4 vertical 1x1)
+18:44:03   docx: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx
+18:44:05   pdf: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf (16 páginas)
+18:44:05 Listo en 32 s: 12 momentos, 16 páginas -> TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx, TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf

@@ -2,8 +2,8 @@
   "video": {
     "ruta": "salida/Manual TC Canon",
     "nombre": "Manual TC Canon",
-    "duracion_seg": 7487.12,
-    "duracion": "124:47",
+    "duracion_seg": 7824.7,
+    "duracion": "130:25",
     "fps": 0.0,
     "ancho": 0,
     "alto": 0,
@@ -121,49 +121,97 @@
           "video": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion",
           "duracion": "18:43",
           "pasos": 33
+        },
+        {
+          "numero": 15,
+          "titulo": "Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente",
+          "carpeta": "salida/TC_15_Hold_recons_worklist_DICOM_infochange_orientacion",
+          "video": "TC_15_Hold_recons_worklist_DICOM_infochange_orientacion",
+          "duracion": "05:38",
+          "pasos": 13
         }
       ]
     }
   },
-  "generado": "2026-09-25T17:20:31",
+  "generado": "2026-09-25T18:52:27",
   "version": "1.0.0",
   "analisis": {
     "modo": "unido",
     "modelo": "gemini-3.5-flash",
     "titulo": "Manual de operación del TC Canon Aquilion Exceed LB",
-    "resumen": "Manual en 14 capítulos, uno por video de capacitación: 1. Apertura, FOV, detectores, aire acondicionado, tablero eléctrico, UPS y cortes de luz; 2. Botón de emergencia y botonera del gantry; 3. Peso máximo, gantry switch, idiomas y ejercicios; 4. Liberar al paciente en un corte de luz y reinicio del gantry; 5. Apagar y encender, warm up, calibración de aire, teclado y mouse; 6. Envío de series, calentamiento del tubo y worklist; 7. MPR, retrorreconstrucciones, autoview, batch y VRT; 8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos; 9. Bolus tracking; 10. Creación de un protocolo trifásico; 11. Modulación de dosis y calidad de imagen; 12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip; 13. Adquisición trifásica, contraste, quick exam y escanograma largo; 14. Simulación angio, bolus track, scanplan y sustracción digital.",
+    "resumen": "Manual en 15 capítulos, uno por video de capacitación: 1. Apertura, FOV, detectores, aire acondicionado, tablero eléctrico, UPS y cortes de luz; 2. Botón de emergencia y botonera del gantry; 3. Peso máximo, gantry switch, idiomas y ejercicios; 4. Liberar al paciente en un corte de luz y reinicio del gantry; 5. Apagar y encender, warm up, calibración de aire, teclado y mouse; 6. Envío de series, calentamiento del tubo y worklist; 7. MPR, retrorreconstrucciones, autoview, batch y VRT; 8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos; 9. Bolus tracking; 10. Creación de un protocolo trifásico; 11. Modulación de dosis y calidad de imagen; 12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip; 13. Adquisición trifásica, contraste, quick exam y escanograma largo; 14. Simulación angio, bolus track, scanplan y sustracción digital; 15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente.",
     "truncado": false,
     "tramos": 1,
     "avisos": [
       "Capítulo 1: Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 12 con cambios (22470 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 1: Regenerado desde momentos.json el 2026-09-25 15:52",
+      "Capítulo 1: Regenerado desde momentos.json el 2026-09-25 18:22",
+      "Capítulo 1: Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 1 con cambios (22797 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 2: Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 11 con cambios (16621 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 2: Regenerado desde momentos.json el 2026-09-25 15:53",
+      "Capítulo 2: Regenerado desde momentos.json el 2026-09-25 18:22",
+      "Capítulo 2: Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 7 con cambios (17133 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 3: Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 10 con cambios (14102 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 3: Regenerado desde momentos.json el 2026-09-25 18:24",
+      "Capítulo 3: Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 4 con cambios (14363 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 4: Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 8 con cambios (11278 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 4: Regenerado desde momentos.json el 2026-09-25 18:24",
+      "Capítulo 4: Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 0 con cambios (11391 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 5: Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 23 con cambios (33316 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 5: Regenerado desde momentos.json el 2026-09-25 18:25",
+      "Capítulo 5: Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (33935 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 5: Regenerado desde momentos.json el 2026-09-25 18:39",
+      "Capítulo 5: Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (36201 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 5: Orientación confirmada: 24 capturas revisadas, 5 con el giro corregido (14264 tokens).",
       "Capítulo 6: Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 8 con cambios (12785 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 6: Regenerado desde momentos.json el 2026-09-25 18:23",
+      "Capítulo 6: Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 2 con cambios (12871 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 7: Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 26 con cambios (39128 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 7: Regenerado desde momentos.json el 2026-09-25 18:26",
+      "Capítulo 7: Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (40892 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 7: Regenerado desde momentos.json el 2026-09-25 18:32",
+      "Capítulo 7: Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (41170 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 7: Regenerado desde momentos.json el 2026-09-25 18:36",
+      "Capítulo 7: Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 29 con cambios (41327 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 7: Orientación confirmada: 29 capturas revisadas, 14 con el giro corregido (17849 tokens).",
       "Capítulo 8: Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 8: Regenerado desde momentos.json el 2026-09-25 18:28",
+      "Capítulo 8: Regenerado desde momentos.json el 2026-09-25 18:40",
+      "Capítulo 8: Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 5 con cambios (45322 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 9: Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 10 con cambios (15180 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 9: Regenerado desde momentos.json el 2026-09-25 18:42",
+      "Capítulo 9: Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 0 con cambios (15965 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 10: Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 14 con cambios (20565 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 10: Regenerado desde momentos.json el 2026-09-25 18:42",
+      "Capítulo 10: Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 3 con cambios (21616 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
       "Capítulo 11: Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 12 con cambios (16563 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 11: Regenerado desde momentos.json el 2026-09-25 18:43",
+      "Capítulo 11: Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 12 con cambios (17060 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 11: Orientación confirmada: 12 capturas revisadas, 0 con el giro corregido (6954 tokens).",
       "Capítulo 12: Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43286 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 12: Regenerado desde momentos.json el 2026-09-25 18:44",
+      "Capítulo 12: Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (45158 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 12: Orientación confirmada: 30 capturas revisadas, 15 con el giro corregido (17428 tokens).",
       "Capítulo 13: Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 15 con cambios (22260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
-      "Capítulo 14: No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original."
+      "Capítulo 13: Regenerado desde momentos.json el 2026-09-25 18:46",
+      "Capítulo 13: Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 16 con cambios (23544 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 14: No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original.",
+      "Capítulo 14: Regenerado desde momentos.json el 2026-09-25 18:47",
+      "Capítulo 14: Refinado con capturas (gemini-3.5-flash): 33 pasos revisados en 3 petición(es), 24 con cambios (47060 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Capítulo 15: Refinado con capturas (gemini-3.5-flash): 13 pasos revisados en 1 petición(es), 11 con cambios (18431 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
-      "modelo": "gemini-3.5-flash",
-      "tokens_entrada": 3170607,
-      "tokens_salida": 121313,
-      "tokens_pensamiento": 694,
-      "tokens_total": 3292614,
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 544667,
+      "tokens_salida": 32713,
+      "tokens_pensamiento": 4091,
+      "tokens_total": 581471,
       "detalle_entrada": {
-        "VIDEO": 2845364,
-        "TEXT": 78843,
-        "IMAGE": 246400
+        "TEXT": 69087,
+        "IMAGE": 347160,
+        "VIDEO": 128420
       },
-      "llamadas": 69,
+      "llamadas": 40,
       "batch": false,
       "costo_usd": null
     },
@@ -436,16 +484,13 @@
         "tiempo": "09:43",
         "tiempo_seg": 583.0,
         "titulo": "Estabilizar temperatura antes de operar",
-        "descripcion": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen. El tomógrafo Canon Aquilion Exceed LB debe climatizarse.",
+        "descripcion": "Al restablecer la energia tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la camara de detectores alcance una temperatura estable y evitar artefactos en la imagen. El tomografo Canon Aquilion Exceed LB debe climatizarse.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Apagado y Seguridad",
-        "zona": {
-          "x": 0.709,
-          "y": 0.326
-        },
+        "zona": null,
         "captura": "capturas/01_16_09-43.jpg",
-        "captura_anotada": "capturas/01_16_09-43_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 583.2,
         "puntaje": null,
         "descripcion_original": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen.",
@@ -506,19 +551,20 @@
         "tiempo": "01:15",
         "tiempo_seg": 75.0,
         "titulo": "Mover lateralmente la camilla mecánicamente",
-        "descripcion": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente.",
+        "descripcion": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente. En pantalla se lee -236.0, +1135.5 y 0.0.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.409,
-          "y": 0.497
+          "x": 0.381,
+          "y": 0.492
         },
         "captura": "capturas/02_04_01-15.jpg",
         "captura_anotada": "capturas/02_04_01-15_anotada.jpg",
         "tiempo_real_seg": 75.6,
         "puntaje": null,
         "titulo_original": "Mover lateralmente la camilla mecanicamente",
+        "descripcion_original": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente.",
         "capitulo": "2. Botón de emergencia y botonera del gantry"
       },
       {
@@ -550,8 +596,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.732,
-          "y": 0.454
+          "x": 0.795,
+          "y": 0.349
         },
         "captura": "capturas/02_06_02-04.jpg",
         "captura_anotada": "capturas/02_06_02-04_anotada.jpg",
@@ -570,7 +616,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.718,
+          "x": 0.724,
           "y": 0.366
         },
         "captura": "capturas/02_07_02-10.jpg",
@@ -590,7 +636,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.412,
+          "x": 0.421,
           "y": 0.526
         },
         "captura": "capturas/02_08_02-35.jpg",
@@ -610,8 +656,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.541,
-          "y": 0.395
+          "x": 0.542,
+          "y": 0.393
         },
         "captura": "capturas/02_09_02-51.jpg",
         "captura_anotada": "capturas/02_09_02-51_anotada.jpg",
@@ -630,8 +676,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.588,
-          "y": 0.443
+          "x": 0.558,
+          "y": 0.435
         },
         "captura": "capturas/02_10_03-51.jpg",
         "captura_anotada": "capturas/02_10_03-51_anotada.jpg",
@@ -650,8 +696,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.558,
-          "y": 0.416
+          "x": 0.524,
+          "y": 0.431
         },
         "captura": "capturas/02_11_04-01.jpg",
         "captura_anotada": "capturas/02_11_04-01_anotada.jpg",
@@ -689,7 +735,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.56,
+          "x": 0.555,
           "y": 0.298
         },
         "captura": "capturas/03_01_00-01.jpg",
@@ -727,12 +773,9 @@
         "importancia": 3,
         "fuente": "audio",
         "seccion": "Posicionamiento",
-        "zona": {
-          "x": 0.483,
-          "y": 0.42
-        },
+        "zona": null,
         "captura": "capturas/03_03_00-53.jpg",
-        "captura_anotada": "capturas/03_03_00-53_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 53.6,
         "puntaje": null,
         "capitulo": "3. Peso máximo, gantry switch, idiomas y ejercicios"
@@ -765,7 +808,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.516,
+          "x": 0.505,
           "y": 0.585
         },
         "captura": "capturas/03_05_02-08.jpg",
@@ -803,12 +846,9 @@
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": {
-          "x": 0.456,
-          "y": 0.32
-        },
+        "zona": null,
         "captura": "capturas/03_07_02-27.jpg",
-        "captura_anotada": "capturas/03_07_02-27_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 146.0,
         "puntaje": null,
         "titulo_original": "Controlar radiación desde gantry",
@@ -1025,20 +1065,22 @@
         "tiempo": "00:01",
         "tiempo_seg": 1.0,
         "titulo": "Encender tomógrafo con botón físico principal",
-        "descripcion": "El encendido comienza presionando el botón físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
+        "descripcion": "El encendido comienza presionando el botón verde físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Encendido",
         "zona": {
-          "x": 0.58,
-          "y": 0.743
+          "x": 0.746,
+          "y": 0.423
         },
         "captura": "capturas/05_01_00-01.jpg",
         "captura_anotada": "capturas/05_01_00-01_anotada.jpg",
         "tiempo_real_seg": 1.2,
         "puntaje": null,
         "titulo_original": "Encender el tomógrafo desde el botón físico",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "descripcion_original": "El encendido comienza presionando el botón físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "00:15",
@@ -1053,7 +1095,8 @@
         "captura_anotada": null,
         "tiempo_real_seg": 14.0,
         "puntaje": null,
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "01:19",
@@ -1064,8 +1107,8 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.686,
-          "y": 0.196
+          "x": 0.191,
+          "y": 0.33
         },
         "captura": "capturas/05_03_01-19.jpg",
         "captura_anotada": "capturas/05_03_01-19_anotada.jpg",
@@ -1073,7 +1116,8 @@
         "puntaje": null,
         "titulo_original": "Acceder al menú de utilidades (Utility)",
         "descripcion_original": "Para realizar el mantenimiento diario del tubo, hacer clic en el botón Utility de la pantalla y luego seleccionar la opción Tools.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "01:25",
@@ -1084,8 +1128,8 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.612,
-          "y": 0.25
+          "x": 0.25,
+          "y": 0.252
         },
         "captura": "capturas/05_04_01-25.jpg",
         "captura_anotada": "capturas/05_04_01-25_anotada.jpg",
@@ -1093,7 +1137,8 @@
         "puntaje": null,
         "titulo_original": "Seleccionar la opción Warm-Up",
         "descripcion_original": "Hacer clic en el botón 'Warm-Up' en la pantalla de utilidades para iniciar el procedimiento de calentamiento del tubo de rayos X.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "01:31",
@@ -1104,15 +1149,16 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.476,
-          "y": 0.361
+          "x": 0.36,
+          "y": 0.363
         },
         "captura": "capturas/05_05_01-31.jpg",
         "captura_anotada": "capturas/05_05_01-31_anotada.jpg",
         "tiempo_real_seg": 90.0,
         "puntaje": null,
         "descripcion_original": "Se debe seleccionar la opción de calentamiento completo ('Yes' para Air Calibrations) al inicio del día para llevar el tubo a temperatura de trabajo y alargar su vida útil.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "01:52",
@@ -1123,15 +1169,16 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.314,
-          "y": 0.412
+          "x": 0.413,
+          "y": 0.413
         },
         "captura": "capturas/05_06_01-52.jpg",
         "captura_anotada": "capturas/05_06_01-52_anotada.jpg",
         "tiempo_real_seg": 112.2,
         "puntaje": null,
         "descripcion_original": "La camilla debe estar totalmente retraída y fuera del isocentro del gantry durante la calibración de aire para evitar artefactos o manchas en las imágenes futuras.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "02:37",
@@ -1142,8 +1189,8 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.218,
-          "y": 0.801
+          "x": 0.217,
+          "y": 0.22
         },
         "captura": "capturas/05_07_02-37.jpg",
         "captura_anotada": "capturas/05_07_02-37_anotada.jpg",
@@ -1151,7 +1198,8 @@
         "puntaje": null,
         "titulo_original": "Verificar indicador de temperatura OLP",
         "descripcion_original": "El indicador OLP muestra la temperatura del tubo; si marca 0% no es estrictamente necesario repetir el Warm-Up durante el día a menos que el equipo lo solicite.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "02:55",
@@ -1162,15 +1210,16 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.273,
-          "y": 0.046
+          "x": 0.674,
+          "y": 0.051
         },
         "captura": "capturas/05_08_02-55.jpg",
         "captura_anotada": "capturas/05_08_02-55_anotada.jpg",
         "tiempo_real_seg": 175.2,
         "puntaje": null,
         "descripcion_original": "El tomógrafo cuenta con parlantes en la consola y dentro de la sala para mantener una comunicación bidireccional clara con el paciente.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "03:10",
@@ -1181,15 +1230,16 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.478,
-          "y": 0.371
+          "x": 0.52,
+          "y": 0.372
         },
         "captura": "capturas/05_09_03-10.jpg",
         "captura_anotada": "capturas/05_09_03-10_anotada.jpg",
         "tiempo_real_seg": 190.6,
         "puntaje": null,
         "descripcion_original": "La perilla con el icono de la oreja en el teclado del tomógrafo ajusta el volumen de recepción para escuchar al paciente.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "03:20",
@@ -1200,15 +1250,16 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.421,
-          "y": 0.501
+          "x": 0.578,
+          "y": 0.502
         },
         "captura": "capturas/05_10_03-20.jpg",
         "captura_anotada": "capturas/05_10_03-20_anotada.jpg",
         "tiempo_real_seg": 199.0,
         "puntaje": null,
         "descripcion_original": "La perilla con el icono de ondas de transmisión permite ajustar el volumen de salida para hablarle al paciente manteniendo presionado el botón central.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "03:29",
@@ -1219,14 +1270,15 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.526,
-          "y": 0.328
+          "x": 0.471,
+          "y": 0.329
         },
         "captura": "capturas/05_11_03-29.jpg",
         "captura_anotada": "capturas/05_11_03-29_anotada.jpg",
         "tiempo_real_seg": 209.6,
         "puntaje": null,
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "03:44",
@@ -1237,7 +1289,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.435,
+          "x": 0.566,
           "y": 0.725
         },
         "captura": "capturas/05_12_03-44.jpg",
@@ -1245,7 +1297,8 @@
         "tiempo_real_seg": 224.6,
         "puntaje": null,
         "descripcion_original": "Se ingresa el valor de desplazamiento deseado en milímetros; un signo negativo indica movimiento hacia adentro del gantry y un signo positivo hacia afuera.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "04:10",
@@ -1256,14 +1309,15 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento de camilla",
         "zona": {
-          "x": 0.181,
-          "y": 0.178
+          "x": 0.18,
+          "y": 0.18
         },
         "captura": "capturas/05_13_04-10.jpg",
         "captura_anotada": "capturas/05_13_04-10_anotada.jpg",
         "tiempo_real_seg": 249.0,
         "puntaje": null,
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "04:19",
@@ -1274,7 +1328,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento de camilla",
         "zona": {
-          "x": 0.234,
+          "x": 0.764,
           "y": 0.767
         },
         "captura": "capturas/05_14_04-19.jpg",
@@ -1282,18 +1336,19 @@
         "tiempo_real_seg": 259.6,
         "puntaje": null,
         "descripcion_original": "El menú 'Couch slide' permite configurar movimientos para entrar o salir (Couch slide), subir o bajar (Couch Up/Down), o lateral (Couch Left/Right).",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "04:46",
         "tiempo_seg": 286.0,
         "titulo": "Iniciar o detener la radiación",
-        "descripcion": "Se identifican los botones de la consola para iniciar la radiación (triángulo en botón superior) y para detenerla de forma manual si es necesario.",
+        "descripcion": "Se identifican los botones de la consola para iniciar la radiación (triángulo en botón superior) e interruptor para detenerla de forma manual si es necesario.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.308,
+          "x": 0.692,
           "y": 0.401
         },
         "captura": "capturas/05_15_04-46.jpg",
@@ -1301,19 +1356,20 @@
         "tiempo_real_seg": 285.8,
         "puntaje": null,
         "descripcion_original": "Se identifican los botones del teclado físico para dar radiación (triángulo hacia arriba) y para cortar la radiación (triángulo hacia abajo).",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "04:58",
         "tiempo_seg": 298.0,
         "titulo": "Ajustar ventana y nivel con perillas",
-        "descripcion": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana (WL y WW en pantalla) para modificar de forma rípida el contraste de la imagen.",
+        "descripcion": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana (WL y WW en pantalla) para modificar de forma rápida el contraste de la imagen. En pantalla se lee WL=40 y WW=400.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de visualización",
         "zona": {
-          "x": 0.288,
-          "y": 0.425
+          "x": 0.425,
+          "y": 0.71
         },
         "captura": "capturas/05_16_04-58.jpg",
         "captura_anotada": "capturas/05_16_04-58_anotada.jpg",
@@ -1321,19 +1377,20 @@
         "puntaje": null,
         "titulo_original": "Ajustar ventana y nivel",
         "descripcion_original": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana para modificar el contraste de la imagen.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "05:03",
         "tiempo_seg": 303.0,
         "titulo": "Usar ventanas por defecto en teclado",
-        "descripcion": "Las teclas rípidas numeradas aplican ventanas preestablecidas (como WW=3500 o WW=385). La tecla '3' se asocia al filtro de reconstrucciín activo.",
+        "descripcion": "Las teclas rápidas numeradas aplican ventanas preestablecidas (como WW=3500 o WW=385). La tecla '3' se asocia al filtro de reconstrucción activo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de visualización",
         "zona": {
-          "x": 0.435,
-          "y": 0.468
+          "x": 0.39,
+          "y": 0.71
         },
         "captura": "capturas/05_17_05-03.jpg",
         "captura_anotada": "capturas/05_17_05-03_anotada.jpg",
@@ -1341,19 +1398,20 @@
         "puntaje": null,
         "titulo_original": "Usar ventanas por defecto",
         "descripcion_original": "Las teclas rápidas '1' y '2' aplican ventanas preestablecidas (óseo, pulmón, mediastino). La tecla '3' siempre se asocia al filtro de reconstrucción activo.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "06:11",
         "tiempo_seg": 371.0,
-        "titulo": "Navegaciín rípida de imígenes con mouse",
-        "descripcion": "Presionando el botín izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rípido tipo libro a travís de los cortes de la tomografía.",
+        "titulo": "Navegar rápidamente por imágenes con mouse",
+        "descripcion": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes de la tomografía.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.195,
-          "y": 0.698
+          "x": 0.66,
+          "y": 0.86
         },
         "captura": "capturas/05_18_06-11.jpg",
         "captura_anotada": "capturas/05_18_06-11_anotada.jpg",
@@ -1361,57 +1419,60 @@
         "puntaje": null,
         "titulo_original": "Navegación rápida de imágenes",
         "descripcion_original": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "06:44",
         "tiempo_seg": 404.0,
         "titulo": "Realizar paneo de la imagen",
-        "descripcion": "Presionando ínicamente el botín central del mouse se activa la herramienta de paneo para mover la imagen en pantalla libremente.",
+        "descripcion": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla libremente.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.113,
-          "y": 0.634
+          "x": 0.63,
+          "y": 0.89
         },
         "captura": "capturas/05_19_06-44.jpg",
         "captura_anotada": "capturas/05_19_06-44_anotada.jpg",
         "tiempo_real_seg": 404.2,
         "puntaje": null,
         "descripcion_original": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "06:49",
         "tiempo_seg": 409.0,
         "titulo": "Hacer zoom con la lupa",
-        "descripcion": "Presionando el botín derecho e izquierdo del mouse de forma simultínea se activa la herramienta de zoom para agrandar la imagen en el visor secundario.",
+        "descripcion": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen en el visor secundario.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.147,
-          "y": 0.656
+          "x": 0.65,
+          "y": 0.86
         },
         "captura": "capturas/05_20_06-49.jpg",
         "captura_anotada": "capturas/05_20_06-49_anotada.jpg",
         "tiempo_real_seg": 409.6,
         "puntaje": null,
         "descripcion_original": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "07:37",
         "tiempo_seg": 457.0,
         "titulo": "Verificar fecha y hora del sistema",
-        "descripcion": "Se visualiza la informaciín del estudio en la pantalla superior derecha, mostrando la fecha 'Apr 11 11:08 2025' y los datos correspondientes al paciente.",
+        "descripcion": "Se visualiza la información del estudio en la pantalla superior derecha, mostrando la fecha 'Apr 11 11:08 2025' y los datos correspondientes al paciente.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración del sistema",
         "zona": {
-          "x": 0.756,
-          "y": 0.18
+          "x": 0.147,
+          "y": 0.244
         },
         "captura": "capturas/05_21_07-37.jpg",
         "captura_anotada": "capturas/05_21_07-37_anotada.jpg",
@@ -1419,19 +1480,20 @@
         "puntaje": null,
         "titulo_original": "Configurar fecha y hora",
         "descripcion_original": "Haciendo clic en la fecha y hora se abre el menú 'Date Setting' donde se puede actualizar y guardar el horario del sistema.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "08:03",
         "tiempo_seg": 483.0,
-        "titulo": "Seleccionar el mení de apagado",
-        "descripcion": "Para apagar el equipo se despliega la opciín 'Utility' en la barra de herramientas superior de la pantalla y luego se selecciona 'Shutdown'.",
+        "titulo": "Seleccionar el menú de apagado",
+        "descripcion": "Para apagar el equipo se despliega la opción 'Utility' en la barra de herramientas superior de la pantalla y luego se selecciona 'Shutdown'.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Apagado y reinicio",
         "zona": {
-          "x": 0.763,
-          "y": 0.15
+          "x": 0.098,
+          "y": 0.399
         },
         "captura": "capturas/05_22_08-03.jpg",
         "captura_anotada": "capturas/05_22_08-03_anotada.jpg",
@@ -1439,7 +1501,8 @@
         "puntaje": null,
         "titulo_original": "Apagar el sistema (Shutdown)",
         "descripcion_original": "Para apagar el equipo se selecciona 'Utility' en pantalla y luego 'Shutdown'. Se debe confirmar en la ventana de advertencia amarilla.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "08:47",
@@ -1455,13 +1518,14 @@
         "tiempo_real_seg": 527.2,
         "puntaje": null,
         "descripcion_original": "El apagado completo toma aproximadamente 5 minutos, mientras que el encendido completo del sistema puede demorar de 11 a 15 minutos.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "10:01",
         "tiempo_seg": 601.0,
         "titulo": "Reiniciar el Gantry por desconexiones",
-        "descripcion": "Si hay problemas de sincronizaciín de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
+        "descripcion": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Apagado y reinicio",
@@ -1471,7 +1535,8 @@
         "tiempo_real_seg": 600.8,
         "puntaje": null,
         "descripcion_original": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
-        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse"
+        "capitulo": "5. Apagar y encender, warm up, calibración de aire, teclado y mouse",
+        "rotacion": 270
       },
       {
         "tiempo": "00:03",
@@ -1482,7 +1547,7 @@
         "fuente": "ambos",
         "seccion": "Gestión de datos",
         "zona": {
-          "x": 0.21,
+          "x": 0.211,
           "y": 0.107
         },
         "captura": "capturas/06_01_00-03.jpg",
@@ -1501,7 +1566,7 @@
         "fuente": "ambos",
         "seccion": "Gestión de datos",
         "zona": {
-          "x": 0.202,
+          "x": 0.224,
           "y": 0.662
         },
         "captura": "capturas/06_02_00-25.jpg",
@@ -1647,270 +1712,309 @@
       {
         "tiempo": "00:04",
         "tiempo_seg": 4.0,
-        "titulo": "Visualizar con Auto View S",
-        "descripcion": "El boton Auto View-S permite acceder a la visualizacion de una imagen individual (single) y habilita los menus superiores de revision de imagenes.",
+        "titulo": "Visualizar con Auto View-S",
+        "descripcion": "El botón Auto View-S de la esquina superior izquierda permite acceder a la visualización de una imagen individual (single) y habilita las pestañas de revisión.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualizacion de imagenes",
         "zona": {
-          "x": 0.712,
-          "y": 0.202
+          "x": 0.718,
+          "y": 0.796
         },
         "captura": "capturas/07_01_00-04.jpg",
         "captura_anotada": "capturas/07_01_00-04_anotada.jpg",
         "tiempo_real_seg": 4.6,
         "puntaje": null,
+        "titulo_original": "Visualizar con Auto View S",
         "descripcion_original": "El boton Auto View S permite acceder a la visualizacion de una imagen individual (single) y habilita los menus superiores de revision de imagenes.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "00:20",
         "tiempo_seg": 20.0,
         "titulo": "Utilizar Image Selector",
-        "descripcion": "La opcion Image Selector en la pantalla permite volver a posicionar y ordenar todos los estudios adquiridos del paciente.",
+        "descripcion": "La opción Image Selector en la pantalla permite volver a posicionar, ordenar y ver las series o imágenes adquiridas del paciente en miniatura.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualizacion de imagenes",
         "zona": {
-          "x": 0.38,
-          "y": 0.235
+          "x": 0.381,
+          "y": 0.766
         },
         "captura": "capturas/07_02_00-20.jpg",
         "captura_anotada": "capturas/07_02_00-20_anotada.jpg",
         "tiempo_real_seg": 20.6,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "La opcion Image Selector en la pantalla permite volver a posicionar y ordenar todos los estudios adquiridos del paciente.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "00:28",
         "tiempo_seg": 28.0,
         "titulo": "Comprender aviso Not for Diagnosis",
-        "descripcion": "La etiqueta amarilla Not for Diagnosis en la esquina superior derecha indica que la visualizacion InstaView es en tiempo real durante la adquisicion y no sirve para diagnostico final.",
+        "descripcion": "La etiqueta amarilla Not for Diagnosis en la esquina superior derecha indica que la visualización InstaView es en tiempo real durante la adquisición y no sirve para diagnóstico final.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Visualizacion de imagenes",
         "zona": {
           "x": 0.956,
-          "y": 0.441
+          "y": 0.58
         },
         "captura": "capturas/07_03_00-28.jpg",
         "captura_anotada": "capturas/07_03_00-28_anotada.jpg",
         "tiempo_real_seg": 28.2,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "La etiqueta amarilla Not for Diagnosis en la esquina superior derecha indica que la visualizacion InstaView es en tiempo real durante la adquisicion y no sirve para diagnostico final.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "01:03",
         "tiempo_seg": 63.0,
         "titulo": "Seleccionar volumen para MPR",
-        "descripcion": "Para cargar un volumen en el visualizador MPR, primero se debe seleccionar el volumen deseado de la lista en pantalla.",
+        "descripcion": "Para cargar un volumen en el visualizador MPR, primero se debe seleccionar el volumen deseado de la lista en pantalla, por ejemplo, el Helical del paciente LOPEZ ARANGUIZ MARIA.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstruccion MPR",
         "zona": {
-          "x": 0.318,
-          "y": 0.387
+          "x": 0.743,
+          "y": 0.648
         },
         "captura": "capturas/07_04_01-03.jpg",
         "captura_anotada": "capturas/07_04_01-03_anotada.jpg",
         "tiempo_real_seg": 62.4,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Para cargar un volumen en el visualizador MPR, primero se debe seleccionar el volumen deseado de la lista en pantalla.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "01:10",
         "tiempo_seg": 70.0,
         "titulo": "Cargar volumen en MPR",
-        "descripcion": "Se presiona el boton MPR en la esquina superior derecha para cargar las imagenes en los tres planos (axial, coronal y sagital).",
+        "descripcion": "Se presiona el botón MPR en la esquina superior derecha para cargar las imágenes reconstruidas en los tres planos espaciales correspondientes.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Reconstruccion MPR",
         "zona": {
           "x": 0.838,
-          "y": 0.173
+          "y": 0.827
         },
         "captura": "capturas/07_05_01-10.jpg",
         "captura_anotada": "capturas/07_05_01-10_anotada.jpg",
         "tiempo_real_seg": 69.8,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Se presiona el boton MPR en la esquina superior derecha para cargar las imagenes en los tres planos (axial, coronal y sagital).",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "01:19",
         "tiempo_seg": 79.0,
         "titulo": "Buscar pacientes desde Directory",
-        "descripcion": "Estando en MPR, se puede presionar Directory para abrir la base de datos de pacientes y cargar un volumen diferente.",
+        "descripcion": "Estando en el visor multiplanal, se puede presionar el botón Directory para abrir la base de datos de pacientes y cargar un volumen diferente.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstruccion MPR",
         "zona": {
           "x": 0.603,
-          "y": 0.114
+          "y": 0.89
         },
         "captura": "capturas/07_06_01-19.jpg",
         "captura_anotada": "capturas/07_06_01-19_anotada.jpg",
         "tiempo_real_seg": 78.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Estando en MPR, se puede presionar Directory para abrir la base de datos de pacientes y cargar un volumen diferente.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "02:04",
         "tiempo_seg": 124.0,
         "titulo": "Cargar MPR desde Auto View",
-        "descripcion": "Otra via para el MPR es seleccionar el volumen en Auto View S y hacer clic en el boton MPR que se destaca en color azul.",
+        "descripcion": "Otra vía para iniciar el visor MPR es seleccionar el volumen deseado en Auto View-S y hacer clic en el botón MPR que se destaca en el panel superior.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstruccion MPR",
         "zona": {
           "x": 0.811,
-          "y": 0.172
+          "y": 0.828
         },
         "captura": "capturas/07_07_02-04.jpg",
         "captura_anotada": "capturas/07_07_02-04_anotada.jpg",
         "tiempo_real_seg": 124.2,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Otra via para el MPR es seleccionar el volumen en Auto View S y hacer clic en el boton MPR que se destaca en color azul.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "02:13",
         "tiempo_seg": 133.0,
-        "titulo": "Operar teclado de navegacion",
-        "descripcion": "El instructor indica la funcion de las teclas del teclado dedicado: cambiar de paciente, navegar entre series, avanzar imagenes lento o rapido.",
+        "titulo": "Operar teclado de navegación",
+        "descripcion": "El instructor indica la función de las teclas del teclado dedicado, pulsando con el dedo la tecla curva rotulada como número 2 en la consola física.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Uso de accesorios",
         "zona": {
-          "x": 0.642,
-          "y": 0.463
+          "x": 0.465,
+          "y": 0.366
         },
         "captura": "capturas/07_08_02-13.jpg",
         "captura_anotada": "capturas/07_08_02-13_anotada.jpg",
         "tiempo_real_seg": 132.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Operar teclado de navegacion",
+        "descripcion_original": "El instructor indica la funcion de las teclas del teclado dedicado: cambiar de paciente, navegar entre series, avanzar imagenes lento o rapido.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "03:04",
         "tiempo_seg": 184.0,
-        "titulo": "Cambiar distribucion de Layout",
-        "descripcion": "En el menu Layout de la seccion MPR, se pueden seleccionar diferentes configuraciones para ver planos coronal, sagital, axial u oblicuos.",
+        "titulo": "Cambiar distribución de Layout",
+        "descripcion": "En el menú de la sección superior se indica el botón Average para cambiar la distribución y visualización de los planos en la pantalla.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstruccion MPR",
         "zona": {
           "x": 0.568,
-          "y": 0.157
+          "y": 0.853
         },
         "captura": "capturas/07_09_03-04.jpg",
         "captura_anotada": "capturas/07_09_03-04_anotada.jpg",
         "tiempo_real_seg": 183.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Cambiar distribucion de Layout",
+        "descripcion_original": "En el menu Layout de la seccion MPR, se pueden seleccionar diferentes configuraciones para ver planos coronal, sagital, axial u oblicuos.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "03:16",
         "tiempo_seg": 196.0,
-        "titulo": "Ampliar imagen con 1024",
-        "descripcion": "La opcion 1024 Display dentro del menu Layout permite expandir el tamano de la imagen seleccionada para un analisis mas detallado.",
+        "titulo": "Ampliar imagen con 1024 Display",
+        "descripcion": "La opción 1024 Display dentro del menú Layout permite expandir el tamaño de la imagen seleccionada para un análisis de alta resolución.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualizacion de imagenes",
         "zona": {
           "x": 0.465,
-          "y": 0.133
+          "y": 0.867
         },
         "captura": "capturas/07_10_03-16.jpg",
         "captura_anotada": "capturas/07_10_03-16_anotada.jpg",
         "tiempo_real_seg": 195.8,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Ampliar imagen con 1024",
+        "descripcion_original": "La opcion 1024 Display dentro del menu Layout permite expandir el tamano de la imagen seleccionada para un analisis mas detallado.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "03:30",
         "tiempo_seg": 210.0,
         "titulo": "Acceder a Raw Data",
-        "descripcion": "Se pulsa el boton Raw Data en la barra superior para buscar y reconstruir datos crudos del paciente cuando falte un volumen especifico.",
+        "descripcion": "Se pulsa el botón Raw Data en la barra superior izquierda para buscar y reconstruir datos crudos del paciente cuando falte un volumen específico.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Reconstruccion adicional",
         "zona": {
           "x": 0.764,
-          "y": 0.197
+          "y": 0.803
         },
         "captura": "capturas/07_11_03-30.jpg",
         "captura_anotada": "capturas/07_11_03-30_anotada.jpg",
         "tiempo_real_seg": 209.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Se pulsa el boton Raw Data en la barra superior para buscar y reconstruir datos crudos del paciente cuando falte un volumen especifico.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "03:51",
         "tiempo_seg": 231.0,
         "titulo": "Cargar serie helicoidal",
-        "descripcion": "Dentro del menu de Raw Data, se debe buscar la serie con modo HE (helicoidal) y cargarla para abrir el protocolo de reconstruccion.",
+        "descripcion": "Dentro de la lista de estudios en Study, se debe buscar la serie con modo HE (Helical) y seleccionarla para abrir el protocolo de reconstrucción.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Reconstruccion adicional",
         "zona": {
           "x": 0.511,
-          "y": 0.308
+          "y": 0.692
         },
         "captura": "capturas/07_12_03-51.jpg",
         "captura_anotada": "capturas/07_12_03-51_anotada.jpg",
         "tiempo_real_seg": 231.2,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Dentro del menu de Raw Data, se debe buscar la serie con modo HE (helicoidal) y cargarla para abrir el protocolo de reconstruccion.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "04:05",
         "tiempo_seg": 245.0,
-        "titulo": "Seleccionar el tipo de reconstrucción axial",
-        "descripcion": "El operador indica que los axiales predeterminados son cortes gruesos, y que para un mayor detalle se debe trabajar con volumen.",
+        "titulo": "Seleccionar tipo de reconstrucción",
+        "descripcion": "El operador indica que los axiales predeterminados son cortes gruesos, y que para un mayor detalle se debe trabajar con volumen en la pestaña Axial-1.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
-        "zona": null,
+        "zona": {
+          "x": 0.485,
+          "y": 0.619
+        },
         "captura": "capturas/07_13_04-05.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/07_13_04-05_anotada.jpg",
         "tiempo_real_seg": 244.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Seleccionar el tipo de reconstrucción axial",
+        "descripcion_original": "El operador indica que los axiales predeterminados son cortes gruesos, y que para un mayor detalle se debe trabajar con volumen.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "04:13",
         "tiempo_seg": 253.0,
-        "titulo": "Habilitar volumen y seleccionar filtro",
-        "descripcion": "Se activa la opción de volumen ('ON') y se abre el menú para seleccionar el filtro adecuado (Cerebro, Cuello, Cuerpo o Hueso) para la reconstrucción.",
+        "titulo": "Habilitar volumen y filtro",
+        "descripcion": "Se activa la opción de volumen pulsando ON en Volume1 y se abre el menú desplegable de protocolo para seleccionar el filtro adecuado como Cuerpo.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
           "x": 0.459,
-          "y": 0.376
+          "y": 0.607
         },
         "captura": "capturas/07_14_04-13.jpg",
         "captura_anotada": "capturas/07_14_04-13_anotada.jpg",
         "tiempo_real_seg": 253.6,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Habilitar volumen y seleccionar filtro",
+        "descripcion_original": "Se activa la opción de volumen ('ON') y se abre el menú para seleccionar el filtro adecuado (Cerebro, Cuello, Cuerpo o Hueso) para la reconstrucción.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "04:37",
         "tiempo_seg": 277.0,
-        "titulo": "Configurar espesor de corte de volumen",
-        "descripcion": "Se ajusta el espesor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para optimizar el número total de imágenes.",
+        "titulo": "Configurar espesor de corte",
+        "descripcion": "Se ajusta el espesor de corte (Slice Thickness) a 0.5 mm e intervalo a 0.3 mm para optimizar la reconstrucción detallada del volumen.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
           "x": 0.393,
-          "y": 0.514
+          "y": 0.486
         },
         "captura": "capturas/07_15_04-37.jpg",
         "captura_anotada": "capturas/07_15_04-37_anotada.jpg",
         "tiempo_real_seg": 276.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "titulo_original": "Configurar espesor de corte de volumen",
+        "descripcion_original": "Se ajusta el espesor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para optimizar el número total de imágenes.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "04:52",
@@ -1921,8 +2025,8 @@
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
-          "x": 0.295,
-          "y": 0.568
+          "x": 0.567,
+          "y": 0.698
         },
         "captura": "capturas/07_16_04-52.jpg",
         "captura_anotada": "capturas/07_16_04-52_anotada.jpg",
@@ -1930,7 +2034,8 @@
         "puntaje": null,
         "titulo_original": "Activar el FOV extendido a 90",
         "descripcion_original": "Se hace clic sobre el parámetro D-FOV para alternar de 70 (XL) a 90 (XXL) y asegurar que se use todo el campo de visión extendido.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "05:05",
@@ -1941,8 +2046,8 @@
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
-          "x": 0.208,
-          "y": 0.624
+          "x": 0.626,
+          "y": 0.782
         },
         "captura": "capturas/07_17_05-05.jpg",
         "captura_anotada": "capturas/07_17_05-05_anotada.jpg",
@@ -1950,22 +2055,28 @@
         "puntaje": null,
         "titulo_original": "Activar la función SEMAR",
         "descripcion_original": "En caso de prótesis metálicas, se activa la opción SEMAR ('Single Energy Metal Artifact Reduction') para reducir artefactos.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "05:25",
         "tiempo_seg": 325.0,
         "titulo": "Verificar la generación de dos volúmenes",
-        "descripcion": "Al activar SEMAR se generarán de manera obligatoria dos volúmenes: uno con SEMAR y otro sin SEMAR para poder comparar la calidad de imagen.",
+        "descripcion": "Al activar SEMAR se generarán de manera obligatoria dos volúmenes: uno con SEMAR y otro sin SEMAR para poder comparar la calidad de imagen. En pantalla el valor de SEMAR ahora figura en ON.",
         "importancia": 4,
         "fuente": "audio",
         "seccion": "Reconstrucción de volumen",
-        "zona": null,
+        "zona": {
+          "x": 0.629,
+          "y": 0.779
+        },
         "captura": "capturas/07_18_05-25.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/07_18_05-25_anotada.jpg",
         "tiempo_real_seg": 325.6,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Al activar SEMAR se generarán de manera obligatoria dos volúmenes: uno con SEMAR y otro sin SEMAR para poder comparar la calidad de imagen.",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "06:01",
@@ -1976,8 +2087,8 @@
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
-          "x": 0.491,
-          "y": 0.448
+          "x": 0.612,
+          "y": 0.519
         },
         "captura": "capturas/07_19_06-01.jpg",
         "captura_anotada": "capturas/07_19_06-01_anotada.jpg",
@@ -1985,19 +2096,20 @@
         "puntaje": null,
         "titulo_original": "Ingresar a Scan Axial",
         "descripcion_original": "Se recomienda usar la pestaña 'Scan Axial' en lugar de definir manualmente las posiciones de inicio y término sobre la tabla de valores, por ser más cómodo y seguro.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "06:40",
         "tiempo_seg": 400.0,
         "titulo": "Iniciar reconstruccion con boton Recon",
-        "descripcion": "Una vez definidos los parametros de la adquisicion, se presiona el boton Recon ubicado en la esquina inferior izquierda del panel para procesar las imagenes.",
+        "descripcion": "Una vez definidos los parametros de la adquisicion, se presiona el boton Recon ubicado en la esquina inferior izquierda del panel para procesar las imagenes. En pantalla se lee el nombre del paciente LOPEZ GAJARDO VICTOR.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
         "zona": {
-          "x": 0.108,
-          "y": 0.72
+          "x": 0.718,
+          "y": 0.879
         },
         "captura": "capturas/07_20_06-40.jpg",
         "captura_anotada": "capturas/07_20_06-40_anotada.jpg",
@@ -2005,7 +2117,8 @@
         "puntaje": null,
         "titulo_original": "Iniciar reconstrucción con botón Recon",
         "descripcion_original": "Una vez definidos los parámetros, se presiona el botón 'Recon' en la esquina inferior izquierda de la pantalla para procesar las imágenes.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "06:51",
@@ -2015,25 +2128,29 @@
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Reconstrucción de volumen",
-        "zona": null,
+        "zona": {
+          "x": 0.272,
+          "y": 0.441
+        },
         "captura": "capturas/07_21_06-51.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/07_21_06-51_anotada.jpg",
         "tiempo_real_seg": 410.8,
         "puntaje": null,
         "descripcion_original": "Los valores de ventana de visualización vienen predeterminados de acuerdo al filtro seleccionado y no se modifican desde esta pantalla antes de la reconstrucción.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "07:52",
         "tiempo_seg": 472.0,
         "titulo": "Cargar visualizacion en AutoView o Raw Data",
-        "descripcion": "Utilizando el menu de IV Utility, se selecciona la opcion Raw Data File o Image File para cargar las imagenes de los pacientes a procesar.",
+        "descripcion": "Utilizando el menu de IV Utility, se selecciona la opcion Raw Data File o Image File para cargar las imagenes de los pacientes a procesar. En pantalla se muestra PARADA FUENTES LORENZO.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Herramientas de visualización",
         "zona": {
-          "x": 0.659,
-          "y": 0.135
+          "x": 0.141,
+          "y": 0.355
         },
         "captura": "capturas/07_22_07-52.jpg",
         "captura_anotada": "capturas/07_22_07-52_anotada.jpg",
@@ -2041,7 +2158,8 @@
         "puntaje": null,
         "titulo_original": "Cargar visualización múltiple en Auto View",
         "descripcion_original": "Utilizando Auto View M, se pueden cargar hasta 4 imágenes de diferentes fases o filtros del mismo paciente para compararlos simultáneamente en pantalla.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "08:24",
@@ -2052,15 +2170,16 @@
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
         "zona": {
-          "x": 0.829,
-          "y": 0.122
+          "x": 0.126,
+          "y": 0.159
         },
         "captura": "capturas/07_23_08-24.jpg",
         "captura_anotada": "capturas/07_23_08-24_anotada.jpg",
         "tiempo_real_seg": 504.6,
         "puntaje": null,
         "descripcion_original": "Se selecciona el botón 'MPR' para realizar reconstrucciones multiplanares de las imágenes cargadas desde Raw Data.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "08:52",
@@ -2071,8 +2190,8 @@
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
         "zona": {
-          "x": 0.524,
-          "y": 0.376
+          "x": 0.361,
+          "y": 0.485
         },
         "captura": "capturas/07_24_08-52.jpg",
         "captura_anotada": "capturas/07_24_08-52_anotada.jpg",
@@ -2080,7 +2199,8 @@
         "puntaje": null,
         "titulo_original": "Rotación precisa con tecla Control",
         "descripcion_original": "Se advierte presionar la tecla 'Control' del teclado físico junto con el clic derecho del mouse para rotar la imagen sin desconfigurar accidentalmente los planos.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "09:07",
@@ -2090,12 +2210,16 @@
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
-        "zona": null,
+        "zona": {
+          "x": 0.361,
+          "y": 0.485
+        },
         "captura": "capturas/07_25_09-07.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/07_25_09-07_anotada.jpg",
         "tiempo_real_seg": 546.0,
         "puntaje": null,
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "09:39",
@@ -2106,8 +2230,8 @@
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
         "zona": {
-          "x": 0.419,
-          "y": 0.158
+          "x": 0.164,
+          "y": 0.573
         },
         "captura": "capturas/07_26_09-39.jpg",
         "captura_anotada": "capturas/07_26_09-39_anotada.jpg",
@@ -2115,23 +2239,29 @@
         "puntaje": null,
         "titulo_original": "Configurar Batch MPR para cortes secuenciales",
         "descripcion_original": "Se utiliza la opción 'Batch MPR' para programar una serie de cortes axiales o coronales, definiendo el inicio, fin y espesor de corte.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "10:17",
         "tiempo_seg": 617.0,
         "titulo": "Inclinacion de planos sobre la imagen",
-        "descripcion": "Para inclinar el plano de los cortes, se debe rotar directamente la imagen de referencia (no las líneas rojas del plano, que son fijas en este equipo).",
+        "descripcion": "Para inclinar el plano de los cortes, se debe rotar directamente la imagen de referencia (no las líneas rojas del plano, que son fijas en este equipo). En pantalla se visualiza el plano Axial PB con Slice Thickness 3.0 mm.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
-        "zona": null,
+        "zona": {
+          "x": 0.118,
+          "y": 0.693
+        },
         "captura": "capturas/07_27_10-17.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/07_27_10-17_anotada.jpg",
         "tiempo_real_seg": 616.0,
         "puntaje": null,
         "titulo_original": "Inclinación de planos sobre la imagen",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "descripcion_original": "Para inclinar el plano de los cortes, se debe rotar directamente la imagen de referencia (no las líneas rojas del plano, que son fijas en este equipo).",
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "11:05",
@@ -2142,8 +2272,8 @@
         "fuente": "ambos",
         "seccion": "Multiplanar (MPR)",
         "zona": {
-          "x": 0.603,
-          "y": 0.146
+          "x": 0.164,
+          "y": 0.388
         },
         "captura": "capturas/07_28_11-05.jpg",
         "captura_anotada": "capturas/07_28_11-05_anotada.jpg",
@@ -2151,26 +2281,28 @@
         "puntaje": null,
         "titulo_original": "Ajustar visualización de espesor de corte",
         "descripcion_original": "Se ajusta el espesor de corte de la visualización en pantalla y se selecciona el modo de proyección como Average, MIP o MinIP.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "11:13",
         "tiempo_seg": 673.0,
         "titulo": "Visualizar reconstrucciones 3D",
-        "descripcion": "Se ingresa al menu de reconstruccion 3D para cargar los volumenes procesados y utilizar plantillas preestablecidas de visualizacion de tejidos en pantalla.",
+        "descripcion": "Se ingresa al menu de reconstruccion 3D para cargar los volumenes procesados y utilizar plantillas preestablecidas de visualizacion de tejidos en pantalla como Lung, Aorta, Bone o Cardiac.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Herramientas de visualización",
         "zona": {
-          "x": 0.819,
-          "y": 0.16
+          "x": 0.126,
+          "y": 0.143
         },
         "captura": "capturas/07_29_11-13.jpg",
         "captura_anotada": "capturas/07_29_11-13_anotada.jpg",
         "tiempo_real_seg": 673.6,
         "puntaje": null,
         "descripcion_original": "Se ingresa a la pestaña '3D' para cargar los volúmenes procesados y utilizar plantillas preestablecidas de visualización de tejidos.",
-        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT"
+        "capitulo": "7. MPR, retrorreconstrucciones, autoview, batch y VRT",
+        "rotacion": 270
       },
       {
         "tiempo": "00:03",
@@ -2479,7 +2611,7 @@
         "tiempo": "04:53",
         "tiempo_seg": 293.0,
         "titulo": "Seleccionar el grosor de corte de escaneo",
-        "descripcion": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80.",
+        "descripcion": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80. En pantalla, el cursor señala el botón 'Edit'.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de parámetros",
@@ -2491,6 +2623,7 @@
         "captura_anotada": "capturas/08_17_04-53_anotada.jpg",
         "tiempo_real_seg": 292.0,
         "puntaje": null,
+        "descripcion_original": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80.",
         "capitulo": "8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos"
       },
       {
@@ -2587,25 +2720,23 @@
         "tiempo": "08:15",
         "tiempo_seg": 495.0,
         "titulo": "Considerar tasa de reconstrucción de imagen",
-        "descripcion": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos.",
+        "descripcion": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos. El cursor se encuentra en la pantalla.",
         "importancia": 2,
         "fuente": "audio",
         "seccion": "Configuración de reconstrucción",
-        "zona": {
-          "x": 0.49,
-          "y": 0.671
-        },
+        "zona": null,
         "captura": "capturas/08_23_08-15.jpg",
-        "captura_anotada": "capturas/08_23_08-15_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 495.6,
         "puntaje": null,
+        "descripcion_original": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos.",
         "capitulo": "8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos"
       },
       {
         "tiempo": "08:26",
         "tiempo_seg": 506.0,
         "titulo": "Seleccionar método de reconstrucción iterativa",
-        "descripcion": "Al seleccionar la reconstrucción iterativa estándar en volumen ('Cuerpo Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
+        "descripcion": "Al seleccionar la reconstrucción iterativa estándar en volumen (en pantalla se lee 'Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
@@ -2617,6 +2748,7 @@
         "captura_anotada": "capturas/08_24_08-26_anotada.jpg",
         "tiempo_real_seg": 505.0,
         "puntaje": null,
+        "descripcion_original": "Al seleccionar la reconstrucción iterativa estándar en volumen ('Cuerpo Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
         "capitulo": "8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos"
       },
       {
@@ -2713,7 +2845,7 @@
         "tiempo": "12:33",
         "tiempo_seg": 753.0,
         "titulo": "Programar transferencia automática al PACS",
-        "descripcion": "Se activa la opción 'Transfer' para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
+        "descripcion": "Se activa la opción 'Transfer' (en pantalla se lee 'Transfer OFF') para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
@@ -2725,19 +2857,20 @@
         "captura_anotada": "capturas/08_30_12-33_anotada.jpg",
         "tiempo_real_seg": 752.0,
         "puntaje": null,
+        "descripcion_original": "Se activa la opción 'Transfer' para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
         "capitulo": "8. VRT, frame movie, cálculo de volumen, pitch, modulación de dosis y creación de protocolos"
       },
       {
         "tiempo": "13:12",
         "tiempo_seg": 792.0,
-        "titulo": "Copiar un protocolo existente",
-        "descripcion": "Para duplicar o guardar un protocolo modificado, seleccione el protocolo deseado y haga clic en el botón 'Copy' en el menú lateral derecho para iniciar el proceso de edición.",
+        "titulo": "Haga clic en el botón Copy",
+        "descripcion": "Para duplicar o guardar un protocolo modificado, seleccione el protocolo deseado y haga clic en el botón 'Copy' situado en el menú lateral derecho para iniciar el proceso de edición.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
         "zona": {
-          "x": 0.718,
-          "y": 0.254
+          "x": 0.72,
+          "y": 0.257
         },
         "captura": "capturas/08_31_13-12.jpg",
         "captura_anotada": "capturas/08_31_13-12_anotada.jpg",
@@ -2963,7 +3096,7 @@
         "seccion": "Programacion del Protocolo",
         "zona": {
           "x": 0.313,
-          "y": 0.149
+          "y": 0.646
         },
         "captura": "capturas/10_01_00-04.jpg",
         "captura_anotada": "capturas/10_01_00-04_anotada.jpg",
@@ -2974,7 +3107,7 @@
       {
         "tiempo": "00:10",
         "tiempo_seg": 10.0,
-        "titulo": "Configurar idioma y comandos de voz",
+        "titulo": "Configurar comandos de voz",
         "descripcion": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo o post-escaneo. En pantalla se muestra desplegado el menu de 'Post Scan'.",
         "importancia": 3,
         "fuente": "ambos",
@@ -2987,6 +3120,7 @@
         "captura_anotada": "capturas/10_02_00-10_anotada.jpg",
         "tiempo_real_seg": 10.6,
         "puntaje": null,
+        "titulo_original": "Configurar idioma y comandos de voz",
         "descripcion_original": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo.",
         "capitulo": "10. Creación de un protocolo trifásico"
       },
@@ -3031,7 +3165,7 @@
         "tiempo": "00:58",
         "tiempo_seg": 58.0,
         "titulo": "Nombrar fase sin contraste",
-        "descripcion": "Escribir el comentario 'SIN CE' (en pantalla se lee 'SIN CI') para identificar la fase basal sin contraste y configurar comandos de voz.",
+        "descripcion": "Escribir el comentario 'SIN CI' en la caja de 'Protocol Comment for Scan Element' para identificar la fase basal sin contraste y configurar comandos de voz.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Programacion del Protocolo",
@@ -3237,33 +3371,35 @@
       {
         "tiempo": "00:03",
         "tiempo_seg": 3.0,
-        "titulo": "Configurar Reconstrucción Iterativa AIDR 3D",
-        "descripcion": "Se muestra la opción AIDR 3D seleccionada en modo Enhanced, la cual corresponde a la última generación de reconstrucción iterativa para reducir dosis de radiación.",
+        "titulo": "Configurar reconstrucción iterativa AIDR 3D",
+        "descripcion": "Se muestra la opcion AIDR 3D seleccionada en modo Enhanced, la cual corresponde a la ultima generacion de reconstruccion iterativa para reducir dosis de radiacion.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.305,
-          "y": 0.258
+          "x": 0.258,
+          "y": 0.695
         },
         "captura": "capturas/11_01_00-03.jpg",
         "captura_anotada": "capturas/11_01_00-03_anotada.jpg",
         "tiempo_real_seg": 2.0,
         "puntaje": null,
         "titulo_original": "Configuración de Reconstrucción Iterativa AIDR 3D",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se muestra la opción AIDR 3D seleccionada en modo Enhanced, la cual corresponde a la última generación de reconstrucción iterativa para reducir dosis de radiación.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "00:15",
         "tiempo_seg": 15.0,
-        "titulo": "Visualizar Parámetros por Órgano",
-        "descripcion": "El instructor navega por los distintos perfiles de adquisición (Cuello, Pulmón, Cuerpo, Columna) para verificar las ventanas de visualización predefinidas (WW y WL). En pantalla se selecciona la fila Pulmón.",
+        "titulo": "Visualizar parametros por organo",
+        "descripcion": "El instructor navega por los distintos perfiles de adquisicion para verificar las ventanas predefinidas. En pantalla se selecciona la fila Pulmon y se muestra el cursor sobre ella.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.662,
-          "y": 0.308
+          "x": 0.308,
+          "y": 0.338
         },
         "captura": "capturas/11_02_00-15.jpg",
         "captura_anotada": "capturas/11_02_00-15_anotada.jpg",
@@ -3271,57 +3407,62 @@
         "puntaje": null,
         "titulo_original": "Visualización de Parámetros por Órgano",
         "descripcion_original": "El instructor navega por los distintos perfiles de adquisición (Cuello, Pulmón, Cuerpo, Columna) para verificar las ventanas de visualización predefinidas (WW y WL).",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "00:43",
         "tiempo_seg": 43.0,
-        "titulo": "Acceder a Filtros SureIQ",
-        "descripcion": "Se señala el botón 'SureIQ' dentro de la pestaña de Protocolos, indicando que es el lugar donde se crean y modifican los filtros de imagen.",
+        "titulo": "Acceder a filtros SureIQ",
+        "descripcion": "Se señala el boton SureIQ dentro de la pestaña de Protocolos, indicando que es el lugar donde se crean y modifican los filtros de imagen.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.211,
-          "y": 0.638
+          "y": 0.362
         },
         "captura": "capturas/11_03_00-43.jpg",
         "captura_anotada": "capturas/11_03_00-43_anotada.jpg",
         "tiempo_real_seg": 42.8,
         "puntaje": null,
         "titulo_original": "Acceso a Filtros SureIQ",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se señala el botón 'SureIQ' dentro de la pestaña de Protocolos, indicando que es el lugar donde se crean y modifican los filtros de imagen.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "00:49",
         "tiempo_seg": 49.0,
-        "titulo": "Acceder a Modulador Sure Exposure",
-        "descripcion": "Se presiona el botón 'Sure Exp' (Sure Exposure) que gestiona el control automático de exposición del equipo para modular el mA en función del paciente.",
+        "titulo": "Acceder a modulador Sure Exposure",
+        "descripcion": "Se presiona el boton Sure Exp (Sure Exposure) que gestiona el control automatico de exposicion del equipo para modular el mA en funcion del paciente.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.206,
-          "y": 0.551
+          "y": 0.449
         },
         "captura": "capturas/11_04_00-49.jpg",
         "captura_anotada": "capturas/11_04_00-49_anotada.jpg",
         "tiempo_real_seg": 49.6,
         "puntaje": null,
         "titulo_original": "Acceso a Modulador Sure Exposure",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se presiona el botón 'Sure Exp' (Sure Exposure) que gestiona el control automático de exposición del equipo para modular el mA en función del paciente.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "01:05",
         "tiempo_seg": 65.0,
-        "titulo": "Definir Rango de mA",
-        "descripcion": "Se establecen los valores límite para la modulación automática en cuello: un mA máximo de 500 mA y un mínimo de 80 mA. El cursor señala el valor de 500 de MAX mA.",
+        "titulo": "Definir rango de mA",
+        "descripcion": "Se establecen los valores limite para la modulacion automatica en cuello: un mA maximo de 500 y un minimo de 80. El cursor señala el valor de 500 de MAX mA.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.563,
-          "y": 0.514
+          "y": 0.486
         },
         "captura": "capturas/11_05_01-05.jpg",
         "captura_anotada": "capturas/11_05_01-05_anotada.jpg",
@@ -3329,19 +3470,20 @@
         "puntaje": null,
         "titulo_original": "Definición de Rango de mA",
         "descripcion_original": "Se establecen los valores límite para la modulación automática en cuello: un mA máximo de 500 mA y un mínimo de 80 mA.",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "01:09",
         "tiempo_seg": 69.0,
-        "titulo": "Ajustar Espesor de Corte para Columna",
-        "descripcion": "Se detalla que para estudios de columna el espesor de corte estándar (Image Thickness) se define en 3,0 mm, mientras que para el resto del cuerpo se utiliza un estándar de 5,0 mm. Se hace clic en la opción 3.0 mm.",
+        "titulo": "Ajustar espesor de corte para columna",
+        "descripcion": "Se detalla que para estudios de columna el espesor de corte estandar (Image Thickness) se define en 3,0 mm. Se hace clic en la opcion 3.0 mm.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.581,
-          "y": 0.549
+          "y": 0.451
         },
         "captura": "capturas/11_06_01-09.jpg",
         "captura_anotada": "capturas/11_06_01-09_anotada.jpg",
@@ -3349,38 +3491,41 @@
         "puntaje": null,
         "titulo_original": "Ajuste de Espesor de Corte para Columna",
         "descripcion_original": "Se detalla que para estudios de columna el espesor de corte estándar (Image Thickness) se define en 3,0 mm, mientras que para el resto del cuerpo se utiliza un estándar de 5,0 mm.",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "01:21",
         "tiempo_seg": 81.0,
-        "titulo": "Ajustar Desviación Estándar de Ruido SD",
-        "descripcion": "Se explica el parámetro SD (Standard Deviation) de ruido. Para un protocolo estándar de cuello o cuerpo se define un valor de SD de 12,50 para determinar la calidad de imagen.",
+        "titulo": "Ajustar desviacion estandar de ruido SD",
+        "descripcion": "Se explica el parametro SD (Standard Deviation) de ruido. Para un protocolo estandar de cuello o cuerpo se define un valor de SD de 12,50 para determinar la calidad de imagen.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.464,
-          "y": 0.558
+          "y": 0.442
         },
         "captura": "capturas/11_07_01-21.jpg",
         "captura_anotada": "capturas/11_07_01-21_anotada.jpg",
         "tiempo_real_seg": 80.0,
         "puntaje": null,
         "titulo_original": "Ajustar Desviación Estándar de Ruido (SD)",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se explica el parámetro SD (Standard Deviation) de ruido. Para un protocolo estándar de cuello o cuerpo se define un valor de SD de 12,50 para determinar la calidad de imagen.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "01:43",
         "tiempo_seg": 103.0,
-        "titulo": "Modificar mA Mínimo según Calidad",
-        "descripcion": "Al seleccionar la opción 'Alta Calidad', el sistema incrementa automáticamente el mA mínimo de 80 mA a 100 mA y reduce el SD a 10,00 para mayor resolución. El cursor selecciona Estándar debajo de Alta Calidad.",
+        "titulo": "Modificar mA minimo segun calidad",
+        "descripcion": "Al seleccionar la opcion Alta Calidad, el sistema incrementa automaticamente el mA minimo. El cursor selecciona Estandar debajo de Alta Calidad.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.322,
-          "y": 0.554
+          "y": 0.446
         },
         "captura": "capturas/11_08_01-43.jpg",
         "captura_anotada": "capturas/11_08_01-43_anotada.jpg",
@@ -3388,64 +3533,71 @@
         "puntaje": null,
         "titulo_original": "Modificación del mA Mínimo según Calidad",
         "descripcion_original": "Al seleccionar la opción 'Alta Calidad', el sistema incrementa automáticamente el mA mínimo de 80 mA a 100 mA y reduce el SD a 10,00 para mayor resolución.",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "02:16",
         "tiempo_seg": 136.0,
-        "titulo": "Configurar Ruido en Protocolo Cerebro",
-        "descripcion": "Se muestra que el protocolo de cerebro estándar exige un ruido SD muy bajo de 1,70, lo que implica una dosis de radiación significativamente mayor.",
+        "titulo": "Configurar ruido en protocolo cerebro",
+        "descripcion": "Se muestra que el protocolo de cerebro estandar exige un ruido SD muy bajo de 1,70, lo que implica una dosis de radiacion significativamente mayor.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.458,
-          "y": 0.55
+          "y": 0.45
         },
         "captura": "capturas/11_09_02-16.jpg",
         "captura_anotada": "capturas/11_09_02-16_anotada.jpg",
         "tiempo_real_seg": 136.6,
         "puntaje": null,
         "titulo_original": "Ruido Restringido en Protocolo Cerebro",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se muestra que el protocolo de cerebro estándar exige un ruido SD muy bajo de 1,70, lo que implica una dosis de radiación significativamente mayor.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "02:24",
         "tiempo_seg": 144.0,
-        "titulo": "Advertencia sobre Dosis en Cerebro vs Cuello",
+        "titulo": "Advertencia sobre dosis en cerebro vs cuello",
         "descripcion": "Explicación clínica de que el CTDI volumétrico en cerebro puede alcanzar el límite internacional de 60 mGy, mientras que un cuello ronda los 5 a 6 mGy; advierte que realizar cuello con parámetros de cerebro 'freirá' el cuello del paciente. El cursor señala el…",
         "importancia": 5,
         "fuente": "audio",
         "seccion": "Filtros y Dosis",
         "zona": {
           "x": 0.55,
-          "y": 0.552
+          "y": 0.448
         },
         "captura": "capturas/11_10_02-24.jpg",
         "captura_anotada": "capturas/11_10_02-24_anotada.jpg",
         "tiempo_real_seg": 143.0,
         "puntaje": null,
+        "titulo_original": "Advertencia sobre Dosis en Cerebro vs Cuello",
         "descripcion_original": "Explicación clínica de que el CTDI volumétrico en cerebro puede alcanzar el límite internacional de 60 mGy, mientras que un cuello ronda los 5 a 6 mGy; advierte que realizar cuello con parámetros de cerebro 'freirá' el cuello del paciente.",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "03:20",
         "tiempo_seg": 200.0,
-        "titulo": "Ver Ruta de Acceso en Adquisición",
-        "descripcion": "Se demuestra paso a paso cómo volver al menú de protocolos desde la pantalla principal: hacer clic en 'Utility', luego 'Protocol' y finalmente en 'eXam Plan Preset'.",
+        "titulo": "Ver ruta de acceso en adquisicion",
+        "descripcion": "Se demuestra paso a paso como volver al menu de protocolos desde la pantalla principal: hacer clic en Utility, luego Protocol y finalmente en eXam Plan Preset.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
           "x": 0.185,
-          "y": 0.645
+          "y": 0.355
         },
         "captura": "capturas/11_11_03-20.jpg",
         "captura_anotada": "capturas/11_11_03-20_anotada.jpg",
         "tiempo_real_seg": 199.4,
         "puntaje": null,
         "titulo_original": "Ruta de Acceso desde Pantalla de Adquisición",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "descripcion_original": "Se demuestra paso a paso cómo volver al menú de protocolos desde la pantalla principal: hacer clic en 'Utility', luego 'Protocol' y finalmente en 'eXam Plan Preset'.",
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "03:28",
@@ -3457,233 +3609,245 @@
         "seccion": "Configuración de Protocolos",
         "zona": {
           "x": 0.121,
-          "y": 0.704
+          "y": 0.296
         },
         "captura": "capturas/11_12_03-28.jpg",
         "captura_anotada": "capturas/11_12_03-28_anotada.jpg",
         "tiempo_real_seg": 207.4,
         "puntaje": null,
         "descripcion_original": "Se advierte firmemente que cualquier cambio guardado en estos menús preestablecidos afectará de forma permanente y global a todos los usuarios del tomógrafo.",
-        "capitulo": "11. Modulación de dosis y calidad de imagen"
+        "capitulo": "11. Modulación de dosis y calidad de imagen",
+        "rotacion": 270
       },
       {
         "tiempo": "00:01",
         "tiempo_seg": 1.0,
-        "titulo": "Iniciar la creacion de protocolo",
-        "descripcion": "Se muestra la interfaz principal del tomografo y se inicia la seleccion para editar o crear un nuevo protocolo personalizado.",
+        "titulo": "Iniciar creacion de protocolo",
+        "descripcion": "En la interfaz principal de la consola del tomografo Aquilion, seleccione la opcion deseada dentro de la lista de protocolos disponibles.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Configuracion de protocolo",
         "zona": {
-          "x": 0.305,
-          "y": 0.51
+          "x": 0.372,
+          "y": 0.516
         },
         "captura": "capturas/12_01_00-01.jpg",
         "captura_anotada": "capturas/12_01_00-01_anotada.jpg",
         "tiempo_real_seg": 1.6,
         "puntaje": null,
+        "titulo_original": "Iniciar la creacion de protocolo",
+        "descripcion_original": "Se muestra la interfaz principal del tomografo y se inicia la seleccion para editar o crear un nuevo protocolo personalizado.",
         "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
       },
       {
         "tiempo": "00:27",
         "tiempo_seg": 27.0,
         "titulo": "Definir fases de la secuencia",
-        "descripcion": "Se seleccionan y agregan las diferentes fases para el protocolo, incluyendo el dual escanograma, fase sin contraste, fase arterial, venosa y tardia.",
+        "descripcion": "Haga clic en 'Scan Mode' en la tabla de secuencia para seleccionar el modo de adquisicion, tales como DualScano, Helical o Volume.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.339,
-          "y": 0.372
+          "x": 0.375,
+          "y": 0.628
         },
         "captura": "capturas/12_02_00-27.jpg",
         "captura_anotada": "capturas/12_02_00-27_anotada.jpg",
         "tiempo_real_seg": 27.2,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "descripcion_original": "Se seleccionan y agregan las diferentes fases para el protocolo, incluyendo el dual escanograma, fase sin contraste, fase arterial, venosa y tardia.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "01:18",
         "tiempo_seg": 78.0,
         "titulo": "Seleccionar idioma de instrucciones",
-        "descripcion": "Se cambia el idioma de las instrucciones de voz para el paciente en el menú 'Language' a 'English' o la opción que se requiera.",
+        "descripcion": "Abra el menu desplegable de 'Language' en la seccion de instrucciones de respiracion, actualmente configurado en 'English'.",
         "importancia": 2,
         "fuente": "visual",
         "seccion": "Instrucciones de voz",
         "zona": {
-          "x": 0.361,
-          "y": 0.725
+          "x": 0.725,
+          "y": 0.634
         },
         "captura": "capturas/12_03_01-18.jpg",
         "captura_anotada": "capturas/12_03_01-18_anotada.jpg",
         "tiempo_real_seg": 77.0,
         "puntaje": null,
         "descripcion_original": "Se cambia el idioma de las instrucciones de voz para el paciente a Spanish (Espanol) en las distintas fases del escaneo.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "01:21",
         "tiempo_seg": 81.0,
         "titulo": "Configurar instrucciones de respiracion",
-        "descripcion": "Se selecciona el tipo de instrucción de respiración. Al cambiar de idioma a 'Spanish', se despliega el submenú con opciones como 'Respire y Contenga / Respire Normal' o 'OFF'.",
+        "descripcion": "Seleccione el tipo de instruccion de respiracion deseada en el menu de idioma. Al seleccionar 'Spanish', se despliegan opciones como 'Respire y Contenga / Respire Normal' o 'OFF'.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Instrucciones de voz",
         "zona": {
-          "x": 0.348,
-          "y": 0.757
+          "x": 0.757,
+          "y": 0.654
         },
         "captura": "capturas/12_04_01-21.jpg",
         "captura_anotada": "capturas/12_04_01-21_anotada.jpg",
         "tiempo_real_seg": 80.4,
         "puntaje": null,
         "descripcion_original": "Se selecciona el tipo de instruccion de respiracion, como 'Respire y Contenga' para las fases con contraste y 'Respire Normal' para las demas fases.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "01:43",
         "tiempo_seg": 103.0,
         "titulo": "Ingresar comentarios del protocolo",
-        "descripcion": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'ARTERIAL' en pantalla) son de uso interno para el operador y no se envian a DICOM.",
+        "descripcion": "Presione el icono de inyector para ingresar comentarios del elemento de escaneo en 'Protocol Comment for Scan Element' (en pantalla se lee 'ARTERIAL').",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.269,
-          "y": 0.357
+          "x": 0.357,
+          "y": 0.731
         },
         "captura": "capturas/12_05_01-43.jpg",
         "captura_anotada": "capturas/12_05_01-43_anotada.jpg",
         "tiempo_real_seg": 102.4,
         "puntaje": null,
         "descripcion_original": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'SIN CE', 'ARTERIAL', 'VENOSO') son de uso interno para el operador y no se envian a DICOM.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "02:08",
         "tiempo_seg": 128.0,
         "titulo": "Configurar rango de escaneo",
-        "descripcion": "Se definen los límites del rango en milímetros para cada una de las fases en la columna 'End Pos', con valores como 400.0 o 600.0 según el segmento corporal.",
+        "descripcion": "Verifique los limites de rango definidos en la columna 'End Pos' en milimetros para cada una de las fases configuradas.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
-        "zona": {
-          "x": 0.32,
-          "y": 0.267
-        },
+        "zona": null,
         "captura": "capturas/12_06_02-08.jpg",
-        "captura_anotada": "capturas/12_06_02-08_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 127.0,
         "puntaje": null,
         "descripcion_original": "Se definen los limites del rango en milimetros para cada una de las fases, por ejemplo 800 mm de inicio en la fase sin contraste.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "03:02",
         "tiempo_seg": 182.0,
         "titulo": "Ajustar tiempo de espera arterial",
-        "descripcion": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35.0 segundos para dar tiempo al contraste, seleccionando inicio manual.",
+        "descripcion": "Ajuste el tiempo de espera en la columna 'Wait' para la fase arterial, establecido con inicio manual (simbolizado por un icono de inyeccion).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.222,
-          "y": 0.182
+          "x": 0.375,
+          "y": 0.818
         },
         "captura": "capturas/12_07_03-02.jpg",
         "captura_anotada": "capturas/12_07_03-02_anotada.jpg",
         "tiempo_real_seg": 181.8,
         "puntaje": null,
         "descripcion_original": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35 segundos para dar tiempo al contraste, seleccionando inicio manual.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "03:13",
         "tiempo_seg": 193.0,
         "titulo": "Configurar fase venosa automatica",
-        "descripcion": "Se programa un tiempo de espera automático para la fase venosa, visualizándose la columna 'Wait' con el símbolo de un reloj de inicio programado.",
+        "descripcion": "Ajuste el tiempo de espera en la columna 'Wait' para la fase venosa, indicado con inicio por reloj programado.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.194,
-          "y": 0.164
+          "x": 0.375,
+          "y": 0.806
         },
         "captura": "capturas/12_08_03-13.jpg",
         "captura_anotada": "capturas/12_08_03-13_anotada.jpg",
         "tiempo_real_seg": 192.0,
         "puntaje": null,
         "descripcion_original": "Se programa un tiempo de espera automatico de 70 segundos para la fase venosa en la columna 'Start Time'.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "03:23",
         "tiempo_seg": 203.0,
         "titulo": "Configurar fase tardia automatica",
-        "descripcion": "Se programa el inicio automático de la fase tardía a los 5 minutos (05:00.0 en pantalla) en la columna 'Start Time'.",
+        "descripcion": "Verifique la columna 'Start Time' para la fase tardia programada, la cual muestra un retraso automatico de 05:00.0.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
           "x": 0.158,
-          "y": 0.128
+          "y": 0.867
         },
         "captura": "capturas/12_09_03-23.jpg",
         "captura_anotada": "capturas/12_09_03-23_anotada.jpg",
         "tiempo_real_seg": 203.6,
         "puntaje": null,
         "descripcion_original": "Se programa el inicio automatico de la fase tardia a los 5 minutos (05:00.0) en la columna 'Start Time'.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "03:36",
         "tiempo_seg": 216.0,
         "titulo": "Ajustar modulacion de dosis",
-        "descripcion": "Se explica el ajuste de la modulación de dosis en 'Sure Exp. 3D' según el tamaño del paciente: 'Standard' para personas normales y 'Calidad' para personas más corpulentas.",
+        "descripcion": "Configure la modulacion en la ventana 'Scan Details' usando la opcion 'Sure Exp. 3D' ('Standard' para pacientes normales y 'Calidad' para contexturas mas robustas).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuracion de dosis",
         "zona": {
-          "x": 0.197,
-          "y": 0.325
+          "x": 0.328,
+          "y": 0.796
         },
         "captura": "capturas/12_10_03-36.jpg",
         "captura_anotada": "capturas/12_10_03-36_anotada.jpg",
         "tiempo_real_seg": 215.0,
         "puntaje": null,
         "descripcion_original": "Se explica el ajuste de la modulacion de dosis en 'Sure Exp 3D' segun el tamano del paciente: 'Estandar' para personas normales y 'Calidad' para personas mas corpulentas.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "04:09",
         "tiempo_seg": 249.0,
-        "titulo": "Modificar el D-FOV para ajuste visual",
-        "descripcion": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización.",
+        "titulo": "Modificar D-FOV para ajuste",
+        "descripcion": "Ajuste el valor de 'D-FOV' en el panel emergente, donde se visualiza el valor actual de 450 mm.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de parámetros de adquisición",
         "zona": {
-          "x": 0.257,
-          "y": 0.412
+          "x": 0.421,
+          "y": 0.692
         },
         "captura": "capturas/12_11_04-09.jpg",
         "captura_anotada": "capturas/12_11_04-09_anotada.jpg",
         "tiempo_real_seg": 249.2,
         "puntaje": null,
+        "titulo_original": "Modificar el D-FOV para ajuste visual",
         "descripcion_original": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm a 440 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "04:31",
         "tiempo_seg": 271.0,
-        "titulo": "Asignar comentario 'SIN CE' al primer escaneo",
-        "descripcion": "Se escribe 'SIN CE' (en pantalla se lee 'SIN CE') en el campo Comment de la primera fase para registrar el escaneo sin contraste.",
+        "titulo": "Asignar comentario 'SIN CE'",
+        "descripcion": "Escriba 'SIN CE' en el campo 'Comment' de la primera fase para registrar adecuadamente la adquisicion sin medio de contraste.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.086,
-          "y": 0.626
+          "x": 0.626,
+          "y": 0.897
         },
         "captura": "capturas/12_12_04-31.jpg",
         "captura_anotada": "capturas/12_12_04-31_anotada.jpg",
@@ -3691,358 +3855,408 @@
         "puntaje": null,
         "titulo_original": "Asignar comentario 'SIN CTE' al primer escaneo",
         "descripcion_original": "Se escribe 'SIN CTE' en el campo Comment de la primera fase para registrar el escaneo sin contraste en la metadata de adquisición.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "04:48",
         "tiempo_seg": 288.0,
-        "titulo": "Asignar comentario 'ARTERIAL' a fase de contraste",
-        "descripcion": "Se modifica la cuarta fila agregando la etiqueta 'ARTERI' (en pantalla se lee 'ARTERI') en los comentarios para marcar la fase arterial del examen.",
+        "titulo": "Asignar comentario 'ARTERI'",
+        "descripcion": "Escriba 'ARTERI' en el campo 'Comment' para identificar claramente la adquisicion de la fase arterial.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.142,
-          "y": 0.648
+          "x": 0.655,
+          "y": 0.86
         },
         "captura": "capturas/12_13_04-48.jpg",
         "captura_anotada": "capturas/12_13_04-48_anotada.jpg",
         "tiempo_real_seg": 288.2,
         "puntaje": null,
+        "titulo_original": "Asignar comentario 'ARTERIAL' a fase de contraste",
         "descripcion_original": "Se modifica la cuarta fila agregando la etiqueta 'ARTERIAL' en los comentarios para marcar la fase arterial del examen.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "05:13",
         "tiempo_seg": 313.0,
-        "titulo": "Asignar comentario 'VENOSO' a fase portal",
-        "descripcion": "Se ingresa el texto 'VENOSO' en el campo de comentario de la quinta fila del protocolo para identificar la fase venosa.",
+        "titulo": "Asignar comentario 'VENOSO'",
+        "descripcion": "Escriba 'VENOSO' en el campo 'Comment' de la quinta fila del protocolo para etiquetar la adquisicion de la fase venosa.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.153,
-          "y": 0.553
+          "x": 0.544,
+          "y": 0.846
         },
         "captura": "capturas/12_14_05-13.jpg",
         "captura_anotada": "capturas/12_14_05-13_anotada.jpg",
         "tiempo_real_seg": 313.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Asignar comentario 'VENOSO' a fase portal",
+        "descripcion_original": "Se ingresa el texto 'VENOSO' en el campo de comentario de la quinta fila del protocolo para identificar la fase venosa.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "05:21",
         "tiempo_seg": 321.0,
-        "titulo": "Asignar comentario 'TARDIO' a fase tardía",
-        "descripcion": "Se rotula la última fila con el comentario 'TARDIO' en el campo Comment para documentar adecuadamente la fase tardía o de eliminación.",
+        "titulo": "Asignar comentario 'TARDIO'",
+        "descripcion": "Ingrese 'TARDIO' en el campo 'Comment' de la ultima fila para documentar adecuadamente la fase tardia de eliminacion.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.425,
-          "y": 0.556
+          "x": 0.556,
+          "y": 0.575
         },
         "captura": "capturas/12_15_05-21.jpg",
         "captura_anotada": "capturas/12_15_05-21_anotada.jpg",
         "tiempo_real_seg": 320.0,
         "puntaje": null,
+        "titulo_original": "Asignar comentario 'TARDIO' a fase tardía",
         "descripcion_original": "Se rotula la última fila con el comentario 'TARDIO' para documentar adecuadamente la fase tardía o de eliminación.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "05:38",
         "tiempo_seg": 338.0,
-        "titulo": "Establecer reconstrucción estándar de volumen",
-        "descripcion": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Estándar de Volumen (Cuerpo Std. Volume) para posibilitar MPR posterior de alta calidad.",
+        "titulo": "Establecer reconstruccion Cuerpo Std. Axial",
+        "descripcion": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Std. Axial, posibilitando la visualización correcta del plano axial.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.285,
-          "y": 0.389
+          "x": 0.412,
+          "y": 0.702
         },
         "captura": "capturas/12_16_05-38.jpg",
         "captura_anotada": "capturas/12_16_05-38_anotada.jpg",
         "tiempo_real_seg": 338.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Establecer reconstrucción estándar de volumen",
+        "descripcion_original": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Estándar de Volumen (Cuerpo Std. Volume) para posibilitar MPR posterior de alta calidad.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "05:54",
         "tiempo_seg": 354.0,
         "titulo": "Configurar grosor e intervalo de volumen",
-        "descripcion": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
+        "descripcion": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo (Slice Interval) a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.283,
-          "y": 0.421
+          "x": 0.427,
+          "y": 0.722
         },
         "captura": "capturas/12_17_05-54.jpg",
         "captura_anotada": "capturas/12_17_05-54_anotada.jpg",
         "tiempo_real_seg": 354.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "descripcion_original": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "06:16",
         "tiempo_seg": 376.0,
-        "titulo": "Configurar reconstrucción de hueso fino",
-        "descripcion": "Se muestra cómo, en caso de trauma o indicación ósea, se puede cambiar el tipo de reconstrucción a Hueso Fino (Hueso Fino) para maximizar la resolución espacial en reconstrucciones volumétricas.",
+        "titulo": "Configurar reconstruccion de helicoidal",
+        "descripcion": "Se muestra la configuración de los parámetros del escaneo donde se detallan el valor de kV (120), mA, rotación (0.5 s), rango (800.0) y dirección OUT.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.397,
-          "y": 0.472
+          "x": 0.558,
+          "y": 0.597
         },
         "captura": "capturas/12_18_06-16.jpg",
         "captura_anotada": "capturas/12_18_06-16_anotada.jpg",
         "tiempo_real_seg": 375.4,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Configurar reconstrucción de hueso fino",
+        "descripcion_original": "Se muestra cómo, en caso de trauma o indicación ósea, se puede cambiar el tipo de reconstrucción a Hueso Fino (Hueso Fino) para maximizar la resolución espacial en reconstrucciones volumétricas.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "07:41",
         "tiempo_seg": 461.0,
-        "titulo": "Añadir reconstrucción pulmonar si es necesario",
-        "descripcion": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmón Std. Volume) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
+        "titulo": "Seleccionar reconstruccion de pulmon",
+        "descripcion": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmon Std. Axial) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.42,
-          "y": 0.315
+          "x": 0.328,
+          "y": 0.565
         },
         "captura": "capturas/12_19_07-41.jpg",
         "captura_anotada": "capturas/12_19_07-41_anotada.jpg",
         "tiempo_real_seg": 461.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Añadir reconstrucción pulmonar si es necesario",
+        "descripcion_original": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmón Std. Volume) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "08:03",
         "tiempo_seg": 483.0,
-        "titulo": "Revisar los filtros de reconstrucción predeterminados",
-        "descripcion": "El instructor indica que los filtros ya vienen configurados por defecto (por ejemplo, para pulmón) y solo es necesario encenderlos para evitar tener que buscarlos manualmente.",
+        "titulo": "Verificar aplicacion del protocolo",
+        "descripcion": "Se verifica en la interfaz de usuario la selección del protocolo de pulmon Std. Volume y su activación en el listado para el escaneo.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.376,
-          "y": 0.415
+          "x": 0.421,
+          "y": 0.629
         },
         "captura": "capturas/12_20_08-03.jpg",
         "captura_anotada": "capturas/12_20_08-03_anotada.jpg",
         "tiempo_real_seg": 482.8,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Revisar los filtros de reconstrucción predeterminados",
+        "descripcion_original": "El instructor indica que los filtros ya vienen configurados por defecto (por ejemplo, para pulmón) y solo es necesario encenderlos para evitar tener que buscarlos manualmente.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "08:21",
         "tiempo_seg": 501.0,
-        "titulo": "Configurar filtro ACE en volumen arterial",
-        "descripcion": "Seleccionar el volumen arterial en la lista de reconstrucción y aplicar el filtro ACE Cuerpo para optimizar la calidad de imagen con dosis baja.",
+        "titulo": "Configurar filtro AICE en volumen",
+        "descripcion": "Seleccionar el volumen en la lista de reconstrucción y aplicar el filtro AICE Cuerpo para optimizar la calidad de imagen con dosis baja.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.481,
-          "y": 0.427
+          "x": 0.422,
+          "y": 0.51
         },
         "captura": "capturas/12_21_08-21.jpg",
         "captura_anotada": "capturas/12_21_08-21_anotada.jpg",
         "tiempo_real_seg": 501.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Configurar filtro ACE en volumen arterial",
+        "descripcion_original": "Seleccionar el volumen arterial en la lista de reconstrucción y aplicar el filtro ACE Cuerpo para optimizar la calidad de imagen con dosis baja.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "08:41",
         "tiempo_seg": 521.0,
-        "titulo": "Activar los reformateos automáticos",
+        "titulo": "Activar los reformateos automaticos",
         "descripcion": "Si el paciente está bien centrado, se activan los reformateos automáticos para que el sistema genere directamente cortes axiales, coronales y sagitales cada 3.0 mm.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.281,
-          "y": 0.444
+          "x": 0.454,
+          "y": 0.714
         },
         "captura": "capturas/12_22_08-41.jpg",
         "captura_anotada": "capturas/12_22_08-41_anotada.jpg",
         "tiempo_real_seg": 520.4,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Activar los reformateos automáticos",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "08:58",
         "tiempo_seg": 538.0,
-        "titulo": "Aplicar filtro ACE en fase venosa",
-        "descripcion": "Se selecciona la fase venosa y se activa igualmente el filtro ACE Cuerpo, asegurándose de que la descripción de la serie indique 'VENOSO'.",
+        "titulo": "Aplicar filtro AICE en fase venosa",
+        "descripcion": "Se selecciona la fase venosa y se activa igualmente el filtro AICE Cuerpo para el procesamiento correcto del volumen.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.42,
-          "y": 0.285
+          "x": 0.298,
+          "y": 0.572
         },
         "captura": "capturas/12_23_08-58.jpg",
         "captura_anotada": "capturas/12_23_08-58_anotada.jpg",
         "tiempo_real_seg": 538.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Aplicar filtro ACE en fase venosa",
+        "descripcion_original": "Se selecciona la fase venosa y se activa igualmente el filtro ACE Cuerpo, asegurándose de que la descripción de la serie indique 'VENOSO'.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "09:18",
         "tiempo_seg": 558.0,
-        "titulo": "Configurar la fase tardía con ACE",
-        "descripcion": "Se activa la reconstrucción de la fase tardía aplicando el filtro ACE Cuerpo para mantener la coherencia en el protocolo de abdomen trifásico.",
+        "titulo": "Configurar la fase tardia con AICE",
+        "descripcion": "Se activa la reconstrucción de la fase tardía aplicando el filtro AICE Cuerpo para mantener la coherencia en el protocolo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.769,
-          "y": 0.349
+          "x": 0.349,
+          "y": 0.231
         },
         "captura": "capturas/12_24_09-18.jpg",
         "captura_anotada": "capturas/12_24_09-18_anotada.jpg",
         "tiempo_real_seg": 558.2,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Configurar la fase tardía con ACE",
+        "descripcion_original": "Se activa la reconstrucción de la fase tardía aplicando el filtro ACE Cuerpo para mantener la coherencia en el protocolo de abdomen trifásico.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "10:04",
         "tiempo_seg": 604.0,
-        "titulo": "Modificar la orientación del maniquí",
-        "descripcion": "Si la orientación del paciente fue ingresada incorrectamente, se puede cambiar directamente en pantalla (ej. de pies a cabeza, supino a prono) y el maniquí se actualizará automáticamente.",
+        "titulo": "Modificar la orientacion del paciente",
+        "descripcion": "Se muestra la interfaz con el id de paciente 999999-001 y el nombre XXXXXXX-001 para la asignación del estudio ABDOMEN TRIFASICO.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Posicionamiento virtual",
         "zona": {
-          "x": 0.728,
-          "y": 0.296
+          "x": 0.292,
+          "y": 0.291
         },
         "captura": "capturas/12_25_10-04.jpg",
         "captura_anotada": "capturas/12_25_10-04_anotada.jpg",
         "tiempo_real_seg": 604.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Modificar la orientación del maniquí",
+        "descripcion_original": "Si la orientación del paciente fue ingresada incorrectamente, se puede cambiar directamente en pantalla (ej. de pies a cabeza, supino a prono) y el maniquí se actualizará automáticamente.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "10:27",
         "tiempo_seg": 627.0,
-        "titulo": "Ajustar dirección del escanograma (In/Out)",
-        "descripcion": "El sistema cambia automáticamente la dirección del movimiento de la camilla (hacia adentro o hacia afuera) al modificar la orientación del paciente.",
+        "titulo": "Ajustar direccion del escanograma (In/Out)",
+        "descripcion": "Se detalla en la interfaz la pestaña Scan Details del escanograma inicial (FL03) con parámetros de 120 kV y 30 mA.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Posicionamiento virtual",
         "zona": {
-          "x": 0.56,
-          "y": 0.277
+          "x": 0.277,
+          "y": 0.44
         },
         "captura": "capturas/12_26_10-27.jpg",
         "captura_anotada": "capturas/12_26_10-27_anotada.jpg",
         "tiempo_real_seg": 627.6,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Ajustar dirección del escanograma (In/Out)",
+        "descripcion_original": "El sistema cambia automáticamente la dirección del movimiento de la camilla (hacia adentro o hacia afuera) al modificar la orientación del paciente.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "11:09",
         "tiempo_seg": 669.0,
-        "titulo": "Desactivar instrucciones de voz automáticas",
-        "descripcion": "Haciendo un solo clic se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
+        "titulo": "Desactivar instrucciones de voz de respiracion",
+        "descripcion": "Haciendo un solo clic en el icono de reproducción de voz se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.718,
-          "y": 0.426
+          "x": 0.426,
+          "y": 0.282
         },
         "captura": "capturas/12_27_11-09.jpg",
         "captura_anotada": "capturas/12_27_11-09_anotada.jpg",
         "tiempo_real_seg": 669.2,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Desactivar instrucciones de voz automáticas",
+        "descripcion_original": "Haciendo un solo clic se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "11:18",
         "tiempo_seg": 678.0,
-        "titulo": "Confirmar parámetros antes de escanear",
+        "titulo": "Confirmar parametros antes de escanear",
         "descripcion": "El instructor advierte que ante cualquier cambio de kV, mA o reconstrucción, el sistema requerirá volver a presionar el botón 'Confirm' en pantalla.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.181,
-          "y": 0.725
+          "x": 0.725,
+          "y": 0.819
         },
         "captura": "capturas/12_28_11-18.jpg",
         "captura_anotada": "capturas/12_28_11-18_anotada.jpg",
         "tiempo_real_seg": 677.0,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Confirmar parámetros antes de escanear",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "11:31",
         "tiempo_seg": 691.0,
-        "titulo": "Presionar botón de inicio para escanear",
+        "titulo": "Presionar boton de inicio fisico",
         "descripcion": "Cuando el botón físico parpadea, significa que está tomando impulso para asegurar una velocidad constante de la camilla al momento de iniciar la radiación.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.102,
-          "y": 0.476
+          "x": 0.476,
+          "y": 0.898
         },
         "captura": "capturas/12_29_11-31.jpg",
         "captura_anotada": "capturas/12_29_11-31_anotada.jpg",
         "tiempo_real_seg": 690.0,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "titulo_original": "Presionar botón de inicio para escanear",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "12:21",
         "tiempo_seg": 741.0,
         "titulo": "Abortar o saltar escanograma (Scan Skip)",
-        "descripcion": "Se demuestra cómo interrumpir la adquisición presionando el control de parada para abortar la emisión de radiación si es necesario.",
+        "descripcion": "Se demuestra cómo interrumpir la adquisición presionando el control de parada 'Scan Skip' para abortar la emisión de radiación si es necesario.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.591,
-          "y": 0.448
+          "x": 0.448,
+          "y": 0.409
         },
         "captura": "capturas/12_30_12-21.jpg",
         "captura_anotada": "capturas/12_30_12-21_anotada.jpg",
         "tiempo_real_seg": 740.0,
         "puntaje": null,
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "descripcion_original": "Se demuestra cómo interrumpir la adquisición presionando el control de parada para abortar la emisión de radiación si es necesario.",
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "13:12",
         "tiempo_seg": 792.0,
-        "titulo": "Desechar y reiniciar escanogramas abortados",
-        "descripcion": "Para realizar nuevamente los escanogramas despu s de abortar, se debe seleccionar el botón 'Exit Exam' (indicado en pantalla como Exit Exam), descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo para el paciente ID 999999-001.",
+        "titulo": "Seleccionar Exit Exam para reiniciar estudio",
+        "descripcion": "Para realizar nuevamente los escanogramas después de abortar, presione el botón 'Exit Exam' en la esquina inferior izquierda. Esto permitirá descartar los datos previos y cargar nuevamente el protocolo para el paciente ID 999999-001.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.112,
-          "y": 0.654
+          "x": 0.655,
+          "y": 0.887
         },
         "captura": "capturas/12_31_13-12.jpg",
         "captura_anotada": "capturas/12_31_13-12_anotada.jpg",
         "tiempo_real_seg": 791.8,
         "puntaje": null,
+        "titulo_original": "Desechar y reiniciar escanogramas abortados",
         "descripcion_original": "Para realizar nuevamente los escanogramas después de abortar, se debe seleccionar 'Exit Exam', descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo.",
-        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip"
+        "capitulo": "12. Selección de técnica, volúmenes, orientación del paciente, scout y scan skip",
+        "rotacion": 270
       },
       {
         "tiempo": "00:02",
         "tiempo_seg": 2.0,
         "titulo": "Iniciar posicionamiento de camilla",
-        "descripcion": "El operador confirma el inicio del movimiento de la camilla a la posición de inicio a 274.0 mm, haciendo clic sobre el botón de inicio (flecha hacia adelante parpadeante) en la ventana flotante.",
+        "descripcion": "El operador confirma el inicio del movimiento de la camilla a la posicion de inicio a 274.0 mm, haciendo clic sobre el boton de inicio (flecha hacia adelante parpadeante) en la ventana flotante.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -4061,8 +4275,8 @@
       {
         "tiempo": "00:25",
         "tiempo_seg": 25.0,
-        "titulo": "Verificar preparación del escaneo",
-        "descripcion": "Una vez que la luz del botón de escaneo se queda fija en la consola, se presiona para iniciar la radiación. En la pantalla se observa que la ventana de advertencia de posicionamiento se ha cerrado.",
+        "titulo": "Verificar preparacion del escaneo",
+        "descripcion": "Una vez que la luz del boton de escaneo se queda fija en la consola, se presiona para iniciar la radiacion. En la pantalla se observa que la ventana de advertencia de posicionamiento se ha cerrado.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -4079,7 +4293,7 @@
         "tiempo": "00:33",
         "tiempo_seg": 33.0,
         "titulo": "Omitir el resto del escanograma",
-        "descripcion": "Se selecciona 'Scano Skip' en pantalla cuando el área de interés ya ha sido escaneada y el tubo se encuentra en el aire.",
+        "descripcion": "Se selecciona 'Scano Skip' en pantalla cuando el area de interes ya ha sido escaneada y el tubo se encuentra en el aire.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición del escanograma",
@@ -4091,13 +4305,14 @@
         "captura_anotada": "capturas/13_03_00-33_anotada.jpg",
         "tiempo_real_seg": 32.4,
         "puntaje": null,
+        "descripcion_original": "Se selecciona 'Scano Skip' en pantalla cuando el área de interés ya ha sido escaneada y el tubo se encuentra en el aire.",
         "capitulo": "13. Adquisición trifásica, contraste, quick exam y escanograma largo"
       },
       {
         "tiempo": "01:08",
         "tiempo_seg": 68.0,
-        "titulo": "Ajustar campo de visión global",
-        "descripcion": "Se seleccionan todas las cajas de escaneo de forma simultánea en el menú 'Change Scans' marcando 'All' para aplicar un mismo FOV uniforme.",
+        "titulo": "Ajustar campo de vision global",
+        "descripcion": "Se seleccionan todas las cajas de escaneo de forma simultanea en el menu 'Change Scans' marcando 'All' para aplicar un mismo FOV uniforme.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4117,7 +4332,7 @@
         "tiempo": "01:29",
         "tiempo_seg": 89.0,
         "titulo": "Definir rango individual por fase",
-        "descripcion": "Se selecciona 'Individual' en el menú 'Change Scans' para ajustar de manera independiente el rango de escaneo arrastrando los marcadores en el escanograma.",
+        "descripcion": "Se selecciona 'Individual' en el menu 'Change Scans' para ajustar de manera independiente el rango de escaneo arrastrando los marcadores en el escanograma.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4136,8 +4351,8 @@
       {
         "tiempo": "01:54",
         "tiempo_seg": 114.0,
-        "titulo": "Verificar parámetros de reconstrucción",
-        "descripcion": "Se accede a la pestaña de detalles de reconstrucción 'Recon Details' para verificar el grosor de corte, intervalo y áreas que se van a reconstruir.",
+        "titulo": "Verificar parametros de reconstruccion",
+        "descripcion": "Se accede a la pestaña de detalles de reconstruccion 'Recon Details' para verificar el grosor de corte, intervalo y areas que se van a reconstruir.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4149,6 +4364,7 @@
         "captura_anotada": "capturas/13_06_01-54_anotada.jpg",
         "tiempo_real_seg": 113.0,
         "puntaje": null,
+        "titulo_original": "Verificar parámetros de reconstrucción",
         "descripcion_original": "Se accede a 'Recon Details' para verificar las zonas que se van a reconstruir, indicadas en color naranja.",
         "capitulo": "13. Adquisición trifásica, contraste, quick exam y escanograma largo"
       },
@@ -4156,7 +4372,7 @@
         "tiempo": "02:32",
         "tiempo_seg": 152.0,
         "titulo": "Configurar D-FOV en Scan Details",
-        "descripcion": "Se hace clic sobre el campo 'D-FOV' en la pestaña 'Scan Details' para ajustar el diámetro del campo de visión, el cual muestra un valor de 421.1 (L).",
+        "descripcion": "Se hace clic sobre el campo 'D-FOV' en la pestaña 'Scan Details' para ajustar el diametro del campo de vision, el cual muestra un valor de 421.1 (L).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4176,7 +4392,7 @@
         "tiempo": "02:40",
         "tiempo_seg": 160.0,
         "titulo": "Ajustar reconstrucciones en Multi View",
-        "descripcion": "Se accede a la pestaña 'Multi View' para configurar de manera específica el grosor y el intervalo de las reconstrucciones axiales, coronales o sagitales.",
+        "descripcion": "Se accede a la pestaña 'Multi View' para configurar de manera especifica el grosor y el intervalo de las reconstrucciones axiales, coronales o sagitales.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4195,8 +4411,8 @@
       {
         "tiempo": "03:03",
         "tiempo_seg": 183.0,
-        "titulo": "Confirmar planificación de la fase",
-        "descripcion": "Se presiona el botón 'Confirm' ubicado en la esquina inferior derecha para validar y fijar la configuración de la fase de estudio planificada.",
+        "titulo": "Confirmar planificacion de la fase",
+        "descripcion": "Se presiona el boton 'Confirm' ubicado en la esquina inferior derecha para validar y fijar la configuracion de la fase de estudio planificada.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4215,8 +4431,8 @@
       {
         "tiempo": "03:19",
         "tiempo_seg": 199.0,
-        "titulo": "Advertencia de límite de rango",
-        "descripcion": "Aparece la advertencia 'Sure Exp. mA could not be calculated because the scan range exceeds the scanogram area', indicando que el rango de escaneo planificado supera los límites del escanograma.",
+        "titulo": "Advertencia de limite de rango",
+        "descripcion": "Aparece la advertencia 'Sure Exp. mA could not be calculated because the scan range exceeds the scanogram area', indicando que el rango de escaneo planificado supera los limites del escanograma.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -4228,6 +4444,7 @@
         "captura_anotada": "capturas/13_10_03-19_anotada.jpg",
         "tiempo_real_seg": 198.4,
         "puntaje": null,
+        "titulo_original": "Advertencia de límite de rango",
         "descripcion_original": "Aparece un mensaje indicando que el modulador de mA no puede calcularse con precisión debido a que el rango planificado excede el área del escanograma.",
         "capitulo": "13. Adquisición trifásica, contraste, quick exam y escanograma largo"
       },
@@ -4235,7 +4452,7 @@
         "tiempo": "03:40",
         "tiempo_seg": 220.0,
         "titulo": "Reducir rango de escaneo",
-        "descripcion": "Se regresa a la pantalla de planificación para reajustar y acortar los límites de las cajas amarillas de escaneo sobre el escanograma de referencia.",
+        "descripcion": "Se regresa a la pantalla de planificacion para reajustar y acortar los limites de las cajas amarillas de escaneo sobre el escanograma de referencia.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificación del estudio",
@@ -4254,7 +4471,7 @@
         "tiempo": "04:02",
         "tiempo_seg": 242.0,
         "titulo": "Adquirir primera fase sin contraste",
-        "descripcion": "Se realiza el escaneo de la primera fase sin medio de contraste ('SIN CE') y se verifica que las imágenes se reconstruyen en tiempo real en la pantalla superior.",
+        "descripcion": "Se realiza el escaneo de la primera fase sin medio de contraste ('SIN CE') y se verifica que las imagenes se reconstruyen en tiempo real en la pantalla superior.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -4273,7 +4490,7 @@
         "tiempo": "04:26",
         "tiempo_seg": 266.0,
         "titulo": "Sincronizar escaneo e inyectora de contraste",
-        "descripcion": "Se inicia simultáneamente la adquisición de la fase arterial y la inyección del medio de contraste presionando ambos botones a la vez.",
+        "descripcion": "Se inicia simultaneamente la adquisicion de la fase arterial y la inyeccion del medio de contraste presionando ambos botones a la vez.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
@@ -4282,19 +4499,20 @@
         "captura_anotada": null,
         "tiempo_real_seg": 266.2,
         "puntaje": null,
+        "descripcion_original": "Se inicia simultáneamente la adquisición de la fase arterial y la inyección del medio de contraste presionando ambos botones a la vez.",
         "capitulo": "13. Adquisición trifásica, contraste, quick exam y escanograma largo"
       },
       {
         "tiempo": "04:35",
         "tiempo_seg": 275.0,
         "titulo": "Monitorear tiempo en el gantry",
-        "descripcion": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomógrafo Canon.",
+        "descripcion": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomografo Canon.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.512,
-          "y": 0.535
+          "x": 0.487,
+          "y": 0.243
         },
         "captura": "capturas/13_14_04-35.jpg",
         "captura_anotada": "capturas/13_14_04-35_anotada.jpg",
@@ -4307,7 +4525,7 @@
         "tiempo": "05:49",
         "tiempo_seg": 349.0,
         "titulo": "Finalizar examen actual",
-        "descripcion": "Se hace clic sobre el botón 'Quit Exam' en la parte inferior de la pantalla para concluir definitivamente el protocolo del paciente.",
+        "descripcion": "Se hace clic sobre el boton 'Quit Exam' en la parte inferior de la pantalla para concluir definitivamente el protocolo del paciente.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Finalización y nuevos estudios",
@@ -4325,19 +4543,20 @@
       {
         "tiempo": "06:04",
         "tiempo_seg": 364.0,
-        "titulo": "Reutilizar escanograma para otro estudio",
-        "descripcion": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear. En la pantalla se visualizan los protocolos disponibles en el grupo RTP, como CEREBRO y CPN.",
+        "titulo": "Reutilice el escanograma para otro estudio",
+        "descripcion": "Es posible reutilizar el escanograma para planificar estudios adicionales sin volver a escanear. En la pantalla se muestran los protocolos disponibles bajo el grupo RTP, como CEREBRO, CPN, MAXILOFACIAL u OIDO.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Finalización y nuevos estudios",
         "zona": {
-          "x": 0.38,
-          "y": 0.59
+          "x": 0.35,
+          "y": 0.58
         },
         "captura": "capturas/13_16_06-04.jpg",
         "captura_anotada": "capturas/13_16_06-04_anotada.jpg",
         "tiempo_real_seg": 363.0,
         "puntaje": null,
+        "titulo_original": "Reutilizar escanograma para otro estudio",
         "descripcion_original": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear.",
         "capitulo": "13. Adquisición trifásica, contraste, quick exam y escanograma largo"
       },
@@ -4350,8 +4569,8 @@
         "fuente": "ambos",
         "seccion": "Seleccion de protocolo",
         "zona": {
-          "x": 0.395,
-          "y": 0.756
+          "x": 0.341,
+          "y": 0.724
         },
         "captura": "capturas/14_01_00-06.jpg",
         "captura_anotada": "capturas/14_01_00-06_anotada.jpg",
@@ -4368,8 +4587,8 @@
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.49,
-          "y": 0.427
+          "x": 0.439,
+          "y": 0.574
         },
         "captura": "capturas/14_02_00-26.jpg",
         "captura_anotada": "capturas/14_02_00-26_anotada.jpg",
@@ -4381,54 +4600,57 @@
         "tiempo": "00:58",
         "tiempo_seg": 58.0,
         "titulo": "Identificar los limites de adquisicion",
-        "descripcion": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color verde en la pantalla de planificacion.",
+        "descripcion": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color amarillo (en pantalla se ven amarillas; se indica verde) en la pantalla de planificacion.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.725,
-          "y": 0.149
+          "x": 0.639,
+          "y": 0.142
         },
         "captura": "capturas/14_03_00-58.jpg",
         "captura_anotada": "capturas/14_03_00-58_anotada.jpg",
         "tiempo_real_seg": 58.2,
         "puntaje": null,
+        "descripcion_original": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color verde en la pantalla de planificacion.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
         "tiempo": "01:27",
         "tiempo_seg": 87.0,
         "titulo": "Confirmar movimiento de camilla",
-        "descripcion": "Se confirma el cuadro de dialogo en pantalla para mover la camilla a la posicion del corte de prueba (target position 108.0 mm).",
+        "descripcion": "Se confirma el cuadro de dialogo en pantalla para mover la camilla presionando el boton Confirm.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Corte de prueba",
         "zona": {
-          "x": 0.56,
-          "y": 0.863
+          "x": 0.682,
+          "y": 0.966
         },
         "captura": "capturas/14_04_01-27.jpg",
         "captura_anotada": "capturas/14_04_01-27_anotada.jpg",
         "tiempo_real_seg": 86.0,
         "puntaje": null,
+        "descripcion_original": "Se confirma el cuadro de dialogo en pantalla para mover la camilla a la posicion del corte de prueba (target position 108.0 mm).",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
         "tiempo": "01:40",
         "tiempo_seg": 100.0,
         "titulo": "Ajustar la region de interes (ROI)",
-        "descripcion": "Se demuestra como posicionar y redimensionar el ROI en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
+        "descripcion": "Se demuestra como posicionar y redimensionar el ROI (marcado con un pequeño circulo amarillo) en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.718,
-          "y": 0.361
+          "x": 0.625,
+          "y": 0.264
         },
         "captura": "capturas/14_05_01-40.jpg",
         "captura_anotada": "capturas/14_05_01-40_anotada.jpg",
         "tiempo_real_seg": 99.0,
         "puntaje": null,
+        "descripcion_original": "Se demuestra como posicionar y redimensionar el ROI en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4440,8 +4662,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.489,
-          "y": 0.966
+          "x": 0.49,
+          "y": 0.772
         },
         "captura": "capturas/14_06_02-11.jpg",
         "captura_anotada": "capturas/14_06_02-11_anotada.jpg",
@@ -4453,18 +4675,19 @@
         "tiempo": "02:23",
         "tiempo_seg": 143.0,
         "titulo": "Visualizar cortes con Scan Plan",
-        "descripcion": "Se presiona el boton Scan Plan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
+        "descripcion": "Se presiona el boton ScanPlan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificacion de la adquisicion",
         "zona": {
-          "x": 0.15,
-          "y": 0.956
+          "x": 0.118,
+          "y": 0.894
         },
         "captura": "capturas/14_07_02-23.jpg",
         "captura_anotada": "capturas/14_07_02-23_anotada.jpg",
         "tiempo_real_seg": 143.2,
         "puntaje": null,
+        "descripcion_original": "Se presiona el boton Scan Plan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4476,8 +4699,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.242,
-          "y": 0.141
+          "x": 0.236,
+          "y": 0.357
         },
         "captura": "capturas/14_08_02-54.jpg",
         "captura_anotada": "capturas/14_08_02-54_anotada.jpg",
@@ -4489,18 +4712,19 @@
         "tiempo": "03:15",
         "tiempo_seg": 195.0,
         "titulo": "Modificar el tiempo de espera (Wait)",
-        "descripcion": "Se ingresa un tiempo de espera (Wait) de 5.0 segundos en la secuencia para retrasar el inicio del escaneo y optimizar el uso de radiacion respecto a la llegada del contraste.",
+        "descripcion": "Se ingresa un tiempo de espera (Wait) en la secuencia para retrasar el inicio del escaneo; se selecciona la casilla correspondiente en la fila 2 de SureStart.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.218,
-          "y": 0.597
+          "x": 0.305,
+          "y": 0.542
         },
         "captura": "capturas/14_09_03-15.jpg",
         "captura_anotada": "capturas/14_09_03-15_anotada.jpg",
         "tiempo_real_seg": 194.8,
         "puntaje": null,
+        "descripcion_original": "Se ingresa un tiempo de espera (Wait) de 5.0 segundos en la secuencia para retrasar el inicio del escaneo y optimizar el uso de radiacion respecto a la llegada del contraste.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4512,8 +4736,8 @@
         "fuente": "ambos",
         "seccion": "Configuracion de SureStart",
         "zona": {
-          "x": 0.234,
-          "y": 0.305
+          "x": 0.285,
+          "y": 0.268
         },
         "captura": "capturas/14_10_03-44.jpg",
         "captura_anotada": "capturas/14_10_03-44_anotada.jpg",
@@ -4529,9 +4753,12 @@
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.815,
+          "y": 0.714
+        },
         "captura": "capturas/14_11_04-08.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_11_04-08_anotada.jpg",
         "tiempo_real_seg": 247.0,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4540,15 +4767,19 @@
         "tiempo": "04:18",
         "tiempo_seg": 258.0,
         "titulo": "Ajustar la región de interés (ROI)",
-        "descripcion": "El operador explica que durante los primeros 5 segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz.",
+        "descripcion": "El operador explica que durante los primeros segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz 'ROI Position'.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.427,
+          "y": 0.551
+        },
         "captura": "capturas/14_12_04-18.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_12_04-18_anotada.jpg",
         "tiempo_real_seg": 258.2,
         "puntaje": null,
+        "descripcion_original": "El operador explica que durante los primeros 5 segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4559,9 +4790,12 @@
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.586,
+          "y": 0.718
+        },
         "captura": "capturas/14_13_04-33.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_13_04-33_anotada.jpg",
         "tiempo_real_seg": 273.6,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4570,15 +4804,19 @@
         "tiempo": "05:05",
         "tiempo_seg": 305.0,
         "titulo": "Duración de la adquisición del Angio-TEP",
-        "descripcion": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3,3 segundos.",
+        "descripcion": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3.3 segundos.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.453,
+          "y": 0.719
+        },
         "captura": "capturas/14_14_05-05.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_14_05-05_anotada.jpg",
         "tiempo_real_seg": 304.0,
         "puntaje": null,
+        "descripcion_original": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3,3 segundos.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4589,9 +4827,12 @@
         "importancia": 4,
         "fuente": "audio",
         "seccion": "Adquisición de imagen",
-        "zona": null,
+        "zona": {
+          "x": 0.482,
+          "y": 0.625
+        },
         "captura": "capturas/14_15_05-37.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_15_05-37_anotada.jpg",
         "tiempo_real_seg": 337.2,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4690,18 +4931,19 @@
         "tiempo": "09:09",
         "tiempo_seg": 549.0,
         "titulo": "Acceder al menú SURE Subtraction",
-        "descripcion": "Se muestra la interfaz en pantalla donde se selecciona 'SURE Subtraction' para habilitar las opciones de sustracción digital en cerebro, cuello o angiografía.",
+        "descripcion": "Se muestra la interfaz en pantalla donde se selecciona el botón 'SURE Subtraction' en el panel lateral izquierdo para habilitar las opciones de sustracción digital.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de sustracción digital",
         "zona": {
-          "x": 0.139,
-          "y": 0.878
+          "x": 0.313,
+          "y": 0.556
         },
         "captura": "capturas/14_22_09-09.jpg",
         "captura_anotada": "capturas/14_22_09-09_anotada.jpg",
         "tiempo_real_seg": 549.6,
         "puntaje": null,
+        "descripcion_original": "Se muestra la interfaz en pantalla donde se selecciona 'SURE Subtraction' para habilitar las opciones de sustracción digital en cerebro, cuello o angiografía.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4738,18 +4980,19 @@
         "tiempo": "10:37",
         "tiempo_seg": 637.0,
         "titulo": "Crear protocolo ANGIO AORTA DSA",
-        "descripcion": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA).",
+        "descripcion": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA). En la barra de título se visualiza ANGIO AORTA DSA.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Programación de protocolos",
         "zona": {
-          "x": 0.605,
-          "y": 0.141
+          "x": 0.371,
+          "y": 0.092
         },
         "captura": "capturas/14_25_10-37.jpg",
         "captura_anotada": "capturas/14_25_10-37_anotada.jpg",
         "tiempo_real_seg": 637.6,
         "puntaje": null,
+        "descripcion_original": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA).",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4761,7 +5004,7 @@
         "fuente": "ambos",
         "seccion": "Ajuste de parámetros de adquisición",
         "zona": {
-          "x": 0.56,
+          "x": 0.401,
           "y": 0.801
         },
         "captura": "capturas/14_26_11-05.jpg",
@@ -4778,9 +5021,12 @@
         "importancia": 3,
         "fuente": "audio",
         "seccion": "Ajuste de parámetros de adquisición",
-        "zona": null,
+        "zona": {
+          "x": 0.361,
+          "y": 0.725
+        },
         "captura": "capturas/14_27_11-15.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_27_11-15_anotada.jpg",
         "tiempo_real_seg": 674.4,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4808,12 +5054,9 @@
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
-        "zona": {
-          "x": 0.235,
-          "y": 0.745
-        },
+        "zona": null,
         "captura": "capturas/14_29_12-08.jpg",
-        "captura_anotada": "capturas/14_29_12-08_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 727.0,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4822,18 +5065,19 @@
         "tiempo": "13:10",
         "tiempo_seg": 790.0,
         "titulo": "Seleccionar el filtro de sustracción automática",
-        "descripcion": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular, indicando que el software realiza un registro rígido o deformable según corresponda.",
+        "descripcion": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.56,
-          "y": 0.75
+          "x": 0.625,
+          "y": 0.826
         },
         "captura": "capturas/14_30_13-10.jpg",
         "captura_anotada": "capturas/14_30_13-10_anotada.jpg",
         "tiempo_real_seg": 790.6,
         "puntaje": null,
+        "descripcion_original": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular, indicando que el software realiza un registro rígido o deformable según corresponda.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
@@ -4844,9 +5088,12 @@
         "importancia": 5,
         "fuente": "audio",
         "seccion": "Posicionamiento y Seguridad",
-        "zona": null,
+        "zona": {
+          "x": 0.738,
+          "y": 0.532
+        },
         "captura": "capturas/14_31_13-34.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/14_31_13-34_anotada.jpg",
         "tiempo_real_seg": 813.0,
         "puntaje": null,
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
@@ -4854,38 +5101,281 @@
       {
         "tiempo": "14:30",
         "tiempo_seg": 870.0,
-        "titulo": "Diferenciar nombres de serie en reconstrucción",
-        "descripcion": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' (por ejemplo, 'ANGIO AORTA') para evitar confusiones en el análisis vascular posterior.",
+        "titulo": "Diferenciar nombres de serie en reconstruccion",
+        "descripcion": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' para evitar confusiones en el analisis vascular posterior. En pantalla se visualiza la configuracion del volumen de reconstruccion.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de Protocolos",
         "zona": {
-          "x": 0.56,
-          "y": 0.79
+          "x": 0.648,
+          "y": 0.704
         },
         "captura": "capturas/14_32_14-30.jpg",
         "captura_anotada": "capturas/14_32_14-30_anotada.jpg",
         "tiempo_real_seg": 870.6,
         "puntaje": null,
+        "titulo_original": "Diferenciar nombres de serie en reconstrucción",
+        "descripcion_original": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' (por ejemplo, 'ANGIO AORTA') para evitar confusiones en el análisis vascular posterior.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
       },
       {
         "tiempo": "16:30",
         "tiempo_seg": 990.0,
-        "titulo": "Reiniciar la cola de reconstrucción",
-        "descripcion": "Para solucionar problemas cuando la reconstrucción se queda en estado de espera ('Hold'), se debe ir al menú Utility y seleccionar la opción 'Reconstruction Queue restart' para destrabar el proceso.",
+        "titulo": "Reiniciar la cola de reconstruccion",
+        "descripcion": "Para solucionar problemas cuando la reconstruccion se queda en estado de espera ('Hold'), se debe ir al menu Utility y seleccionar la opcion 'Reconstruction Queue restart' para destrabar el proceso.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Resolución de Problemas",
         "zona": {
-          "x": 0.19,
-          "y": 0.36
+          "x": 0.204,
+          "y": 0.387
         },
         "captura": "capturas/14_33_16-30.jpg",
         "captura_anotada": "capturas/14_33_16-30_anotada.jpg",
         "tiempo_real_seg": 989.0,
         "puntaje": null,
+        "titulo_original": "Reiniciar la cola de reconstrucción",
+        "descripcion_original": "Para solucionar problemas cuando la reconstrucción se queda en estado de espera ('Hold'), se debe ir al menú Utility y seleccionar la opción 'Reconstruction Queue restart' para destrabar el proceso.",
         "capitulo": "14. Simulación angio, bolus track, scanplan y sustracción digital"
+      },
+      {
+        "tiempo": "00:05",
+        "tiempo_seg": 5.0,
+        "titulo": "Reiniciar cola de reconstrucción",
+        "descripcion": "Si el sistema queda en Hold y no reconstruye, se debe acceder al menú Utility y seleccionar Reconstruction Queue restart para reiniciar el proceso.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.26,
+          "y": 0.387
+        },
+        "captura": "capturas/15_01_00-05.jpg",
+        "captura_anotada": "capturas/15_01_00-05_anotada.jpg",
+        "tiempo_real_seg": 5.2,
+        "puntaje": null,
+        "descripcion_original": "Si el sistema queda en Hold y no reconstruye, se debe acceder al menú Utility y seleccionar Reconstruction Queue Restart para reiniciar el proceso.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Visualizar estado de reconstrucción",
+        "descripcion": "Al hacer clic en el icono correspondiente a la izquierda de Utility (icono de cola de reconstrucción), se despliega la pantalla que muestra todas las tareas de reconstrucción en cola.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.268,
+          "y": 0.264
+        },
+        "captura": "capturas/15_02_00-15.jpg",
+        "captura_anotada": "capturas/15_02_00-15_anotada.jpg",
+        "tiempo_real_seg": 15.2,
+        "puntaje": null,
+        "descripcion_original": "Al hacer clic en el icono correspondiente, se despliega la pantalla que muestra todas las tareas de reconstrucción en cola.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "00:26",
+        "tiempo_seg": 26.0,
+        "titulo": "Cerrar ventana de reconstrucción",
+        "descripcion": "Es fundamental cerrar la ventana de reconstrucción tras consultarla presionando Quit. Si se deja abierta, el sistema puede quedar bloqueado en Hold durante el escaneo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Gestión de reconstrucción",
+        "zona": {
+          "x": 0.807,
+          "y": 0.481
+        },
+        "captura": "capturas/15_03_00-26.jpg",
+        "captura_anotada": "capturas/15_03_00-26_anotada.jpg",
+        "tiempo_real_seg": 25.8,
+        "puntaje": null,
+        "descripcion_original": "Es fundamental cerrar la ventana de reconstrucción tras consultarla. Si se deja abierta, el sistema puede quedar bloqueado en Hold durante el escaneo.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "00:47",
+        "tiempo_seg": 47.0,
+        "titulo": "Recuperar estado tras bloqueo",
+        "descripcion": "Si el sistema se traba en Hold por un error de software, la solución habitual es volver a abrir la ventana de reconstrucción y cerrarla inmediatamente.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Resolución de problemas",
+        "zona": null,
+        "captura": "capturas/15_04_00-47.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 46.4,
+        "puntaje": null,
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "01:15",
+        "tiempo_seg": 75.0,
+        "titulo": "Cargar paciente desde servidor",
+        "descripcion": "Seleccionar Appoint, luego presionar Option para abrir la lista de la Patient Information, buscar el paciente requerido y cargarlo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.204,
+          "y": 0.574
+        },
+        "captura": "capturas/15_05_01-15.jpg",
+        "captura_anotada": "capturas/15_05_01-15_anotada.jpg",
+        "tiempo_real_seg": 75.6,
+        "puntaje": null,
+        "descripcion_original": "Seleccionar Appoint, luego From Server, presionar Reload para actualizar la lista de la Worklist y seleccionar el paciente requerido.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "01:29",
+        "tiempo_seg": 89.0,
+        "titulo": "Consultar detalles del estudio",
+        "descripcion": "Al ingresar en el botón Detail, se pueden revisar campos críticos como ID, Lastname, DOB, Sex y la descripción del estudio asociada.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.402,
+          "y": 0.509
+        },
+        "captura": "capturas/15_06_01-29.jpg",
+        "captura_anotada": "capturas/15_06_01-29_anotada.jpg",
+        "tiempo_real_seg": 88.8,
+        "puntaje": null,
+        "descripcion_original": "Al ingresar en Detail, se pueden revisar campos críticos como Study ID, Accession Number y la descripción del estudio asociada.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "01:44",
+        "tiempo_seg": 104.0,
+        "titulo": "Verificar Study Description",
+        "descripcion": "Se advierte que a veces el sistema de RIS no transfiere el código del Study Description correctamente debido a discrepancias en el mapeo de tags DICOM, mostrándose vacío bajo la pestaña Study.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.681,
+          "y": 0.353
+        },
+        "captura": "capturas/15_07_01-44.jpg",
+        "captura_anotada": "capturas/15_07_01-44_anotada.jpg",
+        "tiempo_real_seg": 103.4,
+        "puntaje": null,
+        "descripcion_original": "Se advierte que a veces el sistema de RIS no transfiere el código del Study Description correctamente debido a discrepancias en el mapeo de tags DICOM.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "02:32",
+        "tiempo_seg": 152.0,
+        "titulo": "Editar Accession Number manualmente",
+        "descripcion": "Si el sistema RIS falla, se pueden digitar o modificar de forma manual los campos como el Accession No. directamente desde la pestaña Study.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ingreso de paciente",
+        "zona": {
+          "x": 0.709,
+          "y": 0.242
+        },
+        "captura": "capturas/15_08_02-32.jpg",
+        "captura_anotada": "capturas/15_08_02-32_anotada.jpg",
+        "tiempo_real_seg": 152.6,
+        "puntaje": null,
+        "descripcion_original": "Si el sistema RIS falla, se pueden digitar o modificar de forma manual los campos como el Accession Number directamente desde la pestaña Study.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "02:56",
+        "tiempo_seg": 176.0,
+        "titulo": "Modificar información de examen finalizado",
+        "descripcion": "Para corregir datos de un examen que ya ha sido adquirido, se debe ingresar a Utility y seleccionar Info. Change en el menú desplegable.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.311,
+          "y": 0.444
+        },
+        "captura": "capturas/15_09_02-56.jpg",
+        "captura_anotada": "capturas/15_09_02-56_anotada.jpg",
+        "tiempo_real_seg": 176.6,
+        "puntaje": null,
+        "descripcion_original": "Para corregir datos de un examen que ya ha sido adquirido, se debe ingresar a Utility y seleccionar Info. Change.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "03:13",
+        "tiempo_seg": 193.0,
+        "titulo": "Corregir datos del paciente",
+        "descripcion": "En la pantalla de Information retouch, es posible corregir el ID, el apellido (Lastname), el nombre (First) y otros datos demográficos esenciales.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.446,
+          "y": 0.165
+        },
+        "captura": "capturas/15_10_03-13.jpg",
+        "captura_anotada": "capturas/15_10_03-13_anotada.jpg",
+        "tiempo_real_seg": 192.8,
+        "puntaje": null,
+        "descripcion_original": "En la pantalla de Information Retouch, es posible corregir el apellido (Lastname), ID del paciente y otros datos demográficos esenciales.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "03:24",
+        "tiempo_seg": 204.0,
+        "titulo": "Modificar posición del paciente",
+        "descripcion": "Se permite cambiar la posición registrada (ej. Supine, Prone, Right Lateral o Left Lateral) bajo la pestaña Scan de Information retouch para evitar confusiones anatómicas.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.697,
+          "y": 0.278
+        },
+        "captura": "capturas/15_11_03-24.jpg",
+        "captura_anotada": "capturas/15_11_03-24_anotada.jpg",
+        "tiempo_real_seg": 203.0,
+        "puntaje": null,
+        "descripcion_original": "Se permite cambiar la posición registrada (ej. Supine a Prone) en caso de error durante la preparación del estudio, evitando confusiones anatómicas.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "03:38",
+        "tiempo_seg": 218.0,
+        "titulo": "Advertencia sobre reformateos",
+        "descripcion": "Se recomienda realizar la corrección de datos mediante Info. Change antes de generar reformateos de imágenes, para evitar inconsistencias en el envío al PACS.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Edición post-adquisición",
+        "zona": null,
+        "captura": "capturas/15_12_03-38.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 218.6,
+        "puntaje": null,
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "tiempo": "04:47",
+        "tiempo_seg": 287.0,
+        "titulo": "Registrar cambios y actualizar",
+        "descripcion": "Al hacer clic en el botón Register, el sistema actualiza todas las imágenes de la serie con la nueva información del paciente.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Edición post-adquisición",
+        "zona": {
+          "x": 0.849,
+          "y": 0.498
+        },
+        "captura": "capturas/15_13_04-47.jpg",
+        "captura_anotada": "capturas/15_13_04-47_anotada.jpg",
+        "tiempo_real_seg": 286.0,
+        "puntaje": null,
+        "descripcion_original": "Al hacer clic en Register, el sistema actualiza todas las imágenes de la serie. El cuadro Success muestra el progreso de actualización de los archivos.",
+        "capitulo": "15. Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
       }
     ],
     "transcripcion": [
@@ -10685,26 +11175,334 @@
         "inicio": 1122.76,
         "fin": 1122.76,
         "texto": "Acá, es Reconstruction Queue Restart."
+      },
+      {
+        "encabezado": "Capítulo 15: Hold de reconstrucciones, worklist, DICOM, infochange y orientación del paciente"
+      },
+      {
+        "inicio": 0.0,
+        "fin": 4.0,
+        "texto": "en hold y no reconstruye, y no reconstruye y pasa algo de aquí tú vas a utility"
+      },
+      {
+        "inicio": 4.0,
+        "fin": 8.0,
+        "texto": "y este reconstruction queue restart"
+      },
+      {
+        "inicio": 8.0,
+        "fin": 11.0,
+        "texto": "Sí."
+      },
+      {
+        "inicio": 11.0,
+        "fin": 16.0,
+        "texto": "Si yo hago clic acá para ver la reconstrucción y hago clic se va a abrir este menú"
+      },
+      {
+        "inicio": 16.0,
+        "fin": 19.0,
+        "texto": "y aquí van a aparecer todas."
+      },
+      {
+        "inicio": 19.0,
+        "fin": 27.0,
+        "texto": "Se detiene. No sigue reconstruyendo, entonces si ustedes lo dejan abierto y si lo abren ciérrelo."
+      },
+      {
+        "inicio": 27.0,
+        "fin": 36.0,
+        "texto": "Sí, ciérrelo porque a veces queda abierto y después yo le doy scan scan y paso a auto view ese, y como que se queda en scan, después voy para acá, para acá, vuelvo a scan"
+      },
+      {
+        "inicio": 36.0,
+        "fin": 43.0,
+        "texto": "y a veces por tema de software debo aceptar no vuelve a aparecer, entonces quedó escondido, entonces siempre queda en hold."
+      },
+      {
+        "inicio": 43.0,
+        "fin": 50.0,
+        "texto": "En ese caso también lo que yo he visto que funciona, volver a abrirlo y cerrarlo, y ahí y ahí recupera."
+      },
+      {
+        "inicio": 50.0,
+        "fin": 57.0,
+        "texto": "Y si ya no quiere, aquí utilidad reconstruction, que ya re-reinicia la la fila de reconstrucción."
+      },
+      {
+        "inicio": 57.0,
+        "fin": 60.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 60.0,
+        "fin": 64.0,
+        "texto": "Oh, no existe."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 69.0,
+        "texto": "Este es test de recursos tórax con contraste."
+      },
+      {
+        "inicio": 69.0,
+        "fin": 74.0,
+        "texto": "Y ahí uno cómo lo hace después, le hace para seleccionarlo y voy a voy a"
+      },
+      {
+        "inicio": 74.0,
+        "fin": 78.0,
+        "texto": "Appointment from server, reload."
+      },
+      {
+        "inicio": 78.0,
+        "fin": 81.0,
+        "texto": "Claro, de ahí vamos a aceptar paciente."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 84.0,
+        "texto": "Claro, era el tórax, ¿este?"
+      },
+      {
+        "inicio": 84.0,
+        "fin": 88.0,
+        "texto": "Okay o doble clic sobre él, y se carga."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 96.0,
+        "texto": "Y aquí en detail me aparecen los otros datos que pueden venir asociados,"
+      },
+      {
+        "inicio": 96.0,
+        "fin": 102.0,
+        "texto": "el accession number, study ID, study description por ejemplo,"
+      },
+      {
+        "inicio": 102.0,
+        "fin": 108.0,
+        "texto": "por ejemplo aquí no está tomando un study description sí que venía."
+      },
+      {
+        "inicio": 108.0,
+        "fin": 115.0,
+        "texto": "Entonces, tal vez lo tendría que escribir usted o con servicio técnico si es necesario ver el tag DICOM que viene del de la worklist."
+      },
+      {
+        "inicio": 115.0,
+        "fin": 124.0,
+        "texto": "El tag DICOM es como el study description, esta es la descripción, y son cuatro numeritos, 0110, 0011, son cuatro cuatro, es como el número de teléfono."
+      },
+      {
+        "inicio": 124.0,
+        "fin": 131.0,
+        "texto": "Entonces a veces el RIS no está enviando el study description en un número tag, pero Canon los trabaja en otro."
+      },
+      {
+        "inicio": 131.0,
+        "fin": 137.0,
+        "texto": "Entonces por eso no lo no lo no lo toma y cuando se va tampoco se va, pero nosotros internamente le podemos decir no sabes que ese tag"
+      },
+      {
+        "inicio": 137.0,
+        "fin": 144.0,
+        "texto": "es este otro número, y el equipo ah ya entonces, y ahí va a empezar a aparecer y se va a ir."
+      },
+      {
+        "inicio": 144.0,
+        "fin": 150.0,
+        "texto": "Pero eso todo eso se puede gestionar después con servicio. Pero de ahí aparece todo eso así que están trabajando, se echó a perder el RIS,"
+      },
+      {
+        "inicio": 150.0,
+        "fin": 156.0,
+        "texto": "pero ustedes tienen que continuar poniendo el el correlativo, acá ustedes lo pueden tipear y cambiar."
+      },
+      {
+        "inicio": 156.0,
+        "fin": 161.0,
+        "texto": "Y otra cosa, eh a ver una duda, por ejemplo tomé me pasaron un paciente"
+      },
+      {
+        "inicio": 161.0,
+        "fin": 165.0,
+        "texto": "Te equivocaste en el en el apellido."
+      },
+      {
+        "inicio": 165.0,
+        "fin": 171.0,
+        "texto": "No, tomé un paciente equivocado, y lo quiero pasar la imagen claro quiero ya sé que podemos corregir el nombre del paciente."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 175.0,
+        "texto": "Sí."
+      },
+      {
+        "inicio": 175.0,
+        "fin": 179.0,
+        "texto": "Acá, info change."
+      },
+      {
+        "inicio": 179.0,
+        "fin": 184.0,
+        "texto": "Yo presiono info change, pero eso del examen que ya está tomado."
+      },
+      {
+        "inicio": 184.0,
+        "fin": 190.0,
+        "texto": "Sí, que ya está tomado. Sí, una vez que ya se tomó es así, yo puedo modificar esto."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 194.0,
+        "texto": "Entonces por ejemplo voy acá a este que fue un fantoma, lo cargo, o sea el paciente que quiero,"
+      },
+      {
+        "inicio": 194.0,
+        "fin": 202.0,
+        "texto": "lo cargo, y acá por ejemplo yo corrijo, no sé, en mi caso Valenzuela por ejemplo."
+      },
+      {
+        "inicio": 202.0,
+        "fin": 212.0,
+        "texto": "Y registrar. Ah, y por ejemplo lo tomé supino pero era prono, me equivoqué también, ahí lo puede corregir."
+      },
+      {
+        "inicio": 212.0,
+        "fin": 216.0,
+        "texto": "Se fija, y todo."
+      },
+      {
+        "inicio": 216.0,
+        "fin": 223.0,
+        "texto": "Eso cambia la el eje, el lateral derecho con el izquierdo, es para que las banderas DICOM que están internamente que dicen como claro lo arregla."
+      },
+      {
+        "inicio": 223.0,
+        "fin": 228.0,
+        "texto": "Idealmente corregir esto antes de hacer reformateos de imágenes."
+      },
+      {
+        "inicio": 228.0,
+        "fin": 235.0,
+        "texto": "O sea al tiro corregirlo ojalá y después ya reformatear. Ahora le voy a poner registrar. Consulta, ¿entonces después habría que volver a reconstruir para que queden bien?"
+      },
+      {
+        "inicio": 235.0,
+        "fin": 242.0,
+        "texto": "Sí, porque a veces los reformateos quedan como con problemas, en mi experiencia por lo menos de las versiones anteriores,"
+      },
+      {
+        "inicio": 242.0,
+        "fin": 249.0,
+        "texto": "que ellos reformateaban y se daban cuenta al final, entonces y peor si ya enviaron esos reformateos al PACS con el anterior."
+      },
+      {
+        "inicio": 249.0,
+        "fin": 256.0,
+        "texto": "Oye ya es un conflicto porque después hacen el info change, lo corrigen, vuelven a reformatear o a tratar de enviarlo"
+      },
+      {
+        "inicio": 256.0,
+        "fin": 261.0,
+        "texto": "y quedan con los datos antiguos y el PACS ya recibió imágenes del mismo paciente con otros datos, es como un poco conflicto."
+      },
+      {
+        "inicio": 261.0,
+        "fin": 264.0,
+        "texto": "Aquí registrar."
+      },
+      {
+        "inicio": 264.0,
+        "fin": 271.0,
+        "texto": "Sí, okay."
+      },
+      {
+        "inicio": 271.0,
+        "fin": 276.0,
+        "texto": "Bueno voy de nuevo."
+      },
+      {
+        "inicio": 276.0,
+        "fin": 281.0,
+        "texto": "Cargar."
+      },
+      {
+        "inicio": 281.0,
+        "fin": 286.0,
+        "texto": "Para empezar a ver cardio CTA ahora."
+      },
+      {
+        "inicio": 286.0,
+        "fin": 290.0,
+        "texto": "Y un que cardio."
+      },
+      {
+        "inicio": 290.0,
+        "fin": 297.0,
+        "texto": "Ahí."
+      },
+      {
+        "inicio": 297.0,
+        "fin": 303.0,
+        "texto": "Y ahí están todas las imágenes que estaban asociadas. ¿No permite cambiar lo otro igual? Sí, sí se puede pero quizás fueron muchas cosas, quizás habría que ir de a uno."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 309.0,
+        "texto": "De nada."
+      },
+      {
+        "inicio": 309.0,
+        "fin": 315.0,
+        "texto": "Entonces ahí ya se ya se corrigió el apellido, el ID, lo que necesite."
+      },
+      {
+        "inicio": 315.0,
+        "fin": 321.0,
+        "texto": "Y si el nombre de una serie también se hace ahí o no, así como era arterial y le puse portovenoso."
+      },
+      {
+        "inicio": 321.0,
+        "fin": 326.0,
+        "texto": "Habría que crearla de nuevo y ponerle arterial, habría que reformatear lo demás, porque eso ya quedó, ahí no me permite modificar."
+      },
+      {
+        "inicio": 326.0,
+        "fin": 331.0,
+        "texto": "Ahí es fomo."
+      },
+      {
+        "inicio": 331.0,
+        "fin": 335.0,
+        "texto": "Acá, utility, info change."
+      },
+      {
+        "inicio": 335.0,
+        "fin": 337.58,
+        "texto": "Sí, y con eso pueden cambiar."
       }
     ]
   },
   "documentos": {
     "docx": "Manual TC Canon.docx",
     "pdf": "Manual TC Canon.pdf",
-    "paginas": 181
+    "paginas": 313
   },
   "uso_acumulado": {
-    "modelo": "gemini-3.5-flash",
-    "tokens_entrada": 3170607,
-    "tokens_salida": 121313,
-    "tokens_pensamiento": 694,
-    "tokens_total": 3292614,
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 544667,
+    "tokens_salida": 32713,
+    "tokens_pensamiento": 4091,
+    "tokens_total": 581471,
     "detalle_entrada": {
-      "VIDEO": 2845364,
-      "TEXT": 78843,
-      "IMAGE": 246400
+      "TEXT": 69087,
+      "IMAGE": 347160,
+      "VIDEO": 128420
     },
-    "llamadas": 69,
+    "llamadas": 40,
     "batch": false,
     "costo_usd": null
   }

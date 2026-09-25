@@ -1,0 +1,49 @@
+17:06:48 === TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov: 05:38, 1920x1080, 59.97 fps, 916 MB -> salida/TC_15_Hold_recons_worklist_DICOM_infochange_orientacion
+17:06:48 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+17:06:48   transcodificando TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov -> TC_15_Hold_recons_worklist_DICOM_infochange_orientacion_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+17:06:57       9 % (00:31 de 05:38)
+17:07:05      20 % (01:06 de 05:38)
+17:07:13      30 % (01:42 de 05:38)
+17:07:21      41 % (02:17 de 05:38)
+17:07:29      51 % (02:52 de 05:38)
+17:07:37      61 % (03:27 de 05:38)
+17:07:45      72 % (04:02 de 05:38)
+17:07:53      82 % (04:37 de 05:38)
+17:08:01      93 % (05:12 de 05:38)
+17:08:05   copia ligera lista: 14.2 MB
+17:08:05 Subiendo TC_15_Hold_recons_worklist_DICOM_infochange_orientacion_subida.mp4 (14.9 MB, video/mp4) a la Files API…
+17:08:05 ERROR en TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov: Error de la API de Gemini (402 RESOURCE_EXHAUSTED): Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay.  (detalle en salida/TC_15_Hold_recons_worklist_DICOM_infochange_orientacion/error.txt)
+18:48:53 === TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov: 05:38, 1920x1080, 59.97 fps, 916 MB -> salida/TC_15_Hold_recons_worklist_DICOM_infochange_orientacion
+18:48:53 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+18:48:53   transcodificando TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov -> TC_15_Hold_recons_worklist_DICOM_infochange_orientacion_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+18:49:03       9 % (00:30 de 05:38)
+18:49:11      19 % (01:06 de 05:38)
+18:49:19      30 % (01:41 de 05:38)
+18:49:27      41 % (02:17 de 05:38)
+18:49:35      51 % (02:52 de 05:38)
+18:49:43      61 % (03:27 de 05:38)
+18:49:50      71 % (04:01 de 05:38)
+18:49:58      82 % (04:36 de 05:38)
+18:50:06      92 % (05:10 de 05:38)
+18:50:10   copia ligera lista: 14.2 MB
+18:50:10 Subiendo TC_15_Hold_recons_worklist_DICOM_infochange_orientacion_subida.mp4 (14.9 MB, video/mp4) a la Files API…
+18:50:11 Subido como files/jna8m8zzk476; esperando a que Gemini lo procese…
+18:50:32 Archivo files/jna8m8zzk476 listo (ACTIVE).
+18:50:32 Analizando TC_15_Hold_recons_worklist_DICOM_infochange_orientacion con gemini-3.5-flash (resolución alta)…
+18:50:44   13 momentos brutos, 100510 tokens.
+18:50:44 Análisis terminado: 13 momentos.
+18:50:44 Transcribiendo el audio de TC_15_Hold_recons_worklist_DICOM_infochange_orientacion con gemini-3.5-flash…
+18:51:00 Transcripción: 61 segmentos, 34227 tokens.
+18:51:01 Archivo remoto files/jna8m8zzk476 eliminado.
+18:51:01 momentos.json guardado (13 momentos).
+18:51:01 Extrayendo 13 capturas de TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.mov…
+18:51:07   10/13 capturas
+18:51:09 Capturas: 13 extraídas, 0 fallidas
+18:51:09 Refinando títulos y descripciones con 13 capturas en alta resolución (gemini-3.5-flash)…
+18:51:09 Refinando con gemini-3.5-flash los textos de 13 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:51:17 Refinado con capturas (gemini-3.5-flash): 13 pasos revisados en 1 petición(es), 11 con cambios (18431 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:51:19 Anotaciones: 11 capturas con círculo/flecha.
+18:51:19   documentos: 13 pasos, 1 por página (A4 vertical 1x1)
+18:51:19   docx: TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.docx
+18:51:20   pdf: TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.pdf (17 páginas)
+18:51:20 Listo en 2 min 27 s: 13 momentos, 17 páginas -> TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.docx, TC_15_Hold_recons_worklist_DICOM_infochange_orientacion.pdf

@@ -33,3 +33,19 @@
 16:34:19   docx: TC_10_Creando_trifasico.docx
 16:34:20   pdf: TC_10_Creando_trifasico.pdf (9 páginas)
 16:34:20 Listo en 4 min 2 s: 15 momentos, 9 páginas -> TC_10_Creando_trifasico.docx, TC_10_Creando_trifasico.pdf
+18:42:47 === TC_10_Creando_trifasico.mov: 07:29, 1920x1080, 59.97 fps, 711 MB -> salida/TC_10_Creando_trifasico
+18:42:47 --regenerar: se reutiliza el análisis de momentos.json (15 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:42:47 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:42:47 momentos.json guardado (15 momentos).
+18:42:47 Extrayendo 15 capturas de TC_10_Creando_trifasico.mov…
+18:42:47   TC_10_Creando_trifasico.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:42:57   10/15 capturas
+18:43:02 Capturas: 15 extraídas, 0 fallidas
+18:43:02 Refinando títulos y descripciones con 15 capturas en alta resolución (gemini-3.5-flash)…
+18:43:02 Refinando con gemini-3.5-flash los textos de 15 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:43:12 Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 3 con cambios (21616 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:43:15 Anotaciones: 15 capturas con círculo/flecha.
+18:43:15   documentos: 15 pasos, 1 por página (A4 vertical 1x1)
+18:43:15   docx: TC_10_Creando_trifasico.docx
+18:43:16   pdf: TC_10_Creando_trifasico.pdf (19 páginas)
+18:43:16 Listo en 30 s: 15 momentos, 19 páginas -> TC_10_Creando_trifasico.docx, TC_10_Creando_trifasico.pdf

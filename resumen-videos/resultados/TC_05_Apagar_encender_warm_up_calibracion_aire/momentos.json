@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:08:46",
+  "generado": "2026-09-25T18:40:18",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,24 @@
     "truncado": false,
     "tramos": 2,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 23 con cambios (33316 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 23 con cambios (33316 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:25",
+      "Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (33935 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:39",
+      "Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (36201 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Orientación confirmada: 24 capturas revisadas, 5 con el giro corregido (14264 tokens)."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 273529,
-      "tokens_salida": 9951,
-      "tokens_pensamiento": 0,
-      "tokens_total": 283480,
+      "tokens_entrada": 45393,
+      "tokens_salida": 2416,
+      "tokens_pensamiento": 2656,
+      "tokens_total": 50465,
       "detalle_entrada": {
-        "TEXT": 7359,
-        "VIDEO": 239770,
-        "IMAGE": 26400
+        "TEXT": 6321,
+        "IMAGE": 39072
       },
-      "llamadas": 6,
+      "llamadas": 5,
       "batch": false,
       "costo_usd": null
     },
@@ -49,19 +53,21 @@
         "tiempo": "00:01",
         "tiempo_seg": 1.0,
         "titulo": "Encender tomógrafo con botón físico principal",
-        "descripcion": "El encendido comienza presionando el botón físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
+        "descripcion": "El encendido comienza presionando el botón verde físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Encendido",
         "zona": {
-          "x": 0.58,
-          "y": 0.743
+          "x": 0.746,
+          "y": 0.423
         },
         "captura": "capturas/01_00-01.jpg",
         "captura_anotada": "capturas/01_00-01_anotada.jpg",
         "tiempo_real_seg": 1.2,
         "puntaje": null,
-        "titulo_original": "Encender el tomógrafo desde el botón físico"
+        "titulo_original": "Encender el tomógrafo desde el botón físico",
+        "descripcion_original": "El encendido comienza presionando el botón físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
+        "rotacion": 270
       },
       {
         "tiempo": "00:15",
@@ -75,7 +81,8 @@
         "captura": "capturas/02_00-15.jpg",
         "captura_anotada": null,
         "tiempo_real_seg": 14.0,
-        "puntaje": null
+        "puntaje": null,
+        "rotacion": 270
       },
       {
         "tiempo": "01:19",
@@ -86,15 +93,16 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.686,
-          "y": 0.196
+          "x": 0.191,
+          "y": 0.33
         },
         "captura": "capturas/03_01-19.jpg",
         "captura_anotada": "capturas/03_01-19_anotada.jpg",
         "tiempo_real_seg": 78.0,
         "puntaje": null,
         "titulo_original": "Acceder al menú de utilidades (Utility)",
-        "descripcion_original": "Para realizar el mantenimiento diario del tubo, hacer clic en el botón Utility de la pantalla y luego seleccionar la opción Tools."
+        "descripcion_original": "Para realizar el mantenimiento diario del tubo, hacer clic en el botón Utility de la pantalla y luego seleccionar la opción Tools.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:25",
@@ -105,15 +113,16 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.612,
-          "y": 0.25
+          "x": 0.25,
+          "y": 0.252
         },
         "captura": "capturas/04_01-25.jpg",
         "captura_anotada": "capturas/04_01-25_anotada.jpg",
         "tiempo_real_seg": 85.6,
         "puntaje": null,
         "titulo_original": "Seleccionar la opción Warm-Up",
-        "descripcion_original": "Hacer clic en el botón 'Warm-Up' en la pantalla de utilidades para iniciar el procedimiento de calentamiento del tubo de rayos X."
+        "descripcion_original": "Hacer clic en el botón 'Warm-Up' en la pantalla de utilidades para iniciar el procedimiento de calentamiento del tubo de rayos X.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:31",
@@ -124,14 +133,15 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.476,
-          "y": 0.361
+          "x": 0.36,
+          "y": 0.363
         },
         "captura": "capturas/05_01-31.jpg",
         "captura_anotada": "capturas/05_01-31_anotada.jpg",
         "tiempo_real_seg": 90.0,
         "puntaje": null,
-        "descripcion_original": "Se debe seleccionar la opción de calentamiento completo ('Yes' para Air Calibrations) al inicio del día para llevar el tubo a temperatura de trabajo y alargar su vida útil."
+        "descripcion_original": "Se debe seleccionar la opción de calentamiento completo ('Yes' para Air Calibrations) al inicio del día para llevar el tubo a temperatura de trabajo y alargar su vida útil.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:52",
@@ -142,14 +152,15 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.314,
-          "y": 0.412
+          "x": 0.413,
+          "y": 0.413
         },
         "captura": "capturas/06_01-52.jpg",
         "captura_anotada": "capturas/06_01-52_anotada.jpg",
         "tiempo_real_seg": 112.2,
         "puntaje": null,
-        "descripcion_original": "La camilla debe estar totalmente retraída y fuera del isocentro del gantry durante la calibración de aire para evitar artefactos o manchas en las imágenes futuras."
+        "descripcion_original": "La camilla debe estar totalmente retraída y fuera del isocentro del gantry durante la calibración de aire para evitar artefactos o manchas en las imágenes futuras.",
+        "rotacion": 270
       },
       {
         "tiempo": "02:37",
@@ -160,15 +171,16 @@
         "fuente": "ambos",
         "seccion": "Mantenimiento diario",
         "zona": {
-          "x": 0.218,
-          "y": 0.801
+          "x": 0.217,
+          "y": 0.22
         },
         "captura": "capturas/07_02-37.jpg",
         "captura_anotada": "capturas/07_02-37_anotada.jpg",
         "tiempo_real_seg": 156.0,
         "puntaje": null,
         "titulo_original": "Verificar indicador de temperatura OLP",
-        "descripcion_original": "El indicador OLP muestra la temperatura del tubo; si marca 0% no es estrictamente necesario repetir el Warm-Up durante el día a menos que el equipo lo solicite."
+        "descripcion_original": "El indicador OLP muestra la temperatura del tubo; si marca 0% no es estrictamente necesario repetir el Warm-Up durante el día a menos que el equipo lo solicite.",
+        "rotacion": 270
       },
       {
         "tiempo": "02:55",
@@ -179,14 +191,15 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.273,
-          "y": 0.046
+          "x": 0.674,
+          "y": 0.051
         },
         "captura": "capturas/08_02-55.jpg",
         "captura_anotada": "capturas/08_02-55_anotada.jpg",
         "tiempo_real_seg": 175.2,
         "puntaje": null,
-        "descripcion_original": "El tomógrafo cuenta con parlantes en la consola y dentro de la sala para mantener una comunicación bidireccional clara con el paciente."
+        "descripcion_original": "El tomógrafo cuenta con parlantes en la consola y dentro de la sala para mantener una comunicación bidireccional clara con el paciente.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:10",
@@ -197,14 +210,15 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.478,
-          "y": 0.371
+          "x": 0.52,
+          "y": 0.372
         },
         "captura": "capturas/09_03-10.jpg",
         "captura_anotada": "capturas/09_03-10_anotada.jpg",
         "tiempo_real_seg": 190.6,
         "puntaje": null,
-        "descripcion_original": "La perilla con el icono de la oreja en el teclado del tomógrafo ajusta el volumen de recepción para escuchar al paciente."
+        "descripcion_original": "La perilla con el icono de la oreja en el teclado del tomógrafo ajusta el volumen de recepción para escuchar al paciente.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:20",
@@ -215,14 +229,15 @@
         "fuente": "ambos",
         "seccion": "Componentes de la consola",
         "zona": {
-          "x": 0.421,
-          "y": 0.501
+          "x": 0.578,
+          "y": 0.502
         },
         "captura": "capturas/10_03-20.jpg",
         "captura_anotada": "capturas/10_03-20_anotada.jpg",
         "tiempo_real_seg": 199.0,
         "puntaje": null,
-        "descripcion_original": "La perilla con el icono de ondas de transmisión permite ajustar el volumen de salida para hablarle al paciente manteniendo presionado el botón central."
+        "descripcion_original": "La perilla con el icono de ondas de transmisión permite ajustar el volumen de salida para hablarle al paciente manteniendo presionado el botón central.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:29",
@@ -233,13 +248,14 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.526,
-          "y": 0.328
+          "x": 0.471,
+          "y": 0.329
         },
         "captura": "capturas/11_03-29.jpg",
         "captura_anotada": "capturas/11_03-29_anotada.jpg",
         "tiempo_real_seg": 209.6,
-        "puntaje": null
+        "puntaje": null,
+        "rotacion": 270
       },
       {
         "tiempo": "03:44",
@@ -250,14 +266,15 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.435,
+          "x": 0.566,
           "y": 0.725
         },
         "captura": "capturas/12_03-44.jpg",
         "captura_anotada": "capturas/12_03-44_anotada.jpg",
         "tiempo_real_seg": 224.6,
         "puntaje": null,
-        "descripcion_original": "Se ingresa el valor de desplazamiento deseado en milímetros; un signo negativo indica movimiento hacia adentro del gantry y un signo positivo hacia afuera."
+        "descripcion_original": "Se ingresa el valor de desplazamiento deseado en milímetros; un signo negativo indica movimiento hacia adentro del gantry y un signo positivo hacia afuera.",
+        "rotacion": 270
       },
       {
         "tiempo": "04:10",
@@ -268,13 +285,14 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento de camilla",
         "zona": {
-          "x": 0.181,
-          "y": 0.178
+          "x": 0.18,
+          "y": 0.18
         },
         "captura": "capturas/13_04-10.jpg",
         "captura_anotada": "capturas/13_04-10_anotada.jpg",
         "tiempo_real_seg": 249.0,
-        "puntaje": null
+        "puntaje": null,
+        "rotacion": 270
       },
       {
         "tiempo": "04:19",
@@ -285,163 +303,172 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento de camilla",
         "zona": {
-          "x": 0.234,
+          "x": 0.764,
           "y": 0.767
         },
         "captura": "capturas/14_04-19.jpg",
         "captura_anotada": "capturas/14_04-19_anotada.jpg",
         "tiempo_real_seg": 259.6,
         "puntaje": null,
-        "descripcion_original": "El menú 'Couch slide' permite configurar movimientos para entrar o salir (Couch slide), subir o bajar (Couch Up/Down), o lateral (Couch Left/Right)."
+        "descripcion_original": "El menú 'Couch slide' permite configurar movimientos para entrar o salir (Couch slide), subir o bajar (Couch Up/Down), o lateral (Couch Left/Right).",
+        "rotacion": 270
       },
       {
         "tiempo": "04:46",
         "tiempo_seg": 286.0,
         "titulo": "Iniciar o detener la radiación",
-        "descripcion": "Se identifican los botones de la consola para iniciar la radiación (triángulo en botón superior) y para detenerla de forma manual si es necesario.",
+        "descripcion": "Se identifican los botones de la consola para iniciar la radiación (triángulo en botón superior) e interruptor para detenerla de forma manual si es necesario.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.308,
+          "x": 0.692,
           "y": 0.401
         },
         "captura": "capturas/15_04-46.jpg",
         "captura_anotada": "capturas/15_04-46_anotada.jpg",
         "tiempo_real_seg": 285.8,
         "puntaje": null,
-        "descripcion_original": "Se identifican los botones del teclado físico para dar radiación (triángulo hacia arriba) y para cortar la radiación (triángulo hacia abajo)."
+        "descripcion_original": "Se identifican los botones del teclado físico para dar radiación (triángulo hacia arriba) y para cortar la radiación (triángulo hacia abajo).",
+        "rotacion": 270
       },
       {
         "tiempo": "04:58",
         "tiempo_seg": 298.0,
         "titulo": "Ajustar ventana y nivel con perillas",
-        "descripcion": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana (WL y WW en pantalla) para modificar de forma rípida el contraste de la imagen.",
+        "descripcion": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana (WL y WW en pantalla) para modificar de forma rápida el contraste de la imagen. En pantalla se lee WL=40 y WW=400.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de visualización",
         "zona": {
-          "x": 0.288,
-          "y": 0.425
+          "x": 0.425,
+          "y": 0.71
         },
         "captura": "capturas/16_04-58.jpg",
         "captura_anotada": "capturas/16_04-58_anotada.jpg",
         "tiempo_real_seg": 298.2,
         "puntaje": null,
         "titulo_original": "Ajustar ventana y nivel",
-        "descripcion_original": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana para modificar el contraste de la imagen."
+        "descripcion_original": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana para modificar el contraste de la imagen.",
+        "rotacion": 270
       },
       {
         "tiempo": "05:03",
         "tiempo_seg": 303.0,
         "titulo": "Usar ventanas por defecto en teclado",
-        "descripcion": "Las teclas rípidas numeradas aplican ventanas preestablecidas (como WW=3500 o WW=385). La tecla '3' se asocia al filtro de reconstrucciín activo.",
+        "descripcion": "Las teclas rápidas numeradas aplican ventanas preestablecidas (como WW=3500 o WW=385). La tecla '3' se asocia al filtro de reconstrucción activo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de visualización",
         "zona": {
-          "x": 0.435,
-          "y": 0.468
+          "x": 0.39,
+          "y": 0.71
         },
         "captura": "capturas/17_05-03.jpg",
         "captura_anotada": "capturas/17_05-03_anotada.jpg",
         "tiempo_real_seg": 302.8,
         "puntaje": null,
         "titulo_original": "Usar ventanas por defecto",
-        "descripcion_original": "Las teclas rápidas '1' y '2' aplican ventanas preestablecidas (óseo, pulmón, mediastino). La tecla '3' siempre se asocia al filtro de reconstrucción activo."
+        "descripcion_original": "Las teclas rápidas '1' y '2' aplican ventanas preestablecidas (óseo, pulmón, mediastino). La tecla '3' siempre se asocia al filtro de reconstrucción activo.",
+        "rotacion": 270
       },
       {
         "tiempo": "06:11",
         "tiempo_seg": 371.0,
-        "titulo": "Navegaciín rípida de imígenes con mouse",
-        "descripcion": "Presionando el botín izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rípido tipo libro a travís de los cortes de la tomografía.",
+        "titulo": "Navegar rápidamente por imágenes con mouse",
+        "descripcion": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes de la tomografía.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.195,
-          "y": 0.698
+          "x": 0.66,
+          "y": 0.86
         },
         "captura": "capturas/18_06-11.jpg",
         "captura_anotada": "capturas/18_06-11_anotada.jpg",
         "tiempo_real_seg": 371.6,
         "puntaje": null,
         "titulo_original": "Navegación rápida de imágenes",
-        "descripcion_original": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes."
+        "descripcion_original": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes.",
+        "rotacion": 270
       },
       {
         "tiempo": "06:44",
         "tiempo_seg": 404.0,
         "titulo": "Realizar paneo de la imagen",
-        "descripcion": "Presionando ínicamente el botín central del mouse se activa la herramienta de paneo para mover la imagen en pantalla libremente.",
+        "descripcion": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla libremente.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.113,
-          "y": 0.634
+          "x": 0.63,
+          "y": 0.89
         },
         "captura": "capturas/19_06-44.jpg",
         "captura_anotada": "capturas/19_06-44_anotada.jpg",
         "tiempo_real_seg": 404.2,
         "puntaje": null,
-        "descripcion_original": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla."
+        "descripcion_original": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla.",
+        "rotacion": 270
       },
       {
         "tiempo": "06:49",
         "tiempo_seg": 409.0,
         "titulo": "Hacer zoom con la lupa",
-        "descripcion": "Presionando el botín derecho e izquierdo del mouse de forma simultínea se activa la herramienta de zoom para agrandar la imagen en el visor secundario.",
+        "descripcion": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen en el visor secundario.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Visualización",
         "zona": {
-          "x": 0.147,
-          "y": 0.656
+          "x": 0.65,
+          "y": 0.86
         },
         "captura": "capturas/20_06-49.jpg",
         "captura_anotada": "capturas/20_06-49_anotada.jpg",
         "tiempo_real_seg": 409.6,
         "puntaje": null,
-        "descripcion_original": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen."
+        "descripcion_original": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen.",
+        "rotacion": 270
       },
       {
         "tiempo": "07:37",
         "tiempo_seg": 457.0,
         "titulo": "Verificar fecha y hora del sistema",
-        "descripcion": "Se visualiza la informaciín del estudio en la pantalla superior derecha, mostrando la fecha 'Apr 11 11:08 2025' y los datos correspondientes al paciente.",
+        "descripcion": "Se visualiza la información del estudio en la pantalla superior derecha, mostrando la fecha 'Apr 11 11:08 2025' y los datos correspondientes al paciente.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración del sistema",
         "zona": {
-          "x": 0.756,
-          "y": 0.18
+          "x": 0.147,
+          "y": 0.244
         },
         "captura": "capturas/21_07-37.jpg",
         "captura_anotada": "capturas/21_07-37_anotada.jpg",
         "tiempo_real_seg": 456.0,
         "puntaje": null,
         "titulo_original": "Configurar fecha y hora",
-        "descripcion_original": "Haciendo clic en la fecha y hora se abre el menú 'Date Setting' donde se puede actualizar y guardar el horario del sistema."
+        "descripcion_original": "Haciendo clic en la fecha y hora se abre el menú 'Date Setting' donde se puede actualizar y guardar el horario del sistema.",
+        "rotacion": 270
       },
       {
         "tiempo": "08:03",
         "tiempo_seg": 483.0,
-        "titulo": "Seleccionar el mení de apagado",
-        "descripcion": "Para apagar el equipo se despliega la opciín 'Utility' en la barra de herramientas superior de la pantalla y luego se selecciona 'Shutdown'.",
+        "titulo": "Seleccionar el menú de apagado",
+        "descripcion": "Para apagar el equipo se despliega la opción 'Utility' en la barra de herramientas superior de la pantalla y luego se selecciona 'Shutdown'.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Apagado y reinicio",
         "zona": {
-          "x": 0.763,
-          "y": 0.15
+          "x": 0.098,
+          "y": 0.399
         },
         "captura": "capturas/22_08-03.jpg",
         "captura_anotada": "capturas/22_08-03_anotada.jpg",
         "tiempo_real_seg": 482.4,
         "puntaje": null,
         "titulo_original": "Apagar el sistema (Shutdown)",
-        "descripcion_original": "Para apagar el equipo se selecciona 'Utility' en pantalla y luego 'Shutdown'. Se debe confirmar en la ventana de advertencia amarilla."
+        "descripcion_original": "Para apagar el equipo se selecciona 'Utility' en pantalla y luego 'Shutdown'. Se debe confirmar en la ventana de advertencia amarilla.",
+        "rotacion": 270
       },
       {
         "tiempo": "08:47",
@@ -456,13 +483,14 @@
         "captura_anotada": null,
         "tiempo_real_seg": 527.2,
         "puntaje": null,
-        "descripcion_original": "El apagado completo toma aproximadamente 5 minutos, mientras que el encendido completo del sistema puede demorar de 11 a 15 minutos."
+        "descripcion_original": "El apagado completo toma aproximadamente 5 minutos, mientras que el encendido completo del sistema puede demorar de 11 a 15 minutos.",
+        "rotacion": 270
       },
       {
         "tiempo": "10:01",
         "tiempo_seg": 601.0,
         "titulo": "Reiniciar el Gantry por desconexiones",
-        "descripcion": "Si hay problemas de sincronizaciín de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
+        "descripcion": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Apagado y reinicio",
@@ -471,7 +499,8 @@
         "captura_anotada": null,
         "tiempo_real_seg": 600.8,
         "puntaje": null,
-        "descripcion_original": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir."
+        "descripcion_original": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
+        "rotacion": 270
       }
     ],
     "transcripcion": [
@@ -815,20 +844,20 @@
   "documentos": {
     "docx": "TC_05_Apagar_encender_warm_up_calibracion_aire.docx",
     "pdf": "TC_05_Apagar_encender_warm_up_calibracion_aire.pdf",
-    "paginas": 18
+    "paginas": 29
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 273529,
-    "tokens_salida": 9951,
-    "tokens_pensamiento": 0,
-    "tokens_total": 283480,
+    "tokens_entrada": 350670,
+    "tokens_salida": 14554,
+    "tokens_pensamiento": 2656,
+    "tokens_total": 367880,
     "detalle_entrada": {
-      "TEXT": 7359,
+      "TEXT": 19028,
       "VIDEO": 239770,
-      "IMAGE": 26400
+      "IMAGE": 91872
     },
-    "llamadas": 6,
+    "llamadas": 13,
     "batch": false,
     "costo_usd": null
   }

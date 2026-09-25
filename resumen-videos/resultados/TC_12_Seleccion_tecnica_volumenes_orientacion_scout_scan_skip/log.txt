@@ -42,3 +42,24 @@
 16:46:29   docx: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx
 16:46:32   pdf: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf (24 páginas)
 16:46:32 Listo en 8 min 25 s: 31 momentos, 24 páginas -> TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx, TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf
+18:44:46 === TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov: 13:23, 1080x1920, 59.97 fps, 1698 MB -> salida/TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip
+18:44:46 --regenerar: se reutiliza el análisis de momentos.json (31 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:44:46 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:44:46 momentos.json guardado (31 momentos).
+18:44:46 Extrayendo 31 capturas de TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov…
+18:44:46   TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:44:57   10/31 capturas
+18:45:08   20/31 capturas
+18:45:18   30/31 capturas
+18:45:19 Capturas: 31 extraídas, 0 fallidas
+18:45:19 Refinando títulos y descripciones con 31 capturas en alta resolución (gemini-3.5-flash)…
+18:45:19 Refinando con gemini-3.5-flash los textos de 31 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+18:45:41 Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (45158 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:45:41 Confirmando la dirección del giro de 30 capturas con gemini-3.5-flash (dos versiones por captura)…
+18:45:54 Orientación confirmada: 30 capturas revisadas, 15 con el giro corregido (17428 tokens).
+18:45:55 Capturas enderezadas: 30 (giradas según lo indicado por el refinado).
+18:46:08 Anotaciones: 30 capturas con círculo/flecha.
+18:46:08   documentos: 31 pasos, 1 por página (A4 vertical 1x1)
+18:46:09   docx: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx
+18:46:13   pdf: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf (38 páginas)
+18:46:13 Listo en 1 min 28 s: 31 momentos, 38 páginas -> TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx, TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf

@@ -45,3 +45,21 @@
 17:06:24   docx: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx
 17:06:26   pdf: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf (19 páginas)
 17:06:26 Listo en 14 min 51 s: 33 momentos, 19 páginas -> TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx, TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf
+18:47:40 === TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov: 18:43, 1920x1080, 59.97 fps, 1779 MB -> salida/TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion
+18:47:40 --regenerar: se reutiliza el análisis de momentos.json (33 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:47:40 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:47:40 momentos.json guardado (33 momentos).
+18:47:40 Extrayendo 33 capturas de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov…
+18:47:40   TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:47:50   10/33 capturas
+18:48:00   20/33 capturas
+18:48:10   30/33 capturas
+18:48:13 Capturas: 33 extraídas, 0 fallidas
+18:48:13 Refinando títulos y descripciones con 33 capturas en alta resolución (gemini-3.5-flash)…
+18:48:13 Refinando con gemini-3.5-flash los textos de 33 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+18:48:31 Refinado con capturas (gemini-3.5-flash): 33 pasos revisados en 3 petición(es), 24 con cambios (47060 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:48:36 Anotaciones: 23 capturas con círculo/flecha.
+18:48:36   documentos: 33 pasos, 1 por página (A4 vertical 1x1)
+18:48:37   docx: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx
+18:48:39   pdf: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf (42 páginas)
+18:48:39 Listo en 59 s: 33 momentos, 42 páginas -> TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx, TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf

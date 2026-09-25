@@ -18,7 +18,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T15:54:16",
+  "generado": "2026-09-25T18:23:16",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -29,20 +29,21 @@
     "tramos": 1,
     "avisos": [
       "Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 11 con cambios (16621 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
-      "Regenerado desde momentos.json el 2026-09-25 15:53"
+      "Regenerado desde momentos.json el 2026-09-25 15:53",
+      "Regenerado desde momentos.json el 2026-09-25 18:22",
+      "Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 7 con cambios (17133 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 150970,
-      "tokens_salida": 5313,
+      "tokens_entrada": 15867,
+      "tokens_salida": 1266,
       "tokens_pensamiento": 0,
-      "tokens_total": 156283,
+      "tokens_total": 17133,
       "detalle_entrada": {
-        "VIDEO": 134140,
-        "TEXT": 3630,
+        "TEXT": 2667,
         "IMAGE": 13200
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -99,19 +100,20 @@
         "tiempo": "01:15",
         "tiempo_seg": 75.0,
         "titulo": "Mover lateralmente la camilla mecánicamente",
-        "descripcion": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente.",
+        "descripcion": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente. En pantalla se lee -236.0, +1135.5 y 0.0.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.409,
-          "y": 0.497
+          "x": 0.381,
+          "y": 0.492
         },
         "captura": "capturas/04_01-15.jpg",
         "captura_anotada": "capturas/04_01-15_anotada.jpg",
         "tiempo_real_seg": 75.6,
         "puntaje": null,
-        "titulo_original": "Mover lateralmente la camilla mecanicamente"
+        "titulo_original": "Mover lateralmente la camilla mecanicamente",
+        "descripcion_original": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente."
       },
       {
         "tiempo": "01:55",
@@ -141,8 +143,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.732,
-          "y": 0.454
+          "x": 0.795,
+          "y": 0.349
         },
         "captura": "capturas/06_02-04.jpg",
         "captura_anotada": "capturas/06_02-04_anotada.jpg",
@@ -160,7 +162,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.718,
+          "x": 0.724,
           "y": 0.366
         },
         "captura": "capturas/07_02-10.jpg",
@@ -179,7 +181,7 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.412,
+          "x": 0.421,
           "y": 0.526
         },
         "captura": "capturas/08_02-35.jpg",
@@ -198,8 +200,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.541,
-          "y": 0.395
+          "x": 0.542,
+          "y": 0.393
         },
         "captura": "capturas/09_02-51.jpg",
         "captura_anotada": "capturas/09_02-51_anotada.jpg",
@@ -217,8 +219,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.588,
-          "y": 0.443
+          "x": 0.558,
+          "y": 0.435
         },
         "captura": "capturas/10_03-51.jpg",
         "captura_anotada": "capturas/10_03-51_anotada.jpg",
@@ -236,8 +238,8 @@
         "fuente": "ambos",
         "seccion": "Posicionamiento",
         "zona": {
-          "x": 0.558,
-          "y": 0.416
+          "x": 0.524,
+          "y": 0.431
         },
         "captura": "capturas/11_04-01.jpg",
         "captura_anotada": "capturas/11_04-01_anotada.jpg",
@@ -446,20 +448,20 @@
   "documentos": {
     "docx": "TC_01_Boton_emergencia_y_botonera_gantry.docx",
     "pdf": "TC_01_Boton_emergencia_y_botonera_gantry.pdf",
-    "paginas": 10
+    "paginas": 16
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 150970,
-    "tokens_salida": 5313,
+    "tokens_entrada": 166837,
+    "tokens_salida": 6579,
     "tokens_pensamiento": 0,
-    "tokens_total": 156283,
+    "tokens_total": 173416,
     "detalle_entrada": {
       "VIDEO": 134140,
-      "TEXT": 3630,
-      "IMAGE": 13200
+      "TEXT": 6297,
+      "IMAGE": 26400
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

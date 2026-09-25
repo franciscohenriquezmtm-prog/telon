@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:26:26",
+  "generado": "2026-09-25T18:41:56",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,22 @@
     "truncado": false,
     "tramos": 3,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:28",
+      "Regenerado desde momentos.json el 2026-09-25 18:40",
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 5 con cambios (45322 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 361455,
-      "tokens_salida": 13973,
+      "tokens_entrada": 41762,
+      "tokens_salida": 3560,
       "tokens_pensamiento": 0,
-      "tokens_total": 375428,
+      "tokens_total": 45322,
       "detalle_entrada": {
-        "VIDEO": 316920,
-        "TEXT": 10435,
+        "TEXT": 7662,
         "IMAGE": 34100
       },
-      "llamadas": 9,
+      "llamadas": 3,
       "batch": false,
       "costo_usd": null
     },
@@ -336,7 +338,7 @@
         "tiempo": "04:53",
         "tiempo_seg": 293.0,
         "titulo": "Seleccionar el grosor de corte de escaneo",
-        "descripcion": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80.",
+        "descripcion": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80. En pantalla, el cursor señala el botón 'Edit'.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de parámetros",
@@ -347,7 +349,8 @@
         "captura": "capturas/17_04-53.jpg",
         "captura_anotada": "capturas/17_04-53_anotada.jpg",
         "tiempo_real_seg": 292.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80."
       },
       {
         "tiempo": "05:21",
@@ -438,24 +441,22 @@
         "tiempo": "08:15",
         "tiempo_seg": 495.0,
         "titulo": "Considerar tasa de reconstrucción de imagen",
-        "descripcion": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos.",
+        "descripcion": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos. El cursor se encuentra en la pantalla.",
         "importancia": 2,
         "fuente": "audio",
         "seccion": "Configuración de reconstrucción",
-        "zona": {
-          "x": 0.49,
-          "y": 0.671
-        },
+        "zona": null,
         "captura": "capturas/23_08-15.jpg",
-        "captura_anotada": "capturas/23_08-15_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 495.6,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos."
       },
       {
         "tiempo": "08:26",
         "tiempo_seg": 506.0,
         "titulo": "Seleccionar método de reconstrucción iterativa",
-        "descripcion": "Al seleccionar la reconstrucción iterativa estándar en volumen ('Cuerpo Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
+        "descripcion": "Al seleccionar la reconstrucción iterativa estándar en volumen (en pantalla se lee 'Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
@@ -466,7 +467,8 @@
         "captura": "capturas/24_08-26.jpg",
         "captura_anotada": "capturas/24_08-26_anotada.jpg",
         "tiempo_real_seg": 505.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Al seleccionar la reconstrucción iterativa estándar en volumen ('Cuerpo Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo."
       },
       {
         "tiempo": "08:41",
@@ -557,7 +559,7 @@
         "tiempo": "12:33",
         "tiempo_seg": 753.0,
         "titulo": "Programar transferencia automática al PACS",
-        "descripcion": "Se activa la opción 'Transfer' para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
+        "descripcion": "Se activa la opción 'Transfer' (en pantalla se lee 'Transfer OFF') para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
@@ -568,19 +570,20 @@
         "captura": "capturas/30_12-33.jpg",
         "captura_anotada": "capturas/30_12-33_anotada.jpg",
         "tiempo_real_seg": 752.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se activa la opción 'Transfer' para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio."
       },
       {
         "tiempo": "13:12",
         "tiempo_seg": 792.0,
-        "titulo": "Copiar un protocolo existente",
-        "descripcion": "Para duplicar o guardar un protocolo modificado, seleccione el protocolo deseado y haga clic en el botón 'Copy' en el menú lateral derecho para iniciar el proceso de edición.",
+        "titulo": "Haga clic en el botón Copy",
+        "descripcion": "Para duplicar o guardar un protocolo modificado, seleccione el protocolo deseado y haga clic en el botón 'Copy' situado en el menú lateral derecho para iniciar el proceso de edición.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuración de reconstrucción",
         "zona": {
-          "x": 0.718,
-          "y": 0.254
+          "x": 0.72,
+          "y": 0.257
         },
         "captura": "capturas/31_13-12.jpg",
         "captura_anotada": "capturas/31_13-12_anotada.jpg",
@@ -1161,20 +1164,20 @@
   "documentos": {
     "docx": "TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx",
     "pdf": "TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf",
-    "paginas": 15
+    "paginas": 37
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 361455,
-    "tokens_salida": 13973,
+    "tokens_entrada": 403217,
+    "tokens_salida": 17533,
     "tokens_pensamiento": 0,
-    "tokens_total": 375428,
+    "tokens_total": 420750,
     "detalle_entrada": {
       "VIDEO": 316920,
-      "TEXT": 10435,
-      "IMAGE": 34100
+      "TEXT": 18097,
+      "IMAGE": 68200
     },
-    "llamadas": 9,
+    "llamadas": 12,
     "batch": false,
     "costo_usd": null
   }

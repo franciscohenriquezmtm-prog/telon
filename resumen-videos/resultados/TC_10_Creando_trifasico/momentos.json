@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:34:20",
+  "generado": "2026-09-25T18:43:16",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 14 con cambios (20565 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 14 con cambios (20565 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:42",
+      "Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 3 con cambios (21616 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 191455,
-      "tokens_salida": 7841,
+      "tokens_entrada": 19850,
+      "tokens_salida": 1766,
       "tokens_pensamiento": 0,
-      "tokens_total": 199296,
+      "tokens_total": 21616,
       "detalle_entrada": {
-        "VIDEO": 170616,
-        "TEXT": 4339,
-        "IMAGE": 16500
+        "IMAGE": 16500,
+        "TEXT": 3350
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -55,7 +56,7 @@
         "seccion": "Programacion del Protocolo",
         "zona": {
           "x": 0.313,
-          "y": 0.149
+          "y": 0.646
         },
         "captura": "capturas/01_00-04.jpg",
         "captura_anotada": "capturas/01_00-04_anotada.jpg",
@@ -65,7 +66,7 @@
       {
         "tiempo": "00:10",
         "tiempo_seg": 10.0,
-        "titulo": "Configurar idioma y comandos de voz",
+        "titulo": "Configurar comandos de voz",
         "descripcion": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo o post-escaneo. En pantalla se muestra desplegado el menu de 'Post Scan'.",
         "importancia": 3,
         "fuente": "ambos",
@@ -78,6 +79,7 @@
         "captura_anotada": "capturas/02_00-10_anotada.jpg",
         "tiempo_real_seg": 10.6,
         "puntaje": null,
+        "titulo_original": "Configurar idioma y comandos de voz",
         "descripcion_original": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo."
       },
       {
@@ -119,7 +121,7 @@
         "tiempo": "00:58",
         "tiempo_seg": 58.0,
         "titulo": "Nombrar fase sin contraste",
-        "descripcion": "Escribir el comentario 'SIN CE' (en pantalla se lee 'SIN CI') para identificar la fase basal sin contraste y configurar comandos de voz.",
+        "descripcion": "Escribir el comentario 'SIN CI' en la caja de 'Protocol Comment for Scan Element' para identificar la fase basal sin contraste y configurar comandos de voz.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Programacion del Protocolo",
@@ -748,20 +750,20 @@
   "documentos": {
     "docx": "TC_10_Creando_trifasico.docx",
     "pdf": "TC_10_Creando_trifasico.pdf",
-    "paginas": 9
+    "paginas": 19
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 191455,
-    "tokens_salida": 7841,
+    "tokens_entrada": 211305,
+    "tokens_salida": 9607,
     "tokens_pensamiento": 0,
-    "tokens_total": 199296,
+    "tokens_total": 220912,
     "detalle_entrada": {
       "VIDEO": 170616,
-      "TEXT": 4339,
-      "IMAGE": 16500
+      "TEXT": 7689,
+      "IMAGE": 33000
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

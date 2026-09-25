@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T15:56:37",
+  "generado": "2026-09-25T18:23:46",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 8 con cambios (12785 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 8 con cambios (12785 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:23",
+      "Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 2 con cambios (12871 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 119241,
-      "tokens_salida": 4148,
+      "tokens_entrada": 12181,
+      "tokens_salida": 690,
       "tokens_pensamiento": 0,
-      "tokens_total": 123389,
+      "tokens_total": 12871,
       "detalle_entrada": {
-        "TEXT": 3331,
-        "VIDEO": 106010,
-        "IMAGE": 9900
+        "IMAGE": 9900,
+        "TEXT": 2281
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -54,7 +55,7 @@
         "fuente": "ambos",
         "seccion": "Gestión de datos",
         "zona": {
-          "x": 0.21,
+          "x": 0.211,
           "y": 0.107
         },
         "captura": "capturas/01_00-03.jpg",
@@ -72,7 +73,7 @@
         "fuente": "ambos",
         "seccion": "Gestión de datos",
         "zona": {
-          "x": 0.202,
+          "x": 0.224,
           "y": 0.662
         },
         "captura": "capturas/02_00-25.jpg",
@@ -334,20 +335,20 @@
   "documentos": {
     "docx": "TC_06_Envio_series_calentamiento_tubo_worklist.docx",
     "pdf": "TC_06_Envio_series_calentamiento_tubo_worklist.pdf",
-    "paginas": 8
+    "paginas": 12
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 119241,
-    "tokens_salida": 4148,
+    "tokens_entrada": 131422,
+    "tokens_salida": 4838,
     "tokens_pensamiento": 0,
-    "tokens_total": 123389,
+    "tokens_total": 136260,
     "detalle_entrada": {
-      "TEXT": 3331,
+      "TEXT": 5612,
       "VIDEO": 106010,
-      "IMAGE": 9900
+      "IMAGE": 19800
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

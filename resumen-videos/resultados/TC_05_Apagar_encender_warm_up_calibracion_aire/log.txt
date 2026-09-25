@@ -37,3 +37,41 @@
 16:08:44   docx: TC_05_Apagar_encender_warm_up_calibracion_aire.docx
 16:08:46   pdf: TC_05_Apagar_encender_warm_up_calibracion_aire.pdf (18 páginas)
 16:08:46 Listo en 6 min 31 s: 24 momentos, 18 páginas -> TC_05_Apagar_encender_warm_up_calibracion_aire.docx, TC_05_Apagar_encender_warm_up_calibracion_aire.pdf
+18:25:16 === TC_05_Apagar_encender_warm_up_calibracion_aire.mov: 10:31, 1080x1920, 59.97 fps, 1334 MB -> salida/TC_05_Apagar_encender_warm_up_calibracion_aire
+18:25:16 --regenerar: se reutiliza el análisis de momentos.json (24 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:25:16 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:25:16 momentos.json guardado (24 momentos).
+18:25:16 Extrayendo 24 capturas de TC_05_Apagar_encender_warm_up_calibracion_aire.mov…
+18:25:16   TC_05_Apagar_encender_warm_up_calibracion_aire.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:25:28   10/24 capturas
+18:25:39   20/24 capturas
+18:25:43 Capturas: 24 extraídas, 0 fallidas
+18:25:43 Refinando títulos y descripciones con 24 capturas en alta resolución (gemini-3.5-flash)…
+18:25:43 Refinando con gemini-3.5-flash los textos de 24 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:25:56 Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (33935 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:25:57 Capturas enderezadas: 24 (giradas según lo indicado por el refinado).
+18:26:07 Anotaciones: 21 capturas con círculo/flecha.
+18:26:07   documentos: 24 pasos, 1 por página (A4 vertical 1x1)
+18:26:07   docx: TC_05_Apagar_encender_warm_up_calibracion_aire.docx
+18:26:10   pdf: TC_05_Apagar_encender_warm_up_calibracion_aire.pdf (29 páginas)
+18:26:10 Listo en 54 s: 24 momentos, 29 páginas -> TC_05_Apagar_encender_warm_up_calibracion_aire.docx, TC_05_Apagar_encender_warm_up_calibracion_aire.pdf
+18:39:01 === TC_05_Apagar_encender_warm_up_calibracion_aire.mov: 10:31, 1080x1920, 59.97 fps, 1334 MB -> salida/TC_05_Apagar_encender_warm_up_calibracion_aire
+18:39:01 --regenerar: se reutiliza el análisis de momentos.json (24 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:39:01 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:39:01 momentos.json guardado (24 momentos).
+18:39:01 Extrayendo 24 capturas de TC_05_Apagar_encender_warm_up_calibracion_aire.mov…
+18:39:01   TC_05_Apagar_encender_warm_up_calibracion_aire.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:39:11   10/24 capturas
+18:39:22   20/24 capturas
+18:39:27 Capturas: 24 extraídas, 0 fallidas
+18:39:27 Refinando títulos y descripciones con 24 capturas en alta resolución (gemini-3.5-flash)…
+18:39:27 Refinando con gemini-3.5-flash los textos de 24 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+18:39:54 Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 24 con cambios (36201 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:39:54 Confirmando la dirección del giro de 24 capturas con gemini-3.5-flash (dos versiones por captura)…
+18:40:04 Orientación confirmada: 24 capturas revisadas, 5 con el giro corregido (14264 tokens).
+18:40:04 Capturas enderezadas: 24 (giradas según lo indicado por el refinado).
+18:40:15 Anotaciones: 21 capturas con círculo/flecha.
+18:40:15   documentos: 24 pasos, 1 por página (A4 vertical 1x1)
+18:40:15   docx: TC_05_Apagar_encender_warm_up_calibracion_aire.docx
+18:40:18   pdf: TC_05_Apagar_encender_warm_up_calibracion_aire.pdf (29 páginas)
+18:40:18 Listo en 1 min 18 s: 24 momentos, 29 páginas -> TC_05_Apagar_encender_warm_up_calibracion_aire.docx, TC_05_Apagar_encender_warm_up_calibracion_aire.pdf

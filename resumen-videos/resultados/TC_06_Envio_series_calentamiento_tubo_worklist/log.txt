@@ -32,3 +32,18 @@
 15:56:37   docx: TC_06_Envio_series_calentamiento_tubo_worklist.docx
 15:56:37   pdf: TC_06_Envio_series_calentamiento_tubo_worklist.pdf (8 páginas)
 15:56:37 Listo en 3 min 11 s: 9 momentos, 8 páginas -> TC_06_Envio_series_calentamiento_tubo_worklist.docx, TC_06_Envio_series_calentamiento_tubo_worklist.pdf
+18:23:30 === TC_06_Envio_series_calentamiento_tubo_worklist.mov: 04:39, 1920x1080, 59.97 fps, 442 MB -> salida/TC_06_Envio_series_calentamiento_tubo_worklist
+18:23:30 --regenerar: se reutiliza el análisis de momentos.json (9 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:23:30 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:23:30 momentos.json guardado (9 momentos).
+18:23:30 Extrayendo 9 capturas de TC_06_Envio_series_calentamiento_tubo_worklist.mov…
+18:23:30   TC_06_Envio_series_calentamiento_tubo_worklist.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:23:39 Capturas: 9 extraídas, 0 fallidas
+18:23:39 Refinando títulos y descripciones con 9 capturas en alta resolución (gemini-3.5-flash)…
+18:23:39 Refinando con gemini-3.5-flash los textos de 9 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:23:43 Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 2 con cambios (12871 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:23:45 Anotaciones: 8 capturas con círculo/flecha.
+18:23:45   documentos: 9 pasos, 1 por página (A4 vertical 1x1)
+18:23:45   docx: TC_06_Envio_series_calentamiento_tubo_worklist.docx
+18:23:46   pdf: TC_06_Envio_series_calentamiento_tubo_worklist.pdf (12 páginas)
+18:23:46 Listo en 16 s: 9 momentos, 12 páginas -> TC_06_Envio_series_calentamiento_tubo_worklist.docx, TC_06_Envio_series_calentamiento_tubo_worklist.pdf

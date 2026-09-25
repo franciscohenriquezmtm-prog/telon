@@ -18,7 +18,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:01:54",
+  "generado": "2026-09-25T18:24:46",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -28,20 +28,21 @@
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 8 con cambios (11278 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 8 con cambios (11278 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:24",
+      "Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 0 con cambios (11391 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 78022,
-      "tokens_salida": 3415,
+      "tokens_entrada": 10858,
+      "tokens_salida": 533,
       "tokens_pensamiento": 0,
-      "tokens_total": 81437,
+      "tokens_total": 11391,
       "detalle_entrada": {
-        "TEXT": 3114,
-        "VIDEO": 66108,
+        "TEXT": 2058,
         "IMAGE": 8800
       },
-      "llamadas": 3,
+      "llamadas": 1,
       "batch": false,
       "costo_usd": null
     },
@@ -339,20 +340,20 @@
   "documentos": {
     "docx": "TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx",
     "pdf": "TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf",
-    "paginas": 7
+    "paginas": 11
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 78022,
-    "tokens_salida": 3415,
+    "tokens_entrada": 88880,
+    "tokens_salida": 3948,
     "tokens_pensamiento": 0,
-    "tokens_total": 81437,
+    "tokens_total": 92828,
     "detalle_entrada": {
-      "TEXT": 3114,
+      "TEXT": 5172,
       "VIDEO": 66108,
-      "IMAGE": 8800
+      "IMAGE": 17600
     },
-    "llamadas": 3,
+    "llamadas": 4,
     "batch": false,
     "costo_usd": null
   }

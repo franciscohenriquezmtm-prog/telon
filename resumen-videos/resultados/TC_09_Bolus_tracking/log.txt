@@ -33,3 +33,19 @@
 16:30:02   docx: TC_09_Bolus_tracking.docx
 16:30:03   pdf: TC_09_Bolus_tracking.pdf (8 páginas)
 16:30:03 Listo en 3 min 25 s: 11 momentos, 8 páginas -> TC_09_Bolus_tracking.docx, TC_09_Bolus_tracking.pdf
+18:42:11 === TC_09_Bolus_tracking.mov: 06:03, 1920x1080, 59.97 fps, 575 MB -> salida/TC_09_Bolus_tracking
+18:42:11 --regenerar: se reutiliza el análisis de momentos.json (11 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+18:42:11 --solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).
+18:42:11 momentos.json guardado (11 momentos).
+18:42:11 Extrayendo 11 capturas de TC_09_Bolus_tracking.mov…
+18:42:11   TC_09_Bolus_tracking.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+18:42:22   10/11 capturas
+18:42:23 Capturas: 11 extraídas, 0 fallidas
+18:42:23 Refinando títulos y descripciones con 11 capturas en alta resolución (gemini-3.5-flash)…
+18:42:23 Refinando con gemini-3.5-flash los textos de 11 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+18:42:29 Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 0 con cambios (15965 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+18:42:32 Anotaciones: 10 capturas con círculo/flecha.
+18:42:32   documentos: 11 pasos, 1 por página (A4 vertical 1x1)
+18:42:32   docx: TC_09_Bolus_tracking.docx
+18:42:33   pdf: TC_09_Bolus_tracking.pdf (15 páginas)
+18:42:33 Listo en 21 s: 11 momentos, 15 páginas -> TC_09_Bolus_tracking.docx, TC_09_Bolus_tracking.pdf

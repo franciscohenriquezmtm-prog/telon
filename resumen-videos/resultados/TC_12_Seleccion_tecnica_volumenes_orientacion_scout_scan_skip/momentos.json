@@ -17,7 +17,7 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T16:46:32",
+  "generado": "2026-09-25T18:46:13",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
@@ -27,20 +27,22 @@
     "truncado": false,
     "tramos": 3,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43286 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43286 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 18:44",
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (45158 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Orientación confirmada: 30 capturas revisadas, 15 con el giro corregido (17428 tokens)."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 349769,
-      "tokens_salida": 14391,
+      "tokens_entrada": 58750,
+      "tokens_salida": 3836,
       "tokens_pensamiento": 0,
-      "tokens_total": 364160,
+      "tokens_total": 62586,
       "detalle_entrada": {
-        "VIDEO": 305140,
-        "TEXT": 10529,
-        "IMAGE": 34100
+        "TEXT": 8810,
+        "IMAGE": 49940
       },
-      "llamadas": 9,
+      "llamadas": 7,
       "batch": false,
       "costo_usd": null
     },
@@ -48,543 +50,604 @@
       {
         "tiempo": "00:01",
         "tiempo_seg": 1.0,
-        "titulo": "Iniciar la creacion de protocolo",
-        "descripcion": "Se muestra la interfaz principal del tomografo y se inicia la seleccion para editar o crear un nuevo protocolo personalizado.",
+        "titulo": "Iniciar creacion de protocolo",
+        "descripcion": "En la interfaz principal de la consola del tomografo Aquilion, seleccione la opcion deseada dentro de la lista de protocolos disponibles.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Configuracion de protocolo",
         "zona": {
-          "x": 0.305,
-          "y": 0.51
+          "x": 0.372,
+          "y": 0.516
         },
         "captura": "capturas/01_00-01.jpg",
         "captura_anotada": "capturas/01_00-01_anotada.jpg",
         "tiempo_real_seg": 1.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Iniciar la creacion de protocolo",
+        "descripcion_original": "Se muestra la interfaz principal del tomografo y se inicia la seleccion para editar o crear un nuevo protocolo personalizado."
       },
       {
         "tiempo": "00:27",
         "tiempo_seg": 27.0,
         "titulo": "Definir fases de la secuencia",
-        "descripcion": "Se seleccionan y agregan las diferentes fases para el protocolo, incluyendo el dual escanograma, fase sin contraste, fase arterial, venosa y tardia.",
+        "descripcion": "Haga clic en 'Scan Mode' en la tabla de secuencia para seleccionar el modo de adquisicion, tales como DualScano, Helical o Volume.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.339,
-          "y": 0.372
+          "x": 0.375,
+          "y": 0.628
         },
         "captura": "capturas/02_00-27.jpg",
         "captura_anotada": "capturas/02_00-27_anotada.jpg",
         "tiempo_real_seg": 27.2,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se seleccionan y agregan las diferentes fases para el protocolo, incluyendo el dual escanograma, fase sin contraste, fase arterial, venosa y tardia.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:18",
         "tiempo_seg": 78.0,
         "titulo": "Seleccionar idioma de instrucciones",
-        "descripcion": "Se cambia el idioma de las instrucciones de voz para el paciente en el menú 'Language' a 'English' o la opción que se requiera.",
+        "descripcion": "Abra el menu desplegable de 'Language' en la seccion de instrucciones de respiracion, actualmente configurado en 'English'.",
         "importancia": 2,
         "fuente": "visual",
         "seccion": "Instrucciones de voz",
         "zona": {
-          "x": 0.361,
-          "y": 0.725
+          "x": 0.725,
+          "y": 0.634
         },
         "captura": "capturas/03_01-18.jpg",
         "captura_anotada": "capturas/03_01-18_anotada.jpg",
         "tiempo_real_seg": 77.0,
         "puntaje": null,
-        "descripcion_original": "Se cambia el idioma de las instrucciones de voz para el paciente a Spanish (Espanol) en las distintas fases del escaneo."
+        "descripcion_original": "Se cambia el idioma de las instrucciones de voz para el paciente a Spanish (Espanol) en las distintas fases del escaneo.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:21",
         "tiempo_seg": 81.0,
         "titulo": "Configurar instrucciones de respiracion",
-        "descripcion": "Se selecciona el tipo de instrucción de respiración. Al cambiar de idioma a 'Spanish', se despliega el submenú con opciones como 'Respire y Contenga / Respire Normal' o 'OFF'.",
+        "descripcion": "Seleccione el tipo de instruccion de respiracion deseada en el menu de idioma. Al seleccionar 'Spanish', se despliegan opciones como 'Respire y Contenga / Respire Normal' o 'OFF'.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Instrucciones de voz",
         "zona": {
-          "x": 0.348,
-          "y": 0.757
+          "x": 0.757,
+          "y": 0.654
         },
         "captura": "capturas/04_01-21.jpg",
         "captura_anotada": "capturas/04_01-21_anotada.jpg",
         "tiempo_real_seg": 80.4,
         "puntaje": null,
-        "descripcion_original": "Se selecciona el tipo de instruccion de respiracion, como 'Respire y Contenga' para las fases con contraste y 'Respire Normal' para las demas fases."
+        "descripcion_original": "Se selecciona el tipo de instruccion de respiracion, como 'Respire y Contenga' para las fases con contraste y 'Respire Normal' para las demas fases.",
+        "rotacion": 270
       },
       {
         "tiempo": "01:43",
         "tiempo_seg": 103.0,
         "titulo": "Ingresar comentarios del protocolo",
-        "descripcion": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'ARTERIAL' en pantalla) son de uso interno para el operador y no se envian a DICOM.",
+        "descripcion": "Presione el icono de inyector para ingresar comentarios del elemento de escaneo en 'Protocol Comment for Scan Element' (en pantalla se lee 'ARTERIAL').",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.269,
-          "y": 0.357
+          "x": 0.357,
+          "y": 0.731
         },
         "captura": "capturas/05_01-43.jpg",
         "captura_anotada": "capturas/05_01-43_anotada.jpg",
         "tiempo_real_seg": 102.4,
         "puntaje": null,
-        "descripcion_original": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'SIN CE', 'ARTERIAL', 'VENOSO') son de uso interno para el operador y no se envian a DICOM."
+        "descripcion_original": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'SIN CE', 'ARTERIAL', 'VENOSO') son de uso interno para el operador y no se envian a DICOM.",
+        "rotacion": 270
       },
       {
         "tiempo": "02:08",
         "tiempo_seg": 128.0,
         "titulo": "Configurar rango de escaneo",
-        "descripcion": "Se definen los límites del rango en milímetros para cada una de las fases en la columna 'End Pos', con valores como 400.0 o 600.0 según el segmento corporal.",
+        "descripcion": "Verifique los limites de rango definidos en la columna 'End Pos' en milimetros para cada una de las fases configuradas.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
-        "zona": {
-          "x": 0.32,
-          "y": 0.267
-        },
+        "zona": null,
         "captura": "capturas/06_02-08.jpg",
-        "captura_anotada": "capturas/06_02-08_anotada.jpg",
+        "captura_anotada": null,
         "tiempo_real_seg": 127.0,
         "puntaje": null,
-        "descripcion_original": "Se definen los limites del rango en milimetros para cada una de las fases, por ejemplo 800 mm de inicio en la fase sin contraste."
+        "descripcion_original": "Se definen los limites del rango en milimetros para cada una de las fases, por ejemplo 800 mm de inicio en la fase sin contraste.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:02",
         "tiempo_seg": 182.0,
         "titulo": "Ajustar tiempo de espera arterial",
-        "descripcion": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35.0 segundos para dar tiempo al contraste, seleccionando inicio manual.",
+        "descripcion": "Ajuste el tiempo de espera en la columna 'Wait' para la fase arterial, establecido con inicio manual (simbolizado por un icono de inyeccion).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.222,
-          "y": 0.182
+          "x": 0.375,
+          "y": 0.818
         },
         "captura": "capturas/07_03-02.jpg",
         "captura_anotada": "capturas/07_03-02_anotada.jpg",
         "tiempo_real_seg": 181.8,
         "puntaje": null,
-        "descripcion_original": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35 segundos para dar tiempo al contraste, seleccionando inicio manual."
+        "descripcion_original": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35 segundos para dar tiempo al contraste, seleccionando inicio manual.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:13",
         "tiempo_seg": 193.0,
         "titulo": "Configurar fase venosa automatica",
-        "descripcion": "Se programa un tiempo de espera automático para la fase venosa, visualizándose la columna 'Wait' con el símbolo de un reloj de inicio programado.",
+        "descripcion": "Ajuste el tiempo de espera en la columna 'Wait' para la fase venosa, indicado con inicio por reloj programado.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
-          "x": 0.194,
-          "y": 0.164
+          "x": 0.375,
+          "y": 0.806
         },
         "captura": "capturas/08_03-13.jpg",
         "captura_anotada": "capturas/08_03-13_anotada.jpg",
         "tiempo_real_seg": 192.0,
         "puntaje": null,
-        "descripcion_original": "Se programa un tiempo de espera automatico de 70 segundos para la fase venosa en la columna 'Start Time'."
+        "descripcion_original": "Se programa un tiempo de espera automatico de 70 segundos para la fase venosa en la columna 'Start Time'.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:23",
         "tiempo_seg": 203.0,
         "titulo": "Configurar fase tardia automatica",
-        "descripcion": "Se programa el inicio automático de la fase tardía a los 5 minutos (05:00.0 en pantalla) en la columna 'Start Time'.",
+        "descripcion": "Verifique la columna 'Start Time' para la fase tardia programada, la cual muestra un retraso automatico de 05:00.0.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Secuencia de escaneo",
         "zona": {
           "x": 0.158,
-          "y": 0.128
+          "y": 0.867
         },
         "captura": "capturas/09_03-23.jpg",
         "captura_anotada": "capturas/09_03-23_anotada.jpg",
         "tiempo_real_seg": 203.6,
         "puntaje": null,
-        "descripcion_original": "Se programa el inicio automatico de la fase tardia a los 5 minutos (05:00.0) en la columna 'Start Time'."
+        "descripcion_original": "Se programa el inicio automatico de la fase tardia a los 5 minutos (05:00.0) en la columna 'Start Time'.",
+        "rotacion": 270
       },
       {
         "tiempo": "03:36",
         "tiempo_seg": 216.0,
         "titulo": "Ajustar modulacion de dosis",
-        "descripcion": "Se explica el ajuste de la modulación de dosis en 'Sure Exp. 3D' según el tamaño del paciente: 'Standard' para personas normales y 'Calidad' para personas más corpulentas.",
+        "descripcion": "Configure la modulacion en la ventana 'Scan Details' usando la opcion 'Sure Exp. 3D' ('Standard' para pacientes normales y 'Calidad' para contexturas mas robustas).",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Configuracion de dosis",
         "zona": {
-          "x": 0.197,
-          "y": 0.325
+          "x": 0.328,
+          "y": 0.796
         },
         "captura": "capturas/10_03-36.jpg",
         "captura_anotada": "capturas/10_03-36_anotada.jpg",
         "tiempo_real_seg": 215.0,
         "puntaje": null,
-        "descripcion_original": "Se explica el ajuste de la modulacion de dosis en 'Sure Exp 3D' segun el tamano del paciente: 'Estandar' para personas normales y 'Calidad' para personas mas corpulentas."
+        "descripcion_original": "Se explica el ajuste de la modulacion de dosis en 'Sure Exp 3D' segun el tamano del paciente: 'Estandar' para personas normales y 'Calidad' para personas mas corpulentas.",
+        "rotacion": 270
       },
       {
         "tiempo": "04:09",
         "tiempo_seg": 249.0,
-        "titulo": "Modificar el D-FOV para ajuste visual",
-        "descripcion": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización.",
+        "titulo": "Modificar D-FOV para ajuste",
+        "descripcion": "Ajuste el valor de 'D-FOV' en el panel emergente, donde se visualiza el valor actual de 450 mm.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajuste de parámetros de adquisición",
         "zona": {
-          "x": 0.257,
-          "y": 0.412
+          "x": 0.421,
+          "y": 0.692
         },
         "captura": "capturas/11_04-09.jpg",
         "captura_anotada": "capturas/11_04-09_anotada.jpg",
         "tiempo_real_seg": 249.2,
         "puntaje": null,
-        "descripcion_original": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm a 440 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización."
+        "titulo_original": "Modificar el D-FOV para ajuste visual",
+        "descripcion_original": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm a 440 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización.",
+        "rotacion": 270
       },
       {
         "tiempo": "04:31",
         "tiempo_seg": 271.0,
-        "titulo": "Asignar comentario 'SIN CE' al primer escaneo",
-        "descripcion": "Se escribe 'SIN CE' (en pantalla se lee 'SIN CE') en el campo Comment de la primera fase para registrar el escaneo sin contraste.",
+        "titulo": "Asignar comentario 'SIN CE'",
+        "descripcion": "Escriba 'SIN CE' en el campo 'Comment' de la primera fase para registrar adecuadamente la adquisicion sin medio de contraste.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.086,
-          "y": 0.626
+          "x": 0.626,
+          "y": 0.897
         },
         "captura": "capturas/12_04-31.jpg",
         "captura_anotada": "capturas/12_04-31_anotada.jpg",
         "tiempo_real_seg": 271.2,
         "puntaje": null,
         "titulo_original": "Asignar comentario 'SIN CTE' al primer escaneo",
-        "descripcion_original": "Se escribe 'SIN CTE' en el campo Comment de la primera fase para registrar el escaneo sin contraste en la metadata de adquisición."
+        "descripcion_original": "Se escribe 'SIN CTE' en el campo Comment de la primera fase para registrar el escaneo sin contraste en la metadata de adquisición.",
+        "rotacion": 270
       },
       {
         "tiempo": "04:48",
         "tiempo_seg": 288.0,
-        "titulo": "Asignar comentario 'ARTERIAL' a fase de contraste",
-        "descripcion": "Se modifica la cuarta fila agregando la etiqueta 'ARTERI' (en pantalla se lee 'ARTERI') en los comentarios para marcar la fase arterial del examen.",
+        "titulo": "Asignar comentario 'ARTERI'",
+        "descripcion": "Escriba 'ARTERI' en el campo 'Comment' para identificar claramente la adquisicion de la fase arterial.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.142,
-          "y": 0.648
+          "x": 0.655,
+          "y": 0.86
         },
         "captura": "capturas/13_04-48.jpg",
         "captura_anotada": "capturas/13_04-48_anotada.jpg",
         "tiempo_real_seg": 288.2,
         "puntaje": null,
-        "descripcion_original": "Se modifica la cuarta fila agregando la etiqueta 'ARTERIAL' en los comentarios para marcar la fase arterial del examen."
+        "titulo_original": "Asignar comentario 'ARTERIAL' a fase de contraste",
+        "descripcion_original": "Se modifica la cuarta fila agregando la etiqueta 'ARTERIAL' en los comentarios para marcar la fase arterial del examen.",
+        "rotacion": 270
       },
       {
         "tiempo": "05:13",
         "tiempo_seg": 313.0,
-        "titulo": "Asignar comentario 'VENOSO' a fase portal",
-        "descripcion": "Se ingresa el texto 'VENOSO' en el campo de comentario de la quinta fila del protocolo para identificar la fase venosa.",
+        "titulo": "Asignar comentario 'VENOSO'",
+        "descripcion": "Escriba 'VENOSO' en el campo 'Comment' de la quinta fila del protocolo para etiquetar la adquisicion de la fase venosa.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.153,
-          "y": 0.553
+          "x": 0.544,
+          "y": 0.846
         },
         "captura": "capturas/14_05-13.jpg",
         "captura_anotada": "capturas/14_05-13_anotada.jpg",
         "tiempo_real_seg": 313.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Asignar comentario 'VENOSO' a fase portal",
+        "descripcion_original": "Se ingresa el texto 'VENOSO' en el campo de comentario de la quinta fila del protocolo para identificar la fase venosa.",
+        "rotacion": 270
       },
       {
         "tiempo": "05:21",
         "tiempo_seg": 321.0,
-        "titulo": "Asignar comentario 'TARDIO' a fase tardía",
-        "descripcion": "Se rotula la última fila con el comentario 'TARDIO' en el campo Comment para documentar adecuadamente la fase tardía o de eliminación.",
+        "titulo": "Asignar comentario 'TARDIO'",
+        "descripcion": "Ingrese 'TARDIO' en el campo 'Comment' de la ultima fila para documentar adecuadamente la fase tardia de eliminacion.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Fases de contraste y comentarios",
         "zona": {
-          "x": 0.425,
-          "y": 0.556
+          "x": 0.556,
+          "y": 0.575
         },
         "captura": "capturas/15_05-21.jpg",
         "captura_anotada": "capturas/15_05-21_anotada.jpg",
         "tiempo_real_seg": 320.0,
         "puntaje": null,
-        "descripcion_original": "Se rotula la última fila con el comentario 'TARDIO' para documentar adecuadamente la fase tardía o de eliminación."
+        "titulo_original": "Asignar comentario 'TARDIO' a fase tardía",
+        "descripcion_original": "Se rotula la última fila con el comentario 'TARDIO' para documentar adecuadamente la fase tardía o de eliminación.",
+        "rotacion": 270
       },
       {
         "tiempo": "05:38",
         "tiempo_seg": 338.0,
-        "titulo": "Establecer reconstrucción estándar de volumen",
-        "descripcion": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Estándar de Volumen (Cuerpo Std. Volume) para posibilitar MPR posterior de alta calidad.",
+        "titulo": "Establecer reconstruccion Cuerpo Std. Axial",
+        "descripcion": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Std. Axial, posibilitando la visualización correcta del plano axial.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.285,
-          "y": 0.389
+          "x": 0.412,
+          "y": 0.702
         },
         "captura": "capturas/16_05-38.jpg",
         "captura_anotada": "capturas/16_05-38_anotada.jpg",
         "tiempo_real_seg": 338.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Establecer reconstrucción estándar de volumen",
+        "descripcion_original": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Estándar de Volumen (Cuerpo Std. Volume) para posibilitar MPR posterior de alta calidad.",
+        "rotacion": 270
       },
       {
         "tiempo": "05:54",
         "tiempo_seg": 354.0,
         "titulo": "Configurar grosor e intervalo de volumen",
-        "descripcion": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
+        "descripcion": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo (Slice Interval) a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.283,
-          "y": 0.421
+          "x": 0.427,
+          "y": 0.722
         },
         "captura": "capturas/17_05-54.jpg",
         "captura_anotada": "capturas/17_05-54_anotada.jpg",
         "tiempo_real_seg": 354.6,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
+        "rotacion": 270
       },
       {
         "tiempo": "06:16",
         "tiempo_seg": 376.0,
-        "titulo": "Configurar reconstrucción de hueso fino",
-        "descripcion": "Se muestra cómo, en caso de trauma o indicación ósea, se puede cambiar el tipo de reconstrucción a Hueso Fino (Hueso Fino) para maximizar la resolución espacial en reconstrucciones volumétricas.",
+        "titulo": "Configurar reconstruccion de helicoidal",
+        "descripcion": "Se muestra la configuración de los parámetros del escaneo donde se detallan el valor de kV (120), mA, rotación (0.5 s), rango (800.0) y dirección OUT.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.397,
-          "y": 0.472
+          "x": 0.558,
+          "y": 0.597
         },
         "captura": "capturas/18_06-16.jpg",
         "captura_anotada": "capturas/18_06-16_anotada.jpg",
         "tiempo_real_seg": 375.4,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Configurar reconstrucción de hueso fino",
+        "descripcion_original": "Se muestra cómo, en caso de trauma o indicación ósea, se puede cambiar el tipo de reconstrucción a Hueso Fino (Hueso Fino) para maximizar la resolución espacial en reconstrucciones volumétricas.",
+        "rotacion": 270
       },
       {
         "tiempo": "07:41",
         "tiempo_seg": 461.0,
-        "titulo": "Añadir reconstrucción pulmonar si es necesario",
-        "descripcion": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmón Std. Volume) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
+        "titulo": "Seleccionar reconstruccion de pulmon",
+        "descripcion": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmon Std. Axial) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Ajustes de reconstrucción",
         "zona": {
-          "x": 0.42,
-          "y": 0.315
+          "x": 0.328,
+          "y": 0.565
         },
         "captura": "capturas/19_07-41.jpg",
         "captura_anotada": "capturas/19_07-41_anotada.jpg",
         "tiempo_real_seg": 461.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Añadir reconstrucción pulmonar si es necesario",
+        "descripcion_original": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmón Std. Volume) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
+        "rotacion": 270
       },
       {
         "tiempo": "08:03",
         "tiempo_seg": 483.0,
-        "titulo": "Revisar los filtros de reconstrucción predeterminados",
-        "descripcion": "El instructor indica que los filtros ya vienen configurados por defecto (por ejemplo, para pulmón) y solo es necesario encenderlos para evitar tener que buscarlos manualmente.",
+        "titulo": "Verificar aplicacion del protocolo",
+        "descripcion": "Se verifica en la interfaz de usuario la selección del protocolo de pulmon Std. Volume y su activación en el listado para el escaneo.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.376,
-          "y": 0.415
+          "x": 0.421,
+          "y": 0.629
         },
         "captura": "capturas/20_08-03.jpg",
         "captura_anotada": "capturas/20_08-03_anotada.jpg",
         "tiempo_real_seg": 482.8,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Revisar los filtros de reconstrucción predeterminados",
+        "descripcion_original": "El instructor indica que los filtros ya vienen configurados por defecto (por ejemplo, para pulmón) y solo es necesario encenderlos para evitar tener que buscarlos manualmente.",
+        "rotacion": 270
       },
       {
         "tiempo": "08:21",
         "tiempo_seg": 501.0,
-        "titulo": "Configurar filtro ACE en volumen arterial",
-        "descripcion": "Seleccionar el volumen arterial en la lista de reconstrucción y aplicar el filtro ACE Cuerpo para optimizar la calidad de imagen con dosis baja.",
+        "titulo": "Configurar filtro AICE en volumen",
+        "descripcion": "Seleccionar el volumen en la lista de reconstrucción y aplicar el filtro AICE Cuerpo para optimizar la calidad de imagen con dosis baja.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.481,
-          "y": 0.427
+          "x": 0.422,
+          "y": 0.51
         },
         "captura": "capturas/21_08-21.jpg",
         "captura_anotada": "capturas/21_08-21_anotada.jpg",
         "tiempo_real_seg": 501.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Configurar filtro ACE en volumen arterial",
+        "descripcion_original": "Seleccionar el volumen arterial en la lista de reconstrucción y aplicar el filtro ACE Cuerpo para optimizar la calidad de imagen con dosis baja.",
+        "rotacion": 270
       },
       {
         "tiempo": "08:41",
         "tiempo_seg": 521.0,
-        "titulo": "Activar los reformateos automáticos",
+        "titulo": "Activar los reformateos automaticos",
         "descripcion": "Si el paciente está bien centrado, se activan los reformateos automáticos para que el sistema genere directamente cortes axiales, coronales y sagitales cada 3.0 mm.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.281,
-          "y": 0.444
+          "x": 0.454,
+          "y": 0.714
         },
         "captura": "capturas/22_08-41.jpg",
         "captura_anotada": "capturas/22_08-41_anotada.jpg",
         "tiempo_real_seg": 520.4,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Activar los reformateos automáticos",
+        "rotacion": 270
       },
       {
         "tiempo": "08:58",
         "tiempo_seg": 538.0,
-        "titulo": "Aplicar filtro ACE en fase venosa",
-        "descripcion": "Se selecciona la fase venosa y se activa igualmente el filtro ACE Cuerpo, asegurándose de que la descripción de la serie indique 'VENOSO'.",
+        "titulo": "Aplicar filtro AICE en fase venosa",
+        "descripcion": "Se selecciona la fase venosa y se activa igualmente el filtro AICE Cuerpo para el procesamiento correcto del volumen.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.42,
-          "y": 0.285
+          "x": 0.298,
+          "y": 0.572
         },
         "captura": "capturas/23_08-58.jpg",
         "captura_anotada": "capturas/23_08-58_anotada.jpg",
         "tiempo_real_seg": 538.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Aplicar filtro ACE en fase venosa",
+        "descripcion_original": "Se selecciona la fase venosa y se activa igualmente el filtro ACE Cuerpo, asegurándose de que la descripción de la serie indique 'VENOSO'.",
+        "rotacion": 270
       },
       {
         "tiempo": "09:18",
         "tiempo_seg": 558.0,
-        "titulo": "Configurar la fase tardía con ACE",
-        "descripcion": "Se activa la reconstrucción de la fase tardía aplicando el filtro ACE Cuerpo para mantener la coherencia en el protocolo de abdomen trifásico.",
+        "titulo": "Configurar la fase tardia con AICE",
+        "descripcion": "Se activa la reconstrucción de la fase tardía aplicando el filtro AICE Cuerpo para mantener la coherencia en el protocolo.",
         "importancia": 3,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.769,
-          "y": 0.349
+          "x": 0.349,
+          "y": 0.231
         },
         "captura": "capturas/24_09-18.jpg",
         "captura_anotada": "capturas/24_09-18_anotada.jpg",
         "tiempo_real_seg": 558.2,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Configurar la fase tardía con ACE",
+        "descripcion_original": "Se activa la reconstrucción de la fase tardía aplicando el filtro ACE Cuerpo para mantener la coherencia en el protocolo de abdomen trifásico.",
+        "rotacion": 270
       },
       {
         "tiempo": "10:04",
         "tiempo_seg": 604.0,
-        "titulo": "Modificar la orientación del maniquí",
-        "descripcion": "Si la orientación del paciente fue ingresada incorrectamente, se puede cambiar directamente en pantalla (ej. de pies a cabeza, supino a prono) y el maniquí se actualizará automáticamente.",
+        "titulo": "Modificar la orientacion del paciente",
+        "descripcion": "Se muestra la interfaz con el id de paciente 999999-001 y el nombre XXXXXXX-001 para la asignación del estudio ABDOMEN TRIFASICO.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Posicionamiento virtual",
         "zona": {
-          "x": 0.728,
-          "y": 0.296
+          "x": 0.292,
+          "y": 0.291
         },
         "captura": "capturas/25_10-04.jpg",
         "captura_anotada": "capturas/25_10-04_anotada.jpg",
         "tiempo_real_seg": 604.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Modificar la orientación del maniquí",
+        "descripcion_original": "Si la orientación del paciente fue ingresada incorrectamente, se puede cambiar directamente en pantalla (ej. de pies a cabeza, supino a prono) y el maniquí se actualizará automáticamente.",
+        "rotacion": 270
       },
       {
         "tiempo": "10:27",
         "tiempo_seg": 627.0,
-        "titulo": "Ajustar dirección del escanograma (In/Out)",
-        "descripcion": "El sistema cambia automáticamente la dirección del movimiento de la camilla (hacia adentro o hacia afuera) al modificar la orientación del paciente.",
+        "titulo": "Ajustar direccion del escanograma (In/Out)",
+        "descripcion": "Se detalla en la interfaz la pestaña Scan Details del escanograma inicial (FL03) con parámetros de 120 kV y 30 mA.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Posicionamiento virtual",
         "zona": {
-          "x": 0.56,
-          "y": 0.277
+          "x": 0.277,
+          "y": 0.44
         },
         "captura": "capturas/26_10-27.jpg",
         "captura_anotada": "capturas/26_10-27_anotada.jpg",
         "tiempo_real_seg": 627.6,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Ajustar dirección del escanograma (In/Out)",
+        "descripcion_original": "El sistema cambia automáticamente la dirección del movimiento de la camilla (hacia adentro o hacia afuera) al modificar la orientación del paciente.",
+        "rotacion": 270
       },
       {
         "tiempo": "11:09",
         "tiempo_seg": 669.0,
-        "titulo": "Desactivar instrucciones de voz automáticas",
-        "descripcion": "Haciendo un solo clic se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
+        "titulo": "Desactivar instrucciones de voz de respiracion",
+        "descripcion": "Haciendo un solo clic en el icono de reproducción de voz se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
         "importancia": 2,
         "fuente": "ambos",
         "seccion": "Planificación del protocolo",
         "zona": {
-          "x": 0.718,
-          "y": 0.426
+          "x": 0.426,
+          "y": 0.282
         },
         "captura": "capturas/27_11-09.jpg",
         "captura_anotada": "capturas/27_11-09_anotada.jpg",
         "tiempo_real_seg": 669.2,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Desactivar instrucciones de voz automáticas",
+        "descripcion_original": "Haciendo un solo clic se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
+        "rotacion": 270
       },
       {
         "tiempo": "11:18",
         "tiempo_seg": 678.0,
-        "titulo": "Confirmar parámetros antes de escanear",
+        "titulo": "Confirmar parametros antes de escanear",
         "descripcion": "El instructor advierte que ante cualquier cambio de kV, mA o reconstrucción, el sistema requerirá volver a presionar el botón 'Confirm' en pantalla.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.181,
-          "y": 0.725
+          "x": 0.725,
+          "y": 0.819
         },
         "captura": "capturas/28_11-18.jpg",
         "captura_anotada": "capturas/28_11-18_anotada.jpg",
         "tiempo_real_seg": 677.0,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Confirmar parámetros antes de escanear",
+        "rotacion": 270
       },
       {
         "tiempo": "11:31",
         "tiempo_seg": 691.0,
-        "titulo": "Presionar botón de inicio para escanear",
+        "titulo": "Presionar boton de inicio fisico",
         "descripcion": "Cuando el botón físico parpadea, significa que está tomando impulso para asegurar una velocidad constante de la camilla al momento de iniciar la radiación.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.102,
-          "y": 0.476
+          "x": 0.476,
+          "y": 0.898
         },
         "captura": "capturas/29_11-31.jpg",
         "captura_anotada": "capturas/29_11-31_anotada.jpg",
         "tiempo_real_seg": 690.0,
-        "puntaje": null
+        "puntaje": null,
+        "titulo_original": "Presionar botón de inicio para escanear",
+        "rotacion": 270
       },
       {
         "tiempo": "12:21",
         "tiempo_seg": 741.0,
         "titulo": "Abortar o saltar escanograma (Scan Skip)",
-        "descripcion": "Se demuestra cómo interrumpir la adquisición presionando el control de parada para abortar la emisión de radiación si es necesario.",
+        "descripcion": "Se demuestra cómo interrumpir la adquisición presionando el control de parada 'Scan Skip' para abortar la emisión de radiación si es necesario.",
         "importancia": 5,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.591,
-          "y": 0.448
+          "x": 0.448,
+          "y": 0.409
         },
         "captura": "capturas/30_12-21.jpg",
         "captura_anotada": "capturas/30_12-21_anotada.jpg",
         "tiempo_real_seg": 740.0,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se demuestra cómo interrumpir la adquisición presionando el control de parada para abortar la emisión de radiación si es necesario.",
+        "rotacion": 270
       },
       {
         "tiempo": "13:12",
         "tiempo_seg": 792.0,
-        "titulo": "Desechar y reiniciar escanogramas abortados",
-        "descripcion": "Para realizar nuevamente los escanogramas despu s de abortar, se debe seleccionar el botón 'Exit Exam' (indicado en pantalla como Exit Exam), descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo para el paciente ID 999999-001.",
+        "titulo": "Seleccionar Exit Exam para reiniciar estudio",
+        "descripcion": "Para realizar nuevamente los escanogramas después de abortar, presione el botón 'Exit Exam' en la esquina inferior izquierda. Esto permitirá descartar los datos previos y cargar nuevamente el protocolo para el paciente ID 999999-001.",
         "importancia": 4,
         "fuente": "ambos",
         "seccion": "Adquisición de imagen",
         "zona": {
-          "x": 0.112,
-          "y": 0.654
+          "x": 0.655,
+          "y": 0.887
         },
         "captura": "capturas/31_13-12.jpg",
         "captura_anotada": "capturas/31_13-12_anotada.jpg",
         "tiempo_real_seg": 791.8,
         "puntaje": null,
-        "descripcion_original": "Para realizar nuevamente los escanogramas después de abortar, se debe seleccionar 'Exit Exam', descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo."
+        "titulo_original": "Desechar y reiniciar escanogramas abortados",
+        "descripcion_original": "Para realizar nuevamente los escanogramas después de abortar, se debe seleccionar 'Exit Exam', descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo.",
+        "rotacion": 270
       }
     ],
     "transcripcion": [
@@ -1278,20 +1341,20 @@
   "documentos": {
     "docx": "TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx",
     "pdf": "TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf",
-    "paginas": 24
+    "paginas": 38
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 349769,
-    "tokens_salida": 14391,
+    "tokens_entrada": 408519,
+    "tokens_salida": 18227,
     "tokens_pensamiento": 0,
-    "tokens_total": 364160,
+    "tokens_total": 426746,
     "detalle_entrada": {
       "VIDEO": 305140,
-      "TEXT": 10529,
-      "IMAGE": 34100
+      "TEXT": 19339,
+      "IMAGE": 84040
     },
-    "llamadas": 9,
+    "llamadas": 16,
     "batch": false,
     "costo_usd": null
   }
