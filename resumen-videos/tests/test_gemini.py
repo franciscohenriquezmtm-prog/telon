@@ -1598,3 +1598,24 @@ class TestTranscripcion:
         assert gemini._segmentos_desde_bruto({"segmentos": "x"}, 10.0, 0.0) == []
         assert gemini._segmentos_desde_bruto([{"inicio": 3, "texto": "a"}, "b", {"texto": ""}], 10.0, 0.0) == [
             {"inicio": 3.0, "fin": 3.0, "texto": "a"}]
+
+
+class TestReintentosDeRed:
+    def test_conexion_cortada_se_reintenta_y_luego_responde(self, monkeypatch):
+        import httpx
+        monkeypatch.setattr(gemini.time, "sleep", lambda _s: None)
+        exito = respuesta(documento_json([momento_json("00:10")]))
+        cliente = ClienteFalso([httpx.RemoteProtocolError("Server disconnected without sending a response."),
+                                errors.ServerError(503, {"error": {"message": "overloaded"}}), exito])
+        avisos: list[str] = []
+        resultado = gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=avisos.append)
+        assert len(resultado.momentos) == 1 and len(cliente.generaciones()) == 3
+        assert sum("se reintenta en" in a for a in resultado.avisos) == 2
+
+    def test_conexion_cortada_persistente_propaga(self, monkeypatch):
+        import httpx
+        monkeypatch.setattr(gemini.time, "sleep", lambda _s: None)
+        cliente = ClienteFalso([httpx.ReadTimeout("timed out")] * (gemini.REINTENTOS_RED + 1))
+        with pytest.raises(httpx.ReadTimeout):
+            gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
+        assert len(cliente.generaciones()) == gemini.REINTENTOS_RED + 1

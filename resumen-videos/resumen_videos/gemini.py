@@ -21,6 +21,7 @@ from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Callable
 
+import httpx
 from google import genai
 from google.genai import errors, types
 
@@ -235,6 +236,8 @@ MINIMO_ULTIMO_TRAMO_SEG = 300.0        # un último tramo más corto se fusiona 
 TOLERANCIA_TIEMPO_REDACTOR_SEG = 1.5   # el redactor no puede mover los tiempos más que esto
 SIMILITUD_TITULOS_DUPLICADOS = 0.8     # dos momentos cercanos solo son duplicados si sus títulos se parecen así
 MAX_REINTENTOS_LOTE = 2                # reenvíos automáticos de un lote rechazado por una opción no soportada
+REINTENTOS_RED = 2                     # reintentos de una generación cortada por la red o por un 5xx del servidor
+PAUSA_REINTENTO_RED_SEG = 15.0         # pausa antes de cada reintento de red (crece: 15 s, 30 s)
 
 
 def construir_prompt_sistema(equipo: str = config.EQUIPO_POR_DEFECTO) -> str:
@@ -487,9 +490,22 @@ def _generar_con_fallbacks(cliente, modelos: list[str], construir_contents: Call
         else:
             variante = _variante_para(modelos[posicion], variante_inicial)
         hay_otro = posicion + 1 < len(modelos)
+        reintentos_red = 0
         while True:
             try:
                 return _generar(cliente, variante, construir_contents, prompt_sistema, max_tokens), variante
+            except (httpx.TransportError, errors.ServerError) as exc:
+                # Conexión cortada (p. ej. "Server disconnected without sending a response"), timeout de lectura o
+                # 5xx: casi siempre transitorio.  Se reintenta con pausa; si persiste, se propaga tal cual.
+                if reintentos_red >= REINTENTOS_RED:
+                    raise
+                reintentos_red += 1
+                pausa = PAUSA_REINTENTO_RED_SEG * reintentos_red
+                aviso = (f"Fallo de red o del servidor con {variante.modelo} ({type(exc).__name__}: {exc}); "
+                         f"se reintenta en {pausa:.0f} s ({reintentos_red}/{REINTENTOS_RED}).")
+                avisos.append(aviso)
+                log("Aviso: " + aviso)
+                time.sleep(pausa)
             except errors.ClientError as exc:
                 accion = _accion_fallback(exc, variante, hay_otro)
                 detalle = f"{exc.code} {exc.status or ''}: {exc.message or exc.details}"
