@@ -131,6 +131,35 @@ PROMPT_REFINADO_SIN_ESQUEMA = (
 #: Texto que precede a cada imagen en el refinado (``tiempo`` = instante real del fotograma elegido).
 PROMPT_CAPTURA = "Captura del paso {numero} ({tiempo})"
 
+#: Orientación por comparación: para cada captura marcada como girada se envían dos versiones y el modelo elige la
+#: derecha (comparar dos imágenes le resulta mucho más fiable que decir la dirección de un giro).
+PROMPT_ORIENTACION = """\
+Eres un revisor de capturas de pantalla de un manual clínico. Para cada paso recibes DOS versiones (A y B) de la misma captura, giradas de forma distinta. Indica cuál de las dos está derecha: la pantalla, el panel o los textos se leen con normalidad, de izquierda a derecha y de arriba hacia abajo, y las personas u objetos no están de cabeza. Fíjate sobre todo en la dirección de lectura de los textos y en los iconos. Responde únicamente con el JSON pedido.
+"""
+PROMPT_ORIENTACION_USUARIO = "Para cada paso, ¿cuál de las dos imágenes está derecha, A o B?"
+PROMPT_ORIENTACION_SIN_ESQUEMA = (
+    'Responde SOLO con el JSON: {"pasos": [{"numero": N, "derecha": "A" o "B"}, ...]}, sin texto adicional.'
+)
+ESQUEMA_ORIENTACION: dict = {
+    "type": "object",
+    "properties": {
+        "pasos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "numero": {"type": "integer"},
+                    "derecha": {"type": "string", "enum": ["A", "B"]},
+                },
+                "required": ["numero", "derecha"],
+            },
+        },
+    },
+    "required": ["pasos"],
+}
+ORIENTACION_LOTE = 8            # pasos por petición (dos imágenes por paso)
+ORIENTACION_MAX_LADO_PX = 720   # las dos versiones van reducidas: basta para leer la dirección de los textos
+
 #: Transcripción literal del audio con tiempos (segunda llamada, con el video ya subido).
 PROMPT_TRANSCRIPCION = """\
 Eres un transcriptor profesional de audio clínico en español. Vas a escuchar un video de capacitación sobre {equipo}.
@@ -1427,6 +1456,100 @@ def refinar_con_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, pre
              "queda en titulo_original/descripcion_original.")
     log(aviso)
     return replace(resultado, momentos=momentos, uso=uso_total, avisos=resultado.avisos + avisos + [aviso])
+
+
+def _jpeg_girado(ruta: Path, grados: int, max_lado_px: int) -> bytes:
+    """Bytes JPEG de la captura girada ``grados`` en sentido horario y reducida al lado mayor ``max_lado_px``."""
+    from PIL import Image   # import perezoso
+
+    with Image.open(ruta) as imagen:
+        imagen = imagen.convert("RGB")
+        if grados % 360:
+            imagen = imagen.rotate(-(grados % 360), expand=True)
+        imagen.thumbnail((max_lado_px, max_lado_px), Image.LANCZOS)
+        salida = io.BytesIO()
+        imagen.save(salida, format="JPEG", quality=85, optimize=True)
+    return salida.getvalue()
+
+
+def _contenido_orientacion(grupo: list, sufijo: str) -> list:
+    """``contents``: por cada paso, rótulo + imagen A + imagen B; al final la pregunta."""
+    partes = []
+    for numero, _momento, (bytes_a, bytes_b) in grupo:
+        partes.append(types.Part.from_text(text=f"Paso {numero}, versión A:"))
+        partes.append(types.Part.from_bytes(data=bytes_a, mime_type="image/jpeg"))
+        partes.append(types.Part.from_text(text=f"Paso {numero}, versión B:"))
+        partes.append(types.Part.from_bytes(data=bytes_b, mime_type="image/jpeg"))
+    numeros = ", ".join(str(n) for n, _, _ in grupo)
+    partes.append(types.Part.from_text(text=f"{PROMPT_ORIENTACION_USUARIO} Pasos: {numeros}.{sufijo}"))
+    return [types.Content(role="user", parts=partes)]
+
+
+def orientar_capturas(cliente, resultado: ResultadoAnalisis, modelo: str, precios: dict | None = None, *,
+                      lote: int = ORIENTACION_LOTE, max_lado_px: int = ORIENTACION_MAX_LADO_PX,
+                      temperatura: float | None = config.TEMPERATURA,
+                      log: Callable[[str], None] = print) -> ResultadoAnalisis:
+    """Confirma la DIRECCIÓN del giro de las capturas que el refinado marcó como giradas (``rotacion`` != 0).
+
+    Para cada una envía dos versiones reducidas: A con la rotación propuesta y B con la opuesta (90 <-> 270; para
+    180, A = 180 y B = 0), y el modelo elige la que está derecha; ``rotacion`` se corrige según la elección.
+    El uso se suma al del resultado.  Ante cualquier fallo conserva las rotaciones propuestas, con aviso.
+    """
+    candidatos = [(n, m) for n, m in enumerate(resultado.momentos, start=1) if m.rotacion and m.ruta_captura]
+    if not candidatos:
+        return resultado
+    opuesta = {90: 270, 270: 90, 180: 0}
+    momentos = list(resultado.momentos)
+    uso_total = Uso(modelo=modelo)
+    avisos: list[str] = []
+    cambiadas = 0
+    log(f"Confirmando la dirección del giro de {len(candidatos)} capturas con {modelo} (dos versiones por captura)…")
+    try:
+        variante = _Variante(modelo=modelo, resolucion="baja", temperatura=temperatura, esquema_json=ESQUEMA_ORIENTACION,
+                             prompt_sin_esquema=PROMPT_ORIENTACION_SIN_ESQUEMA)
+        for inicio in range(0, len(candidatos), max(1, int(lote))):
+            grupo = []
+            for numero, momento in candidatos[inicio:inicio + max(1, int(lote))]:
+                a = int(momento.rotacion) % 360
+                b = opuesta.get(a, 0)
+                try:
+                    grupo.append((numero, momento, (_jpeg_girado(Path(momento.ruta_captura), a, max_lado_px),
+                                                    _jpeg_girado(Path(momento.ruta_captura), b, max_lado_px))))
+                except (OSError, ValueError) as exc:
+                    avisos.append(f"Orientación: no se pudo leer la captura del paso {numero} ({exc}); se omite.")
+            if not grupo:
+                continue
+            datos, _truncado, _texto, uso, variante = _generar_y_parsear(
+                cliente, [modelo], PROMPT_ORIENTACION, lambda sufijo, g=grupo: _contenido_orientacion(g, sufijo),
+                avisos, variante_inicial=variante, log=log)
+            uso.costo_usd = estimar_costo(uso, precios)
+            uso_total.sumar(uso)
+            respuestas = datos.get("pasos") if isinstance(datos, dict) else datos
+            elegidas = {}
+            for r in respuestas if isinstance(respuestas, list) else []:
+                if isinstance(r, dict) and isinstance(r.get("numero"), int) and str(r.get("derecha", "")).strip().upper() in ("A", "B"):
+                    elegidas[r["numero"]] = str(r["derecha"]).strip().upper()
+            for numero, momento, _imgs in grupo:
+                eleccion = elegidas.get(numero)
+                if eleccion is None:
+                    avisos.append(f"Orientación: el modelo no respondió por el paso {numero}; se conserva el giro propuesto.")
+                    continue
+                if eleccion == "B":
+                    momentos[numero - 1] = replace(momento, rotacion=opuesta.get(int(momento.rotacion) % 360, 0))
+                    cambiadas += 1
+    except Exception as exc:  # noqa: BLE001 - opcional: se conservan las rotaciones propuestas
+        aviso = f"No se pudo confirmar la dirección del giro ({exc}); se conservan las rotaciones propuestas."
+        if isinstance(getattr(exc, "uso", None), Uso):
+            exc.uso.costo_usd = estimar_costo(exc.uso, precios)
+            uso_total.sumar(exc.uso)
+        log("Aviso: " + aviso)
+        avisos.append(aviso)
+    aviso = (f"Orientación confirmada: {len(candidatos)} capturas revisadas, {cambiadas} con el giro corregido "
+             f"({uso_total.tokens_total} tokens).")
+    log(aviso)
+    uso_final = _sumar_usos(resultado.uso, uso_total, resultado.uso.modelo if resultado.uso else modelo) \
+        if uso_total.llamadas else resultado.uso
+    return replace(resultado, momentos=momentos, uso=uso_final, avisos=resultado.avisos + avisos + [aviso])
 
 
 def _sumar_usos(base: Uso | None, extra: Uso, modelo: str) -> Uso:

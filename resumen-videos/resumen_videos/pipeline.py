@@ -731,6 +731,19 @@ def _refinar(cliente, analisis: ResultadoAnalisis, op: Opciones, log: Callable[[
         return analisis
 
 
+def _orientar(cliente, analisis: ResultadoAnalisis, op: Opciones, log: Callable[[str], None]) -> ResultadoAnalisis:
+    """Confirma la dirección del giro de las capturas marcadas como giradas; un fallo conserva lo propuesto."""
+    if not any(m.rotacion for m in analisis.momentos):
+        return analisis
+    try:
+        return gemini.orientar_capturas(cliente, analisis, _modelo_refinado(analisis, op), precios_de(op),
+                                        temperatura=op.temperatura, log=log)
+    except Exception as exc:  # noqa: BLE001 - opcional
+        log(f"Aviso: no se pudo confirmar la dirección del giro ({exc}); se conservan las rotaciones propuestas.")
+        analisis.avisos.append(f"Orientación omitida: {exc}")
+        return analisis
+
+
 def _pulir(cliente, analisis: ResultadoAnalisis, op: Opciones, log: Callable[[str], None]) -> ResultadoAnalisis:
     """Redactor opcional (``--redactor``), DESPUÉS del refinado para que este no deshaga su trabajo."""
     try:
@@ -766,6 +779,7 @@ def _finalizar_video(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis
     if con_api and cliente is not None:
         if op.refinar:
             analisis = _refinar(cliente, analisis, op, log)
+            analisis = _orientar(cliente, analisis, op, log)
             rotar_capturas(analisis.momentos, rotar_zona_tambien=True, log=log)
         if op.redactor:
             analisis = _pulir(cliente, analisis, op, log)

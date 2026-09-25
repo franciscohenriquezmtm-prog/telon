@@ -1648,3 +1648,35 @@ def test_refinado_devuelve_rotacion(tmp_path):
     assert gemini.ROTACION_POR_LADO == {"arriba": 0, "derecha": 270, "abajo": 180, "izquierda": 90}
     assert "arriba_pantalla" in gemini.ESQUEMA_REFINADO["properties"]["momentos"]["items"]["properties"]
     assert "arriba_pantalla" in gemini.PROMPT_REFINADO and "arriba_pantalla" in gemini.PROMPT_REFINADO_USUARIO
+
+
+class TestOrientacion:
+    def test_elige_la_version_derecha_y_corrige_la_rotacion(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        original.momentos[0].rotacion = 90       # propuesto 90: A = 90, B = 270
+        original.momentos[2].rotacion = 180      # propuesto 180: A = 180, B = 0
+        cliente = ClienteFalso([respuesta(json.dumps({"pasos": [{"numero": 1, "derecha": "B"}, {"numero": 3, "derecha": "A"}]}))])
+        nuevo = gemini.orientar_capturas(cliente, original, MODELO, {"entrada": 1.0, "salida": 2.0}, log=lambda _: None)
+        assert [m.rotacion for m in nuevo.momentos] == [270, 0, 180]
+        llamada = cliente.generaciones()[0]
+        imagenes = imagenes_de(llamada)
+        assert len(imagenes) == 4                                     # dos versiones por captura girada
+        # paso 1 (1920x1080): A girada 90 (vertical) y B girada 270 (vertical); paso 3 (900x1400): A 180 y B 0 (verticales)
+        assert tamano_imagen(imagenes[0][1].data)[0] < tamano_imagen(imagenes[0][1].data)[1]
+        assert max(tamano_imagen(imagenes[0][1].data)) <= gemini.ORIENTACION_MAX_LADO_PX
+        assert nuevo.uso.llamadas == 2 and nuevo.uso.tokens_total > original.uso.tokens_total and nuevo.uso.modelo == MODELO
+        assert any("giro corregido" in a for a in nuevo.avisos)
+
+    def test_sin_capturas_giradas_no_llama(self, tmp_path):
+        original = resultado_con_capturas(tmp_path)
+        cliente = ClienteFalso()
+        assert gemini.orientar_capturas(cliente, original, MODELO, log=lambda _: None) is original
+        assert cliente.generaciones() == []
+
+    def test_fallo_conserva_lo_propuesto(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gemini.time, "sleep", lambda _s: None)
+        original = resultado_con_capturas(tmp_path)
+        original.momentos[0].rotacion = 90
+        cliente = ClienteFalso([respuesta("sin json"), respuesta("tampoco")])
+        nuevo = gemini.orientar_capturas(cliente, original, MODELO, log=lambda _: None)
+        assert nuevo.momentos[0].rotacion == 90 and any("se conservan" in a for a in nuevo.avisos)
