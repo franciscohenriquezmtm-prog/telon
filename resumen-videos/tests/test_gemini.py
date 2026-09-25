@@ -632,14 +632,18 @@ class TestEscaleraFallbacks:
         modelos = [l["modelo"] for l in cliente.generaciones()]
         assert modelos == [ALTERNATIVO] + [m for m in config.MODELOS_ALTERNATIVOS if m != ALTERNATIVO]
 
-    def test_otros_errores_se_propagan(self):
+    def test_otros_errores_se_propagan(self, monkeypatch):
         cliente = ClienteFalso([error_cliente(400, "API key not valid. Please pass a valid API key.")])
         with pytest.raises(errors.ClientError):
             gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
         assert len(cliente.generaciones()) == 1
+        # un 5xx se reintenta (REINTENTOS_RED veces, con pausa) y solo entonces se propaga
+        monkeypatch.setattr(gemini.time, "sleep", lambda _s: None)
         servidor = errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}})
+        cliente = ClienteFalso([servidor] * (gemini.REINTENTOS_RED + 1))
         with pytest.raises(errors.ServerError):
-            gemini.analizar_video(ClienteFalso([servidor]), archivo_remoto(), info_video(), log=lambda _: None)
+            gemini.analizar_video(cliente, archivo_remoto(), info_video(), log=lambda _: None)
+        assert len(cliente.generaciones()) == gemini.REINTENTOS_RED + 1
 
 
 # ----------------------------------------------------------------------------
@@ -1255,16 +1259,18 @@ class TestRefinarConCapturas:
         assert any("5100 tokens" in a and "sin aplicar cambios" in a for a in nuevo.avisos)
         assert original.uso.llamadas == 1
 
-    def test_excepcion_del_cliente_devuelve_original(self, tmp_path):
+    def test_excepcion_del_cliente_devuelve_original(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(gemini.time, "sleep", lambda _s: None)
         original = resultado_con_capturas(tmp_path)
-        for excepcion in (error_cliente(400, "API key not valid. Please pass a valid API key."),
-                          errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}}),
-                          error_cliente(404, "not found")):
-            cliente = ClienteFalso([excepcion])
+        servidor = errors.ServerError(503, {"error": {"code": 503, "message": "overloaded", "status": "UNAVAILABLE"}})
+        for respuestas, llamadas in (([error_cliente(400, "API key not valid. Please pass a valid API key.")], 1),
+                                     ([servidor] * (gemini.REINTENTOS_RED + 1), gemini.REINTENTOS_RED + 1),
+                                     ([error_cliente(404, "not found")], 1)):
+            cliente = ClienteFalso(respuestas)
             nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
             assert nuevo.momentos == original.momentos and nuevo.uso == original.uso
             assert any("No se pudo refinar" in a for a in nuevo.avisos)
-            assert len(cliente.generaciones()) == 1
+            assert len(cliente.generaciones()) == llamadas
 
     def test_respuesta_cortada_devuelve_original(self, tmp_path):
         original = resultado_con_capturas(tmp_path)
