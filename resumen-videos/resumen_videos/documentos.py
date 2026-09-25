@@ -22,6 +22,7 @@ incrustan sin recodificar.
 from __future__ import annotations
 
 import datetime as _dt
+import io
 import math
 import os
 import re
@@ -35,7 +36,7 @@ from docx import Document
 from docx.enum.section import WD_ORIENT
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_ROW_HEIGHT_RULE, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_TAB_ALIGNMENT, WD_TAB_LEADER
-from docx.image.exceptions import InvalidImageStreamError
+from docx.image.exceptions import InvalidImageStreamError, UnrecognizedImageError
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
@@ -892,6 +893,15 @@ def _marca_parrafo_pequena(p, pt: float = 2.0) -> None:
     pPr.append(rPr)   # w:rPr va al final de w:pPr (solo le siguen sectPr y pPrChange)
 
 
+def _jpeg_con_jfif(ruta) -> io.BytesIO:
+    """La misma imagen re-guardada por Pillow como JPEG con cabecera JFIF (calidad 95), en memoria."""
+    salida = io.BytesIO()
+    with Image.open(ruta) as imagen:
+        imagen.convert("RGB").save(salida, "JPEG", quality=95)
+    salida.seek(0)
+    return salida
+
+
 def _celda_momento_docx(celda, m: Momento, numero: int, L: Layout, F: dict, log: Callable[[str], None],
                         avisos: list) -> None:
     ancho_pt = (L.celda_w_cm - 2 * CELDA_MARGEN_LAT_CM) * cm
@@ -907,13 +917,16 @@ def _celda_momento_docx(celda, m: Momento, numero: int, L: Layout, F: dict, log:
         _marca_parrafo_pequena(p_img)   # la marca de párrafo hereda 10 pt y agrandaría la línea de la imagen
         run = p_img.add_run()
         run.font.size = Pt(2)   # minimiza el descendente de la línea que contiene la imagen
+        medida = {"width": Cm(C.img_w_cm)} if tam[0] / tam[1] >= C.img_w_cm / C.img_h_cm else {"height": Cm(C.img_h_cm)}
         try:
-            if tam[0] / tam[1] >= C.img_w_cm / C.img_h_cm:
-                run.add_picture(str(ruta), width=Cm(C.img_w_cm))
-            else:
-                run.add_picture(str(ruta), height=Cm(C.img_h_cm))
+            try:
+                run.add_picture(str(ruta), **medida)
+            except UnrecognizedImageError:
+                # JPEG sin cabecera JFIF/EXIF (los que escribe ffmpeg empiezan por un comentario): python-docx no
+                # lo reconoce aunque sea válido.  Se vuelve a guardar con Pillow en memoria (con JFIF) y se inserta.
+                run.add_picture(_jpeg_con_jfif(ruta), **medida)
             insertada = True
-        except (OSError, InvalidImageStreamError) as exc:
+        except (OSError, InvalidImageStreamError, UnrecognizedImageError) as exc:
             log(f"  aviso: captura ilegible para el docx ({Path(str(ruta)).name}): {exc}")
             run._r.getparent().remove(run._r)
     if not insertada:

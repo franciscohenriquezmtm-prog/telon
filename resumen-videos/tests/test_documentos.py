@@ -612,3 +612,29 @@ def test_transcripcion_conserva_el_orden_limpia_controles_y_admite_encabezados(t
     assert "\x07" not in ultima and "01:05" in ultima and "00:04" in ultima
     parrafos = [p.text for p in Document(str(docx)).paragraphs]
     assert "Capítulo 2: Apagado" in parrafos and not any(p.startswith("\t") for p in parrafos)
+
+
+# ----------------------------------------------------------------------------- JPEG sin JFIF (ffmpeg)
+def _sin_jfif(ruta: Path) -> Path:
+    """Quita el segmento APP0 (JFIF) y antepone un comentario, como los JPEG que escribe ffmpeg."""
+    datos = ruta.read_bytes()
+    assert datos[:4] == b"\xff\xd8\xff\xe0"
+    largo = int.from_bytes(datos[4:6], "big")
+    resto = datos[4 + largo:]
+    comentario = b"Lavc61.3.100\x00"
+    datos = b"\xff\xd8\xff\xfe" + (len(comentario) + 2).to_bytes(2, "big") + comentario + resto
+    ruta.write_bytes(datos)
+    return ruta
+
+
+def test_jpeg_de_ffmpeg_sin_jfif_se_inserta_igual_en_el_docx(tmp_path):
+    momentos = _momentos(2, tmp_path / "cap")
+    _sin_jfif(Path(momentos[0].ruta_captura))
+    with Image.open(momentos[0].ruta_captura) as im:
+        assert im.format == "JPEG"            # Pillow lo lee; python-docx solo no lo reconoce
+    registro: list[str] = []
+    docx, pdf, paginas = _generar(tmp_path, momentos, log=registro.append)
+    assert paginas == _paginas_esperadas(momentos)
+    assert not any("ilegible" in r for r in registro)
+    doc = Document(str(docx))
+    assert len(doc.inline_shapes) == 2        # las dos capturas quedaron insertadas
