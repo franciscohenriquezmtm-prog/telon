@@ -18,7 +18,7 @@ from PIL import Image, ImageDraw
 
 COLOR_MARCA = (255, 59, 48)        # rojo-naranja (#FF3B30)
 COLOR_HALO = (255, 255, 255)
-CALIDAD_JPEG = 90
+CALIDAD_JPEG = 95
 AREA_MAXIMA_CAJA = 0.8             # una caja que cubre más de esto es "toda la pantalla": no se anota
 _SUPERMUESTREO = 3                 # factor de la capa de dibujo (suaviza los bordes)
 _RADIO_FRAC = 0.07                 # radio del círculo: 7 % del ancho
@@ -29,8 +29,8 @@ _ESTILOS = ("circulo", "flecha")
 # Lupa: recuadro en la esquina más lejana con la zona señalada ampliada a resolución completa, para que los
 # iconos y textos pequeños (un candado, un valor en pantalla) se lean en el manual.  Medidas relativas al lado
 # menor de la captura: se recorta un cuadrado de LUPA_RECORTE_FRAC y se muestra a LUPA_TAMANO_FRAC (x2,5).
-LUPA_RECORTE_FRAC = 0.18
-LUPA_TAMANO_FRAC = 0.45
+LUPA_RECORTE_FRAC = 0.20
+LUPA_TAMANO_FRAC = 0.50
 _LUPA_MARGEN_FRAC = 0.02           # separación del recuadro con los bordes de la captura
 _LUPA_CAJA_MAXIMA = 0.30           # una caja más ancha que esto (del lado menor) ya se ve: sin lupa
 
