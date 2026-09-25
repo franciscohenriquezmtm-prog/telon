@@ -17,30 +17,30 @@
       "origen_info": "ffmpeg"
     }
   },
-  "generado": "2026-09-25T14:06:22",
+  "generado": "2026-09-25T14:34:03",
   "version": "1.0.0",
   "analisis": {
     "modo": "gemini",
     "modelo": "gemini-3.5-flash",
     "titulo": "Guía de Operación de Arco en C Philips",
-    "resumen": "Este video instructivo muestra la operación básica y el posicionamiento de un sistema de arco en C Philips en un entorno quirúrgico real. Se explican los diferentes movimientos mecánicos del equipo, la preparación estéril y las consideraciones de espacio en el quirófano.",
+    "resumen": "Este video instructivo muestra la operación de un sistema de arco en C de Philips en un entorno quirúrgico. Se detallan los movimientos mecánicos del brazo, la colocación de cubiertas estériles de protección y el posicionamiento del equipo respecto a la mesa de operaciones durante un procedimiento clínico real.",
     "truncado": false,
     "tramos": 1,
     "avisos": [
-      "Refinado con capturas (gemini-3.5-flash): 13 pasos revisados en 1 petición(es), 12 con cambios (17751 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+      "Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 11 con cambios (16440 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
     ],
     "uso": {
       "modelo": "gemini-3.5-flash (+refinado)",
-      "tokens_entrada": 92533,
-      "tokens_salida": 2669,
+      "tokens_entrada": 115149,
+      "tokens_salida": 4121,
       "tokens_pensamiento": 0,
-      "tokens_total": 95202,
+      "tokens_total": 119270,
       "detalle_entrada": {
-        "VIDEO": 74851,
-        "TEXT": 3382,
-        "IMAGE": 14300
+        "VIDEO": 98420,
+        "TEXT": 3529,
+        "IMAGE": 13200
       },
-      "llamadas": 2,
+      "llamadas": 3,
       "batch": false,
       "costo_usd": null
     },
@@ -48,14 +48,14 @@
       {
         "tiempo": "00:02",
         "tiempo_seg": 2.0,
-        "titulo": "Liberar el movimiento horizontal del brazo",
-        "descripcion": "El operador muestra cómo destrabar la palanca de bloqueo para permitir el desplazamiento horizontal del arco en C hacia adelante y hacia atrás.",
+        "titulo": "Identificar movimiento de rotación horizontal",
+        "descripcion": "El instructor demuestra el movimiento de rotación horizontal del brazo en C sobre su propio eje, liberando los frenos manuales correspondientes.",
         "importancia": 3,
         "fuente": "ambos",
-        "seccion": "Posicionamiento",
+        "seccion": "Ajuste de Movimientos Mecánicos",
         "zona": {
-          "x": 0.63,
-          "y": 0.42
+          "x": 0.612,
+          "y": 0.487
         },
         "captura": "capturas/01_00-02.jpg",
         "captura_anotada": "capturas/01_00-02_anotada.jpg",
@@ -63,50 +63,51 @@
         "puntaje": null
       },
       {
-        "tiempo": "00:25",
-        "tiempo_seg": 25.0,
-        "titulo": "Bloquear la rotación del arco en C",
-        "descripcion": "Se muestra en detalle la palanca de bloqueo con el icono indicador para fijar la rotación del arco en una posición determinada.",
-        "importancia": 3,
-        "fuente": "visual",
-        "seccion": "Posicionamiento",
+        "tiempo": "00:24",
+        "tiempo_seg": 24.0,
+        "titulo": "Bloquear o liberar movimiento horizontal",
+        "descripcion": "Se señala la manilla de bloqueo del brazo para detener o liberar el movimiento de rotación horizontal del arco en C de forma segura.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Ajuste de Movimientos Mecánicos",
         "zona": {
-          "x": 0.19,
-          "y": 0.47
+          "x": 0.105,
+          "y": 0.258
         },
-        "captura": "capturas/02_00-25.jpg",
-        "captura_anotada": "capturas/02_00-25_anotada.jpg",
-        "tiempo_real_seg": 24.0,
+        "captura": "capturas/02_00-24.jpg",
+        "captura_anotada": "capturas/02_00-24_anotada.jpg",
+        "tiempo_real_seg": 23.0,
         "puntaje": null
       },
       {
-        "tiempo": "00:41",
-        "tiempo_seg": 41.0,
-        "titulo": "Ajustar la angulación para el procedimiento",
-        "descripcion": "El operador explica que, aunque generalmente no se necesita ángulo para la zona renal, se puede inclinar el arco si es requerido.",
-        "importancia": 4,
-        "fuente": "audio",
-        "seccion": "Posicionamiento",
+        "tiempo": "00:42",
+        "tiempo_seg": 42.0,
+        "titulo": "Ajustar ángulo de inclinación lateral",
+        "descripcion": "Se demuestra la liberación de los seguros mecánicos, identificando los iconos de candado abierto y cerrado grabados en la pieza, para permitir la inclinación angular del arco en C.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajuste de Movimientos Mecánicos",
         "zona": {
-          "x": 0.75,
-          "y": 0.35
+          "x": 0.516,
+          "y": 0.303
         },
-        "captura": "capturas/03_00-41.jpg",
-        "captura_anotada": "capturas/03_00-41_anotada.jpg",
-        "tiempo_real_seg": 40.0,
-        "puntaje": null
+        "captura": "capturas/03_00-42.jpg",
+        "captura_anotada": "capturas/03_00-42_anotada.jpg",
+        "tiempo_real_seg": 42.2,
+        "puntaje": null,
+        "descripcion_original": "Se demuestra la liberación de los seguros mecánicos para permitir la inclinación angular del arco en C, adaptándolo a la zona anatómica requerida."
       },
       {
         "tiempo": "00:55",
         "tiempo_seg": 55.0,
-        "titulo": "Realizar la rotación orbital del brazo",
-        "descripcion": "Se destraba el freno correspondiente para rotar orbitalmente el arco, permitiendo obtener proyecciones oblicuas o laterales.",
+        "titulo": "Ejecutar movimiento de rotación orbital",
+        "descripcion": "El operador realiza el deslizamiento orbital del brazo en C para ajustar el plano de proyección radiográfica sobre el paciente.",
         "importancia": 4,
-        "fuente": "visual",
-        "seccion": "Posicionamiento",
+        "fuente": "ambos",
+        "seccion": "Ajuste de Movimientos Mecánicos",
         "zona": {
-          "x": 0.48,
-          "y": 0.52
+          "x": 0.484,
+          "y": 0.526
         },
         "captura": "capturas/04_00-55.jpg",
         "captura_anotada": "capturas/04_00-55_anotada.jpg",
@@ -114,50 +115,48 @@
         "puntaje": null
       },
       {
-        "tiempo": "01:25",
-        "tiempo_seg": 85.0,
-        "titulo": "Verificar la disponibilidad de delantales plomados",
-        "descripcion": "Se constata la presencia de los delantales de protección radiológica en el perchero antes de dar inicio a la emisión de radiación.",
+        "tiempo": "01:23",
+        "tiempo_seg": 83.0,
+        "titulo": "Preparar equipamiento de radioprotección",
+        "descripcion": "El personal se dirige a buscar los delantales plomados antes de iniciar la emisión de radiación en el pabellón.",
         "importancia": 5,
-        "fuente": "visual",
-        "seccion": "Seguridad",
-        "zona": {
-          "x": 0.58,
-          "y": 0.25
-        },
-        "captura": "capturas/05_01-25.jpg",
-        "captura_anotada": "capturas/05_01-25_anotada.jpg",
-        "tiempo_real_seg": 85.2,
+        "fuente": "ambos",
+        "seccion": "Seguridad y Radioprotección",
+        "zona": null,
+        "captura": "capturas/05_01-23.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 82.8,
         "puntaje": null
       },
       {
         "tiempo": "01:39",
         "tiempo_seg": 99.0,
-        "titulo": "Coordinar el movimiento de la mesa",
-        "descripcion": "Se utiliza el control remoto de la mesa quirúrgica para ajustar la altura y posición del paciente en relación con el arco.",
-        "importancia": 3,
+        "titulo": "Operar control remoto de camilla",
+        "descripcion": "Se utiliza el mando de la camilla quirúrgica que contiene iconos con diferentes planos y posiciones para acomodar al paciente antes del examen.",
+        "importancia": 4,
         "fuente": "ambos",
-        "seccion": "Posicionamiento",
+        "seccion": "Posicionamiento del Paciente",
         "zona": {
-          "x": 0.69,
-          "y": 0.475
+          "x": 0.692,
+          "y": 0.476
         },
         "captura": "capturas/06_01-39.jpg",
         "captura_anotada": "capturas/06_01-39_anotada.jpg",
         "tiempo_real_seg": 98.8,
-        "puntaje": null
+        "puntaje": null,
+        "descripcion_original": "Se utiliza el mando de la camilla quirúrgica para posicionar adecuadamente la altura y orientación del paciente antes del examen."
       },
       {
         "tiempo": "01:57",
         "tiempo_seg": 117.0,
-        "titulo": "Colocar la cubierta estéril en el arco",
-        "descripcion": "Se coloca una funda plástica estéril sobre el receptor de imagen para mantener la asepsia del campo quirúrgico.",
+        "titulo": "Colocar cubierta estéril protectora",
+        "descripcion": "Se muestra la funda plástica estéril colocada sobre el receptor de imagen para proteger el campo operatorio y evitar la contaminación.",
         "importancia": 5,
         "fuente": "ambos",
-        "seccion": "Preparación",
+        "seccion": "Preparación Estéril",
         "zona": {
-          "x": 0.6,
-          "y": 0.32
+          "x": 0.63,
+          "y": 0.308
         },
         "captura": "capturas/07_01-57.jpg",
         "captura_anotada": "capturas/07_01-57_anotada.jpg",
@@ -165,109 +164,247 @@
         "puntaje": null
       },
       {
-        "tiempo": "02:11",
-        "tiempo_seg": 131.0,
-        "titulo": "Ajustar el arco con la funda colocada",
-        "descripcion": "Se realizan movimientos de prueba con el arco cubierto para asegurar que la funda no limite el rango de movimiento necesario.",
+        "tiempo": "02:10",
+        "tiempo_seg": 130.0,
+        "titulo": "Alinear arco en C con camilla",
+        "descripcion": "Se realiza el acercamiento físico del equipo para introducir el detector y el tubo de rayos X bajo y sobre la camilla respectivamente, sosteniendo la empuñadura del arco.",
         "importancia": 4,
         "fuente": "visual",
-        "seccion": "Preparación",
+        "seccion": "Posicionamiento del Paciente",
         "zona": {
-          "x": 0.8,
-          "y": 0.35
+          "x": 0.757,
+          "y": 0.331
         },
-        "captura": "capturas/08_02-11.jpg",
-        "captura_anotada": "capturas/08_02-11_anotada.jpg",
-        "tiempo_real_seg": 130.4,
-        "puntaje": null
+        "captura": "capturas/08_02-10.jpg",
+        "captura_anotada": "capturas/08_02-10_anotada.jpg",
+        "tiempo_real_seg": 130.6,
+        "puntaje": null,
+        "descripcion_original": "Se realiza el acercamiento físico del equipo para introducir el detector y el tubo de rayos X bajo y sobre la camilla respectivamente."
       },
       {
-        "tiempo": "02:32",
-        "tiempo_seg": 152.0,
-        "titulo": "Comprobar la habilitación del espacio físico",
-        "descripcion": "El operador indica la importancia de mantener despejada la zona de tránsito del arco para evitar colisiones con otros equipos; en el panel se muestra el adhesivo END9 cl-1096.",
+        "tiempo": "02:31",
+        "tiempo_seg": 151.0,
+        "titulo": "Verificar parámetros en pantalla consola",
+        "descripcion": "Se muestran los parámetros de adquisición en la consola de control, donde se lee 'END9 cl:1096' junto a los valores de exposición activos en el panel.",
+        "importancia": 4,
+        "fuente": "visual",
+        "seccion": "Adquisición de Imagen",
+        "zona": {
+          "x": 0.639,
+          "y": 0.451
+        },
+        "captura": "capturas/09_02-31.jpg",
+        "captura_anotada": "capturas/09_02-31_anotada.jpg",
+        "tiempo_real_seg": 151.6,
+        "puntaje": null,
+        "descripcion_original": "Se muestran los parámetros de adquisición en pantalla, tales como kV, mA y modo de examen preestablecido para región abdominal."
+      },
+      {
+        "tiempo": "02:41",
+        "tiempo_seg": 161.0,
+        "titulo": "Definir trayectoria de aproximación",
+        "descripcion": "Se planifica y verifica la entrada del arco en C hacia el paciente, señalando el pedal de disparo en el suelo para evitar obstáculos con los cables.",
         "importancia": 4,
         "fuente": "ambos",
-        "seccion": "Posicionamiento",
+        "seccion": "Posicionamiento del Paciente",
         "zona": {
-          "x": 0.67,
-          "y": 0.45
+          "x": 0.121,
+          "y": 0.454
         },
-        "captura": "capturas/09_02-32.jpg",
-        "captura_anotada": "capturas/09_02-32_anotada.jpg",
-        "tiempo_real_seg": 151.4,
+        "captura": "capturas/10_02-41.jpg",
+        "captura_anotada": "capturas/10_02-41_anotada.jpg",
+        "tiempo_real_seg": 160.8,
         "puntaje": null,
-        "descripcion_original": "El operador indica la importancia de mantener despejada la zona de tránsito del arco para evitar colisiones con otros equipos."
-      },
-      {
-        "tiempo": "02:48",
-        "tiempo_seg": 168.0,
-        "titulo": "Revisar los parámetros en la pantalla",
-        "descripcion": "Se observan en la pantalla de control los parámetros de examen seleccionados; se visualizan valores como 41 kV, 0.060 L 1.44 mA, modo Abdominal, 1/2 dosis, 17 cm, 3 s de velocidad de Fluoro y el identificador END9 cl-1096.",
-        "importancia": 3,
-        "fuente": "visual",
-        "seccion": "Adquisición de imagen",
-        "zona": {
-          "x": 0.78,
-          "y": 0.4
-        },
-        "captura": "capturas/10_02-48.jpg",
-        "captura_anotada": "capturas/10_02-48_anotada.jpg",
-        "tiempo_real_seg": 168.6,
-        "puntaje": null,
-        "descripcion_original": "Se observan en la pantalla de control los parámetros de examen seleccionados (modo Abdominal, dosis y cm de colimación)."
+        "descripcion_original": "Se planifica y verifica la entrada del arco en C hacia el paciente, asegurándose de evitar obstáculos con los cables de la camilla."
       },
       {
         "tiempo": "03:08",
         "tiempo_seg": 188.0,
-        "titulo": "Monitorear la inserción del catéter",
-        "descripcion": "El equipo médico visualiza en el monitor en tiempo real el avance y la posición de la punta del catéter doble J.",
+        "titulo": "Monitorear adquisición en tiempo real",
+        "descripcion": "Durante la inserción del catéter, los cirujanos controlan visualmente la posición a través del monitor del sistema de fluoroscopia.",
         "importancia": 5,
         "fuente": "ambos",
-        "seccion": "Adquisición de imagen",
-        "zona": null,
+        "seccion": "Adquisición de Imagen",
+        "zona": {
+          "x": 0.515,
+          "y": 0.158
+        },
         "captura": "capturas/11_03-08.jpg",
-        "captura_anotada": null,
+        "captura_anotada": "capturas/11_03-08_anotada.jpg",
         "tiempo_real_seg": 188.6,
         "puntaje": null
       },
       {
-        "tiempo": "03:44",
-        "tiempo_seg": 224.0,
-        "titulo": "Apagar el sistema al finalizar",
-        "descripcion": "Se presiona el botón con el icono de un círculo de apagado ubicado en la esquina superior izquierda del teclado del panel de control del arco en C, al lado del botón verde.",
+        "tiempo": "04:02",
+        "tiempo_seg": 242.0,
+        "titulo": "Desconectar cables tras finalizar procedimiento",
+        "descripcion": "Se retiran las conexiones eléctricas y de datos en la pared una vez finalizado el examen para proceder al guardado del equipo.",
         "importancia": 3,
-        "fuente": "visual",
-        "seccion": "Apagado y limpieza",
+        "fuente": "ambos",
+        "seccion": "Apagado y Desconexión",
         "zona": {
-          "x": 0.315,
-          "y": 0.425
+          "x": 0.255,
+          "y": 0.326
         },
-        "captura": "capturas/12_03-44.jpg",
-        "captura_anotada": "capturas/12_03-44_anotada.jpg",
-        "tiempo_real_seg": 224.6,
+        "captura": "capturas/12_04-02.jpg",
+        "captura_anotada": "capturas/12_04-02_anotada.jpg",
+        "tiempo_real_seg": 242.6,
         "puntaje": null,
-        "descripcion_original": "Se presiona el botón de apagado en el panel de control del arco en C una vez concluida la intervención quirúrgica."
-      },
-      {
-        "tiempo": "04:03",
-        "tiempo_seg": 243.0,
-        "titulo": "Desconectar los cables de alimentación",
-        "descripcion": "Se procede a desenchufar y enrollar cuidadosamente los cables de red y de conexión entre el arco y el carro de monitores.",
-        "importancia": 4,
-        "fuente": "visual",
-        "seccion": "Apagado y limpieza",
-        "zona": {
-          "x": 0.25,
-          "y": 0.325
-        },
-        "captura": "capturas/13_04-03.jpg",
-        "captura_anotada": "capturas/13_04-03_anotada.jpg",
-        "tiempo_real_seg": 242.8,
-        "puntaje": null
+        "descripcion_original": "Se retiran las conexiones eléctricas y de datos del arco en C una vez finalizado el examen para proceder a su guardado."
       }
     ],
-    "transcripcion": null
+    "transcripcion": [
+      {
+        "inicio": 1.0,
+        "fin": 10.0,
+        "texto": "El movimiento... como que... horizontal... o sea, ese es como el movimiento..."
+      },
+      {
+        "inicio": 10.0,
+        "fin": 12.0,
+        "texto": "Ah, ya, una rotación en torno a este eje."
+      },
+      {
+        "inicio": 12.0,
+        "fin": 23.0,
+        "texto": "...horizontal, pero sin... como un movimiento completo del tubo. Sí. Sin... o sea, sin mover... pero, como movimiento completo del arco en C, sí."
+      },
+      {
+        "inicio": 23.0,
+        "fin": 26.0,
+        "texto": "Y ese lo bloqueas con esto."
+      },
+      {
+        "inicio": 26.0,
+        "fin": 31.0,
+        "texto": "Sí. Claro."
+      },
+      {
+        "inicio": 31.0,
+        "fin": 35.0,
+        "texto": "¿Y el otro? Ah, bueno."
+      },
+      {
+        "inicio": 35.0,
+        "fin": 40.0,
+        "texto": "Claro. Súper."
+      },
+      {
+        "inicio": 40.0,
+        "fin": 50.0,
+        "texto": "Pero acá, generalmente, no tenemos ángulo. Podríamos darle un poco de ángulo... eh... acá."
+      },
+      {
+        "inicio": 50.0,
+        "fin": 56.0,
+        "texto": "Súper. Perdón, era el otro."
+      },
+      {
+        "inicio": 61.0,
+        "fin": 69.0,
+        "texto": "Si es que no pudiéramos ver una... como... si no pudiéramos ver detalladamente la bifurcación renal, tal vez podríamos un poquito angular."
+      },
+      {
+        "inicio": 69.0,
+        "fin": 79.0,
+        "texto": "Pero, generalmente, el... la cavidad abdominal, por lo menos en este caso... la zona renal, cara renal, no... no lo vamos a necesitar tanto. No."
+      },
+      {
+        "inicio": 80.0,
+        "fin": 85.0,
+        "texto": "Y, así, los delantales plomados, ahora que está todo listo."
+      },
+      {
+        "inicio": 85.0,
+        "fin": 88.0,
+        "texto": "Están acá."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 91.0,
+        "texto": "Aquí se ponen... lo que hay de insumo para ahí."
+      },
+      {
+        "inicio": 98.0,
+        "fin": 102.0,
+        "texto": "Si es que... si es que se empuja el arco, la otra cámara."
+      },
+      {
+        "inicio": 103.0,
+        "fin": 107.0,
+        "texto": "Entonces, se desplaza... se desplaza así. Se aprieta y se desplaza a la vez. Súper."
+      },
+      {
+        "inicio": 107.0,
+        "fin": 113.0,
+        "texto": "¿Se aprieta de allá? Ya. Se desplaza de allá porque... las de... las de otras son automáticas. Sí, son automáticas."
+      },
+      {
+        "inicio": 114.0,
+        "fin": 123.0,
+        "texto": "Entonces, la fonoaudióloga le puso esto para proteger y está estéril. Y tú le pusiste acá este papelito para que no se sobe... para que no se... No."
+      },
+      {
+        "inicio": 129.0,
+        "fin": 134.0,
+        "texto": "¿Y, Pancho, y este doblez lo hace adrede de algo?"
+      },
+      {
+        "inicio": 134.0,
+        "fin": 137.0,
+        "texto": "¿Mmm? ¿Cómo? ¿Cuál?"
+      },
+      {
+        "inicio": 137.0,
+        "fin": 142.0,
+        "texto": "Ese doblez que le hace acá... ese es un doblez. ¿Mmm? ¿Sí? ¿Es por algo o es... lo hizo...?"
+      },
+      {
+        "inicio": 142.0,
+        "fin": 148.0,
+        "texto": "No, no, no, para acomodarlo más. Ah, listo. No, para que pueda caber en el espacio de allá. Ya, súper."
+      },
+      {
+        "inicio": 148.0,
+        "fin": 155.0,
+        "texto": "Están explicando que hay que entrar por acá como para que tengan habilitado el espacio, sí. Ah, ya."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 157.0,
+        "texto": "O sea..."
+      },
+      {
+        "inicio": 159.0,
+        "fin": 167.0,
+        "texto": "Acá, sí. Se va a entrar por acá, con el... con esto. Se va a entrar directo así o... No."
+      },
+      {
+        "inicio": 187.0,
+        "fin": 190.0,
+        "texto": "¿Esa cámara está en la punta de ese catéter?"
+      },
+      {
+        "inicio": 190.0,
+        "fin": 192.0,
+        "texto": "Sí. Ah, ya."
+      },
+      {
+        "inicio": 211.0,
+        "fin": 212.0,
+        "texto": "Entonces, la de abajo..."
+      },
+      {
+        "inicio": 237.0,
+        "fin": 242.0,
+        "texto": "Listo. ¿Y la otra está acá nomás? Sí."
+      },
+      {
+        "inicio": 242.0,
+        "fin": 246.0,
+        "texto": "¿La de abajo está aquí? Sí, la desconecto."
+      }
+    ]
   },
   "documentos": {
     "docx": "Capacitacion_arco_en_C.docx",
@@ -276,16 +413,16 @@
   },
   "uso_acumulado": {
     "modelo": "gemini-3.5-flash (+refinado)",
-    "tokens_entrada": 127793,
-    "tokens_salida": 4418,
+    "tokens_entrada": 242942,
+    "tokens_salida": 8539,
     "tokens_pensamiento": 1638,
-    "tokens_total": 133849,
+    "tokens_total": 253119,
     "detalle_entrada": {
-      "TEXT": 6273,
-      "VIDEO": 98420,
-      "IMAGE": 23100
+      "TEXT": 9802,
+      "VIDEO": 196840,
+      "IMAGE": 36300
     },
-    "llamadas": 4,
+    "llamadas": 7,
     "batch": false,
     "costo_usd": null
   }
