@@ -1,0 +1,47 @@
+16:51:35 === TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov: 18:43, 1920x1080, 59.97 fps, 1779 MB -> salida/TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion
+16:51:35 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:51:35   TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:51:35   transcodificando TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov -> TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:52:13       9 % (01:42 de 18:43)
+16:52:51      19 % (03:34 de 18:43)
+16:53:30      29 % (05:28 de 18:43)
+16:54:10      39 % (07:20 de 18:43)
+16:54:51      49 % (09:13 de 18:43)
+16:55:32      59 % (11:06 de 18:43)
+16:56:13      69 % (12:58 de 18:43)
+16:56:56      79 % (14:52 de 18:43)
+16:57:36      90 % (16:46 de 18:43)
+16:58:14     100 % (18:42 de 18:43)
+16:58:14   copia ligera lista: 63.6 MB
+16:58:14 Subiendo TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion_subida.mp4 (66.7 MB, video/mp4) a la Files API…
+16:58:18 Subido como files/m2vpis43pkcl; esperando a que Gemini lo procese…
+16:59:00 Archivo files/m2vpis43pkcl listo (ACTIVE).
+16:59:00 Analizando TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 1/4: 00:00–04:00) (resolución alta)…
+16:59:18   10 momentos brutos, 72722 tokens.
+16:59:18 Analizando TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 2/4: 04:00–08:00) (resolución alta)…
+16:59:32   9 momentos brutos, 71671 tokens.
+16:59:32 Analizando TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 3/4: 08:00–12:00) (resolución alta)…
+16:59:49   9 momentos brutos, 71733 tokens.
+16:59:49 Analizando TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 4/4: 12:00–18:43) (resolución alta)…
+17:00:07   5 momentos brutos, 118477 tokens.
+17:00:07 Análisis terminado: 33 momentos.
+17:00:07 Transcribiendo el audio de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 1/4)…
+17:00:17 Transcribiendo el audio de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 2/4)…
+17:04:14 Transcribiendo el audio de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 3/4)…
+17:04:36 Transcribiendo el audio de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion con gemini-3.5-flash (tramo 4/4)…
+17:05:41 Transcripción: 225 segmentos, 115430 tokens.
+17:05:42 Archivo remoto files/m2vpis43pkcl eliminado.
+17:05:42 momentos.json guardado (33 momentos).
+17:05:42 Extrayendo 33 capturas de TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov…
+17:05:53   10/33 capturas
+17:06:05   20/33 capturas
+17:06:16   30/33 capturas
+17:06:19 Capturas: 33 extraídas, 0 fallidas
+17:06:19 Refinando títulos y descripciones con 33 capturas en alta resolución (gemini-3.5-flash)…
+17:06:19 Refinando con gemini-3.5-flash los textos de 33 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+17:06:20 Aviso: No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original.
+17:06:23 Anotaciones: 17 capturas con círculo/flecha.
+17:06:23   documentos: 33 pasos, 4 por página (A4 horizontal 2x2)
+17:06:24   docx: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx
+17:06:26   pdf: TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf (19 páginas)
+17:06:26 Listo en 14 min 51 s: 33 momentos, 19 páginas -> TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx, TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf

@@ -1,0 +1,1181 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.mov",
+    "nombre": "TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos",
+    "duracion_seg": 834.23,
+    "duracion": "13:54",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 1385438779,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:26:26",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Manual de Procesamiento 3D en Tomógrafo Canon",
+    "resumen": "Este manual describe los pasos clave para el procesamiento de imágenes 3D y segmentación anatómica utilizando la interfaz del tomógrafo computado Canon. Se detallan funciones como la remoción de hueso, segmentación manual, guardado de modelos 3D y creación de animaciones de rotación para uso de diagnóstico.",
+    "truncado": false,
+    "tramos": 3,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 361455,
+      "tokens_salida": 13973,
+      "tokens_pensamiento": 0,
+      "tokens_total": 375428,
+      "detalle_entrada": {
+        "VIDEO": 316920,
+        "TEXT": 10435,
+        "IMAGE": 34100
+      },
+      "llamadas": 9,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Cambiar plano de visualización",
+        "descripcion": "Se selecciona la orientación anteroposterior con los botones del panel de orientación ShadedVol (A, P, R, L, H, F) para alinear y visualizar automáticamente el modelo en diferentes planos.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Navegación y Planos",
+        "zona": {
+          "x": 0.161,
+          "y": 0.558
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 2.4,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona la orientación anteroposterior en el panel para alinear y visualizar automáticamente el modelo en diferentes planos."
+      },
+      {
+        "tiempo": "00:10",
+        "tiempo_seg": 10.0,
+        "titulo": "Remover hueso por sección anatómica",
+        "descripcion": "Se presiona 'Bone Removal' (en la pestaña 1, 2, 3) para eliminar selectivamente estructuras óseas por regiones como tórax, abdomen o corazón de forma automática, mostrando la guía 'Select the automatic bone removal button'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.147,
+          "y": 0.597
+        },
+        "captura": "capturas/02_00-10.jpg",
+        "captura_anotada": "capturas/02_00-10_anotada.jpg",
+        "tiempo_real_seg": 10.6,
+        "puntaje": null,
+        "descripcion_original": "Se presiona 'Bone Removal' para eliminar selectivamente estructuras óseas por regiones como tórax, abdomen o corazón de forma automática."
+      },
+      {
+        "tiempo": "00:20",
+        "tiempo_seg": 20.0,
+        "titulo": "Segmentar hueso completo",
+        "descripcion": "Se presiona la herramienta 'Seed All' bajo la pestaña de Segmentation para seleccionar y resaltar automáticamente todas las estructuras óseas en el volumen visualizado.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.12,
+          "y": 0.547
+        },
+        "captura": "capturas/03_00-20.jpg",
+        "captura_anotada": "capturas/03_00-20_anotada.jpg",
+        "tiempo_real_seg": 19.4,
+        "puntaje": null,
+        "descripcion_original": "Se presiona la herramienta 'Seed All' para seleccionar y resaltar automáticamente todas las estructuras óseas en el volumen visualizado."
+      },
+      {
+        "tiempo": "00:26",
+        "tiempo_seg": 26.0,
+        "titulo": "Aplicar recorte de plano trasero",
+        "descripcion": "Se activa la herramienta 'Trim (-)' en la barra de Segmentation para recortar y eliminar las estructuras no deseadas situadas detrás de la zona de interés seleccionada.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.178,
+          "y": 0.589
+        },
+        "captura": "capturas/04_00-26.jpg",
+        "captura_anotada": "capturas/04_00-26_anotada.jpg",
+        "tiempo_real_seg": 25.0,
+        "puntaje": null,
+        "descripcion_original": "Se activa la herramienta 'Trim (-)' para recortar y eliminar las estructuras no deseadas situadas detrás de la zona de interés seleccionada."
+      },
+      {
+        "tiempo": "00:52",
+        "tiempo_seg": 52.0,
+        "titulo": "Dilatar la selección anatómica",
+        "descripcion": "Se utiliza la herramienta 'Dilate' en el menú de Segmentation para expandir la selección ósea en uno o más píxeles (vóxeles). Se recomienda dilatar 2 o 3 veces para asegurar una selección completa.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.158,
+          "y": 0.687
+        },
+        "captura": "capturas/05_00-52.jpg",
+        "captura_anotada": "capturas/05_00-52_anotada.jpg",
+        "tiempo_real_seg": 51.0,
+        "puntaje": null,
+        "descripcion_original": "Se utiliza la herramienta 'Dilate' para expandir la selección ósea en uno o más píxeles (vóxeles). Se recomienda dilatar 2 o 3 veces para asegurar una selección completa."
+      },
+      {
+        "tiempo": "01:00",
+        "tiempo_seg": 60.0,
+        "titulo": "Contraer la selección anatómica",
+        "descripcion": "Se presiona 'Erode' en el menú de Segmentation para contraer o reducir la selección de píxeles o vóxeles de la estructura seleccionada.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.11,
+          "y": 0.685
+        },
+        "captura": "capturas/06_01-00.jpg",
+        "captura_anotada": "capturas/06_01-00_anotada.jpg",
+        "tiempo_real_seg": 59.8,
+        "puntaje": null,
+        "descripcion_original": "Se presiona 'Erode' para contraer o reducir la selección de píxeles/vóxeles de la estructura seleccionada."
+      },
+      {
+        "tiempo": "01:12",
+        "tiempo_seg": 72.0,
+        "titulo": "Mantener solo la estructura seleccionada",
+        "descripcion": "Se presiona el botón 'Keep' de la barra lateral de Segmentation para conservar de forma exclusiva el hueso o tejido seleccionado y eliminar el resto del fondo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.111,
+          "y": 0.741
+        },
+        "captura": "capturas/07_01-12.jpg",
+        "captura_anotada": "capturas/07_01-12_anotada.jpg",
+        "tiempo_real_seg": 71.0,
+        "puntaje": null,
+        "descripcion_original": "Se presiona el botón 'Keep' para conservar de forma exclusiva el hueso o tejido seleccionado y eliminar el resto del fondo."
+      },
+      {
+        "tiempo": "01:17",
+        "tiempo_seg": 77.0,
+        "titulo": "Guardar el modelo procesado",
+        "descripcion": "Se hace clic en 'Save Model' en el menú lateral derecho bajo los presets de Aquilion Exceed LB para registrar el modelo segmentado actual y evitar la pérdida del progreso realizado.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.551,
+          "y": 0.639
+        },
+        "captura": "capturas/08_01-17.jpg",
+        "captura_anotada": "capturas/08_01-17_anotada.jpg",
+        "tiempo_real_seg": 77.6,
+        "puntaje": null,
+        "descripcion_original": "Se hace clic en 'Save Model' para registrar el modelo segmentado actual y evitar la pérdida del progreso realizado."
+      },
+      {
+        "tiempo": "01:33",
+        "tiempo_seg": 93.0,
+        "titulo": "Remover la camilla con Clipping",
+        "descripcion": "Se selecciona la herramienta 'Clipping' en el menú de utilidades para cortar y remover rápidamente la camilla u otros objetos periféricos de la imagen.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Navegación y Planos",
+        "zona": {
+          "x": 0.223,
+          "y": 0.597
+        },
+        "captura": "capturas/09_01-33.jpg",
+        "captura_anotada": "capturas/09_01-33_anotada.jpg",
+        "tiempo_real_seg": 93.6,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona 'Clipping' en los planos ortogonales para cortar y remover rápidamente la camilla u otros objetos periféricos de la imagen."
+      },
+      {
+        "tiempo": "02:14",
+        "tiempo_seg": 134.0,
+        "titulo": "Segmentar prótesis metálicas",
+        "descripcion": "Se utiliza el scroll lateral de los presets guardados para ubicar y seleccionar el modelo segmentado de la prótesis de alta densidad.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.481,
+          "y": 0.699
+        },
+        "captura": "capturas/10_02-14.jpg",
+        "captura_anotada": "capturas/10_02-14_anotada.jpg",
+        "tiempo_real_seg": 133.8,
+        "puntaje": null,
+        "descripcion_original": "Al hacer clic en la opción de prótesis ('PR'), el sistema segmenta automáticamente los implantes de alta densidad."
+      },
+      {
+        "tiempo": "02:24",
+        "tiempo_seg": 144.0,
+        "titulo": "Combinar modelos segmentados",
+        "descripcion": "Se utiliza el botón '+' ubicado debajo de las casillas de los presets para fusionar diferentes modelos guardados, como el hueso difuminado y la prótesis segmentada.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.371,
+          "y": 0.729
+        },
+        "captura": "capturas/11_02-24.jpg",
+        "captura_anotada": "capturas/11_02-24_anotada.jpg",
+        "tiempo_real_seg": 143.0,
+        "puntaje": null,
+        "descripcion_original": "Se utiliza el botón '+' en los presets para fusionar diferentes modelos guardados, como el hueso difuminado y la prótesis segmentada."
+      },
+      {
+        "tiempo": "02:40",
+        "tiempo_seg": 160.0,
+        "titulo": "Configurar rotación 3D para exportar",
+        "descripcion": "Se ingresa a 'Key Frame Movie' en el menú de utilidades de la izquierda para configurar la cantidad de imágenes de la animación de rotación 3D y previsualizar el giro.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Exportación y Medidas",
+        "zona": {
+          "x": 0.15,
+          "y": 0.748
+        },
+        "captura": "capturas/12_02-40.jpg",
+        "captura_anotada": "capturas/12_02-40_anotada.jpg",
+        "tiempo_real_seg": 159.4,
+        "puntaje": null,
+        "descripcion_original": "Se ingresa a 'Key Frame Movie' para configurar la cantidad de imágenes de la animación de rotación 3D y previsualizar el giro."
+      },
+      {
+        "tiempo": "03:07",
+        "tiempo_seg": 187.0,
+        "titulo": "Ajustar ángulos de giro",
+        "descripcion": "Se seleccionan los grados del giro (por ejemplo, '180.0 deg' o '300.0 deg', u 'other' en pantalla se observa seleccionado '300.0 deg') y el sentido de rotación antes de exportar el video.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Exportación y Medidas",
+        "zona": {
+          "x": 0.119,
+          "y": 0.711
+        },
+        "captura": "capturas/13_03-07.jpg",
+        "captura_anotada": "capturas/13_03-07_anotada.jpg",
+        "tiempo_real_seg": 186.4,
+        "puntaje": null,
+        "descripcion_original": "Se seleccionan los grados del giro (por ejemplo, 180 o 360 grados) y el sentido de rotación antes de exportar el video."
+      },
+      {
+        "tiempo": "03:22",
+        "tiempo_seg": 202.0,
+        "titulo": "Acceder a herramientas de medición",
+        "descripcion": "Se presiona 'Measure' en la barra lateral izquierda para abrir la paleta que permite realizar mediciones lineales, trazar reglas y calcular áreas en el modelo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Exportación y Medidas",
+        "zona": {
+          "x": 0.148,
+          "y": 0.643
+        },
+        "captura": "capturas/14_03-22.jpg",
+        "captura_anotada": "capturas/14_03-22_anotada.jpg",
+        "tiempo_real_seg": 201.0,
+        "puntaje": null,
+        "descripcion_original": "Se presiona 'Measure' para abrir la paleta que permite realizar mediciones lineales, trazar reglas y calcular áreas en el modelo."
+      },
+      {
+        "tiempo": "03:27",
+        "tiempo_seg": 207.0,
+        "titulo": "Agregar anotaciones y marcadores",
+        "descripcion": "Se selecciona 'Annotation' en la barra lateral para colocar flechas, texto o etiquetas identificativas directamente sobre hallazgos clínicos importantes.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Exportación y Medidas",
+        "zona": {
+          "x": 0.194,
+          "y": 0.725
+        },
+        "captura": "capturas/15_03-27.jpg",
+        "captura_anotada": "capturas/15_03-27_anotada.jpg",
+        "tiempo_real_seg": 206.4,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona 'Annotation' para colocar flechas, texto o etiquetas identificativas directamente sobre hallazgos clínicos importantes."
+      },
+      {
+        "tiempo": "03:42",
+        "tiempo_seg": 222.0,
+        "titulo": "Cortar manualmente con Cutting",
+        "descripcion": "Se activa la herramienta 'Cutting' para dibujar a mano alzada una línea de corte cerrada y eliminar estructuras mediante 'Cutout'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Segmentación y Remoción",
+        "zona": {
+          "x": 0.195,
+          "y": 0.558
+        },
+        "captura": "capturas/16_03-42.jpg",
+        "captura_anotada": "capturas/16_03-42_anotada.jpg",
+        "tiempo_real_seg": 222.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:53",
+        "tiempo_seg": 293.0,
+        "titulo": "Seleccionar el grosor de corte de escaneo",
+        "descripcion": "El instructor muestra la pestaña 'Scan Details' y detalla que para cerebro se utiliza un espesor de 0,5 x 40, mientras que para el resto del cuerpo el estándar es de 0,5 x 80.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de parámetros",
+        "zona": {
+          "x": 0.673,
+          "y": 0.185
+        },
+        "captura": "capturas/17_04-53.jpg",
+        "captura_anotada": "capturas/17_04-53_anotada.jpg",
+        "tiempo_real_seg": 292.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:21",
+        "tiempo_seg": 321.0,
+        "titulo": "Ajustar valores de kV, mA y rotación",
+        "descripcion": "Se visualizan en pantalla los campos para ajustar el kilovoltaje (kV 120), el amperaje (mA 150) y el tiempo de rotación (Rot. Time 1.5 s).",
+        "importancia": 4,
+        "fuente": "visual",
+        "seccion": "Configuración de parámetros",
+        "zona": {
+          "x": 0.605,
+          "y": 0.625
+        },
+        "captura": "capturas/18_05-21.jpg",
+        "captura_anotada": "capturas/18_05-21_anotada.jpg",
+        "tiempo_real_seg": 321.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:43",
+        "tiempo_seg": 343.0,
+        "titulo": "Verificar tiempo mínimo de rotación",
+        "descripcion": "El instructor abre el menú desplegable de 'Rot. Time' revelando que el tiempo mínimo de rotación disponible en el equipo para la adquisición de la imagen es de 0,4 segundos.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de parámetros",
+        "zona": {
+          "x": 0.589,
+          "y": 0.724
+        },
+        "captura": "capturas/19_05-43.jpg",
+        "captura_anotada": "capturas/19_05-43_anotada.jpg",
+        "tiempo_real_seg": 342.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "06:08",
+        "tiempo_seg": 368.0,
+        "titulo": "Configurar los detalles de reconstrucción",
+        "descripcion": "En la pestaña 'Recon. Details' se configuran los parámetros de reconstrucción para cortes axiales gruesos automáticos, donde se definen el grosor de corte ('Slice Thickness') y el intervalo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.504,
+          "y": 0.521
+        },
+        "captura": "capturas/20_06-08.jpg",
+        "captura_anotada": "capturas/20_06-08_anotada.jpg",
+        "tiempo_real_seg": 368.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "06:47",
+        "tiempo_seg": 407.0,
+        "titulo": "Explicación de la tecnología de reconstrucción AICE",
+        "descripcion": "Se describe el funcionamiento de la reconstrucción con inteligencia artificial de aprendizaje profundo AICE, diseñada para optimizar la relación señal/ruido permitiendo reducir las dosis.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.371,
+          "y": 0.662
+        },
+        "captura": "capturas/21_06-47.jpg",
+        "captura_anotada": "capturas/21_06-47_anotada.jpg",
+        "tiempo_real_seg": 406.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:03",
+        "tiempo_seg": 483.0,
+        "titulo": "Configurar filtro de reconstrucción con inteligencia artificial",
+        "descripcion": "Se selecciona el protocolo 'RTP AICE' con reconstrucción mediante inteligencia artificial para obtener la máxima calidad de detalle en la imagen.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.451,
+          "y": 0.546
+        },
+        "captura": "capturas/22_08-03.jpg",
+        "captura_anotada": "capturas/22_08-03_anotada.jpg",
+        "tiempo_real_seg": 482.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:15",
+        "tiempo_seg": 495.0,
+        "titulo": "Considerar tasa de reconstrucción de imagen",
+        "descripcion": "La reconstrucción avanzada con inteligencia artificial procesa a una velocidad de 15 imágenes por segundo, siendo más lenta que otros métodos.",
+        "importancia": 2,
+        "fuente": "audio",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.49,
+          "y": 0.671
+        },
+        "captura": "capturas/23_08-15.jpg",
+        "captura_anotada": "capturas/23_08-15_anotada.jpg",
+        "tiempo_real_seg": 495.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:26",
+        "tiempo_seg": 506.0,
+        "titulo": "Seleccionar método de reconstrucción iterativa",
+        "descripcion": "Al seleccionar la reconstrucción iterativa estándar en volumen ('Cuerpo Std. Volume'), la velocidad de procesamiento aumenta a 50 imágenes por segundo.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.465,
+          "y": 0.635
+        },
+        "captura": "capturas/24_08-26.jpg",
+        "captura_anotada": "capturas/24_08-26_anotada.jpg",
+        "tiempo_real_seg": 505.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:41",
+        "tiempo_seg": 521.0,
+        "titulo": "Verificar parámetros fijos en simulación",
+        "descripcion": "Para radioterapia, los parámetros de adquisición (kV 120, mA 150) son fijos, por lo que cambiar el tipo de reconstrucción no altera la dosis, solo el detalle de imagen.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.515,
+          "y": 0.625
+        },
+        "captura": "capturas/25_08-41.jpg",
+        "captura_anotada": "capturas/25_08-41_anotada.jpg",
+        "tiempo_real_seg": 521.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:14",
+        "tiempo_seg": 554.0,
+        "titulo": "Comprender la reducción de dosis teórica",
+        "descripcion": "El uso de reconstrucción iterativa permite reducir teóricamente la dosis hasta un 75%, y con tecnología 'AICE' (inteligencia artificial) hasta un 82%.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.418,
+          "y": 0.692
+        },
+        "captura": "capturas/26_09-14.jpg",
+        "captura_anotada": "capturas/26_09-14_anotada.jpg",
+        "tiempo_real_seg": 553.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "10:00",
+        "tiempo_seg": 600.0,
+        "titulo": "Ajustar la modulación según la anatomía",
+        "descripcion": "Se recomienda usar modulación 'Calidad' para pacientes con abdomen prominente y 'Alta Calidad' para pacientes obesos, asegurando la energía óptima de escaneo.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.339,
+          "y": 0.745
+        },
+        "captura": "capturas/27_10-00.jpg",
+        "captura_anotada": "capturas/27_10-00_anotada.jpg",
+        "tiempo_real_seg": 600.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:32",
+        "tiempo_seg": 692.0,
+        "titulo": "Habilitar múltiples volúmenes de reconstrucción",
+        "descripcion": "El sistema permite preconfigurar hasta 7 volúmenes de reconstrucción diferentes dentro de un mismo protocolo de adquisición.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.621,
+          "y": 0.554
+        },
+        "captura": "capturas/28_11-32.jpg",
+        "captura_anotada": "capturas/28_11-32_anotada.jpg",
+        "tiempo_real_seg": 691.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:47",
+        "tiempo_seg": 707.0,
+        "titulo": "Configurar reconstrucciones multiplanares automáticas",
+        "descripcion": "Bajo la pestaña 'Multi View', se asocian cortes axiales, coronales y sagitales automáticos (por ejemplo, grosor de 2,0 mm e intervalo de 2,0 mm) a cada volumen.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.46,
+          "y": 0.625
+        },
+        "captura": "capturas/29_11-47.jpg",
+        "captura_anotada": "capturas/29_11-47_anotada.jpg",
+        "tiempo_real_seg": 706.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "12:33",
+        "tiempo_seg": 753.0,
+        "titulo": "Programar transferencia automática al PACS",
+        "descripcion": "Se activa la opción 'Transfer' para que las imágenes reconstruidas se envíen de manera automática al sistema PACS una vez finalizado el estudio.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.382,
+          "y": 0.782
+        },
+        "captura": "capturas/30_12-33.jpg",
+        "captura_anotada": "capturas/30_12-33_anotada.jpg",
+        "tiempo_real_seg": 752.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "13:12",
+        "tiempo_seg": 792.0,
+        "titulo": "Copiar un protocolo existente",
+        "descripcion": "Para duplicar o guardar un protocolo modificado, seleccione el protocolo deseado y haga clic en el botón 'Copy' en el menú lateral derecho para iniciar el proceso de edición.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de reconstrucción",
+        "zona": {
+          "x": 0.718,
+          "y": 0.254
+        },
+        "captura": "capturas/31_13-12.jpg",
+        "captura_anotada": "capturas/31_13-12_anotada.jpg",
+        "tiempo_real_seg": 792.2,
+        "puntaje": null,
+        "titulo_original": "Crear y guardar un nuevo protocolo",
+        "descripcion_original": "Para guardar un protocolo modificado, se copia un protocolo existente, se edita su nombre y parámetros, y se presiona el botón 'Save' en la barra inferior."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 10.0,
+        "texto": "Eh... por ejemplo, anteroposterior para tener los distintos planos automáticos, ¿cierto? Las rotaciones por ángulo, si es que lo quieren ver."
+      },
+      {
+        "inicio": 10.0,
+        "fin": 18.0,
+        "texto": "El bone removal, bueno, para sacar hueso por sección anatómica. Lo hace automático, se pueden dar, eh, ventanas."
+      },
+      {
+        "inicio": 18.0,
+        "fin": 25.0,
+        "texto": "Eh... para hacer segmentaciones, por ejemplo el seed all, que toma todo el hueso."
+      },
+      {
+        "inicio": 25.0,
+        "fin": 32.0,
+        "texto": "Y trim lo de atrás. Entonces ahí, como ya quedó todo en automático de trim, entonces quiero sacarle lo de atrás."
+      },
+      {
+        "inicio": 32.0,
+        "fin": 40.0,
+        "texto": "Y ¿cómo sabía cuál era el hueso? El all, porque ahí quedó de referencia. Entonces, seed all todo, trim lo de atrás."
+      },
+      {
+        "inicio": 40.0,
+        "fin": 50.0,
+        "texto": "Y luego dilatar, que quiere decir, por ejemplo... ah, puedo sacar eso también."
+      },
+      {
+        "inicio": 50.0,
+        "fin": 58.0,
+        "texto": "Puedo dilatar, que quiere decir que dilato en un voxel la selección o en un pixel. Siempre recomiendan dilatar dos o tres veces."
+      },
+      {
+        "inicio": 58.0,
+        "fin": 62.0,
+        "texto": "Y erode, lo contrario, contraer."
+      },
+      {
+        "inicio": 62.0,
+        "fin": 73.0,
+        "texto": "Entonces ahora yo le puedo decir: borra lo seleccionado y mantén lo de afuera, que en este caso no, o mantén la selección y borra lo otro. Por ejemplo, keep, y ahí yo me quedo con el hueso."
+      },
+      {
+        "inicio": 73.0,
+        "fin": 81.0,
+        "texto": "Y esto es... guardar modo, modelo. Entonces ahí yo lo guardo, porque si no después lo pierdo. Aquí está."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 91.0,
+        "texto": "Entonces, por ejemplo, eh... voy a cerrar y voy a la... a este. Imaginemos que aquí hubiera una angio, por ejemplo, de la misma forma."
+      },
+      {
+        "inicio": 91.0,
+        "fin": 99.0,
+        "texto": "Está clipping. Esto también sirve, al apretar clipping se van ahí a los planos ortogonales, por ejemplo, y yo saco la camilla de acá."
+      },
+      {
+        "inicio": 99.0,
+        "fin": 105.0,
+        "texto": "Corte. O si quiero por ejemplo, no sé, quiero trabajar solo con la columna y eliminan el resto."
+      },
+      {
+        "inicio": 105.0,
+        "fin": 114.0,
+        "texto": "Y si no, por ejemplo, eh..."
+      },
+      {
+        "inicio": 114.0,
+        "fin": 120.0,
+        "texto": "Ahí está, reset. Le puedo agregar una para acá. Voy a ir"
+      },
+      {
+        "inicio": 120.0,
+        "fin": 128.0,
+        "texto": "Entonces, eh... por segmentación de la misma forma puedo segmentar solo la aorta. Después guardo el modelo y va a estar aquí."
+      },
+      {
+        "inicio": 128.0,
+        "fin": 137.0,
+        "texto": "Entonces después voy acá, le puedo poner, por ejemplo, hueso difuminado, que tengo varias otras... por ejemplo, si hay prótesis, hago clic e inmediatamente se aumenta la prótesis."
+      },
+      {
+        "inicio": 137.0,
+        "fin": 149.0,
+        "texto": "Guardo el modelo y dejo la prótesis acá y en otro dejo el hueso difuminado. O sea, a lo que voy, después ustedes le hacen más y le va a sumar aquí la prótesis al hueso difuminado y la prótesis acá."
+      },
+      {
+        "inicio": 149.0,
+        "fin": 157.0,
+        "texto": "O si fuera aquí la angio, le suman el hueso difuminado más la angio. Entonces, y se ve la aorta, por ejemplo, ahí bonita."
+      },
+      {
+        "inicio": 157.0,
+        "fin": 165.0,
+        "texto": "Luego voy acá en key frame movie, y digo ya... ¿cuántas imágenes en este sentido, por ejemplo?"
+      },
+      {
+        "inicio": 165.0,
+        "fin": 173.0,
+        "texto": "Eh, bueno, estos detalles se los pueden saltar, pero aquí le pueden poner un nombre y guardar."
+      },
+      {
+        "inicio": 173.0,
+        "fin": 184.0,
+        "texto": "En este caso, no sé, voy a poner el preview. Que es como ver el preview, pero ahí va, va haciendo el giro. Esto lo pueden guardar y enviar."
+      },
+      {
+        "inicio": 184.0,
+        "fin": 189.0,
+        "texto": "Esto lo voy a cerrar. ¿Cómo yo puedo seleccionar la cantidad de imágenes que... Acá. Ahí pones 36."
+      },
+      {
+        "inicio": 189.0,
+        "fin": 199.0,
+        "texto": "Sí, y la, el... ¿Solamente puedo...? u otro grado, otro en particular que ustedes quieran o los 360 y el sentido."
+      },
+      {
+        "inicio": 199.0,
+        "fin": 209.0,
+        "texto": "Eh... Bueno, esto es para hacer mediciones, ¿cierto? Regla, cálculos, etcétera, poner anotaciones, una letra, una flecha, por ejemplo un hallazgo."
+      },
+      {
+        "inicio": 209.0,
+        "fin": 221.0,
+        "texto": "Eh..."
+      },
+      {
+        "inicio": 221.0,
+        "fin": 228.0,
+        "texto": "Bueno, el cutting, que es el típico el que uno va cortando, ¿cierto? Y con el clic secundario se cierra."
+      },
+      {
+        "inicio": 228.0,
+        "fin": 240.0,
+        "texto": "Puede ser cerrado o abierto, y también, eh... cut out, o sea, borrar lo que está afuera o dejar lo que está adentro. Eh, para guardar el"
+      },
+      {
+        "inicio": 480.0,
+        "fin": 484.0,
+        "texto": "un pantallazo, un snapshot, o también guardar la imagen."
+      },
+      {
+        "inicio": 484.0,
+        "fin": 492.0,
+        "texto": "Esto es para ya entrar en el sinograma cuando quieren ver los colores, pero yo creo que esto es ya cuando van a hacer un proceso de imagen más que de acá."
+      },
+      {
+        "inicio": 492.0,
+        "fin": 497.0,
+        "texto": "Reset, y volver a la alta visualización."
+      },
+      {
+        "inicio": 497.0,
+        "fin": 507.0,
+        "texto": "Acá también está, por ejemplo, que me habían dicho que necesitaban acá, este, para calcular volumen, aquí está la herramienta."
+      },
+      {
+        "inicio": 507.0,
+        "fin": 516.0,
+        "texto": "Y, bueno, eso es lo que más se usa, porque hay un montón de cosas. Este equipo tiene iterativa, ¿o no?"
+      },
+      {
+        "inicio": 516.0,
+        "fin": 519.0,
+        "texto": "Sí, el cómo se llama, ¿no? Sí."
+      },
+      {
+        "inicio": 519.0,
+        "fin": 534.0,
+        "texto": "Entonces, ¿quieres reconstruir? Ya, vamos a simular, voy a entrar de la Tools, Protocol, Scan Plan, digamos que el cerebro, ¿ya?"
+      },
+      {
+        "inicio": 534.0,
+        "fin": 542.0,
+        "texto": "Como que si tuviéramos nuestro protocolo, aquí está el dictar los comentarios, ¿cierto? Las instrucciones verbales."
+      },
+      {
+        "inicio": 542.0,
+        "fin": 551.0,
+        "texto": "De aquí, cómo va a ser adquirido, Scan Detail, por ejemplo, en cerebro es la única que se ocupa de 0.5 x 40, y el pitch."
+      },
+      {
+        "inicio": 551.0,
+        "fin": 562.0,
+        "texto": "Detallado para cerebro. Pero para otros siempre va a ser 0.5 x 80 el resto del cuerpo y, seguramente, Standard."
+      },
+      {
+        "inicio": 562.0,
+        "fin": 579.0,
+        "texto": "Fast, por ejemplo, en la TE, para el abdomen yo creo que no hay arteria pulmonar. Kilovoltaje, mA, si fuera con modulación de dosis, aquí usted elige."
+      },
+      {
+        "inicio": 579.0,
+        "fin": 584.0,
+        "texto": "Pero es una de las diferentes, el FOV, el tiempo de rotación."
+      },
+      {
+        "inicio": 584.0,
+        "fin": 595.0,
+        "texto": "Y acá les dice el tiempo total de que va a tomar el examen en base a la planificación, esto va a cambiar. ¿Cuánto es el tiempo mínimo de rotación del equipo? Este es de 0.4."
+      },
+      {
+        "inicio": 595.0,
+        "fin": 607.0,
+        "texto": "Este equipo podría hacer cardio-CT si quisiera, se compra la opción cardiológica, el monitor ECG para sincronizar, y puede hacer un buen cardio-CT."
+      },
+      {
+        "inicio": 607.0,
+        "fin": 617.0,
+        "texto": "Y ese 0.26, ¿no se puede ocupar? No, esos son los tiempos parciales, cuando está en cardio y el half time lo saca de ahí."
+      },
+      {
+        "inicio": 617.0,
+        "fin": 625.0,
+        "texto": "Por eso no está habilitado, porque este es el tiempo real para ustedes poder adquirir."
+      },
+      {
+        "inicio": 625.0,
+        "fin": 634.0,
+        "texto": "Y acá es donde vamos a la recon, entonces aquí tiene los axiales para sacar cortes gruesos, ¿cierto? Inmediatamente automático."
+      },
+      {
+        "inicio": 634.0,
+        "fin": 645.0,
+        "texto": "Se elevan el perfil y aquí espesor de corte, el intervalo. Y en volumen, lo mismo, se enciende, espesor de corte, intervalo."
+      },
+      {
+        "inicio": 645.0,
+        "fin": 655.0,
+        "texto": "Por ejemplo, quiero crear otro volumen, voy acá. Todo estos que son con nombre son los iterativos."
+      },
+      {
+        "inicio": 655.0,
+        "fin": 665.0,
+        "texto": "Por ejemplo, cuello, standard o baja dosis, no sé, pulmón. Si estoy en volumen, standard volumen; si estoy en axial, standard axial."
+      },
+      {
+        "inicio": 665.0,
+        "fin": 671.0,
+        "texto": "Y los que dicen AiCE, bueno, aquí están con radioterapia, estos son con inteligencia artificial."
+      },
+      {
+        "inicio": 671.0,
+        "fin": 680.0,
+        "texto": "Es inteligencia artificial de aprendizaje profundo, y aquí, bueno, están por ejemplo para imagenología."
+      },
+      {
+        "inicio": 680.0,
+        "fin": 694.0,
+        "texto": "AiCE permite para todas las secciones anatómicas, excepto cerebro pediátrico, ¿ya? Porque en fábrica se entrena la red neuronal"
+      },
+      {
+        "inicio": 694.0,
+        "fin": 704.0,
+        "texto": "con imágenes de pacientes reales, no con fantoma. Se lo digo porque la competencia también sacó esto pero entrena con fantoma. Nosotros con pacientes reales."
+      },
+      {
+        "inicio": 704.0,
+        "fin": 715.0,
+        "texto": "Y a la red neuronal se le ingresa una imagen de muy baja técnica, muy baja dosis, y le dice: 'Tú ahora esta déjala igual que la misma imagen reconstruida en un Aquilion ONE con First'."
+      },
+      {
+        "inicio": 715.0,
+        "fin": 720.0,
+        "texto": "Que hasta ese momento era lo más avanzado en reconstrucción de imágenes. Entonces, la red neuronal aprende a hacer eso"
+      },
+      {
+        "inicio": 480.0,
+        "fin": 483.0,
+        "texto": "Y quiero activar la iterativa para ocupar la menor dosis posible."
+      },
+      {
+        "inicio": 483.0,
+        "fin": 487.0,
+        "texto": "Entonces, se tendría con el de radioterapia con AIDR, por ejemplo, 4."
+      },
+      {
+        "inicio": 487.0,
+        "fin": 493.0,
+        "texto": "Y es el filtro de, para radioterapia con AIDR. Entonces, eso sería la mejor calidad de imagen."
+      },
+      {
+        "inicio": 493.0,
+        "fin": 497.0,
+        "texto": "Pero se paga un precio, que son 15 imágenes por segundo."
+      },
+      {
+        "inicio": 497.0,
+        "fin": 502.0,
+        "texto": "Eh, es más lenta con la, con la inteligencia artificial."
+      },
+      {
+        "inicio": 502.0,
+        "fin": 507.0,
+        "texto": "Si fuera, por ejemplo, el iterativo, que es cuerpo en volumen, estándar volumen,"
+      },
+      {
+        "inicio": 507.0,
+        "fin": 514.0,
+        "texto": "va a reconstruir con filtro de cuerpo iterativo, pero a 50 imágenes por segundo."
+      },
+      {
+        "inicio": 514.0,
+        "fin": 515.0,
+        "texto": "Es mucho más rápido."
+      },
+      {
+        "inicio": 515.0,
+        "fin": 520.0,
+        "texto": "Y ahí con el tema de la dosis, por ejemplo, al activar la, yo quiero que se ocupe..."
+      },
+      {
+        "inicio": 520.0,
+        "fin": 526.0,
+        "texto": "Sí, lo que pasa es que aquí la, las dosis no van a variar, pero cuando son con, con modulación de dosis."
+      },
+      {
+        "inicio": 526.0,
+        "fin": 533.0,
+        "texto": "Ahí es donde va a cambiar si elijo iterativo o o inteligencia artificial."
+      },
+      {
+        "inicio": 533.0,
+        "fin": 539.0,
+        "texto": "Pero acá es todo con técnica fija, entonces, en realidad la dosis ya está definida. Lo que sí le va a cambiar es la, el detalle de la imagen, va a ser mejor."
+      },
+      {
+        "inicio": 539.0,
+        "fin": 543.0,
+        "texto": "Cuando es con imagenología, ahí todo es con modulación."
+      },
+      {
+        "inicio": 543.0,
+        "fin": 549.0,
+        "texto": "Y ahí yo les dejo aquí, por ejemplo, al lado, diría una alta calidad AIDR, estándar AIDR."
+      },
+      {
+        "inicio": 549.0,
+        "fin": 560.0,
+        "texto": "Porque ahí yo elijo, si el estándar normal sabe que va a reconstruir con iterativo, entonces sabe que puedes reducir la dosis hasta en un 75% respecto del filtered back projection."
+      },
+      {
+        "inicio": 560.0,
+        "fin": 570.0,
+        "texto": "Si yo ocupo con AIDR, sabe que puede reducir la dosis hasta en un 82% respecto de filtered back projection. Esa es la diferencia entre un y otro."
+      },
+      {
+        "inicio": 570.0,
+        "fin": 574.0,
+        "texto": "¿Dónde ponía modular?"
+      },
+      {
+        "inicio": 574.0,
+        "fin": 580.0,
+        "texto": "Acá. Aquí yo puedo modular. Esto es de cerebro, pero en cuerpo van a salir más opciones."
+      },
+      {
+        "inicio": 580.0,
+        "fin": 583.0,
+        "texto": "Pero o sea, con inteligencia se puede modular igual que los otros."
+      },
+      {
+        "inicio": 583.0,
+        "fin": 587.0,
+        "texto": "Sí, solo lo seleccionas."
+      },
+      {
+        "inicio": 587.0,
+        "fin": 592.0,
+        "texto": "Pero para imagenología, en este caso no, estas son las técnicas fijas. Es por si les toca en otro equipo Canon o Toshiba, que sepan cómo, por dónde va."
+      },
+      {
+        "inicio": 592.0,
+        "fin": 600.0,
+        "texto": "Y cuando es con modulación en imagenología, bueno, cerebro está fijo, pero cuando es cuerpo, queda siempre en estándar. O sea, ni flaco ni gordo."
+      },
+      {
+        "inicio": 600.0,
+        "fin": 606.0,
+        "texto": "Si ustedes ven que el paciente tiene guatita, elijan modulación eh se llama calidad, arriba, calidad."
+      },
+      {
+        "inicio": 606.0,
+        "fin": 611.0,
+        "texto": "Y si el paciente ya es obeso, modulación alta calidad."
+      },
+      {
+        "inicio": 611.0,
+        "fin": 616.0,
+        "texto": "Entonces así el equipo sabe que va a tener que entregar más energía, pero siempre con modulación."
+      },
+      {
+        "inicio": 616.0,
+        "fin": 622.0,
+        "texto": "Porque no es lo mismo el pasar por aquí, que es más delgado, que pasar por acá al lado, que es más ancho."
+      },
+      {
+        "inicio": 622.0,
+        "fin": 630.0,
+        "texto": "Y no es lo mismo si estoy por el tórax, donde tengo aire adentro, a que si ya pasé al hígado."
+      },
+      {
+        "inicio": 630.0,
+        "fin": 636.0,
+        "texto": "Entonces, ahí va cambiando el mA a medida que va rotando en el X e Y y además mientras va avanza en el eje Z."
+      },
+      {
+        "inicio": 636.0,
+        "fin": 644.0,
+        "texto": "O sea, para que se aplique bien esa modulación tiene que quedar bien centrado, o sea, ya no sirve el hecho de empezar a modificar como dijo de que ya se lo dejaba más arriba en la camilla..."
+      },
+      {
+        "inicio": 644.0,
+        "fin": 651.0,
+        "texto": "No, mientras tengan el doble escanograma lo va a hacer igual. Puede modular, por eso se usan los dos. Aunque se mueva la camilla."
+      },
+      {
+        "inicio": 651.0,
+        "fin": 657.0,
+        "texto": "Claro, eso es para dejar el, en el isocentro la estructura que tú quieres ver. Pero ya teniendo el doble escanograma, tiene todos los datos que necesita para modular."
+      },
+      {
+        "inicio": 657.0,
+        "fin": 665.0,
+        "texto": "Por eso a veces cuando uno se pasa del, uno hace un escanograma, pero oh me quedó corto, necesito llegar más abajo del abdomen,"
+      },
+      {
+        "inicio": 665.0,
+        "fin": 673.0,
+        "texto": "va a arrojar un, esto es para imagenología por si van a otro equipo, le va a arrojar un mensaje que dice: No tengo datos para modular."
+      },
+      {
+        "inicio": 673.0,
+        "fin": 677.0,
+        "texto": "¿Por qué me sale? Claro, porque está en negro, pero igual va a extrapolar, igual va a adquirir."
+      },
+      {
+        "inicio": 677.0,
+        "fin": 680.0,
+        "texto": "Con la dosis máxima."
+      },
+      {
+        "inicio": 680.0,
+        "fin": 689.0,
+        "texto": "Eh o saca como un estándar de lo que donde ya estaba, y ahí como trata de avanzar, pero le va a subir un poquito para asegurar."
+      },
+      {
+        "inicio": 689.0,
+        "fin": 694.0,
+        "texto": "Entonces, acá es donde yo saco todas las reconstrucciones que quiera. Tengo espacio para siete volúmenes."
+      },
+      {
+        "inicio": 694.0,
+        "fin": 699.0,
+        "texto": "O sea, realmente tengo mucho espacio para crear volúmenes durante el protocolo."
+      },
+      {
+        "inicio": 699.0,
+        "fin": 704.0,
+        "texto": "Y como les mostré hace un rato, que lo estábamos probando, cada volumen está asociado a un multi view."
+      },
+      {
+        "inicio": 704.0,
+        "fin": 712.0,
+        "texto": "¿Te fijas? Entonces, a este de cerebro yo le puedo decir: A este volumen que va a crear de cerebro de uno cada uno,"
+      },
+      {
+        "inicio": 712.0,
+        "fin": 721.0,
+        "texto": "sácale un corte axial, uno coronal, uno sagital, de tres cada tres por ejemplo, o no sé, de dos cada dos, etcétera."
+      },
+      {
+        "inicio": 721.0,
+        "fin": 728.0,
+        "texto": "Y aquí la imagen del doble escanograma, cuando están en recon, las líneas se van a cambiar a color naranja."
+      },
+      {
+        "inicio": 728.0,
+        "fin": 736.0,
+        "texto": "Cuando están en adquisición, ¿se fijan?, era color amarillo, porque eso quiere decir todo lo que van a adquirir, siempre va a ser más grande."
+      },
+      {
+        "inicio": 736.0,
+        "fin": 740.0,
+        "texto": "Pero cuando hacen acá el recon, va a salir a naranja, porque es lo que va a reconstruir."
+      },
+      {
+        "inicio": 740.0,
+        "fin": 750.0,
+        "texto": "Entonces, yo hago clic en axial y yo ya puedo ajustar al paciente, o en coronal también, para no sacar cortes coronales del aire. Ya lo pueden dejar todo ajustado."
+      },
+      {
+        "inicio": 750.0,
+        "fin": 756.0,
+        "texto": "E incluso ya si están todos listos, pueden dejar la transferencia automática, por ejemplo, ya al PACS."
+      },
+      {
+        "inicio": 756.0,
+        "fin": 760.0,
+        "texto": "Okay. Entonces, cuando esto termina, además se envía automáticamente al PACS."
+      },
+      {
+        "inicio": 760.0,
+        "fin": 768.0,
+        "texto": "Entonces, así ya después cuando ya se manejan bastante bien, pueden dejar todo listo, transfer y después verifican nomás que, que todo salió bien."
+      },
+      {
+        "inicio": 768.0,
+        "fin": 778.0,
+        "texto": "Bueno, aquí voy a dejar todo."
+      },
+      {
+        "inicio": 778.0,
+        "fin": 781.0,
+        "texto": "Aquí estamos, ¿no?, nos estamos quedando protocolo."
+      },
+      {
+        "inicio": 781.0,
+        "fin": 786.0,
+        "texto": "No, es decir, estábamos en un protocolo ya creado en los por default, pero no lo modifiqué."
+      },
+      {
+        "inicio": 786.0,
+        "fin": 790.0,
+        "texto": "¿Se puede crear o no, en alguna parte?"
+      },
+      {
+        "inicio": 790.0,
+        "fin": 801.0,
+        "texto": "Sí, de acá mismo se puede crear. Tú puedes copiar algún protocolo, por ejemplo, copiarlo y lo pego acá, paste. Y este después lo edito y aquí le cambio el nombre y, bueno, y hago todos los cambios, la recon que necesite."
+      },
+      {
+        "inicio": 801.0,
+        "fin": 804.0,
+        "texto": "¿Y guardas cómo, cómo guardas?"
+      },
+      {
+        "inicio": 804.0,
+        "fin": 806.0,
+        "texto": "Acá, guardar."
+      },
+      {
+        "inicio": 806.0,
+        "fin": 812.0,
+        "texto": "¿Y después lo puedes ejecutar tal como?"
+      },
+      {
+        "inicio": 812.0,
+        "fin": 815.0,
+        "texto": "Ahora lo voy a borrar."
+      },
+      {
+        "inicio": 815.0,
+        "fin": 820.0,
+        "texto": "No, lo que quizás lo vamos a comentar después, pero el asunto de las fases, con contraste, a los tiempos, ¿cómo se programan?"
+      },
+      {
+        "inicio": 820.0,
+        "fin": 834.0,
+        "texto": "Sí. [inaudible] Por ejemplo, trifásico mejor."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.docx",
+    "pdf": "TC_08_VRT_frame_movie_volumen_pitch_modulacion_protocolos.pdf",
+    "paginas": 15
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 361455,
+    "tokens_salida": 13973,
+    "tokens_pensamiento": 0,
+    "tokens_total": 375428,
+    "detalle_entrada": {
+      "VIDEO": 316920,
+      "TEXT": 10435,
+      "IMAGE": 34100
+    },
+    "llamadas": 9,
+    "batch": false,
+    "costo_usd": null
+  }
+}

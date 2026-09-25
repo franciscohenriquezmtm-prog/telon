@@ -1,0 +1,35 @@
+16:34:33 === TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov: 04:48, 1080x1920, 59.97 fps, 609 MB -> salida/TC_11_Modulacion_de_dosis_y_calidad_de_imagen
+16:34:33 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:34:33   TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:34:33   transcodificando TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov -> TC_11_Modulacion_de_dosis_y_calidad_de_imagen_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:34:47       9 % (00:26 de 04:48)
+16:34:58      19 % (00:56 de 04:48)
+16:35:08      29 % (01:24 de 04:48)
+16:35:19      40 % (01:54 de 04:48)
+16:35:29      50 % (02:24 de 04:48)
+16:35:40      60 % (02:54 de 04:48)
+16:35:51      70 % (03:22 de 04:48)
+16:36:01      80 % (03:52 de 04:48)
+16:36:12      91 % (04:21 de 04:48)
+16:36:18   copia ligera lista: 12.9 MB
+16:36:18 Subiendo TC_11_Modulacion_de_dosis_y_calidad_de_imagen_subida.mp4 (13.5 MB, video/mp4) a la Files API…
+16:36:19 Subido como files/38tbvixtpowr; esperando a que Gemini lo procese…
+16:36:30 Archivo files/38tbvixtpowr listo (ACTIVE).
+16:36:30 Analizando TC_11_Modulacion_de_dosis_y_calidad_de_imagen con gemini-3.5-flash (resolución alta)…
+16:36:43   12 momentos brutos, 86095 tokens.
+16:36:43 Análisis terminado: 12 momentos.
+16:36:43 Transcribiendo el audio de TC_11_Modulacion_de_dosis_y_calidad_de_imagen con gemini-3.5-flash…
+16:36:55 Transcripción: 36 segmentos, 28752 tokens.
+16:36:55 Archivo remoto files/38tbvixtpowr eliminado.
+16:36:55 momentos.json guardado (12 momentos).
+16:36:55 Extrayendo 12 capturas de TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov…
+16:37:07   10/12 capturas
+16:37:09 Capturas: 12 extraídas, 0 fallidas
+16:37:09 Refinando títulos y descripciones con 12 capturas en alta resolución (gemini-3.5-flash)…
+16:37:09 Refinando con gemini-3.5-flash los textos de 12 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+16:37:18 Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 12 con cambios (16563 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:37:23 Anotaciones: 12 capturas con círculo/flecha.
+16:37:23   documentos: 12 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+16:37:24   docx: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx
+16:37:25   pdf: TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf (10 páginas)
+16:37:25 Listo en 2 min 52 s: 12 momentos, 10 páginas -> TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx, TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf

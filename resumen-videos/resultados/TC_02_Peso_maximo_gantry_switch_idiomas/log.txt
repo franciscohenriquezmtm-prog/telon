@@ -1,0 +1,33 @@
+15:56:57 === TC_02_Peso_maximo_gantry_switch_idiomas.mov: 05:44, 1080x1920, 59.97 fps, 935 MB -> salida/TC_02_Peso_maximo_gantry_switch_idiomas
+15:56:57 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:56:57   transcodificando TC_02_Peso_maximo_gantry_switch_idiomas.mov -> TC_02_Peso_maximo_gantry_switch_idiomas_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:57:07       9 % (00:31 de 05:44)
+15:57:16      19 % (01:06 de 05:44)
+15:57:25      29 % (01:41 de 05:44)
+15:57:34      40 % (02:16 de 05:44)
+15:57:42      50 % (02:50 de 05:44)
+15:57:50      60 % (03:25 de 05:44)
+15:57:58      70 % (04:00 de 05:44)
+15:58:06      80 % (04:35 de 05:44)
+15:58:14      90 % (05:10 de 05:44)
+15:58:19   copia ligera lista: 14.8 MB
+15:58:19 Subiendo TC_02_Peso_maximo_gantry_switch_idiomas_subida.mp4 (15.6 MB, video/mp4) a la Files API…
+15:58:21 Subido como files/yygbqoe394au; esperando a que Gemini lo procese…
+15:58:42 Archivo files/yygbqoe394au listo (ACTIVE).
+15:58:42 Analizando TC_02_Peso_maximo_gantry_switch_idiomas con gemini-3.5-flash (resolución alta)…
+15:58:59   10 momentos brutos, 101933 tokens.
+15:58:59 Análisis terminado: 10 momentos.
+15:58:59 Transcribiendo el audio de TC_02_Peso_maximo_gantry_switch_idiomas con gemini-3.5-flash…
+15:59:29 Transcripción: 126 segmentos, 37398 tokens.
+15:59:30 Archivo remoto files/yygbqoe394au eliminado.
+15:59:30 momentos.json guardado (10 momentos).
+15:59:30 Extrayendo 10 capturas de TC_02_Peso_maximo_gantry_switch_idiomas.mov…
+15:59:37 Capturas: 10 extraídas, 0 fallidas
+15:59:37 Refinando títulos y descripciones con 10 capturas en alta resolución (gemini-3.5-flash)…
+15:59:37 Refinando con gemini-3.5-flash los textos de 10 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+15:59:45 Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 10 con cambios (14102 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+15:59:50 Anotaciones: 10 capturas con círculo/flecha.
+15:59:50   documentos: 10 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+15:59:50   docx: TC_02_Peso_maximo_gantry_switch_idiomas.docx
+15:59:51   pdf: TC_02_Peso_maximo_gantry_switch_idiomas.pdf (11 páginas)
+15:59:51 Listo en 2 min 54 s: 10 momentos, 11 páginas -> TC_02_Peso_maximo_gantry_switch_idiomas.docx, TC_02_Peso_maximo_gantry_switch_idiomas.pdf

@@ -1,0 +1,34 @@
+15:53:26 === TC_06_Envio_series_calentamiento_tubo_worklist.mov: 04:39, 1920x1080, 59.97 fps, 442 MB -> salida/TC_06_Envio_series_calentamiento_tubo_worklist
+15:53:26 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:53:26   TC_06_Envio_series_calentamiento_tubo_worklist.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+15:53:26   transcodificando TC_06_Envio_series_calentamiento_tubo_worklist.mov -> TC_06_Envio_series_calentamiento_tubo_worklist_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:53:39      10 % (00:26 de 04:39)
+15:53:51      20 % (00:56 de 04:39)
+15:54:06      30 % (01:24 de 04:39)
+15:54:20      40 % (01:52 de 04:39)
+15:54:31      51 % (02:21 de 04:39)
+15:54:41      61 % (02:50 de 04:39)
+15:54:51      71 % (03:18 de 04:39)
+15:55:02      81 % (03:46 de 04:39)
+15:55:12      91 % (04:14 de 04:39)
+15:55:17   copia ligera lista: 16.0 MB
+15:55:17 Subiendo TC_06_Envio_series_calentamiento_tubo_worklist_subida.mp4 (16.8 MB, video/mp4) a la Files API…
+15:55:19 Subido como files/lu56kxnxw0et; esperando a que Gemini lo procese…
+15:55:29 Archivo files/lu56kxnxw0et listo (ACTIVE).
+15:55:29 Analizando TC_06_Envio_series_calentamiento_tubo_worklist con gemini-3.5-flash (resolución alta)…
+15:55:52   9 momentos brutos, 83071 tokens.
+15:55:52 Análisis terminado: 9 momentos.
+15:55:52 Transcribiendo el audio de TC_06_Envio_series_calentamiento_tubo_worklist con gemini-3.5-flash…
+15:56:05 Transcripción: 24 segmentos, 27533 tokens.
+15:56:05 Archivo remoto files/lu56kxnxw0et eliminado.
+15:56:05 momentos.json guardado (9 momentos).
+15:56:05 Extrayendo 9 capturas de TC_06_Envio_series_calentamiento_tubo_worklist.mov…
+15:56:15 Capturas: 9 extraídas, 0 fallidas
+15:56:15 Refinando títulos y descripciones con 9 capturas en alta resolución (gemini-3.5-flash)…
+15:56:15 Refinando con gemini-3.5-flash los textos de 9 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+15:56:35 Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 8 con cambios (12785 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+15:56:37 Anotaciones: 8 capturas con círculo/flecha.
+15:56:37   documentos: 9 pasos, 2 por página (A4 vertical 1x2)
+15:56:37   docx: TC_06_Envio_series_calentamiento_tubo_worklist.docx
+15:56:37   pdf: TC_06_Envio_series_calentamiento_tubo_worklist.pdf (8 páginas)
+15:56:37 Listo en 3 min 11 s: 9 momentos, 8 páginas -> TC_06_Envio_series_calentamiento_tubo_worklist.docx, TC_06_Envio_series_calentamiento_tubo_worklist.pdf

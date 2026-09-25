@@ -1,0 +1,835 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_05_Apagar_encender_warm_up_calibracion_aire.mov",
+    "nombre": "TC_05_Apagar_encender_warm_up_calibracion_aire",
+    "duracion_seg": 630.78,
+    "duracion": "10:31",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 1399245894,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:08:46",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Operación del Tomógrafo Canon Aquilion",
+    "resumen": "Manual básico de operación que describe el procedimiento de encendido, el proceso de calentamiento o warm-up diario, la configuración de los componentes de comunicación y los controles de movimiento físico del equipo.",
+    "truncado": false,
+    "tramos": 2,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 23 con cambios (33316 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 273529,
+      "tokens_salida": 9951,
+      "tokens_pensamiento": 0,
+      "tokens_total": 283480,
+      "detalle_entrada": {
+        "TEXT": 7359,
+        "VIDEO": 239770,
+        "IMAGE": 26400
+      },
+      "llamadas": 6,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Encender tomógrafo con botón físico principal",
+        "descripcion": "El encendido comienza presionando el botón físico en el gabinete principal; el sistema inicia de forma automática hasta desplegar la pantalla principal.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.58,
+          "y": 0.743
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.2,
+        "puntaje": null,
+        "titulo_original": "Encender el tomógrafo desde el botón físico"
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Apagar el equipo cada 24 horas",
+        "descripcion": "Se recomienda apagar y reiniciar el tomógrafo cada 24 horas (idealmente en el turno de noche) para cerrar y guardar correctamente los registros o logs de errores generados.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Encendido",
+        "zona": null,
+        "captura": "capturas/02_00-15.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 14.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:19",
+        "tiempo_seg": 79.0,
+        "titulo": "Acceder al menú de utilidades UTILITY",
+        "descripcion": "Para realizar el mantenimiento diario del tubo, hacer clic en el botón Utility de la pantalla y luego seleccionar la opción de mantenimiento correspondiente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento diario",
+        "zona": {
+          "x": 0.686,
+          "y": 0.196
+        },
+        "captura": "capturas/03_01-19.jpg",
+        "captura_anotada": "capturas/03_01-19_anotada.jpg",
+        "tiempo_real_seg": 78.0,
+        "puntaje": null,
+        "titulo_original": "Acceder al menú de utilidades (Utility)",
+        "descripcion_original": "Para realizar el mantenimiento diario del tubo, hacer clic en el botón Utility de la pantalla y luego seleccionar la opción Tools."
+      },
+      {
+        "tiempo": "01:25",
+        "tiempo_seg": 85.0,
+        "titulo": "Seleccionar la opción Warm-up",
+        "descripcion": "Hacer clic en el botón 'Warm-up' en el menú desplegado para iniciar el procedimiento de calentamiento del tubo de rayos X.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento diario",
+        "zona": {
+          "x": 0.612,
+          "y": 0.25
+        },
+        "captura": "capturas/04_01-25.jpg",
+        "captura_anotada": "capturas/04_01-25_anotada.jpg",
+        "tiempo_real_seg": 85.6,
+        "puntaje": null,
+        "titulo_original": "Seleccionar la opción Warm-Up",
+        "descripcion_original": "Hacer clic en el botón 'Warm-Up' en la pantalla de utilidades para iniciar el procedimiento de calentamiento del tubo de rayos X."
+      },
+      {
+        "tiempo": "01:31",
+        "tiempo_seg": 91.0,
+        "titulo": "Ejecutar el Warm-Up con calibración",
+        "descripcion": "Se debe seleccionar la opción de calentamiento completo ('Yes' bajo 'Air Calibrations will be performed during warm-up') para llevar el tubo a temperatura de trabajo.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento diario",
+        "zona": {
+          "x": 0.476,
+          "y": 0.361
+        },
+        "captura": "capturas/05_01-31.jpg",
+        "captura_anotada": "capturas/05_01-31_anotada.jpg",
+        "tiempo_real_seg": 90.0,
+        "puntaje": null,
+        "descripcion_original": "Se debe seleccionar la opción de calentamiento completo ('Yes' para Air Calibrations) al inicio del día para llevar el tubo a temperatura de trabajo y alargar su vida útil."
+      },
+      {
+        "tiempo": "01:52",
+        "tiempo_seg": 112.0,
+        "titulo": "Retraer la camilla antes del Warm-Up",
+        "descripcion": "La camilla debe estar totalmente retraída y fuera del isocentro del gantry durante la calibración de aire; confirmar presionando 'OK' para iniciar.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento diario",
+        "zona": {
+          "x": 0.314,
+          "y": 0.412
+        },
+        "captura": "capturas/06_01-52.jpg",
+        "captura_anotada": "capturas/06_01-52_anotada.jpg",
+        "tiempo_real_seg": 112.2,
+        "puntaje": null,
+        "descripcion_original": "La camilla debe estar totalmente retraída y fuera del isocentro del gantry durante la calibración de aire para evitar artefactos o manchas en las imágenes futuras."
+      },
+      {
+        "tiempo": "02:37",
+        "tiempo_seg": 157.0,
+        "titulo": "Verificar indicador de temperatura Tube(OLP)",
+        "descripcion": "El indicador Tube(OLP) muestra la temperatura del tubo (marcando 15% en pantalla); si marca un valor bajo no es estrictamente necesario repetir el calentamiento.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento diario",
+        "zona": {
+          "x": 0.218,
+          "y": 0.801
+        },
+        "captura": "capturas/07_02-37.jpg",
+        "captura_anotada": "capturas/07_02-37_anotada.jpg",
+        "tiempo_real_seg": 156.0,
+        "puntaje": null,
+        "titulo_original": "Verificar indicador de temperatura OLP",
+        "descripcion_original": "El indicador OLP muestra la temperatura del tubo; si marca 0% no es estrictamente necesario repetir el Warm-Up durante el día a menos que el equipo lo solicite."
+      },
+      {
+        "tiempo": "02:55",
+        "tiempo_seg": 175.0,
+        "titulo": "Identificar el sistema de audio integrado",
+        "descripcion": "El teclado físico cuenta con mandos especiales para controlar la comunicación bidireccional clara con el paciente.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Componentes de la consola",
+        "zona": {
+          "x": 0.273,
+          "y": 0.046
+        },
+        "captura": "capturas/08_02-55.jpg",
+        "captura_anotada": "capturas/08_02-55_anotada.jpg",
+        "tiempo_real_seg": 175.2,
+        "puntaje": null,
+        "descripcion_original": "El tomógrafo cuenta con parlantes en la consola y dentro de la sala para mantener una comunicación bidireccional clara con el paciente."
+      },
+      {
+        "tiempo": "03:10",
+        "tiempo_seg": 190.0,
+        "titulo": "Ajustar volumen del parlante de operador",
+        "descripcion": "La perilla superior con el icono de la oreja en el teclado del tomógrafo ajusta el volumen de recepción para escuchar al paciente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Componentes de la consola",
+        "zona": {
+          "x": 0.478,
+          "y": 0.371
+        },
+        "captura": "capturas/09_03-10.jpg",
+        "captura_anotada": "capturas/09_03-10_anotada.jpg",
+        "tiempo_real_seg": 190.6,
+        "puntaje": null,
+        "descripcion_original": "La perilla con el icono de la oreja en el teclado del tomógrafo ajusta el volumen de recepción para escuchar al paciente."
+      },
+      {
+        "tiempo": "03:20",
+        "tiempo_seg": 200.0,
+        "titulo": "Ajustar volumen del micrófono de operador",
+        "descripcion": "La perilla inferior con el icono de ondas de transmisión permite ajustar el volumen de salida para hablarle al paciente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Componentes de la consola",
+        "zona": {
+          "x": 0.421,
+          "y": 0.501
+        },
+        "captura": "capturas/10_03-20.jpg",
+        "captura_anotada": "capturas/10_03-20_anotada.jpg",
+        "tiempo_real_seg": 199.0,
+        "puntaje": null,
+        "descripcion_original": "La perilla con el icono de ondas de transmisión permite ajustar el volumen de salida para hablarle al paciente manteniendo presionado el botón central."
+      },
+      {
+        "tiempo": "03:29",
+        "tiempo_seg": 209.0,
+        "titulo": "Botón de habilitación de movimiento",
+        "descripcion": "El botón físico con un icono de gantry y flecha en el teclado debe mantenerse presionado para ejecutar cualquier movimiento motorizado de la camilla.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.526,
+          "y": 0.328
+        },
+        "captura": "capturas/11_03-29.jpg",
+        "captura_anotada": "capturas/11_03-29_anotada.jpg",
+        "tiempo_real_seg": 209.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:44",
+        "tiempo_seg": 224.0,
+        "titulo": "Configurar movimiento de camilla en pantalla",
+        "descripcion": "En el panel de movimiento se ingresa la distancia de desplazamiento deseada (por ejemplo, Target position de -300.0 mm o Position change).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.435,
+          "y": 0.725
+        },
+        "captura": "capturas/12_03-44.jpg",
+        "captura_anotada": "capturas/12_03-44_anotada.jpg",
+        "tiempo_real_seg": 224.6,
+        "puntaje": null,
+        "descripcion_original": "Se ingresa el valor de desplazamiento deseado en milímetros; un signo negativo indica movimiento hacia adentro del gantry y un signo positivo hacia afuera."
+      },
+      {
+        "tiempo": "04:10",
+        "tiempo_seg": 250.0,
+        "titulo": "Ejecutar movimiento de la camilla",
+        "descripcion": "Al pulsar ejecutar en la interfaz, se enciende un botón físico en el teclado que se debe presionar para que la camilla realice mecánicamente el movimiento programado.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento de camilla",
+        "zona": {
+          "x": 0.181,
+          "y": 0.178
+        },
+        "captura": "capturas/13_04-10.jpg",
+        "captura_anotada": "capturas/13_04-10_anotada.jpg",
+        "tiempo_real_seg": 249.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:19",
+        "tiempo_seg": 259.0,
+        "titulo": "Controlar posición de camilla",
+        "descripcion": "El menú de control permite seleccionar entre Couch slide, Couch Up/Down, Couch Left/Right o Station para programar los movimientos.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento de camilla",
+        "zona": {
+          "x": 0.234,
+          "y": 0.767
+        },
+        "captura": "capturas/14_04-19.jpg",
+        "captura_anotada": "capturas/14_04-19_anotada.jpg",
+        "tiempo_real_seg": 259.6,
+        "puntaje": null,
+        "descripcion_original": "El menú 'Couch slide' permite configurar movimientos para entrar o salir (Couch slide), subir o bajar (Couch Up/Down), o lateral (Couch Left/Right)."
+      },
+      {
+        "tiempo": "04:46",
+        "tiempo_seg": 286.0,
+        "titulo": "Iniciar o detener la radiación",
+        "descripcion": "Se identifican los botones de la consola para iniciar la radiación (triángulo en botón superior) y para detenerla de forma manual si es necesario.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.308,
+          "y": 0.401
+        },
+        "captura": "capturas/15_04-46.jpg",
+        "captura_anotada": "capturas/15_04-46_anotada.jpg",
+        "tiempo_real_seg": 285.8,
+        "puntaje": null,
+        "descripcion_original": "Se identifican los botones del teclado físico para dar radiación (triángulo hacia arriba) y para cortar la radiación (triángulo hacia abajo)."
+      },
+      {
+        "tiempo": "04:58",
+        "tiempo_seg": 298.0,
+        "titulo": "Ajustar ventana y nivel con perillas",
+        "descripcion": "Las perillas giratorias del teclado f\u0000\u0013sico controlan el nivel y ancho de la ventana (WL y WW en pantalla) para modificar de forma r\u0000\u0013pida el contraste de la imagen.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajuste de visualización",
+        "zona": {
+          "x": 0.288,
+          "y": 0.425
+        },
+        "captura": "capturas/16_04-58.jpg",
+        "captura_anotada": "capturas/16_04-58_anotada.jpg",
+        "tiempo_real_seg": 298.2,
+        "puntaje": null,
+        "titulo_original": "Ajustar ventana y nivel",
+        "descripcion_original": "Las perillas giratorias del teclado físico controlan el nivel y ancho de la ventana para modificar el contraste de la imagen."
+      },
+      {
+        "tiempo": "05:03",
+        "tiempo_seg": 303.0,
+        "titulo": "Usar ventanas por defecto en teclado",
+        "descripcion": "Las teclas r\u0000\u0013pidas numeradas aplican ventanas preestablecidas (como WW=3500 o WW=385). La tecla '3' se asocia al filtro de reconstrucci\u0000\u0013n activo.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajuste de visualización",
+        "zona": {
+          "x": 0.435,
+          "y": 0.468
+        },
+        "captura": "capturas/17_05-03.jpg",
+        "captura_anotada": "capturas/17_05-03_anotada.jpg",
+        "tiempo_real_seg": 302.8,
+        "puntaje": null,
+        "titulo_original": "Usar ventanas por defecto",
+        "descripcion_original": "Las teclas rápidas '1' y '2' aplican ventanas preestablecidas (óseo, pulmón, mediastino). La tecla '3' siempre se asocia al filtro de reconstrucción activo."
+      },
+      {
+        "tiempo": "06:11",
+        "tiempo_seg": 371.0,
+        "titulo": "Navegaci\u0000\u0013n r\u0000\u0013pida de im\u0000\u0013genes con mouse",
+        "descripcion": "Presionando el bot\u0000\u0013n izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento r\u0000\u0013pido tipo libro a trav\u0000\u0013s de los cortes de la tomograf\u0000\u0013a.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Visualización",
+        "zona": {
+          "x": 0.195,
+          "y": 0.698
+        },
+        "captura": "capturas/18_06-11.jpg",
+        "captura_anotada": "capturas/18_06-11_anotada.jpg",
+        "tiempo_real_seg": 371.6,
+        "puntaje": null,
+        "titulo_original": "Navegación rápida de imágenes",
+        "descripcion_original": "Presionando el botón izquierdo y del medio del mouse al mismo tiempo se puede realizar un desplazamiento rápido tipo libro a través de los cortes."
+      },
+      {
+        "tiempo": "06:44",
+        "tiempo_seg": 404.0,
+        "titulo": "Realizar paneo de la imagen",
+        "descripcion": "Presionando \u0000\u0013nicamente el bot\u0000\u0013n central del mouse se activa la herramienta de paneo para mover la imagen en pantalla libremente.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Visualización",
+        "zona": {
+          "x": 0.113,
+          "y": 0.634
+        },
+        "captura": "capturas/19_06-44.jpg",
+        "captura_anotada": "capturas/19_06-44_anotada.jpg",
+        "tiempo_real_seg": 404.2,
+        "puntaje": null,
+        "descripcion_original": "Presionando únicamente el botón central del mouse se activa la herramienta de paneo para mover la imagen en pantalla."
+      },
+      {
+        "tiempo": "06:49",
+        "tiempo_seg": 409.0,
+        "titulo": "Hacer zoom con la lupa",
+        "descripcion": "Presionando el bot\u0000\u0013n derecho e izquierdo del mouse de forma simult\u0000\u0013nea se activa la herramienta de zoom para agrandar la imagen en el visor secundario.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Visualización",
+        "zona": {
+          "x": 0.147,
+          "y": 0.656
+        },
+        "captura": "capturas/20_06-49.jpg",
+        "captura_anotada": "capturas/20_06-49_anotada.jpg",
+        "tiempo_real_seg": 409.6,
+        "puntaje": null,
+        "descripcion_original": "Presionando el botón derecho e izquierdo del mouse de forma simultánea se activa la herramienta de zoom para agrandar la imagen."
+      },
+      {
+        "tiempo": "07:37",
+        "tiempo_seg": 457.0,
+        "titulo": "Verificar fecha y hora del sistema",
+        "descripcion": "Se visualiza la informaci\u0000\u0013n del estudio en la pantalla superior derecha, mostrando la fecha 'Apr 11 11:08 2025' y los datos correspondientes al paciente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración del sistema",
+        "zona": {
+          "x": 0.756,
+          "y": 0.18
+        },
+        "captura": "capturas/21_07-37.jpg",
+        "captura_anotada": "capturas/21_07-37_anotada.jpg",
+        "tiempo_real_seg": 456.0,
+        "puntaje": null,
+        "titulo_original": "Configurar fecha y hora",
+        "descripcion_original": "Haciendo clic en la fecha y hora se abre el menú 'Date Setting' donde se puede actualizar y guardar el horario del sistema."
+      },
+      {
+        "tiempo": "08:03",
+        "tiempo_seg": 483.0,
+        "titulo": "Seleccionar el men\u0000\u0013 de apagado",
+        "descripcion": "Para apagar el equipo se despliega la opci\u0000\u0013n 'Utility' en la barra de herramientas superior de la pantalla y luego se selecciona 'Shutdown'.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Apagado y reinicio",
+        "zona": {
+          "x": 0.763,
+          "y": 0.15
+        },
+        "captura": "capturas/22_08-03.jpg",
+        "captura_anotada": "capturas/22_08-03_anotada.jpg",
+        "tiempo_real_seg": 482.4,
+        "puntaje": null,
+        "titulo_original": "Apagar el sistema (Shutdown)",
+        "descripcion_original": "Para apagar el equipo se selecciona 'Utility' en pantalla y luego 'Shutdown'. Se debe confirmar en la ventana de advertencia amarilla."
+      },
+      {
+        "tiempo": "08:47",
+        "tiempo_seg": 527.0,
+        "titulo": "Tiempos estimados de encendido y apagado",
+        "descripcion": "El apagado completo toma aproximadamente 5 minutos, mientras que el encendido completo del sistema puede demorar de 11 a 15 minutos en completarse seg\u0000\u0013n el audio.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Apagado y reinicio",
+        "zona": null,
+        "captura": "capturas/23_08-47.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 527.2,
+        "puntaje": null,
+        "descripcion_original": "El apagado completo toma aproximadamente 5 minutos, mientras que el encendido completo del sistema puede demorar de 11 a 15 minutos."
+      },
+      {
+        "tiempo": "10:01",
+        "tiempo_seg": 601.0,
+        "titulo": "Reiniciar el Gantry por desconexiones",
+        "descripcion": "Si hay problemas de sincronizaci\u0000\u0013n de datos o microcortes de energ\u0000\u0013a, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Apagado y reinicio",
+        "zona": null,
+        "captura": "capturas/24_10-01.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 600.8,
+        "puntaje": null,
+        "descripcion_original": "Si hay problemas de sincronización de datos o microcortes de energía, se recomienda bajar el interruptor del Gantry durante 30 segundos y volverlo a subir."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 7.0,
+        "texto": "Presionan y comienza automático el encendido. No hay que hacer nada más hasta que aparece esta ventana."
+      },
+      {
+        "inicio": 9.0,
+        "fin": 20.0,
+        "texto": "Es importante el equipo reiniciarlo cada 24 horas, ojalá el turno de la noche que deje apagado el equipo y el turno de la mañana lo encienda."
+      },
+      {
+        "inicio": 21.0,
+        "fin": 30.0,
+        "texto": "Va a funcionar mucho más estable. Cuando el equipo ustedes lo apagan, o sea, cuando se enciende el equipo comienza a tomar registros de errores, los famosos log de errores de todo el equipo."
+      },
+      {
+        "inicio": 31.0,
+        "fin": 35.0,
+        "texto": "Cuando ustedes lo apagan, cierra esos registros de errores."
+      },
+      {
+        "inicio": 36.0,
+        "fin": 46.0,
+        "texto": "Entonces por eso también es bueno cada 24 horas. Si el equipo está encendido una semana, lo más seguro es que lo van a querer apagar con un paciente adentro porque está raro, no apagamos el equipo."
+      },
+      {
+        "inicio": 47.0,
+        "fin": 59.0,
+        "texto": "Entonces se va a demorar más el apagado y el encendido cuando está mucho tiempo sin apagar, sin reiniciar, porque esos log de errores los va a tener que guardar y va a hacer un registro de una semana."
+      },
+      {
+        "inicio": 60.0,
+        "fin": 65.0,
+        "texto": "Y el equipo va a guardar primero los registros de errores y después va a apagar porque necesita tener todo listo en caso de falla."
+      },
+      {
+        "inicio": 67.0,
+        "fin": 74.0,
+        "texto": "Luego al encender el equipo en la mañana o antes de empezar la jornada laboral, es importante hacer un warm up."
+      },
+      {
+        "inicio": 75.0,
+        "fin": 81.0,
+        "texto": "Debería arrojarlo de forma automática. Si no lo podemos llamar desde aquí, utilidad, tools..."
+      },
+      {
+        "inicio": 82.0,
+        "fin": 85.0,
+        "texto": "...y aquí, en el primero, warm up."
+      },
+      {
+        "inicio": 89.0,
+        "fin": 94.0,
+        "texto": "Exacto, el primero de la mañana siempre hay que ejecutarlo completo."
+      },
+      {
+        "inicio": 95.0,
+        "fin": 106.0,
+        "texto": "Porque lleva el tubo a la temperatura de trabajo, así alargamos la vida útil del tubo. Y además hay que elegir este, que es con datos de calibración, que repasa las técnicas de cerebro que siempre son como las más complejas."
+      },
+      {
+        "inicio": 107.0,
+        "fin": 114.0,
+        "texto": "Por lo mismo, como va a pasar, va a adquirir calibración de aire, la camilla tiene que estar totalmente retraída fuera del isocentro del gantry."
+      },
+      {
+        "inicio": 115.0,
+        "fin": 122.0,
+        "texto": "Porque si no se va a meter dentro del filtro y después van a decir, oye, en la imagen se ve una mancha negra en el medio, lo más seguro es porque se hizo esta calibración con la camilla adentro."
+      },
+      {
+        "inicio": 123.0,
+        "fin": 131.0,
+        "texto": "En ese caso, sacan la camilla y vuelven a lanzar el warm up con calibración completo y ahí se va a ir ese problema."
+      },
+      {
+        "inicio": 132.0,
+        "fin": 136.0,
+        "texto": "Durante el día no es necesario que ustedes hagan un warm up..."
+      },
+      {
+        "inicio": 137.0,
+        "fin": 140.0,
+        "texto": "...a menos que el equipo, en la pantalla acá, lo requiera."
+      },
+      {
+        "inicio": 141.0,
+        "fin": 145.0,
+        "texto": "Si el equipo lo requiere, ah, ya, por favor espere, lanzan el warm up..."
+      },
+      {
+        "inicio": 146.0,
+        "fin": 148.0,
+        "texto": "...y eso va a ser mucho más rápido."
+      },
+      {
+        "inicio": 149.0,
+        "fin": 154.0,
+        "texto": "Sí, aparece solo una pantalla que dice del warm up, como que está tratando de..."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 160.0,
+        "texto": "Eso puede ser durante el día, si no lo pide, aunque la OLP, que es la temperatura del tubo esté en cero, no es necesario que lo hagan."
+      },
+      {
+        "inicio": 161.0,
+        "fin": 167.0,
+        "texto": "Solo el primero del día para llevar el tubo a la temperatura de trabajo y así alargar su vida útil."
+      },
+      {
+        "inicio": 168.0,
+        "fin": 173.0,
+        "texto": "Esta es la pantalla principal, así va a encender."
+      },
+      {
+        "inicio": 174.0,
+        "fin": 180.0,
+        "texto": "Este es el teclado, este es el parlante por el cual ustedes van a escuchar, adentro hay un parlante igual, que es donde va a escuchar el paciente."
+      },
+      {
+        "inicio": 181.0,
+        "fin": 185.0,
+        "texto": "Acá está el botón de emergencia que también están en el gantry."
+      },
+      {
+        "inicio": 186.0,
+        "fin": 195.0,
+        "texto": "El volumen. El de la oreja es el volumen de ustedes para poder escuchar, muy fuerte o bajo."
+      },
+      {
+        "inicio": 196.0,
+        "fin": 200.0,
+        "texto": "Este, como dice acá, es el volumen para ustedes hablar, si está muy fuerte..."
+      },
+      {
+        "inicio": 201.0,
+        "fin": 204.0,
+        "texto": "...un, dos, tres, un, dos, tres. Aquí lo va manejando."
+      },
+      {
+        "inicio": 205.0,
+        "fin": 208.0,
+        "texto": "Para hablar hay que apretar el botón."
+      },
+      {
+        "inicio": 209.0,
+        "fin": 214.0,
+        "texto": "Este es para ejecutar los movimientos, es decir, yo le quiero decir, bueno esta es la pantalla principal, de aquí voy acá, yo le digo, mira, quiero mover la camilla por ejemplo hacia adentro."
+      },
+      {
+        "inicio": 215.0,
+        "fin": 225.0,
+        "texto": "El signo negativo indica la dirección, positivo hacia fuera, lo quiero mover, no sé, menos 300, se habilita..."
+      },
+      {
+        "inicio": 226.0,
+        "fin": 235.0,
+        "texto": "...y ahí van a ver, yo al presionar, la camilla se va a ejecutar el movimiento. Ya lo hizo, entonces para eso es este movimiento."
+      },
+      {
+        "inicio": 236.0,
+        "fin": 240.0,
+        "texto": "Lo mismo cuando les decía que hacen el doblescanograma, y se fijan que el paciente quedó más centrado."
+      },
+      {
+        "inicio": 240.0,
+        "fin": 255.0,
+        "texto": "quedó muy a la derecha y muy abajo de la doble escanograma y van a ver, bueno les voy a mostrar, se puede hacer una flechita, subir la imagen, correrla, y después al ejecutar, se va a encender este. Lo presionan y la camilla mecánicamente va a ejecutar el movimiento."
+      },
+      {
+        "inicio": 255.0,
+        "fin": 257.0,
+        "texto": "Y de ahí se cambia esto, ¿o no?"
+      },
+      {
+        "inicio": 257.0,
+        "fin": 272.0,
+        "texto": "Claro, de acá. De acá yo puedo decirles si es la entrar o salir, subir o bajar, siempre el signo indica la dirección, o left right."
+      },
+      {
+        "inicio": 272.0,
+        "fin": 281.0,
+        "texto": "Ah bueno, es más fácil. Cuando si están en otro equipo Canon o Toshiba, también ahí va a aparecer el tilt."
+      },
+      {
+        "inicio": 281.0,
+        "fin": 294.0,
+        "texto": "Y también es con más menos la dirección. Este es para dar radiación, para cortar la radiación. Esto el ventaneo."
+      },
+      {
+        "inicio": 294.0,
+        "fin": 305.0,
+        "texto": "Esto, el nivel y la ventana, estas son las ventanas por default."
+      },
+      {
+        "inicio": 305.0,
+        "fin": 314.0,
+        "texto": "Por ejemplo. Óseo, pulmón, mediastino."
+      },
+      {
+        "inicio": 314.0,
+        "fin": 328.0,
+        "texto": "Y siempre la tercera va a estar asociada a lo que ustedes están viendo. ¿Cómo? O sea, si están en cerebro la tercera va a estar en cerebro, porque está asociada al filtro de reconstrucción. Entonces si el filtro es de cerebro ya sabe cómo va a ir configurada esta ventana."
+      },
+      {
+        "inicio": 328.0,
+        "fin": 340.0,
+        "texto": "Y la tercera siempre es la por defecto, o sea, ¿ustedes quieren ver? La tres, la tres, y esa en teoría si no se hace ningún cambio es la que se va a ir al pac."
+      },
+      {
+        "inicio": 340.0,
+        "fin": 354.0,
+        "texto": "Si ustedes quieren ventanear bueno ahí ya le agregan la de ustedes pero esta es la que propone Canon. Estos botones no se van a usar porque son para el filming cuando se va a imprimir que bueno que ya se va de salida todo eso."
+      },
+      {
+        "inicio": 354.0,
+        "fin": 362.0,
+        "texto": "Y esto más que nada es para poder pasar de un paciente a otro."
+      },
+      {
+        "inicio": 362.0,
+        "fin": 378.0,
+        "texto": "Claro, bueno, antes de ver esto porque si no voy a apretar botones y se van a confundir. Vuelvo acá. Para visualizar la imagen tengo unas combinaciones. El de la derecha es ventaneo."
+      },
+      {
+        "inicio": 378.0,
+        "fin": 390.0,
+        "texto": "Hacia abajo, hacia los costados. Los dos juntos es como un libro para visualizar rápidamente la imagen. Los dos juntos. Entonces ese yo creo que es el más típico que van a usar."
+      },
+      {
+        "inicio": 390.0,
+        "fin": 404.0,
+        "texto": "Y el del medio es para pasar despacio, como corte a corte, muy similar a lo que hace este. Ah bueno, o sea, acceder imagen, este."
+      },
+      {
+        "inicio": 404.0,
+        "fin": 419.0,
+        "texto": "Ah no, que hay en el listado de la imagen. Bueno, esto es para pasar rápido. Este para saltar las series dentro del paciente y este para cambiar de un paciente a otro."
+      },
+      {
+        "inicio": 419.0,
+        "fin": 433.0,
+        "texto": "Luego acá, el del medio, si lo presiono es para hacer un paneo, el de la derecha con el del medio junto al mismo tiempo, una lupa."
+      },
+      {
+        "inicio": 433.0,
+        "fin": 446.0,
+        "texto": "O sea, por ejemplo ahí yo achiqué y después paneo porque estaba chueco, lo dejo ahí central. Esa es, entonces, los dos juntos como un libro,"
+      },
+      {
+        "inicio": 446.0,
+        "fin": 461.0,
+        "texto": "solo el de la derecha es para ventanear, el de la derecha con el medio una lupa, solo el del medio para hacer un paneo y el rotary para pasar suavemente de uno a otro."
+      },
+      {
+        "inicio": 461.0,
+        "fin": 479.0,
+        "texto": "Sí, ahí. ¿Sí, aló? Ya, lo voy a cerrar este que era para que saliera, doce doce años es la diferencia de adulto a pediátrico."
+      },
+      {
+        "inicio": 479.0,
+        "fin": 494.0,
+        "texto": "Y ese se cambia. ¿Cuál es su nombre?"
+      },
+      {
+        "inicio": 494.0,
+        "fin": 510.0,
+        "texto": "La fecha y hora, cierto, si yo hago un clic acá, la puedo cambiar, que de hecho se cambió, aquí yo la puedo cambiar y setear. Importante, o sea, si cambian, en Chile cambiamos a cada rato la hora."
+      },
+      {
+        "inicio": 510.0,
+        "fin": 527.0,
+        "texto": "Cuando se cambie, lo encienden en la mañana, ya está mal la hora, la atraso, la adelanto, lo que corresponda, cierto, setear y apagamos el equipo inmediatamente. ¿Ya? Inmediatamente para que haga efecto."
+      },
+      {
+        "inicio": 527.0,
+        "fin": 541.0,
+        "texto": "¿Cómo se apaga? Utilidad, utility, shut down. Espero un momento, porque a veces uno lo presiona sin querer, entonces va a aparecer una ventana amarilla que va a pedir confirmar."
+      },
+      {
+        "inicio": 541.0,
+        "fin": 554.0,
+        "texto": "¿Cómo fue eso, me explicó? Sí, sí, lo hacemos de nuevo. Y aquí está."
+      },
+      {
+        "inicio": 554.0,
+        "fin": 567.0,
+        "texto": "Entonces ahora, ¿okey? Y se apaga, y ustedes se pueden ir, el equipo se apaga automáticamente solo. Si no, me equivoqué, cancelar. Entonces, para apagar, aquí en utility,"
+      },
+      {
+        "inicio": 567.0,
+        "fin": 581.0,
+        "texto": "shut down, y espero a que aparezca la ventana amarilla. Cuando está apagado, para encender, presionar este botón, así que solo eso, es fácil."
+      },
+      {
+        "inicio": 581.0,
+        "fin": 598.0,
+        "texto": "El apagado es más o menos cinco minutos, algo así, recuerdo cuando la aplicación lo contabilicé, el encendido es más largo, pudiesen ser once, doce minutos."
+      },
+      {
+        "inicio": 598.0,
+        "fin": 615.0,
+        "texto": "Tal vez, para, como un estándar pueden decir quince minutos en encender, cinco en apagar. Entonces, veinte minutos igual es harto si quieren apagar, ojalá una vez apagado darle un minuto apagado y de ahí volver a encender."
+      },
+      {
+        "inicio": 615.0,
+        "fin": 630.0,
+        "texto": "Más que nada para que todos los discos dejen de girar y se vayan los capacitores se descarguen. Por eso a veces cuando dicen hay, a veces tenemos microcortes de energía, que no se sienten, pero el gantry sí lo va a sentir."
+      },
+      {
+        "inicio": 630.0,
+        "fin": 630.78,
+        "texto": "Entonces aparecen mensajes como data transfer, problemas, que seguramente van a llamar al equipo médico, a nuestro servicio técnico, y quizás lo van a conocer después porque le pueden dar los números de teléfono,"
+      },
+      {
+        "inicio": 630.78,
+        "fin": 630.78,
+        "texto": "de hecho nos pueden llamar al celular, y aun así generamos tickets para la trazabilidad, pero esa es la idea de Tecnoimagen, que le entrega los teléfonos, o sea ustedes pueden pedirlo. Incluso si hay un ingeniero que de repente les cae mejor o tienen una mejor relación,"
+      },
+      {
+        "inicio": 630.78,
+        "fin": 630.78,
+        "texto": "lo pueden llamar a él, pero siempre idealmente llamar al líder, porque él sabe dónde están sus ingenieros y genera los tickets y distribuye. Pero en caso de emergencia, no sé, Diego, sabes que tengo un problema, okey, eso lo podemos hacer."
+      },
+      {
+        "inicio": 630.78,
+        "fin": 630.78,
+        "texto": "Entonces él les va a decir a lo mejor, no, no apaguen ni prendan el equipo porque va a perder como veinte minutos, de, reinicie solo el gantry, el interruptor que les mostré. Entonces, lo bajan, le dan unos treinta segundos,"
+      },
+      {
+        "inicio": 630.78,
+        "fin": 630.78,
+        "texto": "lo suben y se van a dar cuenta que recupera inmediatamente la sincronización."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_05_Apagar_encender_warm_up_calibracion_aire.docx",
+    "pdf": "TC_05_Apagar_encender_warm_up_calibracion_aire.pdf",
+    "paginas": 18
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 273529,
+    "tokens_salida": 9951,
+    "tokens_pensamiento": 0,
+    "tokens_total": 283480,
+    "detalle_entrada": {
+      "TEXT": 7359,
+      "VIDEO": 239770,
+      "IMAGE": 26400
+    },
+    "llamadas": 6,
+    "batch": false,
+    "costo_usd": null
+  }
+}

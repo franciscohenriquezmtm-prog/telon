@@ -1,0 +1,921 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov",
+    "nombre": "TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT",
+    "duracion_seg": 697.73,
+    "duracion": "11:38",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 1548185150,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:17:38",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Visualizacion y Reconstruccion en Tomografo Canon",
+    "resumen": "El instructor clinico demuestra la navegacion basica en la consola de un tomografo computado Canon. Explica las funciones de visualizacion rapida, la carga de volumenes en el visualizador multiplanar (MPR) de distintas formas, el uso del teclado dedicado y el acceso a los datos crudos (Raw Data) para reconstrucciones adicionales.",
+    "truncado": false,
+    "tramos": 2,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 26 con cambios (39128 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 305498,
+      "tokens_salida": 10603,
+      "tokens_pensamiento": 0,
+      "tokens_total": 316101,
+      "detalle_entrada": {
+        "TEXT": 8370,
+        "VIDEO": 265228,
+        "IMAGE": 31900
+      },
+      "llamadas": 6,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:04",
+        "tiempo_seg": 4.0,
+        "titulo": "Visualizar con Auto View S",
+        "descripcion": "El boton Auto View-S permite acceder a la visualizacion de una imagen individual (single) y habilita los menus superiores de revision de imagenes.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Visualizacion de imagenes",
+        "zona": {
+          "x": 0.712,
+          "y": 0.202
+        },
+        "captura": "capturas/01_00-04.jpg",
+        "captura_anotada": "capturas/01_00-04_anotada.jpg",
+        "tiempo_real_seg": 4.6,
+        "puntaje": null,
+        "descripcion_original": "El boton Auto View S permite acceder a la visualizacion de una imagen individual (single) y habilita los menus superiores de revision de imagenes."
+      },
+      {
+        "tiempo": "00:20",
+        "tiempo_seg": 20.0,
+        "titulo": "Utilizar Image Selector",
+        "descripcion": "La opcion Image Selector en la pantalla permite volver a posicionar y ordenar todos los estudios adquiridos del paciente.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Visualizacion de imagenes",
+        "zona": {
+          "x": 0.38,
+          "y": 0.235
+        },
+        "captura": "capturas/02_00-20.jpg",
+        "captura_anotada": "capturas/02_00-20_anotada.jpg",
+        "tiempo_real_seg": 20.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:28",
+        "tiempo_seg": 28.0,
+        "titulo": "Comprender aviso Not for Diagnosis",
+        "descripcion": "La etiqueta amarilla Not for Diagnosis en la esquina superior derecha indica que la visualizacion InstaView es en tiempo real durante la adquisicion y no sirve para diagnostico final.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Visualizacion de imagenes",
+        "zona": {
+          "x": 0.956,
+          "y": 0.441
+        },
+        "captura": "capturas/03_00-28.jpg",
+        "captura_anotada": "capturas/03_00-28_anotada.jpg",
+        "tiempo_real_seg": 28.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:03",
+        "tiempo_seg": 63.0,
+        "titulo": "Seleccionar volumen para MPR",
+        "descripcion": "Para cargar un volumen en el visualizador MPR, primero se debe seleccionar el volumen deseado de la lista en pantalla.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion MPR",
+        "zona": {
+          "x": 0.318,
+          "y": 0.387
+        },
+        "captura": "capturas/04_01-03.jpg",
+        "captura_anotada": "capturas/04_01-03_anotada.jpg",
+        "tiempo_real_seg": 62.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:10",
+        "tiempo_seg": 70.0,
+        "titulo": "Cargar volumen en MPR",
+        "descripcion": "Se presiona el boton MPR en la esquina superior derecha para cargar las imagenes en los tres planos (axial, coronal y sagital).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion MPR",
+        "zona": {
+          "x": 0.838,
+          "y": 0.173
+        },
+        "captura": "capturas/05_01-10.jpg",
+        "captura_anotada": "capturas/05_01-10_anotada.jpg",
+        "tiempo_real_seg": 69.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:19",
+        "tiempo_seg": 79.0,
+        "titulo": "Buscar pacientes desde Directory",
+        "descripcion": "Estando en MPR, se puede presionar Directory para abrir la base de datos de pacientes y cargar un volumen diferente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion MPR",
+        "zona": {
+          "x": 0.603,
+          "y": 0.114
+        },
+        "captura": "capturas/06_01-19.jpg",
+        "captura_anotada": "capturas/06_01-19_anotada.jpg",
+        "tiempo_real_seg": 78.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:04",
+        "tiempo_seg": 124.0,
+        "titulo": "Cargar MPR desde Auto View",
+        "descripcion": "Otra via para el MPR es seleccionar el volumen en Auto View S y hacer clic en el boton MPR que se destaca en color azul.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion MPR",
+        "zona": {
+          "x": 0.811,
+          "y": 0.172
+        },
+        "captura": "capturas/07_02-04.jpg",
+        "captura_anotada": "capturas/07_02-04_anotada.jpg",
+        "tiempo_real_seg": 124.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:13",
+        "tiempo_seg": 133.0,
+        "titulo": "Operar teclado de navegacion",
+        "descripcion": "El instructor indica la funcion de las teclas del teclado dedicado: cambiar de paciente, navegar entre series, avanzar imagenes lento o rapido.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Uso de accesorios",
+        "zona": {
+          "x": 0.642,
+          "y": 0.463
+        },
+        "captura": "capturas/08_02-13.jpg",
+        "captura_anotada": "capturas/08_02-13_anotada.jpg",
+        "tiempo_real_seg": 132.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:04",
+        "tiempo_seg": 184.0,
+        "titulo": "Cambiar distribucion de Layout",
+        "descripcion": "En el menu Layout de la seccion MPR, se pueden seleccionar diferentes configuraciones para ver planos coronal, sagital, axial u oblicuos.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion MPR",
+        "zona": {
+          "x": 0.568,
+          "y": 0.157
+        },
+        "captura": "capturas/09_03-04.jpg",
+        "captura_anotada": "capturas/09_03-04_anotada.jpg",
+        "tiempo_real_seg": 183.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:16",
+        "tiempo_seg": 196.0,
+        "titulo": "Ampliar imagen con 1024",
+        "descripcion": "La opcion 1024 Display dentro del menu Layout permite expandir el tamano de la imagen seleccionada para un analisis mas detallado.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Visualizacion de imagenes",
+        "zona": {
+          "x": 0.465,
+          "y": 0.133
+        },
+        "captura": "capturas/10_03-16.jpg",
+        "captura_anotada": "capturas/10_03-16_anotada.jpg",
+        "tiempo_real_seg": 195.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:30",
+        "tiempo_seg": 210.0,
+        "titulo": "Acceder a Raw Data",
+        "descripcion": "Se pulsa el boton Raw Data en la barra superior para buscar y reconstruir datos crudos del paciente cuando falte un volumen especifico.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion adicional",
+        "zona": {
+          "x": 0.764,
+          "y": 0.197
+        },
+        "captura": "capturas/11_03-30.jpg",
+        "captura_anotada": "capturas/11_03-30_anotada.jpg",
+        "tiempo_real_seg": 209.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:51",
+        "tiempo_seg": 231.0,
+        "titulo": "Cargar serie helicoidal",
+        "descripcion": "Dentro del menu de Raw Data, se debe buscar la serie con modo HE (helicoidal) y cargarla para abrir el protocolo de reconstruccion.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstruccion adicional",
+        "zona": {
+          "x": 0.511,
+          "y": 0.308
+        },
+        "captura": "capturas/12_03-51.jpg",
+        "captura_anotada": "capturas/12_03-51_anotada.jpg",
+        "tiempo_real_seg": 231.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:05",
+        "tiempo_seg": 245.0,
+        "titulo": "Seleccionar el tipo de reconstrucción axial",
+        "descripcion": "El operador indica que los axiales predeterminados son cortes gruesos, y que para un mayor detalle se debe trabajar con volumen.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": null,
+        "captura": "capturas/13_04-05.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 244.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:13",
+        "tiempo_seg": 253.0,
+        "titulo": "Habilitar volumen y seleccionar filtro",
+        "descripcion": "Se activa la opción de volumen ('ON') y se abre el menú para seleccionar el filtro adecuado (Cerebro, Cuello, Cuerpo o Hueso) para la reconstrucción.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.459,
+          "y": 0.376
+        },
+        "captura": "capturas/14_04-13.jpg",
+        "captura_anotada": "capturas/14_04-13_anotada.jpg",
+        "tiempo_real_seg": 253.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:37",
+        "tiempo_seg": 277.0,
+        "titulo": "Configurar espesor de corte de volumen",
+        "descripcion": "Se ajusta el espesor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para optimizar el número total de imágenes.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.393,
+          "y": 0.514
+        },
+        "captura": "capturas/15_04-37.jpg",
+        "captura_anotada": "capturas/15_04-37_anotada.jpg",
+        "tiempo_real_seg": 276.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:52",
+        "tiempo_seg": 292.0,
+        "titulo": "Seleccionar D-FOV de noventa centimetros",
+        "descripcion": "Se hace clic sobre el parametro D-FOV para seleccionar 900.0 (XL) en lugar de un valor inferior, asegurando el campo de vision extendido adecuado. En pantalla se muestra D-FOV con el valor de 900.0 (XL).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.295,
+          "y": 0.568
+        },
+        "captura": "capturas/16_04-52.jpg",
+        "captura_anotada": "capturas/16_04-52_anotada.jpg",
+        "tiempo_real_seg": 292.6,
+        "puntaje": null,
+        "titulo_original": "Activar el FOV extendido a 90",
+        "descripcion_original": "Se hace clic sobre el parámetro D-FOV para alternar de 70 (XL) a 90 (XXL) y asegurar que se use todo el campo de visión extendido."
+      },
+      {
+        "tiempo": "05:05",
+        "tiempo_seg": 305.0,
+        "titulo": "Activar o desactivar la opcion SEMAR",
+        "descripcion": "Se hace clic sobre la casilla SEMAR para alternar su estado; en este caso la pantalla muestra la opcion SEMAR en posicion OFF. El audio menciona su uso para la reduccion de artefactos metalicos.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.208,
+          "y": 0.624
+        },
+        "captura": "capturas/17_05-05.jpg",
+        "captura_anotada": "capturas/17_05-05_anotada.jpg",
+        "tiempo_real_seg": 304.8,
+        "puntaje": null,
+        "titulo_original": "Activar la función SEMAR",
+        "descripcion_original": "En caso de prótesis metálicas, se activa la opción SEMAR ('Single Energy Metal Artifact Reduction') para reducir artefactos."
+      },
+      {
+        "tiempo": "05:25",
+        "tiempo_seg": 325.0,
+        "titulo": "Verificar la generación de dos volúmenes",
+        "descripcion": "Al activar SEMAR se generarán de manera obligatoria dos volúmenes: uno con SEMAR y otro sin SEMAR para poder comparar la calidad de imagen.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Reconstrucción de volumen",
+        "zona": null,
+        "captura": "capturas/18_05-25.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 325.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "06:01",
+        "tiempo_seg": 361.0,
+        "titulo": "Ingresar a los detalles de Scan Details",
+        "descripcion": "Se selecciona la pestana Scan Details para configurar y verificar las posiciones de inicio y fin sobre la tabla de valores en lugar de arrastrar manualmente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.491,
+          "y": 0.448
+        },
+        "captura": "capturas/19_06-01.jpg",
+        "captura_anotada": "capturas/19_06-01_anotada.jpg",
+        "tiempo_real_seg": 361.6,
+        "puntaje": null,
+        "titulo_original": "Ingresar a Scan Axial",
+        "descripcion_original": "Se recomienda usar la pestaña 'Scan Axial' en lugar de definir manualmente las posiciones de inicio y término sobre la tabla de valores, por ser más cómodo y seguro."
+      },
+      {
+        "tiempo": "06:40",
+        "tiempo_seg": 400.0,
+        "titulo": "Iniciar reconstruccion con boton Recon",
+        "descripcion": "Una vez definidos los parametros de la adquisicion, se presiona el boton Recon ubicado en la esquina inferior izquierda del panel para procesar las imagenes.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": {
+          "x": 0.108,
+          "y": 0.72
+        },
+        "captura": "capturas/20_06-40.jpg",
+        "captura_anotada": "capturas/20_06-40_anotada.jpg",
+        "tiempo_real_seg": 399.4,
+        "puntaje": null,
+        "titulo_original": "Iniciar reconstrucción con botón Recon",
+        "descripcion_original": "Una vez definidos los parámetros, se presiona el botón 'Recon' en la esquina inferior izquierda de la pantalla para procesar las imágenes."
+      },
+      {
+        "tiempo": "06:51",
+        "tiempo_seg": 411.0,
+        "titulo": "Consultar valores de ventana predeterminados",
+        "descripcion": "Los valores de ventana de visualización vienen predeterminados de acuerdo al filtro seleccionado y no se modifican desde esta pantalla antes de la reconstrucción. En pantalla se aprecia WL=130 y WW=170 en la primera referencia.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Reconstrucción de volumen",
+        "zona": null,
+        "captura": "capturas/21_06-51.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 410.8,
+        "puntaje": null,
+        "descripcion_original": "Los valores de ventana de visualización vienen predeterminados de acuerdo al filtro seleccionado y no se modifican desde esta pantalla antes de la reconstrucción."
+      },
+      {
+        "tiempo": "07:52",
+        "tiempo_seg": 472.0,
+        "titulo": "Cargar visualizacion en AutoView o Raw Data",
+        "descripcion": "Utilizando el menu de IV Utility, se selecciona la opcion Raw Data File o Image File para cargar las imagenes de los pacientes a procesar.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Herramientas de visualización",
+        "zona": {
+          "x": 0.659,
+          "y": 0.135
+        },
+        "captura": "capturas/22_07-52.jpg",
+        "captura_anotada": "capturas/22_07-52_anotada.jpg",
+        "tiempo_real_seg": 472.2,
+        "puntaje": null,
+        "titulo_original": "Cargar visualización múltiple en Auto View",
+        "descripcion_original": "Utilizando Auto View M, se pueden cargar hasta 4 imágenes de diferentes fases o filtros del mismo paciente para compararlos simultáneamente en pantalla."
+      },
+      {
+        "tiempo": "08:24",
+        "tiempo_seg": 504.0,
+        "titulo": "Ingresar a la herramienta MPR",
+        "descripcion": "Se selecciona el boton MPR ubicado en el panel superior derecho de la pantalla para realizar reconstrucciones multiplanares de las imagenes cargadas.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": {
+          "x": 0.829,
+          "y": 0.122
+        },
+        "captura": "capturas/23_08-24.jpg",
+        "captura_anotada": "capturas/23_08-24_anotada.jpg",
+        "tiempo_real_seg": 504.6,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona el botón 'MPR' para realizar reconstrucciones multiplanares de las imágenes cargadas desde Raw Data."
+      },
+      {
+        "tiempo": "08:52",
+        "tiempo_seg": 532.0,
+        "titulo": "Rotar planos con precision",
+        "descripcion": "Se puede rotar la imagen de manera precisa utilizando el raton sobre las referencias de color verde en la pantalla para alinear la anatomia del paciente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": {
+          "x": 0.524,
+          "y": 0.376
+        },
+        "captura": "capturas/24_08-52.jpg",
+        "captura_anotada": "capturas/24_08-52_anotada.jpg",
+        "tiempo_real_seg": 531.0,
+        "puntaje": null,
+        "titulo_original": "Rotación precisa con tecla Control",
+        "descripcion_original": "Se advierte presionar la tecla 'Control' del teclado físico junto con el clic derecho del mouse para rotar la imagen sin desconfigurar accidentalmente los planos."
+      },
+      {
+        "tiempo": "09:07",
+        "tiempo_seg": 547.0,
+        "titulo": "Utilizar la línea imaginaria de rotación",
+        "descripcion": "Al hacer clic en el centro de la imagen para rotar, mientras más lejos del centro se arrastre el mouse, mayor control y precisión se tendrá en la rotación.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": null,
+        "captura": "capturas/25_09-07.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 546.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:39",
+        "tiempo_seg": 579.0,
+        "titulo": "Configurar cortes en la pestaña Batch MPR",
+        "descripcion": "Se selecciona la pestaña Batch MPR para configurar los cortes secuenciales del estudio en base al plano seleccionado.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": {
+          "x": 0.419,
+          "y": 0.158
+        },
+        "captura": "capturas/26_09-39.jpg",
+        "captura_anotada": "capturas/26_09-39_anotada.jpg",
+        "tiempo_real_seg": 579.6,
+        "puntaje": null,
+        "titulo_original": "Configurar Batch MPR para cortes secuenciales",
+        "descripcion_original": "Se utiliza la opción 'Batch MPR' para programar una serie de cortes axiales o coronales, definiendo el inicio, fin y espesor de corte."
+      },
+      {
+        "tiempo": "10:17",
+        "tiempo_seg": 617.0,
+        "titulo": "Inclinacion de planos sobre la imagen",
+        "descripcion": "Para inclinar el plano de los cortes, se debe rotar directamente la imagen de referencia (no las líneas rojas del plano, que son fijas en este equipo).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": null,
+        "captura": "capturas/27_10-17.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 616.0,
+        "puntaje": null,
+        "titulo_original": "Inclinación de planos sobre la imagen"
+      },
+      {
+        "tiempo": "11:05",
+        "tiempo_seg": 665.0,
+        "titulo": "Ajustar visualizacion de espesor de corte",
+        "descripcion": "Se ajusta el espesor de corte utilizando el selector de espesor en pantalla, configurado actualmente con un valor de 3.0 mm y formato Average.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Multiplanar (MPR)",
+        "zona": {
+          "x": 0.603,
+          "y": 0.146
+        },
+        "captura": "capturas/28_11-05.jpg",
+        "captura_anotada": "capturas/28_11-05_anotada.jpg",
+        "tiempo_real_seg": 664.4,
+        "puntaje": null,
+        "titulo_original": "Ajustar visualización de espesor de corte",
+        "descripcion_original": "Se ajusta el espesor de corte de la visualización en pantalla y se selecciona el modo de proyección como Average, MIP o MinIP."
+      },
+      {
+        "tiempo": "11:13",
+        "tiempo_seg": 673.0,
+        "titulo": "Visualizar reconstrucciones 3D",
+        "descripcion": "Se ingresa al menu de reconstruccion 3D para cargar los volumenes procesados y utilizar plantillas preestablecidas de visualizacion de tejidos en pantalla.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Herramientas de visualización",
+        "zona": {
+          "x": 0.819,
+          "y": 0.16
+        },
+        "captura": "capturas/29_11-13.jpg",
+        "captura_anotada": "capturas/29_11-13_anotada.jpg",
+        "tiempo_real_seg": 673.6,
+        "puntaje": null,
+        "descripcion_original": "Se ingresa a la pestaña '3D' para cargar los volúmenes procesados y utilizar plantillas preestablecidas de visualización de tejidos."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 15.0,
+        "texto": "Como pueden ver, si hago click en auto view s que es visualización s de single, de una imagen, se habilitan arriba los otros menús que son para revisión de imagen, ¿se fijan?"
+      },
+      {
+        "inicio": 15.0,
+        "fin": 26.0,
+        "texto": "Scan solamente para poder visualizar, y acá abajo en la uno, image selector, puedo volver a posicionar todo. Entonces, el auto view s es como para poder literalmente visualizar."
+      },
+      {
+        "inicio": 26.0,
+        "fin": 44.0,
+        "texto": "Este dice insta view, y dice no es diagnóstico, porque la imagen es en tiempo real. Cuando va adquiriendo, esto aparece inmediatamente, entonces apenas termina, ustedes ya lo pueden revisar para ver si salió bien o tienen algún problema, y a veces esta es la que envían al PACS, por eso la marcaron como no diagnóstico, y dice insta view."
+      },
+      {
+        "inicio": 44.0,
+        "fin": 60.0,
+        "texto": "Bueno, para el localizador, ¿cierto?, y la simulación que sería el volumen. Reporte de dosis."
+      },
+      {
+        "inicio": 60.0,
+        "fin": 75.0,
+        "texto": "Entonces, si yo quiero abrir este volumen en el MPR, primero es seleccionarlo, ahí está seleccionado, ¿cierto?, y cargar en MPR. Bueno, ya estaba cargado."
+      },
+      {
+        "inicio": 75.0,
+        "fin": 87.0,
+        "texto": "Lo otro que puedo hacer es desde MPR yo apretar el directorio y llamar otro volumen. ¿Cómo se carga? No es como tan intuitivo, apretó dos cosas a la vez, ¿apretó una y después la otra?"
+      },
+      {
+        "inicio": 87.0,
+        "fin": 100.0,
+        "texto": "Es que tienes como tres formas de llegar al MPR. Una es dentro de MPR, en directorio, tú buscas el paciente que quieras y el volumen, y lo cargas."
+      },
+      {
+        "inicio": 100.0,
+        "fin": 120.0,
+        "texto": "Lo otro es cuando estás en auto view s que es el visualizador, por ejemplo, estoy con otro paciente, por ejemplo, acá, entonces este, ah, ya, este lo quiero ver ahora en MPR, ya, por ejemplo, le hago click acá, si este lo quiero ver en MPR, entonces acá, eso sí, desde auto view s, seleccionas volumen, tiene que estar en azul el cargar en MPR, y ahí lo carga en MPR."
+      },
+      {
+        "inicio": 120.0,
+        "fin": 142.0,
+        "texto": "Ah, ¿y qué tecla usó para pasar de paciente? De que pasó así. Ah, esta. De un paciente a otro, las series dentro del paciente, la imagen en lento, la imagen en rápido, esto es si quisieran usar esto, si no puede ser a puro mouse."
+      },
+      {
+        "inicio": 142.0,
+        "fin": 164.0,
+        "texto": "Y la otra forma es que yo estoy acá en el selector de imagen donde yo puedo visualizar todos los pacientes, dentro de ese paciente todas las imágenes, por ejemplo, el doble escanograma, el insta view que dice que se puede borrar, localizador, etcétera. Los que dicen volumen son los volúmenes finos, o sea, la reconstrucción que necesitamos utilizar."
+      },
+      {
+        "inicio": 164.0,
+        "fin": 180.0,
+        "texto": "Entonces, acá yo le puedo decir este, cárgalo, por ejemplo, puede ser en auto view s o no, cárgalo, este, y aquí cargar, este volumen en MPR, cargar, y lo carga. Entonces, tienen distintas formas de llegar al mismo lugar."
+      },
+      {
+        "inicio": 180.0,
+        "fin": 190.0,
+        "texto": "Ah, el layout coronal, sagital, axial, y aquí se genera un plano oblicuo."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 208.0,
+        "texto": "Sí, acá en, en layout, acá perdón, en auto view s, en layout, pueden poner mil veinticuatro para visualizarlo todo. Si quieren volver atrás, descliquean el mil veinticuatro, y de acá pueden volver a llamar el image selector."
+      },
+      {
+        "inicio": 208.0,
+        "fin": 239.0,
+        "texto": "Esta es la raw data, es decir, les faltó un volumen óseo, por ejemplo, entonces vuelvo, voy a la raw data, busco el paciente, este paciente, y acá me dice escanograma, no es eso lo que quiero utilizar, este es el localizador, helicoidal, esta es la que yo necesito, ¿cierto?, la helicoidal y la cargo. La carga en la raw data y si se fijan, asemeja al protocolo de adquisición, cosa de que cuando"
+      },
+      {
+        "inicio": 480.0,
+        "fin": 484.0,
+        "texto": "Si quieren ir a la road- es el mismo menú. Entonces, van directo a la recon."
+      },
+      {
+        "inicio": 484.0,
+        "fin": 489.0,
+        "texto": "Los axiales son cortes gruesos. Yo voy a decir no, yo quiero volumen."
+      },
+      {
+        "inicio": 489.0,
+        "fin": 495.0,
+        "texto": "Está todo en blanco, entonces no hay ninguno encendido. On, enciendo este volumen."
+      },
+      {
+        "inicio": 495.0,
+        "fin": 501.0,
+        "texto": "¿De qué lo quiero? De cuerpo, cerebro, cuello. Aquí elijo el filtro para saber lo que voy a reconstruir."
+      },
+      {
+        "inicio": 501.0,
+        "fin": 511.0,
+        "texto": "O por ejemplo, eh no sé, radioterapia... eso... hueso, por ejemplo. Fino. Okay."
+      },
+      {
+        "inicio": 511.0,
+        "fin": 516.0,
+        "texto": "Entonces aquí yo voy a generar un volumen óseo."
+      },
+      {
+        "inicio": 516.0,
+        "fin": 527.0,
+        "texto": "De 0.5 cada 0.3 me va a dar 1.574 imágenes. Tal vez es demasiado fino. Puede ser de 1 cada 0.8. Van a ser menos imágenes."
+      },
+      {
+        "inicio": 527.0,
+        "fin": 537.0,
+        "texto": "Y de acá puedo pedir el FOV extendido, que está en 70. Yo digo, no, esto lo quiero- le hago un clic y, se fijan, subió a 90. Entonces ahora va a ser todo el FOV extendido."
+      },
+      {
+        "inicio": 537.0,
+        "fin": 547.0,
+        "texto": "Y por ejemplo, eh tenía una prótesis metálica, entonces yo ahora quiero aplicar SEMAR. Y está acá, SEMAR."
+      },
+      {
+        "inicio": 547.0,
+        "fin": 554.0,
+        "texto": "On. Single Energy Metal Artifact Reduction. O sea, los MAR. IMAR, OMAR... en este caso es SEMAR."
+      },
+      {
+        "inicio": 554.0,
+        "fin": 563.0,
+        "texto": "Eso es a partir del volumen. Entonces... Entonces va a generar un volumen ahora, en este caso, como el ejemplo, óseo, de 1 cada 0.8 y con SEMAR."
+      },
+      {
+        "inicio": 563.0,
+        "fin": 571.0,
+        "texto": "Al activar SEMAR genera dos volúmenes, sí o sí. Uno con SEMAR y uno sin SEMAR para que ustedes puedan ver si es que se perdió algo."
+      },
+      {
+        "inicio": 571.0,
+        "fin": 575.0,
+        "texto": "Aunque en el sin SEMAR, la verdad es que no va a aportar mucho. Pero por cuestiones de ejemplo. Y si acá estoy programando un cuello y de ese cuello yo quiero sacar una reconstrucción del maxilofacial."
+      },
+      {
+        "inicio": 575.0,
+        "fin": 584.0,
+        "texto": "Y quiero que solamente el maxilofacial tenga el SEMAR."
+      },
+      {
+        "inicio": 584.0,
+        "fin": 590.0,
+        "texto": "Entonces voy acá, porque aquí yo puedo planificar... acá con los dos."
+      },
+      {
+        "inicio": 590.0,
+        "fin": 599.0,
+        "texto": "Yo puedo buscar inicio en start, y término, end, del volumen, y ajustar acá el..."
+      },
+      {
+        "inicio": 599.0,
+        "fin": 604.0,
+        "texto": "Pero esto es incómodo. O sea, yo le recomiendo apretar acá, Scan Axial,"
+      },
+      {
+        "inicio": 604.0,
+        "fin": 610.0,
+        "texto": "y le aparece tal cual como fue en el... en el protocolo. Se fijan, es más fácil para ustedes."
+      },
+      {
+        "inicio": 610.0,
+        "fin": 620.0,
+        "texto": "Scan Axial. Entonces aquí yo digo, no, ¿saben qué? En realidad yo quiero... ah, bueno, esto está limitado por la adquisición. La adquisición fue acá, yo no me puedo correr."
+      },
+      {
+        "inicio": 620.0,
+        "fin": 628.0,
+        "texto": "Entonces, digamos, yo no quiero, como tú decías, eh voy a sacar aquí el maxilo. Claro."
+      },
+      {
+        "inicio": 628.0,
+        "fin": 636.0,
+        "texto": "Entonces, aquí tengo el cuello y aprovecho y aquí le saco el maxilo y aquí elijo, claro, hueso, fino, por ejemplo."
+      },
+      {
+        "inicio": 636.0,
+        "fin": 640.0,
+        "texto": "Y acá le puedo poner, no sé... Maxilo."
+      },
+      {
+        "inicio": 640.0,
+        "fin": 647.0,
+        "texto": "Por ejemplo. Enter. Entonces, se va a ir con esta serie, con esta descripción. Yo presiono recon, y estas 592 van a aparecer acá."
+      },
+      {
+        "inicio": 647.0,
+        "fin": 651.0,
+        "texto": "Y se van a cargar en el... en el mismo paciente."
+      },
+      {
+        "inicio": 651.0,
+        "fin": 658.0,
+        "texto": "Los valores de la ventana están preseteados o yo los puedo modificar acá? Están seteados, de acuerdo a este filtro... esta es la ventana que va... Ah, ya. No puedo como yo ampliar más la ventana si quisiera. No, está por... Está seteado por esto."
+      },
+      {
+        "inicio": 658.0,
+        "fin": 668.0,
+        "texto": "Después en la imagen también podrían modificarla y de ahí dejarla modificada y enviarla al PACS, a la ventana que tú quieras. Pero de acá no se va a ir con la que está por defecto."
+      },
+      {
+        "inicio": 668.0,
+        "fin": 678.0,
+        "texto": "Y si quiero otro volumen al mismo tiempo, no sé, genero este... ya, y este... y este otro acá. Le puedo poner otro... otra cosa."
+      },
+      {
+        "inicio": 678.0,
+        "fin": 684.0,
+        "texto": "Recon, y ahí van a generar los dos volúmenes al mismo tiempo, porque los dos están encendidos, están en naranja."
+      },
+      {
+        "inicio": 684.0,
+        "fin": 688.0,
+        "texto": "Y así es como yo voy a la raw data y puedo hacer reconstrucción."
+      },
+      {
+        "inicio": 688.0,
+        "fin": 697.0,
+        "texto": "Para ampliar el FOV- o sea, para tener el FOV extendido a 90, la adquisición tiene que ser en el mayor, en el L, en el XL, en 70, sí o sí. Si lo adquirió en 68, no le va a permitir hacer el FOV extendido."
+      },
+      {
+        "inicio": 697.0,
+        "fin": 697.73,
+        "texto": "Close."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "AutoView S, acá... bueno, si necesitan hay un AutoView M, que es de single múltiple, que me permite ver cuatro imágenes."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Por ejemplo, yo podría cargar aquí el paciente acá, y aquí cargar esta otra, por ejemplo. Si tuviera arterial, venoso, tardío, no sé... un ejemplo... esto es para ir a imagenología, pero..."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "aquí pueden ver varias al mismo tiempo. Hago clic en uno, lo arrastro a la derecha, y puedo visualizar los dos al mismo tiempo."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Entonces, si quieren ver, no sé, un óseo con un filtro, con otro filtro para ver cuál queda mejor, acá pueden comparar. Raw data, MPR, cierto?"
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Acá puedo rotar la imagen, puedo rotarla, hacer zoom. O yo le recomiendo no ocupar esta,"
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "pueden ocupar el zoom con la combinación de teclas, porque a veces están rotando, están jugando y están, no sé, 2 minutos dejando los ángulos que quieren y después quieren visualizar la imagen, hacer esto, y se equivocan y hacen así... pierden todo."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Entonces, mi recomendación es que con control, presiona control y el otro clic, el de la derecha, y ya pueden hacer rotación."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Entonces, así no se equivocan y lo rotan sin querer. Al momento de rotar, si hacen aquí en el centro de la imagen,"
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "tienen que imaginar que en el centro de la imagen sale una línea. Mientras más larga sea la línea, yo voy a tener mejor definición para la rotación."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Si la línea es muy corta, una pequeña rotación va a ser- y se va a ver la variación fuerte. Aquí cuesta mucho hacer... se fijan, un pequeño giro se mueve mucho."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Pero si hago el clic más afuera, miren, se mueve más lento. Entonces por eso es como que tienen que imaginar una línea, que la línea es la que están moviendo, mientras más larga,"
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "mayor precisión tiene."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Si fuera necesario hacer un batch, clic acá, clic en el... por ejemplo, axial."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Buscar, no sé, por ejemplo, inicio, start... Puede ser también de acá, el end, y el corte, no sé, de 3... por ejemplo, cada 3."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Y axial. Y aquí puedo poner, no sé, óseo... óseo... lo que quieran, partes blandas, bueno... esto es más para imagenología, pero... y acá, save, y va a guardar estos cortes axiales."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Después van acá, al coronal."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Por ejemplo. Start, end, lo mismo. O sea, esto lo quiero de 2, cada 2."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Y aquí ya define que es coronal. Guardar. Y ahí sacan sus reformateos."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Puedo inclinar los cortes, ¿cierto? Sí, sí, sí. Con control. Acá. Por ejemplo."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Yo inclino la imagen. O sea, yo inclino esta y tienes que ver el resultado acá. ¿Se fijan?"
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "No se pueden inclinar los cortes. No. Por imagen. Sí, hay otros que mueven las líneas en otras marcas, no. Acá es la imagen."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Entonces así pueden sacar sus reformateo."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Y donde decía average, si uno lo cambia puede hacer un MIP o... Sí, sí, sí. Acá es la... el espesor de corte para visualizar y acá el average, MIP o minIP."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "Para sacarlo automático. El 3D, bueno, lo que está cargado en el MPR se carga también en el 3D cuando quieran y tienen todas estas."
+      },
+      {
+        "inicio": 697.73,
+        "fin": 697.73,
+        "texto": "O también de acá pueden llamar a algún paciente... por ejemplo, cargar... lo va a cargar acá y ahora ustedes eligen qué es lo que quieren ver. Cardiopatías, polígono de Willis, MIP, aorta, no sé, óseo... aquí está el de pelvis."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx",
+    "pdf": "TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf",
+    "paginas": 21
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 305498,
+    "tokens_salida": 10603,
+    "tokens_pensamiento": 0,
+    "tokens_total": 316101,
+    "detalle_entrada": {
+      "TEXT": 8370,
+      "VIDEO": 265228,
+      "IMAGE": 31900
+    },
+    "llamadas": 6,
+    "batch": false,
+    "costo_usd": null
+  }
+}

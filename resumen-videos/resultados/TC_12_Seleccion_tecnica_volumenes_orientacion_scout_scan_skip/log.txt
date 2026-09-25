@@ -1,0 +1,44 @@
+16:38:07 === TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov: 13:23, 1080x1920, 59.97 fps, 1698 MB -> salida/TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip
+16:38:07 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:38:07   TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:38:07   transcodificando TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov -> TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:38:39       9 % (01:12 de 13:23)
+16:39:11      19 % (02:34 de 13:23)
+16:39:42      29 % (03:54 de 13:23)
+16:40:14      39 % (05:16 de 13:23)
+16:40:44      49 % (06:36 de 13:23)
+16:41:15      59 % (07:57 de 13:23)
+16:41:46      69 % (09:18 de 13:23)
+16:42:17      79 % (10:38 de 13:23)
+16:42:48      90 % (12:00 de 13:23)
+16:43:16     100 % (13:22 de 13:23)
+16:43:16   copia ligera lista: 45.5 MB
+16:43:16 Subiendo TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip_subida.mp4 (47.8 MB, video/mp4) a la Files API…
+16:43:19 Subido como files/5f4h5r5q02vj; esperando a que Gemini lo procese…
+16:43:39 Archivo files/5f4h5r5q02vj listo (ACTIVE).
+16:43:39 Analizando TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 1/3: 00:00–04:00) (resolución alta)…
+16:43:54   10 momentos brutos, 71709 tokens.
+16:43:54 Analizando TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 2/3: 04:00–08:00) (resolución alta)…
+16:44:11   9 momentos brutos, 71693 tokens.
+16:44:11 Analizando TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 3/3: 08:00–13:23) (resolución alta)…
+16:44:30   12 momentos brutos, 96256 tokens.
+16:44:30 Análisis terminado: 31 momentos.
+16:44:30 Transcribiendo el audio de TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 1/3)…
+16:44:41 Transcribiendo el audio de TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 2/3)…
+16:44:53 Transcribiendo el audio de TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip con gemini-3.5-flash (tramo 3/3)…
+16:45:08 Transcripción: 137 segmentos, 81216 tokens.
+16:45:08 Archivo remoto files/5f4h5r5q02vj eliminado.
+16:45:08 momentos.json guardado (31 momentos).
+16:45:08 Extrayendo 31 capturas de TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov…
+16:45:20   10/31 capturas
+16:45:31   20/31 capturas
+16:45:42   30/31 capturas
+16:45:44 Capturas: 31 extraídas, 0 fallidas
+16:45:44 Refinando títulos y descripciones con 31 capturas en alta resolución (gemini-3.5-flash)…
+16:45:44 Refinando con gemini-3.5-flash los textos de 31 pasos a partir de sus capturas (3 petición(es) de hasta 15 imágenes)…
+16:46:13 Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43286 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:46:28 Anotaciones: 31 capturas con círculo/flecha.
+16:46:28   documentos: 31 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+16:46:29   docx: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx
+16:46:32   pdf: TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf (24 páginas)
+16:46:32 Listo en 8 min 25 s: 31 momentos, 24 páginas -> TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx, TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf

@@ -1,0 +1,46 @@
+15:36:36 === TC_01_Boton_emergencia_y_botonera_gantry.mov: 05:53, 1080x1920, 59.97 fps, 961 MB -> salida/TC_01_Boton_emergencia_y_botonera_gantry
+15:36:36 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:36:36   transcodificando TC_01_Boton_emergencia_y_botonera_gantry.mov -> TC_01_Boton_emergencia_y_botonera_gantry_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:49:46 === TC_01_Boton_emergencia_y_botonera_gantry.mov: 05:53, 1080x1920, 59.97 fps, 961 MB -> salida/TC_01_Boton_emergencia_y_botonera_gantry
+15:49:46 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:49:46   transcodificando TC_01_Boton_emergencia_y_botonera_gantry.mov -> TC_01_Boton_emergencia_y_botonera_gantry_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:49:56       9 % (00:34 de 05:53)
+15:50:04      20 % (01:09 de 05:53)
+15:50:12      30 % (01:46 de 05:53)
+15:50:20      40 % (02:22 de 05:53)
+15:50:29      50 % (02:58 de 05:53)
+15:50:38      61 % (03:34 de 05:53)
+15:50:47      71 % (04:11 de 05:53)
+15:50:57      81 % (04:48 de 05:53)
+15:51:09      91 % (05:23 de 05:53)
+15:51:16   copia ligera lista: 12.4 MB
+15:51:16 Subiendo TC_01_Boton_emergencia_y_botonera_gantry_subida.mp4 (13.0 MB, video/mp4) a la Files API…
+15:51:18 Subido como files/jyj6slqhowke; esperando a que Gemini lo procese…
+15:51:39 Archivo files/jyj6slqhowke listo (ACTIVE).
+15:51:39 Analizando TC_01_Boton_emergencia_y_botonera_gantry con gemini-3.5-flash (resolución alta)…
+15:52:22   12 momentos brutos, 104685 tokens.
+15:52:22 Análisis terminado: 12 momentos.
+15:52:22 Transcribiendo el audio de TC_01_Boton_emergencia_y_botonera_gantry con gemini-3.5-flash…
+15:52:42 Transcripción: 35 segmentos, 34977 tokens.
+15:52:42 Archivo remoto files/jyj6slqhowke eliminado.
+15:52:42 momentos.json guardado (12 momentos).
+15:52:42 Extrayendo 12 capturas de TC_01_Boton_emergencia_y_botonera_gantry.mov…
+15:52:53   10/12 capturas
+15:52:55 Capturas: 12 extraídas, 0 fallidas
+15:52:55 Refinando títulos y descripciones con 12 capturas en alta resolución (gemini-3.5-flash)…
+15:52:55 Refinando con gemini-3.5-flash los textos de 12 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+15:53:08 Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 11 con cambios (16621 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+15:53:13 Anotaciones: 10 capturas con círculo/flecha.
+15:53:13   documentos: 12 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+15:53:13 ERROR en TC_01_Boton_emergencia_y_botonera_gantry.mov: UnrecognizedImageError:  (detalle en salida/TC_01_Boton_emergencia_y_botonera_gantry/error.txt)
+15:53:56 === TC_01_Boton_emergencia_y_botonera_gantry.mov: 05:53, 1080x1920, 59.97 fps, 961 MB -> salida/TC_01_Boton_emergencia_y_botonera_gantry
+15:53:56 --regenerar: se reutiliza el análisis de momentos.json (12 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+15:53:56 momentos.json guardado (12 momentos).
+15:53:56 Extrayendo 12 capturas de TC_01_Boton_emergencia_y_botonera_gantry.mov…
+15:54:08   10/12 capturas
+15:54:10 Capturas: 12 extraídas, 0 fallidas
+15:54:15 Anotaciones: 10 capturas con círculo/flecha.
+15:54:15   documentos: 12 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+15:54:15   docx: TC_01_Boton_emergencia_y_botonera_gantry.docx
+15:54:16   pdf: TC_01_Boton_emergencia_y_botonera_gantry.pdf (10 páginas)
+15:54:16 Listo en 20 s: 12 momentos, 10 páginas -> TC_01_Boton_emergencia_y_botonera_gantry.docx, TC_01_Boton_emergencia_y_botonera_gantry.pdf

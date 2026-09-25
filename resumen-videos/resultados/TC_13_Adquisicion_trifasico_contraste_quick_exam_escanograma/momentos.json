@@ -1,0 +1,629 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov",
+    "nombre": "TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma",
+    "duracion_seg": 437.67,
+    "duracion": "07:18",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 726556786,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:51:02",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Operación de Tomógrafo Computado Canon Aquilion",
+    "resumen": "Este video instructivo muestra la configuración de protocolos y la adquisición de imágenes médicas en un tomógrafo computado Canon Aquilion, abarcando desde la adquisición del escanograma hasta la visualización en tiempo real y la secuencia de contrastes.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 15 con cambios (22260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 188518,
+      "tokens_salida": 6332,
+      "tokens_pensamiento": 0,
+      "tokens_total": 194850,
+      "detalle_entrada": {
+        "VIDEO": 166424,
+        "TEXT": 4494,
+        "IMAGE": 17600
+      },
+      "llamadas": 4,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:02",
+        "tiempo_seg": 2.0,
+        "titulo": "Iniciar posicionamiento de camilla",
+        "descripcion": "El operador confirma el inicio del movimiento de la camilla a la posición de inicio a 274.0 mm, haciendo clic sobre el botón de inicio (flecha hacia adelante parpadeante) en la ventana flotante.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisición del escanograma",
+        "zona": {
+          "x": 0.503,
+          "y": 0.785
+        },
+        "captura": "capturas/01_00-02.jpg",
+        "captura_anotada": "capturas/01_00-02_anotada.jpg",
+        "tiempo_real_seg": 2.6,
+        "puntaje": null,
+        "titulo_original": "Iniciar escanograma",
+        "descripcion_original": "El operador confirma el inicio del escanograma en la pantalla para mover la camilla a la posición de inicio a 274,0 mm."
+      },
+      {
+        "tiempo": "00:25",
+        "tiempo_seg": 25.0,
+        "titulo": "Verificar preparación del escaneo",
+        "descripcion": "Una vez que la luz del botón de escaneo se queda fija en la consola, se presiona para iniciar la radiación. En la pantalla se observa que la ventana de advertencia de posicionamiento se ha cerrado.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición del escanograma",
+        "zona": null,
+        "captura": "capturas/02_00-25.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 24.4,
+        "puntaje": null,
+        "titulo_original": "Activar radiación",
+        "descripcion_original": "Una vez que la luz del botón de escaneo se queda fija en la consola, se presiona para iniciar la radiación."
+      },
+      {
+        "tiempo": "00:33",
+        "tiempo_seg": 33.0,
+        "titulo": "Omitir el resto del escanograma",
+        "descripcion": "Se selecciona 'Scano Skip' en pantalla cuando el área de interés ya ha sido escaneada y el tubo se encuentra en el aire.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición del escanograma",
+        "zona": {
+          "x": 0.41,
+          "y": 0.427
+        },
+        "captura": "capturas/03_00-33.jpg",
+        "captura_anotada": "capturas/03_00-33_anotada.jpg",
+        "tiempo_real_seg": 32.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:08",
+        "tiempo_seg": 68.0,
+        "titulo": "Ajustar campo de visión global",
+        "descripcion": "Se seleccionan todas las cajas de escaneo de forma simultánea en el menú 'Change Scans' marcando 'All' para aplicar un mismo FOV uniforme.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.114,
+          "y": 0.374
+        },
+        "captura": "capturas/04_01-08.jpg",
+        "captura_anotada": "capturas/04_01-08_anotada.jpg",
+        "tiempo_real_seg": 67.4,
+        "puntaje": null,
+        "titulo_original": "Ajustar campo de visión para todas las fases",
+        "descripcion_original": "Se seleccionan todas las cajas de escaneo simultáneamente para aplicar un mismo FOV de forma uniforme."
+      },
+      {
+        "tiempo": "01:29",
+        "tiempo_seg": 89.0,
+        "titulo": "Definir rango individual por fase",
+        "descripcion": "Se selecciona 'Individual' en el menú 'Change Scans' para ajustar de manera independiente el rango de escaneo arrastrando los marcadores en el escanograma.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.128,
+          "y": 0.418
+        },
+        "captura": "capturas/05_01-29.jpg",
+        "captura_anotada": "capturas/05_01-29_anotada.jpg",
+        "tiempo_real_seg": 88.0,
+        "puntaje": null,
+        "titulo_original": "Definir inicio y término individualmente",
+        "descripcion_original": "Se selecciona cada fase por separado y se arrastra el rombo amarillo en el escanograma para delimitar el rango de escaneo específico."
+      },
+      {
+        "tiempo": "01:54",
+        "tiempo_seg": 114.0,
+        "titulo": "Verificar parámetros de reconstrucción",
+        "descripcion": "Se accede a la pestaña de detalles de reconstrucción 'Recon Details' para verificar el grosor de corte, intervalo y áreas que se van a reconstruir.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.444,
+          "y": 0.571
+        },
+        "captura": "capturas/06_01-54.jpg",
+        "captura_anotada": "capturas/06_01-54_anotada.jpg",
+        "tiempo_real_seg": 113.0,
+        "puntaje": null,
+        "descripcion_original": "Se accede a 'Recon Details' para verificar las zonas que se van a reconstruir, indicadas en color naranja."
+      },
+      {
+        "tiempo": "02:32",
+        "tiempo_seg": 152.0,
+        "titulo": "Configurar D-FOV en Scan Details",
+        "descripcion": "Se hace clic sobre el campo 'D-FOV' en la pestaña 'Scan Details' para ajustar el diámetro del campo de visión, el cual muestra un valor de 421.1 (L).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.449,
+          "y": 0.662
+        },
+        "captura": "capturas/07_02-32.jpg",
+        "captura_anotada": "capturas/07_02-32_anotada.jpg",
+        "tiempo_real_seg": 152.6,
+        "puntaje": null,
+        "titulo_original": "Configurar D-FOV fijo si es necesario",
+        "descripcion_original": "Para estudios específicos como cerebro, se puede fijar el D-FOV a un valor establecido (por ejemplo, 210 mm) en la pestaña de detalles."
+      },
+      {
+        "tiempo": "02:40",
+        "tiempo_seg": 160.0,
+        "titulo": "Ajustar reconstrucciones en Multi View",
+        "descripcion": "Se accede a la pestaña 'Multi View' para configurar de manera específica el grosor y el intervalo de las reconstrucciones axiales, coronales o sagitales.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.361,
+          "y": 0.585
+        },
+        "captura": "capturas/08_02-40.jpg",
+        "captura_anotada": "capturas/08_02-40_anotada.jpg",
+        "tiempo_real_seg": 160.2,
+        "puntaje": null,
+        "titulo_original": "Ajustar reconstrucciones multiplanares (Multi View)",
+        "descripcion_original": "En la pestaña 'Multi View' se ajustan los rangos y grosores para las reconstrucciones axiales, coronales y sagitales."
+      },
+      {
+        "tiempo": "03:03",
+        "tiempo_seg": 183.0,
+        "titulo": "Confirmar planificación de la fase",
+        "descripcion": "Se presiona el botón 'Confirm' ubicado en la esquina inferior derecha para validar y fijar la configuración de la fase de estudio planificada.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.724,
+          "y": 0.923
+        },
+        "captura": "capturas/09_03-03.jpg",
+        "captura_anotada": "capturas/09_03-03_anotada.jpg",
+        "tiempo_real_seg": 182.8,
+        "puntaje": null,
+        "titulo_original": "Confirmar planificación",
+        "descripcion_original": "Se presiona 'Confirm' para validar la planificación antes de mover la camilla e iniciar la adquisición."
+      },
+      {
+        "tiempo": "03:19",
+        "tiempo_seg": 199.0,
+        "titulo": "Advertencia de límite de rango",
+        "descripcion": "Aparece la advertencia 'Sure Exp. mA could not be calculated because the scan range exceeds the scanogram area', indicando que el rango de escaneo planificado supera los límites del escanograma.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.431,
+          "y": 0.591
+        },
+        "captura": "capturas/10_03-19.jpg",
+        "captura_anotada": "capturas/10_03-19_anotada.jpg",
+        "tiempo_real_seg": 198.4,
+        "puntaje": null,
+        "descripcion_original": "Aparece un mensaje indicando que el modulador de mA no puede calcularse con precisión debido a que el rango planificado excede el área del escanograma."
+      },
+      {
+        "tiempo": "03:40",
+        "tiempo_seg": 220.0,
+        "titulo": "Reducir rango de escaneo",
+        "descripcion": "Se regresa a la pantalla de planificación para reajustar y acortar los límites de las cajas amarillas de escaneo sobre el escanograma de referencia.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.356,
+          "y": 0.286
+        },
+        "captura": "capturas/11_03-40.jpg",
+        "captura_anotada": "capturas/11_03-40_anotada.jpg",
+        "tiempo_real_seg": 219.4,
+        "puntaje": null,
+        "descripcion_original": "Se regresa a la planificación para acortar las cajas de escaneo y evitar que queden fuera del área del escanograma de referencia."
+      },
+      {
+        "tiempo": "04:02",
+        "tiempo_seg": 242.0,
+        "titulo": "Adquirir primera fase sin contraste",
+        "descripcion": "Se realiza el escaneo de la primera fase sin medio de contraste ('SIN CE') y se verifica que las imágenes se reconstruyen en tiempo real en la pantalla superior.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.639,
+          "y": 0.114
+        },
+        "captura": "capturas/12_04-02.jpg",
+        "captura_anotada": "capturas/12_04-02_anotada.jpg",
+        "tiempo_real_seg": 242.2,
+        "puntaje": null,
+        "descripcion_original": "Se realiza el escaneo de la primera fase sin medio de contraste y las imágenes se reconstruyen en tiempo real en la pantalla derecha."
+      },
+      {
+        "tiempo": "04:26",
+        "tiempo_seg": 266.0,
+        "titulo": "Sincronizar escaneo e inyectora de contraste",
+        "descripcion": "Se inicia simultáneamente la adquisición de la fase arterial y la inyección del medio de contraste presionando ambos botones a la vez.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/13_04-26.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 266.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:35",
+        "tiempo_seg": 275.0,
+        "titulo": "Monitorear tiempo en el gantry",
+        "descripcion": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomógrafo Canon.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.512,
+          "y": 0.535
+        },
+        "captura": "capturas/14_04-35.jpg",
+        "captura_anotada": "capturas/14_04-35_anotada.jpg",
+        "tiempo_real_seg": 275.6,
+        "puntaje": null,
+        "descripcion_original": "Se puede visualizar el temporizador de cuenta regresiva directamente en la pantalla integrada del gantry del tomógrafo."
+      },
+      {
+        "tiempo": "05:49",
+        "tiempo_seg": 349.0,
+        "titulo": "Finalizar examen actual",
+        "descripcion": "Se hace clic sobre el botón 'Quit Exam' en la parte inferior de la pantalla para concluir definitivamente el protocolo del paciente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Finalización y nuevos estudios",
+        "zona": {
+          "x": 0.614,
+          "y": 0.846
+        },
+        "captura": "capturas/15_05-49.jpg",
+        "captura_anotada": "capturas/15_05-49_anotada.jpg",
+        "tiempo_real_seg": 348.0,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona 'Quit Exam' para dar por terminado el estudio actual una vez adquiridas todas las fases requeridas."
+      },
+      {
+        "tiempo": "06:04",
+        "tiempo_seg": 364.0,
+        "titulo": "Reutilizar escanograma para otro estudio",
+        "descripcion": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear. En la pantalla se visualizan los protocolos disponibles en el grupo RTP, como CEREBRO y CPN.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Finalización y nuevos estudios",
+        "zona": {
+          "x": 0.38,
+          "y": 0.59
+        },
+        "captura": "capturas/16_06-04.jpg",
+        "captura_anotada": "capturas/16_06-04_anotada.jpg",
+        "tiempo_real_seg": 363.0,
+        "puntaje": null,
+        "descripcion_original": "Se explica que es posible reutilizar el mismo escanograma largo de un paciente para planificar un estudio adicional (ej. cerebro) sin volver a escanear."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 1.0,
+        "fin": 6.0,
+        "texto": "Me pide permiso para ir a la posición de inicio y vamos nuevamente con el escanograma."
+      },
+      {
+        "inicio": 23.0,
+        "fin": 26.0,
+        "texto": "Parpadea, va a tomar el pulso, fijo, comienza la radiación."
+      },
+      {
+        "inicio": 31.0,
+        "fin": 34.0,
+        "texto": "Ya no giro más, sigo en el aire, scan complete."
+      },
+      {
+        "inicio": 35.0,
+        "fin": 43.0,
+        "texto": "Se detiene la camilla, el tubo cambia de de ángulo y desde aquí se devuelve ahora para la otra proyección. Entonces así tengo el el doble escanograma."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 58.0,
+        "texto": "Al principio aparecen todas las cajas juntas seleccionadas. ¿Cuál es la idea?"
+      },
+      {
+        "inicio": 59.0,
+        "fin": 63.0,
+        "texto": "Voy a usar la lupa con el del medio a la derecha."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 75.0,
+        "texto": "Con el del medio, el rotary presionado, hago un panel. Es que yo pueda seleccionar todas para que así le dé el mismo FOV a todas las cajas. ¿De acuerdo? Y ahí están todos seleccionados."
+      },
+      {
+        "inicio": 75.0,
+        "fin": 80.0,
+        "texto": "Entonces ahora yo voy una por una pero definiendo inicio y término."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 91.0,
+        "texto": "¿Cómo por ejemplo cambio el FOV? Con este. O me pongo, bueno ya está listo pero, por ejemplo, el inicio y término pongo la manito en el rombo y al hacer clic toma el rombo y ahí lo puedo mover."
+      },
+      {
+        "inicio": 91.0,
+        "fin": 110.0,
+        "texto": "Entonces ya, digamos el el sin contraste es todo. El arterial, no sé, ese ese es más abajo. El venoso va a ser todo. Y el tardío, ahí, el tardío como le habíamos puesto las coordenadas, aparece más abajo porque tiene que ver con con este elemento."
+      },
+      {
+        "inicio": 110.0,
+        "fin": 120.0,
+        "texto": "¿Okay? De acá también puedo ir a la Recon. Están en naranjo. Fíjense. De amarillo, que es lo que voy a adquirir, pasa a naranjo que es lo que va a reconstruir."
+      },
+      {
+        "inicio": 120.0,
+        "fin": 134.0,
+        "texto": "Entonces, yo quiero reconstruir el cuerpo y, por ejemplo, le pedí de hueso. Y bueno, el hueso lo quiero más chico. Aquí ustedes pueden definir para que solo reconstruya eso. Por ejemplo, fuera el pulmón. Fuera el pulmón, ah bueno, el pulmón está acá, entonces ahí y dejo solo el pulmón, por ejemplo."
+      },
+      {
+        "inicio": 135.0,
+        "fin": 139.0,
+        "texto": "Y ahora vuelvo al del cuerpo. No, el cuerpo lo quiero completo. Entonces, ustedes ya pueden ir definiendo esto."
+      },
+      {
+        "inicio": 140.0,
+        "fin": 146.0,
+        "texto": "Y para dejar el FOV pico, por ejemplo, el cerebro que nosotros lo usamos siempre en 210..."
+      },
+      {
+        "inicio": 146.0,
+        "fin": 155.0,
+        "texto": "Ah, este. Aquí donde aquí tú ya le puedes poner, por ejemplo, 210 y ya va a estar fijo. Entonces, el otro es simplemente inicio y término, nomás."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 160.0,
+        "texto": "Entonces, yo voy recorriendo, y aquí tengo los multi-view, ¿cierto?"
+      },
+      {
+        "inicio": 161.0,
+        "fin": 167.0,
+        "texto": "Entonces, eso viene el axial, ahí me muestra cómo va a ser el axial. El coronal..."
+      },
+      {
+        "inicio": 167.0,
+        "fin": 171.0,
+        "texto": "Y me saca el coronal que está muy largo, entonces, lo voy a ajustar."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 180.0,
+        "texto": "Y aquí ustedes lo dejan listo. Es por eso les quería mostrar acá. Y lo mismo para el sagital."
+      },
+      {
+        "inicio": 180.0,
+        "fin": 184.0,
+        "texto": "Y bueno, si ya está todo definido, confirmo."
+      },
+      {
+        "inicio": 187.0,
+        "fin": 190.0,
+        "texto": "Ah, lo que pasa es que está muy abajo."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 194.0,
+        "texto": "Me pide permiso para ir a la posición de inicio."
+      },
+      {
+        "inicio": 196.0,
+        "fin": 204.0,
+        "texto": "Ya. Dice que el modulador no puede asegurarme que se cumpla lo requerido porque hay partes que lo tiré donde no tengo doble escanograma."
+      },
+      {
+        "inicio": 204.0,
+        "fin": 206.0,
+        "texto": "Okay."
+      },
+      {
+        "inicio": 209.0,
+        "fin": 213.0,
+        "texto": "Ah, ya, es muy largo ese. Bueno."
+      },
+      {
+        "inicio": 213.0,
+        "fin": 226.0,
+        "texto": "Voy al scan plan nuevamente, lo voy a achicar porque está..."
+      },
+      {
+        "inicio": 229.0,
+        "fin": 235.0,
+        "texto": "Entonces, el sin contraste."
+      },
+      {
+        "inicio": 235.0,
+        "fin": 242.0,
+        "texto": "Fijo y va."
+      },
+      {
+        "inicio": 242.0,
+        "fin": 245.0,
+        "texto": "Y la imagen es en tiempo real."
+      },
+      {
+        "inicio": 246.0,
+        "fin": 250.0,
+        "texto": "Esta imagen ya se puede visualizar inmediatamente."
+      },
+      {
+        "inicio": 250.0,
+        "fin": 254.0,
+        "texto": "Y esta es la que se guarda acá como instaview."
+      },
+      {
+        "inicio": 256.0,
+        "fin": 264.0,
+        "texto": "Ahora viene el arterial. Entonces, está parpadeando, fijo."
+      },
+      {
+        "inicio": 264.0,
+        "fin": 269.0,
+        "texto": "Programamos la inyectora, los dos al mismo tiempo. Y ahí va el tiempo."
+      },
+      {
+        "inicio": 272.0,
+        "fin": 278.0,
+        "texto": "Y si se fijan en el equipo, miren, dice el tiempo también en la pantalla. Ah, sí, ahí."
+      },
+      {
+        "inicio": 278.0,
+        "fin": 290.0,
+        "texto": "Ahí, entonces si está el tecnólogo adentro viendo la vía, puede revisar, allá me queda la típica de ella, capaz."
+      },
+      {
+        "inicio": 291.0,
+        "fin": 295.0,
+        "texto": "O le hace la seña, ahí puede mirar tranquilamente."
+      },
+      {
+        "inicio": 295.0,
+        "fin": 301.0,
+        "texto": "De hecho el tecnólogo en Curicó me dio risa porque también tienen cámara, miró el tiempo, hizo como que se estaba tomando un café."
+      },
+      {
+        "inicio": 301.0,
+        "fin": 306.0,
+        "texto": "Y después salió."
+      },
+      {
+        "inicio": 307.0,
+        "fin": 311.0,
+        "texto": "Y ahora lo que le falta para lanzar el venoso a los 70 segundos."
+      },
+      {
+        "inicio": 343.0,
+        "fin": 345.0,
+        "texto": "Y esto es todo. Sí. Ya."
+      },
+      {
+        "inicio": 345.0,
+        "fin": 349.0,
+        "texto": "Entonces ahora, no necesito... bueno, quit exam."
+      },
+      {
+        "inicio": 350.0,
+        "fin": 356.0,
+        "texto": "Aquí puedo hacer un nuevo examen si quiero al paciente, si le falta un cerebro, etcétera, lo que necesite, si no..."
+      },
+      {
+        "inicio": 356.0,
+        "fin": 358.0,
+        "texto": "Y ahí ocupo el mismo topograma."
+      },
+      {
+        "inicio": 359.0,
+        "fin": 368.0,
+        "texto": "Sí, sí van a ser varios, la idea es que el primero lo haga más largo para, le pongo quit exam y puedo usar para el mismo paciente el mismo topograma. Sí, por ejemplo, elijo cerebro, me va a aparecer el mismo scan que ya tenía."
+      },
+      {
+        "inicio": 372.0,
+        "fin": 380.0,
+        "texto": "Entonces si van a, si sale, ah bueno, les pide que el... ya, era supino la cabeza, ya no me acuerdo, pero ahí pueden mirar que para asegurarse la posición."
+      },
+      {
+        "inicio": 382.0,
+        "fin": 385.0,
+        "texto": "Y la va a tomar desde el escanograma."
+      },
+      {
+        "inicio": 386.0,
+        "fin": 388.0,
+        "texto": "Ah, lo había sacado."
+      },
+      {
+        "inicio": 398.0,
+        "fin": 403.0,
+        "texto": "Sí, la idea es que ustedes pueden hacer un escanograma largo."
+      },
+      {
+        "inicio": 403.0,
+        "fin": 406.0,
+        "texto": "Entonces le hacen el cerebro, después se van a... ¿podemos entrar a buscar adentro?"
+      },
+      {
+        "inicio": 406.0,
+        "fin": 407.0,
+        "texto": "Sí, sí, sí."
+      },
+      {
+        "inicio": 407.0,
+        "fin": 416.0,
+        "texto": "Sí, eso se puede hacer, por ejemplo, lo dejamos para trauma, se toma uno solo y de ahí hacen el cerebro, le sacan la, la columna."
+      },
+      {
+        "inicio": 417.0,
+        "fin": 424.0,
+        "texto": "Por eso mi duda era, ya está, ya hice por ejemplo el topograma, hice la primera parte y quiero agregar más partes. Y ahí tengo que poner quit exam."
+      },
+      {
+        "inicio": 424.0,
+        "fin": 429.0,
+        "texto": "Quit exam y luego tú seleccionas y haces clic en el otro protocolo y se carga. Sí."
+      },
+      {
+        "inicio": 430.0,
+        "fin": 436.0,
+        "texto": "Podemos hacer otra prueba con un angio."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx",
+    "pdf": "TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf",
+    "paginas": 8
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 188518,
+    "tokens_salida": 6332,
+    "tokens_pensamiento": 0,
+    "tokens_total": 194850,
+    "detalle_entrada": {
+      "VIDEO": 166424,
+      "TEXT": 4494,
+      "IMAGE": 17600
+    },
+    "llamadas": 4,
+    "batch": false,
+    "costo_usd": null
+  }
+}

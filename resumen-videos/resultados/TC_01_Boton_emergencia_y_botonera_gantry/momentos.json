@@ -1,0 +1,466 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_01_Boton_emergencia_y_botonera_gantry.mov",
+    "nombre": "TC_01_Boton_emergencia_y_botonera_gantry",
+    "duracion_seg": 353.19,
+    "duracion": "05:53",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 1007665064,
+    "extra": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "rotacion": -90.0,
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T15:54:16",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Operacion y control de tomografo Canon",
+    "resumen": "Manual detallado para la operacion del tomografo computado Canon Aquilion, explicando las funciones del gantry, el uso del panel de control de la camilla, el centrado del paciente con laser externo e interno y funciones especiales para evitar colisiones.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 11 con cambios (16621 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 15:53"
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 150970,
+      "tokens_salida": 5313,
+      "tokens_pensamiento": 0,
+      "tokens_total": 156283,
+      "detalle_entrada": {
+        "VIDEO": 134140,
+        "TEXT": 3630,
+        "IMAGE": 13200
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Botón de parada de emergencia",
+        "descripcion": "Se muestra el botón rojo de parada de emergencia en el gantry para quitar la energía eléctrica de la camilla y el gantry en caso de riesgo.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Seguridad y apagado",
+        "zona": {
+          "x": 0.732,
+          "y": 0.273
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 0.4,
+        "puntaje": null,
+        "titulo_original": "Boton de parada de emergencia",
+        "descripcion_original": "Se muestra el boton rojo de parada de emergencia en el gantry para quitar la energia electrica de la camilla y el gantry en caso de riesgo."
+      },
+      {
+        "tiempo": "00:27",
+        "tiempo_seg": 27.0,
+        "titulo": "Recuperar energia tras parada emergencia",
+        "descripcion": "Para restaurar la energia tras presionar el boton de parada, se debe realizar un apagado por software (shutdown), esperar 1 minuto y encender.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Seguridad y apagado",
+        "zona": null,
+        "captura": "capturas/02_00-27.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 27.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:46",
+        "tiempo_seg": 46.0,
+        "titulo": "Ubicación de botones de parada",
+        "descripcion": "El equipo cuenta con cuatro botones de parada de emergencia distribuidos en el gantry (dos frontales y dos traseros espejo) y uno en el teclado.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Seguridad y apagado",
+        "zona": null,
+        "captura": "capturas/03_00-46.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 45.4,
+        "puntaje": null,
+        "titulo_original": "Ubicacion de botones de parada"
+      },
+      {
+        "tiempo": "01:15",
+        "tiempo_seg": 75.0,
+        "titulo": "Mover lateralmente la camilla mecánicamente",
+        "descripcion": "Uso de los botones inferiores en el panel para desplazar lateralmente la camilla (+/- 85 mm hacia la derecha o izquierda) para centrar al paciente.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.409,
+          "y": 0.497
+        },
+        "captura": "capturas/04_01-15.jpg",
+        "captura_anotada": "capturas/04_01-15_anotada.jpg",
+        "tiempo_real_seg": 75.6,
+        "puntaje": null,
+        "titulo_original": "Mover lateralmente la camilla mecanicamente"
+      },
+      {
+        "tiempo": "01:55",
+        "tiempo_seg": 115.0,
+        "titulo": "Subir la camilla con aceleración",
+        "descripcion": "Se presiona el botón superior para elevar la camilla, utilizando el botón central para acelerar el movimiento, visible con iluminación azul.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.662,
+          "y": 0.587
+        },
+        "captura": "capturas/05_01-55.jpg",
+        "captura_anotada": "capturas/05_01-55_anotada.jpg",
+        "tiempo_real_seg": 114.4,
+        "puntaje": null,
+        "titulo_original": "Subir la camilla con aceleracion",
+        "descripcion_original": "Se presiona el boton superior para elevar la camilla, utilizando el boton central para acelerar el movimiento."
+      },
+      {
+        "tiempo": "02:04",
+        "tiempo_seg": 124.0,
+        "titulo": "Habilitación de botón de entrada",
+        "descripcion": "El botón para introducir la camilla se habilita automáticamente solo cuando la altura de la camilla supera la posición de seguridad de cero. En pantalla se lee +65.0, +1135.5 y 0.0.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.732,
+          "y": 0.454
+        },
+        "captura": "capturas/06_02-04.jpg",
+        "captura_anotada": "capturas/06_02-04_anotada.jpg",
+        "tiempo_real_seg": 123.8,
+        "puntaje": null,
+        "titulo_original": "Habilitacion de boton de entrada",
+        "descripcion_original": "El boton para introducir la camilla se habilita automaticamente solo cuando la altura de la camilla supera la posicion de seguridad de cero."
+      },
+      {
+        "tiempo": "02:10",
+        "tiempo_seg": 130.0,
+        "titulo": "Prevención de colisiones de camilla",
+        "descripcion": "El sistema desactiva el ingreso de la camilla si está muy baja para evitar colisiones físicas con la estructura del gantry. En pantalla se muestra un valor negativo de -53.0.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.718,
+          "y": 0.366
+        },
+        "captura": "capturas/07_02-10.jpg",
+        "captura_anotada": "capturas/07_02-10_anotada.jpg",
+        "tiempo_real_seg": 129.4,
+        "puntaje": null,
+        "titulo_original": "Prevencion de colisiones de camilla",
+        "descripcion_original": "El sistema desactiva el ingreso de la camilla si esta muy baja para evitar colisiones fisicas con la estructura del gantry."
+      },
+      {
+        "tiempo": "02:35",
+        "tiempo_seg": 155.0,
+        "titulo": "Uso del láser externo",
+        "descripcion": "Se activa el láser externo de posicionamiento rojo para la alineación inicial del paciente, proyectando una cruz sobre la cubierta del gantry.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.412,
+          "y": 0.526
+        },
+        "captura": "capturas/08_02-35.jpg",
+        "captura_anotada": "capturas/08_02-35_anotada.jpg",
+        "tiempo_real_seg": 154.8,
+        "puntaje": null,
+        "titulo_original": "Uso del laser externo",
+        "descripcion_original": "Se activa el laser externo de posicionamiento rojo para la alineacion inicial del paciente."
+      },
+      {
+        "tiempo": "02:51",
+        "tiempo_seg": 171.0,
+        "titulo": "Botón cero para el isocentro",
+        "descripcion": "El botón con dos flechas horizontales y un cero central (o flechas opuestas) establece la coordenada cero directamente en el isocentro del gantry.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.541,
+          "y": 0.395
+        },
+        "captura": "capturas/09_02-51.jpg",
+        "captura_anotada": "capturas/09_02-51_anotada.jpg",
+        "tiempo_real_seg": 171.6,
+        "puntaje": null,
+        "titulo_original": "Boton cero para el isocentro",
+        "descripcion_original": "El boton con dos flechas apuntando al centro establece la coordenada cero directamente en el isocentro del gantry."
+      },
+      {
+        "tiempo": "03:51",
+        "tiempo_seg": 231.0,
+        "titulo": "Botón cero para el láser externo",
+        "descripcion": "El botón con el símbolo de cero y una flecha horizontal izquierda sirve para realizar el centrado en la posición del láser externo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.588,
+          "y": 0.443
+        },
+        "captura": "capturas/10_03-51.jpg",
+        "captura_anotada": "capturas/10_03-51_anotada.jpg",
+        "tiempo_real_seg": 230.4,
+        "puntaje": null,
+        "titulo_original": "Boton cero para el laser externo",
+        "descripcion_original": "El boton con el simbolo de cero y una sola flecha sirve para realizar el centrado en la posicion del laser externo."
+      },
+      {
+        "tiempo": "04:01",
+        "tiempo_seg": 241.0,
+        "titulo": "Llevar la camilla al isocentro",
+        "descripcion": "Para desplazar la camilla al isocentro, se debe mantener presionado de forma continua el botón de movimiento automático sin soltarlo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.558,
+          "y": 0.416
+        },
+        "captura": "capturas/11_04-01.jpg",
+        "captura_anotada": "capturas/11_04-01_anotada.jpg",
+        "tiempo_real_seg": 240.0,
+        "puntaje": null,
+        "descripcion_original": "Para desplazar la camilla al isocentro, se debe mantener presionado de forma continua el boton cero de una flecha sin soltarlo."
+      },
+      {
+        "tiempo": "05:14",
+        "tiempo_seg": 314.0,
+        "titulo": "Centrado mecánico post-escanograma",
+        "descripcion": "Si después del doble escanograma la camilla queda descentrada, se puede ajustar la altura e isocentro mecánicamente de forma automática. En pantalla se leen los valores de +89.0, +957.0 y 0.0.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisicion de imagen",
+        "zona": {
+          "x": 0.548,
+          "y": 0.343
+        },
+        "captura": "capturas/12_05-14.jpg",
+        "captura_anotada": "capturas/12_05-14_anotada.jpg",
+        "tiempo_real_seg": 313.8,
+        "puntaje": null,
+        "titulo_original": "Centrado mecanico post-escanograma",
+        "descripcion_original": "Si despues del doble escanograma la camilla queda descentrada, se puede ajustar la altura e isocentro mecanicamente de forma automatica."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 13.0,
+        "texto": "Que es para quitar la energía eléctrica del gantry y camilla en caso de que vean que sale humo, fuego, que cae agua encima, o que hay un movimiento de la camilla que no se detiene, algo extraño, se presiona."
+      },
+      {
+        "inicio": 13.0,
+        "fin": 24.0,
+        "texto": "Ah, no ha pasado que sea el caso, pero que entra con la camilla y entra con el porta suero, entonces la camilla la posicionan al lado y el porta suero le pega al botón. Sí, a veces lo presionan sin querer."
+      },
+      {
+        "inicio": 24.0,
+        "fin": 39.0,
+        "texto": "Eh, que sea sin querer o con querer, la única forma de recuperar la energía eléctrica es haciendo un apagado por software, el apagado normal, shutdown, un minuto apagado, presionar el botón y vuelve a prender el equipo y ya retorna todo."
+      },
+      {
+        "inicio": 39.0,
+        "fin": 46.0,
+        "texto": "- Ya. - Eh... ¿Ambos botones de stop hay? ¿Dos botones de stop?."
+      },
+      {
+        "inicio": 46.0,
+        "fin": 54.0,
+        "texto": "- Estos dos, ¿verdad? ¿Y acá atrás también? - Bueno, en el mismo lugar, espejeados. Están los cuatro y uno en el teclado. - ¿Y la camilla no hay? No, la camilla no."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 63.0,
+        "texto": "- ¿Qué pasa si tiene la... si se apaga ahí? - Ya, sí me habían informado. ¿Cuando llega me avisa y salimos?"
+      },
+      {
+        "inicio": 63.0,
+        "fin": 71.0,
+        "texto": "- Sí. - Que tiene un procedimiento, me habían dicho, entre medio de la tarde. - Eh... bueno, está esto..."
+      },
+      {
+        "inicio": 71.0,
+        "fin": 81.0,
+        "texto": "tienen estos botones que son para el movimiento lateral mecánico de camilla. Como pueden ver, más menos 85."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 91.0,
+        "texto": "Hacia la derecha, y es mecánico. Esto es extraordinario, a mí me encanta porque son pocas las oportunidades que tenemos de poder instalarlo, porque la competencia no lo tiene, solo nosotros."
+      },
+      {
+        "inicio": 91.0,
+        "fin": 108.0,
+        "texto": "Y como pueden ver, eh nos sirve mucho para poder centrar correctamente al paciente e intentar dejar la estructura que quieren ver, ojalá en el iso centro del gantry, que es donde siempre va a haber la mejor calidad de imagen, ¿ya?"
+      },
+      {
+        "inicio": 108.0,
+        "fin": 118.0,
+        "texto": "Estos movimientos también se pueden ejecutar desde la la consola. Es decir, eh, bueno, esto es para subir, cierto, con esto acelero el movimiento."
+      },
+      {
+        "inicio": 118.0,
+        "fin": 131.0,
+        "texto": "Cuando ya pasa la posición de cero, se habilita el botón para entrar, porque evita las colisiones. Cuando yo estoy más abajo se apaga, es decir, no puedo entrar porque va a colisionar."
+      },
+      {
+        "inicio": 131.0,
+        "fin": 144.0,
+        "texto": "El equipo va a evitar todas las colisiones de camilla, bueno esto no tiene tilt, porque está orientado a otra cosa, pero si tuviese tilt, también, va a evitar. Dice \"No, no puedo porque la camilla está muy abajo\" y evita todo eso."
+      },
+      {
+        "inicio": 144.0,
+        "fin": 152.0,
+        "texto": "Entonces posicionamos al paciente, cierto, ingreso."
+      },
+      {
+        "inicio": 152.0,
+        "fin": 160.0,
+        "texto": "Bueno, este, este láser, ya no está operativo, que es el láser externo del equipo, pero ustedes están ahora sincronizados con este láser."
+      },
+      {
+        "inicio": 160.0,
+        "fin": 170.0,
+        "texto": "- Ya. - ¿Ya? Entonces tiene dos formas de centrar al paciente, de hacer cero, por decirlo. Eh claro, el de iso centro, ¿cierto?"
+      },
+      {
+        "inicio": 170.0,
+        "fin": 180.0,
+        "texto": "que para eso tengo este cero, que es un cero que apunta con dos flechitas al centro, eso quiere decir estoy en el iso centro, ¿ya?"
+      },
+      {
+        "inicio": 180.0,
+        "fin": 190.0,
+        "texto": "Entonces voy a a ingresar y le digo \"Ya, ahí lo quiero, iso cero\"."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 200.0,
+        "texto": "- Ah, y el otro. - Entonces así reconoce este cero adentro para los próximos movimientos y de todo. Puede funcionar con con otra con otras coordenadas, pero le van a quedar... no sé, menos 1193 a menos 1580 y tanto."
+      },
+      {
+        "inicio": 200.0,
+        "fin": 210.0,
+        "texto": "Entonces usted \"Ay, le quiero sumar 20\", y es como un poco más complejo, en cambio si va de cero a 500, después 520, entonces es más fácil la gestión en ese caso."
+      },
+      {
+        "inicio": 210.0,
+        "fin": 217.0,
+        "texto": "Y también tengo este otro cero, que sería el láser externo, ¿ya, cierto?"
+      },
+      {
+        "inicio": 217.0,
+        "fin": 227.0,
+        "texto": "Entonces... bueno, ahora, el paciente, qué sé yo, y aquí va a estar el verde, entonces se centran en este que es mucho más cómodo para ustedes, porque se sintoniza con el láser."
+      },
+      {
+        "inicio": 227.0,
+        "fin": 238.0,
+        "texto": "Y después esto yo lo quiero llevar al iso centro, y para eso está este otro cero, que es, también un cero con una con una sola flecha, y quiere decir como \"Lo voy a mover hacia el iso centro\"."
+      },
+      {
+        "inicio": 238.0,
+        "fin": 250.0,
+        "texto": "Y si se fijan, bueno yo lo... y hay que mantenerlo presionado y no soltarlo. Yo lo mantengo, ingresa, y cuando llega al iso centro se detiene y hace el cero."
+      },
+      {
+        "inicio": 250.0,
+        "fin": 259.0,
+        "texto": "- Ah, ya. - Entonces, así ya está listo el cero y sincronizado con el láser externo. Entonces, este es el que en realidad ustedes tendrían que utilizar, el cero con la flechita."
+      },
+      {
+        "inicio": 259.0,
+        "fin": 267.0,
+        "texto": "Después, claro, más en imagenología es cuando se hace \"Ah, ¿sabes qué? No centré bien\" y ahí ellos hacen movimiento."
+      },
+      {
+        "inicio": 267.0,
+        "fin": 276.0,
+        "texto": "- Y pueden volver a hacer el cero en el iso centro con el otro. - Ah, ya. - Pero por lo que entiendo, ustedes solamente van a ocupar el externo, ¿ya?"
+      },
+      {
+        "inicio": 276.0,
+        "fin": 287.0,
+        "texto": "Entonces sería el cero con esta flechita. De soltarlo y no no soltarlo hasta que termine y haga el cero, porque si lo sueltan a la mitad, piensa que ahí quiere el cero y ahí va a marcar. ¿Ya?"
+      },
+      {
+        "inicio": 287.0,
+        "fin": 295.0,
+        "texto": "Entonces, solamente esa esa recomendación."
+      },
+      {
+        "inicio": 295.0,
+        "fin": 304.0,
+        "texto": "Eh cuando centran al paciente, van a hacer el doble escanograma, o sea a recibir una adquisición anteroposterior y una lateral."
+      },
+      {
+        "inicio": 304.0,
+        "fin": 313.0,
+        "texto": "Eh y pueden ver, \"Oye, la camilla está muy abajo, el paciente me quedó muy abajo, y me quedó muy a la izquierda\". Hay unos botones en donde uno puede mover la imagen,"
+      },
+      {
+        "inicio": 313.0,
+        "fin": 322.0,
+        "texto": "subir la camilla para dejarla más en el iso centro, y mover la camilla hacia la derecha."
+      },
+      {
+        "inicio": 322.0,
+        "fin": 333.0,
+        "texto": "- ¿Después de haber hecho el topograma? - Después de haber hecho el doble escanograma, antes de la adquisición. - ¿Y eso va a hacer un auto-escanograma? - No. Lo único que va a hacer es después le va a habilitar un botón y la camilla"
+      },
+      {
+        "inicio": 333.0,
+        "fin": 343.0,
+        "texto": "se va a levantar mecánicamente y mecánicamente se va a mover a la izquierda para dejar a la al paciente en el iso centro. Entonces lo pueden hacer desde ahí y no tienen que venir a volver a a posicionar, etc."
+      },
+      {
+        "inicio": 343.0,
+        "fin": 352.0,
+        "texto": "Entonces también es una garantía y le va a servir. - ¿Y eso también en el eje Z? ¿O solo en el X y Y? - Ese ese... - Altura y X X, o sea, eje X. Ah, claro. - Ya, estamos."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_01_Boton_emergencia_y_botonera_gantry.docx",
+    "pdf": "TC_01_Boton_emergencia_y_botonera_gantry.pdf",
+    "paginas": 10
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 150970,
+    "tokens_salida": 5313,
+    "tokens_pensamiento": 0,
+    "tokens_total": 156283,
+    "detalle_entrada": {
+      "VIDEO": 134140,
+      "TEXT": 3630,
+      "IMAGE": 13200
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

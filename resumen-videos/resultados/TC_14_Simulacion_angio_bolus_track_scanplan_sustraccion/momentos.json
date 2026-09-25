@@ -1,0 +1,1708 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.mov",
+    "nombre": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion",
+    "duracion_seg": 1122.76,
+    "duracion": "18:43",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 1865864834,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T17:06:26",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Configuracion de Angio TEP en Tomografo Canon",
+    "resumen": "Este video tutorial muestra el proceso de configuracion de un estudio de Angio TEP utilizando un tomografo computado Canon Aquilion. Se detallan los pasos para seleccionar el protocolo, ajustar los cortes de planificacion, posicionar el ROI de SureStart y configurar los tiempos de adquisicion y locuciones de voz.",
+    "truncado": false,
+    "tramos": 4,
+    "avisos": [
+      "No se pudo refinar con las capturas (402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}); se conserva el análisis original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash",
+      "tokens_entrada": 432662,
+      "tokens_salida": 16677,
+      "tokens_pensamiento": 694,
+      "tokens_total": 450033,
+      "detalle_entrada": {
+        "VIDEO": 426730,
+        "TEXT": 5932
+      },
+      "llamadas": 8,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:06",
+        "tiempo_seg": 6.0,
+        "titulo": "Seleccionar el protocolo ANGIO TEP",
+        "descripcion": "Se selecciona el protocolo ANGIO TEP dentro de la lista de opciones de adquisicion en la pantalla para iniciar el flujo de trabajo del estudio.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Seleccion de protocolo",
+        "zona": {
+          "x": 0.395,
+          "y": 0.756
+        },
+        "captura": "capturas/01_00-06.jpg",
+        "captura_anotada": "capturas/01_00-06_anotada.jpg",
+        "tiempo_real_seg": 6.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:26",
+        "tiempo_seg": 26.0,
+        "titulo": "Omitir el escaner preliminar",
+        "descripcion": "Se presiona el boton Scano Skip en la pantalla para omitir o abortar el escanograma preliminar largo y proceder con los siguientes pasos de la planificacion.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificacion de la adquisicion",
+        "zona": {
+          "x": 0.49,
+          "y": 0.427
+        },
+        "captura": "capturas/02_00-26.jpg",
+        "captura_anotada": "capturas/02_00-26_anotada.jpg",
+        "tiempo_real_seg": 26.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:58",
+        "tiempo_seg": 58.0,
+        "titulo": "Identificar los limites de adquisicion",
+        "descripcion": "El operador explica que el FOV de adquisicion esta delimitado por las lineas de color verde en la pantalla de planificacion.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificacion de la adquisicion",
+        "zona": {
+          "x": 0.725,
+          "y": 0.149
+        },
+        "captura": "capturas/03_00-58.jpg",
+        "captura_anotada": "capturas/03_00-58_anotada.jpg",
+        "tiempo_real_seg": 58.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:27",
+        "tiempo_seg": 87.0,
+        "titulo": "Confirmar movimiento de camilla",
+        "descripcion": "Se confirma el cuadro de dialogo en pantalla para mover la camilla a la posicion del corte de prueba (target position 108.0 mm).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Corte de prueba",
+        "zona": {
+          "x": 0.56,
+          "y": 0.863
+        },
+        "captura": "capturas/04_01-27.jpg",
+        "captura_anotada": "capturas/04_01-27_anotada.jpg",
+        "tiempo_real_seg": 86.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:40",
+        "tiempo_seg": 100.0,
+        "titulo": "Ajustar la region de interes (ROI)",
+        "descripcion": "Se demuestra como posicionar y redimensionar el ROI en el vaso de interes. Se recomienda que abarque aproximadamente el 50% del lumen.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Configuracion de SureStart",
+        "zona": {
+          "x": 0.718,
+          "y": 0.361
+        },
+        "captura": "capturas/05_01-40.jpg",
+        "captura_anotada": "capturas/05_01-40_anotada.jpg",
+        "tiempo_real_seg": 99.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:11",
+        "tiempo_seg": 131.0,
+        "titulo": "Reactivar paso previo en secuencia",
+        "descripcion": "Si el corte de prueba no es satisfactorio, se puede seleccionar la linea correspondiente y presionar el boton Previous para volver a realizar la exploracion de localizacion.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuracion de SureStart",
+        "zona": {
+          "x": 0.489,
+          "y": 0.966
+        },
+        "captura": "capturas/06_02-11.jpg",
+        "captura_anotada": "capturas/06_02-11_anotada.jpg",
+        "tiempo_real_seg": 130.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:23",
+        "tiempo_seg": 143.0,
+        "titulo": "Visualizar cortes con Scan Plan",
+        "descripcion": "Se presiona el boton Scan Plan para volver a la interfaz grafica de planificacion interactiva sobre el escanograma lateral y AP.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificacion de la adquisicion",
+        "zona": {
+          "x": 0.15,
+          "y": 0.956
+        },
+        "captura": "capturas/07_02-23.jpg",
+        "captura_anotada": "capturas/07_02-23_anotada.jpg",
+        "tiempo_real_seg": 143.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:54",
+        "tiempo_seg": 174.0,
+        "titulo": "Ajustar los parametros de SureStart",
+        "descripcion": "Se define un modo intermitente con un intervalo de 2.0 s y un umbral de disparo (Start ROI 1) de 220 HU para la monitorizacion del contraste.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Configuracion de SureStart",
+        "zona": {
+          "x": 0.242,
+          "y": 0.141
+        },
+        "captura": "capturas/08_02-54.jpg",
+        "captura_anotada": "capturas/08_02-54_anotada.jpg",
+        "tiempo_real_seg": 174.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:15",
+        "tiempo_seg": 195.0,
+        "titulo": "Modificar el tiempo de espera (Wait)",
+        "descripcion": "Se ingresa un tiempo de espera (Wait) de 5.0 segundos en la secuencia para retrasar el inicio del escaneo y optimizar el uso de radiacion respecto a la llegada del contraste.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuracion de SureStart",
+        "zona": {
+          "x": 0.218,
+          "y": 0.597
+        },
+        "captura": "capturas/09_03-15.jpg",
+        "captura_anotada": "capturas/09_03-15_anotada.jpg",
+        "tiempo_real_seg": 194.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:44",
+        "tiempo_seg": 224.0,
+        "titulo": "Habilitar o deshabilitar Voice Timing",
+        "descripcion": "Se demuestra que desmarcando la opcion Voice Timing se pueden omitir las locuciones de voz automaticas del equipo para dar las instrucciones de respiracion de forma manual.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuracion de SureStart",
+        "zona": {
+          "x": 0.234,
+          "y": 0.305
+        },
+        "captura": "capturas/10_03-44.jpg",
+        "captura_anotada": "capturas/10_03-44_anotada.jpg",
+        "tiempo_real_seg": 223.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:08",
+        "tiempo_seg": 248.0,
+        "titulo": "Confirmar protocolo y arrancar escaneo",
+        "descripcion": "Se presiona el botón 'Confirm' en pantalla y luego se presiona el botón físico de escaneo en la consola para iniciar la fase SureStart.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/11_04-08.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 247.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:18",
+        "tiempo_seg": 258.0,
+        "titulo": "Ajustar la región de interés (ROI)",
+        "descripcion": "El operador explica que durante los primeros 5 segundos de espera se puede reposicionar el ROI en la imagen axial mediante las flechas de dirección de la interfaz.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/12_04-18.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 258.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:33",
+        "tiempo_seg": 273.0,
+        "titulo": "Simulación de gatillado en SureStart",
+        "descripcion": "Se muestra en el gráfico cómo el valor de atenuación en HU sube al ingresar el contraste; al superar el umbral de 220 HU configurado, el sistema dispara automáticamente la adquisición helicoidal.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/13_04-33.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 273.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:05",
+        "tiempo_seg": 305.0,
+        "titulo": "Duración de la adquisición del Angio-TEP",
+        "descripcion": "Se destaca en pantalla que el tiempo total de escaneo ('Total ScanTime') para la fase helicoidal del Angio-TEP es de solo 3,3 segundos.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/14_05-05.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 304.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:37",
+        "tiempo_seg": 337.0,
+        "titulo": "Recomendación de uso de Bolus Tracking",
+        "descripcion": "El especialista aclara que Canon orienta sus protocolos de angio hacia 'Bolus Tracking' para evitar doble inyección de contraste y doble radiación al paciente en comparación con 'Bolus Test'.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/15_05-37.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 337.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:54",
+        "tiempo_seg": 354.0,
+        "titulo": "Gatillado para Angio de Cuello",
+        "descripcion": "Se detalla que para una angiografía de cuello el ROI se posiciona y se gatilla en la aorta descendente para optimizar la llegada del contraste.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/16_05-54.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 353.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "06:08",
+        "tiempo_seg": 368.0,
+        "titulo": "Angio de Cerebro de forma manual",
+        "descripcion": "Se describe que la angiografía de cerebro se gatilla manualmente y se adquiere en sentido cráneo-caudal para evitar la saturación por contraste en las venas subclacias.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/17_06-08.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 368.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "07:12",
+        "tiempo_seg": 432.0,
+        "titulo": "Programación para extremidades inferiores",
+        "descripcion": "Para extremidades inferiores, donde el contraste tarda entre 50 a 60 segundos en llegar al pie, se recomienda enlentecer el tiempo de rotación para prolongar la adquisición helicoidal a unos 40-45 segundos.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/18_07-12.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 431.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "07:32",
+        "tiempo_seg": 452.0,
+        "titulo": "Configuración del tiempo de espera (Wait)",
+        "descripcion": "Se explica el uso de la función 'Wait' (tiempo de espera tras el gatillado en aorta) para ajustar de manera exacta los segundos necesarios según la longitud de barrido del paciente.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Adquisición de imagen",
+        "zona": null,
+        "captura": "capturas/19_07-32.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 451.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:03",
+        "tiempo_seg": 483.0,
+        "titulo": "Sincronizar el tiempo de retraso (Wait)",
+        "descripcion": "El instructor explica que un tiempo de espera (Wait) de unos 8 segundos permite capturar de manera óptima el contraste en la aorta descendente a los 50 o 60 segundos.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Planificación y tiempos de contraste",
+        "zona": null,
+        "captura": "capturas/20_08-03.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 483.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:35",
+        "tiempo_seg": 515.0,
+        "titulo": "Modulación según el tamaño del paciente",
+        "descripcion": "Se destaca la importancia de ajustar la modulación (estándar o calidad) y los kilovoltios (kV) dependiendo de si el paciente es grande, chico o no puede mover los brazos.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Ajuste de parámetros de adquisición",
+        "zona": null,
+        "captura": "capturas/21_08-35.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 515.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:09",
+        "tiempo_seg": 549.0,
+        "titulo": "Acceder al menú SURE Subtraction",
+        "descripcion": "Se muestra la interfaz en pantalla donde se selecciona 'SURE Subtraction' para habilitar las opciones de sustracción digital en cerebro, cuello o angiografía.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de sustracción digital",
+        "zona": {
+          "x": 0.139,
+          "y": 0.878
+        },
+        "captura": "capturas/22_09-09.jpg",
+        "captura_anotada": "capturas/22_09-09_anotada.jpg",
+        "tiempo_real_seg": 549.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:25",
+        "tiempo_seg": 565.0,
+        "titulo": "Explicación del proceso de sustracción digital",
+        "descripcion": "El instructor aclara que el equipo toma una primera imagen de máscara sin contraste (a baja dosis) y luego realiza la angiografía con contraste para restarlas digitalmente.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Configuración de sustracción digital",
+        "zona": null,
+        "captura": "capturas/23_09-25.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 565.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "10:07",
+        "tiempo_seg": 607.0,
+        "titulo": "Secuencia obligatoria de corte de prueba",
+        "descripcion": "El sistema obliga a realizar el corte de prueba antes de la fase sin contraste para fijar la posición del ROI y la camilla, evitando movimientos del paciente.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Configuración de sustracción digital",
+        "zona": null,
+        "captura": "capturas/24_10-07.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 606.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "10:37",
+        "tiempo_seg": 637.0,
+        "titulo": "Crear protocolo ANGIO AORTA DSA",
+        "descripcion": "Se introduce el nombre del protocolo en el campo de texto en pantalla para identificar la adquisición con sustracción digital (DSA).",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Programación de protocolos",
+        "zona": {
+          "x": 0.605,
+          "y": 0.141
+        },
+        "captura": "capturas/25_10-37.jpg",
+        "captura_anotada": "capturas/25_10-37_anotada.jpg",
+        "tiempo_real_seg": 637.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:05",
+        "tiempo_seg": 665.0,
+        "titulo": "Seleccionar modo de escaneo Sub-Hel",
+        "descripcion": "Se selecciona la opción 'Sub-Hel' (Sustracción Helicoidal) en el menú desplegable 'Scan Mode' para aplicar la adquisición helicoidal especial de sustracción.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Ajuste de parámetros de adquisición",
+        "zona": {
+          "x": 0.56,
+          "y": 0.801
+        },
+        "captura": "capturas/26_11-05.jpg",
+        "captura_anotada": "capturas/26_11-05_anotada.jpg",
+        "tiempo_real_seg": 664.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:15",
+        "tiempo_seg": 675.0,
+        "titulo": "Explicación del modo Sub-Vol",
+        "descripcion": "Se menciona que la opción 'Sub-Vol' realiza adquisiciones volumétricas de 4 cm (hasta 16 cm en equipos de 320 filas de detectores) orientadas a neurología y cardiología.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Ajuste de parámetros de adquisición",
+        "zona": null,
+        "captura": "capturas/27_11-15.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 674.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:51",
+        "tiempo_seg": 711.0,
+        "titulo": "Verificar enlace de máscara y angiografía",
+        "descripcion": "La máscara (fase sin contraste) y la angiografía deben estar vinculadas para garantizar la misma colimación y parámetros de reconstrucción necesarios para la sustracción.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Configuración de sustracción digital",
+        "zona": null,
+        "captura": "capturas/28_11-51.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 710.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "12:08",
+        "tiempo_seg": 728.0,
+        "titulo": "Activar la opción de sincronización orbital",
+        "descripcion": "El instructor indica activar la opción 'Orbital' para sincronizar la posición del tubo, garantizando que el estudio sin contraste y la angiotomografía tengan las proyecciones en el mismo sentido para facilitar la sustracción.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.235,
+          "y": 0.745
+        },
+        "captura": "capturas/29_12-08.jpg",
+        "captura_anotada": "capturas/29_12-08_anotada.jpg",
+        "tiempo_real_seg": 727.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "13:10",
+        "tiempo_seg": 790.0,
+        "titulo": "Seleccionar el filtro de sustracción automática",
+        "descripcion": "Se configura la opción de sustracción en modo 'Angio' ('Sure Subtraction' ajustado a 'Angio') para la reconstrucción del volumen vascular, indicando que el software realiza un registro rígido o deformable según corresponda.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.56,
+          "y": 0.75
+        },
+        "captura": "capturas/30_13-10.jpg",
+        "captura_anotada": "capturas/30_13-10_anotada.jpg",
+        "tiempo_real_seg": 790.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "13:34",
+        "tiempo_seg": 814.0,
+        "titulo": "Verificar la inmovilización del paciente",
+        "descripcion": "El instructor advierte sobre la importancia de inmovilizar al paciente (por ejemplo, con la cinta del mentón o cabecera) para evitar artefactos de movimiento en estudios de sustracción cerebral y corporal.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Posicionamiento y Seguridad",
+        "zona": null,
+        "captura": "capturas/31_13-34.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 813.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "14:30",
+        "tiempo_seg": 870.0,
+        "titulo": "Diferenciar nombres de serie en reconstrucción",
+        "descripcion": "Se explica la importancia de nombrar la serie del volumen principal de manera distinta a 'Post-CTA' (por ejemplo, 'ANGIO AORTA') para evitar confusiones en el análisis vascular posterior.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.56,
+          "y": 0.79
+        },
+        "captura": "capturas/32_14-30.jpg",
+        "captura_anotada": "capturas/32_14-30_anotada.jpg",
+        "tiempo_real_seg": 870.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "16:30",
+        "tiempo_seg": 990.0,
+        "titulo": "Reiniciar la cola de reconstrucción",
+        "descripcion": "Para solucionar problemas cuando la reconstrucción se queda en estado de espera ('Hold'), se debe ir al menú Utility y seleccionar la opción 'Reconstruction Queue restart' para destrabar el proceso.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Resolución de Problemas",
+        "zona": {
+          "x": 0.19,
+          "y": 0.36
+        },
+        "captura": "capturas/33_16-30.jpg",
+        "captura_anotada": "capturas/33_16-30_anotada.jpg",
+        "tiempo_real_seg": 989.0,
+        "puntaje": null
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 7.0,
+        "texto": "Un angio-TEP."
+      },
+      {
+        "inicio": 7.0,
+        "fin": 20.0,
+        "texto": "Y pasas. Sí, ¿verdad? ¿Ya está todo cerrado? Sí. Ya. Vamos primero con la TEP."
+      },
+      {
+        "inicio": 20.0,
+        "fin": 32.0,
+        "texto": "El escanograma. Con escano-skip para abortar el primero. Lo dejas más largo para poder jugar un poco más."
+      },
+      {
+        "inicio": 32.0,
+        "fin": 41.0,
+        "texto": "Como el otro lo dejé tan cortito, no me dejó... ¿Se fijan? Como era demasiado corto, yo estaba tomando imagen con modulación muy abajo, entonces el equipo me dijo: \"¿sabes qué?, no, no me puedo mudar porque realmente"
+      },
+      {
+        "inicio": 41.0,
+        "fin": 52.0,
+        "texto": "estoy tan lejos de la referencia que no...\" Claro. Porque la mayoría de las veces claro, uno queda corto pero es un poco no más y el equipo después lo permite hacer a lo negro. Indica así"
+      },
+      {
+        "inicio": 52.0,
+        "fin": 59.0,
+        "texto": "pero el límite siempre va a ser la parte verde. Sí, este es el FOV. Sí o sí este es el FOV. El límite de la adquisición."
+      },
+      {
+        "inicio": 59.0,
+        "fin": 73.0,
+        "texto": "Entonces acá tengo la TEP, ¿cierto? Están todas juntas. Entonces ahora voy. El corte de prueba, tronco pulmonar."
+      },
+      {
+        "inicio": 73.0,
+        "fin": 81.0,
+        "texto": "Lo voy a dejar ahí porque tengo el... Y aquí está la angio. Ya."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 87.0,
+        "texto": "Y como pueden ver acá, bueno, voy a ir por el corte de prueba."
+      },
+      {
+        "inicio": 87.0,
+        "fin": 98.0,
+        "texto": "Confirmo, okay, para que se mueva a la posición indicada. Ahí está el corte de prueba."
+      },
+      {
+        "inicio": 98.0,
+        "fin": 112.0,
+        "texto": "Entonces aquí yo puedo, el ROI, lo tomó del medio, yo lo puedo mover y si lo tomo del costado, que es donde se pone la manito, yo lo puedo agrandar o achicar. La idea es que siempre sea como el 50% del lumen."
+      },
+      {
+        "inicio": 112.0,
+        "fin": 119.0,
+        "texto": "Y de repente, no, ¿sabes qué?, no quedé en el tronco pulmonar, me equivoqué, quedé muy, muy abajo. Lo quiero repetir."
+      },
+      {
+        "inicio": 119.0,
+        "fin": 131.0,
+        "texto": "Entonces en ese caso, en azul es lo que va a ejecutar, en gris lo que ya hizo y en blanco lo que falta por hacer. Entonces vuelvo a hacer clic en uno para volver a hacer el scan and view"
+      },
+      {
+        "inicio": 131.0,
+        "fin": 142.0,
+        "texto": "y aquí previous y lo vuelve a activar. Entonces aquí voy a ir al scan plan, puedo poner una coordenada, puedo poner 108 o 110 dependiendo de hacia dónde quiero y si lo quiero ver visual hago clic en scan plan."
+      },
+      {
+        "inicio": 142.0,
+        "fin": 155.0,
+        "texto": "Y elijo. Claro. Y hago clic en scan plan y ahí lo muevo. ¿Sabes qué? Era más arriba. Por ejemplo. Y vuelvo a confirmar."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 164.0,
+        "texto": "Vuelve a pedir permiso para ir a hacer una posición. Ahora sí estoy en el tronco pulmonar, ¿ya?"
+      },
+      {
+        "inicio": 164.0,
+        "fin": 174.0,
+        "texto": "Entonces aquí lo voy a dejar ahí para después hacer la simulación de voy a mover como que ahí llega el contraste."
+      },
+      {
+        "inicio": 174.0,
+        "fin": 184.0,
+        "texto": "Entonces va a ser intermitente cada dos segundos esperando llegar a 220 y de ahí se va a lanzar la TEP. Y esto que es el voice timing,"
+      },
+      {
+        "inicio": 184.0,
+        "fin": 192.0,
+        "texto": "esto quiere decir que va a lanzar la instrucción verbal mientras está ejecutando el bolus tracking. Ah, ya."
+      },
+      {
+        "inicio": 192.0,
+        "fin": 200.0,
+        "texto": "Por ejemplo, este no le puse tiempo, entonces yo le voy a decir: \"¿sabes qué? le voy a dar 5 segundos porque si no van a ser 5 segundos irradiando esperando que llegue el contraste\"."
+      },
+      {
+        "inicio": 200.0,
+        "fin": 211.0,
+        "texto": "Y acá después va a aparecer un mensaje: \"oye, que sabes qué, no puedo porque pusiste uno\" y se va a cambiar solo. ¿Ya? Pero yo lo voy a cambiar ahora a 5.1."
+      },
+      {
+        "inicio": 211.0,
+        "fin": 221.0,
+        "texto": "Entonces, termina esto e inmediatamente comienza el bolus tracking y lanza la instrucción verbal: \"tome aire, aguante, no respire\". Y ahí se gatilla y se lanza."
+      },
+      {
+        "inicio": 221.0,
+        "fin": 232.0,
+        "texto": "Y eso lo puedo desactivar para... Sí, por acá. Ah. Ahí se desactiva. Y si lo quieren activar acá, aquí voy a dar para que lo puedan ver."
+      },
+      {
+        "inicio": 232.0,
+        "fin": 240.0,
+        "texto": "Confirmo."
+      },
+      {
+        "inicio": 248.0,
+        "fin": 251.0,
+        "texto": "Está fijo."
+      },
+      {
+        "inicio": 251.0,
+        "fin": 253.0,
+        "texto": "Así que aquí vamos los dos con el mouse, ¿cierto?"
+      },
+      {
+        "inicio": 253.0,
+        "fin": 259.0,
+        "texto": "Espera 5 segundos. Con esto yo puedo mover el roi, de que se alcance a ver."
+      },
+      {
+        "inicio": 259.0,
+        "fin": 264.0,
+        "texto": "Respiro, descanse, ahí viene la instrucción verbal. Sí."
+      },
+      {
+        "inicio": 264.0,
+        "fin": 268.0,
+        "texto": "Y con esto yo lo lanzo, si es que no lo quiero gatillar yo manual, con esto."
+      },
+      {
+        "inicio": 268.0,
+        "fin": 274.0,
+        "texto": "Bueno, aquí voy a hacer como que va llegando el contraste, ¿no?"
+      },
+      {
+        "inicio": 274.0,
+        "fin": 284.0,
+        "texto": "Se gatilló."
+      },
+      {
+        "inicio": 284.0,
+        "fin": 288.0,
+        "texto": "Se fue rápido."
+      },
+      {
+        "inicio": 288.0,
+        "fin": 292.0,
+        "texto": "Sí, de hecho la adquisición de la TE,"
+      },
+      {
+        "inicio": 292.0,
+        "fin": 298.0,
+        "texto": "3,3 segundos la adquisición, entonces por eso está censado a 2:20"
+      },
+      {
+        "inicio": 298.0,
+        "fin": 303.0,
+        "texto": "la instrucción la da mientras está censando, entonces también respira."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 307.0,
+        "texto": "Hay que darle tiempo, porque"
+      },
+      {
+        "inicio": 307.0,
+        "fin": 312.0,
+        "texto": "no le gane la máquina, sí, no, de hecho el protocolo va a quedar listo para eso, para que todo no estén cambiando los tiempos."
+      },
+      {
+        "inicio": 312.0,
+        "fin": 317.0,
+        "texto": "Porque como es bolus tracking, va a ser en base al, al enhacement que tengamos en el tronco pulmonar."
+      },
+      {
+        "inicio": 317.0,
+        "fin": 321.0,
+        "texto": "Eso, eso va en lo importante que, que haga el gatillado."
+      },
+      {
+        "inicio": 321.0,
+        "fin": 325.0,
+        "texto": "¿Este de bolo cómo lo podemos hacer? Porque ahora se va por bolus tracking,"
+      },
+      {
+        "inicio": 325.0,
+        "fin": 330.0,
+        "texto": "sí, es todo con bolus tracking funciona Canon."
+      },
+      {
+        "inicio": 330.0,
+        "fin": 335.0,
+        "texto": "Ah, ya, ya, ya. Sí, se pueden poner los dos también si les permite, pero,"
+      },
+      {
+        "inicio": 335.0,
+        "fin": 339.0,
+        "texto": "¿podemos hacer una que sea bolus test? O sea, ¿eso, inyectar con tiempo?"
+      },
+      {
+        "inicio": 339.0,
+        "fin": 343.0,
+        "texto": "Habría que crear un protocolo para bolus test, bolus test."
+      },
+      {
+        "inicio": 343.0,
+        "fin": 348.0,
+        "texto": "Pero Canon dice: \"ocupen el bolus tracking porque para el angio funciona súper bien.\""
+      },
+      {
+        "inicio": 348.0,
+        "fin": 353.0,
+        "texto": "Y no le gusta el bolus test, que se puede crear el protocolo pero"
+      },
+      {
+        "inicio": 353.0,
+        "fin": 358.0,
+        "texto": "está orientado a bolus tracking porque no tienen que inyectar dos veces contraste, no tienen que irradiar dos veces aunque sea baja dosis igual,"
+      },
+      {
+        "inicio": 358.0,
+        "fin": 361.0,
+        "texto": "no es necesario eso."
+      },
+      {
+        "inicio": 361.0,
+        "fin": 365.0,
+        "texto": "Entonces, la angio de cerebro como decía era manual."
+      },
+      {
+        "inicio": 365.0,
+        "fin": 369.0,
+        "texto": "La de cuello se gatilla en la aorta descendente."
+      },
+      {
+        "inicio": 369.0,
+        "fin": 374.0,
+        "texto": "Eh, si es de cerebro y cuello, puede ser igual, si es que no tienen problemas con el retorno venoso."
+      },
+      {
+        "inicio": 374.0,
+        "fin": 378.0,
+        "texto": "Que si a veces reclaman mucho por retorno venoso, dejamos una angio de cerebro."
+      },
+      {
+        "inicio": 378.0,
+        "fin": 382.0,
+        "texto": "Una angio de cerebro que lo gatillan ustedes"
+      },
+      {
+        "inicio": 382.0,
+        "fin": 386.0,
+        "texto": "y lo toma craneocaudal y sigue hasta el cuello."
+      },
+      {
+        "inicio": 386.0,
+        "fin": 390.0,
+        "texto": "Y así incluso se evita un poco la saturación del contraste en las subclavia."
+      },
+      {
+        "inicio": 390.0,
+        "fin": 393.0,
+        "texto": "Eh, la T, el roi en el tronco pulmonar."
+      },
+      {
+        "inicio": 393.0,
+        "fin": 398.0,
+        "texto": "La de angio de aorta, súper simple, se censará sobre la aorta descendente"
+      },
+      {
+        "inicio": 398.0,
+        "fin": 403.0,
+        "texto": "o cerca de la aorta cerca del inicio. Extremidades inferiores,"
+      },
+      {
+        "inicio": 403.0,
+        "fin": 408.0,
+        "texto": "también es la aorta cerca del inicio, ahí lo que se maneja es el tiempo de adquisición."
+      },
+      {
+        "inicio": 408.0,
+        "fin": 411.0,
+        "texto": "El tiempo, me refiero a,"
+      },
+      {
+        "inicio": 411.0,
+        "fin": 415.0,
+        "texto": "ah, se está creando una de abdomen, de ahí la veo."
+      },
+      {
+        "inicio": 415.0,
+        "fin": 418.0,
+        "texto": "No, ahí no queda bien."
+      },
+      {
+        "inicio": 418.0,
+        "fin": 422.0,
+        "texto": "Ahí se maneja el que el barrido, porque claro,"
+      },
+      {
+        "inicio": 422.0,
+        "fin": 427.0,
+        "texto": "la inyección del contraste debería pasar 50, 60 segundos hasta llegar a la punta del dedo"
+      },
+      {
+        "inicio": 427.0,
+        "fin": 430.0,
+        "texto": "para asegurarnos que tenga el contraste."
+      },
+      {
+        "inicio": 430.0,
+        "fin": 434.0,
+        "texto": "Y como la adquisición es rápida, lo que hacemos, le ponemos"
+      },
+      {
+        "inicio": 434.0,
+        "fin": 439.0,
+        "texto": "el tiempo de rotación más lento para que la adquisición helicoidal"
+      },
+      {
+        "inicio": 439.0,
+        "fin": 444.0,
+        "texto": "sea como de 40 segundos, tal vez 40 y tanto. Puede quedar en un segundo, en,"
+      },
+      {
+        "inicio": 444.0,
+        "fin": 447.0,
+        "texto": "bueno, ahí depende del largo del paciente."
+      },
+      {
+        "inicio": 447.0,
+        "fin": 451.0,
+        "texto": "Y entonces también se le puede poner un wait."
+      },
+      {
+        "inicio": 451.0,
+        "fin": 455.0,
+        "texto": "Es decir, si yo veo que la adquisición queda no sé, en 45 segundos,"
+      },
+      {
+        "inicio": 455.0,
+        "fin": 459.0,
+        "texto": "pero yo necesito llegar a los 60, entonces en el wait le puedo poner 15."
+      },
+      {
+        "inicio": 459.0,
+        "fin": 464.0,
+        "texto": "Pero ese wait depende del largo del paciente de cómo vaya a quedar la planificación."
+      },
+      {
+        "inicio": 464.0,
+        "fin": 469.0,
+        "texto": "Entonces ahí, la adquisición 45 más el wait 15"
+      },
+      {
+        "inicio": 469.0,
+        "fin": 473.0,
+        "texto": "está bien, porque claro, el wait van a ser 15 segundos pero aquí en la aorta."
+      },
+      {
+        "inicio": 473.0,
+        "fin": 477.0,
+        "texto": "Entonces, va a gatillar y después va a esperar 15 segundos y eso va a lanzar."
+      },
+      {
+        "inicio": 477.0,
+        "fin": 480.0,
+        "texto": "En esos 15 segundos la aorta todavía va a estar bien con contraste."
+      },
+      {
+        "inicio": 480.0,
+        "fin": 481.0,
+        "texto": "más lento la adquisición"
+      },
+      {
+        "inicio": 481.0,
+        "fin": 485.0,
+        "texto": "pero le va a dar el tiempo para el wait de 8 segundos"
+      },
+      {
+        "inicio": 485.0,
+        "fin": 490.0,
+        "texto": "y así a los 60, 50, estamos llegando acá"
+      },
+      {
+        "inicio": 490.0,
+        "fin": 491.0,
+        "texto": "y pillar el contraste en la arteria"
+      },
+      {
+        "inicio": 491.0,
+        "fin": 492.0,
+        "texto": "Esa es la teoría"
+      },
+      {
+        "inicio": 492.0,
+        "fin": 494.0,
+        "texto": "Y para extremidades superiores"
+      },
+      {
+        "inicio": 494.0,
+        "fin": 497.0,
+        "texto": "también puede ser la aorta descendente"
+      },
+      {
+        "inicio": 497.0,
+        "fin": 500.0,
+        "texto": "y a veces, bueno, algunos dicen más bonito, no sé, si se ve bien en el bíceps"
+      },
+      {
+        "inicio": 500.0,
+        "fin": 503.0,
+        "texto": "a visual, si quieren, pero si no"
+      },
+      {
+        "inicio": 503.0,
+        "fin": 506.0,
+        "texto": "gatillado en la, en la aorta descendente"
+      },
+      {
+        "inicio": 506.0,
+        "fin": 509.0,
+        "texto": "Y también, gatilla y"
+      },
+      {
+        "inicio": 509.0,
+        "fin": 510.0,
+        "texto": "van hacia arriba"
+      },
+      {
+        "inicio": 510.0,
+        "fin": 513.0,
+        "texto": "Lo que tendrían que ir cambiando, aparte de los tiempos, es la modulación"
+      },
+      {
+        "inicio": 513.0,
+        "fin": 515.0,
+        "texto": "Si el paciente es más grande o más chico"
+      },
+      {
+        "inicio": 515.0,
+        "fin": 518.0,
+        "texto": "la modulación estándar o calidad"
+      },
+      {
+        "inicio": 518.0,
+        "fin": 521.0,
+        "texto": "y si tiene los dos brazos abajo, tal vez, o si no"
+      },
+      {
+        "inicio": 521.0,
+        "fin": 523.0,
+        "texto": "no puede mover los brazos, y quizás ponerle 120"
+      },
+      {
+        "inicio": 523.0,
+        "fin": 525.0,
+        "texto": "La mayoría van a tener 120 kilovoltios"
+      },
+      {
+        "inicio": 525.0,
+        "fin": 527.0,
+        "texto": "Ahí tal vez subir a 135"
+      },
+      {
+        "inicio": 527.0,
+        "fin": 528.0,
+        "texto": "por ejemplo"
+      },
+      {
+        "inicio": 528.0,
+        "fin": 531.0,
+        "texto": "Tiene los dos brazos y se necesita ver la estructura bien"
+      },
+      {
+        "inicio": 531.0,
+        "fin": 534.0,
+        "texto": "Esas son las cosas que ustedes tendrían que ir modificando, pero los protocolos la idea es"
+      },
+      {
+        "inicio": 534.0,
+        "fin": 536.0,
+        "texto": "dejarlos ya listos"
+      },
+      {
+        "inicio": 536.0,
+        "fin": 537.0,
+        "texto": "Ya, bueno"
+      },
+      {
+        "inicio": 537.0,
+        "fin": 543.0,
+        "texto": "Este equipo tenía una modalidad que permitía la angio hacerla como darle más contraste todavía al vaso"
+      },
+      {
+        "inicio": 543.0,
+        "fin": 546.0,
+        "texto": "¿O estoy, estoy loco? Substracción digital"
+      },
+      {
+        "inicio": 546.0,
+        "fin": 547.0,
+        "texto": "Ah, la substracción digital"
+      },
+      {
+        "inicio": 547.0,
+        "fin": 552.0,
+        "texto": "Eh"
+      },
+      {
+        "inicio": 552.0,
+        "fin": 555.0,
+        "texto": "Sí, pero este tiene solamente, no se pidieron para los mapas de yodo"
+      },
+      {
+        "inicio": 555.0,
+        "fin": 559.0,
+        "texto": "pero sí sumamos la substracción digital para angiografía"
+      },
+      {
+        "inicio": 559.0,
+        "fin": 561.0,
+        "texto": "Ya"
+      },
+      {
+        "inicio": 561.0,
+        "fin": 564.0,
+        "texto": "Entonces, bueno, podemos dejar los protocolos como los vimos, o podemos crear uno"
+      },
+      {
+        "inicio": 564.0,
+        "fin": 566.0,
+        "texto": "con sub, que"
+      },
+      {
+        "inicio": 566.0,
+        "fin": 569.0,
+        "texto": "lo que hace se toma una máscara sin contraste"
+      },
+      {
+        "inicio": 569.0,
+        "fin": 573.0,
+        "texto": "Si no va a ser utilizada, ese sin contraste puede ser de bien baja dosis"
+      },
+      {
+        "inicio": 573.0,
+        "fin": 575.0,
+        "texto": "porque necesito que tenga datos"
+      },
+      {
+        "inicio": 575.0,
+        "fin": 576.0,
+        "texto": "y después la angiografía"
+      },
+      {
+        "inicio": 576.0,
+        "fin": 580.0,
+        "texto": "Y el equipo va a tomar las dos y va a hacer una substracción digital"
+      },
+      {
+        "inicio": 580.0,
+        "fin": 583.0,
+        "texto": "En ese caso hay algunos cambios así, que por ejemplo"
+      },
+      {
+        "inicio": 583.0,
+        "fin": 587.0,
+        "texto": "me deja obligatorio"
+      },
+      {
+        "inicio": 587.0,
+        "fin": 590.0,
+        "texto": "el corte de prueba primero antes del sin contraste"
+      },
+      {
+        "inicio": 590.0,
+        "fin": 592.0,
+        "texto": "y no lo puedo cambiar, porque todos sacan el corte de prueba"
+      },
+      {
+        "inicio": 592.0,
+        "fin": 596.0,
+        "texto": "después de sin contraste, porque vuelve a la posición de la camilla"
+      },
+      {
+        "inicio": 596.0,
+        "fin": 600.0,
+        "texto": "Pero acá no me permite, porque lo que quiere es que tú"
+      },
+      {
+        "inicio": 600.0,
+        "fin": 602.0,
+        "texto": "dejes todo, cuando hagas el sin contraste, ya esté listo"
+      },
+      {
+        "inicio": 602.0,
+        "fin": 604.0,
+        "texto": "puesto el ROI"
+      },
+      {
+        "inicio": 604.0,
+        "fin": 605.0,
+        "texto": "la, la guía"
+      },
+      {
+        "inicio": 605.0,
+        "fin": 607.0,
+        "texto": "todo listo para hacer la angio"
+      },
+      {
+        "inicio": 607.0,
+        "fin": 608.0,
+        "texto": "Ah, ya"
+      },
+      {
+        "inicio": 608.0,
+        "fin": 611.0,
+        "texto": "Entonces, se hace el corte de prueba, se deja listo el ROI"
+      },
+      {
+        "inicio": 611.0,
+        "fin": 614.0,
+        "texto": "después tú haces el sin contraste, e inmediatamente la angiografía"
+      },
+      {
+        "inicio": 614.0,
+        "fin": 618.0,
+        "texto": "cosa de evitar que el paciente se, se pueda mover mucho y"
+      },
+      {
+        "inicio": 618.0,
+        "fin": 619.0,
+        "texto": "tener problemas"
+      },
+      {
+        "inicio": 619.0,
+        "fin": 622.0,
+        "texto": "Y esos protocolos, eh"
+      },
+      {
+        "inicio": 622.0,
+        "fin": 624.0,
+        "texto": "hay que crearlos acá, por ejemplo"
+      },
+      {
+        "inicio": 624.0,
+        "fin": 629.0,
+        "texto": "en"
+      },
+      {
+        "inicio": 629.0,
+        "fin": 632.0,
+        "texto": "Claro, porque este es normal, por ejemplo"
+      },
+      {
+        "inicio": 632.0,
+        "fin": 634.0,
+        "texto": "acá"
+      },
+      {
+        "inicio": 634.0,
+        "fin": 637.0,
+        "texto": "Angio aorta"
+      },
+      {
+        "inicio": 637.0,
+        "fin": 641.0,
+        "texto": "DSA, los que digan DSA, van a ser con substracción digital"
+      },
+      {
+        "inicio": 641.0,
+        "fin": 648.0,
+        "texto": "Y aquí"
+      },
+      {
+        "inicio": 648.0,
+        "fin": 650.0,
+        "texto": "Me faltan los dos cardiogramas"
+      },
+      {
+        "inicio": 650.0,
+        "fin": 654.0,
+        "texto": "Ah, claro"
+      },
+      {
+        "inicio": 654.0,
+        "fin": 658.0,
+        "texto": "Bueno, ahí se puede cambiar el idioma, si el paciente es de, de otro país que"
+      },
+      {
+        "inicio": 658.0,
+        "fin": 661.0,
+        "texto": "que incluye el idioma acá, acá ustedes lo pueden setear"
+      },
+      {
+        "inicio": 661.0,
+        "fin": 665.0,
+        "texto": "Entonces, aquí, yo le pongo"
+      },
+      {
+        "inicio": 665.0,
+        "fin": 666.0,
+        "texto": "es Sub"
+      },
+      {
+        "inicio": 666.0,
+        "fin": 669.0,
+        "texto": "Son, son especiales estos helicoidales"
+      },
+      {
+        "inicio": 669.0,
+        "fin": 673.0,
+        "texto": "Sub Vol es como hacer volumétricos, que es por los 4 centímetros"
+      },
+      {
+        "inicio": 673.0,
+        "fin": 676.0,
+        "texto": "Eso está más orientado para el Aquilion One, por ejemplo, que está en la Clínica Alemana"
+      },
+      {
+        "inicio": 676.0,
+        "fin": 677.0,
+        "texto": "Ya"
+      },
+      {
+        "inicio": 677.0,
+        "fin": 680.0,
+        "texto": "Esos son 320 filas de detectores en el eje Z"
+      },
+      {
+        "inicio": 680.0,
+        "fin": 681.0,
+        "texto": "Ya"
+      },
+      {
+        "inicio": 681.0,
+        "fin": 683.0,
+        "texto": "A 0,5, 16 centímetros de cobertura"
+      },
+      {
+        "inicio": 683.0,
+        "fin": 688.0,
+        "texto": "Entonces, Aquilion One, uno, o sea, en un giro, un cerebro, un corazón, en un giro"
+      },
+      {
+        "inicio": 688.0,
+        "fin": 690.0,
+        "texto": "un tórax pediátrico, todo esto"
+      },
+      {
+        "inicio": 690.0,
+        "fin": 692.0,
+        "texto": "Entonces, aquí es Sub Hel"
+      },
+      {
+        "inicio": 692.0,
+        "fin": 696.0,
+        "texto": "y ya me lo indica así, yo no lo puedo cambiar. Te fijas, yo puse Sub Hel, y ya lo lanza"
+      },
+      {
+        "inicio": 696.0,
+        "fin": 697.0,
+        "texto": "Ya"
+      },
+      {
+        "inicio": 697.0,
+        "fin": 700.0,
+        "texto": "Entonces, sí o sí primero me pide el, el corte de prueba"
+      },
+      {
+        "inicio": 700.0,
+        "fin": 702.0,
+        "texto": "después vendría la angio"
+      },
+      {
+        "inicio": 702.0,
+        "fin": 704.0,
+        "texto": "perdón, el sin contraste, bolus tracking"
+      },
+      {
+        "inicio": 704.0,
+        "fin": 706.0,
+        "texto": "y la angiografía"
+      },
+      {
+        "inicio": 706.0,
+        "fin": 710.0,
+        "texto": "Y de acá, lo que hay que tener en cuenta son los volúmenes"
+      },
+      {
+        "inicio": 710.0,
+        "fin": 713.0,
+        "texto": "El sub, el, la máscara y la angio están linkeadas"
+      },
+      {
+        "inicio": 713.0,
+        "fin": 716.0,
+        "texto": "Por eso nos entregan esto, porque para poder"
+      },
+      {
+        "inicio": 716.0,
+        "fin": 720.0,
+        "texto": "hacer substracción, tiene que ser de igual la misma colimación, el mismo"
+      },
+      {
+        "inicio": 720.0,
+        "fin": 726.0,
+        "texto": "Hay otras cosas que también pide, sí o sí, la velocidad de rotación, tienen que ser similares."
+      },
+      {
+        "inicio": 726.0,
+        "fin": 735.0,
+        "texto": "Incluso se enciende este que es el Orbital, que quiere decir que sincroniza la posición del tubo"
+      },
+      {
+        "inicio": 735.0,
+        "fin": 746.0,
+        "texto": "para que las proyecciones sean iguales, o sea, el sin contraste con la angio el tubo esté siempre en cero, que las proyecciones por los canales sean en la misma, en el mismo sentido para que la geometría también ayude"
+      },
+      {
+        "inicio": 746.0,
+        "fin": 748.0,
+        "texto": "a hacer la sustracción."
+      },
+      {
+        "inicio": 748.0,
+        "fin": 759.0,
+        "texto": "Entonces, el volumen 1 va a ser para sustracción, por ejemplo, el, ya, de cuerpo, ACE de cuerpo."
+      },
+      {
+        "inicio": 759.0,
+        "fin": 766.0,
+        "texto": "De uno cada 0.8. Entonces, esto te dice que es el pre-CTA, o sea, antes de."
+      },
+      {
+        "inicio": 766.0,
+        "fin": 774.0,
+        "texto": "Si yo voy ahora a la angio, ya también lo setea igual, y también este dice pos-CTA."
+      },
+      {
+        "inicio": 774.0,
+        "fin": 780.0,
+        "texto": "O sea, uno es el pre, así lo define internamente, y el otro es el pos."
+      },
+      {
+        "inicio": 780.0,
+        "fin": 785.0,
+        "texto": "Si yo cambio el filtro acá, me lo va a cambiar en el otro. Entonces, por eso, yo puedo dejar el filtro de sin contraste,"
+      },
+      {
+        "inicio": 785.0,
+        "fin": 793.0,
+        "texto": "pero en la angio el primer volumen también va a tener un filtro de cuerpo, no de angio."
+      },
+      {
+        "inicio": 793.0,
+        "fin": 795.0,
+        "texto": "Porque es para sustraer, ¿ya?"
+      },
+      {
+        "inicio": 795.0,
+        "fin": 805.0,
+        "texto": "Entonces, acá es donde yo le digo ahora, hazlo de forma automática. ¿El cerebro? No, este es de cuerpo, angio."
+      },
+      {
+        "inicio": 805.0,
+        "fin": 812.0,
+        "texto": "Entonces, ahora sabe que va a hacer una sustracción digital de angio. Al ser de cerebro, es un, el registro se llama cuando"
+      },
+      {
+        "inicio": 812.0,
+        "fin": 823.0,
+        "texto": "pones la imagen y la vas a restar, el registro es rígido porque el cerebro es redondo, no se suele mover. Para cuerpo es un registro deformable, porque hay movimientos respiratorios, peristálticos,"
+      },
+      {
+        "inicio": 823.0,
+        "fin": 826.0,
+        "texto": "porque a veces el paciente se puede mover."
+      },
+      {
+        "inicio": 826.0,
+        "fin": 834.0,
+        "texto": "Y por eso también busca hacer, tenemos todo listo, ya, el sin contraste e inmediatamente el angio para que"
+      },
+      {
+        "inicio": 834.0,
+        "fin": 847.0,
+        "texto": "el paciente se mueva. Estaba recién, se fue con... se pone con... con compromiso de conciencia, stroke, y tú le dices no se mueva, se va a mover igual."
+      },
+      {
+        "inicio": 847.0,
+        "fin": 856.0,
+        "texto": "Entonces, ahí es mejor, sí, hay que poner la cinta del mentón y de la cabeza para lograr, porque también puedes hacer una sustracción digital de cerebro,"
+      },
+      {
+        "inicio": 856.0,
+        "fin": 866.0,
+        "texto": "lo cual es bueno porque sacar solo el vaso cuando está tocando el hueso es difícil. En cambio, aquí el, la sustracción intenta hacer su mejor esfuerzo,"
+      },
+      {
+        "inicio": 866.0,
+        "fin": 870.0,
+        "texto": "pero elimina hueso, calcio y stent de forma automática."
+      },
+      {
+        "inicio": 870.0,
+        "fin": 878.0,
+        "texto": "Entonces, para el análisis vascular, es buenísimo. Y genera un volumen, aparte, después, sustraído,"
+      },
+      {
+        "inicio": 878.0,
+        "fin": 884.0,
+        "texto": "donde tú lo puedes recorrer, pero te vas a fijar que no tiene ningún hueso, van a ser solamente los vasos sanguíneos bien marcados."
+      },
+      {
+        "inicio": 884.0,
+        "fin": 886.0,
+        "texto": "- ¿Podemos probarlo igual?"
+      },
+      {
+        "inicio": 886.0,
+        "fin": 891.0,
+        "texto": "- Eso mismo, para ver en la práctica. - No, yo me refería..."
+      },
+      {
+        "inicio": 891.0,
+        "fin": 904.0,
+        "texto": "- Sí, o sea, sí, sí. - Sí, yo me refería a lo del RIS con los pacientes, la worklist. - ¿La worklist? - Sí, porque como que no está activo parece acá. - No, si de hecho dijo que sí, pero..."
+      },
+      {
+        "inicio": 904.0,
+        "fin": 913.0,
+        "texto": "ay, ¿cómo fue que dijo? La Cata dijo que... dijo que para radioterapia no existe, pero para nosotros sí, pues, entonces me dijo podríamos testear uno para..."
+      },
+      {
+        "inicio": 913.0,
+        "fin": 918.0,
+        "texto": "- Ah, mira. - O crear uno para probar, claro, para ver si llega. - Claro, sí, la idea es que..."
+      },
+      {
+        "inicio": 918.0,
+        "fin": 922.0,
+        "texto": "ocupar el computador, para hacer un test."
+      },
+      {
+        "inicio": 922.0,
+        "fin": 928.0,
+        "texto": "Entonces, el primer volumen se va a llamar pos-CTA, ¿cierto?"
+      },
+      {
+        "inicio": 928.0,
+        "fin": 936.0,
+        "texto": "El de la angio, que es para que se, para que haga la sustracción con la máscara, pero no va a tener el filtro de angio, de cuerpo."
+      },
+      {
+        "inicio": 936.0,
+        "fin": 945.0,
+        "texto": "Entonces, siempre, ese no lo dejen, el que dice pre y pos es para el proceso."
+      },
+      {
+        "inicio": 945.0,
+        "fin": 952.0,
+        "texto": "El volumen 2 tiene el filtro de angio de cuerpo y yo le voy a poner acá, por ejemplo, angio aorta."
+      },
+      {
+        "inicio": 952.0,
+        "fin": 958.0,
+        "texto": "Y el que se llame angio aorta, ese es el que vale. O el de otro, angio cerebro,"
+      },
+      {
+        "inicio": 958.0,
+        "fin": 960.0,
+        "texto": "angio cuello,"
+      },
+      {
+        "inicio": 960.0,
+        "fin": 964.0,
+        "texto": "para que no se confundan con el que dice pos-CTA."
+      },
+      {
+        "inicio": 964.0,
+        "fin": 974.0,
+        "texto": "Porque ese igual se va a ver realzado, pero se va a ver raro porque, claro, porque tiene el filtro de la máscara, que es el filtro suave de cuerpo, no para el angio."
+      },
+      {
+        "inicio": 974.0,
+        "fin": 983.0,
+        "texto": "Porque siempre hay una confusión ahí, tengo que explicar lo que es por esto, para que lo haga automático. Y el 2 tiene el filtro que corresponde y va a tener el nombre que corresponde."
+      },
+      {
+        "inicio": 983.0,
+        "fin": 991.0,
+        "texto": "- ¿Y este equipo no tenía también la posibilidad de usar doble energía para contrastar más el medio de contraste?"
+      },
+      {
+        "inicio": 991.0,
+        "fin": 993.0,
+        "texto": "No."
+      },
+      {
+        "inicio": 993.0,
+        "fin": 995.0,
+        "texto": "- No."
+      },
+      {
+        "inicio": 995.0,
+        "fin": 999.0,
+        "texto": "Eso, esa es la duda que tengo."
+      },
+      {
+        "inicio": 999.0,
+        "fin": 1004.0,
+        "texto": "¿Tiene alguna modalidad dual o no tiene?"
+      },
+      {
+        "inicio": 1004.0,
+        "fin": 1013.0,
+        "texto": "Porque cuando se... cuando empezaron a licitar, ya ni me acuerdo con cuáles de todos los TAC decían... No tiene doble energía."
+      },
+      {
+        "inicio": 1013.0,
+        "fin": 1019.0,
+        "texto": "Ah, ya, okay, listo. No tiene doble energía, porque yo hubiera postulado la sustracción digital con mapas de yodo."
+      },
+      {
+        "inicio": 1019.0,
+        "fin": 1028.0,
+        "texto": "Nosotros, Canon, utiliza la sustracción digital para todo eso, más que la doble energía, porque los papers científicos y todo demuestran que la sustracción digital tiene mejor resultado que la doble energía."
+      },
+      {
+        "inicio": 1028.0,
+        "fin": 1042.0,
+        "texto": "Porque es de, de cero sin contraste a lo contrastado, utiliza toda la unidad de Hounsfield. En la doble energía va de cierto kilovoltaje a cierto kilo, y eso te da un menor rango de unidad de Hounsfield."
+      },
+      {
+        "inicio": 1042.0,
+        "fin": 1050.0,
+        "texto": "Sobre todo para pulmón, para... hay una presentación que mandaron de Japón llena de paper que por qué ellos lo hacen así."
+      },
+      {
+        "inicio": 1050.0,
+        "fin": 1061.0,
+        "texto": "Entonces, lo único que no puede hacer la sustracción digital versus la doble energía es caracterización de los cálculos renales,"
+      },
+      {
+        "inicio": 1061.0,
+        "fin": 1068.0,
+        "texto": "o sea, si es ácido úrico, oxalato de calcio o de lo otro, porque te da un gráfico, el que más se acerque,"
+      },
+      {
+        "inicio": 1068.0,
+        "fin": 1071.0,
+        "texto": "y gota."
+      },
+      {
+        "inicio": 1071.0,
+        "fin": 1082.0,
+        "texto": "Ya, para eso necesitaríamos la doble energía de Canon para hacerlo, pero todo lo otro de mapas de perfusión, realce de contraste, etc., o imagen virtual sin contraste toma la máscara,"
+      },
+      {
+        "inicio": 1082.0,
+        "fin": 1092.0,
+        "texto": "que es lo que se hace en Japón, y sin usar la... pues, de muy baja dosis. Yo tengo una, una pregunta que me ha pasado igual un poco."
+      },
+      {
+        "inicio": 1092.0,
+        "fin": 1105.0,
+        "texto": "A veces cuando adquirimos y tratamos de reconstruir, y para ver la imagen reconstruida, me parece aquí hold. Ya, no te... no está reconstruyendo."
+      },
+      {
+        "inicio": 1105.0,
+        "fin": 1113.0,
+        "texto": "Y no me reconstruye, se queda pegado, y al menos para que... Eso suele pasar cuando uno lo presiona acá."
+      },
+      {
+        "inicio": 1113.0,
+        "fin": 1119.0,
+        "texto": "Sí, y abre. No, no, eso sí lo teníamos consideración, sí. Y si no, este,"
+      },
+      {
+        "inicio": 1119.0,
+        "fin": 1122.76,
+        "texto": "Recon Queue Restart, y reinicia todo lo que esté aquí. Lo reinicia, este, sí. Oh, si no se los dije antes, sorry, es importante."
+      },
+      {
+        "inicio": 1122.76,
+        "fin": 1122.76,
+        "texto": "Sí, ese. Recon Queue Restart."
+      },
+      {
+        "inicio": 1122.76,
+        "fin": 1122.76,
+        "texto": "Y ese, eh, reinicia la la reconstrucción. Porque a veces se queda en hold y tú no sabes por qué. Sí, es que adquiríamos de nuevo otra imagen y esa la dábamos como prioridad,"
+      },
+      {
+        "inicio": 1122.76,
+        "fin": 1122.76,
+        "texto": "y esa otra empezaba a pescar y y seguía todo lo demás. Y después seguía."
+      },
+      {
+        "inicio": 1122.76,
+        "fin": 1122.76,
+        "texto": "Pero la idea no, no es como adquirir de nuevo porque queremos evaluar la imagen que que adquirimos en el momento. Te entiendo súper bien, sí."
+      },
+      {
+        "inicio": 1122.76,
+        "fin": 1122.76,
+        "texto": "Acá, es Reconstruction Queue Restart."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.docx",
+    "pdf": "TC_14_Simulacion_angio_bolus_track_scanplan_sustraccion.pdf",
+    "paginas": 19
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash",
+    "tokens_entrada": 432662,
+    "tokens_salida": 16677,
+    "tokens_pensamiento": 694,
+    "tokens_total": 450033,
+    "detalle_entrada": {
+      "VIDEO": 426730,
+      "TEXT": 5932
+    },
+    "llamadas": 8,
+    "batch": false,
+    "costo_usd": null
+  }
+}

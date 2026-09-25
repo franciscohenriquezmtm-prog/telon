@@ -1,0 +1,472 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_11_Modulacion_de_dosis_y_calidad_de_imagen.mov",
+    "nombre": "TC_11_Modulacion_de_dosis_y_calidad_de_imagen",
+    "duracion_seg": 288.14,
+    "duracion": "04:48",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 638791586,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:37:25",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Configuración de Protocolos y Modulación en Tomógrafo Canon",
+    "resumen": "El video muestra de manera detallada cómo acceder a los menús de configuración de protocolos y de modulación automática en un tomógrafo computado Canon. Se explican los parámetros de reconstrucción, los filtros SureIQ, y la importancia clínica de ajustar correctamente los valores de desviación estándar de ruido (SD) para diferentes órganos como cerebro, cuello y cuerpo.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 12 pasos revisados en 1 petición(es), 12 con cambios (16563 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 126443,
+      "tokens_salida": 4967,
+      "tokens_pensamiento": 0,
+      "tokens_total": 131410,
+      "detalle_entrada": {
+        "VIDEO": 109440,
+        "TEXT": 3803,
+        "IMAGE": 13200
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Configurar Reconstrucción Iterativa AIDR 3D",
+        "descripcion": "Se muestra la opción AIDR 3D seleccionada en modo Enhanced, la cual corresponde a la última generación de reconstrucción iterativa para reducir dosis de radiación.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.305,
+          "y": 0.258
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 2.0,
+        "puntaje": null,
+        "titulo_original": "Configuración de Reconstrucción Iterativa AIDR 3D"
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Visualizar Parámetros por Órgano",
+        "descripcion": "El instructor navega por los distintos perfiles de adquisición (Cuello, Pulmón, Cuerpo, Columna) para verificar las ventanas de visualización predefinidas (WW y WL). En pantalla se selecciona la fila Pulmón.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.662,
+          "y": 0.308
+        },
+        "captura": "capturas/02_00-15.jpg",
+        "captura_anotada": "capturas/02_00-15_anotada.jpg",
+        "tiempo_real_seg": 15.6,
+        "puntaje": null,
+        "titulo_original": "Visualización de Parámetros por Órgano",
+        "descripcion_original": "El instructor navega por los distintos perfiles de adquisición (Cuello, Pulmón, Cuerpo, Columna) para verificar las ventanas de visualización predefinidas (WW y WL)."
+      },
+      {
+        "tiempo": "00:43",
+        "tiempo_seg": 43.0,
+        "titulo": "Acceder a Filtros SureIQ",
+        "descripcion": "Se señala el botón 'SureIQ' dentro de la pestaña de Protocolos, indicando que es el lugar donde se crean y modifican los filtros de imagen.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.211,
+          "y": 0.638
+        },
+        "captura": "capturas/03_00-43.jpg",
+        "captura_anotada": "capturas/03_00-43_anotada.jpg",
+        "tiempo_real_seg": 42.8,
+        "puntaje": null,
+        "titulo_original": "Acceso a Filtros SureIQ"
+      },
+      {
+        "tiempo": "00:49",
+        "tiempo_seg": 49.0,
+        "titulo": "Acceder a Modulador Sure Exposure",
+        "descripcion": "Se presiona el botón 'Sure Exp' (Sure Exposure) que gestiona el control automático de exposición del equipo para modular el mA en función del paciente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.206,
+          "y": 0.551
+        },
+        "captura": "capturas/04_00-49.jpg",
+        "captura_anotada": "capturas/04_00-49_anotada.jpg",
+        "tiempo_real_seg": 49.6,
+        "puntaje": null,
+        "titulo_original": "Acceso a Modulador Sure Exposure"
+      },
+      {
+        "tiempo": "01:05",
+        "tiempo_seg": 65.0,
+        "titulo": "Definir Rango de mA",
+        "descripcion": "Se establecen los valores límite para la modulación automática en cuello: un mA máximo de 500 mA y un mínimo de 80 mA. El cursor señala el valor de 500 de MAX mA.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.563,
+          "y": 0.514
+        },
+        "captura": "capturas/05_01-05.jpg",
+        "captura_anotada": "capturas/05_01-05_anotada.jpg",
+        "tiempo_real_seg": 65.6,
+        "puntaje": null,
+        "titulo_original": "Definición de Rango de mA",
+        "descripcion_original": "Se establecen los valores límite para la modulación automática en cuello: un mA máximo de 500 mA y un mínimo de 80 mA."
+      },
+      {
+        "tiempo": "01:09",
+        "tiempo_seg": 69.0,
+        "titulo": "Ajustar Espesor de Corte para Columna",
+        "descripcion": "Se detalla que para estudios de columna el espesor de corte estándar (Image Thickness) se define en 3,0 mm, mientras que para el resto del cuerpo se utiliza un estándar de 5,0 mm. Se hace clic en la opción 3.0 mm.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.581,
+          "y": 0.549
+        },
+        "captura": "capturas/06_01-09.jpg",
+        "captura_anotada": "capturas/06_01-09_anotada.jpg",
+        "tiempo_real_seg": 68.8,
+        "puntaje": null,
+        "titulo_original": "Ajuste de Espesor de Corte para Columna",
+        "descripcion_original": "Se detalla que para estudios de columna el espesor de corte estándar (Image Thickness) se define en 3,0 mm, mientras que para el resto del cuerpo se utiliza un estándar de 5,0 mm."
+      },
+      {
+        "tiempo": "01:21",
+        "tiempo_seg": 81.0,
+        "titulo": "Ajustar Desviación Estándar de Ruido SD",
+        "descripcion": "Se explica el parámetro SD (Standard Deviation) de ruido. Para un protocolo estándar de cuello o cuerpo se define un valor de SD de 12,50 para determinar la calidad de imagen.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.464,
+          "y": 0.558
+        },
+        "captura": "capturas/07_01-21.jpg",
+        "captura_anotada": "capturas/07_01-21_anotada.jpg",
+        "tiempo_real_seg": 80.0,
+        "puntaje": null,
+        "titulo_original": "Ajustar Desviación Estándar de Ruido (SD)"
+      },
+      {
+        "tiempo": "01:43",
+        "tiempo_seg": 103.0,
+        "titulo": "Modificar mA Mínimo según Calidad",
+        "descripcion": "Al seleccionar la opción 'Alta Calidad', el sistema incrementa automáticamente el mA mínimo de 80 mA a 100 mA y reduce el SD a 10,00 para mayor resolución. El cursor selecciona Estándar debajo de Alta Calidad.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.322,
+          "y": 0.554
+        },
+        "captura": "capturas/08_01-43.jpg",
+        "captura_anotada": "capturas/08_01-43_anotada.jpg",
+        "tiempo_real_seg": 102.4,
+        "puntaje": null,
+        "titulo_original": "Modificación del mA Mínimo según Calidad",
+        "descripcion_original": "Al seleccionar la opción 'Alta Calidad', el sistema incrementa automáticamente el mA mínimo de 80 mA a 100 mA y reduce el SD a 10,00 para mayor resolución."
+      },
+      {
+        "tiempo": "02:16",
+        "tiempo_seg": 136.0,
+        "titulo": "Configurar Ruido en Protocolo Cerebro",
+        "descripcion": "Se muestra que el protocolo de cerebro estándar exige un ruido SD muy bajo de 1,70, lo que implica una dosis de radiación significativamente mayor.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.458,
+          "y": 0.55
+        },
+        "captura": "capturas/09_02-16.jpg",
+        "captura_anotada": "capturas/09_02-16_anotada.jpg",
+        "tiempo_real_seg": 136.6,
+        "puntaje": null,
+        "titulo_original": "Ruido Restringido en Protocolo Cerebro"
+      },
+      {
+        "tiempo": "02:24",
+        "tiempo_seg": 144.0,
+        "titulo": "Advertencia sobre Dosis en Cerebro vs Cuello",
+        "descripcion": "Explicación clínica de que el CTDI volumétrico en cerebro puede alcanzar el límite internacional de 60 mGy, mientras que un cuello ronda los 5 a 6 mGy; advierte que realizar cuello con parámetros de cerebro 'freirá' el cuello del paciente. El cursor señala el…",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Filtros y Dosis",
+        "zona": {
+          "x": 0.55,
+          "y": 0.552
+        },
+        "captura": "capturas/10_02-24.jpg",
+        "captura_anotada": "capturas/10_02-24_anotada.jpg",
+        "tiempo_real_seg": 143.0,
+        "puntaje": null,
+        "descripcion_original": "Explicación clínica de que el CTDI volumétrico en cerebro puede alcanzar el límite internacional de 60 mGy, mientras que un cuello ronda los 5 a 6 mGy; advierte que realizar cuello con parámetros de cerebro 'freirá' el cuello del paciente."
+      },
+      {
+        "tiempo": "03:20",
+        "tiempo_seg": 200.0,
+        "titulo": "Ver Ruta de Acceso en Adquisición",
+        "descripcion": "Se demuestra paso a paso cómo volver al menú de protocolos desde la pantalla principal: hacer clic en 'Utility', luego 'Protocol' y finalmente en 'eXam Plan Preset'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.185,
+          "y": 0.645
+        },
+        "captura": "capturas/11_03-20.jpg",
+        "captura_anotada": "capturas/11_03-20_anotada.jpg",
+        "tiempo_real_seg": 199.4,
+        "puntaje": null,
+        "titulo_original": "Ruta de Acceso desde Pantalla de Adquisición"
+      },
+      {
+        "tiempo": "03:28",
+        "tiempo_seg": 208.0,
+        "titulo": "Advertencia sobre Modificación Permanente",
+        "descripcion": "Se advierte firmemente que cualquier cambio guardado en estos menús preestablecidos afectará de forma permanente y global a todos los usuarios del tomógrafo. El cursor se sitúa en eXam Plan Preset.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Configuración de Protocolos",
+        "zona": {
+          "x": 0.121,
+          "y": 0.704
+        },
+        "captura": "capturas/12_03-28.jpg",
+        "captura_anotada": "capturas/12_03-28_anotada.jpg",
+        "tiempo_real_seg": 207.4,
+        "puntaje": null,
+        "descripcion_original": "Se advierte firmemente que cualquier cambio guardado en estos menús preestablecidos afectará de forma permanente y global a todos los usuarios del tomógrafo."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 8.0,
+        "texto": "la reconstrucción es el 26 y utiliza IDR 3D, que es nuestra iterativa, en Hans que es la última."
+      },
+      {
+        "inicio": 8.0,
+        "fin": 15.0,
+        "texto": "Y aquí están las ventanas. Ahí yo las defino, 3 2 1. Entonces aquí se pueden modificar. ¿Te fijas?"
+      },
+      {
+        "inicio": 15.0,
+        "fin": 23.0,
+        "texto": "Y por eso la tres siempre es la que define como estándar. Ese es pulmón. ¿Te fijas? Siempre la tercera es la estándar, pero se puede cambiar."
+      },
+      {
+        "inicio": 23.0,
+        "fin": 30.0,
+        "texto": "Y también están las de AID, que bueno esto ya lo creo yo, si tienen dudas me dicen."
+      },
+      {
+        "inicio": 30.0,
+        "fin": 39.0,
+        "texto": "Yo tengo la tabla de fábrica, AID para cerebro ocupa el [inaudible], y este, para esto ocupa este otro."
+      },
+      {
+        "inicio": 39.0,
+        "fin": 46.0,
+        "texto": "Me baso en fábrica. ¿Cómo llego a eso? Acá en Sure IQ."
+      },
+      {
+        "inicio": 46.0,
+        "fin": 54.0,
+        "texto": "Pero más que nada para que sepan dónde están, que son los filtros. Ahí se crean. Y este Sure Exposure,"
+      },
+      {
+        "inicio": 54.0,
+        "fin": 60.0,
+        "texto": "que sería el controlador automático de exposición, el modulador. Si hago clic en él,"
+      },
+      {
+        "inicio": 60.0,
+        "fin": 69.0,
+        "texto": "acá está, cerebro por ejemplo, cuello estándar. Primero defino un filtro, el MA máximo y el mínimo en el cual va a modular,"
+      },
+      {
+        "inicio": 69.0,
+        "fin": 77.0,
+        "texto": "el espesor de corte, para columnas de tres, el resto del cuerpo es cinco, y si tiene modulación aquí."
+      },
+      {
+        "inicio": 77.0,
+        "fin": 85.0,
+        "texto": "Solamente el cerebro no la tiene porque es circular. Y lo otro importante es el ruido, desviación estándar."
+      },
+      {
+        "inicio": 85.0,
+        "fin": 93.0,
+        "texto": "O sea, para estándar yo le pido 12,5 de ruido, entonces él sabe la calidad de imagen que me puede dar y se basa en eso."
+      },
+      {
+        "inicio": 93.0,
+        "fin": 102.0,
+        "texto": "Exacto. Por ejemplo, cuerpo estándar 12,5, son iguales, no sé por qué me lo divide. Entonces si yo quiero darle más dosis,"
+      },
+      {
+        "inicio": 102.0,
+        "fin": 110.0,
+        "texto": "porque el paciente es más grande, aplico calidad. Entonces de 80 subió a 100 el MA mínimo, ya sube, pero el ruido me pide 10."
+      },
+      {
+        "inicio": 110.0,
+        "fin": 119.0,
+        "texto": "Desviación estándar, no 12,5. Alta calidad, 7,5. Entonces siempre modula, cuidamos la dosis del paciente,"
+      },
+      {
+        "inicio": 119.0,
+        "fin": 127.0,
+        "texto": "cuidamos la calidad de la imagen, pero vamos sumando la dosis en base al paciente. Por ejemplo, una abuelita, que a veces son súper flaquitas,"
+      },
+      {
+        "inicio": 127.0,
+        "fin": 135.0,
+        "texto": "baja dosis, 15 de ruido. Entonces, ¿a qué voy con esto? 12,5 estándar cuerpo, 12,5 estándar cuello,"
+      },
+      {
+        "inicio": 135.0,
+        "fin": 142.0,
+        "texto": "cerebro estándar, 1,7. Es mucho menos ruido."
+      },
+      {
+        "inicio": 142.0,
+        "fin": 150.0,
+        "texto": "¿Por qué? Porque en cerebro yo puedo llegar hasta el máximo internacional 60 de volumétrico."
+      },
+      {
+        "inicio": 150.0,
+        "fin": 157.0,
+        "texto": "Es una dosis altísima, un cuello va a tener 6, 5 de volumétrico."
+      },
+      {
+        "inicio": 157.0,
+        "fin": 164.0,
+        "texto": "Entonces, de 60 pasar a 6 van a freír el cuello, entonces por eso la idea de que"
+      },
+      {
+        "inicio": 164.0,
+        "fin": 171.0,
+        "texto": "se haga todo el bloque completo. Se va a cambiar por los filtros, porque el filtro de cerebro no es el mismo que el de cuello."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 178.0,
+        "texto": "Es que algunos dicen \"no, lo voy a adquirir completo con el de cerebro y después voy a la raw data y ocupo el filtro de cuello\"."
+      },
+      {
+        "inicio": 178.0,
+        "fin": 187.0,
+        "texto": "Pero el cuello lo van a freír. Exacto. Y esa es la razón, también para que la puedan entender, porque así les va a quedar mejor grabado."
+      },
+      {
+        "inicio": 187.0,
+        "fin": 194.0,
+        "texto": "Saber el porqué desde el seteo del equipo, así es como funciona. Entonces esa es la diferencia."
+      },
+      {
+        "inicio": 194.0,
+        "fin": 202.0,
+        "texto": "Y por eso es que achica el ruido que hace. Le preguntaba cómo llegaba a esa ventana."
+      },
+      {
+        "inicio": 202.0,
+        "fin": 211.0,
+        "texto": "Aquí en utilidad, utility tool, protocols, y aquí están todos los protocolos por defecto, que la idea es que"
+      },
+      {
+        "inicio": 211.0,
+        "fin": 220.0,
+        "texto": "tengan cuidado, porque si modifican algo ahí se modifica para siempre en todos. Entonces seguramente alguien puede tener algo trabajado o si quieren nos pueden conversar,"
+      },
+      {
+        "inicio": 220.0,
+        "fin": 229.0,
+        "texto": "lo podemos juntar, si quieren. \"Oye, ¿sabes qué? Necesitamos hacer los protocolos para imagenología, ya tenemos que hacerlo\". Me avisan, nos juntamos un día en la mañana"
+      },
+      {
+        "inicio": 229.0,
+        "fin": 237.0,
+        "texto": "y la verdad que en un rato podemos generarlo, hacemos unas pruebas con el fantoma. Tenemos unos fantomas que tienen distintas densidades."
+      },
+      {
+        "inicio": 237.0,
+        "fin": 246.0,
+        "texto": "Entonces como el ROI se puede mover, yo simulo la llegada del contraste moviendo el ROI al tubito que tiene más alta densidad, entonces simulamos todo."
+      },
+      {
+        "inicio": 246.0,
+        "fin": 254.0,
+        "texto": "Para probar que la camilla se movió, yo dejo todo listo, me equivoco, soy imperfecto."
+      },
+      {
+        "inicio": 254.0,
+        "fin": 261.0,
+        "texto": "Entonces a veces dejo el angio y la camilla se mueve para el otro lado. Entonces a veces hay que probarlo."
+      },
+      {
+        "inicio": 261.0,
+        "fin": 269.0,
+        "texto": "\"No, yo lo quería desde la base\". No, gatilló y subió y lo tomó cráneo-caudal, por ejemplo, son segundos a veces que se pierden."
+      },
+      {
+        "inicio": 269.0,
+        "fin": 277.0,
+        "texto": "Entonces eso podemos verificarlo con el fantoma. Pero me avisan y con todo gusto generamos los protocolos en base a lo que ustedes necesitan."
+      },
+      {
+        "inicio": 277.0,
+        "fin": 287.0,
+        "texto": "Tampoco para que estés tú \"ay, cómo era, cómo era esto\". No, me avisan, le avisan a Valentina, coordinamos. Y yo busco la fecha, siempre estoy por todas partes pero buscamos la fecha."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_11_Modulacion_de_dosis_y_calidad_de_imagen.docx",
+    "pdf": "TC_11_Modulacion_de_dosis_y_calidad_de_imagen.pdf",
+    "paginas": 10
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 126443,
+    "tokens_salida": 4967,
+    "tokens_pensamiento": 0,
+    "tokens_total": 131410,
+    "detalle_entrada": {
+      "VIDEO": 109440,
+      "TEXT": 3803,
+      "IMAGE": 13200
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

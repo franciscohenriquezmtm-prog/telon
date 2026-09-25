@@ -1,0 +1,35 @@
+16:30:19 === TC_10_Creando_trifasico.mov: 07:29, 1920x1080, 59.97 fps, 711 MB -> salida/TC_10_Creando_trifasico
+16:30:19 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:30:19   TC_10_Creando_trifasico.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:30:19   transcodificando TC_10_Creando_trifasico.mov -> TC_10_Creando_trifasico_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:30:37       9 % (00:42 de 07:29)
+16:30:53      19 % (01:27 de 07:29)
+16:31:09      30 % (02:13 de 07:29)
+16:31:25      40 % (02:58 de 07:29)
+16:31:41      50 % (03:43 de 07:29)
+16:31:56      60 % (04:29 de 07:29)
+16:32:12      70 % (05:15 de 07:29)
+16:32:28      80 % (06:00 de 07:29)
+16:32:44      90 % (06:46 de 07:29)
+16:32:55   copia ligera lista: 25.4 MB
+16:32:55 Subiendo TC_10_Creando_trifasico_subida.mp4 (26.6 MB, video/mp4) a la Files API…
+16:32:57 Subido como files/yv9zsjc3vsj1; esperando a que Gemini lo procese…
+16:33:18 Archivo files/yv9zsjc3vsj1 listo (ACTIVE).
+16:33:18 Analizando TC_10_Creando_trifasico con gemini-3.5-flash (resolución alta)…
+16:33:33   15 momentos brutos, 133066 tokens.
+16:33:33 Análisis terminado: 15 momentos.
+16:33:33 Transcribiendo el audio de TC_10_Creando_trifasico con gemini-3.5-flash…
+16:33:53 Transcripción: 86 segmentos, 45665 tokens.
+16:33:53 Archivo remoto files/yv9zsjc3vsj1 eliminado.
+16:33:53 momentos.json guardado (15 momentos).
+16:33:53 Extrayendo 15 capturas de TC_10_Creando_trifasico.mov…
+16:34:03   10/15 capturas
+16:34:09 Capturas: 15 extraídas, 0 fallidas
+16:34:09 Refinando títulos y descripciones con 15 capturas en alta resolución (gemini-3.5-flash)…
+16:34:09 Refinando con gemini-3.5-flash los textos de 15 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+16:34:16 Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 14 con cambios (20565 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:34:19 Anotaciones: 15 capturas con círculo/flecha.
+16:34:19   documentos: 15 pasos, 3 por página (A4 vertical 1x3)
+16:34:19   docx: TC_10_Creando_trifasico.docx
+16:34:20   pdf: TC_10_Creando_trifasico.pdf (9 páginas)
+16:34:20 Listo en 4 min 2 s: 15 momentos, 9 páginas -> TC_10_Creando_trifasico.docx, TC_10_Creando_trifasico.pdf

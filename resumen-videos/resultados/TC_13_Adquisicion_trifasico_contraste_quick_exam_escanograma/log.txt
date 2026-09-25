@@ -1,0 +1,35 @@
+16:46:44 === TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov: 07:18, 1920x1080, 59.97 fps, 693 MB -> salida/TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma
+16:46:44 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:46:44   TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:46:44   transcodificando TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov -> TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:47:02       9 % (00:40 de 07:18)
+16:47:17      19 % (01:24 de 07:18)
+16:47:32      29 % (02:08 de 07:18)
+16:47:47      40 % (02:54 de 07:18)
+16:48:01      50 % (03:38 de 07:18)
+16:48:15      60 % (04:22 de 07:18)
+16:48:30      70 % (05:07 de 07:18)
+16:48:44      80 % (05:52 de 07:18)
+16:48:59      91 % (06:36 de 07:18)
+16:49:09   copia ligera lista: 25.5 MB
+16:49:09 Subiendo TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma_subida.mp4 (26.8 MB, video/mp4) a la Files API…
+16:49:12 Subido como files/u8gg1fk46jvr; esperando a que Gemini lo procese…
+16:49:33 Archivo files/u8gg1fk46jvr listo (ACTIVE).
+16:49:33 Analizando TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma con gemini-3.5-flash (resolución alta)…
+16:50:03   16 momentos brutos, 129415 tokens.
+16:50:03 Análisis terminado: 16 momentos.
+16:50:03 Transcribiendo el audio de TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma con gemini-3.5-flash…
+16:50:23 Transcripción: 54 segmentos, 43175 tokens.
+16:50:23 Archivo remoto files/u8gg1fk46jvr eliminado.
+16:50:23 momentos.json guardado (16 momentos).
+16:50:23 Extrayendo 16 capturas de TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.mov…
+16:50:33   10/16 capturas
+16:50:39 Capturas: 16 extraídas, 0 fallidas
+16:50:39 Refinando títulos y descripciones con 16 capturas en alta resolución (gemini-3.5-flash)…
+16:50:39 Refinando con gemini-3.5-flash los textos de 16 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+16:50:58 Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 15 con cambios (22260 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:51:01 Anotaciones: 14 capturas con círculo/flecha.
+16:51:01   documentos: 16 pasos, 4 por página (A4 horizontal 2x2)
+16:51:01   docx: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx
+16:51:02   pdf: TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf (8 páginas)
+16:51:02 Listo en 4 min 18 s: 16 momentos, 8 páginas -> TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.docx, TC_13_Adquisicion_trifasico_contraste_quick_exam_escanograma.pdf

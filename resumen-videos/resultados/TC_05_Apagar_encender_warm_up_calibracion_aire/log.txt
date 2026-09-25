@@ -1,0 +1,39 @@
+16:02:15 === TC_05_Apagar_encender_warm_up_calibracion_aire.mov: 10:31, 1080x1920, 59.97 fps, 1334 MB -> salida/TC_05_Apagar_encender_warm_up_calibracion_aire
+16:02:15 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:02:15   TC_05_Apagar_encender_warm_up_calibracion_aire.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:02:15   transcodificando TC_05_Apagar_encender_warm_up_calibracion_aire.mov -> TC_05_Apagar_encender_warm_up_calibracion_aire_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:02:42       9 % (00:58 de 10:31)
+16:03:07      19 % (02:02 de 10:31)
+16:03:31      29 % (03:05 de 10:31)
+16:03:55      39 % (04:08 de 10:31)
+16:04:19      50 % (05:12 de 10:31)
+16:04:44      60 % (06:16 de 10:31)
+16:05:09      70 % (07:21 de 10:31)
+16:05:34      80 % (08:26 de 10:31)
+16:05:58      90 % (09:30 de 10:31)
+16:06:18   copia ligera lista: 34.4 MB
+16:06:18 Subiendo TC_05_Apagar_encender_warm_up_calibracion_aire_subida.mp4 (36.1 MB, video/mp4) a la Files API…
+16:06:20 Subido como files/3xdd71geeqj0; esperando a que Gemini lo procese…
+16:06:41 Archivo files/3xdd71geeqj0 listo (ACTIVE).
+16:06:41 Analizando TC_05_Apagar_encender_warm_up_calibracion_aire con gemini-3.5-flash (tramo 1/2: 00:00–04:00) (resolución alta)…
+16:06:53   12 momentos brutos, 71883 tokens.
+16:06:53 Analizando TC_05_Apagar_encender_warm_up_calibracion_aire con gemini-3.5-flash (tramo 2/2: 04:00–10:31) (resolución alta)…
+16:07:07   12 momentos brutos, 115772 tokens.
+16:07:07 Análisis terminado: 24 momentos.
+16:07:07 Transcribiendo el audio de TC_05_Apagar_encender_warm_up_calibracion_aire con gemini-3.5-flash (tramo 1/2)…
+16:07:25 Transcribiendo el audio de TC_05_Apagar_encender_warm_up_calibracion_aire con gemini-3.5-flash (tramo 2/2)…
+16:07:40 Transcripción: 67 segmentos, 62509 tokens.
+16:07:40 Archivo remoto files/3xdd71geeqj0 eliminado.
+16:07:40 momentos.json guardado (24 momentos).
+16:07:40 Extrayendo 24 capturas de TC_05_Apagar_encender_warm_up_calibracion_aire.mov…
+16:07:53   10/24 capturas
+16:08:03   20/24 capturas
+16:08:08 Capturas: 24 extraídas, 0 fallidas
+16:08:08 Refinando títulos y descripciones con 24 capturas en alta resolución (gemini-3.5-flash)…
+16:08:08 Refinando con gemini-3.5-flash los textos de 24 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+16:08:33 Refinado con capturas (gemini-3.5-flash): 24 pasos revisados en 2 petición(es), 23 con cambios (33316 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:08:43 Anotaciones: 21 capturas con círculo/flecha.
+16:08:43   documentos: 24 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+16:08:44   docx: TC_05_Apagar_encender_warm_up_calibracion_aire.docx
+16:08:46   pdf: TC_05_Apagar_encender_warm_up_calibracion_aire.pdf (18 páginas)
+16:08:46 Listo en 6 min 31 s: 24 momentos, 18 páginas -> TC_05_Apagar_encender_warm_up_calibracion_aire.docx, TC_05_Apagar_encender_warm_up_calibracion_aire.pdf

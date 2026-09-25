@@ -1,0 +1,622 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_09_Bolus_tracking.mov",
+    "nombre": "TC_09_Bolus_tracking",
+    "duracion_seg": 363.0,
+    "duracion": "06:03",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 602585888,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:30:03",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Configuración del Bolus Tracking en TC Canon",
+    "resumen": "Manual clínico interactivo basado en una clase práctica sobre el uso del Bolus Tracking (SureStart) en un tomógrafo computado Canon Aquilion. El instructor detalla los ajustes de ROI, la configuración del trigger y las diferencias en los tiempos de espera y adquisición en protocolos de angiotomografía.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 11 pasos revisados en 1 petición(es), 10 con cambios (15180 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 153739,
+      "tokens_salida": 6297,
+      "tokens_pensamiento": 0,
+      "tokens_total": 160036,
+      "detalle_entrada": {
+        "TEXT": 3699,
+        "VIDEO": 137940,
+        "IMAGE": 12100
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:08",
+        "tiempo_seg": 8.0,
+        "titulo": "Seleccionar el protocolo de adquisición",
+        "descripcion": "Se selecciona el protocolo 'HIGADO 2 FASES' (código 170 SU/FF L) para configurar la adquisición de imágenes con Bolus Tracking (SureStart).",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Selección de Protocolo",
+        "zona": {
+          "x": 0.392,
+          "y": 0.243
+        },
+        "captura": "capturas/01_00-08.jpg",
+        "captura_anotada": "capturas/01_00-08_anotada.jpg",
+        "tiempo_real_seg": 8.6,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona el protocolo 'HIGADO 2 FASES' para configurar la adquisición de imágenes con Bolus Tracking (SureStart)."
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Revisar el corte de prueba S y V",
+        "descripcion": "El corte de prueba se denomina S&V (Scan & View) en la lista de secuencias y se utiliza para colocar de forma precisa la Región de Interés (ROI).",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación",
+        "zona": {
+          "x": 0.156,
+          "y": 0.566
+        },
+        "captura": "capturas/02_00-15.jpg",
+        "captura_anotada": "capturas/02_00-15_anotada.jpg",
+        "tiempo_real_seg": 14.8,
+        "puntaje": null,
+        "titulo_original": "Revisar el corte de prueba (S y V)",
+        "descripcion_original": "El corte de prueba se denomina 'Scan and View' (S&V) en la interfaz del equipo y se utiliza para colocar de forma precisa la Región de Interés (ROI)."
+      },
+      {
+        "tiempo": "01:00",
+        "tiempo_seg": 60.0,
+        "titulo": "Ubicación del ROI en angio-TEP",
+        "descripcion": "Para un estudio angio-TEP, el instructor indica posicionar el ROI en el tronco pulmonar, idealmente al 50% de la luz del vaso.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Planificación",
+        "zona": null,
+        "captura": "capturas/03_01-00.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 60.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:38",
+        "tiempo_seg": 98.0,
+        "titulo": "Acceder a SureStart Setup",
+        "descripcion": "Dentro de la pestaña 'Scan Details', se presiona el botón 'SureStart Setup' para configurar los parámetros de umbral y modo del Bolus Tracking.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de SureStart",
+        "zona": {
+          "x": 0.395,
+          "y": 0.737
+        },
+        "captura": "capturas/04_01-38.jpg",
+        "captura_anotada": "capturas/04_01-38_anotada.jpg",
+        "tiempo_real_seg": 97.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:45",
+        "tiempo_seg": 105.0,
+        "titulo": "Configurar el umbral en automático",
+        "descripcion": "Se selecciona el modo 'Auto' en 'Threshold Setting' con un valor 'Start ROI 1' de 180 HU para que el equipo gatille automáticamente al alcanzar este realce.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Configuración de SureStart",
+        "zona": {
+          "x": 0.534,
+          "y": 0.308
+        },
+        "captura": "capturas/05_01-45.jpg",
+        "captura_anotada": "capturas/05_01-45_anotada.jpg",
+        "tiempo_real_seg": 104.8,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona el modo 'Auto' para que el equipo evalúe el realce y gatille automáticamente cuando el ROI alcance las unidades Hounsfield (HU) deseadas, en este caso 180 HU."
+      },
+      {
+        "tiempo": "02:04",
+        "tiempo_seg": 124.0,
+        "titulo": "Ajustar el modo de barrido intermitente",
+        "descripcion": "Se activa la casilla 'Intermittent' con un 'Interval' de 2.0 Sec. para sensar el realce a intervalos regulares y optimizar la dosis.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de SureStart",
+        "zona": {
+          "x": 0.322,
+          "y": 0.248
+        },
+        "captura": "capturas/06_02-04.jpg",
+        "captura_anotada": "capturas/06_02-04_anotada.jpg",
+        "tiempo_real_seg": 124.6,
+        "puntaje": null,
+        "descripcion_original": "Se activa la casilla 'Intermittent' con un intervalo de 2,0 segundos para sensar el realce a intervalos regulares y optimizar la dosis."
+      },
+      {
+        "tiempo": "02:12",
+        "tiempo_seg": 132.0,
+        "titulo": "Configurar el retraso inicial Wait",
+        "descripcion": "Se define un tiempo de espera 'Wait' de 10.0 segundos en la secuencia 4 (SureStart) antes de comenzar los barridos de monitoreo del Bolus Tracking.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuración de SureStart",
+        "zona": {
+          "x": 0.23,
+          "y": 0.669
+        },
+        "captura": "capturas/07_02-12.jpg",
+        "captura_anotada": "capturas/07_02-12_anotada.jpg",
+        "tiempo_real_seg": 132.6,
+        "puntaje": null,
+        "titulo_original": "Configurar el retraso inicial (Wait)",
+        "descripcion_original": "Se define un tiempo de espera (Wait) de 10 segundos antes de comenzar los barridos de monitoreo del Bolus Tracking, dando tiempo al contraste de llegar a la aorta."
+      },
+      {
+        "tiempo": "02:37",
+        "tiempo_seg": 157.0,
+        "titulo": "Configurar umbral de pre-monitoreo",
+        "descripcion": "Se puede definir un valor intermedio de pre-monitoreo ingresando un valor numérico en 'Start ROI 1' (se muestra vacío) para controlar la transición del monitoreo.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Configuración de SureStart",
+        "zona": {
+          "x": 0.318,
+          "y": 0.311
+        },
+        "captura": "capturas/08_02-37.jpg",
+        "captura_anotada": "capturas/08_02-37_anotada.jpg",
+        "tiempo_real_seg": 156.4,
+        "puntaje": null,
+        "descripcion_original": "Se puede definir un valor intermedio de pre-monitoreo (por ejemplo, 100 HU) para pasar de adquisición intermitente a adquisición continua conforme se acerca el umbral final (180 HU)."
+      },
+      {
+        "tiempo": "03:30",
+        "tiempo_seg": 210.0,
+        "titulo": "Configurar gatillado manual",
+        "descripcion": "Al seleccionar la opción 'Manual' en 'Threshold Setting', se desactivan los controles automáticos para que el operador decida el disparo del escaneo de manera visual.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.372,
+          "y": 0.234
+        },
+        "captura": "capturas/09_03-30.jpg",
+        "captura_anotada": "capturas/09_03-30_anotada.jpg",
+        "tiempo_real_seg": 209.4,
+        "puntaje": null,
+        "descripcion_original": "Al seleccionar la opción 'Manual', se desactivan los controles automáticos. El operador debe presionar de forma manual el botón de disparo 'Next Scan' al observar visualmente el realce del vaso."
+      },
+      {
+        "tiempo": "04:42",
+        "tiempo_seg": 282.0,
+        "titulo": "Ajuste manual de la ROI con teclado",
+        "descripcion": "El instructor explica que el ROI se puede reposicionar rápidamente durante el monitoreo mediante las teclas de flecha del teclado, por ejemplo, si el paciente respira y desplaza el vaso.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.208,
+          "y": 0.978
+        },
+        "captura": "capturas/10_04-42.jpg",
+        "captura_anotada": "capturas/10_04-42_anotada.jpg",
+        "tiempo_real_seg": 281.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:16",
+        "tiempo_seg": 316.0,
+        "titulo": "Sincronizar fase venosa",
+        "descripcion": "Para la fase venosa (secuencia 6), se configura el campo 'Start Time' en 01:05.0 minutos para sincronizar el barrido tras la inyección.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.194,
+          "y": 0.825
+        },
+        "captura": "capturas/11_05-16.jpg",
+        "captura_anotada": "capturas/11_05-16_anotada.jpg",
+        "tiempo_real_seg": 316.6,
+        "puntaje": null,
+        "titulo_original": "Sincronizar fase venosa (Start Time)",
+        "descripcion_original": "Para la fase venosa, se ingresa el tiempo deseado en el campo 'Start Time' (por ejemplo, 1:10 minutos o 70 segundos), contados desde el inicio de la inyección."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 5.0,
+        "fin": 10.0,
+        "texto": "Y el abdomen tiene dos fases. Ya, okay."
+      },
+      {
+        "inicio": 10.0,
+        "fin": 18.0,
+        "texto": "El doble escanograma, el corte de prueba, ¿cierto? para poner el ROI, que se llama scan and view."
+      },
+      {
+        "inicio": 18.0,
+        "fin": 27.0,
+        "texto": "Por ejemplo, para la angio de cerebro no hay corte de prueba porque se ve el... o sea, perdón, hay corte de prueba pero es manual."
+      },
+      {
+        "inicio": 27.0,
+        "fin": 34.0,
+        "texto": "Yo tengo que... claro, cuando lleguen las carótidas, yo lo... yo lo lanzo de aquí de ese next."
+      },
+      {
+        "inicio": 34.0,
+        "fin": 38.0,
+        "texto": "Cuando estemos en el bolus tracking, que es este."
+      },
+      {
+        "inicio": 38.0,
+        "fin": 46.0,
+        "texto": "Y ahí, se toma la angio cerebro. Sí, siempre yo lo puedo gatillar el bolus tracking manual."
+      },
+      {
+        "inicio": 46.0,
+        "fin": 54.0,
+        "texto": "Para las angios de cuello se puede en la aorta descendente, siempre aorta descendente, y ahí gatilla y lanza."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 57.0,
+        "texto": "Para la TEP, es en el tronco pulmonar."
+      },
+      {
+        "inicio": 57.0,
+        "fin": 64.0,
+        "texto": "Al 50% del lumen del tronco y ahí va a estar súper bien y lanza todo automatizado."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 73.0,
+        "texto": "Para aorta es mucho más fácil. Aorta descendiente... descendente... descendente y o cerca del inicio."
+      },
+      {
+        "inicio": 73.0,
+        "fin": 76.0,
+        "texto": "¿Y el ROI se puede dejar afuera?"
+      },
+      {
+        "inicio": 76.0,
+        "fin": 84.0,
+        "texto": "Sí, se puede dejar afuera pero tendría que quedar como manual, no automático, sino va a estar siempre esperando a que realce adentro."
+      },
+      {
+        "inicio": 84.0,
+        "fin": 87.0,
+        "texto": "¿A dónde yo modifico las unidades Hounsfield?"
+      },
+      {
+        "inicio": 87.0,
+        "fin": 91.0,
+        "texto": "Ahí vamos a entrar. Aquí voy a editar este."
+      },
+      {
+        "inicio": 91.0,
+        "fin": 95.0,
+        "texto": "Entonces, bolus tracking, perdón, corte de prueba, bolus tracking."
+      },
+      {
+        "inicio": 95.0,
+        "fin": 99.0,
+        "texto": "Y aquí en scan details, el sure start es el bolus tracking, setup."
+      },
+      {
+        "inicio": 99.0,
+        "fin": 103.0,
+        "texto": "Entonces aquí yo lo modifico."
+      },
+      {
+        "inicio": 103.0,
+        "fin": 105.0,
+        "texto": "Por ejemplo, olvidamos eso."
+      },
+      {
+        "inicio": 105.0,
+        "fin": 113.0,
+        "texto": "Solo aquí, automático, eso quiere decir que el ROI yo lo posiciono y va a buscar constantemente y va a irradiar."
+      },
+      {
+        "inicio": 113.0,
+        "fin": 117.0,
+        "texto": "Hasta llegar a 180, gatilla, y me lanza el siguiente."
+      },
+      {
+        "inicio": 117.0,
+        "fin": 120.0,
+        "texto": "Que sería en este caso, no sé, el arterial. ¿Ya?"
+      },
+      {
+        "inicio": 120.0,
+        "fin": 123.0,
+        "texto": "Pero también yo lo puedo poner intermitente."
+      },
+      {
+        "inicio": 123.0,
+        "fin": 126.0,
+        "texto": "¿Qué quiere decir? En este caso yo voy a dar, por ejemplo aquí tiene 10 segundos."
+      },
+      {
+        "inicio": 126.0,
+        "fin": 131.0,
+        "texto": "A los dos al mismo tiempo, ¿cierto? Doy contraste."
+      },
+      {
+        "inicio": 131.0,
+        "fin": 135.0,
+        "texto": "Y este qué va a hacer: primero va a esperar 10 segundos antes de empezar el bolus tracking."
+      },
+      {
+        "inicio": 135.0,
+        "fin": 138.0,
+        "texto": "Para dar tiempo a que llegue la sangre a la aorta."
+      },
+      {
+        "inicio": 138.0,
+        "fin": 144.0,
+        "texto": "A los 10 segundos comienza el bolus tracking e intermitente."
+      },
+      {
+        "inicio": 144.0,
+        "fin": 148.0,
+        "texto": "O sea, va a censar y cada 2 segundos va a buscar 180."
+      },
+      {
+        "inicio": 148.0,
+        "fin": 154.0,
+        "texto": "Entonces, llega a 180 y pregunta acá: ¿es 180 el trigger?, sí, lanza."
+      },
+      {
+        "inicio": 154.0,
+        "fin": 158.0,
+        "texto": "Pero puedo hacerlo diferente, puedo dejar acá, por ejemplo, 100."
+      },
+      {
+        "inicio": 158.0,
+        "fin": 163.0,
+        "texto": "Entonces va a ser intermitente cada 2 segundos hasta llegar a 100."
+      },
+      {
+        "inicio": 163.0,
+        "fin": 168.0,
+        "texto": "Y de ahí me pregunta: ¿es 180 el trigger?, no... o sea, ¿es 100 el trigger?, no, es 180."
+      },
+      {
+        "inicio": 168.0,
+        "fin": 171.0,
+        "texto": "Entonces de 100 a 180 es continuo."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 179.0,
+        "texto": "No es cada 2 segundos. Por ejemplo para evitar que, no sé, un TEP o algo que quieren más más ajuste, se puede hacer así."
+      },
+      {
+        "inicio": 179.0,
+        "fin": 184.0,
+        "texto": "Pero los protocolos ya vienen bastante... ¿Con pregunta a qué se refiere, a que le manda un mensaje?"
+      },
+      {
+        "inicio": 184.0,
+        "fin": 188.0,
+        "texto": "Claro, no, internamente. Internamente consulta."
+      },
+      {
+        "inicio": 188.0,
+        "fin": 191.0,
+        "texto": "El software nos está pidiendo. No, no, no, es interno."
+      },
+      {
+        "inicio": 191.0,
+        "fin": 195.0,
+        "texto": "O sea, aquí dice ya, 100, gatilló, ¿y este es el trigger para realmente lanzar la otra?"
+      },
+      {
+        "inicio": 195.0,
+        "fin": 200.0,
+        "texto": "No, no es 100, es 180. De 100 a 180 es continuo."
+      },
+      {
+        "inicio": 200.0,
+        "fin": 205.0,
+        "texto": "Deja de ser intermitente. Esa es la... esa es la razón."
+      },
+      {
+        "inicio": 205.0,
+        "fin": 209.0,
+        "texto": "Y esto es manual, ¿cierto? Manual."
+      },
+      {
+        "inicio": 209.0,
+        "fin": 215.0,
+        "texto": "Y si ustedes no quieren que sea... manual, clic en manual."
+      },
+      {
+        "inicio": 215.0,
+        "fin": 221.0,
+        "texto": "Se desactiva el resto, el ROI lo ponen afuera y ustedes van mirando la imagen."
+      },
+      {
+        "inicio": 221.0,
+        "fin": 225.0,
+        "texto": "Y de... bueno, ahora no me aparece, acá sale un next... next scan grande."
+      },
+      {
+        "inicio": 225.0,
+        "fin": 228.0,
+        "texto": "Y cuando ustedes lo activen, va a gatillar."
+      },
+      {
+        "inicio": 228.0,
+        "fin": 235.0,
+        "texto": "Entonces, gatilla, ¿cierto? Gatilló a 180. Va a lanzar la arterial."
+      },
+      {
+        "inicio": 235.0,
+        "fin": 239.0,
+        "texto": "Y la va a lanzar pero dice: no puedo al tiro, porque tengo un wait de 10 segundos."
+      },
+      {
+        "inicio": 239.0,
+        "fin": 245.0,
+        "texto": "Entonces, aunque lo gatille acá, va a esperar 10 segundos de nuevo y va a lanzar."
+      },
+      {
+        "inicio": 245.0,
+        "fin": 250.0,
+        "texto": "Ese wait si, ¿es como el que uno programa o...?"
+      },
+      {
+        "inicio": 250.0,
+        "fin": 254.0,
+        "texto": "Sí, viene... bueno, así lo dejaron en este. Yo le podría poner cero, por ejemplo."
+      },
+      {
+        "inicio": 254.0,
+        "fin": 259.0,
+        "texto": "Porque yo lo quiero gatillar... si fuera una angio, si fuera una angio, este va a estar en cero."
+      },
+      {
+        "inicio": 259.0,
+        "fin": 266.0,
+        "texto": "Igual tiene la actitud mecánica porque quizás te está censando en un lado diferente o qué sé yo, y si tengo que mover la camilla..."
+      },
+      {
+        "inicio": 266.0,
+        "fin": 271.0,
+        "texto": "No, el ROI cuando ustedes están acá en el bolus tracking con el ROI."
+      },
+      {
+        "inicio": 271.0,
+        "fin": 275.0,
+        "texto": "Aquí aparecen unas flechas igual que las del teclado. Y ustedes pueden mover el ROI."
+      },
+      {
+        "inicio": 275.0,
+        "fin": 279.0,
+        "texto": "Porque a veces el paciente respira diferente y ya no quedó en el tronco, se corrió."
+      },
+      {
+        "inicio": 279.0,
+        "fin": 287.0,
+        "texto": "Entonces, ustedes rápidamente hacen clic como... como aquí para arriba para el lado y van posicionando el ROI en el tronco y lo dejan ahí."
+      },
+      {
+        "inicio": 287.0,
+        "fin": 289.0,
+        "texto": "Ese wait es para los tiempos del arterial, ¿no?"
+      },
+      {
+        "inicio": 289.0,
+        "fin": 294.0,
+        "texto": "Claro, este... aquí este protocolo está así pero, por ejemplo, si fuera sin contraste y después lanzo el arterial, este."
+      },
+      {
+        "inicio": 294.0,
+        "fin": 298.0,
+        "texto": "Entonces aquí diría 35. Y estaría en P, ¿cierto?"
+      },
+      {
+        "inicio": 298.0,
+        "fin": 303.0,
+        "texto": "P, porque es de presionar, 35."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 308.0,
+        "texto": "Entonces, lanzo los dos, clic, empieza el contraste."
+      },
+      {
+        "inicio": 308.0,
+        "fin": 314.0,
+        "texto": "El equipo no va a lanzar la adquisición y aquí va a salir 35, 34, hasta que llegue a cero."
+      },
+      {
+        "inicio": 314.0,
+        "fin": 319.0,
+        "texto": "Lanza la arterial. Y acá, en start time, yo le pongo por ejemplo..."
+      },
+      {
+        "inicio": 319.0,
+        "fin": 325.0,
+        "texto": "Va a decir 1 minuto 10. Le pongo los 70. Entonces si este fuera el P35 arterial."
+      },
+      {
+        "inicio": 325.0,
+        "fin": 329.0,
+        "texto": "De aquí al wait porque tiene que esperar, pero el start time toma desde la última P."
+      },
+      {
+        "inicio": 329.0,
+        "fin": 335.0,
+        "texto": "Es decir, desde la última inyección de contraste, entonces la venosa... tengo que marcar el tiempo que yo quiero que se realice la venosa."
+      },
+      {
+        "inicio": 335.0,
+        "fin": 339.0,
+        "texto": "Exacto, no va a ser automático. Aquí va a estar el... el venoso."
+      },
+      {
+        "inicio": 339.0,
+        "fin": 341.0,
+        "texto": "¿Cómo es, no entendí?"
+      },
+      {
+        "inicio": 341.0,
+        "fin": 345.0,
+        "texto": "Vamos a tomar un..."
+      },
+      {
+        "inicio": 345.0,
+        "fin": 352.0,
+        "texto": "Es como el GE, que tú le pones el tiempo y tienes que sumarle más tiempo para que se lance el venoso. En cambio el Philips tú no, tú marcas el tiempo que yo quiero que se lance..."
+      },
+      {
+        "inicio": 352.0,
+        "fin": 356.0,
+        "texto": "Y sabe que apenas inyectó parte... en qué parte..."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_09_Bolus_tracking.docx",
+    "pdf": "TC_09_Bolus_tracking.pdf",
+    "paginas": 8
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 153739,
+    "tokens_salida": 6297,
+    "tokens_pensamiento": 0,
+    "tokens_total": 160036,
+    "detalle_entrada": {
+      "TEXT": 3699,
+      "VIDEO": 137940,
+      "IMAGE": 12100
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

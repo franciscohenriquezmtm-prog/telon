@@ -1,0 +1,354 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_06_Envio_series_calentamiento_tubo_worklist.mov",
+    "nombre": "TC_06_Envio_series_calentamiento_tubo_worklist",
+    "duracion_seg": 278.77,
+    "duracion": "04:39",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 463114797,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T15:56:37",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Gestión de reconstrucciones y escaneo en tomógrafo Canon",
+    "resumen": "Este video detalla la administración de reconstrucciones y transferencias de imágenes en un tomógrafo computado Canon Aquilion. El instructor describe cómo supervisar el envío de series, verificar la temperatura del tubo y cargar la información del paciente desde el servidor o manualmente para proceder al escaneo.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 9 pasos revisados en 1 petición(es), 8 con cambios (12785 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 119241,
+      "tokens_salida": 4148,
+      "tokens_pensamiento": 0,
+      "tokens_total": 123389,
+      "detalle_entrada": {
+        "TEXT": 3331,
+        "VIDEO": 106010,
+        "IMAGE": 9900
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "No detener la transferencia accidentalmente",
+        "descripcion": "El instructor aconseja no hacer clic en el boton del contador de transferencias activas (marcado con 2 en pantalla), a menos que haya un problema, ya que de lo contrario se detendra el proceso y se pondra en espera (Hold).",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Gestión de datos",
+        "zona": {
+          "x": 0.21,
+          "y": 0.107
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 2.0,
+        "puntaje": null,
+        "descripcion_original": "El instructor aconseja no hacer clic en el número de transferencia a menos que haya un problema, ya que de lo contrario se detendrá el proceso de transferencia y se pondrá en espera (Hold)."
+      },
+      {
+        "tiempo": "00:25",
+        "tiempo_seg": 25.0,
+        "titulo": "Verificar el estado de las transferencias",
+        "descripcion": "Hacer clic en el boton de transferencia (icono de tres pantallas conectadas) en el menu de utilidades de la izquierda para visualizar el listado de envios, confirmando si estan COMPLETE o ACTIVE.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Gestión de datos",
+        "zona": {
+          "x": 0.202,
+          "y": 0.662
+        },
+        "captura": "capturas/02_00-25.jpg",
+        "captura_anotada": "capturas/02_00-25_anotada.jpg",
+        "tiempo_real_seg": 25.2,
+        "puntaje": null,
+        "descripcion_original": "Hacer clic en el menú correspondiente para visualizar el listado completo de transferencias realizadas, confirmando cuáles están completas (COMPLETE) o activas (ACTIVE)."
+      },
+      {
+        "tiempo": "00:36",
+        "tiempo_seg": 36.0,
+        "titulo": "Reiniciar un envio de imagenes",
+        "descripcion": "Si un envio se interrumpe, se puede seleccionar la fila correspondiente en la lista de comandos y hacer clic en el boton 'Restart' para reiniciar el envio al PACS o destino deseado.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Gestión de datos",
+        "zona": {
+          "x": 0.438,
+          "y": 0.508
+        },
+        "captura": "capturas/03_00-36.jpg",
+        "captura_anotada": "capturas/03_00-36_anotada.jpg",
+        "tiempo_real_seg": 35.0,
+        "puntaje": null,
+        "titulo_original": "Reiniciar un envío de imágenes",
+        "descripcion_original": "Si un envío se interrumpe, se puede seleccionar el destino y hacer clic en el botón 'Restart' para reiniciar el envío al PACS o destino deseado."
+      },
+      {
+        "tiempo": "01:03",
+        "tiempo_seg": 63.0,
+        "titulo": "Evitar detener la reconstruccion de imagenes",
+        "descripcion": "Al hacer clic en la fila de reconstruccion (marcada con 0) se pausara el proceso automatico del equipo; se aconseja dejar que termine de forma fluida dado que es un proceso rapido.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Gestión de datos",
+        "zona": {
+          "x": 0.162,
+          "y": 0.264
+        },
+        "captura": "capturas/04_01-03.jpg",
+        "captura_anotada": "capturas/04_01-03_anotada.jpg",
+        "tiempo_real_seg": 62.8,
+        "puntaje": null,
+        "titulo_original": "Evitar detener la reconstrucción de imágenes",
+        "descripcion_original": "Al hacer clic en la fila de reconstrucción se pausará el proceso automático del equipo; se aconseja dejar que termine de forma fluida dado que es un proceso rápido."
+      },
+      {
+        "tiempo": "01:41",
+        "tiempo_seg": 101.0,
+        "titulo": "Monitorear la temperatura del tubo",
+        "descripcion": "Se muestra el indicador 'Tube(OLP)' que indica el porcentaje termico del tubo (actualmente en 13% en pantalla); este valor ayuda a prever tiempos de espera entre adquisiciones exigentes.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Seguridad y sistema",
+        "zona": {
+          "x": 0.254,
+          "y": 0.139
+        },
+        "captura": "capturas/05_01-41.jpg",
+        "captura_anotada": "capturas/05_01-41_anotada.jpg",
+        "tiempo_real_seg": 100.0,
+        "puntaje": null,
+        "descripcion_original": "Se muestra el indicador 'Tube (OLP)' que muestra el porcentaje térmico del tubo (actualmente en 13%); este valor ayuda a prever tiempos de espera entre adquisiciones exigentes."
+      },
+      {
+        "tiempo": "02:13",
+        "tiempo_seg": 133.0,
+        "titulo": "Advertencia de enfriamiento automático",
+        "descripcion": "El equipo no cortará un examen en curso, pero avisará antes de iniciar la adquisición si requiere un tiempo específico en segundos para enfriar el tubo según la planificación.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Seguridad y sistema",
+        "zona": null,
+        "captura": "capturas/06_02-13.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 132.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:45",
+        "tiempo_seg": 225.0,
+        "titulo": "Iniciar registro rapido de emergencia",
+        "descripcion": "Al presionar el boton 'Emergency', el sistema genera datos de paciente anonimos para comenzar la adquisicion de forma inmediata en situaciones criticas.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.503,
+          "y": 0.589
+        },
+        "captura": "capturas/07_03-45.jpg",
+        "captura_anotada": "capturas/07_03-45_anotada.jpg",
+        "tiempo_real_seg": 224.4,
+        "puntaje": null,
+        "titulo_original": "Acceder al menú de escaneo",
+        "descripcion_original": "Al presionar el botón 'Scan', se despliega el menú principal de adquisición con los campos para registrar los datos del paciente y configurar el protocolo."
+      },
+      {
+        "tiempo": "03:52",
+        "tiempo_seg": 232.0,
+        "titulo": "Seleccionar protocolo por anatomia",
+        "descripcion": "Al seleccionar una zona del maniqui interactivo (como el cuello/hombros), se despliegan los protocolos correspondientes en la seccion derecha, por ejemplo, 'RTP Head and Neck'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.262,
+          "y": 0.673
+        },
+        "captura": "capturas/08_03-52.jpg",
+        "captura_anotada": "capturas/08_03-52_anotada.jpg",
+        "tiempo_real_seg": 232.6,
+        "puntaje": null,
+        "titulo_original": "Seleccionar protocolo por anatomía",
+        "descripcion_original": "Al seleccionar una zona del maniquí interactivo (adulto o pediátrico), se despliegan en la pantalla derecha los protocolos de examen precargados para esa región."
+      },
+      {
+        "tiempo": "04:10",
+        "tiempo_seg": 250.0,
+        "titulo": "Cargar paciente desde el servidor",
+        "descripcion": "Para evitar la digitacion manual, presionar el boton 'Appoint' para desplegar la opcion 'From serv.' (en pantalla se lee 'From serv.') y asi importar la lista de trabajo del hospital.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Planificación del estudio",
+        "zona": {
+          "x": 0.318,
+          "y": 0.535
+        },
+        "captura": "capturas/09_04-10.jpg",
+        "captura_anotada": "capturas/09_04-10_anotada.jpg",
+        "tiempo_real_seg": 249.0,
+        "puntaje": null,
+        "descripcion_original": "Para evitar la digitación manual, presionar 'Appoint' y luego 'From Server' para importar los datos directamente desde la lista de trabajo del hospital."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 10.0,
+        "texto": "La idea es no presionar acá, porque si presionas se va a abrir un menú que les va a mostrar como para gestionar, ya, este prioridad, pero el tema que si yo hago click, se detiene la transferencia."
+      },
+      {
+        "inicio": 10.0,
+        "fin": 17.0,
+        "texto": "Ah, ya. Entonces va a aparecer hold, después todos van a estar en hold, entonces yo les recomendaría no hagan click, a menos que vean algún problema."
+      },
+      {
+        "inicio": 17.0,
+        "fin": 25.0,
+        "texto": "Ya, pero se puede pasar, por ejemplo, que yo envíe la serie y no llegue y quiera revisar si es que se envió, de ahí sí."
+      },
+      {
+        "inicio": 25.0,
+        "fin": 30.0,
+        "texto": "Sí, claro, yo puedo presionar acá. Y acá dice todos completados, y este está activo."
+      },
+      {
+        "inicio": 30.0,
+        "fin": 35.0,
+        "texto": "Ya, y si uno está así como incompleto, ¿lo puedo de ahí reenviar?"
+      },
+      {
+        "inicio": 35.0,
+        "fin": 44.0,
+        "texto": "Acá, restart. Y va a preguntar ¿a dónde? Y ahí uno le dice, no sé, al PACS, OK. Y ahí va a reiniciar el envío."
+      },
+      {
+        "inicio": 44.0,
+        "fin": 53.0,
+        "texto": "Voy a salir para que continúe. Esta es la fila de de impresión, no va, y esta es la fila de reconstrucción."
+      },
+      {
+        "inicio": 53.0,
+        "fin": 65.0,
+        "texto": "En caso de que se tomen, no sé, 1000 imágenes, y aquí va a aparecer 1000, 950, 900, empieza a bajar hasta llegar a cero. También se puede gestionar haciendo un click, pero si hacen un click, se detiene la reconstrucción."
+      },
+      {
+        "inicio": 65.0,
+        "fin": 74.0,
+        "texto": "Y el por qué se detiene es porque dicen, tú vas a gestionar esto, o sea, quiere decir reconstruye esta primero, esta después, pero en realidad esto es rápido, así que no debería ser el caso."
+      },
+      {
+        "inicio": 74.0,
+        "fin": 94.0,
+        "texto": "Perfecto, al momento de hacer una reconstrucción, por ejemplo, con a partir de un volumen, ya, un estándar, ya, y quiero eh hago una reconstrucción, dejo listo la reconstrucción en no sé qué, y yo quiero hacer el MPR de los tres al mismo tiempo, ¿acá se puede hacer o no? Sí, sí."
+      },
+      {
+        "inicio": 94.0,
+        "fin": 100.0,
+        "texto": "Eh, déjame terminar esto y y avanzamos. Eh, esto bueno, para mover la camilla."
+      },
+      {
+        "inicio": 100.0,
+        "fin": 112.0,
+        "texto": "Esta es la OLP del tubo, ¿cierto? Esto es para que tengan una referencia, porque puede llegar a 99, pero es para que sepan en qué está. Más que nada cuando lo van a apagar, cuando hay corte."
+      },
+      {
+        "inicio": 112.0,
+        "fin": 127.0,
+        "texto": "Si el equipo está con mucha temperatura el tubo, y sigue y otro y otro paciente, si hay algún problema así, de barridos largos, etc., el equipo le va a decir,"
+      },
+      {
+        "inicio": 127.0,
+        "fin": 140.0,
+        "texto": "o sea, no les va a cortar un examen, va a decir: ¿sabes qué? Para este examen y esta planificación, le va a aparecer un mensaje acá: necesito, no sé, 128 segundos para que se enfríe el tubo porque si está en 80,"
+      },
+      {
+        "inicio": 140.0,
+        "fin": 150.0,
+        "texto": "y tú estás planificando como 30%, entonces va a quedar en 70. Entonces les va a decir: necesito tantos segundos para que tú puedas, para que la carga calórica que le va a aplicar tenga espacio."
+      },
+      {
+        "inicio": 150.0,
+        "fin": 164.0,
+        "texto": "Algo así. Entonces va lo va a hacer automático. Por ejemplo, si ya un paciente es obeso mórbido, que está hecho para un obeso mórbido, eh tengo que hacer estudios básicos completos, un angio de cuerpo completo."
+      },
+      {
+        "inicio": 164.0,
+        "fin": 176.0,
+        "texto": "Ahí puede ser que, claro, tú planificas el examen del sin contraste, no sé, corte de prueba, bolus tracking, angio, venoso... Pero por ejemplo, al momento de que yo mando la angio, y después quiero tomar un venoso, y tengo un tiempo limitado, ¿el equipo me me va a cortar el examen o antes de empezar?"
+      },
+      {
+        "inicio": 176.0,
+        "fin": 190.0,
+        "texto": "Va a arrojar ese mensaje. Pero antes de empezar la adquisición. Sí, para que no quedes corto y se te pase el tiempo. Antes de decir, para todo lo que tú quieres, tienes que esperar, no sé, 3 minutos."
+      },
+      {
+        "inicio": 190.0,
+        "fin": 200.0,
+        "texto": "Para que el tubo se enfríe, y tú puedas ejecutar todo como corresponde. Porque como ya tiene el doble escanograma, ya sabe la la densidad del paciente y cómo anda."
+      },
+      {
+        "inicio": 200.0,
+        "fin": 219.0,
+        "texto": "Y aparte, bueno, ah, pero acá son técnicas fijas, y el doble escanograma se saca la modulación para imagenología. Disculpen, pero la mente voy a hablar como si fuera para imagenología porque es lo del día a día, entonces le voy a hablar de modulación, ah no, de técnicas fijas, pero va a arrojar antes de."
+      },
+      {
+        "inicio": 219.0,
+        "fin": 236.0,
+        "texto": "Entonces, este menú Scan, y aparece la pantalla, ¿cierto? Acá ustedes pueden o en emergencia para poder ingresar al paciente, y acá en en el maniquí aparece por sección anatómica."
+      },
+      {
+        "inicio": 236.0,
+        "fin": 250.0,
+        "texto": "Para niños, bueno, tiene lo los protocolos de imagenología de ahí. ¿Cómo se cómo se ingresa la Worklist? Acá, de ir, ¿cierto? From server, Appointment, From server."
+      },
+      {
+        "inicio": 250.0,
+        "fin": 265.0,
+        "texto": "No creo que nos esté funcionando la Worklist. Pero cuando esté funcionando acá, reload y van a aparecer los, no sé, pues el paciente que quieran, doble click o marcar OK y se carga todo."
+      },
+      {
+        "inicio": 265.0,
+        "fin": 278.77,
+        "texto": "¿No estaba conectado con el RIS? Sí, ingresamos un paciente, ¿no? Yo creo que no, no estoy seguro."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_06_Envio_series_calentamiento_tubo_worklist.docx",
+    "pdf": "TC_06_Envio_series_calentamiento_tubo_worklist.pdf",
+    "paginas": 8
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 119241,
+    "tokens_salida": 4148,
+    "tokens_pensamiento": 0,
+    "tokens_total": 123389,
+    "detalle_entrada": {
+      "TEXT": 3331,
+      "VIDEO": 106010,
+      "IMAGE": 9900
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

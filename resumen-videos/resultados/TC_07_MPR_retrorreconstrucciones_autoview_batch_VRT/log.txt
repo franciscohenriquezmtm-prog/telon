@@ -1,0 +1,39 @@
+16:09:26 === TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov: 11:38, 1080x1920, 59.97 fps, 1476 MB -> salida/TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT
+16:09:26 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:09:26   TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+16:09:26   transcodificando TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:09:55       9 % (01:03 de 11:38)
+16:10:21      19 % (02:14 de 11:38)
+16:10:47      29 % (03:24 de 11:38)
+16:11:13      39 % (04:34 de 11:38)
+16:11:40      49 % (05:44 de 11:38)
+16:12:08      59 % (06:55 de 11:38)
+16:12:36      70 % (08:06 de 11:38)
+16:13:06      80 % (09:16 de 11:38)
+16:13:34      90 % (10:27 de 11:38)
+16:13:58   copia ligera lista: 37.9 MB
+16:13:58 Subiendo TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT_subida.mp4 (39.7 MB, video/mp4) a la Files API…
+16:14:01 Subido como files/bvnuqbyrv0wg; esperando a que Gemini lo procese…
+16:14:32 Archivo files/bvnuqbyrv0wg listo (ACTIVE).
+16:14:32 Analizando TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT con gemini-3.5-flash (tramo 1/2: 00:00–04:00) (resolución alta)…
+16:14:54   12 momentos brutos, 72189 tokens.
+16:14:54 Analizando TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT con gemini-3.5-flash (tramo 2/2: 04:00–11:38) (resolución alta)…
+16:15:33   17 momentos brutos, 135776 tokens.
+16:15:33 Análisis terminado: 29 momentos.
+16:15:33 Transcribiendo el audio de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT con gemini-3.5-flash (tramo 1/2)…
+16:15:43 Transcribiendo el audio de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT con gemini-3.5-flash (tramo 2/2)…
+16:16:19 Transcripción: 70 segmentos, 69008 tokens.
+16:16:20 Archivo remoto files/bvnuqbyrv0wg eliminado.
+16:16:20 momentos.json guardado (29 momentos).
+16:16:20 Extrayendo 29 capturas de TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.mov…
+16:16:32   10/29 capturas
+16:16:44   20/29 capturas
+16:16:54 Capturas: 29 extraídas, 0 fallidas
+16:16:54 Refinando títulos y descripciones con 29 capturas en alta resolución (gemini-3.5-flash)…
+16:16:54 Refinando con gemini-3.5-flash los textos de 29 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+16:17:21 Refinado con capturas (gemini-3.5-flash): 29 pasos revisados en 2 petición(es), 26 con cambios (39128 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:17:33 Anotaciones: 24 capturas con círculo/flecha.
+16:17:33   documentos: 29 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+16:17:34   docx: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx
+16:17:38   pdf: TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf (21 páginas)
+16:17:38 Listo en 8 min 12 s: 29 momentos, 21 páginas -> TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.docx, TC_07_MPR_retrorreconstrucciones_autoview_batch_VRT.pdf

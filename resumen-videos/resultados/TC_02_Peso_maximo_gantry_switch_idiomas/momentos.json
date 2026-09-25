@@ -1,0 +1,885 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_02_Peso_maximo_gantry_switch_idiomas.mov",
+    "nombre": "TC_02_Peso_maximo_gantry_switch_idiomas",
+    "duracion_seg": 343.92,
+    "duracion": "05:44",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 980073861,
+    "extra": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "rotacion": -90.0,
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T15:59:51",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Manual de Operación de Tomógrafo Canon",
+    "resumen": "Este video instructivo detalla el uso y especificaciones del tomógrafo computado Canon Aquilion Exceed LB, mostrando el funcionamiento de la camilla, los pedales de control y los comandos del panel táctil del gantry, incluyendo los modos de asistencia por voz e imagen.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 10 pasos revisados en 1 petición(es), 10 con cambios (14102 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 145149,
+      "tokens_salida": 8284,
+      "tokens_pensamiento": 0,
+      "tokens_total": 153433,
+      "detalle_entrada": {
+        "TEXT": 3431,
+        "VIDEO": 130718,
+        "IMAGE": 11000
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Verificar peso maximo de la camilla",
+        "descripcion": "El instructor indica que la camilla soporta un peso maximo de 300 kg para garantizar un funcionamiento seguro. Se observa al operador localizando el sistema de sujecion lateral de la mesa.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.56,
+          "y": 0.298
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.6,
+        "puntaje": null,
+        "titulo_original": "Verificar peso máximo de la camilla",
+        "descripcion_original": "El instructor indica que la camilla soporta un peso máximo de 300 kg para garantizar un funcionamiento seguro."
+      },
+      {
+        "tiempo": "00:08",
+        "tiempo_seg": 8.0,
+        "titulo": "Evitar fuerza excesiva en extremos",
+        "descripcion": "Se muestra una etiqueta de advertencia con un limite de fuerza de 2.94 kN y se advierte no permitir que los pacientes se bajen por el extremo de la camilla para evitar que se fracture.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Seguridad del Paciente",
+        "zona": {
+          "x": 0.512,
+          "y": 0.444
+        },
+        "captura": "capturas/02_00-08.jpg",
+        "captura_anotada": "capturas/02_00-08_anotada.jpg",
+        "tiempo_real_seg": 8.6,
+        "puntaje": null,
+        "descripcion_original": "Se muestra una etiqueta de advertencia con un límite de fuerza de 2,94 kN (300 kgf) y se advierte no permitir que los pacientes se bajen por el extremo de la camilla para evitar quebrarla."
+      },
+      {
+        "tiempo": "00:53",
+        "tiempo_seg": 53.0,
+        "titulo": "Conocer capacidad de carga real",
+        "descripcion": "La capacidad máxima real de la mesa es de 315 kg, reservando 15 kg para accesorios mecánicos y monitores.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.483,
+          "y": 0.42
+        },
+        "captura": "capturas/03_00-53.jpg",
+        "captura_anotada": "capturas/03_00-53_anotada.jpg",
+        "tiempo_real_seg": 53.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:02",
+        "tiempo_seg": 122.0,
+        "titulo": "Operar botones de posicionamiento",
+        "descripcion": "Se operan los botones en el panel del gantry para realizar movimientos de posicionamiento y ajuste de la camilla. En la pantalla se leen los valores +106.0 mm, +972.0 mm y 0.0 mm.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.718,
+          "y": 0.465
+        },
+        "captura": "capturas/04_02-02.jpg",
+        "captura_anotada": "capturas/04_02-02_anotada.jpg",
+        "tiempo_real_seg": 121.8,
+        "puntaje": null,
+        "descripcion_original": "Se operan los botones en el panel del gantry para realizar movimientos de posicionamiento y ajuste de la camilla."
+      },
+      {
+        "tiempo": "02:08",
+        "tiempo_seg": 128.0,
+        "titulo": "Usar pedales de control rapido",
+        "descripcion": "Se operan los pedales en la base de la camilla: un pedal para subir y entrar, y otro para sacar y bajar la camilla rapidamente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.516,
+          "y": 0.585
+        },
+        "captura": "capturas/05_02-08.jpg",
+        "captura_anotada": "capturas/05_02-08_anotada.jpg",
+        "tiempo_real_seg": 128.2,
+        "puntaje": null,
+        "titulo_original": "Usar pedales de control rápido",
+        "descripcion_original": "Se operan los pedales en la base de la camilla: un pedal para subir y entrar, y otro para sacar y bajar la camilla rápidamente."
+      },
+      {
+        "tiempo": "02:15",
+        "tiempo_seg": 135.0,
+        "titulo": "Liberar freno manual de camilla",
+        "descripcion": "El boton con icono de mano en el panel del gantry permite liberar la camilla para realizar movimientos manuales. En la pantalla se leen los valores +26.0 mm, +950.5 mm y 0.0 mm.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.544,
+          "y": 0.286
+        },
+        "captura": "capturas/06_02-15.jpg",
+        "captura_anotada": "capturas/06_02-15_anotada.jpg",
+        "tiempo_real_seg": 134.8,
+        "puntaje": null,
+        "descripcion_original": "El botón con icono de mano en el panel del gantry permite liberar la camilla para realizar movimientos manuales."
+      },
+      {
+        "tiempo": "02:27",
+        "tiempo_seg": 147.0,
+        "titulo": "Controlar radiacion desde gantry",
+        "descripcion": "Se muestran los botones superiores en el panel lateral del gantry, el de inicio y el de parada de emergencia. En la pantalla se visualizan los valores +26.0 mm, +945.0 mm y 0.0 mm.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.456,
+          "y": 0.32
+        },
+        "captura": "capturas/07_02-27.jpg",
+        "captura_anotada": "capturas/07_02-27_anotada.jpg",
+        "tiempo_real_seg": 146.0,
+        "puntaje": null,
+        "titulo_original": "Controlar radiación desde gantry",
+        "descripcion_original": "Se muestran los dos botones superiores en el panel del gantry que sirven para dar inicio y cortar la radiación de emergencia."
+      },
+      {
+        "tiempo": "03:04",
+        "tiempo_seg": 184.0,
+        "titulo": "Configurar idioma de instrucciones",
+        "descripcion": "A traves de la pantalla tactil del gantry se puede acceder al menu de idioma para cambiar la guia de voz, visualizando los valores actuales de posicion +26.0 mm, +945.0 mm y 0.0 mm.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.285,
+          "y": 0.285
+        },
+        "captura": "capturas/08_03-04.jpg",
+        "captura_anotada": "capturas/08_03-04_anotada.jpg",
+        "tiempo_real_seg": 183.0,
+        "puntaje": null,
+        "descripcion_original": "A través de la pantalla táctil del gantry se puede acceder al menú de idioma para cambiar la guía de voz (ej. English, Spanish, Japanese)."
+      },
+      {
+        "tiempo": "03:29",
+        "tiempo_seg": 209.0,
+        "titulo": "Visualizar temporizador de apnea",
+        "descripcion": "La pantalla de asistencia del gantry muestra un temporizador visual con el icono de un paciente con los brazos arriba y una cuenta regresiva numerica de 10.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.12,
+          "y": 0.38
+        },
+        "captura": "capturas/09_03-29.jpg",
+        "captura_anotada": "capturas/09_03-29_anotada.jpg",
+        "tiempo_real_seg": 209.6,
+        "puntaje": null,
+        "descripcion_original": "La pantalla de asistencia del gantry muestra un temporizador visual de cuenta regresiva en segundos (ej. 10 s) para guiar al paciente en las apneas."
+      },
+      {
+        "tiempo": "04:37",
+        "tiempo_seg": 277.0,
+        "titulo": "Activar modo infantil animado",
+        "descripcion": "La pantalla LCD superior del gantry Aquilion Exceed LB muestra animaciones de un paisaje natural verde para ayudar a calmar y guiar a los pacientes infantiles.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.593,
+          "y": 0.312
+        },
+        "captura": "capturas/10_04-37.jpg",
+        "captura_anotada": "capturas/10_04-37_anotada.jpg",
+        "tiempo_real_seg": 277.2,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona el modo de instrucciones infantil que muestra animaciones de animales y personajes caricaturescos para facilitar la cooperación de niños."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 3.0,
+        "texto": "puede soportar hasta 300 kg."
+      },
+      {
+        "inicio": 3.0,
+        "fin": 7.0,
+        "texto": "O sea, con los pacientes más gorditos no van a tener problemas. Yo, yo. Hay un sistema acá."
+      },
+      {
+        "inicio": 7.0,
+        "fin": 13.0,
+        "texto": "Lo que sí indica, como el dibujo, que siempre para posicionar y sacar al paciente, tiene que estar en esta posición la camilla."
+      },
+      {
+        "inicio": 13.0,
+        "fin": 14.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 14.0,
+        "fin": 17.0,
+        "texto": "Porque una vez que ingresa, va a tolerar la masa."
+      },
+      {
+        "inicio": 17.0,
+        "fin": 23.0,
+        "texto": "No hace la deflexión, pero si el paciente se quiere bajar de allá, en la punta, con el torque,"
+      },
+      {
+        "inicio": 23.0,
+        "fin": 26.0,
+        "texto": "como dice el dibujo acá, lo va a quebrar."
+      },
+      {
+        "inicio": 26.0,
+        "fin": 29.0,
+        "texto": "Ah, ya. O sea, tiene que, no se puede bajar por ahí."
+      },
+      {
+        "inicio": 29.0,
+        "fin": 32.0,
+        "texto": "Sí, sí, sí. Ustedes nunca lo van a hacer, pero"
+      },
+      {
+        "inicio": 32.0,
+        "fin": 35.0,
+        "texto": "nos pasó en un hospital del sur que el paciente se desesperó."
+      },
+      {
+        "inicio": 35.0,
+        "fin": 38.0,
+        "texto": "Ajá. O sea, se quiso bajar de allá."
+      },
+      {
+        "inicio": 38.0,
+        "fin": 41.0,
+        "texto": "Y más encima cuando estaba la la la la Sifco,"
+      },
+      {
+        "inicio": 41.0,
+        "fin": 44.0,
+        "texto": "la plana, pero la de nosotros tiene una, un accesorio que,"
+      },
+      {
+        "inicio": 44.0,
+        "fin": 47.0,
+        "texto": "que ingresa, entonces más encima se apoyó."
+      },
+      {
+        "inicio": 47.0,
+        "fin": 50.0,
+        "texto": "Apoyó la la extensión de camilla y se abrió todo y hubo que cambiar todo."
+      },
+      {
+        "inicio": 50.0,
+        "fin": 51.0,
+        "texto": "Oh."
+      },
+      {
+        "inicio": 51.0,
+        "fin": 54.0,
+        "texto": "Entonces, eso. Y en realidad son 315 kg."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 55.0,
+        "texto": "Esa era la la pregunta."
+      },
+      {
+        "inicio": 55.0,
+        "fin": 58.0,
+        "texto": "Sí, son 300 el máximo, pero en realidad son 315,"
+      },
+      {
+        "inicio": 58.0,
+        "fin": 63.0,
+        "texto": "porque deja 15 kg para monitor mecánico, el ventilador."
+      },
+      {
+        "inicio": 63.0,
+        "fin": 64.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 68.0,
+        "texto": "Y el ventilador mecánico, el monitor, etcétera. O sea, ¿qué podría esperar yo si es que pongo a alguien de 350"
+      },
+      {
+        "inicio": 68.0,
+        "fin": 72.0,
+        "texto": "kg? ¿Se me bloquea el equipo o no se mueve?"
+      },
+      {
+        "inicio": 72.0,
+        "fin": 76.0,
+        "texto": "No, no habría que ponerlo porque no está para esa masa, o sea, máximo 300."
+      },
+      {
+        "inicio": 76.0,
+        "fin": 79.0,
+        "texto": "O sea, probablemente algo de la estructura joda."
+      },
+      {
+        "inicio": 79.0,
+        "fin": 81.0,
+        "texto": "Sí, sí. Yo creo que la la camilla no está para esa masa."
+      },
+      {
+        "inicio": 81.0,
+        "fin": 84.0,
+        "texto": "Yo creo que aquí la va a aguantar, pero si usted"
+      },
+      {
+        "inicio": 84.0,
+        "fin": 88.0,
+        "texto": "intenta ingresarlo, se va a trancar y imagínese."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 91.0,
+        "texto": "Sí, no lo va a cortar."
+      },
+      {
+        "inicio": 91.0,
+        "fin": 93.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 93.0,
+        "fin": 96.0,
+        "texto": "Ah, son para mover de lado y de abajo, claro."
+      },
+      {
+        "inicio": 96.0,
+        "fin": 97.0,
+        "texto": "Para indexar cosas."
+      },
+      {
+        "inicio": 97.0,
+        "fin": 100.0,
+        "texto": "Oye, y esa línea blanca tiene alguna..."
+      },
+      {
+        "inicio": 100.0,
+        "fin": 102.0,
+        "texto": "Eh..."
+      },
+      {
+        "inicio": 102.0,
+        "fin": 104.0,
+        "texto": "Es lo de la tabla, ¿no? De la camilla."
+      },
+      {
+        "inicio": 104.0,
+        "fin": 107.0,
+        "texto": "Sí, es de la de la camilla Sifco la la..."
+      },
+      {
+        "inicio": 107.0,
+        "fin": 111.0,
+        "texto": "Pero no, la verdad que no."
+      },
+      {
+        "inicio": 111.0,
+        "fin": 113.0,
+        "texto": "No está relacionado con Sifco."
+      },
+      {
+        "inicio": 113.0,
+        "fin": 114.0,
+        "texto": "De todas maneras, esto viene dentro del..."
+      },
+      {
+        "inicio": 114.0,
+        "fin": 116.0,
+        "texto": "La verdad que sí."
+      },
+      {
+        "inicio": 116.0,
+        "fin": 120.0,
+        "texto": "Claro, son de distintas marcas, pero viene con un código de Canon para poder ofrecerlo, para llevarlo e instalar."
+      },
+      {
+        "inicio": 120.0,
+        "fin": 123.0,
+        "texto": "Y después se preocupa este, este, o..."
+      },
+      {
+        "inicio": 123.0,
+        "fin": 124.0,
+        "texto": "Claro."
+      },
+      {
+        "inicio": 124.0,
+        "fin": 127.0,
+        "texto": "Para posicionar, estos dos botones son los mismos que en la..."
+      },
+      {
+        "inicio": 127.0,
+        "fin": 128.0,
+        "texto": "Claro."
+      },
+      {
+        "inicio": 128.0,
+        "fin": 131.0,
+        "texto": "subir y entrar, y el otro para sacar"
+      },
+      {
+        "inicio": 131.0,
+        "fin": 134.0,
+        "texto": "y bajar la camilla rápidamente."
+      },
+      {
+        "inicio": 134.0,
+        "fin": 137.0,
+        "texto": "Ah, la manito lo que hace, libera"
+      },
+      {
+        "inicio": 137.0,
+        "fin": 139.0,
+        "texto": "en manual la camilla, ¿ya?"
+      },
+      {
+        "inicio": 139.0,
+        "fin": 142.0,
+        "texto": "Ya."
+      },
+      {
+        "inicio": 142.0,
+        "fin": 145.0,
+        "texto": "Y estos dos botones son más que nada para imagenología, pero lo que hacen es lo mismo que están en el teclado"
+      },
+      {
+        "inicio": 145.0,
+        "fin": 148.0,
+        "texto": "para dar radiación y cortar radiación. Ellos pueden poner ahí el gantry switch"
+      },
+      {
+        "inicio": 148.0,
+        "fin": 152.0,
+        "texto": "para hacer imagenología, tienen que venir a ver la vía solos,"
+      },
+      {
+        "inicio": 152.0,
+        "fin": 155.0,
+        "texto": "entonces lo dejan listo. Si le dan a la lectora de aquí, click,"
+      },
+      {
+        "inicio": 155.0,
+        "fin": 159.0,
+        "texto": "aparece el tiempo, 35, 34, 33..."
+      },
+      {
+        "inicio": 159.0,
+        "fin": 160.0,
+        "texto": "Ah, de veras."
+      },
+      {
+        "inicio": 160.0,
+        "fin": 163.0,
+        "texto": "Entonces revisa, le va a sentir calor, no se mueva,"
+      },
+      {
+        "inicio": 163.0,
+        "fin": 167.0,
+        "texto": "y se van. Y si hay algún problema, cortan acá y cortan el, el..."
+      },
+      {
+        "inicio": 167.0,
+        "fin": 169.0,
+        "texto": "Ah, qué bueno."
+      },
+      {
+        "inicio": 169.0,
+        "fin": 171.0,
+        "texto": "Está bueno."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 173.0,
+        "texto": "Claro."
+      },
+      {
+        "inicio": 173.0,
+        "fin": 177.0,
+        "texto": "Y yo me pongo el, el..."
+      },
+      {
+        "inicio": 177.0,
+        "fin": 180.0,
+        "texto": "Para eso."
+      },
+      {
+        "inicio": 180.0,
+        "fin": 184.0,
+        "texto": "Y también, otra función más orientada a imagenología es, eh, que puedo hacer"
+      },
+      {
+        "inicio": 184.0,
+        "fin": 187.0,
+        "texto": "prácticas verbales con instrucciones. Aquí puedo cambiar el idioma,"
+      },
+      {
+        "inicio": 187.0,
+        "fin": 190.0,
+        "texto": "por ejemplo, inglés,"
+      },
+      {
+        "inicio": 190.0,
+        "fin": 191.0,
+        "texto": "japonés,"
+      },
+      {
+        "inicio": 191.0,
+        "fin": 194.0,
+        "texto": "Ah, repite y contenga la respiración."
+      },
+      {
+        "inicio": 194.0,
+        "fin": 195.0,
+        "texto": "Exacto."
+      },
+      {
+        "inicio": 195.0,
+        "fin": 196.0,
+        "texto": "Ahí está en español. Pero también puedo cambiar la instrucción."
+      },
+      {
+        "inicio": 196.0,
+        "fin": 199.0,
+        "texto": "No respire."
+      },
+      {
+        "inicio": 199.0,
+        "fin": 202.0,
+        "texto": "Esto es más para imagenología, entonces así pueden, eh, practicar, eh,"
+      },
+      {
+        "inicio": 202.0,
+        "fin": 205.0,
+        "texto": "justamente lo que va a hacer el equipo. Por ejemplo,"
+      },
+      {
+        "inicio": 205.0,
+        "fin": 208.0,
+        "texto": "Respire."
+      },
+      {
+        "inicio": 208.0,
+        "fin": 211.0,
+        "texto": "Para los mudos o sordos."
+      },
+      {
+        "inicio": 211.0,
+        "fin": 212.0,
+        "texto": "Ah."
+      },
+      {
+        "inicio": 212.0,
+        "fin": 215.0,
+        "texto": "Y aparece el tiempo de apnea a lo largo de todo el examen"
+      },
+      {
+        "inicio": 215.0,
+        "fin": 218.0,
+        "texto": "para que el paciente siempre lo pueda ver."
+      },
+      {
+        "inicio": 218.0,
+        "fin": 220.0,
+        "texto": "Y esto está más orientado a imagenología."
+      },
+      {
+        "inicio": 220.0,
+        "fin": 224.0,
+        "texto": "Nuevamente, le indica al que no puede escuchar, eh, con algo visual cuándo tiene que hacer la apnea."
+      },
+      {
+        "inicio": 224.0,
+        "fin": 225.0,
+        "texto": "Claro."
+      },
+      {
+        "inicio": 225.0,
+        "fin": 228.0,
+        "texto": "No respire."
+      },
+      {
+        "inicio": 228.0,
+        "fin": 232.0,
+        "texto": "Y eso está, y eso es solamente con hacer un click. Por ejemplo, si fuera portugués, ruso, ya."
+      },
+      {
+        "inicio": 232.0,
+        "fin": 233.0,
+        "texto": "Ah, mire."
+      },
+      {
+        "inicio": 233.0,
+        "fin": 236.0,
+        "texto": "Y también lo va a tirar en ruso para que la persona pueda entender."
+      },
+      {
+        "inicio": 236.0,
+        "fin": 240.0,
+        "texto": "Pero esto también es bueno porque si el paciente sabe que le faltan 2 segundos, va a aguantar."
+      },
+      {
+        "inicio": 240.0,
+        "fin": 244.0,
+        "texto": "Pero si no sabe que faltan 2 segundos, se va a mover y se movió el pulmón y tiene que repetir el examen."
+      },
+      {
+        "inicio": 244.0,
+        "fin": 250.0,
+        "texto": "Tan cheveres."
+      },
+      {
+        "inicio": 250.0,
+        "fin": 253.0,
+        "texto": "Ah, es lo que..."
+      },
+      {
+        "inicio": 253.0,
+        "fin": 256.0,
+        "texto": "¿No tiene francés?"
+      },
+      {
+        "inicio": 256.0,
+        "fin": 258.0,
+        "texto": "No, en serio, no tiene francés."
+      },
+      {
+        "inicio": 258.0,
+        "fin": 261.0,
+        "texto": "Ah."
+      },
+      {
+        "inicio": 261.0,
+        "fin": 263.0,
+        "texto": "Se lo habremos mandado..."
+      },
+      {
+        "inicio": 263.0,
+        "fin": 264.0,
+        "texto": "¿No tiene francés?"
+      },
+      {
+        "inicio": 264.0,
+        "fin": 269.0,
+        "texto": "No, no tiene francés. Ah, y por los, cambia por, bueno, también es para imagenología, pero eso no lo voy a mostrar, cambia por edad."
+      },
+      {
+        "inicio": 269.0,
+        "fin": 276.0,
+        "texto": "Ah, mire qué bueno."
+      },
+      {
+        "inicio": 276.0,
+        "fin": 279.0,
+        "texto": "Oye, qué bonito de monitos."
+      },
+      {
+        "inicio": 279.0,
+        "fin": 282.0,
+        "texto": "Qué bacán."
+      },
+      {
+        "inicio": 282.0,
+        "fin": 285.0,
+        "texto": "Se mueve, aparece un animal y también hace lo mismo, hace la simulación."
+      },
+      {
+        "inicio": 285.0,
+        "fin": 288.0,
+        "texto": "El elefante también está respirando."
+      },
+      {
+        "inicio": 288.0,
+        "fin": 292.0,
+        "texto": "Y él también."
+      },
+      {
+        "inicio": 292.0,
+        "fin": 293.0,
+        "texto": "Qué agradable."
+      },
+      {
+        "inicio": 293.0,
+        "fin": 298.0,
+        "texto": "Claro, la idea es como que se relaje, le alcancen a sacar una foto y de ahí se quede tranquilo."
+      },
+      {
+        "inicio": 298.0,
+        "fin": 301.0,
+        "texto": "Eso está..."
+      },
+      {
+        "inicio": 301.0,
+        "fin": 308.0,
+        "texto": "Ahí está en español."
+      },
+      {
+        "inicio": 308.0,
+        "fin": 313.0,
+        "texto": "¿Y el máximo volumen que tiene?"
+      },
+      {
+        "inicio": 313.0,
+        "fin": 314.0,
+        "texto": "El de adentro se regula."
+      },
+      {
+        "inicio": 314.0,
+        "fin": 317.0,
+        "texto": "¿Cómo entró a ese menú?"
+      },
+      {
+        "inicio": 317.0,
+        "fin": 319.0,
+        "texto": "Ahí, ahí dentro."
+      },
+      {
+        "inicio": 319.0,
+        "fin": 322.0,
+        "texto": "Ah, ese menú que estaba, ¿cómo entró?"
+      },
+      {
+        "inicio": 322.0,
+        "fin": 325.0,
+        "texto": "¿Le hizo click no más?"
+      },
+      {
+        "inicio": 325.0,
+        "fin": 328.0,
+        "texto": "Sí, es touch. Y después acá."
+      },
+      {
+        "inicio": 328.0,
+        "fin": 329.0,
+        "texto": "Respire."
+      },
+      {
+        "inicio": 329.0,
+        "fin": 331.0,
+        "texto": "Y contenga el aire."
+      },
+      {
+        "inicio": 331.0,
+        "fin": 333.0,
+        "texto": "Y están seteados que sean 10 segundos el, el ejercicio."
+      },
+      {
+        "inicio": 333.0,
+        "fin": 334.0,
+        "texto": "Ah, ya."
+      },
+      {
+        "inicio": 334.0,
+        "fin": 335.0,
+        "texto": "Buenísimo."
+      },
+      {
+        "inicio": 335.0,
+        "fin": 336.0,
+        "texto": "Ese es un ejercicio."
+      },
+      {
+        "inicio": 336.0,
+        "fin": 339.0,
+        "texto": "Sí, ejercicio respiratorio."
+      },
+      {
+        "inicio": 339.0,
+        "fin": 341.0,
+        "texto": "Y después lo deja..."
+      },
+      {
+        "inicio": 341.0,
+        "fin": 342.0,
+        "texto": "Ah, ya."
+      },
+      {
+        "inicio": 342.0,
+        "fin": 343.92,
+        "texto": "Y si, pero si tira la apnea para el examen, ¿igual sale la misma voz?"
+      },
+      {
+        "inicio": 343.92,
+        "fin": 343.92,
+        "texto": "La misma voz."
+      },
+      {
+        "inicio": 343.92,
+        "fin": 343.92,
+        "texto": "Va a salir la misma voz."
+      },
+      {
+        "inicio": 343.92,
+        "fin": 343.92,
+        "texto": "¿Y el dibujo?"
+      },
+      {
+        "inicio": 343.92,
+        "fin": 343.92,
+        "texto": "Sí, me parece que sí."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_02_Peso_maximo_gantry_switch_idiomas.docx",
+    "pdf": "TC_02_Peso_maximo_gantry_switch_idiomas.pdf",
+    "paginas": 11
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 145149,
+    "tokens_salida": 8284,
+    "tokens_pensamiento": 0,
+    "tokens_total": 153433,
+    "detalle_entrada": {
+      "TEXT": 3431,
+      "VIDEO": 130718,
+      "IMAGE": 11000
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

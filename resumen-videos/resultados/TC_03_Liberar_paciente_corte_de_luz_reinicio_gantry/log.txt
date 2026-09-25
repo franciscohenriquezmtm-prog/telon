@@ -1,0 +1,33 @@
+16:00:00 === TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov: 02:54, 1080x1920, 59.97 fps, 471 MB -> salida/TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry
+16:00:00 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+16:00:00   transcodificando TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov -> TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+16:00:07       9 % (00:16 de 02:54)
+16:00:12      20 % (00:36 de 02:54)
+16:00:16      31 % (00:54 de 02:54)
+16:00:20      41 % (01:12 de 02:54)
+16:00:24      52 % (01:31 de 02:54)
+16:00:28      63 % (01:49 de 02:54)
+16:00:33      74 % (02:08 de 02:54)
+16:00:37      84 % (02:26 de 02:54)
+16:00:41      99 % (02:52 de 02:54)
+16:00:41   copia ligera lista: 8.4 MB
+16:00:41 Subiendo TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry_subida.mp4 (8.8 MB, video/mp4) a la Files API…
+16:00:42 Subido como files/xgru8qj8pyih; esperando a que Gemini lo procese…
+16:00:53 Archivo files/xgru8qj8pyih listo (ACTIVE).
+16:00:53 Analizando TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry con gemini-3.5-flash (resolución alta)…
+16:01:18   8 momentos brutos, 52534 tokens.
+16:01:18 Análisis terminado: 8 momentos.
+16:01:18 Transcribiendo el audio de TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry con gemini-3.5-flash…
+16:01:34 Transcripción: 29 segmentos, 17625 tokens.
+16:01:35 Archivo remoto files/xgru8qj8pyih eliminado.
+16:01:35 momentos.json guardado (8 momentos).
+16:01:35 Extrayendo 8 capturas de TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov…
+16:01:40 Capturas: 8 extraídas, 0 fallidas
+16:01:40 Refinando títulos y descripciones con 8 capturas en alta resolución (gemini-3.5-flash)…
+16:01:40 Refinando con gemini-3.5-flash los textos de 8 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+16:01:49 Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 8 con cambios (11278 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+16:01:53 Anotaciones: 8 capturas con círculo/flecha.
+16:01:53   documentos: 8 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+16:01:53   docx: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx
+16:01:54   pdf: TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf (7 páginas)
+16:01:54 Listo en 1 min 54 s: 8 momentos, 7 páginas -> TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx, TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf

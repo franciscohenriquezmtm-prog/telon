@@ -1,0 +1,359 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.mov",
+    "nombre": "TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry",
+    "duracion_seg": 173.75,
+    "duracion": "02:54",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 494344998,
+    "extra": {
+      "codec": "h264",
+      "pix_fmt": "yuv420p",
+      "color_space": "bt709",
+      "color_primaries": "bt709",
+      "color_transfer": "bt709",
+      "rotacion": -90.0,
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:01:54",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Procedimiento de liberación de camilla y seguridad en TC Canon",
+    "resumen": "Este video instructivo muestra cómo operar manualmente la camilla de un tomógrafo computado Canon Aquilion Exceed LB en caso de falla eléctrica. Se detallan los mecanismos de liberación manual, los límites de movimiento del sistema y las consideraciones de seguridad al posicionar accesorios en la camilla plana CIVCO.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 8 pasos revisados en 1 petición(es), 8 con cambios (11278 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 78022,
+      "tokens_salida": 3415,
+      "tokens_pensamiento": 0,
+      "tokens_total": 81437,
+      "detalle_entrada": {
+        "TEXT": 3114,
+        "VIDEO": 66108,
+        "IMAGE": 8800
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:05",
+        "tiempo_seg": 5.0,
+        "titulo": "Simular corte de energia",
+        "descripcion": "El instructor simula una falla electrica total presionando los botones del panel lateral del gantry, dejando al equipo sin energia y con la pantalla apagada.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Liberacion manual",
+        "zona": {
+          "x": 0.725,
+          "y": 0.444
+        },
+        "captura": "capturas/01_00-05.jpg",
+        "captura_anotada": "capturas/01_00-05_anotada.jpg",
+        "tiempo_real_seg": 4.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:22",
+        "tiempo_seg": 22.0,
+        "titulo": "Abrir compartimento de liberacion",
+        "descripcion": "Presionar la tapa ubicada en el extremo final de la camilla para acceder al mecanismo de liberacion manual de emergencia.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Liberacion manual",
+        "zona": {
+          "x": 0.51,
+          "y": 0.524
+        },
+        "captura": "capturas/02_00-22.jpg",
+        "captura_anotada": "capturas/02_00-22_anotada.jpg",
+        "tiempo_real_seg": 21.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:28",
+        "tiempo_seg": 28.0,
+        "titulo": "Girar manilla roja de liberacion",
+        "descripcion": "Girar la palanca roja en la direccion de la flecha como indica la etiqueta COUCH-TOP MOVEMENT PROCEDURE DURING POWER FAILURE para permitir el movimiento manual.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Liberacion manual",
+        "zona": {
+          "x": 0.482,
+          "y": 0.328
+        },
+        "captura": "capturas/03_00-28.jpg",
+        "captura_anotada": "capturas/03_00-28_anotada.jpg",
+        "tiempo_real_seg": 28.6,
+        "puntaje": null,
+        "descripcion_original": "Jalar y girar la manilla roja hacia atras para liberar mecanicamente el freno de la camilla y permitir su movimiento manual."
+      },
+      {
+        "tiempo": "00:32",
+        "tiempo_seg": 32.0,
+        "titulo": "Retirar paciente manualmente",
+        "descripcion": "Con la manilla desbloqueada, el operador jala la camilla usando la manilla gris para extraer al paciente del tunel del gantry Aquilion Exceed LB.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Liberacion manual",
+        "zona": {
+          "x": 0.451,
+          "y": 0.515
+        },
+        "captura": "capturas/04_00-32.jpg",
+        "captura_anotada": "capturas/04_00-32_anotada.jpg",
+        "tiempo_real_seg": 32.6,
+        "puntaje": null,
+        "descripcion_original": "Con la manilla roja desbloqueada, el operador jala la camilla usando la manilla gris para extraer al paciente del tunel del gantry."
+      },
+      {
+        "tiempo": "00:43",
+        "tiempo_seg": 43.0,
+        "titulo": "Bloquear camilla nuevamente",
+        "descripcion": "Empujar la manilla roja hacia adentro a su posicion original y cerrar la compuerta presionandola para asegurar el sistema.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Liberacion manual",
+        "zona": {
+          "x": 0.418,
+          "y": 0.482
+        },
+        "captura": "capturas/05_00-43.jpg",
+        "captura_anotada": "capturas/05_00-43_anotada.jpg",
+        "tiempo_real_seg": 42.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:01",
+        "tiempo_seg": 61.0,
+        "titulo": "Reiniciar disyuntor de gantry",
+        "descripcion": "Ubicacion del interruptor en la parte lateral trasera del gantry para reiniciar el tomografo tras un fallo o a peticion del servicio tecnico.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Mantenimiento",
+        "zona": {
+          "x": 0.55,
+          "y": 0.405
+        },
+        "captura": "capturas/06_01-01.jpg",
+        "captura_anotada": "capturas/06_01-01_anotada.jpg",
+        "tiempo_real_seg": 61.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:22",
+        "tiempo_seg": 142.0,
+        "titulo": "Verificar limites de movimiento",
+        "descripcion": "Identificar los limites de movimiento indicados en la estructura como STROKE END en color amarillo con borde negro.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Seguridad y limites",
+        "zona": {
+          "x": 0.046,
+          "y": 0.593
+        },
+        "captura": "capturas/07_02-22.jpg",
+        "captura_anotada": "capturas/07_02-22_anotada.jpg",
+        "tiempo_real_seg": 141.0,
+        "puntaje": null,
+        "titulo_original": "Verificar limites de escaneo",
+        "descripcion_original": "Identificar los limites de movimiento indicados en la estructura como SCAN LIMIT y END STROKE en color amarillo."
+      },
+      {
+        "tiempo": "02:37",
+        "tiempo_seg": 157.0,
+        "titulo": "Posicionar cabezal adecuadamente",
+        "descripcion": "Advertencia sobre la estructura interna de la camilla plana CIVCO con divisiones F8, F7, F6, F5: evitar colocar la cabeza directamente en la zona de union para prevenir artefactos.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Seguridad y limites",
+        "zona": {
+          "x": 0.235,
+          "y": 0.461
+        },
+        "captura": "capturas/08_02-37.jpg",
+        "captura_anotada": "capturas/08_02-37_anotada.jpg",
+        "tiempo_real_seg": 156.4,
+        "puntaje": null,
+        "descripcion_original": "Advertencia sobre la estructura interna de la camilla plana CIVCO: evitar colocar la cabeza directamente en la zona de union para prevenir artefactos en la imagen."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 7.0,
+        "texto": "Y por si falla la camilla o tiene energía la la camilla, ¿cómo se si llega a fallar? ¿Puedo simular un corte?"
+      },
+      {
+        "inicio": 7.0,
+        "fin": 16.0,
+        "texto": "No tengo energía, no tengo nada. ¿Cómo saco al paciente del túnel? ¿Hm? Al fondo de la camilla..."
+      },
+      {
+        "inicio": 18.0,
+        "fin": 23.0,
+        "texto": "Acá se presiona."
+      },
+      {
+        "inicio": 23.0,
+        "fin": 30.0,
+        "texto": "Acá. Va a estar así. Se presiona y hay una manilla roja."
+      },
+      {
+        "inicio": 30.0,
+        "fin": 35.0,
+        "texto": "Yo halo la manilla roja atrás y libera mecánicamente."
+      },
+      {
+        "inicio": 35.0,
+        "fin": 41.0,
+        "texto": "Claro, no voy a poder bajar la la camilla, pero al menos saqué al paciente del túnel, y aquí yo ya lo puedo ayudar a a salir."
+      },
+      {
+        "inicio": 41.0,
+        "fin": 48.0,
+        "texto": "Después la la manilla hacia adentro, vuelve a su posición original y se presiona."
+      },
+      {
+        "inicio": 48.0,
+        "fin": 49.0,
+        "texto": "Y ahí ya queda listo."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 59.0,
+        "texto": "Este es el de servicio técnico, les puede pedir reiniciar el gantry."
+      },
+      {
+        "inicio": 59.0,
+        "fin": 65.0,
+        "texto": "Servicio técnico le va a pedir con este interruptor que está acá. Se baja y con eso se corta la energía."
+      },
+      {
+        "inicio": 65.0,
+        "fin": 72.0,
+        "texto": "Un minuto, levantar y vuelve la energía y se conecta inmediatamente con las consolas."
+      },
+      {
+        "inicio": 73.0,
+        "fin": 76.0,
+        "texto": "Es un interruptor para apagar el gantry. Como un automático."
+      },
+      {
+        "inicio": 77.0,
+        "fin": 82.0,
+        "texto": "Eso sí que lo pueden resguardar, pero si se llega a apagar todo, igual puedes sacar al paciente."
+      },
+      {
+        "inicio": 83.0,
+        "fin": 85.0,
+        "texto": "Y sacarla de adentro del túnel."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 94.0,
+        "texto": "Si esto lo aplican con energía eléctrica, no va a funcionar. Tienes que usar los botones. Es solamente si se corta la energía eléctrica."
+      },
+      {
+        "inicio": 95.0,
+        "fin": 98.0,
+        "texto": "¿Cuál colchón? Ah, el de... buena pregunta, ¿no están acá?"
+      },
+      {
+        "inicio": 101.0,
+        "fin": 104.0,
+        "texto": "Pero si es fundamental. Fundamental el colchón."
+      },
+      {
+        "inicio": 108.0,
+        "fin": 113.0,
+        "texto": "¿Será ese? No, está como muy delgada esa parte."
+      },
+      {
+        "inicio": 113.0,
+        "fin": 115.0,
+        "texto": "Están delgados."
+      },
+      {
+        "inicio": 119.0,
+        "fin": 121.0,
+        "texto": "¿Qué es eso?"
+      },
+      {
+        "inicio": 122.0,
+        "fin": 125.0,
+        "texto": "Tan grande el cabezal, es un cabezal."
+      },
+      {
+        "inicio": 127.0,
+        "fin": 128.0,
+        "texto": "Debe estar ahí adentro."
+      },
+      {
+        "inicio": 130.0,
+        "fin": 135.0,
+        "texto": "Ah, de verdad. Si ya veis que está ahí, entonces hace un movimiento que el equipo va a decir: \"no puedo ejecutarlo porque estoy en el límite\"."
+      },
+      {
+        "inicio": 135.0,
+        "fin": 142.0,
+        "texto": "Y después más abajo ya me indica que el el end of stroke, o sea, ya no se mueve más. El stroke de movimiento pero el límite de escaneo está ahí."
+      },
+      {
+        "inicio": 142.0,
+        "fin": 145.0,
+        "texto": "Entonces, yo le diría que ojalá antes que se vea."
+      },
+      {
+        "inicio": 148.0,
+        "fin": 155.0,
+        "texto": "De todas maneras, esto igual tiene encima lo que es la camilla plana Civco. Las camillas aquí también tienen una estructura, entonces si ponen la cabeza aquí se van a ver los pernos."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 158.0,
+        "texto": "O sea, debería estar de aquí en adelante."
+      },
+      {
+        "inicio": 158.0,
+        "fin": 162.0,
+        "texto": "¿Entienden? Sí, porque esto... si no tuviera la camilla plana,..."
+      },
+      {
+        "inicio": 164.0,
+        "fin": 170.0,
+        "texto": "...claro, yo diría que de aquí en adelante, pero como tiene esto, esto es de aquí hacia allá."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.docx",
+    "pdf": "TC_03_Liberar_paciente_corte_de_luz_reinicio_gantry.pdf",
+    "paginas": 7
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 78022,
+    "tokens_salida": 3415,
+    "tokens_pensamiento": 0,
+    "tokens_total": 81437,
+    "detalle_entrada": {
+      "TEXT": 3114,
+      "VIDEO": 66108,
+      "IMAGE": 8800
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}

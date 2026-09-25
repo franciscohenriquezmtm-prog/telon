@@ -1,0 +1,1298 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.mov",
+    "nombre": "TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip",
+    "duracion_seg": 803.15,
+    "duracion": "13:23",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 1780945139,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:46:32",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Configuracion de Protocolo en Tomografo",
+    "resumen": "El video detalla los pasos para crear y configurar un protocolo de tomografia de abdomen trifasico en un tomografo Canon. Se abordan la definicion de las fases, los tiempos de adquisicion, comentarios internos y ajustes de dosis.",
+    "truncado": false,
+    "tramos": 3,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 31 pasos revisados en 3 petición(es), 31 con cambios (43286 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 349769,
+      "tokens_salida": 14391,
+      "tokens_pensamiento": 0,
+      "tokens_total": 364160,
+      "detalle_entrada": {
+        "VIDEO": 305140,
+        "TEXT": 10529,
+        "IMAGE": 34100
+      },
+      "llamadas": 9,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Iniciar la creacion de protocolo",
+        "descripcion": "Se muestra la interfaz principal del tomografo y se inicia la seleccion para editar o crear un nuevo protocolo personalizado.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Configuracion de protocolo",
+        "zona": {
+          "x": 0.305,
+          "y": 0.51
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:27",
+        "tiempo_seg": 27.0,
+        "titulo": "Definir fases de la secuencia",
+        "descripcion": "Se seleccionan y agregan las diferentes fases para el protocolo, incluyendo el dual escanograma, fase sin contraste, fase arterial, venosa y tardia.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.339,
+          "y": 0.372
+        },
+        "captura": "capturas/02_00-27.jpg",
+        "captura_anotada": "capturas/02_00-27_anotada.jpg",
+        "tiempo_real_seg": 27.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:18",
+        "tiempo_seg": 78.0,
+        "titulo": "Seleccionar idioma de instrucciones",
+        "descripcion": "Se cambia el idioma de las instrucciones de voz para el paciente en el menú 'Language' a 'English' o la opción que se requiera.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Instrucciones de voz",
+        "zona": {
+          "x": 0.361,
+          "y": 0.725
+        },
+        "captura": "capturas/03_01-18.jpg",
+        "captura_anotada": "capturas/03_01-18_anotada.jpg",
+        "tiempo_real_seg": 77.0,
+        "puntaje": null,
+        "descripcion_original": "Se cambia el idioma de las instrucciones de voz para el paciente a Spanish (Espanol) en las distintas fases del escaneo."
+      },
+      {
+        "tiempo": "01:21",
+        "tiempo_seg": 81.0,
+        "titulo": "Configurar instrucciones de respiracion",
+        "descripcion": "Se selecciona el tipo de instrucción de respiración. Al cambiar de idioma a 'Spanish', se despliega el submenú con opciones como 'Respire y Contenga / Respire Normal' o 'OFF'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Instrucciones de voz",
+        "zona": {
+          "x": 0.348,
+          "y": 0.757
+        },
+        "captura": "capturas/04_01-21.jpg",
+        "captura_anotada": "capturas/04_01-21_anotada.jpg",
+        "tiempo_real_seg": 80.4,
+        "puntaje": null,
+        "descripcion_original": "Se selecciona el tipo de instruccion de respiracion, como 'Respire y Contenga' para las fases con contraste y 'Respire Normal' para las demas fases."
+      },
+      {
+        "tiempo": "01:43",
+        "tiempo_seg": 103.0,
+        "titulo": "Ingresar comentarios del protocolo",
+        "descripcion": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'ARTERIAL' en pantalla) son de uso interno para el operador y no se envian a DICOM.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.269,
+          "y": 0.357
+        },
+        "captura": "capturas/05_01-43.jpg",
+        "captura_anotada": "capturas/05_01-43_anotada.jpg",
+        "tiempo_real_seg": 102.4,
+        "puntaje": null,
+        "descripcion_original": "Se aclara que los comentarios ingresados en el campo Protocol Comment (como 'SIN CE', 'ARTERIAL', 'VENOSO') son de uso interno para el operador y no se envian a DICOM."
+      },
+      {
+        "tiempo": "02:08",
+        "tiempo_seg": 128.0,
+        "titulo": "Configurar rango de escaneo",
+        "descripcion": "Se definen los límites del rango en milímetros para cada una de las fases en la columna 'End Pos', con valores como 400.0 o 600.0 según el segmento corporal.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.32,
+          "y": 0.267
+        },
+        "captura": "capturas/06_02-08.jpg",
+        "captura_anotada": "capturas/06_02-08_anotada.jpg",
+        "tiempo_real_seg": 127.0,
+        "puntaje": null,
+        "descripcion_original": "Se definen los limites del rango en milimetros para cada una de las fases, por ejemplo 800 mm de inicio en la fase sin contraste."
+      },
+      {
+        "tiempo": "03:02",
+        "tiempo_seg": 182.0,
+        "titulo": "Ajustar tiempo de espera arterial",
+        "descripcion": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35.0 segundos para dar tiempo al contraste, seleccionando inicio manual.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.222,
+          "y": 0.182
+        },
+        "captura": "capturas/07_03-02.jpg",
+        "captura_anotada": "capturas/07_03-02_anotada.jpg",
+        "tiempo_real_seg": 181.8,
+        "puntaje": null,
+        "descripcion_original": "Se configura el tiempo de espera en la columna 'Wait' para la fase arterial en 35 segundos para dar tiempo al contraste, seleccionando inicio manual."
+      },
+      {
+        "tiempo": "03:13",
+        "tiempo_seg": 193.0,
+        "titulo": "Configurar fase venosa automatica",
+        "descripcion": "Se programa un tiempo de espera automático para la fase venosa, visualizándose la columna 'Wait' con el símbolo de un reloj de inicio programado.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.194,
+          "y": 0.164
+        },
+        "captura": "capturas/08_03-13.jpg",
+        "captura_anotada": "capturas/08_03-13_anotada.jpg",
+        "tiempo_real_seg": 192.0,
+        "puntaje": null,
+        "descripcion_original": "Se programa un tiempo de espera automatico de 70 segundos para la fase venosa en la columna 'Start Time'."
+      },
+      {
+        "tiempo": "03:23",
+        "tiempo_seg": 203.0,
+        "titulo": "Configurar fase tardia automatica",
+        "descripcion": "Se programa el inicio automático de la fase tardía a los 5 minutos (05:00.0 en pantalla) en la columna 'Start Time'.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Secuencia de escaneo",
+        "zona": {
+          "x": 0.158,
+          "y": 0.128
+        },
+        "captura": "capturas/09_03-23.jpg",
+        "captura_anotada": "capturas/09_03-23_anotada.jpg",
+        "tiempo_real_seg": 203.6,
+        "puntaje": null,
+        "descripcion_original": "Se programa el inicio automatico de la fase tardia a los 5 minutos (05:00.0) en la columna 'Start Time'."
+      },
+      {
+        "tiempo": "03:36",
+        "tiempo_seg": 216.0,
+        "titulo": "Ajustar modulacion de dosis",
+        "descripcion": "Se explica el ajuste de la modulación de dosis en 'Sure Exp. 3D' según el tamaño del paciente: 'Standard' para personas normales y 'Calidad' para personas más corpulentas.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Configuracion de dosis",
+        "zona": {
+          "x": 0.197,
+          "y": 0.325
+        },
+        "captura": "capturas/10_03-36.jpg",
+        "captura_anotada": "capturas/10_03-36_anotada.jpg",
+        "tiempo_real_seg": 215.0,
+        "puntaje": null,
+        "descripcion_original": "Se explica el ajuste de la modulacion de dosis en 'Sure Exp 3D' segun el tamano del paciente: 'Estandar' para personas normales y 'Calidad' para personas mas corpulentas."
+      },
+      {
+        "tiempo": "04:09",
+        "tiempo_seg": 249.0,
+        "titulo": "Modificar el D-FOV para ajuste visual",
+        "descripcion": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajuste de parámetros de adquisición",
+        "zona": {
+          "x": 0.257,
+          "y": 0.412
+        },
+        "captura": "capturas/11_04-09.jpg",
+        "captura_anotada": "capturas/11_04-09_anotada.jpg",
+        "tiempo_real_seg": 249.2,
+        "puntaje": null,
+        "descripcion_original": "El instructor abre el menú de D-FOV, reduciendo el valor original de 450 mm a 440 mm con el fin de alinear la caja de adquisición amarilla con la línea verde punteada para fines de visualización."
+      },
+      {
+        "tiempo": "04:31",
+        "tiempo_seg": 271.0,
+        "titulo": "Asignar comentario 'SIN CE' al primer escaneo",
+        "descripcion": "Se escribe 'SIN CE' (en pantalla se lee 'SIN CE') en el campo Comment de la primera fase para registrar el escaneo sin contraste.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Fases de contraste y comentarios",
+        "zona": {
+          "x": 0.086,
+          "y": 0.626
+        },
+        "captura": "capturas/12_04-31.jpg",
+        "captura_anotada": "capturas/12_04-31_anotada.jpg",
+        "tiempo_real_seg": 271.2,
+        "puntaje": null,
+        "titulo_original": "Asignar comentario 'SIN CTE' al primer escaneo",
+        "descripcion_original": "Se escribe 'SIN CTE' en el campo Comment de la primera fase para registrar el escaneo sin contraste en la metadata de adquisición."
+      },
+      {
+        "tiempo": "04:48",
+        "tiempo_seg": 288.0,
+        "titulo": "Asignar comentario 'ARTERIAL' a fase de contraste",
+        "descripcion": "Se modifica la cuarta fila agregando la etiqueta 'ARTERI' (en pantalla se lee 'ARTERI') en los comentarios para marcar la fase arterial del examen.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Fases de contraste y comentarios",
+        "zona": {
+          "x": 0.142,
+          "y": 0.648
+        },
+        "captura": "capturas/13_04-48.jpg",
+        "captura_anotada": "capturas/13_04-48_anotada.jpg",
+        "tiempo_real_seg": 288.2,
+        "puntaje": null,
+        "descripcion_original": "Se modifica la cuarta fila agregando la etiqueta 'ARTERIAL' en los comentarios para marcar la fase arterial del examen."
+      },
+      {
+        "tiempo": "05:13",
+        "tiempo_seg": 313.0,
+        "titulo": "Asignar comentario 'VENOSO' a fase portal",
+        "descripcion": "Se ingresa el texto 'VENOSO' en el campo de comentario de la quinta fila del protocolo para identificar la fase venosa.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Fases de contraste y comentarios",
+        "zona": {
+          "x": 0.153,
+          "y": 0.553
+        },
+        "captura": "capturas/14_05-13.jpg",
+        "captura_anotada": "capturas/14_05-13_anotada.jpg",
+        "tiempo_real_seg": 313.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:21",
+        "tiempo_seg": 321.0,
+        "titulo": "Asignar comentario 'TARDIO' a fase tardía",
+        "descripcion": "Se rotula la última fila con el comentario 'TARDIO' en el campo Comment para documentar adecuadamente la fase tardía o de eliminación.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Fases de contraste y comentarios",
+        "zona": {
+          "x": 0.425,
+          "y": 0.556
+        },
+        "captura": "capturas/15_05-21.jpg",
+        "captura_anotada": "capturas/15_05-21_anotada.jpg",
+        "tiempo_real_seg": 320.0,
+        "puntaje": null,
+        "descripcion_original": "Se rotula la última fila con el comentario 'TARDIO' para documentar adecuadamente la fase tardía o de eliminación."
+      },
+      {
+        "tiempo": "05:38",
+        "tiempo_seg": 338.0,
+        "titulo": "Establecer reconstrucción estándar de volumen",
+        "descripcion": "Se accede a la pestaña de Recon. Details en el primer escaneo sin contraste y se define la reconstrucción de tipo Cuerpo Estándar de Volumen (Cuerpo Std. Volume) para posibilitar MPR posterior de alta calidad.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Ajustes de reconstrucción",
+        "zona": {
+          "x": 0.285,
+          "y": 0.389
+        },
+        "captura": "capturas/16_05-38.jpg",
+        "captura_anotada": "capturas/16_05-38_anotada.jpg",
+        "tiempo_real_seg": 338.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "05:54",
+        "tiempo_seg": 354.0,
+        "titulo": "Configurar grosor e intervalo de volumen",
+        "descripcion": "Se ajusta el grosor de corte (Slice Thickness) a 1.0 mm y el intervalo a 0.8 mm para reconstrucciones estándar del cuerpo, que son los valores óptimos recomendados por el fabricante.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Ajustes de reconstrucción",
+        "zona": {
+          "x": 0.283,
+          "y": 0.421
+        },
+        "captura": "capturas/17_05-54.jpg",
+        "captura_anotada": "capturas/17_05-54_anotada.jpg",
+        "tiempo_real_seg": 354.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "06:16",
+        "tiempo_seg": 376.0,
+        "titulo": "Configurar reconstrucción de hueso fino",
+        "descripcion": "Se muestra cómo, en caso de trauma o indicación ósea, se puede cambiar el tipo de reconstrucción a Hueso Fino (Hueso Fino) para maximizar la resolución espacial en reconstrucciones volumétricas.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajustes de reconstrucción",
+        "zona": {
+          "x": 0.397,
+          "y": 0.472
+        },
+        "captura": "capturas/18_06-16.jpg",
+        "captura_anotada": "capturas/18_06-16_anotada.jpg",
+        "tiempo_real_seg": 375.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "07:41",
+        "tiempo_seg": 461.0,
+        "titulo": "Añadir reconstrucción pulmonar si es necesario",
+        "descripcion": "El instructor explica cómo agregar una reconstrucción pulmonar (Pulmón Std. Volume) al protocolo en caso de requerir un examen de tórax, abdomen y pelvis combinado.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Ajustes de reconstrucción",
+        "zona": {
+          "x": 0.42,
+          "y": 0.315
+        },
+        "captura": "capturas/19_07-41.jpg",
+        "captura_anotada": "capturas/19_07-41_anotada.jpg",
+        "tiempo_real_seg": 461.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:03",
+        "tiempo_seg": 483.0,
+        "titulo": "Revisar los filtros de reconstrucción predeterminados",
+        "descripcion": "El instructor indica que los filtros ya vienen configurados por defecto (por ejemplo, para pulmón) y solo es necesario encenderlos para evitar tener que buscarlos manualmente.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.376,
+          "y": 0.415
+        },
+        "captura": "capturas/20_08-03.jpg",
+        "captura_anotada": "capturas/20_08-03_anotada.jpg",
+        "tiempo_real_seg": 482.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:21",
+        "tiempo_seg": 501.0,
+        "titulo": "Configurar filtro ACE en volumen arterial",
+        "descripcion": "Seleccionar el volumen arterial en la lista de reconstrucción y aplicar el filtro ACE Cuerpo para optimizar la calidad de imagen con dosis baja.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.481,
+          "y": 0.427
+        },
+        "captura": "capturas/21_08-21.jpg",
+        "captura_anotada": "capturas/21_08-21_anotada.jpg",
+        "tiempo_real_seg": 501.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:41",
+        "tiempo_seg": 521.0,
+        "titulo": "Activar los reformateos automáticos",
+        "descripcion": "Si el paciente está bien centrado, se activan los reformateos automáticos para que el sistema genere directamente cortes axiales, coronales y sagitales cada 3.0 mm.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.281,
+          "y": 0.444
+        },
+        "captura": "capturas/22_08-41.jpg",
+        "captura_anotada": "capturas/22_08-41_anotada.jpg",
+        "tiempo_real_seg": 520.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:58",
+        "tiempo_seg": 538.0,
+        "titulo": "Aplicar filtro ACE en fase venosa",
+        "descripcion": "Se selecciona la fase venosa y se activa igualmente el filtro ACE Cuerpo, asegurándose de que la descripción de la serie indique 'VENOSO'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.42,
+          "y": 0.285
+        },
+        "captura": "capturas/23_08-58.jpg",
+        "captura_anotada": "capturas/23_08-58_anotada.jpg",
+        "tiempo_real_seg": 538.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:18",
+        "tiempo_seg": 558.0,
+        "titulo": "Configurar la fase tardía con ACE",
+        "descripcion": "Se activa la reconstrucción de la fase tardía aplicando el filtro ACE Cuerpo para mantener la coherencia en el protocolo de abdomen trifásico.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.769,
+          "y": 0.349
+        },
+        "captura": "capturas/24_09-18.jpg",
+        "captura_anotada": "capturas/24_09-18_anotada.jpg",
+        "tiempo_real_seg": 558.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "10:04",
+        "tiempo_seg": 604.0,
+        "titulo": "Modificar la orientación del maniquí",
+        "descripcion": "Si la orientación del paciente fue ingresada incorrectamente, se puede cambiar directamente en pantalla (ej. de pies a cabeza, supino a prono) y el maniquí se actualizará automáticamente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento virtual",
+        "zona": {
+          "x": 0.728,
+          "y": 0.296
+        },
+        "captura": "capturas/25_10-04.jpg",
+        "captura_anotada": "capturas/25_10-04_anotada.jpg",
+        "tiempo_real_seg": 604.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "10:27",
+        "tiempo_seg": 627.0,
+        "titulo": "Ajustar dirección del escanograma (In/Out)",
+        "descripcion": "El sistema cambia automáticamente la dirección del movimiento de la camilla (hacia adentro o hacia afuera) al modificar la orientación del paciente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento virtual",
+        "zona": {
+          "x": 0.56,
+          "y": 0.277
+        },
+        "captura": "capturas/26_10-27.jpg",
+        "captura_anotada": "capturas/26_10-27_anotada.jpg",
+        "tiempo_real_seg": 627.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:09",
+        "tiempo_seg": 669.0,
+        "titulo": "Desactivar instrucciones de voz automáticas",
+        "descripcion": "Haciendo un solo clic se pueden quitar los audios de respiración automática para todas las fases si el paciente viene sedado.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Planificación del protocolo",
+        "zona": {
+          "x": 0.718,
+          "y": 0.426
+        },
+        "captura": "capturas/27_11-09.jpg",
+        "captura_anotada": "capturas/27_11-09_anotada.jpg",
+        "tiempo_real_seg": 669.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:18",
+        "tiempo_seg": 678.0,
+        "titulo": "Confirmar parámetros antes de escanear",
+        "descripcion": "El instructor advierte que ante cualquier cambio de kV, mA o reconstrucción, el sistema requerirá volver a presionar el botón 'Confirm' en pantalla.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.181,
+          "y": 0.725
+        },
+        "captura": "capturas/28_11-18.jpg",
+        "captura_anotada": "capturas/28_11-18_anotada.jpg",
+        "tiempo_real_seg": 677.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "11:31",
+        "tiempo_seg": 691.0,
+        "titulo": "Presionar botón de inicio para escanear",
+        "descripcion": "Cuando el botón físico parpadea, significa que está tomando impulso para asegurar una velocidad constante de la camilla al momento de iniciar la radiación.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.102,
+          "y": 0.476
+        },
+        "captura": "capturas/29_11-31.jpg",
+        "captura_anotada": "capturas/29_11-31_anotada.jpg",
+        "tiempo_real_seg": 690.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "12:21",
+        "tiempo_seg": 741.0,
+        "titulo": "Abortar o saltar escanograma (Scan Skip)",
+        "descripcion": "Se demuestra cómo interrumpir la adquisición presionando el control de parada para abortar la emisión de radiación si es necesario.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.591,
+          "y": 0.448
+        },
+        "captura": "capturas/30_12-21.jpg",
+        "captura_anotada": "capturas/30_12-21_anotada.jpg",
+        "tiempo_real_seg": 740.0,
+        "puntaje": null
+      },
+      {
+        "tiempo": "13:12",
+        "tiempo_seg": 792.0,
+        "titulo": "Desechar y reiniciar escanogramas abortados",
+        "descripcion": "Para realizar nuevamente los escanogramas despu s de abortar, se debe seleccionar el bot\u0002n 'Exit Exam' (indicado en pantalla como Exit Exam), descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo para el paciente ID 999999-001.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Adquisición de imagen",
+        "zona": {
+          "x": 0.112,
+          "y": 0.654
+        },
+        "captura": "capturas/31_13-12.jpg",
+        "captura_anotada": "capturas/31_13-12_anotada.jpg",
+        "tiempo_real_seg": 791.8,
+        "puntaje": null,
+        "descripcion_original": "Para realizar nuevamente los escanogramas después de abortar, se debe seleccionar 'Exit Exam', descartar el escanograma previo ('ScanPlan') y volver a cargar el protocolo."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 2.0,
+        "texto": "Entonces, eh"
+      },
+      {
+        "inicio": 2.0,
+        "fin": 5.0,
+        "texto": "No, ya, ya. Voy a, oye, ¿habías guardado el protocolo? Vamos a..."
+      },
+      {
+        "inicio": 5.0,
+        "fin": 9.0,
+        "texto": "Voy a crear otro de nuevo, ¿ya?"
+      },
+      {
+        "inicio": 9.0,
+        "fin": 15.0,
+        "texto": "Acá."
+      },
+      {
+        "inicio": 15.0,
+        "fin": 19.0,
+        "texto": "En..."
+      },
+      {
+        "inicio": 19.0,
+        "fin": 26.0,
+        "texto": "O sea..."
+      },
+      {
+        "inicio": 26.0,
+        "fin": 30.0,
+        "texto": "O de nuevo, el escanograma"
+      },
+      {
+        "inicio": 30.0,
+        "fin": 36.0,
+        "texto": "Y más el helicoidal. Okay."
+      },
+      {
+        "inicio": 36.0,
+        "fin": 43.0,
+        "texto": "Voy a saltarme un poco esta parte, pero más que nada para mostrar la... lo que sería..."
+      },
+      {
+        "inicio": 43.0,
+        "fin": 47.0,
+        "texto": "Sin..."
+      },
+      {
+        "inicio": 47.0,
+        "fin": 52.0,
+        "texto": "Sin contraste. Esto sería, eh... arterial."
+      },
+      {
+        "inicio": 52.0,
+        "fin": 56.0,
+        "texto": "Este ya lleva contraste, eh..."
+      },
+      {
+        "inicio": 56.0,
+        "fin": 63.0,
+        "texto": "Y uno más de de acá."
+      },
+      {
+        "inicio": 63.0,
+        "fin": 67.0,
+        "texto": "Venoso."
+      },
+      {
+        "inicio": 67.0,
+        "fin": 74.0,
+        "texto": "Tardío."
+      },
+      {
+        "inicio": 74.0,
+        "fin": 88.0,
+        "texto": "Okay. Ah... lo voy a dejar aquí para que la simulación guardada como nos pueda servir de de referencia, ¿ya? Esos de acá."
+      },
+      {
+        "inicio": 88.0,
+        "fin": 96.0,
+        "texto": "Entonces, para crear un protocolo, esta es la la estructura del... para crear protocolos. Primero, en Protocol voy generando todo lo que necesito."
+      },
+      {
+        "inicio": 96.0,
+        "fin": 103.0,
+        "texto": "Y le pongo sí, el nombre. Esto no se va a ninguna parte DICOM. Es para ustedes, para que ustedes sepan en dónde están y qué es lo que están haciendo."
+      },
+      {
+        "inicio": 103.0,
+        "fin": 108.0,
+        "texto": "Y debo definir si lleva contraste o no y las instrucciones verbales."
+      },
+      {
+        "inicio": 108.0,
+        "fin": 114.0,
+        "texto": "Entonces, venoso, lo mismo."
+      },
+      {
+        "inicio": 114.0,
+        "fin": 120.0,
+        "texto": "Tardío."
+      },
+      {
+        "inicio": 120.0,
+        "fin": 127.0,
+        "texto": "O sea, no sé, abdomen o puede ser abdomen pélvico. Voy a dejar en 800."
+      },
+      {
+        "inicio": 127.0,
+        "fin": 131.0,
+        "texto": "Y sin contraste, no sé, 600."
+      },
+      {
+        "inicio": 131.0,
+        "fin": 138.0,
+        "texto": "El arterial, eh... es más chico, no sé, 400. Yo lo puedo definir."
+      },
+      {
+        "inicio": 138.0,
+        "fin": 144.0,
+        "texto": "En realidad, este es de 0 a 600 y aquí a lo mejor el arterial va a ser menos, no sé, bueno,"
+      },
+      {
+        "inicio": 144.0,
+        "fin": 148.0,
+        "texto": "pero uno lo puede definir para donde sale la caja."
+      },
+      {
+        "inicio": 148.0,
+        "fin": 155.0,
+        "texto": "Luego, el venoso es completo."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 160.0,
+        "texto": "Y el tardío, eh... debería ser más abajo, no sé,"
+      },
+      {
+        "inicio": 160.0,
+        "fin": 169.0,
+        "texto": "300 a a 600 para que la caja aparezca más abajo."
+      },
+      {
+        "inicio": 169.0,
+        "fin": 173.0,
+        "texto": "O sea, luego, el sin contraste está."
+      },
+      {
+        "inicio": 173.0,
+        "fin": 184.0,
+        "texto": "Arterial, no, no es automático. Tiene que ser que yo lo presione y que lance, que espere 35 segundos para dar espacio al al contraste."
+      },
+      {
+        "inicio": 184.0,
+        "fin": 193.0,
+        "texto": "Luego, viene el venoso. Este sí yo quiero que sea automático y que se lance a los 70 segundos."
+      },
+      {
+        "inicio": 193.0,
+        "fin": 198.0,
+        "texto": "Entonces, va a esperar start time en base a ese."
+      },
+      {
+        "inicio": 198.0,
+        "fin": 205.0,
+        "texto": "Y digamos que voy a dejar también el tardío en automático a los 5 minutos."
+      },
+      {
+        "inicio": 205.0,
+        "fin": 208.0,
+        "texto": "Y aquí está definido ya esta parte."
+      },
+      {
+        "inicio": 208.0,
+        "fin": 211.0,
+        "texto": "Entonces, ahora yo voy a la a la siguiente."
+      },
+      {
+        "inicio": 211.0,
+        "fin": 215.0,
+        "texto": "Scan Detail."
+      },
+      {
+        "inicio": 215.0,
+        "fin": 218.0,
+        "texto": "En cuerpo size 05 x 80, pitch standard, y la modulación de dosis standard."
+      },
+      {
+        "inicio": 218.0,
+        "fin": 221.0,
+        "texto": "Esto es lo único que ustedes van a tener que cambiar cuando vean al paciente."
+      },
+      {
+        "inicio": 221.0,
+        "fin": 226.0,
+        "texto": "O sea, mudar eh... flaco de gordos lo dejo todo en standard."
+      },
+      {
+        "inicio": 226.0,
+        "fin": 229.0,
+        "texto": "Tiene guatita,"
+      },
+      {
+        "inicio": 229.0,
+        "fin": 232.0,
+        "texto": "mudar calidad, y las voy a seleccionar todas juntas."
+      },
+      {
+        "inicio": 232.0,
+        "fin": 237.0,
+        "texto": "Ahí está."
+      },
+      {
+        "inicio": 237.0,
+        "fin": 240.0,
+        "texto": "Eso si ya lo dejé todo en calidad."
+      },
+      {
+        "inicio": 240.0,
+        "fin": 244.0,
+        "texto": "¿Ya? Eh la modulación viene definida acá, ¿cierto?"
+      },
+      {
+        "inicio": 244.0,
+        "fin": 248.0,
+        "texto": "El FOV... bueno, le puedo poner un FOV, ese es el FOV máximo de L, pero le puedo poner 450"
+      },
+      {
+        "inicio": 248.0,
+        "fin": 253.0,
+        "texto": "para que la caja amarilla nos salga junto con la línea verde punteada."
+      },
+      {
+        "inicio": 253.0,
+        "fin": 256.0,
+        "texto": "Para que vean un poco la... el cambio, ¿ya? Es algo visual."
+      },
+      {
+        "inicio": 256.0,
+        "fin": 259.0,
+        "texto": "La velocidad de rotación está bien. Este es el tiempo total de esta adquisición"
+      },
+      {
+        "inicio": 259.0,
+        "fin": 264.0,
+        "texto": "si fuera de cero a 600 con un pitch estándar, y por ejemplo le puedo poner aquí un comentario para que lo..."
+      },
+      {
+        "inicio": 264.0,
+        "fin": 272.0,
+        "texto": "se ubique más. Y así con cada uno. Voy hacia abajo."
+      },
+      {
+        "inicio": 272.0,
+        "fin": 286.0,
+        "texto": "Está bien, calidad, ¿cierto? Bueno, aquí la... 05... y este es arterial."
+      },
+      {
+        "inicio": 286.0,
+        "fin": 294.0,
+        "texto": "Luego el de abajo, el comentario va... ¿El comentario va a ser el nombre de la serie o va a ser el..."
+      },
+      {
+        "inicio": 294.0,
+        "fin": 298.0,
+        "texto": "No, en las reconstrucciones van acá van a salir los nombres. Ah, ya. Sí."
+      },
+      {
+        "inicio": 298.0,
+        "fin": 303.0,
+        "texto": "Esto también es... esto también es DICOM, esto se va para algún lado, el comentario de la adquisición."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 307.0,
+        "texto": "Pero es para que lo tengan la serie de acá o cuando se pierdan en dónde estoy."
+      },
+      {
+        "inicio": 307.0,
+        "fin": 312.0,
+        "texto": "Más que nada al principio, después se lo van a hacer de memoria. Y lo mismo acá. Todo todo okay, ¿ya?"
+      },
+      {
+        "inicio": 312.0,
+        "fin": 323.0,
+        "texto": "Y esto... tardío. Y luego vuelvo al primero, sin contraste, y la recon."
+      },
+      {
+        "inicio": 323.0,
+        "fin": 329.0,
+        "texto": "¿Quiero sacarle corte axial de tiro? No, lo que quiero es un volumen."
+      },
+      {
+        "inicio": 329.0,
+        "fin": 334.0,
+        "texto": "¿Cierto? En este caso, de cuerpo,"
+      },
+      {
+        "inicio": 334.0,
+        "fin": 339.0,
+        "texto": "estándar volumen, porque estoy en... en volumen. El axial es cuando estoy en axial."
+      },
+      {
+        "inicio": 339.0,
+        "fin": 343.0,
+        "texto": "Y esto sería iterativo, ¿ya? Eh, no, entre 0.5 cada 0.3 es muy fino."
+      },
+      {
+        "inicio": 343.0,
+        "fin": 349.0,
+        "texto": "Esto es más como para cerebro, muñeca, oído. Para el resto, 1 cada 0.8"
+      },
+      {
+        "inicio": 349.0,
+        "fin": 353.0,
+        "texto": "y esos son los dos volúmenes que recomendamos. Fino, 0.5 cada 0.3"
+      },
+      {
+        "inicio": 353.0,
+        "fin": 359.0,
+        "texto": "un poquito más grueso, 1 cada 0.8. ¿Y no me deja adquirir más grueso? Sí, tú puedes aquí, todos estos."
+      },
+      {
+        "inicio": 359.0,
+        "fin": 368.0,
+        "texto": "Por ejemplo uno de cinco, si quiero sin contraste que sea de cinco. Eh..."
+      },
+      {
+        "inicio": 368.0,
+        "fin": 374.0,
+        "texto": "Ay, no sé por qué no me deja acá..."
+      },
+      {
+        "inicio": 374.0,
+        "fin": 378.0,
+        "texto": "Pero sí, se permite hacerlo más grueso. Si no, sacarlo directamente de los axiales."
+      },
+      {
+        "inicio": 378.0,
+        "fin": 382.0,
+        "texto": "Esto está definido para el corte grueso inmediato. La idea del volumen es hacer un volumen fino"
+      },
+      {
+        "inicio": 382.0,
+        "fin": 388.0,
+        "texto": "en el cual llevar al MPR, procesar y sacarle el reformateo de buena calidad."
+      },
+      {
+        "inicio": 388.0,
+        "fin": 394.0,
+        "texto": "Porque si es más fino el volumen, los reformateos salen mejores. Y esta cámara es de 0.5 mm"
+      },
+      {
+        "inicio": 394.0,
+        "fin": 401.0,
+        "texto": "es la más fina del mercado. Y es cuadrado, o sea, también es una adquisición isotrópica."
+      },
+      {
+        "inicio": 401.0,
+        "fin": 407.0,
+        "texto": "Eso quiere decir que lo que quieres como los cortes axiales, cuando los suma y te los plantea en coronal y sagital"
+      },
+      {
+        "inicio": 407.0,
+        "fin": 413.0,
+        "texto": "es simétrico, no es como los otros detectores que son asimétricos, entonces hay un cálculo matemático... Bueno, eso es lo que postula Canon."
+      },
+      {
+        "inicio": 413.0,
+        "fin": 428.0,
+        "texto": "Y por ejemplo este eh sin contraste o..."
+      },
+      {
+        "inicio": 428.0,
+        "fin": 430.0,
+        "texto": "su nomenclatura."
+      },
+      {
+        "inicio": 430.0,
+        "fin": 434.0,
+        "texto": "Y por ejemplo a este eh que tiene un óseo, si es de trauma"
+      },
+      {
+        "inicio": 434.0,
+        "fin": 442.0,
+        "texto": "hueso fino y está el óseo."
+      },
+      {
+        "inicio": 442.0,
+        "fin": 445.0,
+        "texto": "En el caso por ejemplo que esto fuera tórax, abdomen y pelvis,"
+      },
+      {
+        "inicio": 445.0,
+        "fin": 448.0,
+        "texto": "sería podrías ocupar el mismo protocolo."
+      },
+      {
+        "inicio": 448.0,
+        "fin": 454.0,
+        "texto": "Pero ir cambiando estas cosas, por ejemplo cambiar los rangos, ¿cierto? Porque la adquisición es la misma,"
+      },
+      {
+        "inicio": 454.0,
+        "fin": 458.0,
+        "texto": "pero lo que va a cambiar fuera de los rangos es que aquí además vamos a necesitar sumarle un pulmón."
+      },
+      {
+        "inicio": 458.0,
+        "fin": 465.0,
+        "texto": "Y ya está listo el pulmón."
+      },
+      {
+        "inicio": 465.0,
+        "fin": 469.0,
+        "texto": "Y si no lo voy a utilizar, lo dejo cerrado por ejemplo."
+      },
+      {
+        "inicio": 469.0,
+        "fin": 474.0,
+        "texto": "O sea, lo puedo apagar en el momento del del protocolo, cuando lo va a tomar."
+      },
+      {
+        "inicio": 474.0,
+        "fin": 480.0,
+        "texto": "Pero si quieren que siempre aparezca cerrado,"
+      },
+      {
+        "inicio": 480.0,
+        "fin": 486.0,
+        "texto": "está cerrado por default, pero ya está listo por si digo: \"Ah, este sí quiero pulmón\", lo enciendo no más, para que no estén buscando los filtros."
+      },
+      {
+        "inicio": 486.0,
+        "fin": 490.0,
+        "texto": "Entonces, todo eso lo podemos dejar listo cuando creamos los protocolos de imagenología."
+      },
+      {
+        "inicio": 490.0,
+        "fin": 495.0,
+        "texto": "Entonces, este estaría listo, y luego voy al arterial."
+      },
+      {
+        "inicio": 495.0,
+        "fin": 500.0,
+        "texto": "Este, no, no quiero un corte, sino que quiero abdomen."
+      },
+      {
+        "inicio": 500.0,
+        "fin": 504.0,
+        "texto": "A esto lo vamos a hacer con AIDR, cuerpo."
+      },
+      {
+        "inicio": 504.0,
+        "fin": 509.0,
+        "texto": "Se va a demorar un poquito más pero va a ser el mejor."
+      },
+      {
+        "inicio": 509.0,
+        "fin": 512.0,
+        "texto": "Ya, entonces esto es..."
+      },
+      {
+        "inicio": 512.0,
+        "fin": 515.0,
+        "texto": "...arterial."
+      },
+      {
+        "inicio": 515.0,
+        "fin": 524.0,
+        "texto": "Aquí tengo el volumen arterial, y quizás si el paciente está bien centrado voy a activar los reformateos para que ya me dé cortes axiales, coronales, sagitales de tres cada tres."
+      },
+      {
+        "inicio": 524.0,
+        "fin": 528.0,
+        "texto": "Bueno, o de los que usted estime, se puede dejar listo."
+      },
+      {
+        "inicio": 528.0,
+        "fin": 534.0,
+        "texto": "Luego voy a... este es venoso..."
+      },
+      {
+        "inicio": 534.0,
+        "fin": 539.0,
+        "texto": "...lo mismo. Activo AIDR cuerpo..."
+      },
+      {
+        "inicio": 539.0,
+        "fin": 543.0,
+        "texto": "...una reconstrucción de imagen para el cuerpo."
+      },
+      {
+        "inicio": 543.0,
+        "fin": 550.0,
+        "texto": "Y esto para que diga que esta es la serie venosa, es importante."
+      },
+      {
+        "inicio": 550.0,
+        "fin": 555.0,
+        "texto": "Y lo mismo ahora para el tardío."
+      },
+      {
+        "inicio": 555.0,
+        "fin": 561.0,
+        "texto": "Enciendo, busco el filtro, que puede ser el iterativo..."
+      },
+      {
+        "inicio": 561.0,
+        "fin": 566.0,
+        "texto": "...de cuerpo. Perdón, este con inteligencia artificial, 1,8..."
+      },
+      {
+        "inicio": 566.0,
+        "fin": 570.0,
+        "texto": "...tardío."
+      },
+      {
+        "inicio": 570.0,
+        "fin": 575.0,
+        "texto": "Y estaría este protocolo, lo voy a guardar."
+      },
+      {
+        "inicio": 575.0,
+        "fin": 580.0,
+        "texto": "Entonces, ahora probemos el fantoma."
+      },
+      {
+        "inicio": 580.0,
+        "fin": 585.0,
+        "texto": "Emergencia, imagenología..."
+      },
+      {
+        "inicio": 585.0,
+        "fin": 590.0,
+        "texto": "El fantoma es cortito, así que es un paciente bien chiquito."
+      },
+      {
+        "inicio": 590.0,
+        "fin": 596.0,
+        "texto": "Selecciono el protocolo y lo primero que me pide es el escanograma."
+      },
+      {
+        "inicio": 596.0,
+        "fin": 605.0,
+        "texto": "Yo acá puedo ver, \"Oh, sabés que me equivoqué, no, era la cabeza primero, el paciente lo sentaron por la cabeza\". Clic acá y cambio el maniquí."
+      },
+      {
+        "inicio": 605.0,
+        "fin": 615.0,
+        "texto": "\"Oh, sabés qué, no era supino, era prono\". Clic acá. Si es que estaba inclinado a la derecha lo dejos así, prono, ahí está. Y si no, a la izquierda."
+      },
+      {
+        "inicio": 615.0,
+        "fin": 626.0,
+        "texto": "O acá, y si no, \"Ah, no, era los pies primero\", clic. Y ya cambia el maniquí de acuerdo a cómo está el paciente."
+      },
+      {
+        "inicio": 626.0,
+        "fin": 634.0,
+        "texto": "Y eso también hace todos los cambios de acá, el in/out, por ejemplo si primero era out..."
+      },
+      {
+        "inicio": 634.0,
+        "fin": 639.0,
+        "texto": "...este es el movimiento de la camilla, entonces primer escanograma..."
+      },
+      {
+        "inicio": 639.0,
+        "fin": 644.0,
+        "texto": "...uno, es el anteroposterior."
+      },
+      {
+        "inicio": 644.0,
+        "fin": 649.0,
+        "texto": "El dos, lateral, y de ahí ya viene el tres, el helicoidal."
+      },
+      {
+        "inicio": 649.0,
+        "fin": 659.0,
+        "texto": "También puedo cambiar el sentido, digo \"No, el primer escanograma ¿dónde lo centraste? No, para que entre\", \"Ah, es para que salga\", \"Ah, okay, clic\", y el primer escanograma es out."
+      },
+      {
+        "inicio": 659.0,
+        "fin": 662.0,
+        "texto": "Entonces es así de simple para no tener que estar cambiando tantas cosas."
+      },
+      {
+        "inicio": 662.0,
+        "fin": 671.0,
+        "texto": "Lo otro, yo puedo seleccionar todo y quitarle de aquí el audio, \"No, no quiero instrucción verbal porque viene sedado\"."
+      },
+      {
+        "inicio": 671.0,
+        "fin": 677.0,
+        "texto": "Entonces hago clic y se lo saco a todo. Ahora le voy a confirmar el escanograma."
+      },
+      {
+        "inicio": 677.0,
+        "fin": 686.0,
+        "texto": "Siempre que ustedes hagan un cambio de aquí o del mAs o de una reconstrucción, siempre se va a salir y les va a pedir confirmar de nuevo."
+      },
+      {
+        "inicio": 686.0,
+        "fin": 696.0,
+        "texto": "Al confirmar, ya vamos a hacer la radiación. Parpadea, eso quiere decir que no va a irradiar inmediatamente."
+      },
+      {
+        "inicio": 696.0,
+        "fin": 703.0,
+        "texto": "Lo que está haciendo es tomar impulso, fíjense que la camilla tiene que salir, yo voy a presionar y la camilla va a entrar un poquito, miren."
+      },
+      {
+        "inicio": 703.0,
+        "fin": 715.0,
+        "texto": "¿Se fijan? El porqué, porque yo quiero iniciar aquí la exploración, entonces la camilla se tiene que mover y por la inercia estática..."
+      },
+      {
+        "inicio": 715.0,
+        "fin": 728.0,
+        "texto": "...es más fuerte que la cinética, entonces al principio empieza a mover y empieza más lento, entonces aquí va a ser como... entonces al tomar impulso se asegura que en este espacio alcanza a tener una velocidad constante, alcanza el máximo."
+      },
+      {
+        "inicio": 728.0,
+        "fin": 733.0,
+        "texto": "Entonces, cuando pasa por el punto de inicio, la velocidad es constante, por eso toma impulso."
+      },
+      {
+        "inicio": 733.0,
+        "fin": 741.0,
+        "texto": "Cuando está fijo, viene la radiación sí o sí, voy con esto."
+      },
+      {
+        "inicio": 741.0,
+        "fin": 751.0,
+        "texto": "Voy a, voy a abortar el primer escanograma porque estoy tomando aire. Al apretar este, aborto el segundo escanograma también."
+      },
+      {
+        "inicio": 751.0,
+        "fin": 762.0,
+        "texto": "¿Se fijaron que aquí salió un \"scan skip\"? El \"scan skip\" es para decir \"No, no quiero más porque estoy en aire\", pero sigue con el segundo escanograma y ahora lo saqué."
+      },
+      {
+        "inicio": 762.0,
+        "fin": 772.0,
+        "texto": "Entonces, no, no me va a hacer el segundo, y sin eso no va a modular, entonces, no, quiero salir..."
+      },
+      {
+        "inicio": 772.0,
+        "fin": 776.0,
+        "texto": "...pero aquí está el escanograma."
+      },
+      {
+        "inicio": 776.0,
+        "fin": 783.0,
+        "texto": "Ya, entonces yo digo, voy a salir, tengo que hacerlo de nuevo. Exit exam..."
+      },
+      {
+        "inicio": 783.0,
+        "fin": 794.0,
+        "texto": "...voy a elegirlo de nuevo, pero si hago clic acá, les voy a mostrar..."
+      },
+      {
+        "inicio": 794.0,
+        "fin": 802.0,
+        "texto": "...no, me trajo el mismo escanograma, porque ya había hecho uno. Entonces..."
+      },
+      {
+        "inicio": 802.0,
+        "fin": 803.0,
+        "texto": "...quit exam..."
+      },
+      {
+        "inicio": 803.0,
+        "fin": 803.15,
+        "texto": "...y acá yo le digo \"No quiero el escanograma\", lo desecho."
+      },
+      {
+        "inicio": 803.15,
+        "fin": 803.15,
+        "texto": "Entonces ahora presiono el protocolo y me permite hacer nuevamente el escanograma."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.docx",
+    "pdf": "TC_12_Seleccion_tecnica_volumenes_orientacion_scout_scan_skip.pdf",
+    "paginas": 24
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 349769,
+    "tokens_salida": 14391,
+    "tokens_pensamiento": 0,
+    "tokens_total": 364160,
+    "detalle_entrada": {
+      "VIDEO": 305140,
+      "TEXT": 10529,
+      "IMAGE": 34100
+    },
+    "llamadas": 9,
+    "batch": false,
+    "costo_usd": null
+  }
+}

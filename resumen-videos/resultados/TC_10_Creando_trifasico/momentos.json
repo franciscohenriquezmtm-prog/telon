@@ -1,0 +1,768 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_10_Creando_trifasico.mov",
+    "nombre": "TC_10_Creando_trifasico",
+    "duracion_seg": 448.91,
+    "duracion": "07:29",
+    "fps": 59.97,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 745371004,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T16:34:20",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Programacion de Protocolos en TC Canon",
+    "resumen": "Manual clinico para la configuracion y programacion de un protocolo de abdomen trifasico en un tomografo computado Canon. Se detallan los pasos de programacion de fases con contraste, tiempos de espera, configuracion de reconstrucciones y visualizaciones multiples.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 15 pasos revisados en 1 petición(es), 14 con cambios (20565 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 191455,
+      "tokens_salida": 7841,
+      "tokens_pensamiento": 0,
+      "tokens_total": 199296,
+      "detalle_entrada": {
+        "VIDEO": 170616,
+        "TEXT": 4339,
+        "IMAGE": 16500
+      },
+      "llamadas": 3,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:04",
+        "tiempo_seg": 4.0,
+        "titulo": "Seleccionar modo de escaneo",
+        "descripcion": "Hacer clic en la zona de secuencia de escaneo para desplegar las opciones y seleccionar 'DualScan' para el escanograma doble.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.313,
+          "y": 0.149
+        },
+        "captura": "capturas/01_00-04.jpg",
+        "captura_anotada": "capturas/01_00-04_anotada.jpg",
+        "tiempo_real_seg": 3.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:10",
+        "tiempo_seg": 10.0,
+        "titulo": "Configurar idioma y comandos de voz",
+        "descripcion": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo o post-escaneo. En pantalla se muestra desplegado el menu de 'Post Scan'.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.603,
+          "y": 0.674
+        },
+        "captura": "capturas/02_00-10.jpg",
+        "captura_anotada": "capturas/02_00-10_anotada.jpg",
+        "tiempo_real_seg": 10.6,
+        "puntaje": null,
+        "descripcion_original": "Seleccionar el idioma de los comandos de voz en 'Spanish' e indicar las instrucciones de respiracion deseadas para el pre-escaneo."
+      },
+      {
+        "tiempo": "00:17",
+        "tiempo_seg": 17.0,
+        "titulo": "Ajustar longitud de adquisicion",
+        "descripcion": "Cambiar el valor de la posicion final en 'End Pos' a 800.0 mm en la primera fila para delimitar el area de escaneo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.284,
+          "y": 0.624
+        },
+        "captura": "capturas/03_00-17.jpg",
+        "captura_anotada": "capturas/03_00-17_anotada.jpg",
+        "tiempo_real_seg": 17.2,
+        "puntaje": null,
+        "descripcion_original": "Cambiar el valor del punto final (End Pos) a 800.0 mm en lugar del valor maximo de 1000.0 mm para delimitar el area de escaneo."
+      },
+      {
+        "tiempo": "00:26",
+        "tiempo_seg": 26.0,
+        "titulo": "Elegir tipo de adquisicion helicoidal",
+        "descripcion": "Se recomienda utilizar el modo 'GG-Hel' (helicoidal) en lugar de 'Helical' simple para facilitar la gestion de los volumenes en las cajitas del 'AutoView'.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.433,
+          "y": 0.748
+        },
+        "captura": "capturas/04_00-26.jpg",
+        "captura_anotada": "capturas/04_00-26_anotada.jpg",
+        "tiempo_real_seg": 26.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:58",
+        "tiempo_seg": 58.0,
+        "titulo": "Nombrar fase sin contraste",
+        "descripcion": "Escribir el comentario 'SIN CE' (en pantalla se lee 'SIN CI') para identificar la fase basal sin contraste y configurar comandos de voz.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.533,
+          "y": 0.612
+        },
+        "captura": "capturas/05_00-58.jpg",
+        "captura_anotada": "capturas/05_00-58_anotada.jpg",
+        "tiempo_real_seg": 58.6,
+        "puntaje": null,
+        "descripcion_original": "Escribir el comentario 'SIN CE' para identificar la fase basal sin contraste y configurar comandos de voz."
+      },
+      {
+        "tiempo": "01:28",
+        "tiempo_seg": 88.0,
+        "titulo": "Crear fase arterial con contraste",
+        "descripcion": "Nombrar la fase como 'ARTERIAL' y activar la bandera de medio de contraste (CE) para que se guarde con la etiqueta DICOM correspondiente.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.38,
+          "y": 0.745
+        },
+        "captura": "capturas/06_01-28.jpg",
+        "captura_anotada": "capturas/06_01-28_anotada.jpg",
+        "tiempo_real_seg": 88.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:50",
+        "tiempo_seg": 110.0,
+        "titulo": "Programar tiempo de espera arterial",
+        "descripcion": "Establecer un tiempo de espera (Wait) de 35.0 segundos para la fase arterial tras el inicio de la inyeccion manual. En pantalla se señala la celda de Wait de la fila 4.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.213,
+          "y": 0.612
+        },
+        "captura": "capturas/07_01-50.jpg",
+        "captura_anotada": "capturas/07_01-50_anotada.jpg",
+        "tiempo_real_seg": 110.2,
+        "puntaje": null,
+        "descripcion_original": "Establecer un tiempo de espera (Wait) de 35.0 segundos para la fase arterial tras el inicio de la inyeccion manual."
+      },
+      {
+        "tiempo": "02:08",
+        "tiempo_seg": 128.0,
+        "titulo": "Programar fase venosa automatica",
+        "descripcion": "Configurar la fase 'VENOSO' en modo automatico con un tiempo de inicio (Start Time) de 70 segundos (01:10.0), calculandose un retardo automatico de 27.9 segundos tras finalizar la arterial. Se señala la celda '0.2' de Wait.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.194,
+          "y": 0.592
+        },
+        "captura": "capturas/08_02-08.jpg",
+        "captura_anotada": "capturas/08_02-08_anotada.jpg",
+        "tiempo_real_seg": 127.0,
+        "puntaje": null,
+        "descripcion_original": "Configurar la fase 'VENOSO' en modo automatico con un tiempo de inicio (Start Time) de 70 segundos (01:10.0), calculandose un retardo automatico de 27.9 segundos tras finalizar la arterial."
+      },
+      {
+        "tiempo": "02:42",
+        "tiempo_seg": 162.0,
+        "titulo": "Configurar fase tardia",
+        "descripcion": "Duplicar la fase anterior y renombrarla como 'VENOSO' (segun se lee en la caja de texto) con un tiempo de inicio para la fase tardia de 5 minutos (05:00.0) en la fila 6.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Programacion del Protocolo",
+        "zona": {
+          "x": 0.38,
+          "y": 0.698
+        },
+        "captura": "capturas/09_02-42.jpg",
+        "captura_anotada": "capturas/09_02-42_anotada.jpg",
+        "tiempo_real_seg": 162.6,
+        "puntaje": null,
+        "descripcion_original": "Duplicar la fase anterior y renombrarla como 'TARDIO' con un tiempo de inicio de 5 minutos (05:00.0)."
+      },
+      {
+        "tiempo": "03:07",
+        "tiempo_seg": 187.0,
+        "titulo": "Advertencia sobre espera en fase tardia",
+        "descripcion": "Para evitar que el sistema quede bloqueado reconstruyendo y permita realizar otros estudios durante la espera de 5 minutos, se debe pausar ('Pause') el protocolo desde el menu de inicio.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Seguridad y Flujo de Trabajo",
+        "zona": {
+          "x": 0.277,
+          "y": 0.825
+        },
+        "captura": "capturas/10_03-07.jpg",
+        "captura_anotada": "capturas/10_03-07_anotada.jpg",
+        "tiempo_real_seg": 186.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "03:59",
+        "tiempo_seg": 239.0,
+        "titulo": "Revisar detalles de escaneo",
+        "descripcion": "En la pestana 'Scan Details', verificar el espesor de corte de '0.5' mm, el kV de 120, mA de 300, y el tiempo de rotacion de 0.5 segundos.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Detalles del Escaneo",
+        "zona": {
+          "x": 0.322,
+          "y": 0.483
+        },
+        "captura": "capturas/11_03-59.jpg",
+        "captura_anotada": "capturas/11_03-59_anotada.jpg",
+        "tiempo_real_seg": 239.2,
+        "puntaje": null,
+        "descripcion_original": "En la pestana 'Scan Details', verificar el kV de 120, la modulacion de dosis en modo 'Estandar' (Sure Exp 3D) y el tiempo de rotacion de 0.5 segundos."
+      },
+      {
+        "tiempo": "04:15",
+        "tiempo_seg": 255.0,
+        "titulo": "Configurar reconstruccion axial gruesa",
+        "descripcion": "En 'Recon Details' -> 'Axial-3', activar la reconstruccion automatica de cortes axiales de cuerpo de 5.0 mm de espesor y 5.0 mm de intervalo.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Detalles de Reconstruccion",
+        "zona": {
+          "x": 0.5,
+          "y": 0.494
+        },
+        "captura": "capturas/12_04-15.jpg",
+        "captura_anotada": "capturas/12_04-15_anotada.jpg",
+        "tiempo_real_seg": 254.4,
+        "puntaje": null,
+        "descripcion_original": "En 'Recon Details' -> 'Axial-1', activar la reconstruccion automatica de cortes axiales de cuerpo estandar de 5.0 mm de espesor y 5.0 mm de intervalo."
+      },
+      {
+        "tiempo": "04:35",
+        "tiempo_seg": 275.0,
+        "titulo": "Programar reconstruccion de volumen fino",
+        "descripcion": "Activar el volumen en 'Volume', seleccionar 'Cuerpo Std. Vol.' y definir un grosor de corte de 0.5 mm con un intervalo de 0.3 mm para la reconstruccion fina de volumen.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Detalles de Reconstruccion",
+        "zona": {
+          "x": 0.447,
+          "y": 0.568
+        },
+        "captura": "capturas/13_04-35.jpg",
+        "captura_anotada": "capturas/13_04-35_anotada.jpg",
+        "tiempo_real_seg": 274.0,
+        "puntaje": null,
+        "descripcion_original": "Activar el volumen en 'Volume', seleccionar 'Cuerpo Estandar Volumen' y definir un grosor de corte de 1.0 mm con un intervalo de 0.8 mm para reducir el numero total de imagenes."
+      },
+      {
+        "tiempo": "05:03",
+        "tiempo_seg": 303.0,
+        "titulo": "Agregar volumen fino de hueso",
+        "descripcion": "Configurar el volumen seleccionando la opcion 'Fine' en el filtro de 'Hueso' con espesor y parametrizacion osea automatica.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Detalles de Reconstruccion",
+        "zona": {
+          "x": 0.458,
+          "y": 0.52
+        },
+        "captura": "capturas/14_05-03.jpg",
+        "captura_anotada": "capturas/14_05-03_anotada.jpg",
+        "tiempo_real_seg": 303.6,
+        "puntaje": null,
+        "descripcion_original": "Configurar el volumen 2 en el filtro de 'Hueso Fino' (FC30) estandar con espesor de 1.0 mm e intervalo de 0.8 mm para reconstruccion osea automatica."
+      },
+      {
+        "tiempo": "05:18",
+        "tiempo_seg": 318.0,
+        "titulo": "Configurar reconstruccion MultiView",
+        "descripcion": "En la pestana 'Multi View', asociar el Volumen para generar automaticamente reconstrucciones multiplanares (coronal y sagital) de 3.0 mm de espesor.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Detalles de Reconstruccion",
+        "zona": {
+          "x": 0.358,
+          "y": 0.477
+        },
+        "captura": "capturas/15_05-18.jpg",
+        "captura_anotada": "capturas/15_05-18_anotada.jpg",
+        "tiempo_real_seg": 317.0,
+        "puntaje": null,
+        "descripcion_original": "En la pestana 'Multi View', asociar el Volumen 1 y activar las casillas para generar automaticamente reconstrucciones multiplanares (coronal y sagital) de 3.0 mm de espesor."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 0.0,
+        "fin": 3.0,
+        "texto": "Después lo voy a borrar, pero para que veas."
+      },
+      {
+        "inicio": 3.0,
+        "fin": 8.0,
+        "texto": "Entonces, ¿qué es lo que necesito? Click en la parte negra, el doble escanograma."
+      },
+      {
+        "inicio": 8.0,
+        "fin": 14.0,
+        "texto": "Aquí selecciono el idioma, español, y si primero respire y contenga y después respire normal."
+      },
+      {
+        "inicio": 14.0,
+        "fin": 19.0,
+        "texto": "No sé, 1000 es mucho, 800 para que haga el barrido."
+      },
+      {
+        "inicio": 19.0,
+        "fin": 23.0,
+        "texto": "Entonces, después lo que yo voy a tomar, siempre ocupo..."
+      },
+      {
+        "inicio": 23.0,
+        "fin": 27.0,
+        "texto": "Les recomiendo el GG, todos estos son helicoidales."
+      },
+      {
+        "inicio": 27.0,
+        "fin": 34.0,
+        "texto": "Pero el Helical después los volúmenes, cuando estamos aquí en el Auto View, que son las cajitas, las pone una al lado del otro."
+      },
+      {
+        "inicio": 34.0,
+        "fin": 39.0,
+        "texto": "Entonces gestionarlas es súper difícil. En los GG los guarda los volúmenes hacia abajo."
+      },
+      {
+        "inicio": 39.0,
+        "fin": 43.0,
+        "texto": "Entonces es mucho más fácil y siempre genera dos."
+      },
+      {
+        "inicio": 43.0,
+        "fin": 47.0,
+        "texto": "Y eso son los GG, los que están Helical, son helicoidales."
+      },
+      {
+        "inicio": 47.0,
+        "fin": 52.0,
+        "texto": "GG, GER, L... Internamente hacen funciones, pero para el caso no hay problema."
+      },
+      {
+        "inicio": 52.0,
+        "fin": 56.0,
+        "texto": "Entonces por ejemplo ya, este es el sin contraste."
+      },
+      {
+        "inicio": 56.0,
+        "fin": 60.0,
+        "texto": "Sin contraste."
+      },
+      {
+        "inicio": 60.0,
+        "fin": 64.0,
+        "texto": "Respire y contenga, respire normal."
+      },
+      {
+        "inicio": 64.0,
+        "fin": 71.0,
+        "texto": "Luego vendría el corte de prueba, Scan and View, ¿cierto?"
+      },
+      {
+        "inicio": 71.0,
+        "fin": 75.0,
+        "texto": "Corte de prueba para saber dónde poner el ROI."
+      },
+      {
+        "inicio": 75.0,
+        "fin": 80.0,
+        "texto": "Ah no, porque no va a ser... Como estamos haciendo trifásico..."
+      },
+      {
+        "inicio": 80.0,
+        "fin": 84.0,
+        "texto": "Voy a hacer uno de más."
+      },
+      {
+        "inicio": 84.0,
+        "fin": 90.0,
+        "texto": "Entonces este es el arterial y lleva contraste."
+      },
+      {
+        "inicio": 90.0,
+        "fin": 95.0,
+        "texto": "Para que tenga la bandera DICOM de que lleva contraste."
+      },
+      {
+        "inicio": 95.0,
+        "fin": 102.0,
+        "texto": "Y no sé, de 0 a... Bueno, ahí después se puede ir definiendo. Arterial."
+      },
+      {
+        "inicio": 102.0,
+        "fin": 111.0,
+        "texto": "Entonces este lleva un weight, cuando yo, o sea, tengo que presionar, 35, como el estándar."
+      },
+      {
+        "inicio": 111.0,
+        "fin": 116.0,
+        "texto": "Este sería el venoso, ¿cierto?"
+      },
+      {
+        "inicio": 116.0,
+        "fin": 121.0,
+        "texto": "Y acá yo le digo automático."
+      },
+      {
+        "inicio": 121.0,
+        "fin": 128.0,
+        "texto": "Entonces el automático va a tomar de la última P, y aquí yo le pongo, por ejemplo, 70 segundos."
+      },
+      {
+        "inicio": 128.0,
+        "fin": 139.0,
+        "texto": "Entonces de forma automática sabe que en base a esta, de 0 a 400 y de 300 a 500, va a salir el arterial."
+      },
+      {
+        "inicio": 139.0,
+        "fin": 148.0,
+        "texto": "Cuando termine el arterial, va a tener que esperar 27.9 segundos para lanzar el venoso al minuto diez."
+      },
+      {
+        "inicio": 148.0,
+        "fin": 155.0,
+        "texto": "Y bueno, yo puedo poner aquí, copiar, sólo una o varias."
+      },
+      {
+        "inicio": 155.0,
+        "fin": 162.0,
+        "texto": "Esta, y aquí le voy a poner, se me pasó el... el tardío, por ejemplo, a los 5 minutos."
+      },
+      {
+        "inicio": 162.0,
+        "fin": 167.0,
+        "texto": "Entonces aquí, tardío."
+      },
+      {
+        "inicio": 167.0,
+        "fin": 171.0,
+        "texto": "Y también puede quedar automático, pero no les recomiendo porque van a estar varios minutos esperando."
+      },
+      {
+        "inicio": 171.0,
+        "fin": 178.0,
+        "texto": "Y mientras está esperando, va a estar listo para tomar examen y cuando eso pasa, no va a reconstruir."
+      },
+      {
+        "inicio": 178.0,
+        "fin": 184.0,
+        "texto": "Porque, ¿qué pasa? Que está la raw data esperando para escribir lo que va a recibir."
+      },
+      {
+        "inicio": 184.0,
+        "fin": 188.0,
+        "texto": "Entonces en ese caso, yo le diría, presionen aquí y pongan pausa."
+      },
+      {
+        "inicio": 188.0,
+        "fin": 193.0,
+        "texto": "Cuando están adquiriendo el protocolo, pausa, y el protocolo se va..."
+      },
+      {
+        "inicio": 193.0,
+        "fin": 198.0,
+        "texto": "O sea, va a salir de este encendido y se va a poner aquí el botón de confirmar."
+      },
+      {
+        "inicio": 198.0,
+        "fin": 202.0,
+        "texto": "Entonces si ustedes quieren hacer el examen después, confirmar y se activa el reactiva."
+      },
+      {
+        "inicio": 202.0,
+        "fin": 205.0,
+        "texto": "Entonces pueden seguir el tiempo en la inyectora."
+      },
+      {
+        "inicio": 205.0,
+        "fin": 211.0,
+        "texto": "Y así reconstruyen las otras imágenes y ustedes pueden ir a Auto View o a MPR y empezar a formatear."
+      },
+      {
+        "inicio": 211.0,
+        "fin": 214.0,
+        "texto": "Mientras está reconstruyendo e ir vigilando el tiempo acá."
+      },
+      {
+        "inicio": 214.0,
+        "fin": 219.0,
+        "texto": "Así hoy se van a los cinco, vuelven a hacer click en Scan, va a quedar tal como quedó."
+      },
+      {
+        "inicio": 219.0,
+        "fin": 223.0,
+        "texto": "Así como el MPR, queda tal como ustedes lo dejaron. Todo."
+      },
+      {
+        "inicio": 223.0,
+        "fin": 229.0,
+        "texto": "Filing Scan, confirmar, lanzan el tardío y cierran el paciente después y continúan."
+      },
+      {
+        "inicio": 229.0,
+        "fin": 235.0,
+        "texto": "¿Y en este contraste dónde se pondrían la reconstrucción de ventana?"
+      },
+      {
+        "inicio": 235.0,
+        "fin": 242.0,
+        "texto": "Acá por ejemplo, ahora voy a Scan Detail, 120-180, el pitch estándar y la modulación estándar."
+      },
+      {
+        "inicio": 242.0,
+        "fin": 247.0,
+        "texto": "Porque va a ser esto para imagenología."
+      },
+      {
+        "inicio": 247.0,
+        "fin": 253.0,
+        "texto": "La rotación, bueno todo el protocolo de imagenología es en 0.5, el FOV..."
+      },
+      {
+        "inicio": 253.0,
+        "fin": 259.0,
+        "texto": "Y aquí yo voy a pedirle la reconstrucción. ¿Necesito un corte grueso al tiro por ejemplo?"
+      },
+      {
+        "inicio": 259.0,
+        "fin": 266.0,
+        "texto": "Ya, entonces un axial de cuerpo, estoy en axial así que un este iterativo."
+      },
+      {
+        "inicio": 266.0,
+        "fin": 270.0,
+        "texto": "Un volumen de cuerpo axial de 5 cada 5."
+      },
+      {
+        "inicio": 270.0,
+        "fin": 274.0,
+        "texto": "Después voy a los volúmenes, lo enciendo."
+      },
+      {
+        "inicio": 274.0,
+        "fin": 280.0,
+        "texto": "Cuerpo axial, bueno no, cuerpo porque estoy en volumen, cuerpo estándar volumen y va a generar un volumen fino de 0.5 cada 0.3."
+      },
+      {
+        "inicio": 280.0,
+        "fin": 287.0,
+        "texto": "Son muchas imágenes, entonces tal vez sea mejor 1 cada 0.8."
+      },
+      {
+        "inicio": 287.0,
+        "fin": 291.0,
+        "texto": "Pero ahí depende de la estructura que quieres ver, la colimación."
+      },
+      {
+        "inicio": 291.0,
+        "fin": 296.0,
+        "texto": "Le pueden poner aquí definir, no sé, óseo, partes blandas, tipear algo ahí."
+      },
+      {
+        "inicio": 296.0,
+        "fin": 303.0,
+        "texto": "Entonces aquí ustedes pueden ir generando los volúmenes. Otro por ejemplo, ahora yo quiero el hueso, fino."
+      },
+      {
+        "inicio": 303.0,
+        "fin": 307.0,
+        "texto": "Es como el estándar, bueno el estándar."
+      },
+      {
+        "inicio": 307.0,
+        "fin": 312.0,
+        "texto": "Y ya lo tengo, y también de 1 cada 0.8 y aquí le pongo óseo."
+      },
+      {
+        "inicio": 312.0,
+        "fin": 316.0,
+        "texto": "Entonces estos dos los va a reconstruir sí o sí de forma automática."
+      },
+      {
+        "inicio": 316.0,
+        "fin": 322.0,
+        "texto": "Y además puedo ir al Multi View y decirle, bueno esto es un abdomen, entonces..."
+      },
+      {
+        "inicio": 322.0,
+        "fin": 325.0,
+        "texto": "No va a quedar tan chueco el paciente si lo centramos bien."
+      },
+      {
+        "inicio": 325.0,
+        "fin": 332.0,
+        "texto": "Yo ya puedo decirle además quiero de ese volumen cortes axiales, coronales, sagitales ya de 3 cada 3, en average."
+      },
+      {
+        "inicio": 332.0,
+        "fin": 335.0,
+        "texto": "Y en naranjo está lo que está activado, ¿no? Sí, lo que está activado."
+      },
+      {
+        "inicio": 335.0,
+        "fin": 341.0,
+        "texto": "Por ejemplo, aquí está activado esto que sería de cuerpo pero no el de óseo. Y el de óseo, ah bueno, también lo quiero."
+      },
+      {
+        "inicio": 341.0,
+        "fin": 345.0,
+        "texto": "Por ejemplo, estuviera en una angio, yo le puedo decir dame los también MIP."
+      },
+      {
+        "inicio": 345.0,
+        "fin": 350.0,
+        "texto": "Pero no average, uno de los dos, por el corte, entonces lo quiero MIP."
+      },
+      {
+        "inicio": 350.0,
+        "fin": 354.0,
+        "texto": "Y no sé, de 7, y ahí se van tipeando."
+      },
+      {
+        "inicio": 354.0,
+        "fin": 359.0,
+        "texto": "Entonces puedo generar otro del mismo pero average."
+      },
+      {
+        "inicio": 359.0,
+        "fin": 364.0,
+        "texto": "Y con el corte que yo quiero y el primero sería MIP, el segundo average y el tercero óseo, no sé, por ejemplo."
+      },
+      {
+        "inicio": 364.0,
+        "fin": 369.0,
+        "texto": "Y así puedo dejar todo hasta siete."
+      },
+      {
+        "inicio": 369.0,
+        "fin": 373.0,
+        "texto": "Que siempre va el volumen uno siempre está asociado al Multi View uno."
+      },
+      {
+        "inicio": 373.0,
+        "fin": 377.0,
+        "texto": "Así es, entonces así pueden dejar ya la planificaciones listas."
+      },
+      {
+        "inicio": 377.0,
+        "fin": 381.0,
+        "texto": "Para todo esto examen, más relacionado con imagenología."
+      },
+      {
+        "inicio": 381.0,
+        "fin": 385.0,
+        "texto": "Pero de acá viene, entonces sin contraste..."
+      },
+      {
+        "inicio": 385.0,
+        "fin": 392.0,
+        "texto": "Arterial que hay una P, ¿cierto? de presionar, esperar a los 35 y automáticamente después lanza el venoso a los 70."
+      },
+      {
+        "inicio": 392.0,
+        "fin": 400.0,
+        "texto": "Este valor se ajusta en base si el paciente es más largo o gordo, si cambia la velocidad de rotación y el pitch, todo eso va a influir."
+      },
+      {
+        "inicio": 400.0,
+        "fin": 408.0,
+        "texto": "Y después el venoso también puede ser, perdón, lo pueden dejar automático, o bueno, o..."
+      },
+      {
+        "inicio": 408.0,
+        "fin": 411.0,
+        "texto": "Como ustedes quieran."
+      },
+      {
+        "inicio": 411.0,
+        "fin": 414.0,
+        "texto": "Pero de aquí es donde pueden planificar los tiempos."
+      },
+      {
+        "inicio": 414.0,
+        "fin": 417.0,
+        "texto": "Si se fijan, igual es simple."
+      },
+      {
+        "inicio": 417.0,
+        "fin": 423.0,
+        "texto": "Este weight es para el arterial, porque cuando voy a presionar y en automático..."
+      },
+      {
+        "inicio": 423.0,
+        "fin": 429.0,
+        "texto": "Pueden poner el valor acá en start time y que va a tomar de lo de la última P."
+      },
+      {
+        "inicio": 429.0,
+        "fin": 432.0,
+        "texto": "Que en realidad es cuando uno le da la inyección de contraste."
+      },
+      {
+        "inicio": 432.0,
+        "fin": 435.0,
+        "texto": "Eso es como lo general."
+      },
+      {
+        "inicio": 435.0,
+        "fin": 442.0,
+        "texto": "Bueno, esto lo voy a eliminar para que no quede... No quiero contaminar con el protocolo si no lo van a usar."
+      },
+      {
+        "inicio": 442.0,
+        "fin": 448.91,
+        "texto": "Y el Multi View de repente lo usan, ¿es necesario?"
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_10_Creando_trifasico.docx",
+    "pdf": "TC_10_Creando_trifasico.pdf",
+    "paginas": 9
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 191455,
+    "tokens_salida": 7841,
+    "tokens_pensamiento": 0,
+    "tokens_total": 199296,
+    "detalle_entrada": {
+      "VIDEO": 170616,
+      "TEXT": 4339,
+      "IMAGE": 16500
+    },
+    "llamadas": 3,
+    "batch": false,
+    "costo_usd": null
+  }
+}
