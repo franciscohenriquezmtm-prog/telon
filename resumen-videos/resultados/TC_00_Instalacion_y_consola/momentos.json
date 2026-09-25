@@ -1,0 +1,730 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/TC_00_Instalacion_y_consola.mov",
+    "nombre": "TC_00_Instalacion_y_consola",
+    "duracion_seg": 711.12,
+    "duracion": "11:51",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 1580987702,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T15:53:12",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.5-flash",
+    "titulo": "Introducción y especificaciones del Aquilion Exceed LB",
+    "resumen": "El video presenta una descripción general del tomógrafo computado Canon Aquilion Exceed LB, destacando sus características físicas, de diseño y los requisitos esenciales de climatización y energía para su correcto funcionamiento en el entorno clínico.",
+    "truncado": false,
+    "tramos": 2,
+    "avisos": [
+      "Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 12 con cambios (22470 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.",
+      "Regenerado desde momentos.json el 2026-09-25 15:52"
+    ],
+    "uso": {
+      "modelo": "gemini-3.5-flash (+refinado)",
+      "tokens_entrada": 294157,
+      "tokens_salida": 9121,
+      "tokens_pensamiento": 0,
+      "tokens_total": 303278,
+      "detalle_entrada": {
+        "VIDEO": 270180,
+        "TEXT": 6377,
+        "IMAGE": 17600
+      },
+      "llamadas": 6,
+      "batch": false,
+      "costo_usd": null
+    },
+    "momentos": [
+      {
+        "tiempo": "00:07",
+        "tiempo_seg": 7.0,
+        "titulo": "Presentar el tomógrafo Aquilion Exceed LB",
+        "descripcion": "El instructor presenta el equipo Canon Aquilion Exceed LB, diseñado para la planificación de radioterapia, oncología y traumatología.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Descripción general",
+        "zona": {
+          "x": 0.308,
+          "y": 0.182
+        },
+        "captura": "capturas/01_00-07.jpg",
+        "captura_anotada": "capturas/01_00-07_anotada.jpg",
+        "tiempo_real_seg": 7.6,
+        "puntaje": null,
+        "descripcion_original": "El instructor inicia la presentación general del equipo Canon Aquilion Exceed LB, diseñado para planificación de radioterapia, oncología y traumatología."
+      },
+      {
+        "tiempo": "00:32",
+        "tiempo_seg": 32.0,
+        "titulo": "Explicar la apertura de gantry",
+        "descripcion": "Se destaca la amplia apertura de gantry de 90 cm de diámetro (Large Bore), útil para el posicionamiento de pacientes con accesorios.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Características de diseño",
+        "zona": {
+          "x": 0.56,
+          "y": 0.52
+        },
+        "captura": "capturas/02_00-32.jpg",
+        "captura_anotada": "capturas/02_00-32_anotada.jpg",
+        "tiempo_real_seg": 32.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:41",
+        "tiempo_seg": 41.0,
+        "titulo": "Describir el FOV de adquisición",
+        "descripcion": "El FOV máximo estándar es de 70 cm y cuenta con un FOV extendido de hasta 90 cm que se genera mediante la reconstrucción de datos crudos (raw data). En pantalla se leen los valores -236.0, P+1135.5 y 0.0.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Especificaciones técnicas",
+        "zona": {
+          "x": 0.84,
+          "y": 0.365
+        },
+        "captura": "capturas/03_00-41.jpg",
+        "captura_anotada": "capturas/03_00-41_anotada.jpg",
+        "tiempo_real_seg": 40.4,
+        "puntaje": null,
+        "descripcion_original": "El FOV máximo estándar es de 70 cm y cuenta con un FOV extendido de hasta 90 cm que se genera mediante la reconstrucción de datos crudos (raw data)."
+      },
+      {
+        "tiempo": "01:08",
+        "tiempo_seg": 68.0,
+        "titulo": "Detallar los detectores del equipo",
+        "descripcion": "El tomógrafo posee 80 filas de detectores de 0,5 mm en el eje Z, lo que equivale a una cobertura de 40 mm (4 cm) por rotación del gantry.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Especificaciones técnicas",
+        "zona": {
+          "x": 0.56,
+          "y": 0.48
+        },
+        "captura": "capturas/04_01-08.jpg",
+        "captura_anotada": "capturas/04_01-08_anotada.jpg",
+        "tiempo_real_seg": 67.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:21",
+        "tiempo_seg": 81.0,
+        "titulo": "Mencionar parámetros de rotación y tubo",
+        "descripcion": "Se indica que el equipo realiza una rotación en hasta 0,4 segundos, posee un tubo de 7,5 MHU y un generador de 72 kW que permite hasta 500-600 mA.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Especificaciones técnicas",
+        "zona": null,
+        "captura": "capturas/05_01-21.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 81.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "01:54",
+        "tiempo_seg": 114.0,
+        "titulo": "Advertir sobre el aire acondicionado",
+        "descripcion": "Es obligatorio contar con aire acondicionado funcionando para enfriar la electrónica y el intercambiador de calor del tubo. Si falla, se debe apagar el equipo.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Requisitos de instalación",
+        "zona": {
+          "x": 0.48,
+          "y": 0.06
+        },
+        "captura": "capturas/06_01-54.jpg",
+        "captura_anotada": "capturas/06_01-54_anotada.jpg",
+        "tiempo_real_seg": 113.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:30",
+        "tiempo_seg": 150.0,
+        "titulo": "Recomendar la temperatura de la sala",
+        "descripcion": "Se aconseja mantener una temperatura constante de entre 22 y 23 grados Celsius dentro de la sala de examen.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Requisitos de instalación",
+        "zona": null,
+        "captura": "capturas/07_02-30.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 149.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "02:51",
+        "tiempo_seg": 171.0,
+        "titulo": "Mostrar los componentes eléctricos",
+        "descripcion": "El instructor señala hacia la parte posterior de la sala los componentes eléctricos clave del sistema.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Sistema eléctrico",
+        "zona": {
+          "x": 0.54,
+          "y": 0.44
+        },
+        "captura": "capturas/08_02-51.jpg",
+        "captura_anotada": "capturas/08_02-51_anotada.jpg",
+        "tiempo_real_seg": 170.8,
+        "puntaje": null,
+        "descripcion_original": "El instructor señala el tablero de distribución, el transformador del sistema, el UPS que respalda la consola de control y el mecanismo de la camilla."
+      },
+      {
+        "tiempo": "03:30",
+        "tiempo_seg": 210.0,
+        "titulo": "Explicar el propósito del UPS",
+        "descripcion": "En caso de corte de suministro eléctrico prolongado, la función principal de la UPS es dar tiempo para apagar el sistema de forma correcta vía software.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Sistema eléctrico",
+        "zona": {
+          "x": 0.194,
+          "y": 0.74
+        },
+        "captura": "capturas/09_03-30.jpg",
+        "captura_anotada": "capturas/09_03-30_anotada.jpg",
+        "tiempo_real_seg": 209.4,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:09",
+        "tiempo_seg": 249.0,
+        "titulo": "Ubicar el tablero de encendido general",
+        "descripcion": "El instructor señala el gabinete que contiene el disyuntor automático general y los pulsadores de encendido y apagado.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.65,
+          "y": 0.31
+        },
+        "captura": "capturas/10_04-09.jpg",
+        "captura_anotada": "capturas/10_04-09_anotada.jpg",
+        "tiempo_real_seg": 249.6,
+        "puntaje": null
+      },
+      {
+        "tiempo": "04:10",
+        "tiempo_seg": 250.0,
+        "titulo": "Presionar el pulsador verde de encendido",
+        "descripcion": "Para encender el sistema, presione el botón verde de encendido rotulado como Pulsador Encendido dentro del gabinete de control.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.48,
+          "y": 0.36
+        },
+        "captura": "capturas/11_04-10.jpg",
+        "captura_anotada": "capturas/11_04-10_anotada.jpg",
+        "tiempo_real_seg": 249.8,
+        "puntaje": null,
+        "descripcion_original": "Para encender el sistema, presione el botón verde rotulado como Pulsador Encendido dentro del gabinete de control."
+      },
+      {
+        "tiempo": "04:21",
+        "tiempo_seg": 261.0,
+        "titulo": "Verificar el disyuntor de arriba",
+        "descripcion": "Asegúrese de que la llave térmica de Automático General esté en la posición de encendido (I) antes de pulsar el botón verde.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.62,
+          "y": 0.2
+        },
+        "captura": "capturas/12_04-21.jpg",
+        "captura_anotada": "capturas/12_04-21_anotada.jpg",
+        "tiempo_real_seg": 261.2,
+        "puntaje": null,
+        "descripcion_original": "Asegúrese de que la llave térmica de Automático General esté en la posición de encendido antes de pulsar el botón verde."
+      },
+      {
+        "tiempo": "05:04",
+        "tiempo_seg": 304.0,
+        "titulo": "Encender la pantalla touch de la UPS",
+        "descripcion": "Al recibir energía, la pantalla de la UPS se activará mostrando un diagrama de flujo y estado de energía para proceder.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Manejo de UPS",
+        "zona": {
+          "x": 0.49,
+          "y": 0.525
+        },
+        "captura": "capturas/13_05-04.jpg",
+        "captura_anotada": "capturas/13_05-04_anotada.jpg",
+        "tiempo_real_seg": 304.6,
+        "puntaje": null,
+        "descripcion_original": "Al recibir energía, la pantalla de la UPS se activará mostrando un menú para proceder con el encendido."
+      },
+      {
+        "tiempo": "06:11",
+        "tiempo_seg": 371.0,
+        "titulo": "Puente de la UPS en caso de falla",
+        "descripcion": "Si la UPS falla o se apaga por batería baja, desconecte los conectores industriales traseros y conéctelos directamente para saltar la UPS en emergencias.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Manejo de UPS",
+        "zona": null,
+        "captura": "capturas/14_06-11.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 370.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "08:31",
+        "tiempo_seg": 511.0,
+        "titulo": "Dejar enfriar el tubo antes de un corte",
+        "descripcion": "En caso de corte de energía programado, realice el último paciente al menos una hora antes para permitir que el tubo se enfríe de manera segura.",
+        "importancia": 5,
+        "fuente": "audio",
+        "seccion": "Apagado y Seguridad",
+        "zona": null,
+        "captura": "capturas/15_08-31.jpg",
+        "captura_anotada": null,
+        "tiempo_real_seg": 510.8,
+        "puntaje": null
+      },
+      {
+        "tiempo": "09:43",
+        "tiempo_seg": 583.0,
+        "titulo": "Estabilizar temperatura antes de operar",
+        "descripcion": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen. El tomógrafo Canon Aquilion Exceed LB debe climatizarse.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Apagado y Seguridad",
+        "zona": {
+          "x": 0.709,
+          "y": 0.326
+        },
+        "captura": "capturas/16_09-43.jpg",
+        "captura_anotada": "capturas/16_09-43_anotada.jpg",
+        "tiempo_real_seg": 583.2,
+        "puntaje": null,
+        "descripcion_original": "Al restablecer la energía tras un corte largo, espere de 2 a 3 horas antes de realizar estudios para que la cámara de detectores alcance una temperatura estable y evitar artefactos en la imagen."
+      }
+    ],
+    "transcripcion": [
+      {
+        "inicio": 5.0,
+        "fin": 13.0,
+        "texto": "Voy a partir primero con una descripción general del equipo, el aire, qué sé yo, y después para que podamos ir a la consola."
+      },
+      {
+        "inicio": 13.0,
+        "fin": 19.0,
+        "texto": "Buenos días a todos. Soy Juan Carlos Valenzuela, especialista en aplicaciones clínicas de tomografía de Canon."
+      },
+      {
+        "inicio": 19.0,
+        "fin": 30.0,
+        "texto": "Y bueno, ahora les voy a dar la inducción a lo que es el nuevo Aquilion Exceed LB, este es nuestro sistema para planificación de radioterapia, oncología, traumatología."
+      },
+      {
+        "inicio": 30.0,
+        "fin": 39.0,
+        "texto": "Y como lo dice es large bore, quiere decir una apertura amplia del gantry que son 90 centímetros la apertura."
+      },
+      {
+        "inicio": 39.0,
+        "fin": 54.0,
+        "texto": "El FOV máximo es de 70 centímetros, también es más grande, el estándar son 50, eh y además tiene un FOV extendido que hay que llegar desde raw data que puede ser hasta los 90 centímetros de la apertura."
+      },
+      {
+        "inicio": 54.0,
+        "fin": 67.0,
+        "texto": "Lo importante para lograr ese FOV extendido, la adquisición tiene que ser en el FOV de más amplio, en el en el L creo que se llama de 70. Luego de ahí permite de raw data hacer la expansión."
+      },
+      {
+        "inicio": 67.0,
+        "fin": 80.0,
+        "texto": "El equipo es de 80 filas de detectores en el eje Z, cada uno de 0.5 milímetros. 80 por 0.5, 40 milímetros, 4 centímetros de cobertura por giro."
+      },
+      {
+        "inicio": 80.0,
+        "fin": 100.0,
+        "texto": "El equipo puede rotar este me parece hasta 0.4 segundos, máximo. Eh un tubo de 7.5 MHU, un generador de 72 kW que permite hasta 500 mA. No estoy seguro si ya no me acuerdo si viene con el aumento de mA, pero si viene con el aumento son hasta 600."
+      },
+      {
+        "inicio": 100.0,
+        "fin": 112.0,
+        "texto": "La verdad que aquí como para para planificación yo sé que la mayoría son técnicas fijas, porque cuando es para imagenología todo es con modulación de dosis, entonces en realidad nunca se adquiere en esos peak, siempre está dentro de una modulación."
+      },
+      {
+        "inicio": 112.0,
+        "fin": 118.0,
+        "texto": "Bueno, importante es que el equipo necesita el aire acondicionado obligatorio para funcionar."
+      },
+      {
+        "inicio": 118.0,
+        "fin": 128.0,
+        "texto": "Sé que habían tenido unos problemas y que incluso van a venir a hacer unas revisiones, pero es muy importante, ya que si el aire acondicionado se daña tienen que apagar el equipo y no lo pueden utilizar."
+      },
+      {
+        "inicio": 128.0,
+        "fin": 134.0,
+        "texto": "Porque utiliza el aire para hacerlos pasar por los ventiladores y enfría toda la electrónica."
+      },
+      {
+        "inicio": 134.0,
+        "fin": 147.0,
+        "texto": "Ya, también adentro está el tubo con el intercambiador de calor, entonces el intercambiador de calor necesita este aire frío para poder enfriar el tubo y así bajar la OLP que se le llama, ahí lo vamos a revisar."
+      },
+      {
+        "inicio": 147.0,
+        "fin": 157.0,
+        "texto": "Eh también la idea es tener una temperatura constante, es decir que lo seteen dejarlo no sé, 22 o 23 grados es lo que recomendamos, pero no modificarla más. ¿Ya?"
+      },
+      {
+        "inicio": 157.0,
+        "fin": 167.0,
+        "texto": "Lo importante es, eh en caso de cortes de energía, después les voy a mostrar el equipo por acá y ahí vamos a ver."
+      },
+      {
+        "inicio": 167.0,
+        "fin": 179.0,
+        "texto": "Acá al fondo, no sé si lo alcanzan a ver, está el tablero de distribución eléctrica que de aquí llega toda la energía del hospital, y del tablero la entrega al transformador de sistema."
+      },
+      {
+        "inicio": 179.0,
+        "fin": 188.0,
+        "texto": "Tienen que estar todos los interruptores arriba, y del transformador pasa al gantry para la etapa de potencia, y del transformador pasa a un UPS que hay acá."
+      },
+      {
+        "inicio": 188.0,
+        "fin": 202.0,
+        "texto": "Y de este UPS respalda la consola, los computadores que están acá, la reconstrucción, el procesador, y también da un tiempo para la camilla para poder sacar y bajar, solo eso. ¿Hm?"
+      },
+      {
+        "inicio": 202.0,
+        "fin": 218.0,
+        "texto": "En teoría si se corta la energía, no regresa, y ven que no va a entrar el grupo electrógeno, etcétera, eh la función principal del UPS es darle tiempo para que apaguen por software como es correcto el el CT. ¿Ya?, esa es la idea del, principal."
+      },
+      {
+        "inicio": 218.0,
+        "fin": 239.0,
+        "texto": "Si por eh hay cortes de energía no programados, eso suele ocurrir bastante, eh todo se va a cortar, ¿cierto?, eh no vuelve la energía, no, se dañó el generador, el grupo electrógeno, etcétera, y se quedan varias horas sin energía, la UPS se le va a acabar la batería. Entonces, se va a apagar sola. En algún momento va a retomar la energía y van a decir \"ya, está...\""
+      },
+      {
+        "inicio": 240.0,
+        "fin": 245.0,
+        "texto": "Pero tal vez este no va a funcionar porque va a estar apagado."
+      },
+      {
+        "inicio": 245.0,
+        "fin": 253.0,
+        "texto": "Entonces, para encenderlo hay que presionar el botón verde que está dentro, ahí, que dice pulsador encendido."
+      },
+      {
+        "inicio": 253.0,
+        "fin": 257.0,
+        "texto": "El rojo es para pagarlo, si es que en algún momento necesitan apagarlo."
+      },
+      {
+        "inicio": 257.0,
+        "fin": 266.0,
+        "texto": "Se enciende, verificar que el disyuntor de arriba esté arriba, ¿cierto?, lo presionan y se va a demorar más o menos un minuto y va a enclavar."
+      },
+      {
+        "inicio": 266.0,
+        "fin": 272.0,
+        "texto": "Ese minuto es para darle tiempo por si acaso todavía hay problemas eléctricos, que se solucionen en la siguiente."
+      },
+      {
+        "inicio": 272.0,
+        "fin": 281.0,
+        "texto": "Y de ahí pasa toda la energía. Van a ver que tiene todos los led verdes, el de ahí también tiene los led verdes por adelante, con la cámara, el circulito, quiere decir que está energizado."
+      },
+      {
+        "inicio": 281.0,
+        "fin": 288.0,
+        "texto": "Seguramente van a apretar, yo les voy a enseñar, el botón de la consola para encender el equipo, pero no va a encender."
+      },
+      {
+        "inicio": 288.0,
+        "fin": 294.0,
+        "texto": "¿Y por qué? Si llegó la energía, está todo energizado, está todo arriba."
+      },
+      {
+        "inicio": 294.0,
+        "fin": 305.0,
+        "texto": "Ah, la UPS está apagada porque se apagó. Entonces, como estuvo muchas horas se quedó sin batería y se apagó, y se enciende."
+      },
+      {
+        "inicio": 305.0,
+        "fin": 317.0,
+        "texto": "Si es que está energizada, va a aparecer aquí en la pantalla touch, es touch, y ahí va a salir el menú para encender. Va a decir: presione acá para encender."
+      },
+      {
+        "inicio": 317.0,
+        "fin": 322.0,
+        "texto": "Ahora ya está encendido, pero ahí va a aparecer el menú."
+      },
+      {
+        "inicio": 322.0,
+        "fin": 333.0,
+        "texto": "De todas maneras, claro, porque si no se va a acabar la batería cuando son los cortes muy largos. Atrás también hay interruptores que pueden revisar si es que no quiere funcionar."
+      },
+      {
+        "inicio": 333.0,
+        "fin": 342.0,
+        "texto": "Bueno, yo sé que ustedes van a llamar a equipo médico, equipo médico puede llamar a nuestro soporte técnico, pero es importante que también ustedes lo sepan."
+      },
+      {
+        "inicio": 342.0,
+        "fin": 351.0,
+        "texto": "Si no enciende, si llega equipo médico, \"no tengo idea\", \"la UPS está apagada porque fueron muchas horas y es una UPS\"."
+      },
+      {
+        "inicio": 351.0,
+        "fin": 357.0,
+        "texto": "Entonces, también la UPS se puede dañar, puede fallar la batería, es un fierro."
+      },
+      {
+        "inicio": 357.0,
+        "fin": 365.0,
+        "texto": "Entonces, si no enciende y no quiere funcionar van a llamar a equipo médico, yo sé todo eso, pero puede funcionar sin la UPS."
+      },
+      {
+        "inicio": 365.0,
+        "fin": 374.0,
+        "texto": "Atrás, no sé si alcanzan a ver por ahí, que hay unos interruptores industriales, que están en el costado, se fijan en los cables con unos... esos cables negros con unos conectores rojos."
+      },
+      {
+        "inicio": 374.0,
+        "fin": 378.0,
+        "texto": "Es como los de portátil. Claro, son unos conectores industriales."
+      },
+      {
+        "inicio": 378.0,
+        "fin": 384.0,
+        "texto": "Eso está ahí. Están ahí atrás."
+      },
+      {
+        "inicio": 384.0,
+        "fin": 392.0,
+        "texto": "En ese caso, si está todo apagado, se desconectan esos sensores, o sea esos conectores, la UPS va a salir y va a quedar siempre un macho con una hembra de conector."
+      },
+      {
+        "inicio": 392.0,
+        "fin": 400.0,
+        "texto": "Lo conectan, pasa la energía directo. Pueden operar para sacar su emergencia, pero no van a tener respaldo."
+      },
+      {
+        "inicio": 400.0,
+        "fin": 407.0,
+        "texto": "En caso de corte de energía, se va a caer todo, pero por lo menos le da tiempo para que ustedes puedan sacar a sus pacientes."
+      },
+      {
+        "inicio": 407.0,
+        "fin": 417.0,
+        "texto": "Hablan con el equipo médico, nuestro soporte técnico, ellos vienen, si no se la llevan, traen otra, bueno se soluciona el problema, pero pueden operar."
+      },
+      {
+        "inicio": 417.0,
+        "fin": 420.0,
+        "texto": "El riesgo es que estamos sin energía, sin respaldo."
+      },
+      {
+        "inicio": 420.0,
+        "fin": 430.0,
+        "texto": "Si hay un corte y no está la UPS, y estamos en estado directo como nos decía... Claro, se va a caer el computador de un viaje. ...pero eso no aumenta como el riesgo de que falle la máquina a..."
+      },
+      {
+        "inicio": 430.0,
+        "fin": 439.0,
+        "texto": "La idea es, ojalá siempre estar con respaldo porque aquí hay computadores, el tema es Windows, está Microsoft, están las memorias."
+      },
+      {
+        "inicio": 439.0,
+        "fin": 449.0,
+        "texto": "Entonces, cuando hay cortes pueden dañarse, y a veces el sistema operativo o una memoria, los discos, esa es la idea de lo que quiere proteger la UPS."
+      },
+      {
+        "inicio": 449.0,
+        "fin": 457.0,
+        "texto": "No es tanto por el corte de que se vaya la energía y se vaya, el tema es por qué hay un corte y casi siempre son por problemas eléctricos."
+      },
+      {
+        "inicio": 457.0,
+        "fin": 467.0,
+        "texto": "Hay transientes, alta tensión, problemas de frecuencia. El tablero tiene todas las medidas de seguridad que indica Canon."
+      },
+      {
+        "inicio": 467.0,
+        "fin": 477.0,
+        "texto": "De hecho, aunque no nos pidan el tablero por licitación nosotros le entregamos igual el nuestro, y el tablero es muy lindo al lado, pero yo coloco el mío al costado."
+      },
+      {
+        "inicio": 477.0,
+        "fin": 485.0,
+        "texto": "Me conecto a tu tablero, pero aquí yo tengo toda la medida de seguridad y aún así ponemos la UPS para eso. ¿Pasamos para allá?"
+      },
+      {
+        "inicio": 485.0,
+        "fin": 493.0,
+        "texto": "Lo otro importante es cuando hay cortes de energía programados. Les estoy hablando todo este tema porque pasa."
+      },
+      {
+        "inicio": 493.0,
+        "fin": 501.0,
+        "texto": "Yo les puedo avisar y después montamos el equipo, eso lo van a usar siempre, pero estas cosas son las que ocurren. Un corte de energía programado."
+      },
+      {
+        "inicio": 501.0,
+        "fin": 510.0,
+        "texto": "Entonces, van a decir: \"En la esquina cambiamos un transformador, entonces hay que cortar la energía eléctrica en toda la cuadra\", y se corta la energía el viernes y la recuperan el lunes, un caso super extremo."
+      },
+      {
+        "inicio": 510.0,
+        "fin": 518.0,
+        "texto": "Que nos han pasado. Entonces, a las 6:00 de la tarde ustedes tienen que apagar el equipo porque vamos a cortar y se hace todo el trabajo."
+      },
+      {
+        "inicio": 518.0,
+        "fin": 526.0,
+        "texto": "Okay. Ustedes cortan... dicen: \"Yo puedo hacer el último paciente una hora antes de ese horario límite\"."
+      },
+      {
+        "inicio": 526.0,
+        "fin": 534.0,
+        "texto": "Entonces, si le dijeron a las 6:00, ustedes dicen a las 5:00 de la tarde hago el último paciente y no hago más para darle tiempo que el tubo se enfríe."
+      },
+      {
+        "inicio": 534.0,
+        "fin": 544.0,
+        "texto": "Porque qué pasa, si ustedes apagan el equipo siempre va a quedar energizado el gantry, lo que es el intercambiador de calor del tubo para seguir enfriándolo."
+      },
+      {
+        "inicio": 544.0,
+        "fin": 553.0,
+        "texto": "Y la cámara de detectores porque necesita una temperatura estable. Entonces si viene, en el caso de madrugada, encienden el equipo de urgencias, el equipo va a estar listo para hacer el examen."
+      },
+      {
+        "inicio": 553.0,
+        "fin": 562.0,
+        "texto": "Entonces cuando hay un corte programado... en un espacio, en un lugar, llegaron a las 6:00, \"sí, hicieron el último paciente\", ocuparon todo el día el tubo, estaba muy caliente."
+      },
+      {
+        "inicio": 562.0,
+        "fin": 570.0,
+        "texto": "Se fueron los tecnólogos, llegó equipo médico y cortó toda la energía y no le dio tiempo a que el intercambiador de calor enfriara el tubo para que lo dejara en una temperatura de standby y poder apagarlo."
+      },
+      {
+        "inicio": 570.0,
+        "fin": 578.0,
+        "texto": "Entonces eso es importante, con una hora el tubo se va a enfriar sin problema. Entonces dicen: \"Yo hago los pacientes una hora antes de que corten la energía\"."
+      },
+      {
+        "inicio": 578.0,
+        "fin": 586.0,
+        "texto": "Entonces eso es importante. Y después el lunes, cuando llegue la energía y echen a andar todo, la cámara no tenía temperatura."
+      },
+      {
+        "inicio": 586.0,
+        "fin": 594.0,
+        "texto": "No tiene una temperatura estable, va a estar fría. Entonces se recomienda darle unas 2 a 3 horas para que la cámara tome temperatura y se estabilice."
+      },
+      {
+        "inicio": 594.0,
+        "fin": 605.0,
+        "texto": "Pueden hacer pacientes igual antes de ese tiempo, pero debo advertirles de que pudiese arrojar artefactos, por ejemplo, un anillo, algo así, algo raro, y no va a ser un problema que la cámara está mala o el canal, sino que le falta la temperatura estable."
+      },
+      {
+        "inicio": 605.0,
+        "fin": 609.0,
+        "texto": "Entonces, por ejemplo, hay que esperar una hora y después se apaga el equipo."
+      },
+      {
+        "inicio": 609.0,
+        "fin": 617.0,
+        "texto": "No, lo pueden apagar antes. Porque al apagarlo igual queda energizado el intercambiador de calor para seguir enfriando el tubo."
+      },
+      {
+        "inicio": 617.0,
+        "fin": 626.0,
+        "texto": "Que eso va a ser el estándar, ustedes lo apagan y se van. Y el intercambiador de calor, aunque siga energizado, lo va a enfriar hasta la temperatura que sea de standby y después en modo de ahorro de energía ya lo suelta, el tubo ya está frío."
+      },
+      {
+        "inicio": 626.0,
+        "fin": 630.0,
+        "texto": "Porque si queda caliente se puede quemar, el tubo."
+      },
+      {
+        "inicio": 630.0,
+        "fin": 639.0,
+        "texto": "Claro, por eso hay que cortar una hora antes de ya no usar más el equipo para que no genere más temperatura. Hacer el paciente a las 5:00 el último, porque el corte es a las 6:00."
+      },
+      {
+        "inicio": 639.0,
+        "fin": 648.0,
+        "texto": "Entonces, en una hora se enfría bien el tubo aunque ustedes lo dejen apagado. Por eso es importante decirle a equipo médico: \"No me vayas a cortar la energía hasta las 6:00, yo apago el equipo, yo me voy, pero no lo corten hasta las 6:00\"."
+      },
+      {
+        "inicio": 648.0,
+        "fin": 657.0,
+        "texto": "Porque en esta hora el equipo igual sigue enfriando el tubo, es importante, porque si le quitan la energía el tubo va a quedar caliente, y no puede quedar caliente, necesita enfriarse."
+      },
+      {
+        "inicio": 657.0,
+        "fin": 667.0,
+        "texto": "No sé si se acuerdan de la física del tubo y todo eso, se puede dañar, es como una ampolleta, o sea el tubo se quemó y hay que cambiarlo."
+      },
+      {
+        "inicio": 667.0,
+        "fin": 673.0,
+        "texto": "Y ahí es donde viene el problema, dicen: \"Bueno, ¿y por qué se quemó? No siguieron bien los procesos\", cosas así, no es por eso."
+      },
+      {
+        "inicio": 673.0,
+        "fin": 683.0,
+        "texto": "Si tienen dudas también me pueden llamar, Valentina y varios otros que tienen mi celular, le pueden decir: \"Oye, tenemos un tema, nos dijeron esto, por favor...\""
+      },
+      {
+        "inicio": 683.0,
+        "fin": 691.0,
+        "texto": "\"Quiero llamar a Juan Carlos para estar seguro del proceso si es que no se acuerdan de alguna cosa\"."
+      },
+      {
+        "inicio": 691.0,
+        "fin": 704.0,
+        "texto": "Si yo estoy en un curso como ahora no les voy a poder contestar, pero después lo que trato es ojalá inmediatamente poder contestar o me mandan un WhatsApp para saber lo urgente, si es urgente los trato de llamar, no hay problema."
+      },
+      {
+        "inicio": 704.0,
+        "fin": 711.0,
+        "texto": "Bueno, el equipo tiene estos botones..."
+      }
+    ]
+  },
+  "documentos": {
+    "docx": "TC_00_Instalacion_y_consola.docx",
+    "pdf": "TC_00_Instalacion_y_consola.pdf",
+    "paginas": 14
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.5-flash (+refinado)",
+    "tokens_entrada": 294157,
+    "tokens_salida": 9121,
+    "tokens_pensamiento": 0,
+    "tokens_total": 303278,
+    "detalle_entrada": {
+      "VIDEO": 270180,
+      "TEXT": 6377,
+      "IMAGE": 17600
+    },
+    "llamadas": 6,
+    "batch": false,
+    "costo_usd": null
+  }
+}

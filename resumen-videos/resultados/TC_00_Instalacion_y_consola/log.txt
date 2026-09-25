@@ -1,0 +1,64 @@
+15:31:33 === TC_00_Instalacion_y_consola.mov: 11:51, 1080x1920, 59.97 fps, 1508 MB -> salida/TC_00_Instalacion_y_consola
+15:31:33 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:31:33   TC_00_Instalacion_y_consola.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+15:31:33   transcodificando TC_00_Instalacion_y_consola.mov -> TC_00_Instalacion_y_consola_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:32:14       9 % (01:05 de 11:51)
+15:32:47      19 % (02:17 de 11:51)
+15:33:13      29 % (03:30 de 11:51)
+15:33:38      40 % (04:42 de 11:51)
+15:34:04      50 % (05:54 de 11:51)
+15:34:31      60 % (07:05 de 11:51)
+15:34:57      70 % (08:16 de 11:51)
+15:35:23      80 % (09:28 de 11:51)
+15:35:50      90 % (10:40 de 11:51)
+15:36:12   copia ligera lista: 34.8 MB
+15:36:12 Subiendo TC_00_Instalacion_y_consola_subida.mp4 (36.5 MB, video/mp4) a la Files API…
+15:36:12 ERROR en TC_00_Instalacion_y_consola.mov: Error de la API de Gemini (402 RESOURCE_EXHAUSTED): Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay.  (detalle en salida/TC_00_Instalacion_y_consola/error.txt)
+15:42:23 === TC_00_Instalacion_y_consola.mov: 11:51, 1080x1920, 59.97 fps, 1508 MB -> salida/TC_00_Instalacion_y_consola
+15:42:23 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+15:42:23   TC_00_Instalacion_y_consola.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+15:42:23   transcodificando TC_00_Instalacion_y_consola.mov -> TC_00_Instalacion_y_consola_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+15:42:53       9 % (01:05 de 11:51)
+15:43:20      19 % (02:17 de 11:51)
+15:43:48      29 % (03:28 de 11:51)
+15:44:14      39 % (04:40 de 11:51)
+15:44:39      49 % (05:52 de 11:51)
+15:45:05      60 % (07:04 de 11:51)
+15:45:31      70 % (08:16 de 11:51)
+15:45:56      80 % (09:28 de 11:51)
+15:46:21      90 % (10:39 de 11:51)
+15:46:43   copia ligera lista: 34.8 MB
+15:46:43 Subiendo TC_00_Instalacion_y_consola_subida.mp4 (36.5 MB, video/mp4) a la Files API…
+15:46:46 Subido como files/wc68jnugqzr8; esperando a que Gemini lo procese…
+15:47:17 Archivo files/wc68jnugqzr8 listo (ACTIVE).
+15:47:17 Analizando TC_00_Instalacion_y_consola con gemini-3.5-flash (tramo 1/2: 00:00–04:00) (resolución alta)…
+15:47:27   9 momentos brutos, 71741 tokens.
+15:47:27 Analizando TC_00_Instalacion_y_consola con gemini-3.5-flash (tramo 2/2: 04:00–11:51) (resolución alta)…
+15:47:47   7 momentos brutos, 138262 tokens.
+15:47:47 Análisis terminado: 16 momentos.
+15:47:47 Transcribiendo el audio de TC_00_Instalacion_y_consola con gemini-3.5-flash (tramo 1/2)…
+15:47:58 Transcribiendo el audio de TC_00_Instalacion_y_consola con gemini-3.5-flash (tramo 2/2)…
+15:48:19 Transcripción: 78 segmentos, 70805 tokens.
+15:48:20 Archivo remoto files/wc68jnugqzr8 eliminado.
+15:48:20 momentos.json guardado (16 momentos).
+15:48:20 Extrayendo 16 capturas de TC_00_Instalacion_y_consola.mov…
+15:48:31   10/16 capturas
+15:48:37 Capturas: 16 extraídas, 0 fallidas
+15:48:37 Refinando títulos y descripciones con 16 capturas en alta resolución (gemini-3.5-flash)…
+15:48:37 Refinando con gemini-3.5-flash los textos de 16 pasos a partir de sus capturas (2 petición(es) de hasta 15 imágenes)…
+15:49:00 Refinado con capturas (gemini-3.5-flash): 16 pasos revisados en 2 petición(es), 12 con cambios (22470 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+15:49:06 Anotaciones: 12 capturas con círculo/flecha.
+15:49:06   documentos: 16 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+15:49:06 ERROR en TC_00_Instalacion_y_consola.mov: UnrecognizedImageError:  (detalle en salida/TC_00_Instalacion_y_consola/error.txt)
+15:52:42 === TC_00_Instalacion_y_consola.mov: 11:51, 1080x1920, 59.97 fps, 1508 MB -> salida/TC_00_Instalacion_y_consola
+15:52:42 --regenerar: se reutiliza el análisis de momentos.json (16 momentos, modo gemini); no se vuelve a analizar el video ni se llama a la API.
+15:52:42 momentos.json guardado (16 momentos).
+15:52:42 Extrayendo 16 capturas de TC_00_Instalacion_y_consola.mov…
+15:52:42   TC_00_Instalacion_y_consola.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+15:52:59   10/16 capturas
+15:53:05 Capturas: 16 extraídas, 0 fallidas
+15:53:10 Anotaciones: 12 capturas con círculo/flecha.
+15:53:10   documentos: 16 pasos, 2 por página (A4 horizontal 2x1; capturas verticales)
+15:53:11   docx: TC_00_Instalacion_y_consola.docx
+15:53:12   pdf: TC_00_Instalacion_y_consola.pdf (14 páginas)
+15:53:12 Listo en 30 s: 16 momentos, 14 páginas -> TC_00_Instalacion_y_consola.docx, TC_00_Instalacion_y_consola.pdf
