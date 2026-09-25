@@ -71,6 +71,8 @@ class Momento:
     titulo_original: Optional[str] = None       # título anterior si el refinado con capturas lo cambió (auditoría)
     descripcion_original: Optional[str] = None  # descripción anterior si el refinado con capturas la cambió
     capitulo: Optional[str] = None      # manual unido de varios videos: "N. Título del capítulo" (encabezado del índice)
+    rotacion: int = 0                   # grados (0, 90, 180, 270) girados en sentido horario a la captura para que la
+                                        # pantalla o los textos queden derechos (lo indica el refinado con capturas)
 
     @property
     def tiempo(self) -> str:
@@ -111,6 +113,8 @@ class Momento:
             datos["descripcion_original"] = self.descripcion_original
         if self.capitulo is not None:               # solo en manuales unidos
             datos["capitulo"] = self.capitulo
+        if self.rotacion:
+            datos["rotacion"] = self.rotacion
         return datos
 
 

@@ -159,6 +159,9 @@ def crear_parser() -> argparse.ArgumentParser:
     m.add_argument("--regenerar", action="store_true",
                    help="si existe momentos.json, salta el análisis y rehace capturas y documentos a partir de él "
                         "(sin usar la API)")
+    m.add_argument("--solo-refinado", action="store_true",
+                   help="reutiliza momentos.json y repite solo la pasada de refinado con las capturas (barata: corrige "
+                        "textos, zonas y endereza capturas giradas), y rehace los documentos")
     m.add_argument("--forzar", action="store_true", help="volver a analizar videos ya procesados")
     m.add_argument("--unir", metavar="NOMBRE",
                    help="sin API: une los videos YA procesados de la carpeta de salida (todos, o los de --solo, en "
@@ -214,6 +217,7 @@ def opciones_desde_args(args: argparse.Namespace) -> pipeline.Opciones:
         fps=args.fps, api_key=gemini.obtener_api_key(), equipo=args.equipo, redactor=args.redactor,
         resolucion=args.resolucion, copia_alto=args.copia_alto, subir_original=args.subir_original,
         refinar=config.REFINAR_CON_CAPTURAS and not args.sin_refinado, regenerar=args.regenerar,
+        solo_refinado=args.solo_refinado,
         lote_id=args.batch_recoger or None, esperar_lote=args.esperar,
         whisper_modelo=None if args.sin_whisper else args.whisper_modelo, offline=args.offline,
         ffmpeg=args.ffmpeg, ffprobe=args.ffprobe, max_subida_mb=args.max_subida_mb,

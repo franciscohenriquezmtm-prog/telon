@@ -41,6 +41,7 @@ resultados están en `salida/<nombre del video>/`: `<nombre>.pdf`, `<nombre>.doc
 | probar sin gastar nada                             | `.\resumir.bat --simular`                                            |
 | que nada salga del computador (sin Gemini)         | `.\resumir.bat --local`                                              |
 | corregir a mano `momentos.json` y rehacer el PDF   | `.\resumir.bat --regenerar` (no usa la API ni la clave)              |
+| repetir solo la revisión de capturas (textos, marcas, capturas giradas) | `.\resumir.bat --solo-refinado` (barato: solo sube imágenes) |
 | procesar solo un video                             | `.\resumir.bat --solo "nombre del video"` (repetir `--solo` por video) |
 | videos en otra carpeta                             | `.\resumir.bat D:\grabaciones` (la carpeta va primero)                |
 | decir qué equipo es                                | `.\resumir.bat --equipo "arco en C"`                                 |

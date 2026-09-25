@@ -101,7 +101,7 @@ PROMPT_REFINADO = """\
 Eres un instructor clínico experto en la operación de {equipo}. Estás revisando el borrador de un manual con capturas extraído de un video: recibirás la lista de pasos ya identificados (número, tiempo, título, descripción, importancia, fuente, sección y zona señalada) y, para cada paso, su captura en alta resolución tomada del video original.
 Es documentación clínica: sé fiel a lo que se ve en la captura y a lo que se dijo en el video. Usa los textos, valores, unidades, nombres de botones, menús, iconos e indicadores exactamente como se leen en la captura. No inventes ni completes con conocimiento general del equipo; si algo sigue sin leerse con claridad, dilo.
 La descripción puede contener información DICHA en el audio que no se ve en la captura (valores, advertencias, "valor no audible"): consérvala siempre; la captura es un solo fotograma y la pantalla puede mostrar otro valor en otro instante. Solo añade o corrige lo que la captura muestre con claridad. Si lo que se lee en pantalla contradice lo dicho, escribe ambos ("en pantalla se lee X; se indica Y") en vez de sustituir. Los pasos con fuente "audio" solo se completan (se les añade lo que se lea), nunca se corrigen.
-Formato de cada paso: titulo de máximo 8 palabras, estilo manual, en imperativo; descripcion de 1 o 2 frases y máximo 260 caracteres; zona {"x": 0-1000, "y": 0-1000} con x de izquierda a derecha e y de arriba abajo sobre la captura, o null si el elemento señalado no aparece en la captura.
+Formato de cada paso: titulo de máximo 8 palabras, estilo manual, en imperativo; descripcion de 1 o 2 frases y máximo 260 caracteres; zona {"x": 0-1000, "y": 0-1000} con x de izquierda a derecha e y de arriba abajo sobre la captura TAL COMO LA RECIBES (sin girarla), o null si el elemento señalado no aparece en la captura; rotacion: si la captura está girada (una pantalla, un panel o textos que se leen de lado o al revés porque se filmó con el teléfono de lado), los grados en sentido horario que hay que girarla para que quede derecha (90, 180 o 270); 0 si ya está derecha o no hay textos ni pantallas que lo indiquen.
 Responde únicamente con el JSON pedido. Español neutro, sin emojis ni símbolos especiales.
 """
 
@@ -113,14 +113,17 @@ PROMPT_REFINADO_USUARIO = (
     "(la captura no lo muestra); si la pantalla contradice lo dicho, escribe ambos. Los pasos con fuente \"audio\" "
     "solo se completan, no se corrigen. Ajusta la zona señalada si con la imagen se ve mejor dónde está lo "
     "importante; si el elemento señalado no aparece en la captura, devuelve zona null; si no devuelves zona se "
-    "conserva la actual. NO cambies los tiempos, NO agregues ni quites pasos, NO inventes: si en la captura no se "
-    "lee nada nuevo, deja el texto igual. Devuelve el mismo JSON (lista de momentos con el mismo número)."
+    "conserva la actual. Indica en rotacion los grados (90, 180 o 270, en sentido horario) que hay que girar la "
+    "captura si una pantalla o sus textos se ven de lado o al revés; 0 si está derecha. NO cambies los tiempos, "
+    "NO agregues ni quites pasos, NO inventes: si en la captura no se lee nada nuevo, deja el texto igual. "
+    "Devuelve el mismo JSON (lista de momentos con el mismo número)."
 )
 
 #: Sufijo del refinado cuando el modelo no admite esquema de respuesta.
 PROMPT_REFINADO_SIN_ESQUEMA = (
     "Responde SOLO con el JSON: un único objeto con la clave momentos (lista de objetos con numero, titulo, "
-    'descripcion y zona opcional {"x", "y"} o null), sin texto adicional ni marcas de código.'
+    'descripcion, zona opcional {"x", "y"} o null y rotacion opcional 0/90/180/270), sin texto adicional ni marcas de '
+    "código."
 )
 
 #: Texto que precede a cada imagen en el refinado (``tiempo`` = instante real del fotograma elegido).
@@ -188,6 +191,8 @@ ESQUEMA_REFINADO: dict = {
                     "descripcion": {"type": "string"},
                     # null = "no señalar nada" (el elemento no aparece en la captura); ausente = conservar la zona
                     "zona": {"anyOf": [ESQUEMA_ZONA, {"type": "null"}]},
+                    # grados en sentido horario para enderezar una captura girada (pantalla filmada de lado)
+                    "rotacion": {"type": "integer", "enum": [0, 90, 180, 270]},
                 },
                 "required": ["numero", "titulo", "descripcion"],
             },
@@ -1286,6 +1291,8 @@ def _refinar_momento(momento: Momento, bruto: dict) -> tuple[Momento, bool]:
       conserva; válida → se reemplaza.
     - Si el título o la descripción cambian, se guarda el texto previo en ``titulo_original`` /
       ``descripcion_original`` (una sola vez: se conserva el más antiguo) para poder auditar el cambio.
+    - ``rotacion`` (0/90/180/270, grados en sentido horario): se toma tal cual; ausente o inválida = 0.  La zona
+      devuelta se refiere a la captura sin girar; el pipeline gira imagen y zona después (``rotar_capturas``).
     """
     titulo = _recortar(str(bruto.get("titulo") or ""), config.MAX_TITULO) or momento.titulo
     descripcion = _recortar(str(bruto.get("descripcion") or ""), config.MAX_DESCRIPCION) or momento.descripcion
@@ -1300,7 +1307,11 @@ def _refinar_momento(momento: Momento, bruto: dict) -> tuple[Momento, bool]:
         zona = None
     else:
         zona = _normalizar_zona(bruto["zona"]) or momento.zona
+    rotacion = bruto.get("rotacion")
+    rotacion = int(rotacion) if isinstance(rotacion, int) and not isinstance(rotacion, bool) and rotacion in (0, 90, 180, 270) else 0
     cambios = {}
+    if rotacion != momento.rotacion:      # la captura recién extraída está sin girar: ausente = 0
+        cambios["rotacion"] = rotacion
     if titulo != momento.titulo:
         cambios["titulo"] = titulo
         cambios["titulo_original"] = momento.titulo_original if momento.titulo_original is not None else momento.titulo

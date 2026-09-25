@@ -153,3 +153,8 @@ def test_sin_transcripcion_y_sin_lupa():
     assert op.transcribir and op.lupa
     op = cli.opciones_desde_args(_args("--sin-transcripcion", "--sin-lupa"))
     assert not op.transcribir and not op.lupa
+
+
+def test_solo_refinado():
+    assert not cli.opciones_desde_args(_args()).solo_refinado
+    assert cli.opciones_desde_args(_args("--solo-refinado")).solo_refinado

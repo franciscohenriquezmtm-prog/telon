@@ -80,6 +80,7 @@ class Opciones:
     subir_original: bool = False                        # subir el archivo tal cual si cabe en max_subida_mb
     refinar: bool = config.REFINAR_CON_CAPTURAS         # segunda pasada con las capturas en alta resolución
     regenerar: bool = False                             # reutilizar momentos.json y rehacer capturas/documentos
+    solo_refinado: bool = False                         # como regenerar, pero repitiendo el refinado con capturas (API)
     lote_id: Optional[str] = None
     esperar_lote: bool = False
     whisper_modelo: Optional[str] = config.WHISPER_MODELO
@@ -352,6 +353,7 @@ def _momento_desde_dict(datos: dict, base: Path) -> Momento:
         titulo_original=datos.get("titulo_original"),
         descripcion_original=datos.get("descripcion_original"),
         capitulo=datos.get("capitulo"),
+        rotacion=int(datos.get("rotacion") or 0) if datos.get("rotacion") in (0, 90, 180, 270) else 0,
     )
 
 
@@ -474,6 +476,58 @@ def capturar_momentos(info: InfoVideo, momentos: list, carpeta: Path, ffmpeg: st
     log(f"Capturas: {total - fallidas} extraídas, {fallidas} fallidas")
     if anotar:
         anotar_momentos(momentos, lupa=lupa, log=log)
+
+
+def rotar_zona(zona: dict | None, grados: int) -> dict | None:
+    """La zona (punto o caja, coordenadas 0-1) tras girar la captura ``grados`` en sentido horario."""
+    if not isinstance(zona, dict) or grados % 360 == 0:
+        return zona
+
+    def punto(x: float, y: float) -> tuple[float, float]:
+        g = grados % 360
+        if g == 90:
+            return 1.0 - y, x
+        if g == 180:
+            return 1.0 - x, 1.0 - y
+        return y, 1.0 - x          # 270
+
+    if "caja" in zona and isinstance(zona["caja"], (list, tuple)) and len(zona["caja"]) == 4:
+        x1, y1, x2, y2 = (float(v) for v in zona["caja"])
+        (ax, ay), (bx, by) = punto(x1, y1), punto(x2, y2)
+        return {"caja": [round(min(ax, bx), 4), round(min(ay, by), 4), round(max(ax, bx), 4), round(max(ay, by), 4)]}
+    if "x" in zona and "y" in zona:
+        nx, ny = punto(float(zona["x"]), float(zona["y"]))
+        return {"x": round(nx, 4), "y": round(ny, 4)}
+    return zona
+
+
+def rotar_capturas(momentos: list, *, rotar_zona_tambien: bool, log: Callable[[str], None] = print) -> int:
+    """Gira en sitio la captura de cada momento con ``rotacion`` (grados en sentido horario) y devuelve cuántas.
+
+    ``rotar_zona_tambien`` True cuando la zona se refiere a la captura sin girar (recién devuelta por el refinado);
+    False al regenerar desde ``momentos.json``, donde la zona ya está guardada girada.  Un fallo al girar deja la
+    captura como está y avisa.
+    """
+    from PIL import Image   # import perezoso
+
+    giradas = 0
+    for momento in momentos:
+        grados = int(momento.rotacion or 0) % 360
+        if not grados or not momento.ruta_captura:
+            continue
+        try:
+            with Image.open(momento.ruta_captura) as imagen:
+                girada = imagen.convert("RGB").rotate(-grados, expand=True)   # Pillow gira en sentido antihorario
+                girada.save(momento.ruta_captura, "JPEG", quality=95)
+        except (OSError, ValueError) as exc:
+            log(f"  aviso: no se pudo girar la captura {Path(momento.ruta_captura).name} ({exc}); queda como estaba")
+            continue
+        if rotar_zona_tambien:
+            momento.zona = rotar_zona(momento.zona, grados)
+        giradas += 1
+    if giradas:
+        log(f"Capturas enderezadas: {giradas} (giradas según lo indicado por el refinado).")
+    return giradas
 
 
 def anotar_momentos(momentos: list, *, lupa: bool = True, log: Callable[[str], None] = print) -> int:
@@ -712,12 +766,15 @@ def _finalizar_video(info: InfoVideo, carpeta: Path, analisis: ResultadoAnalisis
     if con_api and cliente is not None:
         if op.refinar:
             analisis = _refinar(cliente, analisis, op, log)
+            rotar_capturas(analisis.momentos, rotar_zona_tambien=True, log=log)
         if op.redactor:
             analisis = _pulir(cliente, analisis, op, log)
         if op.refinar or op.redactor:
             guardar(analisis)
-    elif con_api and op.refinar and analisis.modo.startswith("gemini"):
-        log("Refinado con capturas omitido: no hay cliente de Gemini (sin clave).")
+    else:
+        if con_api and op.refinar and analisis.modo.startswith("gemini"):
+            log("Refinado con capturas omitido: no hay cliente de Gemini (sin clave).")
+        rotar_capturas(analisis.momentos, rotar_zona_tambien=False, log=log)   # rotación guardada en el JSON
     if op.anotar:
         anotar_momentos(analisis.momentos, lupa=op.lupa, log=log)
     docx, pdf, paginas = documentos.generar_documentos(
@@ -789,15 +846,25 @@ def _analisis_desde_json(carpeta: Path, op: Opciones, log: Callable[[str], None]
 
 
 def _desde_json(info: InfoVideo, carpeta: Path, op: Opciones, ffmpeg: str, inicio: float,
-                log: Callable[[str], None], *, retomar: bool) -> ResultadoVideo:
-    """Capturas, anotaciones y documentos a partir de ``momentos.json``, sin llamar a la API."""
+                log: Callable[[str], None], *, retomar: bool, cliente=None) -> ResultadoVideo:
+    """Capturas, anotaciones y documentos a partir de ``momentos.json``, sin llamar a la API.
+
+    Con ``cliente`` (``--solo-refinado``) se repite además la pasada de refinado con las capturas (barata: solo
+    imágenes), que corrige textos, zonas y la rotación de las capturas; el análisis del video no se repite.
+    """
     if retomar:
         log(f"{config.NOMBRE_JSON} existe pero faltan los documentos (una ejecución anterior falló a medias): "
             "se retoma desde el JSON sin volver a analizar (use --forzar para repetir el análisis).")
     analisis = _analisis_desde_json(carpeta, op, log, retomar=retomar)
-    analisis, docx, pdf, paginas, acumulado = _finalizar_video(info, carpeta, analisis, op, None, ffmpeg, log,
-                                                               uso_previo=_uso_acumulado_previo(carpeta), con_api=False)
-    return _resultado_listo(info, carpeta, analisis, docx, pdf, paginas, acumulado, inicio, False, log)
+    con_api = cliente is not None
+    if con_api:
+        log("--solo-refinado: se repite solo la pasada de refinado con las capturas (el análisis del video se reutiliza).")
+        for m in analisis.momentos:
+            m.rotacion = 0            # las capturas se vuelven a extraer sin girar; el refinado decide de nuevo
+        analisis.uso = None           # lo ya pagado está en uso_acumulado; esta ejecución solo paga el refinado
+    analisis, docx, pdf, paginas, acumulado = _finalizar_video(info, carpeta, analisis, op, cliente, ffmpeg, log,
+                                                               uso_previo=_uso_acumulado_previo(carpeta), con_api=con_api)
+    return _resultado_listo(info, carpeta, analisis, docx, pdf, paginas, acumulado, inicio, con_api, log)
 
 
 def procesar_video(ruta: Path, op: Opciones, cliente=None, *, log: Callable[[str], None] = print) -> ResultadoVideo:
@@ -813,11 +880,15 @@ def procesar_video(ruta: Path, op: Opciones, cliente=None, *, log: Callable[[str
         log = crear_log(carpeta, consola)
         _log_cabecera(info, carpeta, log)
         estado = _estado_salida(carpeta)
-        if op.regenerar:
+        if op.regenerar or op.solo_refinado:
+            opcion = "--solo-refinado" if op.solo_refinado else "--regenerar"
             if estado is None:
-                raise RuntimeError(f"--regenerar: no existe {carpeta / config.NOMBRE_JSON}; ejecute sin --regenerar "
+                raise RuntimeError(f"{opcion}: no existe {carpeta / config.NOMBRE_JSON}; ejecute sin {opcion} "
                                    "para analizar el video.")
-            return _desde_json(info, carpeta, op, ffmpeg, inicio, log, retomar=False)
+            if op.solo_refinado and cliente is None:
+                raise RuntimeError("--solo-refinado necesita la clave de Gemini (GEMINI_API_KEY) para la pasada de refinado.")
+            return _desde_json(info, carpeta, op, ffmpeg, inicio, log, retomar=False,
+                               cliente=cliente if op.solo_refinado else None)
         if estado == "completo" and not op.forzar:
             return _resultado_omitido(info, carpeta, inicio, log)
         if estado == "incompleto" and not op.forzar:

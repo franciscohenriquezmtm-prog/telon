@@ -1636,3 +1636,14 @@ def test_reparar_texto_vocales_mal_codificadas_y_controles():
     cliente = ClienteFalso([respuesta(datos)])
     segmentos, _uso = gemini.transcribir_video(cliente, archivo_remoto(), info_video(), MODELO, log=lambda _: None)
     assert segmentos[0]["texto"] == "botón físico"
+
+
+def test_refinado_devuelve_rotacion(tmp_path):
+    original = resultado_con_capturas(tmp_path)
+    cliente = ClienteFalso([respuesta(refinado_json([
+        {"numero": 1, "titulo": "Uno", "descripcion": "d1", "rotacion": 90},
+        {"numero": 3, "titulo": "Tres", "descripcion": "d3", "rotacion": 45}]))])   # el 2 no tiene captura
+    nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
+    assert [m.rotacion for m in nuevo.momentos] == [90, 0, 0]      # 45 no es válido: 0
+    assert "rotacion" in gemini.ESQUEMA_REFINADO["properties"]["momentos"]["items"]["properties"]
+    assert "rotacion" in gemini.PROMPT_REFINADO and "sentido horario" in gemini.PROMPT_REFINADO_USUARIO

@@ -63,6 +63,8 @@ def analisis_falso(info: InfoVideo, n: int = 5, modelo: str = MODELO, costo: flo
 class DoblesGemini:
     """Sustituye las funciones de red de ``gemini.py`` y registra cada llamada en ``llamadas``."""
 
+    rotar_primero = False      # True: el refinado devuelve rotacion=90 para el primer paso
+
     def __init__(self, monkeypatch, n: int = 5, fallo: Exception | None = None):
         self.llamadas: list[tuple] = []
         self.conservar: list[bool] = []            # conservar_subida recibido en cada subida
@@ -108,9 +110,11 @@ class DoblesGemini:
         assert not any(m.titulo.endswith("(pulido)") for m in resultado.momentos), "el refinado va antes que el redactor"
         self.llamadas.append(("refinar", modelo, len(capturas)))
         self.temperaturas.append(temperatura)
-        nuevos = [replace(m, titulo=m.titulo + " (refinado)") for m in resultado.momentos]
-        uso = Uso(modelo=f"{modelo} (+refinado)", batch=resultado.uso.batch)
-        uso.sumar(resultado.uso)
+        nuevos = [replace(m, titulo=m.titulo + " (refinado)", rotacion=90 if (i == 0 and self.rotar_primero) else 0)
+                  for i, m in enumerate(resultado.momentos)]
+        uso = Uso(modelo=f"{modelo} (+refinado)", batch=resultado.uso.batch if resultado.uso else False)
+        if resultado.uso is not None:        # como el real: con --solo-refinado el análisis previo no se vuelve a sumar
+            uso.sumar(resultado.uso)
         uso.sumar(Uso(modelo=modelo, tokens_entrada=1500, tokens_salida=300, tokens_total=1800, llamadas=1, costo_usd=0.0008))
         return replace(resultado, momentos=nuevos, uso=uso)
 
@@ -1001,3 +1005,83 @@ class TestCLI:
         proceso = ejecutar_cli(carpeta_videos, "--simular", "--salida", tmp_path / "salida")
         assert proceso.returncode == 1 and "ERROR" in proceso.stdout and "error.txt" in proceso.stderr
         assert (tmp_path / "salida" / "malo" / config.NOMBRE_ERROR).is_file()
+
+
+# ----------------------------------------------------------------------------- rotación de capturas
+class TestRotacion:
+    def test_rotar_zona(self):
+        assert pipeline.rotar_zona({"x": 0.2, "y": 0.7}, 90) == {"x": 0.3, "y": 0.2}
+        assert pipeline.rotar_zona({"x": 0.2, "y": 0.7}, 180) == {"x": 0.8, "y": 0.3}
+        assert pipeline.rotar_zona({"x": 0.2, "y": 0.7}, 270) == {"x": 0.7, "y": 0.8}
+        assert pipeline.rotar_zona({"x": 0.2, "y": 0.7}, 0) == {"x": 0.2, "y": 0.7}
+        assert pipeline.rotar_zona({"caja": [0.1, 0.2, 0.3, 0.6]}, 90) == {"caja": [0.4, 0.1, 0.8, 0.3]}
+        assert pipeline.rotar_zona(None, 90) is None
+
+    def test_rotar_capturas_gira_imagen_y_zona(self, tmp_path):
+        from PIL import Image
+        ruta = tmp_path / "c.jpg"
+        im = Image.new("RGB", (400, 200), (20, 20, 20))
+        for x in range(370, 400):                         # bloque rojo en la esquina superior derecha
+            for y in range(0, 30):
+                im.putpixel((x, y), (255, 0, 0))
+        im.save(ruta, "JPEG", quality=100)
+        m = Momento(tiempo_seg=1, titulo="t", descripcion="d", ruta_captura=str(ruta), zona={"x": 0.975, "y": 0.05},
+                    rotacion=90)
+        registro: list[str] = []
+        assert pipeline.rotar_capturas([m], rotar_zona_tambien=True, log=registro.append) == 1
+        with Image.open(ruta) as girada:
+            assert girada.size == (200, 400)
+            px = girada.getpixel((int(0.95 * 200), int(0.975 * 400)))    # 90° horario: arriba-derecha -> abajo-derecha
+        assert px[0] > 150 and px[1] < 100
+        assert m.zona == {"x": 0.95, "y": 0.975}
+        assert any("enderezadas: 1" in r for r in registro)
+        # sin rotar la zona (regenerar): solo la imagen
+        m2 = Momento(tiempo_seg=1, titulo="t", descripcion="d", ruta_captura=str(ruta), zona={"x": 0.5, "y": 0.5},
+                     rotacion=180)
+        assert pipeline.rotar_capturas([m2], rotar_zona_tambien=False, log=lambda _: None) == 1
+        assert m2.zona == {"x": 0.5, "y": 0.5}
+        # sin rotación o sin captura: nada
+        m3 = Momento(tiempo_seg=1, titulo="t", descripcion="d", ruta_captura=None, rotacion=90)
+        assert pipeline.rotar_capturas([m3, Momento(tiempo_seg=2, titulo="t", descripcion="d")],
+                                       rotar_zona_tambien=True, log=lambda _: None) == 0
+
+    def test_rotacion_se_guarda_y_se_lee_del_json(self, tmp_path):
+        m = Momento(tiempo_seg=1, titulo="t", descripcion="d", rotacion=270)
+        assert m.a_dict()["rotacion"] == 270 and "rotacion" not in Momento(tiempo_seg=1, titulo="t", descripcion="d").a_dict()
+        assert pipeline._momento_desde_dict({"tiempo_seg": 1, "titulo": "t", "descripcion": "d", "rotacion": 270}, tmp_path).rotacion == 270
+        assert pipeline._momento_desde_dict({"tiempo_seg": 1, "titulo": "t", "descripcion": "d", "rotacion": 45}, tmp_path).rotacion == 0
+
+
+class TestSoloRefinado:
+    def test_solo_refinado_repite_el_refinado_y_endereza_capturas(self, carpeta_videos, tmp_path, monkeypatch):
+        from PIL import Image
+        dobles = DoblesGemini(monkeypatch)
+        op = opciones(carpeta_videos, tmp_path, modo="gemini", api_key="clave")
+        r1 = pipeline.procesar_carpeta(op).resultados[0]
+        carpeta = r1.carpeta_salida
+        with Image.open(r1.analisis.momentos[0].ruta_captura) as im:
+            ancho, alto = im.size
+        assert ancho > alto and r1.analisis.momentos[0].rotacion == 0
+        # segunda pasada: solo refinado, y ahora el refinado dice que el primer paso está girado 90°
+        dobles.llamadas.clear()
+        dobles.rotar_primero = True
+        lineas, log = registro()
+        resumen = pipeline.procesar_carpeta(replace(op, solo_refinado=True), log=log)
+        r2 = resumen.resultados[0]
+        datos = comprobar_salida(carpeta, "maquina", r2)
+        assert [l[0] for l in dobles.llamadas] == ["refinar"]             # ni subida ni análisis
+        assert any("--solo-refinado" in l for l in lineas) and any("enderezadas: 1" in l for l in lineas)
+        m0 = r2.analisis.momentos[0]
+        assert m0.rotacion == 90 and datos["analisis"]["momentos"][0]["rotacion"] == 90
+        with Image.open(m0.ruta_captura) as im:
+            assert im.size == (alto, ancho)                                  # la captura quedó girada
+        assert m0.ruta_captura_anotada and Path(m0.ruta_captura_anotada).is_file()
+        assert all(m.rotacion == 0 for m in r2.analisis.momentos[1:])
+        # se pagó solo el refinado y se acumuló
+        assert r2.uso_ejecucion.tokens_total == 1800 and r2.uso_acumulado.tokens_total == 11700 + 1800
+        # --regenerar después conserva la rotación guardada sin llamar a la API
+        dobles.llamadas.clear()
+        r3 = pipeline.procesar_carpeta(replace(op, regenerar=True)).resultados[0]
+        assert dobles.llamadas == [] and r3.analisis.momentos[0].rotacion == 90
+        with Image.open(r3.analisis.momentos[0].ruta_captura) as im:
+            assert im.size == (alto, ancho)

@@ -24,7 +24,10 @@ usar el programa con doble clic (Windows y macOS).
 3. Guarda `momentos.json` en cuanto llega la respuesta (nada pagado se pierde).
 4. Extrae del **archivo original** el fotograma más nítido cerca de cada momento.
 5. Vuelve a enviar esas capturas en alta resolución para que el modelo corrija los
-   textos con lo que ahora se lee en pantalla (refinado).
+   textos con lo que ahora se lee en pantalla (refinado). En esa misma pasada el
+   modelo indica, captura por captura, si está girada (una pantalla o un panel
+   filmados con el teléfono de lado) y el programa la endereza; las capturas que
+   están bien se quedan como están.
 6. Transcribe literalmente el audio con tiempos (segunda llamada barata, a resolución
    baja) y lo guarda en `momentos.json`; va como anexo al final del manual.
 7. Dibuja las anotaciones (círculo, flecha y una **lupa**: la zona señalada ampliada
@@ -193,6 +196,7 @@ a analizar. Los videos que fallan no detienen a los demás.
 | `--redactor M` | segunda pasada solo de texto con un modelo más potente que pule la redacción |
 | `--temperatura T` | temperatura de muestreo del modelo (por defecto no se envía y vale la del modelo; Google recomienda no bajarla en Gemini 3) |
 | `--regenerar` | reutiliza `momentos.json` y rehace capturas y documentos **sin usar la API** |
+| `--solo-refinado` | reutiliza `momentos.json` y repite solo la pasada de refinado con las capturas (barata: solo imágenes): corrige textos y marcas, endereza capturas giradas y rehace los documentos |
 | `--unir NOMBRE` [`--titulo T`] | **sin API**: une los videos ya procesados de `salida\` (todos, o los de `--solo`, en orden alfabético) en un solo manual con capítulos, `salida\NOMBRE\`; cada capítulo conserva sus tiempos, y la transcripción va encadenada con un encabezado por capítulo |
 | `--forzar` | volver a analizar videos ya procesados |
 | `--solo NOMBRE` | procesar solo ese video (nombre con o sin extensión); repetible: `--solo A --solo B` |
