@@ -1,0 +1,89 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4980.mov",
+    "nombre": "IMG_4980",
+    "duracion_seg": 3.62,
+    "duracion": "00:04",
+    "fps": 60.0,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 7607269,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:47:46",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Registro de procedimiento quirúrgico en pizarra",
+    "resumen": "Este video documenta el registro inicial de datos de un paciente en una pizarra de quirófano. Se detallan el diagnóstico, los procedimientos a realizar y el tipo de intervención quirúrgica.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 1 pasos revisados en 1 petición(es), 1 con cambios (2101 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 3429,
+      "tokens_salida": 326,
+      "tokens_pensamiento": 237,
+      "tokens_total": 3992,
+      "detalle_entrada": {
+        "TEXT": 1974,
+        "VIDEO": 355,
+        "IMAGE": 1100
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0017
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Registrar diagnóstico y procedimiento",
+        "descripcion": "Anotar en la pizarra: Dx: Tumor maligno de la próstata; Cx: Instalación catéter JJ derecho, cistoscopia + electrocoagulación, lavado vesical.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Registro inicial",
+        "zona": {
+          "x": 0.454,
+          "y": 0.066
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.6,
+        "puntaje": null,
+        "descripcion_original": "Anotar en la pizarra: Dx (diagnóstico): Tumor maligno de la próstata; Procedimiento: Instalación catéter JJ derecho, cistoscopia + electrocoagulación, lavado vesical."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4980.docx",
+    "pdf": "IMG_4980.pdf",
+    "paginas": 3
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 3429,
+    "tokens_salida": 326,
+    "tokens_pensamiento": 237,
+    "tokens_total": 3992,
+    "detalle_entrada": {
+      "TEXT": 1974,
+      "VIDEO": 355,
+      "IMAGE": 1100
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0017
+  }
+}

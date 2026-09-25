@@ -1,0 +1,127 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4984.mov",
+    "nombre": "IMG_4984",
+    "duracion_seg": 18.81,
+    "duracion": "00:19",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 41797105,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:49:58",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Posicionamiento del brazo en C",
+    "resumen": "Este video muestra el ajuste físico y posicionamiento de un brazo en C de fluoroscopía. Se enfoca en cómo manipular los bloqueos mecánicos del equipo para acomodar el brazo en el espacio de trabajo.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 3 pasos revisados en 1 petición(es), 3 con cambios (4736 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 7268,
+      "tokens_salida": 736,
+      "tokens_pensamiento": 105,
+      "tokens_total": 8109,
+      "detalle_entrada": {
+        "VIDEO": 1725,
+        "TEXT": 2243,
+        "IMAGE": 3300
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0031
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Sujetar el mango del arco",
+        "descripcion": "El operador sujeta el mango ergonómico superior del arco en C, recubierto con una funda estéril, para manipular el equipo.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.844,
+          "y": 0.328
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.2,
+        "puntaje": null,
+        "descripcion_original": "El operador toma el mango ergonómico situado en la parte superior del arco en C para iniciar el movimiento del equipo."
+      },
+      {
+        "tiempo": "00:07",
+        "tiempo_seg": 7.0,
+        "titulo": "Liberar el freno de rotación",
+        "descripcion": "Se acciona la palanca de freno manual hacia la posición de desbloqueo, indicada por el icono de candado abierto, para permitir la rotación.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.482,
+          "y": 0.646
+        },
+        "captura": "capturas/02_00-07.jpg",
+        "captura_anotada": "capturas/02_00-07_anotada.jpg",
+        "tiempo_real_seg": 7.2,
+        "puntaje": null,
+        "titulo_original": "Liberar el bloqueo de rotación",
+        "descripcion_original": "Se acciona la palanca de bloqueo manual ubicada en la columna del brazo en C para permitir el giro del arco y facilitar su posicionamiento."
+      },
+      {
+        "tiempo": "00:15",
+        "tiempo_seg": 15.0,
+        "titulo": "Verificar desbloqueo y rotación",
+        "descripcion": "Tras accionar la palanca, el arco queda libre para rotar. Se observa el indicador de bloqueo en la posición de candado abierto.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Posicionamiento",
+        "zona": {
+          "x": 0.583,
+          "y": 0.484
+        },
+        "captura": "capturas/03_00-15.jpg",
+        "captura_anotada": "capturas/03_00-15_anotada.jpg",
+        "tiempo_real_seg": 14.0,
+        "puntaje": null,
+        "titulo_original": "Finalizar posicionamiento",
+        "descripcion_original": "Se observa el arco en C ya girado y ubicado en la posición requerida para liberar espacio en el quirófano y facilitar el acceso."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4984.docx",
+    "pdf": "IMG_4984.pdf",
+    "paginas": 5
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 7268,
+    "tokens_salida": 736,
+    "tokens_pensamiento": 105,
+    "tokens_total": 8109,
+    "detalle_entrada": {
+      "VIDEO": 1725,
+      "TEXT": 2243,
+      "IMAGE": 3300
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0031
+  }
+}

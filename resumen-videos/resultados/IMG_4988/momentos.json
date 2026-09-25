@@ -1,0 +1,127 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4988.mov",
+    "nombre": "IMG_4988",
+    "duracion_seg": 4.62,
+    "duracion": "00:05",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 10296631,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:52:18",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Preparación del entorno para equipo de arco en C",
+    "resumen": "Video de observación del entorno quirúrgico antes de iniciar el uso del arco en C. Se muestra la disposición de los cables y la protección estéril del equipo en el quirófano.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 3 pasos revisados en 1 petición(es), 3 con cambios (6155 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5996,
+      "tokens_salida": 745,
+      "tokens_pensamiento": 3132,
+      "tokens_total": 9873,
+      "detalle_entrada": {
+        "VIDEO": 446,
+        "TEXT": 2250,
+        "IMAGE": 3300
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0073
+    },
+    "momentos": [
+      {
+        "tiempo": "00:00",
+        "tiempo_seg": 0.0,
+        "titulo": "Identificar cables en el suelo",
+        "descripcion": "Se observa el cable del pedal del arco en C extendido en el suelo. Es fundamental organizar este cableado para evitar tropiezos del personal quirúrgico durante el procedimiento.",
+        "importancia": 3,
+        "fuente": "visual",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.48,
+          "y": 0.76
+        },
+        "captura": "capturas/01_00-00.jpg",
+        "captura_anotada": "capturas/01_00-00_anotada.jpg",
+        "tiempo_real_seg": 1.2,
+        "puntaje": null,
+        "descripcion_original": "Se observa el cable del pedal del arco en C en el suelo. Es fundamental organizar el cableado para evitar tropiezos del personal durante el procedimiento."
+      },
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Verificar cobertura de campos estériles",
+        "descripcion": "El equipo está cubierto con campos quirúrgicos verdes. Se debe comprobar la integridad de esta cobertura estéril antes de iniciar cualquier manipulación del sistema.",
+        "importancia": 5,
+        "fuente": "visual",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.4,
+          "y": 0.3
+        },
+        "captura": "capturas/02_00-01.jpg",
+        "captura_anotada": "capturas/02_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.2,
+        "puntaje": null,
+        "titulo_original": "Verificar campos estériles",
+        "descripcion_original": "El arco en C está cubierto con campos quirúrgicos verdes. Se debe comprobar la integridad de la cobertura estéril antes de iniciar cualquier manipulación."
+      },
+      {
+        "tiempo": "00:02",
+        "tiempo_seg": 2.0,
+        "titulo": "Localizar estación de monitoreo",
+        "descripcion": "Se visualiza la pantalla de visualización del arco en C situada en el fondo del quirófano. Debe asegurarse que sea plenamente visible para el operador.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.735,
+          "y": 0.218
+        },
+        "captura": "capturas/03_00-02.jpg",
+        "captura_anotada": "capturas/03_00-02_anotada.jpg",
+        "tiempo_real_seg": 1.0,
+        "puntaje": null,
+        "titulo_original": "Ubicar estación de monitoreo",
+        "descripcion_original": "Se identifica la ubicación de la pantalla de visualización del arco en C en el fondo del quirófano, asegurando que sea visible para el operador."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4988.docx",
+    "pdf": "IMG_4988.pdf",
+    "paginas": 5
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5996,
+    "tokens_salida": 745,
+    "tokens_pensamiento": 3132,
+    "tokens_total": 9873,
+    "detalle_entrada": {
+      "VIDEO": 446,
+      "TEXT": 2250,
+      "IMAGE": 3300
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0073
+  }
+}

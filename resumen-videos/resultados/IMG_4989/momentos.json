@@ -1,0 +1,107 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4989.mov",
+    "nombre": "IMG_4989",
+    "duracion_seg": 30.24,
+    "duracion": "00:30",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 67205039,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:53:06",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Procedimiento de cateterismo fluoroscópico",
+    "resumen": "Este video documenta un procedimiento clínico donde se utiliza un arco en C para realizar un cateterismo. Se detalla la configuración del equipo de fluoroscopía durante la intervención para asegurar la correcta guía del catéter.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4367 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 7030,
+      "tokens_salida": 468,
+      "tokens_pensamiento": 1129,
+      "tokens_total": 8627,
+      "detalle_entrada": {
+        "TEXT": 2100,
+        "VIDEO": 2730,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0042
+    },
+    "momentos": [
+      {
+        "tiempo": "00:08",
+        "tiempo_seg": 8.0,
+        "titulo": "Identificar ubicación del catéter",
+        "descripcion": "El operador confirma visualmente y mediante el arco en C que la punta del catéter está correctamente posicionada para proceder.",
+        "importancia": 4,
+        "fuente": "audio",
+        "seccion": "Procedimiento",
+        "zona": {
+          "x": 0.54,
+          "y": 0.18
+        },
+        "captura": "capturas/01_00-08.jpg",
+        "captura_anotada": "capturas/01_00-08_anotada.jpg",
+        "tiempo_real_seg": 8.2,
+        "puntaje": null
+      },
+      {
+        "tiempo": "00:16",
+        "tiempo_seg": 16.0,
+        "titulo": "Observar imagen fluoroscópica del catéter",
+        "descripcion": "El equipo médico observa el monitor, donde se visualiza la imagen fluoroscópica del catéter para guiar el procedimiento.",
+        "importancia": 5,
+        "fuente": "visual",
+        "seccion": "Procedimiento",
+        "zona": {
+          "x": 0.75,
+          "y": 0.05
+        },
+        "captura": "capturas/02_00-16.jpg",
+        "captura_anotada": "capturas/02_00-16_anotada.jpg",
+        "tiempo_real_seg": 16.2,
+        "puntaje": null,
+        "titulo_original": "Monitorizar imagen fluoroscópica",
+        "descripcion_original": "El equipo médico observa la pantalla del monitor que muestra la imagen fluoroscópica en tiempo real, confirmando la visualización del catéter dentro del paciente."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4989.docx",
+    "pdf": "IMG_4989.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 7030,
+    "tokens_salida": 468,
+    "tokens_pensamiento": 1129,
+    "tokens_total": 8627,
+    "detalle_entrada": {
+      "TEXT": 2100,
+      "VIDEO": 2730,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0042
+  }
+}

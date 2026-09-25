@@ -1,0 +1,29 @@
+13:52:18 === IMG_4989.mov: 00:30, 1080x1920, 59.96 fps, 64 MB -> salida/IMG_4989
+13:52:18 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+13:52:18   IMG_4989.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+13:52:18   transcodificando IMG_4989.mov -> IMG_4989_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+13:52:28      12 % (00:04 de 00:30)
+13:52:31      23 % (00:07 de 00:30)
+13:52:33      35 % (00:10 de 00:30)
+13:52:36      46 % (00:14 de 00:30)
+13:52:39      60 % (00:18 de 00:30)
+13:52:40      96 % (00:29 de 00:30)
+13:52:40   copia ligera lista: 1.6 MB
+13:52:40 Subiendo IMG_4989_subida.mp4 (1.7 MB, video/mp4) a la Files API…
+13:52:42 Subido como files/vocnzu3e0ylr; esperando a que Gemini lo procese…
+13:52:52 Archivo files/vocnzu3e0ylr listo (ACTIVE).
+13:52:52 Analizando IMG_4989 con gemini-3.1-flash-lite (resolución media)…
+13:52:55   2 momentos brutos, 4260 tokens.
+13:52:55 Análisis terminado: 2 momentos.
+13:52:55 Archivo remoto files/vocnzu3e0ylr eliminado.
+13:52:55 momentos.json guardado (2 momentos).
+13:52:55 Extrayendo 2 capturas de IMG_4989.mov…
+13:52:59 Capturas: 2 extraídas, 0 fallidas
+13:52:59 Refinando títulos y descripciones con 2 capturas en alta resolución (gemini-3.1-flash-lite)…
+13:52:59 Refinando con gemini-3.1-flash-lite los textos de 2 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+13:53:05 Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4367 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+13:53:06 Anotaciones: 2 capturas con círculo/flecha.
+13:53:06   documentos: 2 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+13:53:06   docx: IMG_4989.docx
+13:53:06   pdf: IMG_4989.pdf (4 páginas)
+13:53:06 Listo en 49 s: 2 momentos, 4 páginas -> IMG_4989.docx, IMG_4989.pdf

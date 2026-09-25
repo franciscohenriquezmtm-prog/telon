@@ -1,0 +1,106 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4986.mov",
+    "nombre": "IMG_4986",
+    "duracion_seg": 10.76,
+    "duracion": "00:11",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 23882465,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:51:09",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Preparación básica del arco en C",
+    "resumen": "Breve introducción a la activación del equipo y coordinación de la posición inicial de trabajo en quirófano.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (3954 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5259,
+      "tokens_salida": 447,
+      "tokens_pensamiento": 2012,
+      "tokens_total": 7718,
+      "detalle_entrada": {
+        "TEXT": 2063,
+        "VIDEO": 996,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.005
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Verificar activación de pedales y cables",
+        "descripcion": "Identificar el área de conexión de pedales y cables en el suelo, confirmando que el equipo está activo para su uso.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.372,
+          "y": 0.476
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 3.2,
+        "puntaje": null,
+        "titulo_original": "Verificar activación del sistema"
+      },
+      {
+        "tiempo": "00:06",
+        "tiempo_seg": 6.0,
+        "titulo": "Establecer configuración de posición",
+        "descripcion": "Coordinar verbalmente la configuración de posición del equipo con el personal, especificando tres posiciones directas.",
+        "importancia": 3,
+        "fuente": "audio",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.372,
+          "y": 0.476
+        },
+        "captura": "capturas/02_00-06.jpg",
+        "captura_anotada": "capturas/02_00-06_anotada.jpg",
+        "tiempo_real_seg": 6.6,
+        "puntaje": null
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4986.docx",
+    "pdf": "IMG_4986.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5259,
+    "tokens_salida": 447,
+    "tokens_pensamiento": 2012,
+    "tokens_total": 7718,
+    "detalle_entrada": {
+      "TEXT": 2063,
+      "VIDEO": 996,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.005
+  }
+}

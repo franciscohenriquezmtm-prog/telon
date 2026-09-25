@@ -1,0 +1,109 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4982.mov",
+    "nombre": "IMG_4982",
+    "duracion_seg": 16.72,
+    "duracion": "00:17",
+    "fps": 59.99,
+    "ancho": 1920,
+    "alto": 1080,
+    "tamano_bytes": 37378016,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:48:42",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Operación de la mesa quirúrgica",
+    "resumen": "Instrucciones básicas para el uso del control remoto y el desplazamiento manual de una mesa quirúrgica en un entorno hospitalario. Se explica cuándo utilizar el control y cuándo realizar el movimiento de forma manual.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4920 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5847,
+      "tokens_salida": 526,
+      "tokens_pensamiento": 1717,
+      "tokens_total": 8090,
+      "detalle_entrada": {
+        "VIDEO": 1540,
+        "TEXT": 2107,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0048
+    },
+    "momentos": [
+      {
+        "tiempo": "00:01",
+        "tiempo_seg": 1.0,
+        "titulo": "Usar el control remoto de mesa",
+        "descripcion": "El operador sostiene el mando a distancia. Se utiliza para el desplazamiento automático de la mesa mediante los botones de movimiento direccional visibles en el dispositivo.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Operación de mesa",
+        "zona": {
+          "x": 0.697,
+          "y": 0.405
+        },
+        "captura": "capturas/01_00-01.jpg",
+        "captura_anotada": "capturas/01_00-01_anotada.jpg",
+        "tiempo_real_seg": 1.2,
+        "puntaje": null,
+        "titulo_original": "Utilizar el control remoto",
+        "descripcion_original": "El operador sostiene el mando a distancia del equipo y explica que se utiliza para empujar o desplazar la camilla de forma automática."
+      },
+      {
+        "tiempo": "00:06",
+        "tiempo_seg": 6.0,
+        "titulo": "Desplazar manualmente la mesa",
+        "descripcion": "Se muestra el entorno inferior y la base de la mesa. Se debe realizar el desplazamiento manual empujando la mesa directamente cuando las funciones automáticas no están operativas.",
+        "importancia": 2,
+        "fuente": "ambos",
+        "seccion": "Operación de mesa",
+        "zona": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "captura": "capturas/02_00-06.jpg",
+        "captura_anotada": "capturas/02_00-06_anotada.jpg",
+        "tiempo_real_seg": 5.4,
+        "puntaje": null,
+        "titulo_original": "Desplazamiento manual de la mesa",
+        "descripcion_original": "Se muestra cómo desplazar la mesa manualmente, empujándola directamente, aclarando que se debe realizar así cuando las otras funciones no son automáticas."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4982.docx",
+    "pdf": "IMG_4982.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5847,
+    "tokens_salida": 526,
+    "tokens_pensamiento": 1717,
+    "tokens_total": 8090,
+    "detalle_entrada": {
+      "VIDEO": 1540,
+      "TEXT": 2107,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0048
+  }
+}

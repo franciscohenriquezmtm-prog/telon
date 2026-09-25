@@ -1,0 +1,109 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4985.mov",
+    "nombre": "IMG_4985",
+    "duracion_seg": 9.06,
+    "duracion": "00:09",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 19799266,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:50:29",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Introducción al panel de control del arco en C",
+    "resumen": "Video introductorio que muestra la ubicación y los elementos del panel de control de un equipo de arco en C de fluoroscopia. El video destaca el acceso al área de control y la visualización de la pantalla principal durante el procedimiento.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (3438 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5126,
+      "tokens_salida": 568,
+      "tokens_pensamiento": 103,
+      "tokens_total": 5797,
+      "detalle_entrada": {
+        "TEXT": 2107,
+        "VIDEO": 819,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0023
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Identificar consola de mando Philips",
+        "descripcion": "Se visualiza el panel de control del arco en C marca Philips, incluyendo la etiqueta de soporte técnico con teléfono 800 361 536 y la identificación del equipo END9 cl:1096.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Preparación",
+        "zona": {
+          "x": 0.56,
+          "y": 0.38
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 3.2,
+        "puntaje": null,
+        "titulo_original": "Acceso al panel de control",
+        "descripcion_original": "Se muestra la zona de acceso al panel de control del arco en C, enfatizando la necesidad de dejar suficiente espacio libre para operar el equipo cómodamente."
+      },
+      {
+        "tiempo": "00:04",
+        "tiempo_seg": 4.0,
+        "titulo": "Verificar ajustes en pantalla LCD",
+        "descripcion": "En la pantalla central se lee 'Abdominal' como tipo de examen, modo 'Auto', '1/2 dosis', '17 cm', '318' y 'Fluor'. Se confirma la configuración inicial operativa del equipo.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Operación",
+        "zona": {
+          "x": 0.58,
+          "y": 0.45
+        },
+        "captura": "capturas/02_00-04.jpg",
+        "captura_anotada": "capturas/02_00-04_anotada.jpg",
+        "tiempo_real_seg": 3.4,
+        "puntaje": null,
+        "titulo_original": "Pantalla principal de fluoroscopia",
+        "descripcion_original": "Vista de la pantalla principal del panel de control. Se observa la interfaz de usuario con ajustes operativos, aunque los parámetros específicos no se describen en detalle."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4985.docx",
+    "pdf": "IMG_4985.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5126,
+    "tokens_salida": 568,
+    "tokens_pensamiento": 103,
+    "tokens_total": 5797,
+    "detalle_entrada": {
+      "TEXT": 2107,
+      "VIDEO": 819,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0023
+  }
+}

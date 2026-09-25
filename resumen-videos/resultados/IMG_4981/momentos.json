@@ -1,0 +1,107 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4981.mov",
+    "nombre": "IMG_4981",
+    "duracion_seg": 5.87,
+    "duracion": "00:06",
+    "fps": 60.0,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 13202130,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:48:09",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Preparación quirófano para cistoscopia",
+    "resumen": "Este video muestra la planificación inicial escrita en la pizarra para una intervención de cistoscopia con instalación de catéter JJ. Se detallan el diagnóstico, el procedimiento quirúrgico requerido y los suministros necesarios para la cirugía.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (3446 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 4880,
+      "tokens_salida": 584,
+      "tokens_pensamiento": 92,
+      "tokens_total": 5556,
+      "detalle_entrada": {
+        "VIDEO": 543,
+        "TEXT": 2137,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0022
+    },
+    "momentos": [
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Registrar diagnóstico y procedimiento",
+        "descripcion": "Se anota en la pizarra el diagnóstico: Tumor maligno de la próstata, y el procedimiento: Instalación catéter JJ derecho, cistoscopia, electrocoagulación y lavado vesical.",
+        "importancia": 3,
+        "fuente": "visual",
+        "seccion": "Planificación quirúrgica",
+        "zona": {
+          "x": 0.23,
+          "y": 0.09
+        },
+        "captura": "capturas/01_00-03.jpg",
+        "captura_anotada": "capturas/01_00-03_anotada.jpg",
+        "tiempo_real_seg": 3.2,
+        "puntaje": null,
+        "descripcion_original": "Se anota en la pizarra el diagnóstico: Tumor maligno de la próstata, y el procedimiento: Instalación de catéter JJ derecho, cistoscopia, resección, coagulación y lavado vesical."
+      },
+      {
+        "tiempo": "00:03",
+        "tiempo_seg": 3.0,
+        "titulo": "Listar suministros requeridos",
+        "descripcion": "Se enumeran en la pizarra los suministros: 1 bata mediana (tegamed), 7 guantes 7.0, jeringa (J) 40 y P 1020.",
+        "importancia": 2,
+        "fuente": "visual",
+        "seccion": "Planificación quirúrgica",
+        "zona": {
+          "x": 0.76,
+          "y": 0.24
+        },
+        "captura": "capturas/02_00-03.jpg",
+        "captura_anotada": "capturas/02_00-03_anotada.jpg",
+        "tiempo_real_seg": 3.2,
+        "puntaje": null,
+        "descripcion_original": "Se enumeran en la pizarra los suministros: 1 bata mediana, 7 guantes 7.0, guante 7.0 (valor J) y 10.20 (valor P)."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4981.docx",
+    "pdf": "IMG_4981.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 4880,
+    "tokens_salida": 584,
+    "tokens_pensamiento": 92,
+    "tokens_total": 5556,
+    "detalle_entrada": {
+      "VIDEO": 543,
+      "TEXT": 2137,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0022
+  }
+}

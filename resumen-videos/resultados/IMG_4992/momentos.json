@@ -1,0 +1,108 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4992.mov",
+    "nombre": "IMG_4992",
+    "duracion_seg": 21.71,
+    "duracion": "00:22",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 47063823,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:53:51",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Inicio del equipo de fluoroscopía",
+    "resumen": "Instrucciones básicas para encender el equipo y activar el modo de fluoroscopía. Se detalla la interacción con el panel de control y la verificación de indicadores luminosos de estado.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4655 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 6294,
+      "tokens_salida": 506,
+      "tokens_pensamiento": 2256,
+      "tokens_total": 9056,
+      "detalle_entrada": {
+        "TEXT": 2098,
+        "VIDEO": 1996,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0057
+    },
+    "momentos": [
+      {
+        "tiempo": "00:00",
+        "tiempo_seg": 0.0,
+        "titulo": "Encender el equipo",
+        "descripcion": "Presionar el botón circular de encendido en el panel de control para iniciar el sistema.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Inicio del equipo",
+        "zona": {
+          "x": 0.335,
+          "y": 0.42
+        },
+        "captura": "capturas/01_00-00.jpg",
+        "captura_anotada": "capturas/01_00-00_anotada.jpg",
+        "tiempo_real_seg": 0.0,
+        "puntaje": null,
+        "descripcion_original": "Presionar el botón de encendido ubicado en el panel de control para iniciar el sistema."
+      },
+      {
+        "tiempo": "00:13",
+        "tiempo_seg": 13.0,
+        "titulo": "Activar el modo del equipo",
+        "descripcion": "Presionar el botón circular de encendido. Se indica en el audio que el indicador luminoso se apaga para confirmar la activación, aunque en pantalla no se aprecia claramente este cambio de estado.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Inicio del equipo",
+        "zona": {
+          "x": 0.333,
+          "y": 0.425
+        },
+        "captura": "capturas/02_00-13.jpg",
+        "captura_anotada": "capturas/02_00-13_anotada.jpg",
+        "tiempo_real_seg": 13.6,
+        "puntaje": null,
+        "titulo_original": "Activar modo fluoroscopia",
+        "descripcion_original": "Presionar el botón de fluoroscopia para habilitar el modo. Se observa y comenta que el indicador luminoso se apaga, lo cual confirma la activación correcta del modo."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4992.docx",
+    "pdf": "IMG_4992.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 6294,
+    "tokens_salida": 506,
+    "tokens_pensamiento": 2256,
+    "tokens_total": 9056,
+    "detalle_entrada": {
+      "TEXT": 2098,
+      "VIDEO": 1996,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0057
+  }
+}

@@ -29,3 +29,5 @@
 13:28:51   docx: IMG_4976.docx
 13:28:55   pdf: IMG_4976.pdf (5 páginas)
 13:28:55 Listo en 1 min 7 s: 3 momentos, 5 páginas -> IMG_4976.docx, IMG_4976.pdf
+13:46:56 === IMG_4976.mov: 01:20, 1080x1920, 59.96 fps, 170 MB -> salida/IMG_4976
+13:46:56 Ya procesado (momentos.json y documentos existen): se omite. Use --forzar para repetir el análisis o --regenerar para rehacer capturas y documentos sin volver a analizar.

@@ -1,0 +1,109 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4993.mov",
+    "nombre": "IMG_4993",
+    "duracion_seg": 26.65,
+    "duracion": "00:27",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 59137110,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:54:39",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Conexión y activación de consola de fluoroscopía",
+    "resumen": "Este video detalla el procedimiento inicial para conectar y activar la consola de control de un equipo de fluoroscopía. Se describe la conexión del pedal de activación y el encendido del sistema mediante los botones de la consola.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4927 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 6735,
+      "tokens_salida": 510,
+      "tokens_pensamiento": 1649,
+      "tokens_total": 8894,
+      "detalle_entrada": {
+        "VIDEO": 2449,
+        "TEXT": 2086,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0049
+    },
+    "momentos": [
+      {
+        "tiempo": "00:07",
+        "tiempo_seg": 7.0,
+        "titulo": "Conectar cable del pedal",
+        "descripcion": "Conecte el cable del pedal de control en el puerto circular localizado en la parte inferior de la base de la consola para permitir la activación remota.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.556,
+          "y": 0.725
+        },
+        "captura": "capturas/01_00-07.jpg",
+        "captura_anotada": "capturas/01_00-07_anotada.jpg",
+        "tiempo_real_seg": 7.2,
+        "puntaje": null,
+        "titulo_original": "Conectar pedal de control",
+        "descripcion_original": "Se conecta el cable del pedal de control en el puerto ubicado en la base de la consola para permitir la activación remota del equipo."
+      },
+      {
+        "tiempo": "00:08",
+        "tiempo_seg": 8.0,
+        "titulo": "Identificar panel de control",
+        "descripcion": "El panel de control se ubica en la superficie superior de la consola; los indicadores y botones específicos no se distinguen con claridad en esta captura.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Encendido",
+        "zona": {
+          "x": 0.5,
+          "y": 0.25
+        },
+        "captura": "capturas/02_00-08.jpg",
+        "captura_anotada": "capturas/02_00-08_anotada.jpg",
+        "tiempo_real_seg": 7.0,
+        "puntaje": null,
+        "titulo_original": "Encender consola",
+        "descripcion_original": "Se presionan los botones de control en la consola superior para iniciar el funcionamiento del sistema."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4993.docx",
+    "pdf": "IMG_4993.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 6735,
+    "tokens_salida": 510,
+    "tokens_pensamiento": 1649,
+    "tokens_total": 8894,
+    "detalle_entrada": {
+      "VIDEO": 2449,
+      "TEXT": 2086,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0049
+  }
+}

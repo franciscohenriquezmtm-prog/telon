@@ -1,0 +1,108 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4983.mov",
+    "nombre": "IMG_4983",
+    "duracion_seg": 15.29,
+    "duracion": "00:15",
+    "fps": 59.97,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 33767380,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:49:15",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Protección estéril del arco en C",
+    "resumen": "Este video muestra el procedimiento correcto para colocar la cubierta protectora estéril en un arco en C de fluoroscopía. Se explica cómo asegurar la funda para proteger el equipo y mantener la esterilidad del campo operatorio.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (4904 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5759,
+      "tokens_salida": 553,
+      "tokens_pensamiento": 1581,
+      "tokens_total": 7893,
+      "detalle_entrada": {
+        "VIDEO": 1439,
+        "TEXT": 2120,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0046
+    },
+    "momentos": [
+      {
+        "tiempo": "00:00",
+        "tiempo_seg": 0.0,
+        "titulo": "Colocar funda protectora estéril",
+        "descripcion": "Se visualiza el arco en C cubierto con una funda protectora de color azul, la cual asegura las condiciones de esterilidad necesarias para el procedimiento clínico.",
+        "importancia": 4,
+        "fuente": "ambos",
+        "seccion": "Preparación estéril",
+        "zona": {
+          "x": 0.372,
+          "y": 0.286
+        },
+        "captura": "capturas/01_00-00.jpg",
+        "captura_anotada": "capturas/01_00-00_anotada.jpg",
+        "tiempo_real_seg": 0.0,
+        "puntaje": null,
+        "descripcion_original": "El operador explica que se coloca una funda de plástico sobre el arco en C para proteger el equipo y mantener las condiciones de esterilidad necesarias durante el procedimiento."
+      },
+      {
+        "tiempo": "00:04",
+        "tiempo_seg": 4.0,
+        "titulo": "Ajustar funda protectora en articulación",
+        "descripcion": "El operador ajusta manualmente la posición de la funda estéril azul sobre la articulación del arco en C para asegurar un ajuste correcto sin interferencias en el movimiento.",
+        "importancia": 3,
+        "fuente": "ambos",
+        "seccion": "Preparación estéril",
+        "zona": {
+          "x": 0.554,
+          "y": 0.481
+        },
+        "captura": "capturas/02_00-04.jpg",
+        "captura_anotada": "capturas/02_00-04_anotada.jpg",
+        "tiempo_real_seg": 4.6,
+        "puntaje": null,
+        "titulo_original": "Asegurar la funda con papel",
+        "descripcion_original": "Se muestra la aplicación de un papel adhesivo para fijar la funda de protección. Esto evita que el plástico se mueva o se suelte durante el uso del equipo."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4983.docx",
+    "pdf": "IMG_4983.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5759,
+    "tokens_salida": 553,
+    "tokens_pensamiento": 1581,
+    "tokens_total": 7893,
+    "detalle_entrada": {
+      "VIDEO": 1439,
+      "TEXT": 2120,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0046
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4987.mov",
+    "nombre": "IMG_4987",
+    "duracion_seg": 7.79,
+    "duracion": "00:08",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 17338289,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:51:38",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Guía de operación de arco en C Philips",
+    "resumen": "Este video detalla la configuración inicial y el estado operativo del equipo de fluoroscopía arco en C Philips. Se muestran los parámetros de pantalla, la conexión del pedal y el entorno de quirófano previo a su uso.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (3448 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 5030,
+      "tokens_salida": 586,
+      "tokens_pensamiento": 206,
+      "tokens_total": 5822,
+      "detalle_entrada": {
+        "TEXT": 2106,
+        "VIDEO": 724,
+        "IMAGE": 2200
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0024
+    },
+    "momentos": [
+      {
+        "tiempo": "00:00",
+        "tiempo_seg": 0.0,
+        "titulo": "Verificar configuraciones en pantalla de control",
+        "descripcion": "La pantalla muestra: 41 kV, .060 mA, 1.44 pGy, 0:00 min, modo Abdominal, 1/2 dosis, 17 cm, 3, 1, 0, modo Fluoro. Se visualiza un valor de 41 kV en pantalla; si el audio menciona 70 kV, considere ambos valores.",
+        "importancia": 4,
+        "fuente": "visual",
+        "seccion": "Configuración inicial",
+        "zona": {
+          "x": 0.75,
+          "y": 0.38
+        },
+        "captura": "capturas/01_00-00.jpg",
+        "captura_anotada": "capturas/01_00-00_anotada.jpg",
+        "tiempo_real_seg": 0.0,
+        "puntaje": null,
+        "titulo_original": "Verificar parámetros de pantalla inicial",
+        "descripcion_original": "La pantalla muestra los ajustes actuales: modo abdomen, 70 kV, 2,5 mA. Indica que el sistema está listo para su uso."
+      },
+      {
+        "tiempo": "00:02",
+        "tiempo_seg": 2.0,
+        "titulo": "Posicionar el arco en C",
+        "descripcion": "El operador ajusta manualmente la posición del arco en C utilizando la manija superior, asegurando el alineamiento necesario antes de proceder con el examen radiológico.",
+        "importancia": 5,
+        "fuente": "visual",
+        "seccion": "Configuración inicial",
+        "zona": {
+          "x": 0.6,
+          "y": 0.25
+        },
+        "captura": "capturas/02_00-02.jpg",
+        "captura_anotada": "capturas/02_00-02_anotada.jpg",
+        "tiempo_real_seg": 1.8,
+        "puntaje": null,
+        "titulo_original": "Revisar conexión del cable del pedal",
+        "descripcion_original": "Se visualiza el cable del pedal de control extendido desde la unidad base hasta la zona de trabajo, garantizando que esté correctamente conectado."
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4987.docx",
+    "pdf": "IMG_4987.pdf",
+    "paginas": 4
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 5030,
+    "tokens_salida": 586,
+    "tokens_pensamiento": 206,
+    "tokens_total": 5822,
+    "detalle_entrada": {
+      "TEXT": 2106,
+      "VIDEO": 724,
+      "IMAGE": 2200
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0024
+  }
+}

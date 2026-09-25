@@ -1,0 +1,88 @@
+{
+  "video": {
+    "ruta": "/home/user/telon/resumen-videos/videos/IMG_4978.mov",
+    "nombre": "IMG_4978",
+    "duracion_seg": 7.59,
+    "duracion": "00:08",
+    "fps": 59.96,
+    "ancho": 1080,
+    "alto": 1920,
+    "tamano_bytes": 16538555,
+    "extra": {
+      "codec": "hevc",
+      "pix_fmt": "yuv420p10le",
+      "color_space": "bt2020nc",
+      "color_primaries": "bt2020",
+      "color_transfer": "arib-std-b67",
+      "origen_info": "ffmpeg"
+    }
+  },
+  "generado": "2026-09-25T13:47:25",
+  "version": "1.0.0",
+  "analisis": {
+    "modo": "gemini",
+    "modelo": "gemini-3.1-flash-lite",
+    "titulo": "Preparación básica para intervención radiológica",
+    "resumen": "Este video breve destaca la obligatoriedad del uso de elementos de protección personal contra radiaciones ionizantes antes de comenzar el procedimiento médico.",
+    "truncado": false,
+    "tramos": 1,
+    "avisos": [
+      "Refinado con capturas (gemini-3.1-flash-lite): 1 pasos revisados en 1 petición(es), 1 con cambios (3025 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original."
+    ],
+    "uso": {
+      "modelo": "gemini-3.1-flash-lite (+refinado)",
+      "tokens_entrada": 3781,
+      "tokens_salida": 296,
+      "tokens_pensamiento": 2254,
+      "tokens_total": 6331,
+      "detalle_entrada": {
+        "VIDEO": 718,
+        "TEXT": 1963,
+        "IMAGE": 1100
+      },
+      "llamadas": 2,
+      "batch": false,
+      "costo_usd": 0.0048
+    },
+    "momentos": [
+      {
+        "tiempo": "00:05",
+        "tiempo_seg": 5.0,
+        "titulo": "Utilizar protección radiológica",
+        "descripcion": "Es fundamental utilizar los delantales plomados de protección radiológica antes de iniciar el procedimiento. Es el paso más importante una vez el equipo está listo.",
+        "importancia": 5,
+        "fuente": "ambos",
+        "seccion": "Preparación del personal",
+        "zona": {
+          "x": 0.485,
+          "y": 0.372
+        },
+        "captura": "capturas/01_00-05.jpg",
+        "captura_anotada": "capturas/01_00-05_anotada.jpg",
+        "tiempo_real_seg": 4.8,
+        "puntaje": null
+      }
+    ],
+    "transcripcion": null
+  },
+  "documentos": {
+    "docx": "IMG_4978.docx",
+    "pdf": "IMG_4978.pdf",
+    "paginas": 3
+  },
+  "uso_acumulado": {
+    "modelo": "gemini-3.1-flash-lite (+refinado)",
+    "tokens_entrada": 3781,
+    "tokens_salida": 296,
+    "tokens_pensamiento": 2254,
+    "tokens_total": 6331,
+    "detalle_entrada": {
+      "VIDEO": 718,
+      "TEXT": 1963,
+      "IMAGE": 1100
+    },
+    "llamadas": 2,
+    "batch": false,
+    "costo_usd": 0.0048
+  }
+}

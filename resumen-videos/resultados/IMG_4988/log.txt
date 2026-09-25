@@ -1,0 +1,24 @@
+13:51:38 === IMG_4988.mov: 00:05, 1080x1920, 59.96 fps, 10 MB -> salida/IMG_4988
+13:51:38 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+13:51:38   IMG_4988.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+13:51:38   transcodificando IMG_4988.mov -> IMG_4988_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+13:51:42      76 % (00:04 de 00:05)
+13:51:42   copia ligera lista: 0.3 MB
+13:51:42 Subiendo IMG_4988_subida.mp4 (0.3 MB, video/mp4) a la Files API…
+13:51:43 Subido como files/8kmpultel0si; esperando a que Gemini lo procese…
+13:51:54 Archivo files/8kmpultel0si listo (ACTIVE).
+13:51:54 Analizando IMG_4988 con gemini-3.1-flash-lite (resolución media)…
+13:52:02   3 momentos brutos, 3718 tokens.
+13:52:02 Análisis terminado: 3 momentos.
+13:52:03 Archivo remoto files/8kmpultel0si eliminado.
+13:52:03 momentos.json guardado (3 momentos).
+13:52:03 Extrayendo 3 capturas de IMG_4988.mov…
+13:52:09 Capturas: 3 extraídas, 0 fallidas
+13:52:09 Refinando títulos y descripciones con 3 capturas en alta resolución (gemini-3.1-flash-lite)…
+13:52:09 Refinando con gemini-3.1-flash-lite los textos de 3 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+13:52:16 Refinado con capturas (gemini-3.1-flash-lite): 3 pasos revisados en 1 petición(es), 3 con cambios (6155 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+13:52:17 Anotaciones: 3 capturas con círculo/flecha.
+13:52:17   documentos: 3 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+13:52:17   docx: IMG_4988.docx
+13:52:18   pdf: IMG_4988.pdf (5 páginas)
+13:52:18 Listo en 40 s: 3 momentos, 5 páginas -> IMG_4988.docx, IMG_4988.pdf

@@ -1,0 +1,24 @@
+13:49:58 === IMG_4985.mov: 00:09, 1080x1920, 59.97 fps, 19 MB -> salida/IMG_4985
+13:49:58 extensión .mov: se sube una copia ligera: se sube una copia ligera a 720p; las capturas saldrán del original.
+13:49:58   IMG_4985.mov es HDR: se convierte a SDR (zscale+tonemap) en las capturas y en la copia ligera; si salen oscuras pruebe --sin-tonemap
+13:49:58   transcodificando IMG_4985.mov -> IMG_4985_subida.mp4 (lado menor 720 px, 2 fps, audio mono 64 kbps)...
+13:50:03      88 % (00:08 de 00:09)
+13:50:03   copia ligera lista: 0.6 MB
+13:50:03 Subiendo IMG_4985_subida.mp4 (0.6 MB, video/mp4) a la Files API…
+13:50:05 Subido como files/t1b8iugdo6g8; esperando a que Gemini lo procese…
+13:50:15 Archivo files/t1b8iugdo6g8 listo (ACTIVE).
+13:50:15 Analizando IMG_4985 con gemini-3.1-flash-lite (resolución media)…
+13:50:18   2 momentos brutos, 2359 tokens.
+13:50:18 Análisis terminado: 2 momentos.
+13:50:18 Archivo remoto files/t1b8iugdo6g8 eliminado.
+13:50:18 momentos.json guardado (2 momentos).
+13:50:18 Extrayendo 2 capturas de IMG_4985.mov…
+13:50:24 Capturas: 2 extraídas, 0 fallidas
+13:50:24 Refinando títulos y descripciones con 2 capturas en alta resolución (gemini-3.1-flash-lite)…
+13:50:24 Refinando con gemini-3.1-flash-lite los textos de 2 pasos a partir de sus capturas (1 petición(es) de hasta 15 imágenes)…
+13:50:28 Refinado con capturas (gemini-3.1-flash-lite): 2 pasos revisados en 1 petición(es), 2 con cambios (3438 tokens); el texto previo de cada paso cambiado queda en titulo_original/descripcion_original.
+13:50:29 Anotaciones: 2 capturas con círculo/flecha.
+13:50:29   documentos: 2 pasos, 1 por página (A4 vertical 1x1; capturas verticales)
+13:50:29   docx: IMG_4985.docx
+13:50:29   pdf: IMG_4985.pdf (4 páginas)
+13:50:29 Listo en 31 s: 2 momentos, 4 páginas -> IMG_4985.docx, IMG_4985.pdf
