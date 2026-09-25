@@ -1641,9 +1641,10 @@ def test_reparar_texto_vocales_mal_codificadas_y_controles():
 def test_refinado_devuelve_rotacion(tmp_path):
     original = resultado_con_capturas(tmp_path)
     cliente = ClienteFalso([respuesta(refinado_json([
-        {"numero": 1, "titulo": "Uno", "descripcion": "d1", "rotacion": 90},
-        {"numero": 3, "titulo": "Tres", "descripcion": "d3", "rotacion": 45}]))])   # el 2 no tiene captura
+        {"numero": 1, "titulo": "Uno", "descripcion": "d1", "arriba_pantalla": "derecha"},
+        {"numero": 3, "titulo": "Tres", "descripcion": "d3", "arriba_pantalla": "diagonal"}]))])   # el 2 no tiene captura
     nuevo = gemini.refinar_con_capturas(cliente, original, MODELO, log=lambda _: None)
-    assert [m.rotacion for m in nuevo.momentos] == [90, 0, 0]      # 45 no es válido: 0
-    assert "rotacion" in gemini.ESQUEMA_REFINADO["properties"]["momentos"]["items"]["properties"]
-    assert "rotacion" in gemini.PROMPT_REFINADO and "sentido horario" in gemini.PROMPT_REFINADO_USUARIO
+    assert [m.rotacion for m in nuevo.momentos] == [270, 0, 0]     # parte superior a la derecha: 270° horario
+    assert gemini.ROTACION_POR_LADO == {"arriba": 0, "derecha": 270, "abajo": 180, "izquierda": 90}
+    assert "arriba_pantalla" in gemini.ESQUEMA_REFINADO["properties"]["momentos"]["items"]["properties"]
+    assert "arriba_pantalla" in gemini.PROMPT_REFINADO and "arriba_pantalla" in gemini.PROMPT_REFINADO_USUARIO
