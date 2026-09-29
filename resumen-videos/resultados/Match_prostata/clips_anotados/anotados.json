@@ -1,0 +1,213 @@
+[
+ {
+  "nombre": "caso1_axial_limpio",
+  "video": "Captura_39671AE5",
+  "n": 1,
+  "inicio": 0.0,
+  "fin": 6.0,
+  "titulo": "Evaluación del match de próstata en plano axial",
+  "leyenda": [
+   "Sínfisis",
+   "Vejiga",
+   "Próstata (PTV)",
+   "Recto",
+   "Cabeza femoral"
+  ],
+  "mp4": "caso1_axial_limpio.mp4",
+  "gif": "caso1_axial_limpio.gif",
+  "jpg": "caso1_axial_limpio.jpg",
+  "mp4_bytes": 2805661,
+  "gif_bytes": 4121510
+ },
+ {
+  "nombre": "caso2_sagital_gas",
+  "video": "IMG_5043",
+  "n": 1,
+  "inicio": 20.5,
+  "fin": 30.0,
+  "titulo": "Vista Sagital: Gas Rectal y Desplazamiento de la Próstata",
+  "leyenda": [
+   "Vejiga",
+   "Próstata (PTV)",
+   "Gas rectal",
+   "Sínfisis púbica"
+  ],
+  "mp4": "caso2_sagital_gas.mp4",
+  "gif": "caso2_sagital_gas.gif",
+  "jpg": "caso2_sagital_gas.jpg",
+  "mp4_bytes": 1815917,
+  "gif_bytes": 3484198
+ },
+ {
+  "nombre": "caso2_axial_gas",
+  "video": "IMG_5043",
+  "n": 2,
+  "inicio": 11.0,
+  "fin": 19.0,
+  "titulo": "Vista Axial: Deformación por Gas Rectal",
+  "leyenda": [
+   "Vejiga",
+   "Próstata (PTV)",
+   "Recto",
+   "Gas rectal",
+   "Cabeza femoral"
+  ],
+  "mp4": "caso2_axial_gas.mp4",
+  "gif": "caso2_axial_gas.gif",
+  "jpg": "caso2_axial_gas.jpg",
+  "mp4_bytes": 1664726,
+  "gif_bytes": 3696942
+ },
+ {
+  "nombre": "caso2_axial_vejiga",
+  "video": "IMG_5043",
+  "n": 3,
+  "inicio": 54.5,
+  "fin": 62.5,
+  "titulo": "Vista Axial: Evaluación del Llenado Vesical",
+  "leyenda": [
+   "Vejiga",
+   "Gas rectal",
+   "Recto",
+   "Cabeza femoral izquierda",
+   "Cabeza femoral derecha"
+  ],
+  "mp4": "caso2_axial_vejiga.mp4",
+  "gif": "caso2_axial_vejiga.gif",
+  "jpg": "caso2_axial_vejiga.jpg",
+  "mp4_bytes": 1712242,
+  "gif_bytes": 3889675
+ },
+ {
+  "nombre": "caso3_axial_todo",
+  "video": "IMG_5040",
+  "n": 3,
+  "inicio": 20.0,
+  "fin": 29.0,
+  "titulo": "Evaluación del Recto y PTV Prorrateado",
+  "leyenda": [
+   "Cabeza femoral derecha",
+   "Cabeza femoral izquierda",
+   "Vejiga",
+   "Próstata (PTV)",
+   "Recto",
+   "Gas rectal",
+   "Sínfisis púbica"
+  ],
+  "mp4": "caso3_axial_todo.mp4",
+  "gif": "caso3_axial_todo.gif",
+  "jpg": "caso3_axial_todo.jpg",
+  "mp4_bytes": 1091868,
+  "gif_bytes": 3944945
+ },
+ {
+  "nombre": "caso3_multiplanar_barra",
+  "video": "IMG_5040",
+  "n": 4,
+  "inicio": 24.0,
+  "fin": 34.0,
+  "titulo": "Panel de Desplazamientos y Coordenadas",
+  "leyenda": [
+   "Vejiga",
+   "Gas rectal",
+   "Cabeza femoral",
+   "Cabeza femoral",
+   "Vejiga (Sagital)"
+  ],
+  "mp4": "caso3_multiplanar_barra.mp4",
+  "gif": "caso3_multiplanar_barra.gif",
+  "jpg": "caso3_multiplanar_barra.jpg",
+  "mp4_bytes": 2897447,
+  "gif_bytes": 3550447
+ },
+ {
+  "nombre": "caso4_comparacion_automatica",
+  "video": "IMG_5044",
+  "n": 2,
+  "inicio": 36.0,
+  "fin": 48.0,
+  "titulo": "Inicio de la alineación automática",
+  "leyenda": [
+   "Vejiga",
+   "Cabeza femoral derecha",
+   "Cabeza femoral izquierda",
+   "Recto"
+  ],
+  "mp4": "caso4_comparacion_automatica.mp4",
+  "gif": "caso4_comparacion_automatica.gif",
+  "jpg": "caso4_comparacion_automatica.jpg",
+  "mp4_bytes": 2264187,
+  "gif_bytes": 6459623
+ },
+ {
+  "nombre": "caso4_regla",
+  "video": "IMG_5044",
+  "n": 4,
+  "inicio": 81.0,
+  "fin": 92.0,
+  "titulo": "Medición de discrepancia y márgenes de seguridad",
+  "leyenda": [
+   "Vejiga",
+   "Desplazamiento",
+   "Gas rectal",
+   "Cabeza femoral"
+  ],
+  "mp4": "caso4_regla.mp4",
+  "gif": "caso4_regla.gif",
+  "jpg": "caso4_regla.jpg",
+  "mp4_bytes": 1692965,
+  "gif_bytes": 5737891
+ },
+ {
+  "nombre": "caso5_sagital_gas",
+  "video": "IMG_5059",
+  "n": 1,
+  "inicio": 3.5,
+  "fin": 7.0,
+  "titulo": "Evaluación Sagital y Relación Recto-Próstata",
+  "leyenda": [
+   "Vejiga",
+   "Próstata (PTV)",
+   "Gas rectal",
+   "Sínfisis"
+  ],
+  "mp4": "caso5_sagital_gas.mp4",
+  "gif": "caso5_sagital_gas.gif",
+  "jpg": "caso5_sagital_gas.jpg",
+  "mp4_bytes": 834657,
+  "gif_bytes": 1722323
+ },
+ {
+  "nombre": "caso5_axial",
+  "video": "IMG_5059",
+  "n": 3,
+  "inicio": 12.0,
+  "fin": 17.5,
+  "titulo": "Identificación de Gas Rectal en Plano Axial",
+  "leyenda": [
+   "Vejiga",
+   "Próstata (PTV)",
+   "Cabeza femoral izquierda",
+   "Cabeza femoral derecha"
+  ],
+  "mp4": "caso5_axial.mp4",
+  "gif": "caso5_axial.gif",
+  "jpg": "caso5_axial.jpg",
+  "mp4_bytes": 1493869,
+  "gif_bytes": 2674529
+ },
+ {
+  "nombre": "pantalla_guia",
+  "video": "Captura_39671AE5",
+  "n": 0,
+  "inicio": 0,
+  "fin": 6,
+  "titulo": "Cómo leer la pantalla",
+  "leyenda": null,
+  "mp4": "pantalla_guia.mp4",
+  "gif": "pantalla_guia.gif",
+  "jpg": "pantalla_guia.jpg",
+  "mp4_bytes": 2081452,
+  "gif_bytes": 3289966
+ }
+]
