@@ -1,0 +1,750 @@
+{
+ "Captura_39671AE5.MP4": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 1,
+   "razon": "Se observan claramente las estructuras de la región pélvica masculina con contornos de planificación para próstata (rojo/marrón), vejiga (amarillo) y cabezas femorales (verde), además de la anatomía de la próstata, recto y vejiga en los cortes axial, sagital y coronal.",
+   "software": "Varian Halcyon (interfaz de comparación 3D-3D)",
+   "que_muestra": "El operador realiza el registro manual y automático (match) de un CBCT diario frente al CT de planificación. Se muestran simultáneamente las vistas axial, sagital y coronal con los contornos del plan superpuestos, permitiendo evaluar las discrepancias anatómicas y el llenado de los órganos. Al final del video, en la parte inferior derecha, se aprecian los valores de desplazamiento aplicados.",
+   "gas_rectal": false,
+   "vejiga": "llena",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "Transv_CT_1 - kVCBCT_04/01 - 8/24/2020 9:17 AM 3D ID",
+    "Sagital_CT_1 - kVCBCT_04/01 - 8/24/2020 9:17 AM 3D ID",
+    "Frontal_CT_1 - kVCBCT_04/01 - 8/24/2020 9:17 AM 3D ID"
+   ],
+   "desplazamientos_leidos": [
+    "+0.13 cm (00:05)",
+    "+0.11 cm (00:05)",
+    "-0.08 cm (00:05)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "El operador se enfoca en el plano axial central de la próstata, mostrando una excelente delimitación de la pared rectal posterior en relación con la próstata y la base vesical.",
+     "valor_pedagogico": "Permite enseñar cómo identificar la interfase próstata-recto en el CBCT y cómo el contorno de planificación del CTV (en rojo) coincide con el tejido blando real en el día del tratamiento."
+    },
+    {
+     "tiempo": "00:02",
+     "descripcion": "Desplazamiento vertical en los cortes axiales para revisar la porción superior de la vejiga y las cabezas femorales bilaterales.",
+     "valor_pedagogico": "Útil para mostrar el volumen vesical en comparación con el contorno de planificación amarillo. Se observa que la vejiga del día cumple adecuadamente con el protocolo de llenado requerido."
+    },
+    {
+     "tiempo": "00:05",
+     "descripcion": "Se visualizan de forma estática los tres planos ortogonales (axial, sagital, coronal) junto con los desplazamientos calculados de la mesa en la esquina inferior derecha.",
+     "valor_pedagogico": "Ideal para explicar la importancia del registro de imágenes tridimensionales (3D-3D) y cómo interpretar y aplicar los desplazamientos (en centímetros) para corregir el posicionamiento del paciente antes de la irradiación."
+    }
+   ]
+  },
+  "tokens": 1488
+ },
+ "Captura_70E70A0F.MP4": {
+  "datos": {
+   "zona": "cabeza_cuello",
+   "es_prostata": false,
+   "confianza": 1.0,
+   "razon": "Se observan las estructuras anatómicas del área oral y cervical, incluyendo la mandíbula, las piezas dentarias, la base de la lengua, la vía aérea, las glándulas submandibulares, la médula espinal y las vértebras cervicales, junto con contornos de dosis y delimitación de órganos en riesgo típicos de esta región.",
+   "software": "Consola de tratamiento Varian (sistema de emparejamiento)",
+   "que_muestra": "Muestra la pantalla de emparejamiento de imágenes con una vista axial de la región de cabeza y cuello. El operador realiza un desplazamiento vertical a través de diferentes cortes axiales mientras se superponen los contornos de planificación sobre la anatomía de la tomografía. No se observan paneles laterales con los valores numéricos de desplazamiento.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [],
+   "desplazamientos_leidos": [],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Se visualiza la anatomía a nivel de la base de la lengua y los molares inferiores, con contornos de dosis de color rojo y naranja envolviendo el volumen blanco.",
+     "valor_pedagogico": "Muestra la correlación exacta entre los contornos de planificación del target y la anatomía ósea mandibular con piezas dentarias en un corte axial alto."
+    },
+    {
+     "tiempo": "00:02",
+     "descripcion": "El operador se desplaza en dirección caudal, mostrando la vía aérea superior y el cuerpo de una vértebra cervical con la médula espinal delimitada en azul.",
+     "valor_pedagogico": "Útil para enseñar la verificación geométrica de los órganos de riesgo críticos (médula espinal) y su alineación con los contornos del plan de tratamiento."
+    },
+    {
+     "tiempo": "00:04",
+     "descripcion": "Corte más inferior donde se destaca la mandíbula anterior, las glándulas submandibulares delimitadas bilateralmente y el volumen objetivo.",
+     "valor_pedagogico": "Permite analizar la consistencia de la posición del paciente considerando referencias de tejidos blandos y óseos de forma simultánea."
+    }
+   ]
+  },
+  "tokens": 1175
+ },
+ "IMG_5021.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.85,
+   "razon": "Se observa la cabeza femoral izquierda, el contorno corporal en verde, y bordes de estructuras contorneadas en amarillo y rojo que corresponden a la vejiga y el recto en un plano de pelvis.",
+   "software": "Varian Halcyon (Aria)",
+   "que_muestra": "El video muestra un primer plano de la vista axial en la consola de tratamiento durante el registro de imágenes. Se observa cómo el operador realiza un desplazamiento vertical (scroll) a través de los cortes de la pelvis del paciente, permitiendo verificar la coincidencia del contorno de planificación con la anatomía del CBCT.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [],
+   "desplazamientos_leidos": [],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Visualización inicial de la cabeza femoral izquierda y los contornos de planificación superpuestos.",
+     "valor_pedagogico": "Permite enseñar la importancia de verificar la coincidencia de estructuras óseas rígidas como la cabeza femoral para evaluar la calidad del registro inicial."
+    },
+    {
+     "tiempo": "00:04",
+     "descripcion": "Desplazamiento axial hacia cortes inferiores donde se aprecian pequeños artefactos de aire o densidad de aire en la mesa/soporte lateral.",
+     "valor_pedagogico": "Útil para mostrar el rango de movimiento y la revisión de contornos externos en toda la extensión del volumen de interés."
+    }
+   ]
+  },
+  "tokens": 1992
+ },
+ "IMG_5032.mov": {
+  "datos": {
+   "zona": "cerebro",
+   "es_prostata": false,
+   "confianza": 0.95,
+   "razon": "Se observan cortes axiales, sagitales y coronales del cerebro con un contorno de planificación en fosa posterior / cerebelo, además de la forma del cráneo en las reconstrucciones 3D.",
+   "software": "Varian Halcyon (interfaz de adquisición y registro de imágenes)",
+   "que_muestra": "El video muestra la adquisición de un CBCT de cabeza, la posterior reconstrucción de cortes y la fase de registro automático (match) de imágenes. Se compara el CBCT del día con el TAC de planificación en tres planos ortogonales (axial, sagital y coronal), mostrando la concordancia de las estructuras óseas y los contornos de planificación.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_18Ago26",
+    "kVCBCT_29a01",
+    "9/27/2020"
+   ],
+   "desplazamientos_leidos": [
+    "+0.22",
+    "+0.24",
+    "-0.08"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:03",
+     "descripcion": "El operador presiona el botón físico para iniciar la adquisición del CBCT en el gantry del Halcyon.",
+     "valor_pedagogico": "Muestra el flujo de trabajo real y la necesidad de mantener presionado el botón por seguridad."
+    },
+    {
+     "tiempo": "00:13",
+     "descripcion": "Se visualiza la reconstrucción de los cortes tomográficos en tiempo real (mientras gira el gantry).",
+     "valor_pedagogico": "Permite explicar el proceso de retroproyección y reconstrucción de la imagen 3D a partir de las proyecciones 2D."
+    },
+    {
+     "tiempo": "00:54",
+     "descripcion": "Se activa la ventana de 'Comparación automática' y se inicia el registro (fusión/match) automático entre el CBCT de hoy y el CT de planificación.",
+     "valor_pedagogico": "Excelente para ilustrar cómo el algoritmo busca la mejor correlación de densidades óseas y de tejido para sugerir los desplazamientos."
+    },
+    {
+     "tiempo": "01:07",
+     "descripcion": "El operador navega por los cortes axiales utilizando la herramienta de visualización mixta (split/ventana) para comprobar la alineación en fosa posterior.",
+     "valor_pedagogico": "Enseña cómo se realiza el control de calidad visual post-match automático antes de aceptar los desplazamientos."
+    }
+   ]
+  },
+  "tokens": 9443
+ },
+ "IMG_5039.mov": {
+  "datos": {
+   "zona": "cabeza_cuello",
+   "es_prostata": false,
+   "confianza": 0.98,
+   "razon": "Se observan las estructuras del cráneo, la mandíbula, los senos paranasales, la cavidad oral y la región cervical con la columna vertebral en los planos axial, sagital y coronal.",
+   "software": "Varian Halcyon - Interfaz de registro de imágenes 3D-3D",
+   "que_muestra": "El operador realiza un desplazamiento y revisión del registro (match) entre el CBCT y el CT de planificación en tres planos ortogonales (axial, sagital y coronal). Se observan contornos de dosis y delimitaciones de estructuras críticas (OARs) superpuestos en las imágenes. Se puede observar cómo se navega a través de los diferentes niveles anatómicos de la región de cabeza y cuello.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_17Ago26",
+    "kVCBCT_04a01 - 8/27/2026 8:37 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "X: -3.00 mm (00:05)",
+    "Y: -2.00 mm (00:05)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "Vista del plano axial a nivel de la base del cráneo y senos maxilares, con los planos sagital y coronal mostrando el registro de los tejidos blandos y óseos.",
+     "valor_pedagogico": "Permite mostrar la concordancia de estructuras óseas complejas de la base del cráneo y cómo se visualizan las líneas de isodosis o contornos en la interfaz de registro."
+    },
+    {
+     "tiempo": "00:04",
+     "descripcion": "El operador se desplaza hacia cortes más inferiores, pasando por la cavidad oral, donde se puede notar la presencia de artefactos dentales metálicos.",
+     "valor_pedagogico": "Útil para enseñar a los estudiantes cómo identificar y manejar la presencia de artefactos metálicos en la cavidad oral durante la verificación diaria con CBCT."
+    },
+    {
+     "tiempo": "00:08",
+     "descripcion": "El plano se sitúa a nivel de la mandíbula y las primeras vértebras cervicales, donde se aprecia la alineación de la columna.",
+     "valor_pedagogico": "Muestra la importancia del registro óseo de la columna cervical para asegurar la reproducibilidad de la posición del cuello y evitar desviaciones rotacionales."
+    },
+    {
+     "tiempo": "00:12",
+     "descripcion": "Navegación en regiones cervicales más inferiores, aproximándose a la laringe y hombros.",
+     "valor_pedagogico": "Sirve para discutir los retos del posicionamiento de los hombros y la región cervical baja, áreas críticas con alta probabilidad de variaciones anatómicas interfracción."
+    }
+   ]
+  },
+  "tokens": 2347
+ },
+ "IMG_5040.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan las estructuras del canal anal/recto con sonda (o gas), la próstata contorneada en naranja/verde, la vejiga justo por encima y las cabezas femorales en el plano axial medio.",
+   "software": "Varian Halcyon (comparación de imágenes 3D-3D para registro de CBCT)",
+   "que_muestra": "El operador realiza el registro manual o automático de las imágenes de tomografía computarizada de planificación con el CBCT del día en un acelerador Halcyon. Se muestran los tres planos: axial (izquierda principal), sagital (superior derecha) y coronal (inferior derecha), mientras se ajustan las posiciones y se muestran los valores de desplazamiento.",
+   "gas_rectal": true,
+   "vejiga": "intermedia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "Frontal - CT_17Ago26 - kVCBCT_02a01 - 0/27/2026 8:57 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "Z: -4,65 cm (00:01)",
+    "Z: -4,69 cm (00:08)",
+    "Z: -4,70 cm (00:15)",
+    "Z: -4,65 cm (00:20)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "Vista del plano sagital y coronal con los contornos de la próstata superpuestos en la anatomía del CBCT diario.",
+     "valor_pedagogico": "Permite mostrar la alineación cráneo-caudal y antero-posterior de la próstata respecto al plan original."
+    },
+    {
+     "tiempo": "00:09",
+     "descripcion": "El operador abre el menú de opciones de fluctuación (ajuste de visualización) en la pantalla de comparación axial.",
+     "valor_pedagogico": "Útil para enseñar cómo cambiar entre los modos de visualización (mezcla, alternancia o split) para evaluar la precisión del registro."
+    },
+    {
+     "tiempo": "00:17",
+     "descripcion": "Desplazamiento manual en los planos sagital y coronal para verificar la coincidencia ósea de la sínfisis púbica y el sacro.",
+     "valor_pedagogico": "Muestra cómo el operador decide si priorizar el match blando (próstata/recto) o el match óseo de la pelvis."
+    },
+    {
+     "tiempo": "00:24",
+     "descripcion": "Corte axial a nivel de las cabezas femorales y la próstata, mostrando con claridad la sonda/gas rectal.",
+     "valor_pedagogico": "Ejemplo ideal para discutir el impacto del gas rectal y el llenado de la ampolla rectal en el desplazamiento prostático diario."
+    }
+   ]
+  },
+  "tokens": 4061
+ },
+ "IMG_5041.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan claramente las estructuras de la región pélvica masculina contorneadas en la pantalla: la próstata (en rojo/naranja), la vejiga (en amarillo) y el recto (en marrón), que son los órganos de riesgo típicos en el tratamiento de radioterapia de próstata.",
+   "software": "Varian Halcyon (pantalla de registro de imágenes en modo comparación 3D-3D)",
+   "que_muestra": "El operador visualiza y ajusta el registro entre el CBCT del día y el CT de planificación en tres planos (axial, sagital y coronal). El video se enfoca posteriormente de manera detallada en la vista sagital para realizar el ajuste fino. Se observan indicadores gráficos de desplazamiento en pantalla en forma de barras verdes y valores numéricos.",
+   "gas_rectal": false,
+   "vejiga": "llena",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_22Ago26 - kVCBCT_20a01 - 8/27/2026 9:07 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "X: 0.03 cm (00:01)",
+    "X: 0.07 cm (00:09)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Vista de los tres planos de visualización (axial, sagital y coronal) con las estructuras anatómicas principales delimitadas por contornos de colores (próstata, vejiga, recto).",
+     "valor_pedagogico": "Permite explicar a los estudiantes la importancia de la visualización multiplanar simultánea para comprender la anatomía tridimensional antes de realizar desplazamientos de camilla."
+    },
+    {
+     "tiempo": "00:09",
+     "descripcion": "Transición a pantalla completa o zoom en la vista sagital, donde se aprecia la relación anteroposterior entre la vejiga, la próstata y el recto.",
+     "valor_pedagogico": "Es ideal para enseñar cómo evaluar la alineación de la interfase próstata-recto en el eje sagital y cómo influye el llenado de la vejiga en el desplazamiento o deformación de la próstata."
+    },
+    {
+     "tiempo": "00:15",
+     "descripcion": "El operador desliza el control de visualización para alternar la transparencia entre el CBCT actual y el CT de planificación.",
+     "valor_pedagogico": "Muestra de forma práctica el uso de la herramienta de fusión ('split-screen' o transparencia), fundamental para que el tecnólogo médico decida si el acoplamiento óseo y de tejidos blandos es correcto."
+    }
+   ]
+  },
+  "tokens": 3198
+ },
+ "IMG_5043.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan claramente las estructuras de la pelvis masculina en los tres planos de visualización, incluyendo los contornos de la próstata (rojo), la vejiga (amarillo), el recto (marrón) y las vesículas seminales, además de la presencia de gas rectal.",
+   "software": "Varian Halcyon (interfaz de comparación de imágenes 3D-3D para registro)",
+   "que_muestra": "El operador realiza una revisión de la coincidencia entre el CBCT del día y el CT de planificación en vistas axial, sagital y coronal. Se enfoca en realizar un zoom y un barrido de cortes en el plano sagital y axial para verificar la posición de la próstata en relación al recto y la vejiga, observándose en pantalla los valores de desplazamiento en la esquina inferior derecha.",
+   "gas_rectal": true,
+   "vejiga": "llena",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_1",
+    "kVCBCT_03a01 - 8/27/2020 9:24 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "00:00: V: +0.44 cm, L: +0.38 cm",
+    "00:20: V: +0.99 cm, L: -0.38 cm",
+    "00:43: V: +0.99 cm, L: -0.38 cm"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "Vista general de los tres planos de visualización (axial a la izquierda, sagital y coronal a la derecha) con los contornos del plan de tratamiento (próstata, recto y vejiga) superpuestos sobre el registro CBCT-CT.",
+     "valor_pedagogico": "Permite mostrar a los alumnos cómo se distribuyen y solapan los diferentes órganos a riesgo (recto, vejiga) respecto al volumen blanco en una configuración anatómica típica de próstata."
+    },
+    {
+     "tiempo": "00:12",
+     "descripcion": "Desplazamiento manual de cortes axiales donde se aprecia claramente la distensión del recto debido a la presencia de gas rectal.",
+     "valor_pedagogico": "Útil para discutir el impacto del gas rectal en la deformación y el desplazamiento anterior de la próstata respecto al plano original de simulación."
+    },
+    {
+     "tiempo": "00:22",
+     "descripcion": "Acercamiento (zoom) detallado en la vista sagital que resalta la interfase entre la pared posterior de la próstata y el recto.",
+     "valor_pedagogico": "Excelente para enseñar la importancia del alineamiento en el plano sagital, clave para controlar los márgenes de dosis y evitar la sobreexposición de la pared rectal."
+    },
+    {
+     "tiempo": "00:35",
+     "descripcion": "Navegación en el plano axial a nivel de la base prostática y las vesículas seminales.",
+     "valor_pedagogico": "Ideal para ilustrar la dificultad de registrar estructuras más blandas y móviles como las vesículas seminales en comparación con la próstata."
+    },
+    {
+     "tiempo": "00:58",
+     "descripcion": "Desplazamiento axial hacia cortes superiores mostrando el llenado vesical y los límites superiores de la planificación.",
+     "valor_pedagogico": "Muestra cómo evaluar la reproducibilidad del llenado diario de la vejiga y su impacto en el posicionamiento de los órganos pélvicos."
+    }
+   ]
+  },
+  "tokens": 7045
+ },
+ "IMG_5044.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan los contornos de la próstata (en color naranja/rojo), la vejiga (en color amarillo) y el recto (en color marrón), típicos de la planificación e IGRT de cáncer de próstata. También se aprecian las cabezas femorales y la sínfisis púbica.",
+   "software": "Varian Halcyon (fusión de imágenes / IGRT)",
+   "que_muestra": "El video muestra el proceso de registro o 'match' de imágenes 3D (CBCT del día de tratamiento versus TAC de planificación). El operador realiza inicialmente un ajuste manual y luego una comparación automática de imágenes. Se visualizan las vistas axial (en pantalla completa o de mayor tamaño) y en el panel derecho se alternan las vistas sagital y coronal con el fin de evaluar los desplazamientos espaciales.",
+   "gas_rectal": true,
+   "vejiga": "llena",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_17Ago26 - kVCBCT_03a01",
+    "02/10/2026 9:32 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "00:00 - X: -0.28 cm, Y: -0.22 cm, Z: -4.39 cm",
+    "00:06 - Z: -0.29 cm",
+    "00:23 - X: -0.09 cm, Y: -0.28 cm, Z: -4.39 cm",
+    "00:43 - X: -0.12 cm, Y: -0.22 cm, Z: -4.25 cm"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Vista axial ampliada que muestra la próstata y las cabezas femorales con los contornos del plan de radioterapia superpuestos.",
+     "valor_pedagogico": "Permite enseñar la correspondencia anatómica inicial de las estructuras de interés de próstata en la vista axial previo a los ajustes finos."
+    },
+    {
+     "tiempo": "00:11",
+     "descripcion": "Cambio a la vista sagital para realizar el registro en los ejes anterior-posterior y superior-inferior.",
+     "valor_pedagogico": "Muestra la relación sagital entre la base de la vejiga, el ápex de la próstata y el recto, ideal para explicar los desplazamientos en el eje Z."
+    },
+    {
+     "tiempo": "00:35",
+     "descripcion": "El operador activa la comparación automática en 3D-3D con ventana emergente en pantalla.",
+     "valor_pedagogico": "Sirve para mostrar el algoritmo de alineación automática antes del refinamiento manual final de los tecnólogos."
+    },
+    {
+     "tiempo": "00:58",
+     "descripcion": "El operador vuelve a pasar a la vista sagital donde se evidencia una burbuja de gas rectal en el CBCT en comparación con el TAC de planificación.",
+     "valor_pedagogico": "Ejemplo práctico de deformación de órganos y presencia de gas rectal que puede desplazar la próstata hacia anterior."
+    },
+    {
+     "tiempo": "01:21",
+     "descripcion": "El operador realiza desplazamientos manuales finos en la vista axial y comprueba el solapamiento de la pared vesical.",
+     "valor_pedagogico": "Útil para enseñar la verificación de la preparación del paciente (llenado vesical consistente) y su impacto en el posicionamiento de la próstata."
+    }
+   ]
+  },
+  "tokens": 9607
+ },
+ "IMG_5048.mov": {
+  "datos": {
+   "zona": "abdomen",
+   "es_prostata": false,
+   "confianza": 0.9,
+   "razon": "Se observa un corte de la región abdominal con estructuras correspondientes a la columna lumbar, intestinos y un volumen diana de tratamiento (PTV) localizado en el retroperitoneo o cerca de grandes vasos, con distribución de dosis concéntrica.",
+   "software": "Varian Halcyon (pantalla de comparación 3D-3D para registro de imágenes)",
+   "que_muestra": "El operador ejecuta un registro automático (match 3D-3D) entre el CBCT del día y el CT de planificación en la consola del acelerador Varian Halcyon. Se muestran las tres vistas clásicas (axial, sagital y coronal) mientras se ajustan los parámetros de comparación automática de acuerdo a diferentes estructuras (PTV y BODY). Se observan los valores de desplazamiento espacial resultantes y el despliegue posterior de las isodosis sobre la anatomía combinada.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_17Ago20 - kVCBCT_02a01",
+    "9/27/2020 9:43 AM"
+   ],
+   "desplazamientos_leidos": [
+    "Vrt: -0.19 cm, Lng: -4.70 cm, Lat: -2.67 cm (00:34)",
+    "Vrt: -0.17 cm, Lng: -4.70 cm, Lat: -2.57 cm (01:14)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:05",
+     "descripcion": "El operador selecciona la opción de comparación automática enfocada en el volumen 'PTV' con un margen de 1.0 cm.",
+     "valor_pedagogico": "Muestra cómo configurar el software de registro para priorizar una región de interés estrecha alrededor del tumor en vez de toda la anatomía del paciente."
+    },
+    {
+     "tiempo": "00:15",
+     "descripcion": "El operador cambia la estructura de comparación automática a 'BODY' para evaluar un registro global de la anatomía abdominal.",
+     "valor_pedagogico": "Enseña la diferencia en el comportamiento del algoritmo al realizar una alineación basada en todo el contorno corporal versus una alineación selectiva del volumen de tratamiento."
+    },
+    {
+     "tiempo": "00:34",
+     "descripcion": "Finaliza el algoritmo de comparación y se leen los primeros desplazamientos calculados en el panel inferior.",
+     "valor_pedagogico": "Útil para adiestrar a los alumnos en la lectura rápida de los tres ejes de desplazamiento (Vertical, Longitudinal, Lateral) antes de aplicar la corrección a la mesa de tratamiento."
+    },
+    {
+     "tiempo": "01:27",
+     "descripcion": "Se despliega la distribución de dosis e isodosis de planificación sobre la anatomía actual del paciente en las tres vistas.",
+     "valor_pedagogico": "Permite analizar el impacto de la posición anatómica del día en la cobertura de dosis del target y la protección de los órganos de riesgo circundantes en el abdomen."
+    }
+   ]
+  },
+  "tokens": 9385
+ },
+ "IMG_5050.mov": {
+  "datos": {
+   "zona": "pelvis_otro",
+   "es_prostata": false,
+   "confianza": 0.95,
+   "razon": "Se visualiza claramente el útero y el cuello uterino (contorneados en naranja/marrón) entre la vejiga y el recto en la vista sagital, característico de un tratamiento de pelvis ginecológica (cérvix o endometrio).",
+   "software": "Varian Halcyon, interfaz de registro/verificación de imágenes 3D-3D",
+   "que_muestra": "El video muestra el proceso de registro y cotejo (match) entre el CBCT diario y el CT de planificación en tres planos (axial, sagital y coronal). El operador evalúa las diferencias anatómicas y los desplazamientos de los órganos internos, utilizando herramientas de medición de distancia para evaluar variaciones en el llenado de la vejiga y recto.",
+   "gas_rectal": true,
+   "vejiga": "llena",
+   "textos_identificatorios": [
+    "Paciente, RFH"
+   ],
+   "etiquetas_plan": [
+    "CT_1 - kVCBCT_14a01 - 8/27/2020"
+   ],
+   "desplazamientos_leidos": [
+    "V: 0.15 cm a los 00:03"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:03",
+     "descripcion": "Vista sagital detallada que muestra el útero, la vejiga bien llena y el recto. Se observa una barra de desplazamiento vertical con un valor de 0.15 cm.",
+     "valor_pedagogico": "Permite enseñar la relación anatómica en el plano sagital de la pelvis ginecológica y cómo evaluar el desplazamiento vertical (V) en relación a los órganos de riesgo."
+    },
+    {
+     "tiempo": "00:11",
+     "descripcion": "Acercamiento al plano axial donde se aprecia una burbuja de gas rectal (zona negra/hipodensa) que deforma levemente la pared posterior del CTV.",
+     "valor_pedagogico": "Excelente ejemplo para discutir con los estudiantes el impacto del gas rectal en el desplazamiento de los órganos diana (cérvix/útero) y la necesidad de preparación intestinal."
+    },
+    {
+     "tiempo": "00:25",
+     "descripcion": "Desplazamiento (scroll) axial hacia cortes superiores mostrando los contornos de las áreas ganglionares y el llenado de la vejiga.",
+     "valor_pedagogico": "Muestra la importancia de revisar todo el volumen del CTV de manera cefalocaudal para asegurar que la cobertura de dosis planificada siga siendo válida con la anatomía del día."
+    }
+   ]
+  },
+  "tokens": 4446
+ },
+ "IMG_5054.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan las estructuras típicas de la pelvis masculina como la próstata contorneada en rojo/marrón, la vejiga en amarillo y el recto en rosado con gas en su interior. Además, el nombre de la etiqueta del plan incluye la palabra 'Prostata'.",
+   "software": "Varian Halcyon (pantalla de registro de imágenes / match)",
+   "que_muestra": "El operador visualiza y manipula las vistas de registro entre el CBCT del día y el CT de planificación en un acelerador Halcyon. Se aprecia principalmente la vista axial que transita por varios niveles (cráneo-caudal) donde se comparan los contornos de la próstata, vejiga y recto con la anatomía del CBCT. Se logran observar brevemente los valores del desplazamiento en el eje longitudinal.",
+   "gas_rectal": true,
+   "vejiga": "llena",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "Frontal - AC_VMAT_Prostata - kVCBCT_02a01 - 8/27/2026 10:48 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "Z: -6.85 cm (00:00)",
+    "Z: -6.85 cm (00:01)",
+    "Z: -6.85 cm (00:13)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Se muestra la vista axial de la pelvis con el volumen de la próstata, vejiga y recto superpuestos. A la derecha se ven las vistas sagital y coronal con los desplazamientos activos.",
+     "valor_pedagogico": "Permite mostrar la interfaz típica del registro 3D-3D en Halcyon, identificando la correspondencia inicial de los órganos de riesgo y la próstata con sus respectivos contornos de planificación."
+    },
+    {
+     "tiempo": "00:04",
+     "descripcion": "La vista axial se maximiza y se realiza un desplazamiento en sentido cráneo-caudal (cortes más inferiores hacia el ápex prostático y base del pene).",
+     "valor_pedagogico": "Ideal para enseñar la anatomía de transición del recto inferior y la próstata en dirección al ápex, permitiendo evaluar la coincidencia del canal anal y el gas en el recto bajo."
+    },
+    {
+     "tiempo": "00:09",
+     "descripcion": "Se muestra un corte más inferior donde se visualizan las cabezas femorales, sínfisis púbica y la uretra/ápex prostático.",
+     "valor_pedagogico": "Útil para enseñar a los estudiantes a verificar el match óseo y de tejidos blandos a nivel del límite inferior del volumen blanco (PTV)."
+    },
+    {
+     "tiempo": "00:15",
+     "descripcion": "Se desplaza la vista axial hacia un plano superior, mostrando la vejiga y las vesículas seminales/base de la próstata.",
+     "valor_pedagogico": "Ayuda a evaluar el llenado de la vejiga en el CBCT en comparación con la planificación del CT y la posición de la base prostática."
+    }
+   ]
+  },
+  "tokens": 2772
+ },
+ "IMG_5055.mov": {
+  "datos": {
+   "zona": "cabeza_cuello",
+   "es_prostata": false,
+   "confianza": 0.95,
+   "razon": "Se observan las vértebras cervicales en el plano sagital, la cavidad oral, la mandíbula, los contornos de la tráquea, tiroides y ganglios linfáticos del cuello (GTV, CTV/PTV de cabeza y cuello), además de la base del cráneo.",
+   "software": "Varian Halcyon - Comparación de imágenes en registro diario (CBCT vs CT)",
+   "que_muestra": "El operador realiza un recorrido axial por los cortes de planificación comparando las estructuras anatómicas con la imagen de adquisición diaria (CBCT), mostrando también los planos sagital y coronal con los contornos del plan de radioterapia. Se aprecia que está evaluando el correcto registro de imágenes para cabeza y cuello.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "AC_VMAT_CyC_SIB",
+    "kVCBCT_03a01 - 8/27/2026 11:06 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "X: -0.02 cm (00:01)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "Vista detallada del corte sagital con las curvas de isodosis y las estructuras de la columna cervical alineadas perfectamente con la planificación.",
+     "valor_pedagogico": "Muestra cómo evaluar la alineación ósea y el posicionamiento de la columna cervical para evitar dosis altas no planificadas en la médula espinal."
+    },
+    {
+     "tiempo": "00:05",
+     "descripcion": "El operador se desplaza por los cortes axiales superiores donde se observa la mandíbula y el área del paladar/cavidad oral.",
+     "valor_pedagogico": "Útil para enseñar la verificación de artefactos metálicos por empastes dentales y el posicionamiento preciso de la lengua o posicionadores intraorales."
+    },
+    {
+     "tiempo": "00:15",
+     "descripcion": "Corte axial a nivel inferior (región supraclavicular) donde se ven claramente los pulmones, las cabezas de las clavículas y el contorno de la médula espinal.",
+     "valor_pedagogico": "Permite discutir la importancia de verificar los hombros y su posible desplazamiento vertical u horizontal entre fracciones en tratamientos de cabeza y cuello."
+    }
+   ]
+  },
+  "tokens": 2588
+ },
+ "IMG_5056.mov": {
+  "datos": {
+   "zona": "torax",
+   "es_prostata": false,
+   "confianza": 0.95,
+   "razon": "Se observan claramente ambos pulmones en corte axial, la tráquea, el mediastino con estructuras vasculares, y contornos de planificación rodeando una masa en la región mediastínica/pulmonar.",
+   "software": "Varian Halcyon",
+   "que_muestra": "El operador visualiza y ajusta la superposición de la imagen de tomografía computarizada por haz de cono (CBCT) con la de planificación (CT). Se muestra principalmente una vista axial grande a la izquierda, y vistas sagital, coronal y reconstrucción 3D a la derecha. Se puede observar una etiqueta de desplazamiento vertical 'X: -0.20 cm' que se actualiza en pantalla.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "Resim-CT_30Jun20",
+    "kVCBCT_19a01"
+   ],
+   "desplazamientos_leidos": [
+    "X: -0.20 cm (00:01)",
+    "X: -0.20 cm (00:19)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "Vista en primer plano del tórax en corte axial donde se aprecia la tráquea bifurcándose, con los contornos del PTV y órganos de riesgo en color rojo y verde.",
+     "valor_pedagogico": "Permite mostrar la anatomía torácica típica en un plano axial de planificación y la excelente coincidencia del contorno del pulmón externo."
+    },
+    {
+     "tiempo": "00:10",
+     "descripcion": "El operador realiza un desplazamiento vertical a través de los cortes de la tomografía, permitiendo ver los cambios en los diámetros pulmonares y la posición del tumor.",
+     "valor_pedagogico": "Enseña la importancia de revisar la concordancia anatómica a lo largo de múltiples niveles y no solo en un único corte para asegurar un registro 3D óptimo."
+    },
+    {
+     "tiempo": "00:20",
+     "descripcion": "Se estabiliza la visualización mostrando el ajuste lateral y vertical junto con las vistas sagital y coronal en el panel derecho.",
+     "valor_pedagogico": "Útil para enseñar la verificación triplanar, fundamental para evitar sesgos de rotación o desplazamientos fuera de plano en radioterapia guiada por imágenes."
+    }
+   ]
+  },
+  "tokens": 2768
+ },
+ "IMG_5059.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 1.0,
+   "razon": "Se observan claramente las estructuras de la región pélvica masculina con contornos de planificación: la vejiga en amarillo, el recto en color fucsia con gas en su interior, y la próstata/CTV en color naranja-rojo.",
+   "software": "Varian Halcyon (consola de tratamiento, módulo de registro 3D-3D)",
+   "que_muestra": "El video muestra la interfaz de registro de imágenes (matching) de un acelerador Halcyon, donde se compara el CBCT del día con el TAC de planificación. Se aprecian las vistas axial, sagital y coronal con los contornos de las estructuras críticas superpuestas, mientras el operador hace zoom en las áreas de interés (vejiga y recto con gas) para verificar el correcto alineamiento anatómico de la próstata.",
+   "gas_rectal": true,
+   "vejiga": "intermedia",
+   "textos_identificatorios": [
+    "Paciente, HFS"
+   ],
+   "etiquetas_plan": [
+    "CT_17Ago26",
+    "kVCBCT_03a01"
+   ],
+   "desplazamientos_leidos": [
+    "Z: -134.08 cm (00:00)",
+    "Z: -133.35 cm (00:08)",
+    "Z: -131.95 cm (00:12)",
+    "Z: -133.75 cm (00:16)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Vista multiplanar (axial, coronal, sagital) que muestra la concordancia de las cabezas femorales y la sínfisis púbica.",
+     "valor_pedagogico": "Permite enseñar la distribución espacial de los tres planos ortogonales y la importancia del primer alineamiento óseo antes de evaluar los tejidos blandos."
+    },
+    {
+     "tiempo": "00:03",
+     "descripcion": "Acercamiento en la vista sagital mostrando la vejiga, próstata y el recto con una marcada burbuja de gas.",
+     "valor_pedagogico": "Es excelente para ilustrar el impacto del gas rectal en el desplazamiento anteroposterior de la próstata y cómo esto altera la anatomía de planificación frente a la del día de tratamiento."
+    },
+    {
+     "tiempo": "00:11",
+     "descripcion": "Acercamiento en la vista axial donde se observa la próstata y el contorno del recto, evaluando la deformación por el gas.",
+     "valor_pedagogico": "Ayuda a enseñar a los estudiantes a definir si el desplazamiento de la próstata es aceptable para proceder con el tratamiento o si requiere una re-preparación del paciente (vaciar recto)."
+    }
+   ]
+  },
+  "tokens": 3721
+ },
+ "IMG_5060.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.98,
+   "razon": "Presencia de contornos de vejiga (amarillo), próstata (rojo) y recto (marrón/naranja), además de la etiqueta 'Próstata, HFS' y la visualización de la sínfisis púbica y cabezas femorales.",
+   "software": "Varian Halcyon (Comparación 3D-3D)",
+   "que_muestra": "El operador realiza la revisión y ajuste del registro (match) entre el CBCT del día y el CT de planificación en los planos axial, sagital y coronal. Se observa el desplazamiento entre cortes para verificar la alineación de la anatomía ósea y de tejidos blandos. Se aprecia un valor de desplazamiento de +0.20 cm en pantalla.",
+   "gas_rectal": true,
+   "vejiga": "intermedia",
+   "textos_identificatorios": [
+    "Paciente, HFS"
+   ],
+   "etiquetas_plan": [
+    "CT_17Ago26",
+    "kVCBCT_03b01"
+   ],
+   "desplazamientos_leidos": [
+    "00:00 - Desplazamiento [cm] +0.20"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Visualización inicial de los tres planos ortogonales (axial, sagital y coronal) con las estructuras de planificación superpuestas sobre el CBCT.",
+     "valor_pedagogico": "Permite enseñar la distribución espacial de la consola de Halcyon para la verificación diaria IGRT en pelvis."
+    },
+    {
+     "tiempo": "00:17",
+     "descripcion": "El operador desplaza los cortes axiales en sentido craneocaudal analizando la concordancia ósea.",
+     "valor_pedagogico": "Útil para instruir a los estudiantes sobre cómo buscar referencias anatómicas reproducibles (cabezas femorales, sínfisis del pubis)."
+    },
+    {
+     "tiempo": "00:28",
+     "descripcion": "Zoom detallado en el plano sagital donde se visualiza el recto con presencia de gas rectal (zona negra hipodensa) justo detrás de la próstata.",
+     "valor_pedagogico": "Excelente para discutir en clase cómo el gas rectal deforma y desplaza la próstata anteriormente, afectando la precisión del tratamiento."
+    },
+    {
+     "tiempo": "00:45",
+     "descripcion": "Desplazamiento del corte hacia la zona superior de la pelvis, evaluando el domo de la vejiga.",
+     "valor_pedagogico": "Ayuda a demostrar cómo verificar la reproducibilidad del llenado vesical (comparación del contorno amarillo con el volumen real en el CBCT)."
+    }
+   ]
+  },
+  "tokens": 7056
+ },
+ "Match_CBCT_CyC.mov": {
+  "datos": {
+   "zona": "cabeza_cuello",
+   "es_prostata": false,
+   "confianza": 1,
+   "razon": "Se observan claramente la mandíbula, las piezas dentales, las vértebras cervicales, la cavidad oral, las fosas nasales, la tráquea y el lóbulo de la oreja en las tres reconstrucciones anatómicas (axial, sagital y coronal).",
+   "software": "Varian Halcyon (interfaz de registro y fusión de imágenes)",
+   "que_muestra": "El operador realiza un desplazamiento manual del volumen del CBCT sobre el CT de planificación en las tres vistas espaciales (axial, sagital y coronal). Se superponen contornos coloreados de las estructuras de planificación para verificar visualmente que las estructuras óseas y blandas coincidan de manera óptima antes de aplicar los desplazamientos.",
+   "gas_rectal": false,
+   "vejiga": "no se aprecia",
+   "textos_identificatorios": [],
+   "etiquetas_plan": [
+    "CT_25Jun26",
+    "kVCBCT_00a01",
+    "8/27/2026 12:40 PM 3D"
+   ],
+   "desplazamientos_leidos": [],
+   "momentos": [
+    {
+     "tiempo": "00:01",
+     "descripcion": "El operador realiza un paneo vertical en la vista axial visualizando la mandíbula inferior, las piezas dentales y las primeras vértebras cervicales junto a los contornos de planificación.",
+     "valor_pedagogico": "Muestra cómo evaluar la concordancia de estructuras de alto contraste (hueso y dientes) para asegurar la precisión del registro en la región de la mandíbula."
+    },
+    {
+     "tiempo": "00:05",
+     "descripcion": "Se desplaza hacia cortes más inferiores, mostrando las estructuras de la vía aérea (orofaringe/laringofaringe), el cuello y la columna cervical.",
+     "valor_pedagogico": "Es útil para enseñar la alineación a distintos niveles anatómicos del cuello y cómo varían los límites de las estructuras blandas frente a la rigidez ósea."
+    },
+    {
+     "tiempo": "00:09",
+     "descripcion": "Se visualizan las clavículas y los vértices pulmonares en el corte axial más inferior de la secuencia.",
+     "valor_pedagogico": "Permite demostrar el límite caudal del registro de imágenes de cabeza y cuello, asegurando la consistencia en la región de la fosa supraclavicular."
+    }
+   ]
+  },
+  "tokens": 2024
+ },
+ "VMAT_prostata_gas_recto.mov": {
+  "datos": {
+   "zona": "prostata",
+   "es_prostata": true,
+   "confianza": 0.95,
+   "razon": "Se observan las estructuras típicas de la pelvis masculina como la próstata (en contorno rojo/naranja), la vejiga (en contorno amarillo) y el recto (en contorno rosado) sobre las cabezas femorales y la sínfisis púbica.",
+   "software": "Varian Halcyon - Interfaz de registro 3D-3D",
+   "que_muestra": "El operador realiza la visualización y ajuste de la coincidencia (match) entre la tomografía de planificación (CT) y la de control diario (CBCT). Se muestran pantallas en planos axial (transversal), sagital y coronal, permitiendo alternar la visualización del contorno de próstata, recto y vejiga sobre ambas imágenes.",
+   "gas_rectal": true,
+   "vejiga": "llena",
+   "textos_identificatorios": [
+    "Paciente, HFS"
+   ],
+   "etiquetas_plan": [
+    "CT_17Ago26",
+    "kVCBCT_02a01",
+    "8/27/2026 11:57 AM 3D"
+   ],
+   "desplazamientos_leidos": [
+    "Z: -134.05 cm (00:01)",
+    "Z: -133.35 cm (00:07)",
+    "Z: -131.95 cm (00:13)"
+   ],
+   "momentos": [
+    {
+     "tiempo": "00:00",
+     "descripcion": "Vista de los cuatro cuadrantes en la consola de Halcyon mostrando cortes axial, coronal y sagital con los contornos del OAR (órganos en riesgo) y el volumen blanco.",
+     "valor_pedagogico": "Muestra la disposición espacial del tumor (próstata) en relación con la vejiga (superior/anterior) y el recto (posterior)."
+    },
+    {
+     "tiempo": "00:03",
+     "descripcion": "Acercamiento al plano sagital que evidencia la relación entre la próstata, el recto y la vejiga.",
+     "valor_pedagogico": "Permite enseñar cómo evaluar el llenado vesical y rectal diario en comparación con la simulación, identificando presencia de gas rectal que desplaza la próstata hacia anterior."
+    },
+    {
+     "tiempo": "00:11",
+     "descripcion": "Foco en el plano axial mostrando de forma clara la delimitación de la próstata con respecto a la pared anterior del recto.",
+     "valor_pedagogico": "Es útil para enseñar a realizar el match enfocado en la interfaz próstata-recto, punto crítico para evitar la sobredosificación en la pared rectal."
+    }
+   ]
+  },
+  "tokens": 2464
+ }
+}

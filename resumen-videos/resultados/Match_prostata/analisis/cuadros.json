@@ -1,0 +1,593 @@
+{
+ "IMG_5059": {
+  "momentos": [
+   {
+    "cuadro": 9,
+    "titulo": "Evaluación Sagital y Relación Recto-Próstata",
+    "que_se_ve": "Vista sagital ampliada de la pelvis donde se aprecian los contornos de la vejiga (amarillo), próstata (rojo) y recto (naranja) sobre el CBCT gris.",
+    "ensenanza": "Muestra la importancia de la vista sagital para evaluar el acoplamiento de la próstata y el recto. Se observa gas rectal que deforma la pared posterior. El alumno debe notar que la distancia recto-PTV en el eje AP debe mantenerse por debajo de los 15 mm según el protocolo para evitar subdosificación o toxicidad.",
+    "tema": "gas_rectal",
+    "caja": [
+     0.15,
+     0.0,
+     0.85,
+     0.95
+    ],
+    "clip_hasta_cuadro": 10,
+    "que_cambia_en_clip": "Pequeño ajuste de ventana de contraste o posición en el eje longitudinal.",
+    "t": 4.0,
+    "t_fin": 4.5
+   },
+   {
+    "cuadro": 26,
+    "titulo": "Discrepancia Axial y Llenado de Órganos de Riesgo",
+    "que_se_ve": "Corte axial a nivel de la próstata (rojo), recto (naranja) y vejiga (amarillo), mostrando las cabezas femorales contorneadas en verde.",
+    "ensenanza": "Permite analizar el llenado vesical y rectal en comparación con el TAC de simulación. Se observa una ligera discrepancia en el contorno posterior de la próstata con respecto al CBCT real, lo que requiere un ajuste fino mediante el desplazamiento de camilla.",
+    "tema": "desplazamiento",
+    "caja": [
+     0.05,
+     0.05,
+     0.95,
+     0.95
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 12.5,
+    "t_fin": null
+   },
+   {
+    "cuadro": 28,
+    "titulo": "Identificación de Gas Rectal en Plano Axial",
+    "que_se_ve": "Vista axial de alta calidad enfocada en la próstata y el recto, donde se distingue una pequeña bolsa de gas rectal (zona oscura) en el CBCT.",
+    "ensenanza": "El estudiante debe aprender a identificar el gas rectal (área hipodensa en el CBCT) y comprender cómo este desplaza o deforma el volumen blanco (PTV). Si el desplazamiento resultante supera los 5 mm, se debe aplicar la corrección y, si supera los 8 mm, se debe evaluar reposicionar al paciente según el protocolo INC.",
+    "tema": "gas_rectal",
+    "caja": [
+     0.1,
+     0.05,
+     0.9,
+     0.95
+    ],
+    "clip_hasta_cuadro": 30,
+    "que_cambia_en_clip": "Barrido milimétrico de cortes axiales en sentido craneocaudal para evaluar la extensión del gas.",
+    "t": 13.5,
+    "t_fin": 14.5
+   }
+  ],
+  "tokens": 4822,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "Captura_39671AE5": {
+  "momentos": [
+   {
+    "cuadro": 1,
+    "titulo": "Evaluación del match de próstata en plano axial",
+    "que_se_ve": "Vista axial a nivel de la próstata donde se observa el contorno de planificación en rojo (PTV) superpuesto sobre la anatomía de la próstata en el CBCT.",
+    "ensenanza": "El estudiante debe evaluar el límite posterior de la próstata en relación con la pared anterior del recto. Se observa una adecuada concordancia entre el contorno rojo del PTV y la próstata en el CBCT del día, sin evidencia de gas rectal significativo que desplace la glándula.",
+    "tema": "anatomia",
+    "caja": [
+     0.01,
+     0.03,
+     0.65,
+     0.97
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 0.0,
+    "t_fin": null
+   },
+   {
+    "cuadro": 5,
+    "titulo": "Control de llenado vesical",
+    "que_se_ve": "Vista axial a un nivel más superior que muestra el volumen y contorno de la vejiga (línea amarilla) en comparación con el CBCT.",
+    "ensenanza": "Es fundamental evaluar la consistencia del llenado de la vejiga. En este cuadro se puede observar que el domo vesical en el CBCT del día coincide casi perfectamente con el contorno amarillo de la planificación (diferencia menor a 20 mm), asegurando la correcta protección de las asas intestinales.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.01,
+     0.03,
+     0.65,
+     0.97
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 2.0,
+    "t_fin": null
+   },
+   {
+    "cuadro": 8,
+    "titulo": "Verificación final del volumen rectal y de la próstata",
+    "que_se_ve": "Corte axial de control que muestra el recto en la parte posterior y la próstata/vesículas seminales (contorno rojo/marrón) en posición central.",
+    "ensenanza": "Instruir al alumno a verificar que la distancia de discrepancia entre la pared rectal y el PTV en el eje AP no supere los 15 mm. El recto se presenta sin sobredistensión gaseosa o fecal, garantizando la reproducibilidad geométrica del tratamiento.",
+    "tema": "anatomia",
+    "caja": [
+     0.01,
+     0.03,
+     0.65,
+     0.97
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 3.5,
+    "t_fin": null
+   }
+  ],
+  "tokens": 2804,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5043": {
+  "momentos": [
+   {
+    "cuadro": 44,
+    "titulo": "Vista Sagital: Gas Rectal y Desplazamiento de la Próstata",
+    "que_se_ve": "Vista sagital de la pelvis donde se observa el recto con una gran burbuja de gas (zona oscura) que empuja la próstata hacia anterior.",
+    "ensenanza": "El docente debe destacar cómo el gas rectal en el CBCT de hoy desplaza la próstata respecto al contorno rojo del TAC de planificación. Los alumnos deben evaluar si este desplazamiento posterior-anterior cumple con la tolerancia de la guía clínica (<15 mm de separación recto-PTV) o si es necesario re-preparar al paciente.",
+    "tema": "gas_rectal",
+    "caja": [
+     0.05,
+     0.01,
+     0.95,
+     0.99
+    ],
+    "clip_hasta_cuadro": 50,
+    "que_cambia_en_clip": "Muestra ligeros cambios de contraste o ajustes en la visualización de la interfase recto-próstata en la vista sagital.",
+    "t": 21.5,
+    "t_fin": 24.5
+   },
+   {
+    "cuadro": 35,
+    "titulo": "Vista Axial: Deformación por Gas Rectal",
+    "que_se_ve": "Corte axial a nivel prostático medio mostrando una marcada burbuja de gas oscuro dentro del recto en el CBCT.",
+    "ensenanza": "Muestre cómo el contorno marrón del recto de planificación ya no coincide con la anatomía del CBCT diario debido al gas. El alumno debe aprender a priorizar el calce del contorno rojo de la próstata (GTV/PTV) sin comprometer la dosis en la pared rectal desplazada.",
+    "tema": "gas_rectal",
+    "caja": [
+     0.01,
+     0.01,
+     0.65,
+     0.98
+    ],
+    "clip_hasta_cuadro": 36,
+    "que_cambia_en_clip": "Pequeño desplazamiento lateral en el plano axial para mejorar el ajuste del match.",
+    "t": 17.0,
+    "t_fin": 17.5
+   },
+   {
+    "cuadro": 115,
+    "titulo": "Vista Axial: Evaluación del Llenado Vesical",
+    "que_se_ve": "Corte axial superior que muestra la parte más ancha de la vejiga (contorno amarillo) y su correspondencia con el CBCT.",
+    "ensenanza": "Se enseña a evaluar la consistencia del llenado de la vejiga comparando la silueta gris del CBCT con el contorno amarillo del TAC de simulación. Si la diferencia en el domo vesical supera los 20 mm CC, el paciente no cumple con el protocolo de llenado y debe ser reprogramado o reevaluado.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.01,
+     0.01,
+     0.65,
+     0.98
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 57.0,
+    "t_fin": null
+   }
+  ],
+  "tokens": 7136,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5044": {
+  "momentos": [
+   {
+    "cuadro": 1,
+    "titulo": "Evaluación inicial de la anatomía (CBCT vs TAC)",
+    "que_se_ve": "Vista axial a nivel medio de la próstata que muestra los contornos del TAC (vejiga en amarillo, próstata en rojo, recto en naranja) sobre el CBCT gris.",
+    "ensenanza": "Se observa que el recto presenta pequeñas burbujas de gas (zonas oscuras en el CBCT) no presentes en el TAC de planificación, lo que deforma levemente la pared posterior prostática. La vejiga muestra un llenado adecuado pero con ligeras diferencias en el domo.",
+    "tema": "anatomia",
+    "caja": [
+     0.0,
+     0.0,
+     0.75,
+     1.0
+    ],
+    "clip_hasta_cuadro": 12,
+    "que_cambia_en_clip": "Se realiza un barrido de cortes axiales hacia el límite superior de la pelvis.",
+    "t": 0.0,
+    "t_fin": 5.5
+   },
+   {
+    "cuadro": 77,
+    "titulo": "Inicio de la alineación automática",
+    "que_se_ve": "Vista axial con la ventana emergente flotante de 'Comparación automática' ejecutándose en la consola.",
+    "ensenanza": "Muestra el flujo de trabajo estándar en Halcyon, donde el sistema realiza un registro rígido automático basado en las densidades de la imagen. El estudiante debe entender que este resultado es solo una propuesta que requiere validación visual humana.",
+    "tema": "flujo_match",
+    "caja": [
+     0.0,
+     0.0,
+     0.75,
+     1.0
+    ],
+    "clip_hasta_cuadro": 85,
+    "que_cambia_en_clip": "El algoritmo de comparación automática procesa y ajusta la posición de los contornos sobre la anatomía del CBCT.",
+    "t": 38.0,
+    "t_fin": 42.0
+   },
+   {
+    "cuadro": 112,
+    "titulo": "Verificación del match óseo en cabeza femoral",
+    "que_se_ve": "Vista axial que muestra el contorno verde de la cabeza femoral izquierda alineándose con la cortical del CBCT.",
+    "ensenanza": "El docente debe destacar cómo la coincidencia exacta de la cortical ósea brillante del CBCT con el contorno verde del TAC demuestra la correcta reproducibilidad de la mesa y posicionamiento del paciente, aislando los cambios a deformaciones puramente viscerales.",
+    "tema": "desplazamiento",
+    "caja": [
+     0.0,
+     0.0,
+     0.75,
+     1.0
+    ],
+    "clip_hasta_cuadro": 120,
+    "que_cambia_en_clip": "Desplazamiento longitudinal de cortes para revisar la cabeza femoral en toda su extensión.",
+    "t": 55.5,
+    "t_fin": 59.5
+   },
+   {
+    "cuadro": 181,
+    "titulo": "Medición de discrepancia y márgenes de seguridad",
+    "que_se_ve": "Vista axial con una regla azul midiendo la distancia de desplazamiento en la interfaz próstata-recto.",
+    "ensenanza": "Se enseña a usar la herramienta de medición para verificar el protocolo clínico: si el desplazamiento recto-PTV en sentido AP es menor a 15 mm, y el domo vesical está a menos de 20 mm, el tratamiento es seguro para ser administrado tras aplicar la corrección.",
+    "tema": "desplazamiento",
+    "caja": [
+     0.0,
+     0.0,
+     0.75,
+     1.0
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 90.0,
+    "t_fin": null
+   }
+  ],
+  "tokens": 6979,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5054": {
+  "momentos": [
+   {
+    "cuadro": 6,
+    "titulo": "Visualización Multiplanar en Consola Halcyon",
+    "que_se_ve": "Vista de tres paneles que muestra el corte axial grande a la izquierda, y los cortes sagital (superior) y coronal (inferior) a la derecha, a nivel de la próstata y la sínfisis púbica.",
+    "ensenanza": "Muestre al estudiante cómo la interfaz de Halcyon permite evaluar el match en los tres planos. En el plano sagital derecho, se debe verificar el desplazamiento céfalo-caudal del domo vesical (amarillo) y la interfaz recto-prostática anteroposterior (rojo/marrón) para asegurar que se cumple el protocolo de tolerancia (≤5 mm para corrección sin validación).",
+    "tema": "pantalla",
+    "caja": [
+     0.0,
+     0.0,
+     1.0,
+     0.95
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 2.5,
+    "t_fin": null
+   },
+   {
+    "cuadro": 16,
+    "titulo": "Evaluación del Match Axial en Próstata y Recto",
+    "que_se_ve": "Corte axial centrado en la próstata (contorno rojo), la vejiga (amarillo) y el recto (marrón) en el panel principal.",
+    "ensenanza": "Enseñe a correlacionar el contorno de la próstata (rojo) y del recto con la anatomía del CBCT. Se observa una excelente coincidencia de la pared rectal posterior y ausencia de gas rectal (comparado con el TAC de simulación), lo que minimiza el desplazamiento de la próstata y asegura una entrega de dosis óptima según el protocolo.",
+    "tema": "anatomia",
+    "caja": [
+     0.05,
+     0.3,
+     0.75,
+     0.9
+    ],
+    "clip_hasta_cuadro": 18,
+    "que_cambia_en_clip": "Pequeño desplazamiento lateral y vertical del cursor de matching de la consola (barrido milimétrico).",
+    "t": 7.5,
+    "t_fin": 8.5
+   },
+   {
+    "cuadro": 32,
+    "titulo": "Verificación del Llenado Vesical en Domo Superior",
+    "que_se_ve": "Vista axial y sagital superior en donde se aprecia el contorno vesical (amarillo) y las asas intestinales adyacentes.",
+    "ensenanza": "Instruya al alumno a comparar el volumen actual de la vejiga en el CBCT con el contorno amarillo de la planificación. La pared vesical se alinea con precisión milimétrica al contorno, cumpliendo holgadamente el criterio de domo a domo <20 mm, lo que garantiza la correcta exclusión de asas del campo de radiación.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "clip_hasta_cuadro": 36,
+    "que_cambia_en_clip": "Se realiza un barrido de cortes axiales en sentido craneal mostrando la bifurcación de vasos ilíacos y asas del intestino delgado.",
+    "t": 15.5,
+    "t_fin": 17.5
+   }
+  ],
+  "tokens": 4470,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5060": {
+  "momentos": [
+   {
+    "cuadro": 1,
+    "titulo": "Evaluación sagital del llenado vesical y rectal",
+    "que_se_ve": "Vista sagital y coronal de la pelvis masculina en el plano medio. Se aprecian los contornos de la vejiga (amarillo), próstata/PTV (rojo) y recto (marrón).",
+    "ensenanza": "El alumno debe notar que en la vista sagital el contorno amarillo de la vejiga coincide casi perfectamente con la sombra gris del CBCT, indicando un llenado vesical idéntico al del TAC de planificación. Asimismo, el recto no presenta sobredistensión por gas, manteniendo una anatomía reproducible.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.11,
+     0.11,
+     0.25,
+     0.32
+    ],
+    "clip_hasta_cuadro": 5,
+    "que_cambia_en_clip": "Pequeño paneo de la cámara que estabiliza la visualización de los tres planos de coincidencia.",
+    "t": 0.0,
+    "t_fin": 2.0
+   },
+   {
+    "cuadro": 38,
+    "titulo": "Inspección multiplanar de la interfase recto-próstata",
+    "que_se_ve": "Se muestran los tres cortes ortogonales: axial, coronal y sagital, centrados en el volumen blanco de la próstata.",
+    "ensenanza": "Es fundamental que el estudiante evalúe la interfaz posterior de la próstata con la pared anterior del recto. El contorno rojo del PTV calza con excelente precisión sobre la glándula visible en el CBCT, cumpliendo con holgura el criterio del protocolo INC de discrepancia rectal-PTV menor a 15 mm AP.",
+    "tema": "anatomia",
+    "caja": [
+     0.25,
+     0.35,
+     0.5,
+     0.67
+    ],
+    "clip_hasta_cuadro": 42,
+    "que_cambia_en_clip": "Transición rápida de planos axiales mostrando diferentes alturas del volumen del target.",
+    "t": 18.5,
+    "t_fin": 20.5
+   },
+   {
+    "cuadro": 84,
+    "titulo": "Simetría de cabezas femorales y posicionamiento óseo",
+    "que_se_ve": "Corte axial a nivel de las cabezas femorales y sínfisis púbica, comparando el contorno verde del TAC con la densidad ósea del CBCT.",
+    "ensenanza": "Permite enseñar la importancia del match óseo previo al ajuste de tejidos blandos. Se observa que el contorno verde de ambas cabezas femorales calza perfectamente con el hueso cortical en el CBCT diario, descartando rotaciones significativas del paciente.",
+    "tema": "desplazamiento",
+    "caja": [
+     0.67,
+     0.19,
+     0.88,
+     0.32
+    ],
+    "clip_hasta_cuadro": 87,
+    "que_cambia_en_clip": "Desplazamiento longitudinal de cortes axiales evaluando la homogeneidad del ajuste de la pelvis ósea.",
+    "t": 41.5,
+    "t_fin": 43.0
+   },
+   {
+    "cuadro": 91,
+    "titulo": "Verificación final pre-tratamiento",
+    "que_se_ve": "Vista de tres planos con excelente nitidez en la consola de planificación del Halcyon.",
+    "ensenanza": "El docente debe destacar que la coincidencia global entre las estructuras planificadas (contornos de color) y la anatomía del día (CBCT en escala de grises) es óptima. Los desplazamientos necesarios están dentro del rango de tolerancia de 5 mm del protocolo INC, lo que autoriza la entrega del tratamiento sin requerir validación médica adicional.",
+    "tema": "flujo_match",
+    "caja": [
+     0.67,
+     0.76,
+     0.99,
+     0.99
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 45.0,
+    "t_fin": null
+   }
+  ],
+  "tokens": 5537,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5041": {
+  "momentos": [
+   {
+    "cuadro": 10,
+    "titulo": "Evaluación en plano axial",
+    "que_se_ve": "Vista axial que muestra el recto, la próstata (contorno rojo) y la vejiga (contorno amarillo) en relación con los huesos coxales y cabezas femorales.",
+    "ensenanza": "En la vista axial, los alumnos deben comprobar la simetría de las cabezas femorales y evaluar el ajuste lateral del PTV (rojo). Se observa un buen centrado general, pero es crítico evaluar la presencia de gas en el recto (marrón) que pueda empujar la próstata hacia anterior respecto al TAC de planificación.",
+    "tema": "anatomia",
+    "caja": [
+     0.26,
+     0.05,
+     0.43,
+     0.28
+    ],
+    "clip_hasta_cuadro": 12,
+    "que_cambia_en_clip": "Pequeños ajustes finos de alineación en el plano axial e información de traslación en la pantalla.",
+    "t": 4.5,
+    "t_fin": 5.5
+   },
+   {
+    "cuadro": 29,
+    "titulo": "Análisis sagital: Relación recto-próstata",
+    "que_se_ve": "Vista sagital enfocada en la pelvis, mostrando la vejiga (amarillo), la próstata/PTV (rojo) y el recto (marrón).",
+    "ensenanza": "En el plano sagital se debe medir el desplazamiento anteroposterior. En este caso, se observa que el domo de la vejiga se mantiene dentro de los límites aceptables (<20 mm de discrepancia), garantizando que el llenado de la vejiga es reproducible respecto a la simulación.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.57,
+     0.36,
+     0.93,
+     0.92
+    ],
+    "clip_hasta_cuadro": 35,
+    "que_cambia_en_clip": "Barrido de cortes sagitales adyacentes para inspeccionar la próstata y las vesículas seminales tridimensionalmente.",
+    "t": 14.0,
+    "t_fin": 17.0
+   },
+   {
+    "cuadro": 50,
+    "titulo": "Verificación final del acoplamiento sagital",
+    "que_se_ve": "Vista sagital final donde se aprecia la coincidencia de los contornos del TAC con la anatomía del CBCT diario.",
+    "ensenanza": "El tecnólogo docente debe recalcar que la pared rectal posterior e inferior se alinea correctamente con el contorno de planificación, minimizando el riesgo de toxicidad rectal por desplazamiento geográfico del PTV.",
+    "tema": "desplazamiento",
+    "caja": [
+     0.57,
+     0.36,
+     0.93,
+     0.92
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 24.5,
+    "t_fin": null
+   }
+  ],
+  "tokens": 3971,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5040": {
+  "momentos": [
+   {
+    "cuadro": 20,
+    "titulo": "Evaluación del Llenado Vesical Superior",
+    "que_se_ve": "Vista axial alta que muestra la porción superior de la pelvis, donde se observa el contorno amarillo de la vejiga del TAC sobre el CBCT gris.",
+    "ensenanza": "Observe la diferencia entre el contorno de planificación (TAC) y la anatomía real del día (CBCT). El estudiante debe notar si la cúpula vesical mantiene un llenado equivalente para evitar el desplazamiento de los órganos de riesgo y del PTV en sentido craneocaudal.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.0,
+     0.0,
+     0.5,
+     0.65
+    ],
+    "clip_hasta_cuadro": 21,
+    "que_cambia_en_clip": "Pequeño desplazamiento axial para verificar la anatomía superior.",
+    "t": 9.5,
+    "t_fin": 10.0
+   },
+   {
+    "cuadro": 46,
+    "titulo": "Llenado de Vejiga y Posición de Próstata",
+    "que_se_ve": "Vista axial al nivel medio de la pelvis que muestra la vejiga completamente distendida (contorno amarillo) y la próstata (contorno rojo).",
+    "ensenanza": "El alumno debe evaluar la concordancia del volumen vesical. Un volumen significativamente menor al del TAC de simulación puede empujar la próstata hacia posterior o superior, alterando la dosis prescrita y la cobertura del PTV.",
+    "tema": "llenado_vesical",
+    "caja": [
+     0.0,
+     0.0,
+     0.5,
+     0.65
+    ],
+    "clip_hasta_cuadro": 48,
+    "que_cambia_en_clip": "Barrido axial descendente a nivel de las cabezas femorales.",
+    "t": 22.5,
+    "t_fin": 23.5
+   },
+   {
+    "cuadro": 51,
+    "titulo": "Evaluación del Recto y PTV Prorrateado",
+    "que_se_ve": "Vista axial a nivel de la próstata, sínfisis púbica y cabezas femorales (contornos verdes). Se visualiza el recto por detrás de la próstata.",
+    "ensenanza": "Es fundamental inspeccionar la presencia de gas o materia fecal en el recto. El estudiante debe comparar el contorno marrón/naranja del recto con la imagen gris del CBCT para verificar si hay sobredistensión que empuje el PTV hacia adelante.",
+    "tema": "gas_rectal",
+    "caja": [
+     0.0,
+     0.0,
+     0.5,
+     0.65
+    ],
+    "clip_hasta_cuadro": 54,
+    "que_cambia_en_clip": "Cortes axiales inferiores que muestran la transición del recto inferior y base de la próstata.",
+    "t": 25.0,
+    "t_fin": 26.5
+   },
+   {
+    "cuadro": 60,
+    "titulo": "Panel de Desplazamientos y Coordenadas",
+    "que_se_ve": "Vista de la pantalla completa donde se aprecian los paneles de reconstrucción multiplanar y los valores de desplazamiento en la barra inferior.",
+    "ensenanza": "Permite enseñar el flujo de match en la interfaz de Halcyon. El docente debe guiar al alumno a leer los valores de desplazamiento (vertical, longitudinal, lateral) para aplicar los criterios del protocolo del servicio antes de autorizar el tratamiento.",
+    "tema": "pantalla",
+    "caja": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 29.5,
+    "t_fin": null
+   }
+  ],
+  "tokens": 4392,
+  "tam": [
+   960,
+   540
+  ]
+ },
+ "IMG_5021": {
+  "momentos": [
+   {
+    "cuadro": 9,
+    "titulo": "Evaluación de contorno externo de la piel",
+    "que_se_ve": "Vista axial del contorno externo del muslo/pelvis izquierdo, donde la línea verde del TAC de planificación se superpone con la imagen del CBCT diaria.",
+    "ensenanza": "Muestre al estudiante cómo la línea verde del TAC de planificación coincide casi perfectamente con el límite de la piel en la imagen gris del CBCT. Esta concordancia asegura que no hay deformaciones superficiales significativas ni errores de posicionamiento groseros en este plano lateral.",
+    "tema": "anatomia",
+    "caja": [
+     0.0,
+     0.0,
+     0.95,
+     0.55
+    ],
+    "clip_hasta_cuadro": 11,
+    "que_cambia_en_clip": "Se aprecia un pequeño barrido de la visualización lateral con sutiles cambios en el contraste de los tejidos blandos.",
+    "t": 4.0,
+    "t_fin": 5.0
+   },
+   {
+    "cuadro": 15,
+    "titulo": "Verificación del match óseo en cabeza femoral",
+    "que_se_ve": "Corte axial que muestra un contorno circular verde/amarillo del TAC perfectamente alineado con la cabeza femoral del CBCT.",
+    "ensenanza": "Haga notar cómo la cortical ósea de la cabeza femoral en el CBCT calza de forma exacta con el contorno de referencia del TAC. El alineamiento de las estructuras óseas rígidas es el primer paso crítico para validar la calidad del registro de imágenes antes del análisis de tejidos blandos.",
+    "tema": "anatomia",
+    "caja": [
+     0.0,
+     0.0,
+     0.95,
+     0.55
+    ],
+    "clip_hasta_cuadro": 16,
+    "que_cambia_en_clip": "El contorno de la cabeza femoral se mantiene superpuesto mientras se realizan microajustes en el panel.",
+    "t": 7.0,
+    "t_fin": 7.5
+   },
+   {
+    "cuadro": 17,
+    "titulo": "Identificación de pequeños artefactos periféricos",
+    "que_se_ve": "Corte axial donde se visualiza el tejido graso subcutáneo lateral con pequeños puntos negros de gas o artefacto de reconstrucción.",
+    "ensenanza": "Enseñe al alumno a diferenciar artefactos de la imagen o pequeños vacíos de densidad de las estructuras críticas como el recto. En este caso, las pequeñas manchas negras externas no corresponden a gas rectal sino a ruido o aire atrapado en la mesa/piel, lo cual no compromete el protocolo del tratamiento.",
+    "tema": "calidad_imagen",
+    "caja": [
+     0.0,
+     0.0,
+     0.95,
+     0.55
+    ],
+    "clip_hasta_cuadro": 0,
+    "que_cambia_en_clip": "",
+    "t": 8.0,
+    "t_fin": null
+   }
+  ],
+  "tokens": 3731,
+  "tam": [
+   960,
+   1706
+  ]
+ }
+}

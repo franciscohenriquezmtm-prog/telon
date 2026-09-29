@@ -1,0 +1,98 @@
+[
+ {
+  "nombre": "01_barrido_axial_limpio",
+  "video": "Captura_39671AE5",
+  "inicio": 0.0,
+  "fin": 6.0,
+  "descripcion": "Barrido axial por la próstata en una captura limpia de la consola: sínfisis, vejiga (amarillo), PTV (rojo), recto con gas y cabezas femorales (verde).",
+  "gif": "01_barrido_axial_limpio.gif",
+  "mp4": "01_barrido_axial_limpio.mp4",
+  "jpg": "01_barrido_axial_limpio.jpg",
+  "gif_bytes": 4201046,
+  "mp4_bytes": 3468154
+ },
+ {
+  "nombre": "02_sagital_gas_rectal",
+  "video": "IMG_5043",
+  "inicio": 20.5,
+  "fin": 29.5,
+  "descripcion": "Sagital ampliado: el recto lleno de gas empuja la pared posterior; se compara el contorno del PTV con la próstata del día.",
+  "gif": "02_sagital_gas_rectal.gif",
+  "mp4": "02_sagital_gas_rectal.mp4",
+  "jpg": "02_sagital_gas_rectal.jpg",
+  "gif_bytes": 4358811,
+  "mp4_bytes": 2164589
+ },
+ {
+  "nombre": "03_barrido_axial_prostata_a_vejiga",
+  "video": "IMG_5043",
+  "inicio": 54.5,
+  "fin": 62.5,
+  "descripcion": "Barrido axial desde la próstata hacia la vejiga: el gas rectal cambia de corte en corte.",
+  "gif": "03_barrido_axial_prostata_a_vejiga.gif",
+  "mp4": "03_barrido_axial_prostata_a_vejiga.mp4",
+  "jpg": "03_barrido_axial_prostata_a_vejiga.jpg",
+  "gif_bytes": 4149723,
+  "mp4_bytes": 1961657
+ },
+ {
+  "nombre": "04_comparacion_automatica",
+  "video": "IMG_5044",
+  "inicio": 36.0,
+  "fin": 48.0,
+  "descripcion": "Comparación automática 3D-3D: aparece la ventana, corre el algoritmo y los contornos saltan a la posición calculada.",
+  "gif": "04_comparacion_automatica.gif",
+  "mp4": "04_comparacion_automatica.mp4",
+  "jpg": "04_comparacion_automatica.jpg",
+  "gif_bytes": 7359129,
+  "mp4_bytes": 2309500
+ },
+ {
+  "nombre": "05_regla_en_pantalla",
+  "video": "IMG_5044",
+  "inicio": 81.0,
+  "fin": 91.0,
+  "descripcion": "Medición con la regla del Halcyon: distancias entre contorno de planificación y anatomía del día (evaluación vésico-rectal).",
+  "gif": "05_regla_en_pantalla.gif",
+  "mp4": "05_regla_en_pantalla.mp4",
+  "jpg": "05_regla_en_pantalla.jpg",
+  "gif_bytes": 5627567,
+  "mp4_bytes": 1706214
+ },
+ {
+  "nombre": "06_barrido_axial_gas",
+  "video": "IMG_5040",
+  "inicio": 20.0,
+  "fin": 29.0,
+  "descripcion": "Barrido axial con gas rectal: del techo de la vejiga a la próstata y el recto.",
+  "gif": "06_barrido_axial_gas.gif",
+  "mp4": "06_barrido_axial_gas.mp4",
+  "jpg": "06_barrido_axial_gas.jpg",
+  "gif_bytes": 4273699,
+  "mp4_bytes": 2041714
+ },
+ {
+  "nombre": "07_apex_a_vesiculas",
+  "video": "IMG_5059",
+  "inicio": 12.0,
+  "fin": 17.5,
+  "descripcion": "Axial ampliado, del ápex a las vesículas seminales: cómo se ve la próstata en el CBCT del Halcyon.",
+  "gif": "07_apex_a_vesiculas.gif",
+  "mp4": "07_apex_a_vesiculas.mp4",
+  "jpg": "07_apex_a_vesiculas.jpg",
+  "gif_bytes": 2136116,
+  "mp4_bytes": 2144625
+ },
+ {
+  "nombre": "08_domo_vesical_intestino",
+  "video": "IMG_5054",
+  "inicio": 15.0,
+  "fin": 20.0,
+  "descripcion": "Hacia el domo vesical y las asas intestinales: hasta dónde llega el contorno del plan.",
+  "gif": "08_domo_vesical_intestino.gif",
+  "mp4": "08_domo_vesical_intestino.mp4",
+  "jpg": "08_domo_vesical_intestino.jpg",
+  "gif_bytes": 2205049,
+  "mp4_bytes": 1055711
+ }
+]
