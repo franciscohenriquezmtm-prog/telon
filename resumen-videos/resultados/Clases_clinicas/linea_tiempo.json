@@ -1,0 +1,1272 @@
+{
+ "ccu_sin_calculo": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:05",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se inicia la visualización multiplanar con un movimiento del plano axial en sentido craneal.",
+    "ensenanza": "Familiarizarse con la disposición espacial inicial antes de realizar un análisis detallado de cada estructura anatómica.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:05",
+    "fin": "00:11",
+    "estructura": "Higado",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se desplaza el corte axial hacia el polo superior mostrando los límites del hígado y los riñones.",
+    "ensenanza": "Observar la relación espacial del lóbulo derecho hepático con el riñón derecho y la necesidad de una correcta delimitación craneal.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:11",
+    "fin": "00:16",
+    "estructura": "Rinon Izq",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador baja en sentido caudal por el plano axial, deteniéndose a nivel de ambos riñones.",
+    "ensenanza": "Analizar la diferencia de altura y la vecindad con estructuras del retroperitoneo al descender en la tomografía.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:16",
+    "fin": "00:23",
+    "estructura": "PTV1",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Desplazamiento a través del nivel lumbar medio, observando los contornos ganglionares retroperitoneales.",
+    "ensenanza": "Notar cómo el volumen blanco nodal engloba los grandes vasos abdominales guardando margen de seguridad.",
+    "valor": 5
+   },
+   {
+    "inicio": "00:23",
+    "fin": "00:30",
+    "estructura": "Vejiga",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se desciende en el plano axial hasta la cavidad pélvica, mostrando la vejiga y las cabezas femorales.",
+    "ensenanza": "Identificar el volumen vesical en relación al CTV tumoral pélvico y verificar el contorneo de las cabezas femorales.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:35",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se cambia al módulo de Planificación de Haz Externo y se cargan las imágenes correspondientes.",
+    "ensenanza": "Entender la transición entre el módulo de definición de volúmenes y la etapa de cálculo/evaluación de dosis.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:35",
+    "fin": "00:42",
+    "estructura": "general",
+    "tipo": "tabla",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El usuario abre la ventana de propiedades para verificar la serie de tomografía y los planes asociados del paciente.",
+    "ensenanza": "Es fundamental corroborar que se asocie el set de estructuras correcto con el plan de tratamiento activo.",
+    "valor": 4
+   }
+  ],
+  "tokens": 13602
+ },
+ "uretra": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:11",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "sagital",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador recorre los cortes sagitales de la anatomía pélvica.",
+    "ensenanza": "Observar la disposición de los órganos pélvicos en el plano sagital y cómo se delimitan las estructuras de interés en esta vista.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:11",
+    "fin": "00:18",
+    "estructura": "Pene",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "El operador cambia a la vista axial y selecciona la estructura Pene en la lista de la izquierda.",
+    "ensenanza": "Encontrar la estructura Pene en la lista y notar cómo se resalta su contorno al seleccionarla en la vista axial.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:25",
+    "estructura": "Pene",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se recorren los cortes axiales mostrando la delimitación de la estructura Pene.",
+    "ensenanza": "Identificar los límites anatómicos del pene en los cortes axiales inferiores y su separación de las estructuras adyacentes.",
+    "valor": 4
+   }
+  ],
+  "tokens": 8115
+ },
+ "volumen_completo_prostata": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:11",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador se desplaza por el plano axial desde la pelvis hacia el abdomen bajo.",
+    "ensenanza": "Observar la anatomía pélvica masculina y los diferentes contornos que empiezan a aparecer en la zona de la próstata y ganglios.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:11",
+    "fin": "00:23",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador desciende de vuelta hacia los cortes de la sínfisis púbica.",
+    "ensenanza": "Notar el contorneo de la próstata (en azul), vesículas seminales, la vejiga (en amarillo) y el recto (en café).",
+    "valor": 3
+   },
+   {
+    "inicio": "00:23",
+    "fin": "00:32",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se despliega la lista de estructuras y se suben y bajan cortes finales.",
+    "ensenanza": "La lista de la izquierda detalla estructuras críticas como cabezas femorales, canal anal y recto para evaluar restricciones.",
+    "valor": 4
+   }
+  ],
+  "tokens": 9836
+ },
+ "soma_prostata": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:04",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "Se inicia la visualización de las estructuras en la pestaña de Contorneo.",
+    "ensenanza": "En este caso clínico se observa la pelvis de un paciente masculino. En el panel izquierdo se listan los volúmenes blanco (CTV, PTV) y los órganos de riesgo (OAR).",
+    "valor": 3
+   },
+   {
+    "inicio": "00:04",
+    "fin": "00:18",
+    "estructura": "PTV1-PTV2",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El usuario se posiciona sobre PTV1-PTV2 y recorre los cortes axiales en dirección caudal.",
+    "ensenanza": "El PTV1-PTV2 engloba la próstata y las vesículas seminales con su respectivo margen de seguridad. Observen cómo desciende el contorno hasta el ápex de la próstata.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:30",
+    "estructura": "Bolsa Intestinal",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se selecciona y visualiza la estructura Bolsa Intestinal, recorriendo cortes en sentido caudal.",
+    "ensenanza": "La bolsa intestinal (o bowel bag) se delimita para evaluar la dosis en las asas del intestino delgado y colon que caen dentro o cerca del campo de tratamiento.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:40",
+    "estructura": "Bolsa Intestinal",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se continúa el recorrido de cortes axiales en sentido cefálico mostrando la extensión superior de la Bolsa Intestinal.",
+    "ensenanza": "Es fundamental que el contorneo de la bolsa intestinal se extienda lo suficientemente arriba para capturar toda la dosis baja y media dispersada en la cavidad abdominal superior.",
+    "valor": 3
+   }
+  ],
+  "tokens": 12363
+ },
+ "ptts_3_ptvs_vmat": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:18",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Evaluación del plan",
+    "descripcion": "El operador recorre cortes axiales de la tomografía con los contornos de las estructuras superpuestas.",
+    "ensenanza": "Observar la distribución tridimensional de los volúmenes blanco (PTV) y los órganos de riesgo en la región pélvica.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:40",
+    "estructura": "dosis",
+    "tipo": "dosis",
+    "vista": "axial",
+    "accion": "revisa dosis",
+    "modulo": "Evaluación del plan",
+    "descripcion": "El operador activa la visualización de la distribución de dosis 'Color Wash' y recorre los cortes de caudal a craneal.",
+    "ensenanza": "Analizar cómo la dosis se concentra en el volumen blanco mientras se reduce la exposición a los tejidos sanos circundantes.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:40",
+    "fin": "01:02",
+    "estructura": "dosis",
+    "tipo": "dosis",
+    "vista": "axial",
+    "accion": "revisa dosis",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Continúa el recorrido de los cortes axiales mostrando la dosis en dirección craneo-caudal, hasta finalizar la grabación.",
+    "ensenanza": "Identificar el gradiente de dosis y los límites de la cobertura de prescripción en relación con las estructuras críticas.",
+    "valor": 4
+   }
+  ],
+  "tokens": 18817
+ },
+ "encefalo": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:08",
+    "estructura": "ICRU Encefalo",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador recorre cortes axiales de la TC hacia la región caudal.",
+    "ensenanza": "Observar la extensión de las estructuras anatómicas del cuello y tórax superior en relación al volumen de referencia cerebral.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:08",
+    "fin": "00:18",
+    "estructura": "ICRU Encefalo",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador vuelve a subir en sentido craneal recorriendo los cortes de la TC.",
+    "ensenanza": "Notar cómo aparece el volumen contorneado 'ICRU Encefalo' en la fosa craneal a medida que se asciende.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:30",
+    "estructura": "ICRU Encefalo",
+    "tipo": "target",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "Se cambia a una visualización multiplanar con reconstrucción 3D del volumen cerebral.",
+    "ensenanza": "La vista multiplanar (axial, sagital, coronal y 3D) permite verificar la consistencia tridimensional del contorneo de un volumen complejo.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:44",
+    "estructura": "Encefalo",
+    "tipo": "target",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador abre el diálogo de selección de planes para cargar la planificación del tratamiento.",
+    "ensenanza": "Es clave seleccionar correctamente el plan de tratamiento aprobado o el caso para evaluar antes de proceder con el análisis dosimétrico.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:44",
+    "fin": "00:58",
+    "estructura": "Encefalo",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "revisa dosis",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Visualización de las curvas de isodosis sobre la anatomía del paciente en vistas sagital, coronal y axial.",
+    "ensenanza": "La evaluación de dosis exige comprobar que la dosis de prescripción cubra adecuadamente el volumen blanco (encéfalo completo en este caso paliativo) minimizando la dosis fuera de la región objetivo.",
+    "valor": 5
+   },
+   {
+    "inicio": "00:58",
+    "fin": "01:06",
+    "estructura": "general",
+    "tipo": "tabla",
+    "vista": "tabla",
+    "accion": "revisa tabla",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador examina la lista de campos de tratamiento en la tabla de parámetros físicos.",
+    "ensenanza": "Revisar los ángulos de gantry, colimador y energía de cada campo asegura que el plan propuesto sea físicamente viable y seguro para el paciente.",
+    "valor": 4
+   }
+  ],
+  "tokens": 22228
+ },
+ "rinones_en_vmat": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:18",
+    "estructura": "CTV",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se recorre el volumen del CTV en dirección cráneo-caudal en el módulo de contorneo.",
+    "ensenanza": "Observe la extensión ganglionar retroperitoneal del CTV que sigue los grandes vasos abdominales.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:32",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador cambia al módulo de Planificación del haz externo y abre el plan de tratamiento de abdomen.",
+    "ensenanza": "Familiarícese con la interfaz de carga de planes y la organización de imágenes de planificación frente a las de control.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:32",
+    "fin": "00:54",
+    "estructura": "PTV_VMAT",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se evalúa la distribución de dosis y las isodosis sobre el PTV_VMAT en cortes axiales.",
+    "ensenanza": "Note cómo la isodosis de prescripción (30 Gy, representada en rojo) envuelve adecuadamente el PTV_VMAT.",
+    "valor": 5
+   },
+   {
+    "inicio": "00:54",
+    "fin": "01:05",
+    "estructura": "general",
+    "tipo": "tabla",
+    "vista": "tabla",
+    "accion": "revisa tabla",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se muestra la pestaña de dosis con la prescripción de 30 Gy en 15 fracciones para el PTV_VMAT.",
+    "ensenanza": "Confirme que la normalización del plan asegura que el 100% de la dosis prescrita cubra el 95% del volumen del PTV.",
+    "valor": 4
+   }
+  ],
+  "tokens": 19837
+ },
+ "sin_titulo_16-09-18": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:03",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "El operador inicia el video interactuando con la interfaz del programa de grabación OBS",
+    "ensenanza": "Esta sección es instrumental; sirve para contextualizar el inicio de la grabación de pantalla del software de planificación.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:03",
+    "fin": "00:10",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se recorre el recto inferior y medio en la vista axial",
+    "ensenanza": "Observar la forma circular o semi-ovalada del recto en la pelvis baja y su cercanía con la próstata/vesículas (o canal anal en cortes más inferiores).",
+    "valor": 3
+   },
+   {
+    "inicio": "00:10",
+    "fin": "00:18",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se recorre el recto medio y superior hasta la transición rectosigmoidea",
+    "ensenanza": "Identificar el límite superior del recto, que comúnmente se define donde el órgano pierde su forma fija y se orienta anteriormente para formar el sigmoides.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:18",
+    "fin": "00:26",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador vuelve a descender por los cortes axiales mostrando la extensión inferior del recto",
+    "ensenanza": "Es útil notar que el recto se continúa inferiormente con el canal anal al nivel donde el músculo puborrectal abraza el tubo digestivo.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:26",
+    "fin": "00:30",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "Se cambia a la vista multiplanar, mostrando cortes coronal, sagital, axial y 3D",
+    "ensenanza": "La vista multiplanar es esencial para corroborar la consistencia espacial del contorneo de estructuras cilíndricas como el recto.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:34",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "sagital",
+    "accion": "zoom",
+    "modulo": "Contorneo",
+    "descripcion": "Se amplía la vista sagital para evaluar el contorneo del recto",
+    "ensenanza": "En el plano sagital se aprecia claramente la curvatura sacra que sigue el recto, y la separación anterior con la vejiga y próstata/vagina.",
+    "valor": 5
+   },
+   {
+    "inicio": "00:34",
+    "fin": "00:37",
+    "estructura": "Recto",
+    "tipo": "OAR",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "Se regresa a la vista multiplanar de 4 cuadrantes",
+    "ensenanza": "Las transiciones de vista ayudan a verificar la coherencia anatómica en los tres ejes antes de focalizarse en un nuevo OAR.",
+    "valor": 2
+   },
+   {
+    "inicio": "00:37",
+    "fin": "00:44",
+    "estructura": "Pene",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "muestra",
+    "modulo": "Contorneo",
+    "descripcion": "Se maximiza el plano axial y se enciende la estructura Pene en la lista",
+    "ensenanza": "El pene se contornea como OAR para evaluar la dosis en tratamientos de pelvis (ej. próstata) y prevenir disfunción eréctil.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:44",
+    "fin": "00:52",
+    "estructura": "Canal Anal",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "muestra",
+    "modulo": "Contorneo",
+    "descripcion": "Se activa la estructura Canal Anal, visualizándose en el centro de la pelvis inferior",
+    "ensenanza": "El canal anal es un OAR crítico independiente del recto. Se ubica en los cortes más inferiores, rodeado por el complejo esfinteriano.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:52",
+    "fin": "00:56",
+    "estructura": "Canal Anal",
+    "tipo": "OAR",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "Se abre la vista multiplanar para verificar el contorneo del Canal Anal",
+    "ensenanza": "En sagital y coronal se distingue claramente la separación entre el canal anal (inferior) y el recto (superior).",
+    "valor": 5
+   },
+   {
+    "inicio": "00:56",
+    "fin": "01:01",
+    "estructura": "Canal Anal",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se maximiza la vista axial y se recorre el Canal Anal en dirección superior",
+    "ensenanza": "Notar la transición donde el canal anal se convierte en el recto, justo por encima de la inserción del músculo elevador del ano.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:01",
+    "fin": "01:10",
+    "estructura": "Pene",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se vuelve a seleccionar y recorrer la estructura Pene en los cortes inferiores de la tomografía",
+    "ensenanza": "El bulbo y el cuerpo del pene deben delimitarse con precisión; su contorneo se extiende desde la sínfisis púbica hacia la parte externa libre.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:10",
+    "fin": "01:13",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "El operador abre el software OBS para finalizar la grabación de pantalla",
+    "ensenanza": "Fin de la demostración práctica de segmentación de OARs pélvicos inferiores.",
+    "valor": 1
+   }
+  ],
+  "tokens": 23109
+ },
+ "recto": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:15",
+    "estructura": "ICRU Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador recorre los cortes axiales en la zona de la pelvis mostrando las estructuras contorneadas.",
+    "ensenanza": "Observe la delimitación del recto y el volumen de tratamiento adyacente (en rojo) en la región pélvica.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:15",
+    "fin": "00:30",
+    "estructura": "ICRU Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador continúa el recorrido caudalmente, visualizando las cabezas femorales y los testículos.",
+    "ensenanza": "Identifique la vejiga por delante y las cabezas femorales lateralmente como OAR críticos a proteger.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:45",
+    "estructura": "ICRU Recto",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se desplaza de nuevo en dirección craneal evaluando la extensión superior del recto y el CTV.",
+    "ensenanza": "La correcta definición de los límites superior e inferior del recto es crucial para el cálculo de la dosis del plan.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:45",
+    "fin": "00:53",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "El operador cambia de la vista axial maximizada a la vista multiplanar estándar de Eclipse.",
+    "ensenanza": "La vista multiplanar (axial, sagital, coronal y 3D) permite verificar la consistencia tridimensional del contorneo.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:53",
+    "fin": "01:09",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se cambia al módulo de Planificación de Haz Externo y se abre el diálogo para seleccionar el plan aprobado.",
+    "ensenanza": "Asegúrese de cargar la versión correcta del plan de tratamiento en el sistema de planificación.",
+    "valor": 2
+   },
+   {
+    "inicio": "01:09",
+    "fin": "01:24",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "revisa dosis",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se cargan los campos del plan de recto en la vista multiplanar con las isodosis mostradas.",
+    "ensenanza": "Observe la distribución tridimensional de las isodosis envolviendo el volumen blanco planificado.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:24",
+    "fin": "01:39",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador abre el menú contextual en la vista sagital para cambiar la visualización (BEV u otras opciones).",
+    "ensenanza": "La vista de haz (BEV) ayuda a evaluar la cobertura del campo respecto a la anatomía del paciente y los colimadores.",
+    "valor": 3
+   }
+  ],
+  "tokens": 30073
+ },
+ "recto_belly": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:01",
+    "estructura": "icru_pelvis",
+    "tipo": "ayuda",
+    "vista": "multiplanar",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "El operador oculta la ventana del grabador de pantalla.",
+    "ensenanza": "En el módulo de Contorneo vemos primero un plano general de la pelvis con las estructuras del caso ya delimitadas.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:01",
+    "fin": "00:23",
+    "estructura": "icru_pelvis",
+    "tipo": "ayuda",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador recorre los cortes axiales de la pelvis en sentido caudal.",
+    "ensenanza": "Fíjense cómo la estructura de ayuda 'icru_pelvis' delimita la zona de interés para la dosimetría de referencia, englobando los volúmenes blanco en el área pélvica.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:23",
+    "fin": "00:30",
+    "estructura": "icru_pelvis",
+    "tipo": "ayuda",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador continúa recorriendo hacia craneal los cortes axiales mostrando la extensión superior de las estructuras.",
+    "ensenanza": "Hacia craneal, la estructura de ayuda llega hasta los grandes vasos y el inicio de la bifurcación, marcando el límite superior de planificación convencional.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:36",
+    "estructura": "Cabeza Femoral D",
+    "tipo": "OAR",
+    "vista": "multiplanar",
+    "accion": "muestra",
+    "modulo": "Contorneo",
+    "descripcion": "El operador busca y selecciona en la lista la estructura de la Cabeza Femoral Derecha.",
+    "ensenanza": "Las cabezas femorales son órganos de riesgo críticos en irradiación pélvica para evitar la necrosis aséptica.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:36",
+    "fin": "00:54",
+    "estructura": "Cabeza Femoral D",
+    "tipo": "OAR",
+    "vista": "multiplanar",
+    "accion": "abre dialogo",
+    "modulo": "Contorneo",
+    "descripcion": "El operador hace clic derecho y centra la vista tridimensional en la Cabeza Femoral Derecha, recorriendo luego algunos cortes.",
+    "ensenanza": "Al cambiar los planos de visualización a la estructura seleccionada, podemos verificar la exactitud de sus límites anatómicos superior e inferior.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:54",
+    "fin": "01:07",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador guarda los cambios en el contorneo y abre el módulo de Planificación de Haz Externo, seleccionando el plan 'Pelvis'.",
+    "ensenanza": "Al transicionar al módulo de planificación, se cargan los haces de radiación diseñados sobre las estructuras previamente contorneadas.",
+    "valor": 2
+   },
+   {
+    "inicio": "01:07",
+    "fin": "01:25",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Evaluación del plan",
+    "descripcion": "El operador recorre los cortes axiales mostrando la distribución de dosis del plan de 4 campos en la pelvis.",
+    "ensenanza": "Observen la clásica forma de caja de la técnica de 4 campos (box técnica), que concentra la dosis prescrita en el centro (recto y ganglios) protegiendo parcialmente las cabezas femorales.",
+    "valor": 5
+   },
+   {
+    "inicio": "01:25",
+    "fin": "01:39",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Evaluación del plan",
+    "descripcion": "El operador cambia la visualización en el panel derecho para mostrar la vista del haz (BEV) con el colimador multiláminas (MLC).",
+    "ensenanza": "La vista 'Beams Eye View' (BEV) permite analizar cómo las láminas del colimador (MLC) se adaptan al contorno del PTV protegiendo los OAR circundantes.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:39",
+    "fin": "01:41",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "otro",
+    "modulo": "Evaluación del plan",
+    "descripcion": "El operador vuelve a mostrar el software de grabación para finalizar la demostración.",
+    "ensenanza": "La correcta integración entre los límites del volumen blanco y la conformación de los campos es la clave para la aprobación de un plan convencional.",
+    "valor": 1
+   }
+  ],
+  "tokens": 30815
+ },
+ "vmat_prostata_exc": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:05",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "El operador cambia la visualización de pantalla completa de corte axial a una vista multiplanar",
+    "ensenanza": "Familiarícese con los accesos directos para alternar entre la vista de un solo plano y la vista multiplanar con el fin de agilizar el flujo de trabajo.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:05",
+    "fin": "00:08",
+    "estructura": "CTV2",
+    "tipo": "target",
+    "vista": "multiplanar",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "Se despliega la lista de estructuras y se resalta CTV2",
+    "ensenanza": "En cáncer de próstata de alto riesgo, el CTV2 suele incluir las vesículas seminales además de la glándula prostática (CTV1).",
+    "valor": 4
+   },
+   {
+    "inicio": "00:08",
+    "fin": "00:25",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "sagital",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador amplía la vista sagital y recorre los cortes de lateral a medial",
+    "ensenanza": "La vista sagital es excelente para evaluar la extensión craneocaudal de la próstata y su relación anatómica con la vejiga superiormente y el recto posteriormente.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:25",
+    "fin": "00:37",
+    "estructura": "Vejiga",
+    "tipo": "OAR",
+    "vista": "sagital",
+    "accion": "otro",
+    "modulo": "Contorneo",
+    "descripcion": "Se despliega la parte baja de la lista de estructuras, mostrando los OARs y seleccionando Vejiga",
+    "ensenanza": "Observe la proximidad inmediata de la vejiga al CTV. Un contorneo preciso es crítico para aplicar adecuadamente los objetivos de dosis y proteger la función urinaria.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:37",
+    "fin": "00:45",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "sagital",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador vuelve a recorrer cortes en la vista sagital con la lista visible",
+    "ensenanza": "Revisar los cortes sagitales permite validar la consistencia del contorneo de los órganos de riesgo realizados originalmente sobre los cortes axiales.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:45",
+    "fin": "00:51",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se vuelve a la vista multiplanar, se cambia de módulo y aparece un cuadro de diálogo para guardar cambios",
+    "ensenanza": "Es fundamental guardar de forma regular los cambios de contorneo antes de pasar al módulo de planificación para asegurar la integridad de los datos.",
+    "valor": 2
+   },
+   {
+    "inicio": "00:51",
+    "fin": "00:57",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "otro",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se carga el módulo de planificación de haz externo con los paneles vacíos",
+    "ensenanza": "La carga del módulo de planificación prepara el sistema para importar las curvas de dosis y la configuración geométrica de los campos de tratamiento.",
+    "valor": 2
+   },
+   {
+    "inicio": "00:57",
+    "fin": "01:00",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "zoom",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se maximiza la vista axial del TAC de planificación",
+    "ensenanza": "Maximizar el plano principal facilita el análisis detallado de la distribución de dosis en la zona del target y los órganos críticos adyacentes.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:00",
+    "fin": "01:10",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Se abre la ventana de selección de planes y se navega por la jerarquía hasta Prostat_VMAT",
+    "ensenanza": "Asegúrese de seleccionar el plan correcto en la estructura jerárquica de la base de datos de Eclipse, especialmente cuando existen múltiples versiones o fases.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:10",
+    "fin": "01:16",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "3D",
+    "accion": "muestra",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se muestra brevemente la vista 3D con la geometría de los arcos VMAT",
+    "ensenanza": "La representación 3D ayuda a visualizar la trayectoria del gantry y confirmar que no existan colisiones potenciales con el paciente o la mesa.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:16",
+    "fin": "01:23",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "muestra",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se cambia a la vista multiplanar con las curvas de isodosis cargadas",
+    "ensenanza": "La visualización simultánea de isodosis en los tres planos permite una evaluación espacial rápida de la cobertura del target y la dosis en la periferia.",
+    "valor": 5
+   },
+   {
+    "inicio": "01:23",
+    "fin": "01:39",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se maximiza la vista axial y se recorren los cortes de superior a inferior mostrando las isodosis",
+    "ensenanza": "Al recorrer los cortes axiales, verifique que la isodosis de prescripción (ej. 95%) envuelva completamente el PTV y caiga abruptamente en la interfaz con el recto.",
+    "valor": 5
+   },
+   {
+    "inicio": "01:39",
+    "fin": "01:45",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se abre de nuevo el diálogo de selección de curso/plan para finalizar el análisis del caso",
+    "ensenanza": "La correcta gestión y cierre del plan en Eclipse es el paso final para asegurar que los datos de dosis queden registrados formalmente en el sistema de información oncológica.",
+    "valor": 3
+   }
+  ],
+  "tokens": 32415
+ },
+ "soma_vmat_target_pequeno": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:19",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador recorre cortes axiales de la TC en sentido caudo-craneal",
+    "ensenanza": "Observar la transición de las estructuras desde el tórax superior hasta la cabeza en vista axial.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:19",
+    "fin": "00:29",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Se activa la vista multiplanar y el operador navega en la vista axial",
+    "ensenanza": "La vista multiplanar ayuda a correlacionar límites anatómicos en los tres planos simultáneamente.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:29",
+    "fin": "00:43",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador continúa el recorrido multiplanar ajustando el plano sagital",
+    "ensenanza": "Fijarse en cómo se define la extensión longitudinal de los órganos de riesgo en el cuello.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:43",
+    "fin": "00:52",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "3D",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "Se maximiza la vista 3D y se rota el volumen reconstruido",
+    "ensenanza": "La visualización tridimensional permite evaluar la continuidad espacial y suavidad de las estructuras contorneadas.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:52",
+    "fin": "01:05",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se guarda el contorneo y se abre el módulo de Evaluación del plan",
+    "ensenanza": "Es el flujo estándar para pasar de la segmentación a la revisión de la distribución de dosis calculada.",
+    "valor": 2
+   },
+   {
+    "inicio": "01:05",
+    "fin": "01:17",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se carga el plan y se recorren los cortes axiales mostrando las curvas de isodosis",
+    "ensenanza": "Evaluar la cobertura del target por la isodosis de prescripción y la caída de dosis hacia los OAR vecinos.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:17",
+    "fin": "01:30",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "axial",
+    "accion": "revisa dosis",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se cambia el modo de visualización de dosis a Color Wash y se recorren cortes axiales",
+    "ensenanza": "El modo Color Wash facilita una estimación visual rápida de la homogeneidad de la dosis en el volumen blanco.",
+    "valor": 5
+   },
+   {
+    "inicio": "01:30",
+    "fin": "01:44",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "axial",
+    "accion": "revisis dosis",
+    "modulo": "Evaluación del plan",
+    "descripcion": "Se continúa la inspección fina de la dosis en Color Wash en la región del PTV",
+    "ensenanza": "Prestar atención a los límites del PTV_Eval para asegurar que no existan subdosificaciones en el borde anterior.",
+    "valor": 4
+   }
+  ],
+  "tokens": 31599
+ },
+ "cyc_paliativo": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:01",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "El operador cambia de la vista axial a la vista multiplanar",
+    "ensenanza": "Familiarízate con los atajos y botones para alternar entre la vista en un solo plano grande y los múltiples planos simultáneos.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:01",
+    "fin": "00:06",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "cambia vista",
+    "modulo": "Contorneo",
+    "descripcion": "El usuario explora la vista de tres planos ortogonales más la reconstrucción 3D",
+    "ensenanza": "La vista multiplanar ayuda a verificar la coherencia espacial de los contornos en todas las direcciones.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:06",
+    "fin": "00:15",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "El operador vuelve a la vista axial y desciende hacia el abdomen",
+    "ensenanza": "Siempre se debe revisar el límite inferior del volumen escaneado para comprobar que el cuerpo termine correctamente dentro del campo.",
+    "valor": 2
+   },
+   {
+    "inicio": "00:15",
+    "fin": "00:30",
+    "estructura": "PTV",
+    "tipo": "target",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Recorrido ascendente por los cortes axiales mostrando los volúmenes en el cuello",
+    "ensenanza": "Observa cómo el PTV de cabeza y cuello abarca las áreas ganglionares de interés y cómo se relaciona con la anatomía de la laringe.",
+    "valor": 4
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:34",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "abre dialogo",
+    "modulo": "Contorneo",
+    "descripcion": "El usuario despliega el panel de herramientas lateral",
+    "ensenanza": "Las herramientas de segmentación y edición son cruciales para el ajuste de contornos finos en estructuras complejas.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:34",
+    "fin": "00:40",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "ajusta ventana",
+    "modulo": "Contorneo",
+    "descripcion": "Se cambia el nivel de ventana a preajuste de hueso y se recorren cortes",
+    "ensenanza": "El ajuste de ventana ósea es indispensable para delimitar correctamente estructuras rígidas o cavidades con aire.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:40",
+    "fin": "00:43",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "abre dialogo",
+    "modulo": "Contorneo",
+    "descripcion": "El usuario decide cambiar de módulo y se le pregunta si desea guardar",
+    "ensenanza": "Guarda siempre el trabajo antes de transicionar entre módulos para evitar pérdida de datos del contorneo.",
+    "valor": 1
+   },
+   {
+    "inicio": "00:43",
+    "fin": "00:52",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "dialogo",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Apertura del diálogo de selección de paciente y plan en el módulo de planificación",
+    "ensenanza": "Es importante seleccionar el plan correcto en la jerarquía clínica del paciente, distinguiendo entre planes aprobados, rechazados o de prueba.",
+    "valor": 2
+   },
+   {
+    "inicio": "00:52",
+    "fin": "01:00",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "muestra",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Carga de la distribución de dosis y los campos sobre la vista multiplanar",
+    "ensenanza": "La disposición de campos conformados en 3D (3D-CRT) debe cubrir el PTV protegiendo la médula y otros órganos de riesgo.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:00",
+    "fin": "01:07",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "revisar dosis",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador oculta la dosis temporalmente para visualizar mejor la anatomía y los haces",
+    "ensenanza": "Ocultar la dosis permite evaluar la correcta colimación de los campos respecto a las estructuras anatómicas marcadas.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:07",
+    "fin": "01:22",
+    "estructura": "general",
+    "tipo": "dosis",
+    "vista": "multiplanar",
+    "accion": "recorre cortes",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Navegación por los cortes mostrando las isodosis en la región cervical",
+    "ensenanza": "Verifica que la isodosis de prescripción (usualmente 95%) envuelva correctamente el PTV sin generar puntos calientes excesivos en órganos críticos.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:22",
+    "fin": "01:30",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "abre dialogo",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El usuario activa el visualizador BEV (Beam's Eye View) en el panel 3D",
+    "ensenanza": "La vista BEV es fundamental para entender qué ve el haz de radiación desde la fuente y cómo actúan las láminas del colimador (MLC).",
+    "valor": 3
+   },
+   {
+    "inicio": "01:30",
+    "fin": "01:40",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "revisar tabla",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "Navegación interactiva por la lista de campos y visualización de sus orientaciones",
+    "ensenanza": "Analiza la combinación de campos anteriores, posteriores y oblicuos en este plan para lograr una dosis homogénea.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:40",
+    "fin": "01:52",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "multiplanar",
+    "accion": "revisar tabla",
+    "modulo": "Planificación del haz externo",
+    "descripcion": "El operador sigue repasando los parámetros físicos de cada campo en la tabla inferior",
+    "ensenanza": "La tabla de campos contiene información vital como el ángulo del gantry, colimador, mesa, y el uso de cuñas o modificadores de haz.",
+    "valor": 4
+   }
+  ],
+  "tokens": 34782
+ },
+ "sbrt_prostata": {
+  "eventos": [
+   {
+    "inicio": "00:00",
+    "fin": "00:30",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Revisión general interactiva de los cortes axiales inferiores y medios de la pelvis",
+    "ensenanza": "Familiarizarse con la anatomía pélvica masculina en cortes axiales en Eclipse, observando las diferentes estructuras contorneadas de interés.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:30",
+    "fin": "00:52",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "muestra",
+    "modulo": "Contorneo",
+    "descripcion": "El usuario se detiene en un corte axial de la pelvis media mostrando varios órganos de riesgo",
+    "ensenanza": "Observe la interrelación espacial entre el recto, la vejiga, las cabezas femorales y la próstata en la región central de la pelvis.",
+    "valor": 3
+   },
+   {
+    "inicio": "00:52",
+    "fin": "01:09",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Recorrido dinámico en sentido caudal hacia las extremidades inferiores",
+    "ensenanza": "Apreciar la transición anatómica desde el periné hasta el tercio proximal de ambos fémures y su representación tomográfica.",
+    "valor": 3
+   },
+   {
+    "inicio": "01:09",
+    "fin": "01:30",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "ajusta ventana",
+    "modulo": "Contorneo",
+    "descripcion": "Cambio de ventana a niveles óseos y recorrido cefálico rápido",
+    "ensenanza": "El ajuste de ventana (W/L) permite visualizar con mayor contraste las estructuras óseas corticales de la pelvis y fémures.",
+    "valor": 4
+   },
+   {
+    "inicio": "01:30",
+    "fin": "02:00",
+    "estructura": "general",
+    "tipo": "general",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Recorrido en dirección caudal bajo ventana de hueso",
+    "ensenanza": "La ventana de hueso facilita verificar el correcto contorneo de las cabezas femorales, discriminando cortical de tejidos blandos.",
+    "valor": 3
+   },
+   {
+    "inicio": "02:00",
+    "fin": "02:24",
+    "estructura": "Cabeza Femoral I",
+    "tipo": "OAR",
+    "vista": "axial",
+    "accion": "recorre cortes",
+    "modulo": "Contorneo",
+    "descripcion": "Recorrido inferior de los extremos distales contorneados de los fémures bajo ventana ósea extrema",
+    "ensenanza": "Observe los límites distales de las cabezas/cuellos femorales y cómo se definen los extremos de los OAR en la planificación.",
+    "valor": 3
+   }
+  ],
+  "tokens": 42927
+ }
+}

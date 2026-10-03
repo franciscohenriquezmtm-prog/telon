@@ -1,0 +1,2089 @@
+{
+ "ccu_sin_calculo": {
+  "datos": {
+   "sitio": "cuello uterino",
+   "titulo": "Navegación de Estructuras en Cáncer de Cuello Uterino con Implante de Braquiterapia",
+   "resumen": "El video muestra la visualización tridimensional y el recorrido plano por plano de las estructuras anatómicas y volúmenes de tratamiento en el módulo de Contorneo de Eclipse. Se trata de una paciente con cáncer de cuello uterino (CaCu) que tiene un implante o aplicador de braquiterapia in situ, permitiendo evaluar las relaciones anatómicas en cortes axiales, sagitales y coronales antes de abrir un plan en el módulo de Planificación.",
+   "tecnica": "3D",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "ADP",
+     "tipo": "OAR",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "CTV1",
+     "tipo": "target",
+     "color": "Cyan"
+    },
+    {
+     "nombre": "CTV2",
+     "tipo": "target",
+     "color": "Naranja claro"
+    },
+    {
+     "nombre": "PTV1",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "PTV1-NT",
+     "tipo": "target",
+     "color": "Verde"
+    },
+    {
+     "nombre": "PTV2",
+     "tipo": "target",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "Verde oscuro"
+    },
+    {
+     "nombre": "Cab Fem Derecha",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Cab Fem Izquierd",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Cauda Equina",
+     "tipo": "OAR",
+     "color": "Amarillo"
+    },
+    {
+     "nombre": "Higado",
+     "tipo": "OAR",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "Medula",
+     "tipo": "OAR",
+     "color": "Azul"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "Marrón"
+    },
+    {
+     "nombre": "Rinon Der",
+     "tipo": "OAR",
+     "color": "Verde"
+    },
+    {
+     "nombre": "Rinon Izq",
+     "tipo": "OAR",
+     "color": "Morado"
+    },
+    {
+     "nombre": "Rinones",
+     "tipo": "OAR",
+     "color": "Azul claro"
+    },
+    {
+     "nombre": "Vasos",
+     "tipo": "OAR",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "Azul"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:31",
+     "estructura": "Vasos",
+     "tipo": "OAR",
+     "color": "Rojo",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El tecnólogo médico recorre el set de TC en sentido cráneo-caudal en el módulo de Contorneo. Se observan los vasos grandes (aorta/cava, ilíacos) delimitados en rojo, los riñones, y la presencia de aplicadores de braquiterapia uterina metálicos que generan artefactos locales en la pelvis.",
+     "ensenanza": "Es fundamental reconocer el artefacto metálico provocado por los aplicadores de braquiterapia ginecológica en la TC de planificación, ya que pueden dificultar la correcta delineación del recto y la vejiga circundante. El alumno debe aprender a diferenciar la señal real de los tejidos blandos de las sombras y destellos del metal.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:31",
+     "fin": "00:43",
+     "tema": "tabla de campos",
+     "que_se_ve": "El operador cambia de módulo en Eclipse al de Planificación del Haz Externo y abre el explorador de objetos de la paciente (Rodríguez Romero, Rosa) para buscar planes históricos del curso de tratamiento 'C2'. Selecciona la pestaña de planes correspondientes.",
+     "valores_legibles": [
+      "Rodríguez Romero, Rosa (136522) (CaCu)",
+      "C1 No Tratado",
+      "C2",
+      "FM",
+      "Pelvis"
+     ],
+     "ensenanza": "En pacientes complejas con tratamientos combinados (teleterapia y braquiterapia), el orden del historial del paciente en el sistema de planificación es clave. El alumno debe verificar siempre el identificador único del paciente y seleccionar el curso de tratamiento y plan correcto para evitar errores de administración."
+    }
+   ],
+   "conceptos": [
+    "Identificación de artefactos metálicos severos causados por aplicadores de braquiterapia ginecológica in situ en tomografía computada.",
+    "Navegación multiplanar (axial, sagital, coronal) de volúmenes de tratamiento ganglionares (CTV1/CTV2) en pelvis ginecológica.",
+    "Delineación de los vasos ilíacos como estructura de ayuda para la delimitación de las áreas ganglionares de drenaje linfático.",
+    "Organización e importancia de la nomenclatura y cursos de tratamiento en Eclipse (Varian) para pacientes con esquemas combinados de radioterapia externa y braquiterapia."
+   ],
+   "preguntas": [
+    "¿Qué causan los aplicadores metálicos de braquiterapia en las imágenes de TC de planificación? (Artefactos de alta densidad en estrella y bandas oscuras que dificultan el contorneo).",
+    "¿Qué estructura anatómica vascular se suele usar como guía para definir el volumen ganglionar pélvico en cáncer de cuello uterino? (Los vasos ilíacos comunes, externos e internos).",
+    "¿En qué módulo de Eclipse se realiza la selección del plan de tratamiento en base al historial de la paciente? (En el módulo de Planificación de Haz Externo / Explorador de Objetos)."
+   ],
+   "textos_identificatorios": [
+    "Nombre en la cabecera del explorador de objetos: Rodríguez Romero, Rosa (136522) (CaCu). El ID 136522 también es visible en la lista."
+   ]
+  },
+  "tokens": 14098
+ },
+ "uretra": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Revisión de contornos en corte sagital y axial",
+   "resumen": "El docente muestra la revisión de las estructuras ya segmentadas en un paciente de próstata. Utiliza la vista sagital para evaluar las relaciones anatómicas de los órganos de riesgo y la próstata, y luego pasa a la vista axial para revisar la anatomía del pene, testículos y otras estructuras en el módulo de Contorneo de Eclipse.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "PTV_PTvopt",
+     "tipo": "target",
+     "color": "celeste"
+    },
+    {
+     "nombre": "PRV_Prostasis",
+     "tipo": "ayuda",
+     "color": "rosado"
+    },
+    {
+     "nombre": "Artefacto_Grasa",
+     "tipo": "ayuda",
+     "color": "marrón"
+    },
+    {
+     "nombre": "Artefacto_Musculo",
+     "tipo": "ayuda",
+     "color": "azul"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "verde"
+    },
+    {
+     "nombre": "Bulbo Peneano",
+     "tipo": "OAR",
+     "color": "amarillo claro"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "marrón"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "marrón"
+    },
+    {
+     "nombre": "Canal Anal",
+     "tipo": "OAR",
+     "color": "verde oscuro"
+    },
+    {
+     "nombre": "CouchInterior",
+     "tipo": "ayuda",
+     "color": "gris"
+    },
+    {
+     "nombre": "CouchSurface",
+     "tipo": "ayuda",
+     "color": "gris"
+    },
+    {
+     "nombre": "Dose 63.4[Gy]",
+     "tipo": "ayuda",
+     "color": "naranja"
+    },
+    {
+     "nombre": "PSC_BODY",
+     "tipo": "ayuda",
+     "color": "blanco"
+    },
+    {
+     "nombre": "Pene",
+     "tipo": "OAR",
+     "color": "rosado"
+    },
+    {
+     "nombre": "Prostasis",
+     "tipo": "ayuda",
+     "color": "azul"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "café"
+    },
+    {
+     "nombre": "Recto-PTV",
+     "tipo": "ayuda",
+     "color": "café claro"
+    },
+    {
+     "nombre": "Recto-inter",
+     "tipo": "ayuda",
+     "color": "café"
+    },
+    {
+     "nombre": "Testiculos",
+     "tipo": "OAR",
+     "color": "verde azulado"
+    },
+    {
+     "nombre": "Uretra",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Vejiga-Inter",
+     "tipo": "ayuda",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Vejiga-PTV",
+     "tipo": "ayuda",
+     "color": "amarillo"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:11",
+     "estructura": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo",
+     "vista": "sagital",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador se desplaza lateralmente en la vista sagital para evaluar las estructuras pélvicas, enfocándose en la relación espacial entre la Vejiga (amarillo), el Recto (café/rosado) y el CTV de próstata (rojo).",
+     "ensenanza": "La vista sagital es indispensable para verificar la delimitación de la base de la vejiga y su separación del ápex prostático. Se debe prestar atención al espacio rectoprostatico.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:11",
+     "fin": "00:25",
+     "estructura": "Pene",
+     "tipo": "OAR",
+     "color": "rosado",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador cambia a la vista multiplanar, maximizando el plano axial, y navega en sentido cráneo-caudal revisando el contorno del Pene (rosado) y los Testículos (verde azulado).",
+     "ensenanza": "En cortes axiales bajos, el contorneo del pene y testículos sirve para estimar la dosis periférica y dispersa. Es clave delimitar la piel del escroto correctamente.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [],
+   "conceptos": [
+    "Uso de vistas multiplanares (sagital/axial) para el control de calidad de la segmentación en próstata",
+    "Evaluación de la interfase vejiga-próstata en el plano sagital",
+    "Identificación y delimitación de estructuras del aparato reproductor masculino externo (pene y testículos)",
+    "Navegación espacial y uso de herramientas de visualización en Eclipse"
+   ],
+   "preguntas": [
+    "¿Qué ventaja ofrece la vista sagital al revisar el contorno de la vejiga y la próstata? (Permite verificar con mayor claridad los límites superior e inferior y la correcta separación anatómica en el eje longitudinal)",
+    "¿Qué estructura se encuentra inmediatamente posterior a la próstata en la vista sagital? (El recto)",
+    "¿De qué color está representado el OAR Pene en la lista de estructuras activa al final del video? (Rosado)"
+   ],
+   "textos_identificatorios": [
+    "adincancerippoblete (esquina inferior derecha y sobre la mesa en corte coronal)"
+   ]
+  },
+  "tokens": 9365
+ },
+ "volumen_completo_prostata": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Revisión rápida de contornos y estructuras en pelvis masculina",
+   "resumen": "El docente realiza un recorrido rápido por los cortes axiales de una tomografía de pelvis masculina en el módulo de Contorneo de Eclipse. Se visualizan las estructuras ya segmentadas, incluyendo órganos de riesgo y volúmenes blanco, sin locución.",
+   "tecnica": "3D/VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV1_44",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "CTV2_50",
+     "tipo": "target",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "CTV3_60",
+     "tipo": "target",
+     "color": "Amarillo"
+    },
+    {
+     "nombre": "GTVp",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "GTVn1",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "PTV1",
+     "tipo": "target",
+     "color": "Azul"
+    },
+    {
+     "nombre": "PTV2",
+     "tipo": "target",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "PTV3",
+     "tipo": "target",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Canal Anal",
+     "tipo": "OAR",
+     "color": "Marrón"
+    },
+    {
+     "nombre": "Pene",
+     "tipo": "OAR",
+     "color": "Rosa"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "Marrón claro"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "Amarillo"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:23",
+     "estructura": "Múltiples estructuras (Vejiga, Recto, GTVn1, PTVs)",
+     "tipo": "otro",
+     "color": "Multicolor",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador se desplaza en sentido cráneo-caudal y luego caudo-craneal revisando las delimitaciones de la vejiga, recto, ganglios patológicos (GTVn) y los diferentes niveles de PTV.",
+     "ensenanza": "Muestra la relación espacial entre el volumen blanco ganglionar y los órganos de riesgo pélvicos. Es útil para que el estudiante aprecie la extensión y transiciones de los volúmenes de tratamiento.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:23",
+     "fin": "00:31",
+     "estructura": "Cabeza Femoral D e I",
+     "tipo": "OAR",
+     "color": "Verde claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se visualiza la lista de estructuras a la izquierda y se hace un paneo rápido por los cortes que contienen las cabezas femorales.",
+     "ensenanza": "Observe la simetría y el límite superior de las cabezas femorales, asegurando la exclusión del cuello femoral si el protocolo institucional lo requiere.",
+     "accion": "navega"
+    }
+   ],
+   "calculos": [],
+   "conceptos": [
+    "Revisión sistemática de volúmenes en sentido céfalo-caudal",
+    "Relación anatómica entre PTV, recto y vejiga",
+    "Identificación de ganglios linfáticos comprometidos (GTVn) en la pelvis",
+    "Visualización y organización de la lista de estructuras en Eclipse"
+   ],
+   "preguntas": [
+    "¿Qué volumen de dosis suele representar el CTV1_44 en una planificación pélvica? (La dosis profiláctica a las cadenas ganglionares, típicamente de 44 a 45 Gy)",
+    "¿Cómo se diferencia visualmente el recto del canal anal en los cortes más inferiores? (El canal anal es la continuación inferior del recto, caracterizado por un contorno más pequeño y la transición hacia el esfínter anal)",
+    "¿Por qué es importante revisar los contornos en sentido bidireccional (cráneo-caudal y caudo-craneal)? (Para asegurar la continuidad geométrica suave y detectar inconsistencias o saltos abruptos entre cortes contiguos)"
+   ],
+   "textos_identificatorios": []
+  },
+  "tokens": 10564
+ },
+ "soma_prostata": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Revisión de Contornos en TC de Próstata en Eclipse",
+   "resumen": "El video muestra la revisión de contornos en el módulo de Contorneo de Eclipse (Varian) para un caso de próstata. El operador recorre las imágenes de tomografía computada (CT) en sentido craneocaudal y caudocraneal, activando y desactivando la visibilidad de diferentes estructuras anatómicas (OAR como vejiga, recto, cabezas femorales y el volumen de tratamiento PTV) para verificar su correcta delimitación.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CT_02Sep26",
+     "tipo": "cuerpo",
+     "color": "verde oscuro"
+    },
+    {
+     "nombre": "CTV1",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "CTV2",
+     "tipo": "target",
+     "color": "naranja"
+    },
+    {
+     "nombre": "CTV3",
+     "tipo": "target",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "PTV1",
+     "tipo": "target",
+     "color": "rojo claro"
+    },
+    {
+     "nombre": "PTV1-PTV2",
+     "tipo": "target",
+     "color": "marrón"
+    },
+    {
+     "nombre": "PTV2",
+     "tipo": "target",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "PTV2-PTV3",
+     "tipo": "target",
+     "color": "cian"
+    },
+    {
+     "nombre": "PTV3",
+     "tipo": "target",
+     "color": "azul"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "amarillo claro"
+    },
+    {
+     "nombre": "Bulbo Peneano",
+     "tipo": "OAR",
+     "color": "magenta"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "azul claro"
+    },
+    {
+     "nombre": "Canal Anal",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "CouchInterior",
+     "tipo": "ayuda",
+     "color": "gris"
+    },
+    {
+     "nombre": "CouchSurface",
+     "tipo": "ayuda",
+     "color": "rosa"
+    },
+    {
+     "nombre": "FSC_BODY",
+     "tipo": "ayuda",
+     "color": "verde"
+    },
+    {
+     "nombre": "FSC_PTV",
+     "tipo": "ayuda",
+     "color": "rojo"
+    },
+    {
+     "nombre": "Intestinal-PTV",
+     "tipo": "ayuda",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Pene",
+     "tipo": "OAR",
+     "color": "naranja"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "marrón claro"
+    },
+    {
+     "nombre": "RectoInt",
+     "tipo": "ayuda",
+     "color": "azul"
+    },
+    {
+     "nombre": "Testículos",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "verde claro"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:18",
+     "estructura": "PTV1-PTV2",
+     "tipo": "target",
+     "color": "marrón",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador activa la estructura PTV1-PTV2 y recorre las imágenes en sentido craneocaudal y luego caudocraneal para evaluar el volumen blanco respecto a las estructuras vecinas.",
+     "ensenanza": "Al evaluar el PTV en la pelvis, el alumno debe fijarse en los márgenes de seguridad aplicados sobre el CTV y cómo interactúa con los órganos de riesgo críticos cercanos, como el recto y la vejiga.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:18",
+     "fin": "00:30",
+     "estructura": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "amarillo claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador activa la visibilidad de Bolsa Intestinal (en color amarillo claro) y navega hacia los cortes más caudales para observar su límite inferior.",
+     "ensenanza": "La bolsa intestinal o 'bowel bag' se contornea para estimar la dosis recibida por las asas intestinales flotantes. Es fundamental definir bien su límite inferior, generalmente unos cortes por encima de la vejiga/recto dependiendo del protocolo.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:30",
+     "fin": "00:39",
+     "estructura": "Vejiga",
+     "tipo": "OAR",
+     "color": "verde claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador recorre en sentido craneal, observando de manera conjunta la vejiga (verde claro), recto (marrón) y las demás estructuras pélvicas en la TC.",
+     "ensenanza": "Es importante comprobar que los contornos de los órganos de riesgo de la pelvis mantengan consistencia anatómica tridimensional corte a corte y no presenten saltos abruptos o inconsistencias.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [],
+   "conceptos": [
+    "Uso del árbol de estructuras en el módulo de Contorneo de Eclipse para gestionar la visibilidad de OARs y targets.",
+    "Navegación secuencial axial en sentido craneocaudal para la inspección visual de la anatomía pélvica.",
+    "Importancia de la delimitación de la bolsa intestinal (bowel bag) como órgano de riesgo para limitar la toxicidad gastrointestinal.",
+    "Intersección espacial entre volúmenes de planificación (PTV) y órganos de riesgo adyacentes en la radioterapia de próstata."
+   ],
+   "preguntas": [
+    "¿Qué estructura anatómica se muestra en amarillo claro en la parte superior de la pelvis en el segundo segmento? (Bolsa Intestinal / Bowel bag)",
+    "¿Qué teclas o controles del mouse se suelen utilizar en Eclipse para avanzar corte a corte en la vista axial? (Rueda del mouse o teclas de dirección del teclado)",
+    "¿Cuál es el propósito de activar y desactivar la visibilidad de las estructuras durante la revisión? (Verificar que los contornos se ajusten correctamente a los límites anatómicos de la TC sin tapar detalles críticos)"
+   ],
+   "textos_identificatorios": [
+    "adincancerinrosas (9/11/2026 11:46 AM) - Esquina inferior derecha de la ventana de diseño"
+   ]
+  },
+  "tokens": 13438
+ },
+ "ptts_3_ptvs_vmat": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Evaluación de Plan VMAT de Pelvis con SIB",
+   "resumen": "El video muestra la revisión de la distribución de dosis de un plan de radioterapia VMAT para pelvis (próstata, vesículas seminales y cadenas ganglionares) utilizando la técnica de boost integrado simultáneo (SIB). El docente navega por los cortes axiales de la tomografía computada (CT) en el módulo de Planificación de Eclipse, alternando entre líneas de isodosis absolutas y el mapa de dosis a color (Dose Color Wash) para evaluar la cobertura de los múltiples PTVs y la protección de los órganos de riesgo.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV1_44",
+     "tipo": "target",
+     "color": "naranjo"
+    },
+    {
+     "nombre": "CTV2_54",
+     "tipo": "target",
+     "color": "celeste"
+    },
+    {
+     "nombre": "GTVd1",
+     "tipo": "target",
+     "color": "rosado"
+    },
+    {
+     "nombre": "CTVn(+)",
+     "tipo": "target",
+     "color": "verde"
+    },
+    {
+     "nombre": "CTVd2(+)",
+     "tipo": "target",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "GTVd2",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "GTVp",
+     "tipo": "target",
+     "color": "fucsia"
+    },
+    {
+     "nombre": "PTV1",
+     "tipo": "target",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "PTV1-PTV2",
+     "tipo": "target",
+     "color": "rosado pálido"
+    },
+    {
+     "nombre": "PTV2",
+     "tipo": "target",
+     "color": "rosado"
+    },
+    {
+     "nombre": "PTV1-PTV3",
+     "tipo": "target",
+     "color": "azul"
+    },
+    {
+     "nombre": "PTV3",
+     "tipo": "target",
+     "color": "rojo oscuro"
+    },
+    {
+     "nombre": "PTV_nodulo",
+     "tipo": "target",
+     "color": "naranjo"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "gris"
+    },
+    {
+     "nombre": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "Bulbo Peneano",
+     "tipo": "OAR",
+     "color": "café claro"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "fucsia"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "Canal Anal",
+     "tipo": "OAR",
+     "color": "café"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:18",
+     "estructura": "Múltiples PTVs (PTV1, PTV2, PTV3)",
+     "tipo": "target",
+     "color": "multicolor",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador se desplaza axialmente por la tomografía revisando la distribución de las líneas de isodosis (60, 54, 44 y 30 Gy) en relación con los volúmenes blanco y órganos de riesgo.",
+     "ensenanza": "Muestra al estudiante cómo verificar que las curvas de isodosis de prescripción cubran adecuadamente los respectivos PTVs (SIB), prestando atención a la caída de dosis entre los distintos niveles de dosis prescrita.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:18",
+     "fin": "01:02",
+     "estructura": "Dose Color Wash",
+     "tipo": "otro",
+     "color": "multicolor",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador activa la visualización 'Dose Color Wash' y recorre los cortes desde la bifurcación aórtica hasta el canal anal para evaluar la homogeneidad tridimensional del plan.",
+     "ensenanza": "Enseñe a los alumnos a utilizar la visualización por mapa de color continuo para identificar rápidamente subdosificaciones (zonas frías) en el PTV o sobredosis en OARs críticos como el recto y la bolsa intestinal.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:18",
+     "tema": "isodosis",
+     "que_se_ve": "Se muestran las líneas de isodosis seleccionadas superpuestas en el corte transversal sin mapa de color.",
+     "valores_legibles": [
+      "60.000 Gy",
+      "54.000 Gy",
+      "44.000 Gy",
+      "30.000 Gy"
+     ],
+     "ensenanza": "Evaluar la conformidad del tratamiento utilizando isodosis específicas correspondientes a las dosis de prescripción del SIB."
+    },
+    {
+     "inicio": "00:18",
+     "fin": "01:02",
+     "tema": "Dose Color Wash",
+     "que_se_ve": "Visualización de la distribución de dosis global mediante mapa de calor con opacidad ajustable.",
+     "valores_legibles": [
+      "105.9 %",
+      "100.0 %",
+      "90.9 %",
+      "73.3 %",
+      "50.0 %"
+     ],
+     "ensenanza": "Analizar los gradientes de dosis alrededor de los ganglios ilíacos y la región prostática para asegurar la transición de dosis deseada."
+    }
+   ],
+   "conceptos": [
+    "Planificación VMAT para pelvis con Boost Integrado Simultáneo (SIB).",
+    "Uso del Dose Color Wash para la evaluación visual y rápida de la cobertura de dosis.",
+    "Identificación de volúmenes blanco ganglionares (CTV1_44) y prostáticos/vesículas (CTV2_54, GTVp).",
+    "Evaluación de la dosis de tolerancia en órganos de riesgo pélvicos (cabezas femorales, canal anal y bolsa intestinal)."
+   ],
+   "preguntas": [
+    "¿Qué ventaja clínica ofrece la técnica SIB (Simultaneous Integrated Boost) observada en este caso? (Permite entregar diferentes dosis por fracción a distintos volúmenes blanco en el mismo ciclo de tratamiento)",
+    "¿Por qué se segmenta la 'Bolsa Intestinal' en lugar de asas individuales? (Para considerar el movimiento fisiológico de los intestinos durante las fracciones de tratamiento)",
+    "¿Cuál es el límite superior típico para la delimitación de los ganglios ilíacos comunes en una pelvis tumoral? (A nivel de la bifurcación de la aorta o espacio intervertebral L4-L5)"
+   ],
+   "textos_identificatorios": [
+    "Nombre de usuario arriba a la derecha: Francisco Henriquez"
+   ]
+  },
+  "tokens": 21584
+ },
+ "encefalo": {
+  "datos": {
+   "sitio": "encéfalo",
+   "titulo": "Revisión de Estructuras y Plan de Tratamiento en Encéfalo",
+   "resumen": "El video muestra la revisión de las estructuras segmentadas (como el encéfalo, médula, tronco y cristalinos) y la posterior carga de un plan de tratamiento 3D para encéfalo completo en el software Eclipse. Se transita desde el módulo de Contorneo al de Planificación del haz externo para evaluar la distribución de dosis y los campos.",
+   "tecnica": "3D",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "Verde"
+    },
+    {
+     "nombre": "Cristalino D",
+     "tipo": "OAR",
+     "color": "Cian"
+    },
+    {
+     "nombre": "Cristalino I",
+     "tipo": "OAR",
+     "color": "Cian"
+    },
+    {
+     "nombre": "Encéfalo",
+     "tipo": "OAR",
+     "color": "Café claro"
+    },
+    {
+     "nombre": "Medula Espinal",
+     "tipo": "OAR",
+     "color": "Azul"
+    },
+    {
+     "nombre": "Tronco Encefalic",
+     "tipo": "OAR",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "ICRU Encéfalo",
+     "tipo": "ayuda",
+     "color": "Rojo"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:18",
+     "estructura": "Encéfalo",
+     "tipo": "OAR",
+     "color": "Café claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador recorre los cortes axiales de la tomografía computada verificando los contornos del Encéfalo, Médula Espinal y el punto ICRU.",
+     "ensenanza": "En el encéfalo es clave verificar que el volumen abarque todo el tejido cerebral sin incluir las estructuras óseas circundantes ni pasarse excesivamente hacia el canal medular en los cortes donde ya se define la médula espinal.",
+     "accion": "revisar"
+    },
+    {
+     "inicio": "00:18",
+     "fin": "00:30",
+     "estructura": "Encéfalo",
+     "tipo": "OAR",
+     "color": "Café claro",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador cambia a la vista multiplanar para evaluar la consistencia del contorno del encéfalo en los planos sagital y coronal, y la representación 3D.",
+     "ensenanza": "La reconstrucción multiplanar permite asegurar que las transiciones de los contornos axiales sean suaves y que no existan discontinuidades anatómicas o saltos abruptos entre cortes.",
+     "accion": "revisar"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:30",
+     "fin": "01:06",
+     "tema": "isodosis",
+     "que_se_ve": "El operador cambia al módulo de Planificación del haz externo para cargar un plan de radioterapia 3D de encéfalo completo (Paliativo, 30 Gy en 10 fracciones). Se observan los haces laterales opuestos y la distribución de dosis e isodosis correspondientes en las tres vistas.",
+     "valores_legibles": [
+      "33.059 Gy",
+      "30.000 Gy",
+      "28.702 Gy",
+      "103.9 %",
+      "101.9 %",
+      "91.6 MU"
+     ],
+     "ensenanza": "Muestra cómo evaluar la cobertura del PTV para un tratamiento paliativo clásico de cerebro total con campos laterales opuestos, vigilando que la dosis en los cristalinos se mantenga lo más baja posible mediante la colimación de los campos."
+    }
+   ],
+   "conceptos": [
+    "Uso del visualizador multiplanar para el control de calidad de la segmentación de órganos de riesgo.",
+    "Transición fluida entre el espacio de trabajo de Contorneo y el módulo de Planificación física.",
+    "Configuración clásica de campos bilaterales opuestos para el tratamiento de irradiación de cerebro total (holocraneal).",
+    "Evaluación de la distribución de isodosis y puntos de dosis máxima para asegurar la homogeneidad del plan."
+   ],
+   "preguntas": [
+    "¿Qué tipo de campos se configuran típicamente para una irradiación de cerebro total paliativa? (Campos laterales opuestos paralelos).",
+    "¿Por qué es fundamental revisar el contorneo en planos sagital y coronal antes de planificar? (Para garantizar la continuidad anatómica tridimensional y evitar omisiones entre cortes axiales).",
+    "¿Qué estructura crítica anterior se debe evitar proteger excesivamente si compromete el volumen blanco en metástasis cerebrales? (Los ojos y cristalinos se deben resguardar pero cuidando no subdosificar las meninges frontales)."
+   ],
+   "textos_identificatorios": [
+    "Horta Quintanilla, Cornelio (RUT o ID expuesto en el menú del explorador de objetos en 00:36)"
+   ]
+  },
+  "tokens": 20848
+ },
+ "rinones_en_vmat": {
+  "datos": {
+   "sitio": "abdomen (linfoma retroperitoneal)",
+   "titulo": "Evaluación de plan VMAT para Linfoma Retroperitoneal",
+   "resumen": "El video muestra la revisión de las estructuras segmentadas y la posterior evaluación de un plan de tratamiento con técnica VMAT para un linfoma retroperitoneal en el software Eclipse de Varian. Se analizan la distribución de dosis y las curvas de isodosis sobre la tomografía computada (CT) de planificación en planos axial, coronal, sagital y reconstrucción 3D, verificando una dosis de 30 Gy en 15 fracciones.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "anaranjado"
+    },
+    {
+     "nombre": "PTV_VMAT",
+     "tipo": "target",
+     "color": "azul claro"
+    },
+    {
+     "nombre": "Artefacto",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "verde"
+    },
+    {
+     "nombre": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Cauda Equina",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "Corazon",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "CouchInterior",
+     "tipo": "ayuda",
+     "color": "café"
+    },
+    {
+     "nombre": "CouchSurface",
+     "tipo": "ayuda",
+     "color": "rosado"
+    },
+    {
+     "nombre": "FSC",
+     "tipo": "ayuda",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "FSC_BODY",
+     "tipo": "ayuda",
+     "color": "verde"
+    },
+    {
+     "nombre": "FSC_PTV",
+     "tipo": "ayuda",
+     "color": "anaranjado"
+    },
+    {
+     "nombre": "Higado",
+     "tipo": "OAR",
+     "color": "anaranjado"
+    },
+    {
+     "nombre": "Medula Espinal",
+     "tipo": "OAR",
+     "color": "fucsia"
+    },
+    {
+     "nombre": "Pulmon Der",
+     "tipo": "OAR",
+     "color": "morado"
+    },
+    {
+     "nombre": "Pulmon Izq",
+     "tipo": "OAR",
+     "color": "morado"
+    },
+    {
+     "nombre": "Pulmones",
+     "tipo": "OAR",
+     "color": "azul"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "café"
+    },
+    {
+     "nombre": "Rifion Derecho",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Rifion Izquierdo",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Riñones",
+     "tipo": "OAR",
+     "color": "verde oscuro"
+    },
+    {
+     "nombre": "Sigmoide",
+     "tipo": "OAR",
+     "color": "fucsia"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:18",
+     "estructura": "PTV",
+     "tipo": "target",
+     "color": "anaranjado",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador se desplaza a lo largo de las tajadas tomográficas en el módulo de Contorneo para verificar la correcta delimitación del PTV y de las estructuras vecinas.",
+     "ensenanza": "En linfoma retroperitoneal, debido a la vecindad con estructuras críticas como riñones y asas intestinales, se debe comprobar que los márgenes del PTV no sobrepasen innecesariamente los límites anatómicos del tejido sano.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:18",
+     "fin": "00:33",
+     "tema": "tabla de campos",
+     "que_se_ve": "El operador abre el módulo de Planificación de haz externo, selecciona el plan de tratamiento 'Abdomen VMAT' en el explorador de objetos y lo carga en pantalla junto con las reconstrucciones multiplanares y la dosis calculada.",
+     "valores_legibles": [
+      "Paciente: Galvez Tejeda, Andres",
+      "ID: 5245134-5",
+      "Última persona que ha guardado: Andres Perez"
+     ],
+     "ensenanza": "Es importante comprobar que la versión de la tomografía computada elegida y el plan seleccionado correspondan a los vigentes antes de proceder con el análisis cuantitativo de la dosis."
+    },
+    {
+     "inicio": "00:33",
+     "fin": "01:05",
+     "tema": "isodosis",
+     "que_se_ve": "Se evalúan las curvas de isodosis en cortes axiales sucesivos. El operador activa la pestaña de dosis en la parte inferior para revisar los parámetros de prescripción e isodosis del plan.",
+     "valores_legibles": [
+      "Isodosis: 32.531 Gy",
+      "Isodosis: 30.000 Gy",
+      "Isodosis: 28.500 Gy",
+      "Isodosis: 15.000 Gy",
+      "Dosis por fracción: 2.000 Gy",
+      "Número de fracciones: 15",
+      "Dosis total: 30.000 Gy",
+      "Normalización: 100.00% cubre 95.00% de la estructura objetivo (PTV_VMAT)"
+     ],
+     "ensenanza": "Para el análisis de planes VMAT de linfoma en abdomen, es clave observar la conformidad de la isodosis de prescripción (30.000 Gy) cubriendo el PTV y verificar que los gradientes protejan eficientemente los riñones y la médula espinal."
+    }
+   ],
+   "conceptos": [
+    "Planificación de arcoterapia volumétrica modulada (VMAT) para un volumen blanco retroperitoneal extenso.",
+    "Prescripción clásica de radioterapia para Linfoma de 30 Gy en 15 fracciones con dosis diaria de 2.0 Gy.",
+    "Evaluación cualitativa de la distribución tridimensional de dosis utilizando curvas de isodosis en planos axial, sagital y coronal.",
+    "Análisis de normalización del plan buscando que el 100% de la dosis de prescripción cubra al menos el 95% del PTV."
+   ],
+   "preguntas": [
+    "¿Cuál es la dosis prescrita por fracción y el número total de fracciones para este plan de tratamiento? (Dosis de 2.0 Gy por fracción en 15 fracciones para un total de 30 Gy).",
+    "¿Qué estructura objetivo fue definida para la normalización de la dosis de este plan? (El PTV_VMAT).",
+    "¿Cuál es el valor máximo de la isodosis calculada que se despliega en pantalla? (32.531 Gy)."
+   ],
+   "textos_identificatorios": [
+    "Galvez Tejeda, Andres (5245134-5) visible en el cuadro de diálogo de selección del plan",
+    "Francisco Henriquez en la esquina superior derecha de la interfaz de Eclipse",
+    "Andres Perez en la columna de última modificación"
+   ]
+  },
+  "tokens": 23740
+ },
+ "sin_titulo_16-09-18": {
+  "datos": {
+   "sitio": "recto",
+   "titulo": "Revisión de contorneo de Recto, Canal Anal y Pene en tomografía computada",
+   "resumen": "El video muestra la navegación en el módulo de Contorneo (Contouring) de Eclipse para revisar la segmentación ya realizada de diversos órganos de riesgo (OAR) de la pelvis masculina. Se observa la delimitación del recto, canal anal y el pene sobre imágenes de tomografía computada (CT) en cortes axiales, coronales y sagitales, usando la visualización multiplanar para verificar límites.",
+   "tecnica": "3D-CRT/IMRT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "rojo"
+    },
+    {
+     "nombre": "Canal Anal",
+     "tipo": "OAR",
+     "color": "magenta"
+    },
+    {
+     "nombre": "Pene",
+     "tipo": "OAR",
+     "color": "rosa claro"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:26",
+     "estructura": "Recto",
+     "tipo": "OAR",
+     "color": "rojo",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador minimiza la ventana del programa de grabación OBS y luego recorre el CT axialmente en sentido craneocaudal para revisar la estructura Recto en color rojo.",
+     "ensenanza": "En la revisión del recto, el estudiante debe constatar el límite superior en la unión rectosigmoidea (habitualmente a nivel de la vértebra S3) y comprobar que el contorno incluya la pared externa y el contenido rectal, evitando incorporar asas sigmoideas.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:26",
+     "fin": "00:34",
+     "estructura": "Recto",
+     "tipo": "OAR",
+     "color": "rojo",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se despliega la vista multiplanar (axial, coronal, sagital y reconstrucción 3D). El operador amplía la vista sagital para evaluar longitudinalmente el recorrido del contorneo del Recto.",
+     "ensenanza": "La vista sagital es fundamental para verificar la continuidad anatómica del recto, asegurándose de que siga la curvatura del sacro y no se corte abruptamente ni se confunda con la vejiga anteriormente.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:34",
+     "fin": "00:43",
+     "estructura": "Canal Anal",
+     "tipo": "OAR",
+     "color": "magenta",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador vuelve a la vista axial, activa la visibilidad de la estructura 'Canal Anal' en color magenta y navega para inspeccionar la transición con el recto.",
+     "ensenanza": "Es crucial definir con precisión el límite entre el canal anal y el recto inferior (línea pectínea / anillo anorrectal). El alumno debe reconocer la musculatura del esfínter anal en el CT.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:43",
+     "fin": "00:55",
+     "estructura": "Canal Anal",
+     "tipo": "OAR",
+     "color": "magenta",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se activa de nuevo la vista multiplanar para contrastar en sagital y coronal la extensión caudal del Canal Anal hasta el margen cutáneo anal.",
+     "ensenanza": "El canal anal termina en la apertura anal (borde cutáneo). En la vista sagital se evalúa que no se extienda excesivamente hacia la piel ni hacia el recto superior.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:55",
+     "fin": "01:04",
+     "estructura": "Pene",
+     "tipo": "OAR",
+     "color": "rosa claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador vuelve a la vista de corte axial único para comenzar a revisar el volumen contorneado del pene.",
+     "ensenanza": "El contorneo del pene se realiza como un OAR, especialmente en tratamientos de pelvis donde se busca evaluar y minimizar la dosis recibida por el bulbo y el cuerpo peniano para preservar la función eréctil.",
+     "accion": "navega"
+    },
+    {
+     "inicio": "01:04",
+     "fin": "01:12",
+     "estructura": "Pene",
+     "tipo": "OAR",
+     "color": "rosa claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador enciende la estructura 'Pene' (en color rosa claro/fucsia suave) y recorre de caudal a craneal evaluando la correcta delimitación del cuerpo del pene hasta que se detiene la grabación.",
+     "ensenanza": "Se debe asegurar que el contorno del pene incluya la porción libre del órgano, verificando sus contornos sobre el fondo de aire y tejido subcutáneo circundante, manteniendo consistencia en todos los cortes.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [],
+   "conceptos": [
+    "Uso de vistas multiplanares (sagital y coronal) para validar límites anatómicos difíciles en cortes axiales.",
+    "Transición anatómica crucial entre el recto inferior y el canal anal.",
+    "Importancia del contorneo preciso del pene como órgano de riesgo para la estimación de dosis en radioterapia de pelvis.",
+    "Verificación sistemática de la continuidad de estructuras tubulares mediante navegación sagital en Eclipse."
+   ],
+   "preguntas": [
+    "¿Qué referencia anatómica suele usarse como límite superior del recto? (La unión rectosigmoidea, usualmente a nivel de S3).",
+    "¿Por qué es útil la vista sagital al contornear el canal anal? (Permite visualizar claramente el límite inferior en el margen cutáneo y la transición superior con el recto).",
+    "¿Cuál es el beneficio clínico de contornear el pene como OAR en radioterapia pélvica? (Permite controlar y registrar la dosis para mitigar el riesgo de disfunción eréctil post-tratamiento)."
+   ],
+   "textos_identificatorios": [
+    "Un nombre de paciente parcialmente visible abajo a la derecha: (adlincanceriddalmazzo 8/25/2026 2:45 PM)"
+   ]
+  },
+  "tokens": 22992
+ },
+ "recto": {
+  "datos": {
+   "sitio": "recto",
+   "titulo": "Revisión de Estructuras y Planificación de Haz Externo para Recto en Eclipse",
+   "resumen": "El video muestra a un docente navegando por las estructuras anatómicas previamente segmentadas en un TC para un caso de cáncer de recto utilizando el módulo de Contorneo de Eclipse. Posteriormente, se traslada al módulo de Planificación de haz externo para cargar y evaluar un plan de radioterapia 3D ya calculado, analizando la disposición de los campos de tratamiento y las curvas de isodosis.",
+   "tecnica": "3D",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "GTV",
+     "tipo": "target",
+     "color": "marrón claro"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "rojo claro"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "verde"
+    },
+    {
+     "nombre": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "marrón"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Testículos",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:35",
+     "estructura": "CTV",
+     "tipo": "target",
+     "color": "rojo",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador recorre los cortes axiales de la tomografía computada evaluando la delimitación del CTV (en rojo) y el PTV (en rosa semitransparente), pasando desde la pelvis superior hasta la zona perineal.",
+     "ensenanza": "En cáncer de recto, el CTV incluye el tumor primario, el mesorrecto y las cadenas ganglionares en riesgo (presacras, ilíacas internas). Es fundamental corroborar que el límite inferior cubra adecuadamente el margen caudal del tumor y del mesorrecto, especialmente en tumores de tercio inferior.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:35",
+     "fin": "00:52",
+     "estructura": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador visualiza la anatomía en la vista multiplanar, prestando atención a la vejiga (en amarillo) en las reconstrucciones sagital y coronal junto con los volúmenes blanco.",
+     "ensenanza": "La vejiga se encuentra en íntimo contacto anterior con los volúmenes blanco de recto. Debe ser contorneada completamente desde su base hasta el domo. Se debe instruir al paciente sobre el protocolo de llenado vesical para asegurar la reproducibilidad del volumen durante el tratamiento.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:52",
+     "fin": "01:39",
+     "tema": "evaluación del plan",
+     "que_se_ve": "El operador cambia al módulo de Planificación del haz externo, abre la base de datos del paciente Óscar Farfán Aguayo e inicia un plan aprobado de radioterapia 3D conformal. Se observan las curvas de isodosis en las vistas axial, sagital y coronal, y se analiza la entrada de los campos (AP, PA y laterales, técnica de 4 campos en caja). Al final se cambia la vista en la ventana de BEV (Beam's Eye View).",
+     "valores_legibles": [
+      "Dosis máx. 3D: 106.9 %",
+      "Dosis mín. para CTV: 101.6 %",
+      "Dosis mín. para PTV: 98.4 %",
+      "Dosis media para CTV: 104.2 %"
+     ],
+     "ensenanza": "La técnica de cuatro campos (caja de tres o cuatro campos) es un estándar clásico para el tratamiento de recto en 3D. El alumno debe evaluar la cobertura de la isodosis de prescripción sobre el PTV y cómo los campos laterales con cuñas o conformados ayudan a proteger las cabezas femorales y la pared anterior del abdomen (intestino delgado) minimizando la dosis en la zona anterior."
+    }
+   ],
+   "conceptos": [
+    "Definición y límites del volumen blanco clínico (CTV) en cáncer de recto según guías internacionales.",
+    "Importancia de la preparación del paciente (protocolo de llenado de vejiga y vaciado de recto) en la variabilidad anatómica inter-fracción.",
+    "Estructuración de órganos de riesgo pélvicos: vejiga, cabezas femorales, testículos y bolsa intestinal.",
+    "Diseño y evaluación de la técnica de 4 campos conformados (caja pélvica) para la protección de estructuras sanas.",
+    "Análisis de la distribución tridimensional de dosis utilizando curvas de isodosis en las tres reconstrucciones ortogonales."
+   ],
+   "preguntas": [
+    "¿Qué cadenas ganglionares típicamente se incluyen en el CTV de un cáncer de recto? (Ganglios mesorrectales, presacros e ilíacos internos).",
+    "¿Por qué es importante el estado de llenado de la vejiga durante la simulación y el tratamiento de recto? (Para desplazar las asas de intestino delgado fuera del campo de alta dosis anterior).",
+    "¿Qué ventajas ofrece la técnica de 4 campos en caja frente a una técnica de 2 campos anteroposterior-posteroanterior en pelvis? (Permite reducir la dosis en los tejidos sanos anteriores y posteriores, y conformar mejor la dosis lateralmente protegiendo parcialmente las cabezas femorales)."
+   ],
+   "textos_identificatorios": [
+    "ID/Nombre del paciente visible en el explorador de objetos de Eclipse a los 01:01: 'Farfan Aguayo, Oscar (8298884-K) (hep)'"
+   ]
+  },
+  "tokens": 30732
+ },
+ "recto_belly": {
+  "datos": {
+   "sitio": "recto",
+   "titulo": "Revisión de contornos y visualización de campos 3D para Pelvis/Recto",
+   "resumen": "El video muestra al docente navegando y revisando los contornos en el módulo de Contorneo de Eclipse para un caso de recto/pelvis, para luego abrir el módulo de Planificación de Haz Externo y cargar un plan de tratamiento 3D aprobado. Se detallan las estructuras de riesgo, los volúmenes blanco y la visualización de los haces de radiación en las diferentes vistas, incluyendo la proyección de campos (BEV).",
+   "tecnica": "3D",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "rojo claro"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Bolsa Intestinal",
+     "tipo": "OAR",
+     "color": "amarillo claro"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "Cauda Equina",
+     "tipo": "OAR",
+     "color": "rosado"
+    },
+    {
+     "nombre": "Testiculos",
+     "tipo": "OAR",
+     "color": "celeste"
+    },
+    {
+     "nombre": "Vasos",
+     "tipo": "ayuda",
+     "color": "rojo"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "icru_pelvis",
+     "tipo": "otro",
+     "color": "rosado"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:34",
+     "estructura": "icru_pelvis",
+     "tipo": "otro",
+     "color": "rosado",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador recorre los cortes axiales, coronales y sagitales revisando el volumen 'icru_pelvis' y su relación con las demás estructuras pélvicas.",
+     "ensenanza": "Es crucial verificar que los límites superior e inferior de los volúmenes de evaluación concuerden con los protocolos institucionales, prestando atención a la transición de tejidos en la zona de la pelvis.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:35",
+     "fin": "00:53",
+     "estructura": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador centra la vista en la cabeza femoral derecha, navegando para verificar la correcta segmentación ósea de la articulación coxofemoral.",
+     "ensenanza": "La cabeza femoral debe delimitarse con precisión evitando incluir el cuello de manera excesiva o dejar fuera porciones de la articulación que recibirán dosis altas en técnicas de campos laterales.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:54",
+     "fin": "01:41",
+     "tema": "evaluación del plan",
+     "que_se_ve": "El docente cambia al módulo de Planificación de Haz Externo, guarda cambios, abre el paciente 'Becerra Becerra, Rogelio' y carga el plan aprobado 'Recto Hipofx 3D' con técnica de 3 o 4 campos. Luego activa la vista de proyección del haz (BEV) para un campo posterior-anterior y lateral, mostrando la conformación de las láminas del MLC.",
+     "valores_legibles": [
+      "Dosis máx. 3D: 106.9 %",
+      "Dosis mín. para PTV: 94.6 %",
+      "Dosis máx. para PTV: 106.9 %",
+      "Dosis media para PTV: 101.8 %",
+      "Prescripción: 100.0 %"
+     ],
+     "ensenanza": "Al evaluar un plan 3D, la proyección BEV (Beam's Eye View) es fundamental para verificar que las láminas del colimador multiláminas (MLC) cubran adecuadamente el PTV con el margen de seguridad requerido, protegiendo al mismo tiempo los órganos de riesgo circundantes como las cabezas femorales y la vejiga."
+    }
+   ],
+   "conceptos": [
+    "Revisión sistemática de volúmenes en ventanas multiplanares para garantizar consistencia interobservador.",
+    "Importancia de la delimitación precisa de las cabezas femorales como OAR crítico en irradiación de pelvis.",
+    "Transición entre el módulo de contorneo y planificación en Eclipse.",
+    "Visualización de haces y conformación del colimador multiláminas (MLC) mediante vista BEV (Beam's Eye View).",
+    "Análisis de dosis máxima y mínima en el volumen blanco para planes conformacionales 3D."
+   ],
+   "preguntas": [
+    "¿Qué volumen de riesgo de la articulación de la cadera se seleccionó para centrar la vista en el segundo segmento? (Cabeza Femoral D)",
+    "¿Qué herramienta de visualización se utiliza para ver la forma del campo desde la perspectiva de la fuente de radiación? (BEV - Beam's Eye View)",
+    "¿Cuál es el porcentaje de la dosis máxima 3D reportada en el plan de este paciente? (106.9 %)"
+   ],
+   "textos_identificatorios": [
+    "Becerra Becerra, Rogelio (12781554-2) en la ventana del explorador de objetos en 00:59"
+   ]
+  },
+  "tokens": 31230
+ },
+ "vmat_prostata_exc": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Evaluación de plan VMAT de próstata con SIB",
+   "resumen": "El video muestra la revisión de estructuras contorneadas en vista sagital y la posterior evaluación de un plan VMAT para próstata con SIB (dosis simultánea integrada) de 60 Gy en 20 fracciones en el planificador Eclipse, utilizando imágenes de tomografía computada.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV1",
+     "tipo": "target",
+     "color": "naranjo"
+    },
+    {
+     "nombre": "CTV2",
+     "tipo": "target",
+     "color": "morado"
+    },
+    {
+     "nombre": "CTV3",
+     "tipo": "target",
+     "color": "celeste"
+    },
+    {
+     "nombre": "PTV1",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "PTV2",
+     "tipo": "target",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "PTV3",
+     "tipo": "target",
+     "color": "verde"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "marrón"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "verde oliva"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:08",
+     "estructura": "Ninguna",
+     "tipo": "otro",
+     "color": "ninguno",
+     "vista": "multiplanar",
+     "metodo": "otro",
+     "que_se_ve": "El tecnólogo médico acomoda las ventanas de visualización de Eclipse en el módulo de Contorneo.",
+     "ensenanza": "Familiarizarse con la configuración rápida de pantallas en Eclipse para optimizar el espacio de trabajo antes de iniciar la revisión.",
+     "accion": "navega"
+    },
+    {
+     "inicio": "00:08",
+     "fin": "00:46",
+     "estructura": "PTV3",
+     "tipo": "target",
+     "color": "verde",
+     "vista": "sagital",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador recorre lateralmente los cortes sagitales mostrando la segmentación de los volúmenes blanco y de los órganos de riesgo de la pelvis.",
+     "ensenanza": "La vista sagital es clave para verificar la correcta delimitación de la pared rectal posterior y la extensión superior e inferior de los PTVs pélvicos.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:46",
+     "fin": "01:10",
+     "estructura": "Ninguna",
+     "tipo": "otro",
+     "color": "ninguno",
+     "vista": "multiplanar",
+     "metodo": "otro",
+     "que_se_ve": "El operador guarda los cambios en el módulo de Contorneo y carga el módulo de Planificación del haz externo para abrir el plan aprobado de próstata.",
+     "ensenanza": "Es importante guardar sistemáticamente antes de cambiar de módulo para evitar pérdida de datos de segmentación.",
+     "accion": "navega"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "01:10",
+     "fin": "01:17",
+     "tema": "3D",
+     "que_se_ve": "Vista 3D del plan VMAT en la que se despliegan los dos arcos coplanares sobre la anatomía externa del paciente y la ubicación de los volúmenes.",
+     "valores_legibles": [
+      "Arco1: VMAT (Clinac03 - 6X-FFF)",
+      "Arco2: VMAT (Clinac03 - 6X-FFF)"
+     ],
+     "ensenanza": "La visualización tridimensional ayuda a confirmar la geometría de los arcos y la ausencia de colisiones simuladas con la mesa o el paciente."
+    },
+    {
+     "inicio": "01:17",
+     "fin": "01:44",
+     "tema": "isodosis",
+     "que_se_ve": "Se recorre la distribución de dosis en cortes axiales con la herramienta de color wash para evaluar la cobertura del PTV y la dosis recibida por el recto y la vejiga.",
+     "valores_legibles": [
+      "Dosis total: 60.000 Gy",
+      "Dosis por fracción: 3.000 Gy",
+      "Fracciones: 20",
+      "Normalización: 100.00% cubre 90.00% de PTV3"
+     ],
+     "ensenanza": "En planes SIB de próstata de dosis moderadamente hipofraccionada (3 Gy/fracción), se debe vigilar rigurosamente la isodosis de prescripción y la dosis máxima dentro del recto para minimizar el riesgo de toxicidad tardía."
+    }
+   ],
+   "conceptos": [
+    "Planificación de dosis simultánea integrada (SIB) en radioterapia de próstata.",
+    "Uso de arcos volumétricos modulados (VMAT) para mejorar la conformidad periférica del target.",
+    "Revisión de la anatomía pélvica masculina en reconstrucción sagital.",
+    "Normalización de planes clínicos buscando cubrimiento óptimo del PTV.",
+    "Evaluación cualitativa mediante lavado de color de dosis (color wash) en planos axiales."
+   ],
+   "preguntas": [
+    "¿Qué dosis por fracción se emplea en este plan con técnica SIB? (3.0 Gy por fracción)",
+    "¿Qué ventaja ofrece la vista sagital para evaluar la segmentación del recto en próstata? (Permite visualizar de forma continua la interfase anterior del recto con la próstata y las vesículas seminales)",
+    "¿Cuál es el valor de prescripción total para el PTV de dosis alta en este caso? (60 Gy)"
+   ],
+   "textos_identificatorios": [
+    "Tobar Reyes, Patricio (5665678-2)"
+   ]
+  },
+  "tokens": 33713
+ },
+ "soma_vmat_target_pequeno": {
+  "datos": {
+   "sitio": "cabeza y cuello",
+   "titulo": "Revisión de contornos y plan de laringe en Eclipse",
+   "resumen": "El video muestra la revisión de contorneado y de un plan de tratamiento en el software Eclipse (Varian) para un caso de laringe. Se utiliza el módulo de Contorneo en cortes axiales, sagitales e intercoronales para verificar las estructuras OAR y blancos, y luego se pasa al módulo de Evaluación del plan para analizar la distribución de dosis de un tratamiento VMAT.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "Azul celeste"
+    },
+    {
+     "nombre": "PTV_Eval",
+     "tipo": "target",
+     "color": "Magenta"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "Verde"
+    },
+    {
+     "nombre": "Cavidad Oral",
+     "tipo": "OAR",
+     "color": "Amarillo claro"
+    },
+    {
+     "nombre": "Coclea Der",
+     "tipo": "OAR",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "Coclea Izq",
+     "tipo": "OAR",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "Constrictor_Inf",
+     "tipo": "OAR",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "Constrictor_Sup",
+     "tipo": "OAR",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "CouchInterior",
+     "tipo": "ayuda",
+     "color": "Gris"
+    },
+    {
+     "nombre": "CouchSurface",
+     "tipo": "ayuda",
+     "color": "Gris"
+    },
+    {
+     "nombre": "Cristalino Der",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Cristalino Izq",
+     "tipo": "OAR",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Encefalo Sano",
+     "tipo": "OAR",
+     "color": "Café"
+    },
+    {
+     "nombre": "Esofago",
+     "tipo": "OAR",
+     "color": "Amarillo"
+    },
+    {
+     "nombre": "FSC_60Gy",
+     "tipo": "ayuda",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "FSC_BODY",
+     "tipo": "ayuda",
+     "color": "Gris"
+    },
+    {
+     "nombre": "FSC_Medula",
+     "tipo": "ayuda",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "FSC_PTV",
+     "tipo": "ayuda",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "Labios",
+     "tipo": "OAR",
+     "color": "Rosado encendido"
+    },
+    {
+     "nombre": "Laringe",
+     "tipo": "OAR",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "Mandibula",
+     "tipo": "OAR",
+     "color": "Blanco"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:19",
+     "estructura": "Múltiples estructuras",
+     "tipo": "OAR",
+     "color": "Varios",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El tecnólogo recorre las imágenes axiales de tomografía computada (CT) de abajo hacia arriba para revisar la calidad del contorneo de múltiples estructuras en la región del cuello y cabeza.",
+     "ensenanza": "Es crucial revisar de manera sistemática los contornos para asegurar la consistencia geométrica entre cortes axiales adyacentes y verificar la correcta asignación de límites craneocaudales de cada órgano de riesgo.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:19",
+     "fin": "00:43",
+     "estructura": "Múltiples estructuras",
+     "tipo": "OAR",
+     "color": "Varios",
+     "vista": "multiplanar",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se cambia a la vista multiplanar (axial, coronal, sagital y reconstrucción 3D) para evaluar los contornos en todas las dimensiones espaciales, desplazando las líneas de referencia.",
+     "ensenanza": "La vista sagital es excelente para evaluar los límites de la médula espinal y el esófago, mientras que la vista coronal permite corroborar la simetría de los órganos bilaterales como las glándulas parótidas o los cóndilos mandibulares.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:43",
+     "fin": "00:53",
+     "estructura": "Múltiples estructuras",
+     "tipo": "OAR",
+     "color": "Varios",
+     "vista": "3D",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se maximiza la ventana de reconstrucción 3D, rotando el volumen del paciente para apreciar espacialmente las estructuras contorneadas (vías aéreas, laringe, mandíbula, médula, etc.) con respecto al cuerpo exterior.",
+     "ensenanza": "La renderización 3D permite detectar fallas de segmentación como 'islas' o vacíos de volumen que no son evidentes fácilmente en cortes bidimensionales individuales.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:53",
+     "fin": "01:08",
+     "tema": "Cargar plan aprobado",
+     "que_se_ve": "El operador sale del módulo de Contorneo y entra al módulo de Planificación/Evaluación del plan, abriendo el plan de tratamiento aprobado 'Laringe VMAT' en la base de datos.",
+     "valores_legibles": [
+      "Laringe VMAT",
+      "Radical sin QT",
+      "CT_1"
+     ],
+     "ensenanza": "Al abrir planes aprobados, se debe tener sumo cuidado de no alterar las configuraciones ni los cálculos originales, utilizando siempre las herramientas de visualización específicas para análisis."
+    },
+    {
+     "inicio": "01:08",
+     "fin": "01:45",
+     "tema": "isodosis",
+     "que_se_ve": "Se despliega la distribución de dosis del plan VMAT en cortes axiales. El operador ajusta la escala de isodosis a 'Color Wash' y modifica los umbrales de dosis máxima para revisar la cobertura del PTV y la dosis recibida por la laringe y la médula espinal.",
+     "valores_legibles": [
+      "Dosis máx. ID: 64.169 Gy",
+      "60.000 Gy (Prescripción)",
+      "30.000 Gy",
+      "6.070 Gy (Dosis mín.)"
+     ],
+     "ensenanza": "El análisis de isodosis mediante 'Color Wash' permite identificar visualmente de manera rápida las zonas de subcobertura (frías) dentro del volumen blanco y la existencia de 'hot spots' (puntos calientes) fuera del target, asegurando la homogeneidad del plan."
+    }
+   ],
+   "conceptos": [
+    "La revisión volumétrica multiplana de estructuras garantiza la precisión geométrica de la segmentación.",
+    "El uso de reconstrucciones tridimensionales ayuda a validar la coherencia espacial de las estructuras contorneadas de manera global.",
+    "La carga de planes aprobados en Eclipse requiere mantener la integridad de los datos para no invalidar el proceso de control de calidad clínico.",
+    "El modo de visualización de dosis 'Color Wash' facilita la identificación cualitativa de gradientes de dosis empinados e interferencia con órganos de riesgo."
+   ],
+   "preguntas": [
+    "¿Qué ventaja ofrece la visualización 3D al final del proceso de contorneo? (Permite detectar inconsistencias volumétricas, cortes huérfanos o discontinuidades que no se aprecian bien en vistas 2D.)",
+    "¿Para qué se cambia la escala de isodosis de líneas a Color Wash en la planificación? (Para facilitar la evaluación de la cobertura tridimensional del volumen blanco y ubicar más fácilmente regiones con sobredosis o dosis subóptimas.)",
+    "¿Qué volumen blanco se observa principalmente en este caso clínico de laringe? (El PTV_Eval o PTV que engloba la región de la laringe con un margen de seguridad.)"
+   ],
+   "textos_identificatorios": [
+    "En 00:59 se visualiza el nombre de paciente 'Diaz Lizana, Luis' en la ventana flotante del explorador de objetos."
+   ]
+  },
+  "tokens": 32620
+ },
+ "cyc_paliativo": {
+  "datos": {
+   "sitio": "cabeza y cuello",
+   "titulo": "Evaluación de plan paliativo en Cabeza y Cuello",
+   "resumen": "El video muestra el módulo de Contorneo y la posterior carga de un plan de radioterapia paliativa de cabeza y cuello en el módulo de Planificación de haz externo en Eclipse. Se visualizan las estructuras segmentadas y la distribución de dosis con técnica 3D de múltiples campos estáticos y cuñas.",
+   "tecnica": "3D",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "Rojo"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "Verde"
+    },
+    {
+     "nombre": "PTV_Eval",
+     "tipo": "target",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "BODY",
+     "tipo": "cuerpo",
+     "color": "Verde claro"
+    },
+    {
+     "nombre": "Claviculas",
+     "tipo": "OAR",
+     "color": "Café"
+    },
+    {
+     "nombre": "Corazon",
+     "tipo": "OAR",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "Cristalino D",
+     "tipo": "OAR",
+     "color": "Amarillo"
+    },
+    {
+     "nombre": "Cristalino I",
+     "tipo": "OAR",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "Encefalo",
+     "tipo": "OAR",
+     "color": "Rosado"
+    },
+    {
+     "nombre": "Mandibula",
+     "tipo": "OAR",
+     "color": "Verde"
+    },
+    {
+     "nombre": "Medula Espinal",
+     "tipo": "OAR",
+     "color": "Azul"
+    },
+    {
+     "nombre": "Parotida Der",
+     "tipo": "OAR",
+     "color": "Amarillo"
+    },
+    {
+     "nombre": "Parotida Izq",
+     "tipo": "OAR",
+     "color": "Naranja"
+    },
+    {
+     "nombre": "Pulmones",
+     "tipo": "OAR",
+     "color": "Celeste"
+    },
+    {
+     "nombre": "Via Aerea",
+     "tipo": "OAR",
+     "color": "Celeste"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:30",
+     "estructura": "BODY",
+     "tipo": "cuerpo",
+     "color": "Verde claro",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador navega a través de las imágenes de tomografía computada (CT) en sentido cráneo-caudal, mostrando el contorneo automático del Body y la presencia de la máscara de inmovilización.",
+     "ensenanza": "En cabeza y cuello, el Body debe incluir correctamente toda la piel y excluir los dispositivos de fijación externos no relevantes, asegurando que los cálculos de dosis asuman correctamente el aire circundante.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "00:31",
+     "fin": "00:41",
+     "estructura": "Mandibula",
+     "tipo": "OAR",
+     "color": "Verde",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se visualiza la lista de estructuras a la izquierda y se activa la visualización de la mandíbula y otras estructuras óseas, mientras se desplaza axialmente por el volumen del paciente.",
+     "ensenanza": "La mandíbula es un órgano de riesgo crítico para evitar la osteorradionecrosis. Se debe contornear usando ventanas de hueso para delimitar con exactitud su corteza.",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [
+    {
+     "inicio": "00:42",
+     "fin": "01:52",
+     "tema": "evaluación del plan",
+     "que_se_ve": "El operador abre el módulo de Planificación de haz externo y carga el plan 'CyC_Palia'. Se muestran las isodosis en las vistas axial, coronal y sagital, junto con la representación en 3D del volumen blanco (Icru en rojo) y la disposición de múltiples campos estáticos de tratamiento con cuñas.",
+     "valores_legibles": [
+      "Prescripción: 24.000 Gy en 3 fracciones",
+      "Niveles de isodosis: 26.400 Gy, 24.000 Gy, 22.800 Gy, 18.000 Gy",
+      "Porcentaje de tratamiento: 95.00%",
+      "Energía: Clinac 05 - 6X"
+     ],
+     "ensenanza": "Para tratamientos paliativos rápidos en cabeza y cuello, se prefiere una técnica 3D simple pero robusta. El uso de cuñas físicas o dinámicas permite homogeneizar la dosis en zonas anguladas del cuello, minimizando puntos calientes en la piel."
+    }
+   ],
+   "conceptos": [
+    "Uso de técnicas de planificación 3D en tratamientos paliativos para optimizar tiempos de entrega.",
+    "Importancia de la delimitación precisa de órganos de riesgo óseos como la mandíbula en cabeza y cuello.",
+    "Visualización espacial de múltiples campos de radioterapia convergentes en una geometría compleja.",
+    "Uso de modificadores de haz (cuñas) para mejorar la homogeneidad de la dosis en planos inclinados.",
+    "Evaluación cualitativa de isodosis multiplanar para resguardar la médula espinal frente a dosis críticas."
+   ],
+   "preguntas": [
+    "¿Cuál es el fraccionamiento prescrito para el plan paliativo mostrado? (24 Gy en 3 fracciones de 8 Gy)",
+    "¿Qué OAR óseo es crítico delimitar para prevenir la osteorradionecrosis en esta región? (La mandíbula)",
+    "¿Qué accesorio se utiliza para compensar la variación del espesor tisular en tratamientos 3D de cuello? (Cuñas físicas o dinámicas)"
+   ],
+   "textos_identificatorios": [
+    "Rios Poblete, Sergio (6163375-1) - visible en la ventana del Explorador de objetos a los 00:48 y 00:51."
+   ]
+  },
+  "tokens": 34348
+ },
+ "sbrt_prostata": {
+  "datos": {
+   "sitio": "próstata",
+   "titulo": "Revisión multiplanar de contornos de próstata y OAR",
+   "resumen": "El docente de radioterapia utiliza el módulo de Contorneo de Eclipse para revisar la segmentación de una próstata y sus órganos de riesgo circundantes. Recorre los cortes en vista axial, mostrando la relación anatómica de la próstata con la vejiga, el recto, las cabezas femorales y la uretra. Se aplica cambio de ventana (hueso/tejido blando) para verificar estructuras óseas.",
+   "tecnica": "VMAT",
+   "hay_narracion": false,
+   "transcripcion": [],
+   "estructuras_listadas": [
+    {
+     "nombre": "CTV",
+     "tipo": "target",
+     "color": "rojo"
+    },
+    {
+     "nombre": "PRV_Prostasis",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "PTV",
+     "tipo": "target",
+     "color": "naranja"
+    },
+    {
+     "nombre": "Bulbo Peneano",
+     "tipo": "OAR",
+     "color": "amarillo"
+    },
+    {
+     "nombre": "Cabeza Femoral D",
+     "tipo": "OAR",
+     "color": "verde"
+    },
+    {
+     "nombre": "Cabeza Femoral I",
+     "tipo": "OAR",
+     "color": "verde oscuro"
+    },
+    {
+     "nombre": "Recto",
+     "tipo": "OAR",
+     "color": "café"
+    },
+    {
+     "nombre": "Vejiga",
+     "tipo": "OAR",
+     "color": "verde claro"
+    },
+    {
+     "nombre": "Uretra",
+     "tipo": "OAR",
+     "color": "fucsia"
+    }
+   ],
+   "segmentos": [
+    {
+     "inicio": "00:00",
+     "fin": "00:30",
+     "estructura": "Próstata / OARs",
+     "tipo": "otro",
+     "color": "múltiples",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "El operador navega a través de las tajadas axiales de la tomografía computada de planificación de próstata, mostrando la isodosis preliminar y las estructuras de riesgo.",
+     "ensenanza": "Muestre la transición entre la próstata y el recto. Note cómo el espacio graso intermedio puede verse borrado en pacientes mayores o postoperatorios.",
+     "accion": "navega"
+    },
+    {
+     "inicio": "00:30",
+     "fin": "01:09",
+     "estructura": "Uretra / Vejiga",
+     "tipo": "OAR",
+     "color": "fucsia/verde",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Se desplaza en sentido cráneo-caudal observando la relación de la uretra prostática y la base de la vejiga.",
+     "ensenanza": "La uretra debe identificarse idealmente con ayuda de una resonancia magnética fusionada, ya que en el CT su contraste con el tejido prostático es pobre.",
+     "accion": "revisa"
+    },
+    {
+     "inicio": "01:09",
+     "fin": "01:25",
+     "estructura": "Cabeza Femoral D / I",
+     "tipo": "OAR",
+     "color": "verde",
+     "vista": "axial",
+     "metodo": "umbral",
+     "que_se_ve": "El operador cambia la ventana de visualización a nivel de hueso para contrastar adecuadamente el tejido óseo de las cabezas femorales.",
+     "ensenanza": "Para la segmentación ósea automática por umbral, es fundamental seleccionar un nivel de unidades Hounsfield (HU) adecuado que no incluya vasos calcificados adyacentes.",
+     "accion": "explica"
+    },
+    {
+     "inicio": "01:25",
+     "fin": "02:24",
+     "estructura": "Cabeza Femoral D / I",
+     "tipo": "OAR",
+     "color": "verde",
+     "vista": "axial",
+     "metodo": "revisar/recorrer",
+     "que_se_ve": "Recorrido axial final de las cabezas femorales con ventana ósea y de tejidos blandos.",
+     "ensenanza": "Asegúrese de que el contorno de la cabeza femoral incluya todo el trocánter mayor y el cuello femoral según el protocolo clínico que esté utilizando (RTOG vs. EORTC).",
+     "accion": "revisa"
+    }
+   ],
+   "calculos": [],
+   "conceptos": [
+    "Delineación de órganos de riesgo pélvicos en radioterapia de próstata.",
+    "Importancia de la ventana de visualización (hueso vs. tejido blando) para delimitar estructuras de forma precisa.",
+    "Identificación de la uretra y su preservación para disminuir efectos secundarios urinarios.",
+    "Límites anatómicos de las cabezas femorales como OAR limitante de dosis en VMAT."
+   ],
+   "preguntas": [
+    "¿Qué ventana de Eclipse es más útil para segmentar las cabezas femorales? (La ventana ósea)",
+    "¿Qué estructura anatómica pasa por el centro de la próstata y debe cuidarse de altas dosis? (La uretra)",
+    "¿Por qué es difícil delimitar con precisión la próstata usando solo CT? (Debido al bajo contraste de tejidos blandos en la pelvis, requiriendo idealmente fusión con RM)"
+   ],
+   "textos_identificatorios": [
+    "adincancer\\ppoblete (esquina inferior derecha y barra del sistema)"
+   ]
+  },
+  "tokens": 43560
+ }
+}
