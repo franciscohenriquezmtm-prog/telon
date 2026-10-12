@@ -162,7 +162,18 @@ for (const fuente of FUENTES) {
     const crudas = await fuente.obtener({ log });
     const limpias = crudas.map((o) => normalizar(o, fuente)).filter(Boolean);
     obras.push(...limpias);
-    informe.push({ id: fuente.meta.id, nombre: fuente.meta.nombre, sitio: fuente.meta.sitio, obras: limpias.length, error: null });
+    // Una fuente que antes traía obras y ahora trae cero no es una cartelera vacía:
+    // casi siempre el teatro cambió su página y el adaptador quedó leyendo al vacío.
+    // Sin este aviso el fallo es invisible: la corrida "funciona" y las obras de ese
+    // teatro simplemente desaparecen de la app.
+    const antes = (previo.fuentes || []).find((f) => f.id === fuente.meta.id);
+    const seQuedoEnCero = limpias.length === 0 && antes && antes.obras > 0;
+    if (seQuedoEnCero) log(`  ⚠ antes traía ${antes.obras} obras y ahora ninguna: revisa el adaptador`);
+
+    informe.push({
+      id: fuente.meta.id, nombre: fuente.meta.nombre, sitio: fuente.meta.sitio, obras: limpias.length,
+      error: seQuedoEnCero ? `dejó de entregar obras (antes traía ${antes.obras})` : null,
+    });
     log(`  ✓ ${limpias.length} obras en cartelera (${crudas.length - limpias.length} descartadas por temporada terminada) · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   } catch (e) {
     const rescatadas = previo.obras.filter((o) => o.fuente.id === fuente.meta.id);
