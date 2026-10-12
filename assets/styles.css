@@ -701,3 +701,21 @@ input[type=range]::-webkit-slider-thumb {
   }
   .tab:hover { color: var(--texto); }
 }
+
+/* ── Avisos de dato incierto ──────────────────────────────────────────────── */
+/* Una cartelera vieja o una sala supuesta mandan a la gente a la función
+   equivocada: estos avisos existen para que eso nunca pase callado. */
+
+.sello-actualizado.rancia {
+  color: #ffb3bd;
+  font-weight: 600;
+}
+.sello-actualizado.rancia::before { background: var(--rojo-claro); }
+
+.meta-linea.sala-incierta { color: #ffb3bd; font-weight: 600; }
+
+.sala-card-aviso {
+  background: rgba(215,38,61,.12);
+  border-color: rgba(215,38,61,.45);
+}
+.sala-card-aviso b { color: #ffb3bd; }

@@ -1,10 +1,15 @@
 /* Fuente: Teatro Mori — https://teatromori.cl
    No publica datos estructurados, pero su cartelera es regular: cada obra es un bloque
    .proyecto-item con título, sala, rango de fechas y horario. La ficha aporta sinopsis,
-   equipo y precios. */
+   equipo y precios.
 
-import { bajar, aTexto, limpiar, slug, parseHorarios, parseRangoFechas, parsePrecios, parseDuracion, parseEdad, inferirGenero } from '../lib/util.mjs';
-import { resolverSala } from '../lib/salas.mjs';
+   OJO con la sala: Mori tiene cuatro sedes repartidas por Santiago (Bellavista en
+   Providencia, Parque Arauco en Las Condes, Vitacura y Recoleta). Mandar a alguien a la
+   equivocada arruina la salida, así que acá la sala se toma de la ficha de cada obra y,
+   si no se puede determinar, se publica como "sala por confirmar" en vez de suponerla. */
+
+import { bajar, aTexto, limpiar, slug, parseHorarios, parseTemporada, parsePrecios, parseDuracion, parseEdad, inferirGenero } from '../lib/util.mjs';
+import { resolverSala, salaPorConfirmar } from '../lib/salas.mjs';
 
 export const meta = { id: 'mori', nombre: 'Teatro Mori', sitio: 'https://teatromori.cl' };
 
@@ -25,6 +30,23 @@ function mapaSalas(html) {
     if (CLAVE_SALA[nombre]) mapa[m[1]] = CLAVE_SALA[nombre];
   }
   return mapa;
+}
+
+/**
+ * La sala según la PROPIA ficha de la obra: Mori la declara en el logo de cabecera
+ * (alt="MORI PARQUE ARAUCO") y suele repetirla en el texto. Es la fuente que manda,
+ * porque habla de esa obra y no depende de las clases CSS del listado.
+ */
+function salaDeFicha(html, texto) {
+  const candidatos = [
+    ...[...html.matchAll(/alt=["']\s*MORI\s+([^"']{3,20})["']/gi)].map((m) => m[1]),
+    ...[...texto.matchAll(/MORI\s+(BELLAVISTA|PARQUE ARAUCO|VITACURA|RECOLETA)/gi)].map((m) => m[1]),
+  ];
+  for (const c of candidatos) {
+    const clave = CLAVE_SALA['mori ' + c.trim().toLowerCase().replace(/\s+/g, ' ')];
+    if (clave) return clave;
+  }
+  return null;
 }
 
 function campo(texto, ...etiquetas) {
@@ -51,7 +73,7 @@ function afichesDe(html) {
 
 async function leerFicha(url) {
   const html = await bajar(url);
-  return { texto: aTexto(html), imagen: afichesDe(html)[0] || null };
+  return { html, texto: aTexto(html), imagen: afichesDe(html)[0] || null };
 }
 
 export async function obtener({ log }) {
@@ -63,7 +85,7 @@ export async function obtener({ log }) {
   for (const bloque of bloques) {
     try {
       const claseSala = (bloque.match(/^\s+([\w- ]*sala-\d+)/) || [])[1] || '';
-      const claveSala = salas[(claseSala.match(/sala-\d+/) || [])[0]] || 'mori-bellavista';
+      const salaListado = salas[(claseSala.match(/sala-\d+/) || [])[0]] || null;
 
       const enlace = (bloque.match(/href=["']([^"']*\/obra\/[^"']+)["']/) || [])[1];
       if (!enlace) continue;
@@ -74,13 +96,22 @@ export async function obtener({ log }) {
 
       const fechaTxt = limpiar((bloque.match(/class="Hover-Fecha">([\s\S]*?)<\//) || [])[1] || '');
       const horaTxt = limpiar((bloque.match(/class="Hover-Hora">([\s\S]*?)<\//) || [])[1] || '');
-      const rango = parseRangoFechas(fechaTxt);
+      const rango = parseTemporada(fechaTxt);
       if (!rango) { log(`  ! ${titulo}: no se entendió la fecha “${fechaTxt}”`); continue; }
       const horarios = parseHorarios(horaTxt);
 
       // El afiche vertical vive en el listado (formato póster); el de la ficha es el respaldo
       const aficheListado = afichesDe(bloque)[0] || null;
-      const { texto, imagen } = await leerFicha(url);
+      const { html: fichaHtml, texto, imagen } = await leerFicha(url);
+
+      // La sala manda desde la ficha de la obra; el listado solo confirma.
+      const salaFicha = salaDeFicha(fichaHtml, texto);
+      const claveSala = salaFicha || salaListado;
+      if (salaFicha && salaListado && salaFicha !== salaListado) {
+        log(`  ! ${titulo}: el listado la pone en ${salaListado} y su ficha en ${salaFicha}; vale la ficha`);
+      }
+      if (!claveSala) log(`  ! ${titulo}: el sitio no dice en qué sede va; queda como “sala por confirmar”`);
+
       const sinopsis = texto.split('\n').filter((l) => l.length > 120)[0] || '';
       const elenco = campo(texto, 'elenco', 'reparto', 'actúan');
 
@@ -96,7 +127,7 @@ export async function obtener({ log }) {
         elenco: elenco ? elenco.split(/,| y (?=[A-ZÁÉÍÓÚ])/).map((s) => s.trim()).filter((s) => s.length > 2).slice(0, 14) : [],
         duracion: parseDuracion(texto),
         edad: parseEdad(texto),
-        sala: resolverSala(claveSala),
+        sala: claveSala ? resolverSala(claveSala) : salaPorConfirmar('Teatro Mori', 'https://teatromori.cl/cartelera'),
         temporada: { ...rango, ...(horarios || {}) },
         horarioTexto: horaTxt || null,
         precios: parsePrecios(texto),

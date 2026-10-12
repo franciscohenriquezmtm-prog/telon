@@ -245,6 +245,25 @@ export function parseFechasEnumeradas(texto, anio = new Date().getFullYear()) {
 
 export const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
+/**
+ * Rango de temporada, o función única cuando el teatro anuncia un solo día
+ * ("Miércoles 14 de octubre", "Función el 18 de octubre"). Sin esto, las funciones
+ * únicas se perdían y no aparecían en la cartelera.
+ */
+export function parseTemporada(texto) {
+  const rango = parseRangoFechas(texto);
+  if (rango) return rango;
+
+  const unica = parseFecha(texto);
+  if (!unica) return null;
+
+  // Un día que ya pasó hace rato es del año siguiente (p. ej. "5 de enero" leído en diciembre)
+  const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+  if ((hoy - unica) / 86400000 > 60) unica.setFullYear(unica.getFullYear() + 1);
+
+  return { desde: iso(unica), hasta: iso(unica) };
+}
+
 /** Precios en pesos dentro de un texto → lista ordenada y sin repetir. */
 export function parsePrecios(texto) {
   const valores = [...String(texto).matchAll(/\$\s?(\d{1,3}(?:[.\s]\d{3})+|\d{4,6})/g)]

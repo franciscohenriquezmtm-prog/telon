@@ -261,7 +261,7 @@ function tarjetaHTML(o, indice = 99) {
         <button class="fav-btn ${favoritos.has(o.id) ? 'is-fav' : ''}" data-fav="${o.id}"
                 aria-label="Guardar ${esc(o.titulo)}" aria-pressed="${favoritos.has(o.id)}">${favoritos.has(o.id) ? '♥' : '♡'}</button>
       </div>
-      <div class="meta-linea">${ICO.sala}${esc(o.salaInfo.nombre)} · ${esc(o.salaInfo.comuna)}</div>
+      <div class="meta-linea ${o.salaInfo.incierta ? 'sala-incierta' : ''}">${ICO.sala}${esc(o.salaInfo.nombre)}${o.salaInfo.incierta ? '' : ' · ' + esc(o.salaInfo.comuna)}</div>
       <div class="meta-linea">${ICO.reloj}${o.duracion ? duracionTxt(o.duracion) + ' · ' : ''}${esc(o.generoInfo.nombre)}${o.edad ? ` · +${o.edad}` : ''}</div>
       <div class="tarjeta-pills">
         ${est ? `<span class="pill ${est.clase}">${est.txt}</span>` : ''}
@@ -461,12 +461,18 @@ function detalleHTML(o) {
 
   <div class="detalle-seccion">
     <h3>Dónde</h3>
+    ${o.salaInfo.incierta ? `
+    <a class="sala-card sala-card-aviso" href="${esc(o.salaInfo.sitio || o.url)}" target="_blank" rel="noopener">
+      <b>⚠ Falta confirmar la sala</b>
+      <span>${esc(o.salaInfo.direccion)}. No la damos por supuesta para no mandarte al otro lado de la ciudad.</span>
+      <span class="ir">Ver la sede en el sitio del teatro ›</span>
+    </a>` : `
     <a class="sala-card" href="${esc(mapa)}" target="_blank" rel="noopener">
       <b>${esc(o.salaInfo.nombre)}</b>
       <span>${esc(o.salaInfo.direccion)}, ${esc(o.salaInfo.comuna)}</span>
       ${o.salaInfo.metro && o.salaInfo.metro !== '—' ? `<span>🚇 Metro ${esc(o.salaInfo.metro)}</span>` : ''}
       <span class="ir">Abrir en Mapas ›</span>
-    </a>
+    </a>`}
   </div>
 
   <div class="detalle-seccion">
@@ -766,7 +772,21 @@ $('#f-ninos').addEventListener('change', (e) => { estado.soloNinos = e.target.ch
 
 function pintarEstadoDatos() {
   const { actualizado, fuentes } = CARTELERA;
-  $('#sello-actualizado').textContent = actualizado ? `Cartelera actualizada ${haceCuanto(actualizado)}` : '';
+  const sello = $('#sello-actualizado');
+  sello.textContent = actualizado ? `Cartelera actualizada ${haceCuanto(actualizado)}` : '';
+
+  // Si la revisión automática se cayó, la app lo dice en la cara: una cartelera vieja
+  // manda a funciones que ya no existen o cambiaron de sala. Antes el sello se veía
+  // igual de verde con datos de un mes, y nadie se enteraba.
+  const dias = actualizado ? (Date.now() - new Date(actualizado)) / 86400000 : Infinity;
+  const rancia = dias > 3;
+  sello.classList.toggle('rancia', rancia);
+  if (rancia) {
+    sello.textContent = actualizado
+      ? `⚠ Cartelera sin actualizar hace ${Math.floor(dias)} días — confirma función y sala en el teatro`
+      : '⚠ Cartelera sin fecha de actualización — confirma todo en el teatro';
+  }
+
   $('#info-fuentes').innerHTML = (fuentes || []).map((f) =>
     `<li><a href="${esc(f.sitio)}" target="_blank" rel="noopener">${esc(f.nombre)}</a> — ${f.obras} ${f.obras === 1 ? 'obra' : 'obras'}${f.error ? ' <em>(no respondió en la última revisión)</em>' : ''}</li>`).join('');
   $('#info-actualizado').textContent = actualizado

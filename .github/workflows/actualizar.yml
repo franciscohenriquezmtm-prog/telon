@@ -8,12 +8,15 @@ name: Actualizar cartelera
 
 on:
   schedule:
-    # GitHub solo entiende UTC, y Chile cambia de hora dos veces al año:
-    # UTC-4 en invierno y UTC-3 en verano (horario de America/Santiago).
-    # Por eso se disparan las cuatro horas UTC posibles y el primer job descarta
-    # las que no corresponden. Resultado: exactamente dos corridas reales al día,
-    # a las 08:00 y a las 19:00 de Santiago, todo el año y sin tocar nada.
-    - cron: '0 11,12,22,23 * * *'
+    # Dos corridas al día, en UTC. Según si Chile está en horario de verano (UTC-3)
+    # o de invierno (UTC-4), caen a las 08:00/07:00 y 19:00/18:00 de Santiago.
+    #
+    # Antes se disparaban cuatro veces y un job descartaba las que no cayeran justo
+    # a las 08 o 19 de Santiago. GitHub lanza los cron con retraso (a veces más de
+    # una hora), así que la hora nunca calzaba: el workflow se saltaba SIEMPRE y
+    # reportaba "éxito" igual. La cartelera quedó un mes congelada sin que se notara.
+    # Por eso ya no se filtra por hora: si la corrida parte, actualiza.
+    - cron: '0 11,22 * * *'
   # Botón para correrla a mano desde la pestaña Actions
   workflow_dispatch:
   # Republicar en cuanto cambie algo del sitio. No se listan los archivos que la
@@ -41,33 +44,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # ── ¿Toca correr a esta hora? ───────────────────────────────────────────────
-  decidir:
-    runs-on: ubuntu-latest
-    outputs:
-      correr: ${{ steps.hora.outputs.correr }}
-    steps:
-      - id: hora
-        run: |
-          HORA=$(TZ=America/Santiago date +%H)
-          echo "En Santiago son las $HORA h."
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Ejecución manual: corre igual."
-            echo "correr=si" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "push" ]; then
-            echo "Cambió el sitio: republicar."
-            echo "correr=si" >> "$GITHUB_OUTPUT"
-          elif [ "$HORA" = "08" ] || [ "$HORA" = "19" ]; then
-            echo "correr=si" >> "$GITHUB_OUTPUT"
-          else
-            echo "No es ni las 08 ni las 19 en Santiago: esta pasada se salta."
-            echo "correr=no" >> "$GITHUB_OUTPUT"
-          fi
-
   # ── Leer los teatros y publicar ─────────────────────────────────────────────
   actualizar:
-    needs: decidir
-    if: needs.decidir.outputs.correr == 'si'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

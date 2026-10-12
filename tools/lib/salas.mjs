@@ -84,3 +84,20 @@ export function resolverSala(claveBase, salaInterior) {
   if (!limpia || limpia.toLowerCase() === base.nombre.toLowerCase()) return { ...base };
   return { ...base, nombre: `${base.nombre} — ${limpia}` };
 }
+
+/**
+ * Sala que el teatro no declaró. Se usa en vez de suponer una sede: un teatro con
+ * varias salas repartidas por la ciudad convierte una suposición en un viaje perdido.
+ * La app muestra esto como aviso y manda a la cartelera oficial.
+ */
+export function salaPorConfirmar(teatro, sitio) {
+  return {
+    nombre: `${teatro} — sala por confirmar`,
+    comuna: 'por confirmar',
+    direccion: `${teatro} tiene varias sedes y esta obra no dice en cuál va`,
+    metro: '',
+    mapa: '',
+    sitio,
+    incierta: true,
+  };
+}

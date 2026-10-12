@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-09-14T01:54:35.050Z",
+ "actualizado": "2026-10-12T16:31:33.115Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,42 +13,42 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
+   "obras": 1,
    "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 6,
+   "obras": 13,
    "error": null
   },
   {
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 3,
+   "obras": 2,
    "error": null
   },
   {
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 1,
+   "obras": 2,
    "error": null
   },
   {
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 15,
+   "obras": 17,
    "error": null
   },
   {
    "id": "finisterrae",
    "nombre": "Teatro Finis Terrae",
    "sitio": "https://teatrofinisterrae.cl",
-   "obras": 1,
+   "obras": 0,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
+   "obras": 4,
    "error": null
   },
   {
@@ -74,266 +74,6 @@
   }
  ],
  "obras": [
-  {
-   "id": "zoco-un-interrogatorio",
-   "titulo": "UN INTERROGATORIO",
-   "subtitulo": null,
-   "sinopsis": "Cada palabra es un movimiento dentro de un juego que se libera contra el tiempo en el que el público se convierte en testigo de una coreografía de estrategia y manipulación.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Manuel Morgado @manuel_morgado_esc",
-   "dramaturgo": null,
-   "elenco": [
-    "Jaime Omeñaca @jaimeomenaca",
-    "Julio Milostich @juliomilostich.oficial",
-    "Fernanda Finsterbusch @fernandafinsterbusch"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-21",
-    "hasta": "2026-10-05",
-    "dias": [
-     0,
-     4,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Temporada desde el 21 de agosto al 5 de octubre con receso entre el 18 y el 21 de septiembre. · De jueves a sábado a las 19.30 hrs y domingo a las 18.00 hrs. · Recomendada para mayores de 14 años · Av. la Dehesa 1500, Lo Barnechea.",
-   "precios": [],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2025/03/Afiche_UnInterrogatorio-2-scaled.jpg",
-   "imagenLocal": "assets/img/zoco-un-interrogatorio.jpg",
-   "huellaImagen": "096db61cb756d019b8b17516bbd584cb43b53aa1",
-   "entradas": "https://teatrozoco.cl/evento/un-interrogatorio/",
-   "url": "https://teatrozoco.cl/evento/un-interrogatorio/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "zoco-espectros",
-   "titulo": "ESPECTROS",
-   "subtitulo": null,
-   "sinopsis": "Helena está a punto de inaugurar un hospital construido con la fortuna de su difunto esposo. La llegada de su hijo Oz y de un antiguo amigo, sin embargo, hará emerger una verdad que amenaza con derrumbar la imagen de una familia aparentemente ejemplar.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Luis Ureta",
-   "dramaturgo": null,
-   "elenco": [
-    "Claudia Cabezas",
-    "Guilherme Sepúlveda",
-    "Tito Bustamante",
-    "Ignacia Sepúlveda",
-    "Nicolás Alaluf"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-08-27",
-    "hasta": "2026-10-11",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "27 de agosto al 11 de octubre · ***Con receso los días 17, 18, 19 y 20 de septiembre · Jueves a sábado 19:30 hrs, domingo 18:00 hrs",
-   "precios": [],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2026/07/AFICHEESPECTROS-scaled.png",
-   "imagenLocal": "assets/img/zoco-espectros.png",
-   "huellaImagen": "04f572cfd1010c5a45773af5c6c2b559f7292131",
-   "entradas": "https://teatrozoco.cl/evento/espectros/",
-   "url": "https://teatrozoco.cl/evento/espectros/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
-  {
-   "id": "puente-la-noche-de-las-espaldas",
-   "titulo": "La noche de las espaldas",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-12-12",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": "14 funciones — 19:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "mori-que-le-corten-la-cabeza",
-   "titulo": "Que le corten la cabeza",
-   "subtitulo": null,
-   "sinopsis": "\"Que le corten la cabeza\", el nuevo trabajo de los Contadores Auditores, evocará la decapitación de la Reina María Antonieta de Francia como metáfora de distintos fenómenos actuales, como la llamada \"cultura de la cancelación\", los violentos vaivenes políticos de Occidente, y la crisis de la verdad en la era de las redes sociales.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Los Contadores Auditores",
-   "elenco": [
-    "Natalia Valdebenito",
-    "Javiera Contador"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-03",
-    "hasta": "2026-10-03",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:30",
-     "5": "20:30",
-     "6": "20:30"
-    }
-   },
-   "horarioTexto": "De jueves a sábado, a las 20:30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 22000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/01f3716cb56ba02fbe91f753d7d5ca1a.jpg",
-   "imagenLocal": "assets/img/mori-que-le-corten-la-cabeza.jpg",
-   "huellaImagen": "2b528e2179cc6dc0eb06c7d20d08d10222140c20",
-   "entradas": "https://teatromori.cl/obra/WaqiDEqj/que-le-corten-la-cabeza",
-   "url": "https://teatromori.cl/obra/WaqiDEqj/que-le-corten-la-cabeza",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "mori-soy-el-unico-que-no-me-conozco",
-   "titulo": "Soy el único que no me conozco",
-   "subtitulo": null,
-   "sinopsis": "¡Prepárate para reírte a carcajadas! Felipe Izquierdo regresa en su aclamada versión de stand up con su característico y desafiante humor. En esta nueva entrega, nos invita a cuestionar la realidad que nos rodea, planteando la sospecha de que todo podría ser parte de un gran complot.",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Izquierdo"
-   ],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-06",
-    "hasta": "2026-09-27",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:30"
-    }
-   },
-   "horarioTexto": "Domingos, a las 19.30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/72d97ebbbbbd1d66c0967cbea23d79ef.jpg",
-   "imagenLocal": "assets/img/mori-soy-el-unico-que-no-me-conozco.jpg",
-   "huellaImagen": "2f96bd1e057b2256603a804008ef2b8c1bc40e6e",
-   "entradas": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "url": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
   {
    "id": "zoco-honor",
    "titulo": "HONOR",
@@ -410,270 +150,6 @@
    }
   },
   {
-   "id": "mori-animas-de-dia-claro",
-   "titulo": "Ánimas de día claro",
-   "subtitulo": null,
-   "sinopsis": "La obra narra la historia de cinco hermanas que dejaron atrás sus cuerpos, pero cuyos espíritus siguen habitando una vieja casona cerca de Talagante. Aunque partieron hace años, sus ánimas permanecen atrapadas allí, condenadas a vagar sin descanso por el peso de un deseo insatisfecho. Aferradas a sus anhelos incumplidos, no podrán cruzar al más allá hasta recuperar lo que les fue arrebatado en vida.",
-   "genero": "drama",
-   "compania": "Colectivo CTM",
-   "director": "María José Pizarro",
-   "dramaturgo": "Alejandro Sieveking",
-   "elenco": [
-    "Martina Ruiz"
-   ],
-   "duracion": 80,
-   "edad": 10,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-11",
-    "hasta": "2026-09-27",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Semana del 17 al 20 jueves a sábado a las 20 hrs y domingo a las 19 hrs Semana del 25 al 27 viernes y sábado a las 20 hrs y domingo a las 19 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/12636b1441ec1569b717d45961beaedf.jpg",
-   "imagenLocal": "assets/img/mori-animas-de-dia-claro.jpg",
-   "huellaImagen": "b3f87651ce4fe46ee1dad428d12dce3b92246b0a",
-   "entradas": "https://teatromori.cl/obra/ubzaK4Ep/animas-de-dia-claro",
-   "url": "https://teatromori.cl/obra/ubzaK4Ep/animas-de-dia-claro",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "ictus-sigrid-y-los-claveles",
-   "titulo": "SIGRID Y LOS CLAVELES",
-   "subtitulo": null,
-   "sinopsis": "Enfocados en cultivar la tradición de la cueca urbana y otros exponentes de la música latinoamericana, la banda encabezada por la actriz nacional, Sigrid Alegría , te hará bailar al ritmo del foxtrot, el swing, el vals peruano y la psicodelia sesentera, con su repertorio rico en cuecas de registro y originales. En esta fecha, la banda presentará un show lleno de bailes, cantos, interacciones con el público y una ventana hacia la música tradicional urbana.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Sigrid Alegría",
-    "Alonso Velasco Alegría",
-    "Ignacio Andrade",
-    "Ignacio Puga",
-    "Esteban Cruz"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-16",
-    "hasta": "2026-09-16",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:30"
-    }
-   },
-   "horarioTexto": "16 DE SEPTIEMBRE · Miércoles | 20:30 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/SIGRIDYLOSCLAVELES_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-sigrid-y-los-claveles.jpg",
-   "huellaImagen": "49871819f1fc4cb13bb5671c8de905fbee643df0",
-   "entradas": "https://ticketplus.cl/events/sigrid-y-los-claveles",
-   "url": "https://teatroictus.cl/cartelera/proximamente-sigrid-y-los-claveles/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "mori-la-pergola-de-las-flores",
-   "titulo": "La pérgola de las flores",
-   "subtitulo": null,
-   "sinopsis": "“La pérgola de las flores”, una emblemática obra del teatro chileno, cobra vida con la participación de 25 actores y bailarines en escena, acompañados de músicos en vivo.",
-   "genero": "drama",
-   "compania": "Agrupación Cultural Volaverunt",
-   "director": "Gonzalo Tapia Becerra",
-   "dramaturgo": null,
-   "elenco": [
-    "María Jesús Miranda (Carmela)"
-   ],
-   "duracion": 100,
-   "edad": 7,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-17",
-    "hasta": "2026-09-20",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "20:30",
-     "5": "20:30",
-     "6": "18:00"
-    }
-   },
-   "horarioTexto": "De jueves a viernes, a las 20:30 horas Sábado y domingo a las 18:00 y a las 20:30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/c79a72f85ca25f63506686979b8a4fb4.jpg",
-   "imagenLocal": "assets/img/mori-la-pergola-de-las-flores.jpg",
-   "huellaImagen": "8a24ee595df5fb8a602b40dea65f6fb4b84ee0b6",
-   "entradas": "https://teatromori.cl/obra/9Iz8FCA1/la-pergola-de-las-flores",
-   "url": "https://teatromori.cl/obra/9Iz8FCA1/la-pergola-de-las-flores",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "mori-tres-marias-y-una-rosa",
-   "titulo": "Tres Marías y una Rosa",
-   "subtitulo": null,
-   "sinopsis": "Inspirada en hechos reales, Tres Marías y una Rosa retrata la vida de cuatro mujeres pobladoras durante la dictadura chilena, quienes encuentran en los talleres de arpilleras su única fuente de ingreso para la familia, en un contexto de pobreza y represión. La obra muestra, con fuerza, humanidad y humor, el desconcierto que genera este cambio de roles en sus hogares y cómo, pese a todo, estas mujeres resisten desde lo cotidiano. Un relato íntimo y potente sobre dignidad, trabajo y supervivencia.",
-   "genero": "comedia",
-   "compania": "Taller de Investigación Teatral (TIT)",
-   "director": "Loreto Valenzuela",
-   "dramaturgo": "David Benavente",
-   "elenco": [
-    "Luciana Ibañez",
-    "Constanza Mora",
-    "Carolina Paulsen",
-    "Malucha Pinto"
-   ],
-   "duracion": 90,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-17",
-    "hasta": "2026-10-03",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:30",
-     "5": "20:30",
-     "6": "20:30"
-    }
-   },
-   "horarioTexto": "De jueves a sábado, a las 20:30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/eee3fb5b2b1525cf2a8ad9f9528624f9.jpg",
-   "imagenLocal": "assets/img/mori-tres-marias-y-una-rosa.jpg",
-   "huellaImagen": "5fa5a21590620830979095ca258b35e7c117831c",
-   "entradas": "https://teatromori.cl/obra/ylhCcamm/tres-marias-y-una-rosa",
-   "url": "https://teatromori.cl/obra/ylhCcamm/tres-marias-y-una-rosa",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-edo-caroe",
-   "titulo": "Edo Caroe",
-   "subtitulo": null,
-   "sinopsis": "Tras de una exitosa gira nacional y su paso por el Festival de Viña del Mar 2025, Edo Caroe regresa a los escenarios pero con un gran problema: No tiene nada para presentar. O eso dicen.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 16,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-21",
-    "hasta": "2026-09-23",
-    "dias": [
-     1,
-     2,
-     3
-    ]
-   },
-   "horarioTexto": "21, 22 y 23 de septiembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/12/2026_09_21_edo-caroe_s.jpg",
-   "imagenLocal": "assets/img/nescafe-edo-caroe.jpg",
-   "huellaImagen": "deef02356ef09f1900d70f9b52e49bac02638c83",
-   "entradas": "https://www.ticketmaster.cl/event/947-edo-caroe-no-tiene-show-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/edo-caroe-no-tiene-show/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "zoco-la-edad-es-un-sentimiento",
    "titulo": "LA EDAD ES UN SENTIMIENTO",
    "subtitulo": null,
@@ -728,245 +204,8 @@
    }
   },
   {
-   "id": "teatrouc-cabeza-de-elefante",
-   "titulo": "Cabeza de elefante",
-   "subtitulo": null,
-   "sinopsis": "Inspirada en una historia real y a través de una poética metáfora visual con marionetas, la compañía Silencio Blanco nos invita a explorar las profundidades de la memoria y el olvido. Un emotivo e íntimo viaje sobre la fragilidad del recuerdo, la identidad que permanece y las preguntas que surgen cuando la propia historia comienza a desvanecerse. Funciones entre el 23 de septiembre y el 3 de octubre.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 50,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-23",
-    "hasta": "2026-10-03",
-    "dias": [
-     3,
-     6
-    ],
-    "horas": {
-     "3": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/DSC6718-©Felipe_Garay-quienmelorobo-1.jpg",
-   "imagenLocal": "assets/img/teatrouc-cabeza-de-elefante.jpg",
-   "huellaImagen": "ea1b0cc1ff82a99a3a2a6e35f13b0662b1d8f86e",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/cabeza-de-elefante/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "gam-chiloe-cielos-cubiertos",
-   "titulo": "Chiloé, cielos cubiertos",
-   "subtitulo": null,
-   "sinopsis": "La obra, en versión de La Dramática Nacional y con dramaturgia de María Asunción Requena, narra la vida de los chilotes de Curaco de Vélez en los años 70, qu...",
-   "genero": "infantil",
-   "compania": "Nelda Muray",
-   "director": "Carolina Araya, Nelda Muray, Carola Rebolledo",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-24",
-    "hasta": "2026-10-04",
-    "dias": [
-     0,
-     4,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/portadaChiloe.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-chiloe-cielos-cubiertos.png",
-   "huellaImagen": "0bd403f0374de5db440323cda30dee8fff006a31",
-   "entradas": "https://gam.ticketplus.cl/events/chiloe-cielos-cubiertos-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/chiloe-cielos-cubiertos/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-la-remolienda",
-   "titulo": "La remolienda",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES nuevamente presentará uno de los grandes hitos de las tablas chilenas, “La remolienda”, con única función el jueves 24 de septiembre.",
-   "genero": "drama",
-   "compania": "La Originaria",
-   "director": "Hernán Vallejo",
-   "dramaturgo": "Alejandro Sieveking",
-   "elenco": [
-    "Katty Kowaleczko",
-    "Enoe Coulon",
-    "Marcela Espinoza",
-    "Angela Vallejo",
-    "Max Meriño",
-    "Juan Carlos Maldonado",
-    "Claudia Narea",
-    "Rodrigo Aceituno",
-    "Cristian Gajardo",
-    "Josefa López",
-    "Marco Rebolledo",
-    "Sebastian Trincado"
-   ],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-24",
-    "hasta": "2026-09-24",
-    "dias": [
-     4
-    ]
-   },
-   "horarioTexto": "24 de septiembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_24_la-remolienda_s_4.jpg",
-   "imagenLocal": "assets/img/nescafe-la-remolienda.jpg",
-   "huellaImagen": "80431e7837c18a786111e0b95cd3a6494c8d056e",
-   "entradas": "https://www.ticketmaster.cl/event/la-remolienda-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-remolienda-2026/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "nescafe-animas-de-dia-claro",
-   "titulo": "Ánimas de día claro",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES presentará el regreso a su escenario de una entrañable obra del teatro chileno, “Ánimas de día claro”, con única función el viernes 25 de septiembre.",
-   "genero": "drama",
-   "compania": "La Originaria",
-   "director": "Ángela Vallejo y Cristian Gajardo",
-   "dramaturgo": "Alejandro Sieveking",
-   "elenco": [
-    "Hernán Contreras",
-    "Ángela Vallejo",
-    "Marcela Espinoza",
-    "Claudia Hidalgo",
-    "Juan Carlos Maldonado",
-    "Cristian Gajardo",
-    "Sara Henríquez",
-    "Marco Rebolledo"
-   ],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-25",
-    "hasta": "2026-09-25",
-    "dias": [
-     5
-    ]
-   },
-   "horarioTexto": "25 de septiembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_09_25_animas-de-dia-claro_s_3.jpg",
-   "imagenLocal": "assets/img/nescafe-animas-de-dia-claro.jpg",
-   "huellaImagen": "5531c615e4c519b4bc52884e352135dbbfec4fa3",
-   "entradas": "https://www.ticketmaster.cl/event/animas-de-dia-claro-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/animas-de-dia-claro-2026/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-entramado-puedes-bailar-santiago",
-   "titulo": "Entramado: Puedes Bailar Santiago",
-   "subtitulo": "Puedes Bailar Santiago",
-   "sinopsis": "El histórico programa de Teatro del Lago, Puedes Bailar, presenta en GAM esta creación de Vivian Romo, interpretada por cerca de 40 jóvenes. La obra de danza...",
-   "genero": "danza",
-   "compania": "Entramado",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-25",
-    "hasta": "2026-09-25",
-    "dias": [
-     5
-    ],
-    "horas": {
-     "5": "19:30"
-    }
-   },
-   "horarioTexto": "Vi—19.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/Entramado1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-entramado-puedes-bailar-santiago.png",
-   "huellaImagen": "05376ecc3cc55c5936a407532291e8d0f780ea20",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/entramado/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "puente-las-voces-de-mi-madre",
-   "titulo": "Las voces de mi madre",
+   "titulo": "Las Voces de mi Madre",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -985,22 +224,28 @@
     "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
-    "desde": "2026-09-26",
-    "hasta": "2026-12-27",
+    "desde": "2026-10-01",
+    "hasta": "2027-01-11",
     "dias": [
      0,
+     1,
+     2,
+     3,
      4,
      5,
      6
     ],
     "horas": {
      "0": "20:00",
+     "1": "20:00",
+     "2": "20:00",
+     "3": "20:00",
      "4": "20:00",
      "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "12 funciones — 20:00 h",
+   "horarioTexto": "24 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -1014,109 +259,53 @@
    }
   },
   {
-   "id": "mori-alicia-el-musical-de-las-maravillas",
-   "titulo": "Alicia, el musical de las maravillas",
+   "id": "mori-jaque-mate",
+   "titulo": "Jaque Mate",
    "subtitulo": null,
-   "sinopsis": "Este musical chileno inspirado en el clásico de Lewis Carroll sigue a Alicia, una niña curiosa que al perseguir al Señor Conejo cae por una madriguera y llega al País de las Maravillas. Allí se encuentra con particulares personajes: la Gata Sonriente, la Sabia Oruga, el Sombrerero Loco, la Liebre de Marzo y la temida Reina de Corazones, dueña de un ejército de traviesas cartas.",
-   "genero": "musical",
+   "sinopsis": "¡Cuatro sábados, cuatro invitados, cuatro formas de jugar la comedia! La carismática Yamila Reyna pisa fuerte con el estreno de Jaque Mate, un ciclo de comedia en Teatro Mori Parque Arauco. Lejos de ser un espectáculo convencional, este formato busca dinamitar la distancia entre el artista y la platea, convirtiendo a los asistentes en piezas activas de un tablero donde la risa es la única regla. El ciclo comienza el 3 de octubre junto a Pamela Leiva, continúa el 10 con Asskha Sumatra, el 17 con León Murillo y tendrá su última función el 31 junto a Piare con P. Cada comediante llegará con su propio universo y estilo, haciendo que cada",
+   "genero": "comedia",
    "compania": null,
    "director": null,
-   "dramaturgo": "Daniela Fernán",
+   "dramaturgo": "Yamila Reyna",
    "elenco": [
-    "Daniela Fernán"
+    "Yamila Reyna"
    ],
    "duracion": 60,
-   "edad": null,
+   "edad": 18,
    "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
     "sitio": "https://teatromori.cl"
    },
    "temporada": {
-    "desde": "2026-09-27",
-    "hasta": "2026-10-11",
+    "desde": "2026-10-03",
+    "hasta": "2026-10-31",
     "dias": [
-     0
+     6
     ],
     "horas": {
-     "0": "16:00"
+     "6": "22:15"
     }
    },
-   "horarioTexto": "Domingos 16 hrs",
+   "horarioTexto": "Sábados a las 22:15 hrs",
    "precios": [
     {
      "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
+     "valor": 22000
     }
    ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/202745f1cf601f958787ecb6f6173d23.jpg",
-   "imagenLocal": "assets/img/mori-alicia-el-musical-de-las-maravillas.jpg",
-   "huellaImagen": "d610d9a08f4371a52e0f6a436efe78914571a5aa",
-   "entradas": "https://teatromori.cl/obra/DdlRNja9/alicia--el-musical-de-las-maravillas",
-   "url": "https://teatromori.cl/obra/DdlRNja9/alicia--el-musical-de-las-maravillas",
+   "imagen": "https://teatromori.cl/mini/268x372xS/24dbb518dce17b4db850fe9f2259c547.jpg",
+   "imagenLocal": "assets/img/mori-jaque-mate.jpg",
+   "huellaImagen": "c06e0c9550a22ee7cb5af8fed3802fe52e0e4149",
+   "entradas": "https://teatromori.cl/obra/JaqueMat/jaque-mate",
+   "url": "https://teatromori.cl/obra/JaqueMat/jaque-mate",
    "fuente": {
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "ictus-historia-de-amor-para-un-alma-vieja",
-   "titulo": "HISTORIA DE AMOR PARA UN ALMA VIEJA",
-   "subtitulo": null,
-   "sinopsis": "“Historia de amor para un alma vieja es inspiración para entender que nunca es tarde para vivir la vida y honrar nuestros lazos familiares&#8221; — Felipe Zambrano Miguieles",
-   "genero": "drama",
-   "compania": null,
-   "director": "Felipe Zambrano Miguieles",
-   "dramaturgo": "Felipe Zambrano Miguieles",
-   "elenco": [
-    "Eduardo Barril",
-    "Luz Jiménez",
-    "Teresita Ríos",
-    "Pascale Zelaya"
-   ],
-   "duracion": 55,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-27",
-    "hasta": "2026-09-27",
-    "dias": [
-     0,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "25 al 27 DE SEPTIEMBRE · Vie y sáb: 20.00 H | dom: 19.00H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/historiadeamor_paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-historia-de-amor-para-un-alma-vieja.jpg",
-   "huellaImagen": "41793d40c8dfacd9647b7d17dff9fb193787bb9e",
-   "entradas": "https://ticketplus.cl/events/historia-de-amor-para-un-alma-vieja-2026-09-25-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-historia-de-amor-para-un-alma-vieja/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1142,24 +331,22 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-09-30",
-    "hasta": "2026-10-18",
+    "desde": "2026-10-04",
+    "hasta": "2026-11-01",
     "dias": [
      0,
-     3,
      4,
      5,
      6
     ],
     "horas": {
      "0": "18:30",
-     "3": "19:30",
      "4": "19:30",
      "5": "19:30",
      "6": "19:30"
     }
    },
-   "horarioTexto": "13 funciones publicadas por el teatro",
+   "horarioTexto": "17 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -1178,17 +365,519 @@
    }
   },
   {
-   "id": "m100-re-producirse",
-   "titulo": "RE-PRODUCIRSE",
+   "id": "mori-el-viaje-de-la-paz",
+   "titulo": "El Viaje de la Paz",
    "subtitulo": null,
-   "sinopsis": "Una mujer solitaria, obsesionada con replicarse materialmente, busca convertirse en la sombra que controle el destino de sus propias creaciones.",
+   "sinopsis": "En este estreno, una niña llamada Paz decide seguir su anhelo más profundo: conocer el mar. En su travesía, perdida en la montaña, encontrará en su inocencia las alas y en la amistad su libertad. Mientras tanto, en el pueblo la ausencia de Paz desata el caos. La comunidad deberá aprender a unirse para encontrarla, sin sospechar que esa búsqueda los conducirá a un viaje mayor: el de reencontrarse con la paz de todos.",
+   "genero": "drama",
+   "compania": "Teatro de la Poesía",
+   "director": "Claudio Rojas",
+   "dramaturgo": "Claudio Rojas",
+   "elenco": [
+    "Leticia Bortoletto"
+   ],
+   "duracion": 55,
+   "edad": 4,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-04",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "16:00"
+    }
+   },
+   "horarioTexto": "Domingo a las 16:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 8000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/761113fc9816c716b90875126db9602b.jpg",
+   "imagenLocal": "assets/img/mori-el-viaje-de-la-paz.jpg",
+   "huellaImagen": "768e852d049e919457b2187d7e23604a7b247a92",
+   "entradas": "https://teatromori.cl/obra/ViajePaz/el-viaje-de-la-paz",
+   "url": "https://teatromori.cl/obra/ViajePaz/el-viaje-de-la-paz",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral",
+   "titulo": "La Aventura de Mowgli, musicalizado en lengua de señas y oral simultáneamente",
+   "subtitulo": null,
+   "sinopsis": "El montaje narra las aventuras de Mowgli, un niño criado por lobos en la selva de la India, quien aprende las leyes de la naturaleza guiado por Baloo, Bagheera y otros animales. A lo largo del relato, Mowgli enfrenta al temible tigre Shere Khan y debe decidir entre la vida salvaje y la civilización humana. Una puesta en escena que combina fábula, aventura y enseñanzas sobre la pertenencia, la libertad y la identidad, basada en el amor por la naturaleza y la diversidad. Integra canto, música en vivo, actuación, movimiento y caracterización, y es interpretada en lengua de señas y oral simultáneamente.",
    "genero": "drama",
    "compania": null,
-   "director": "Catalina Bize del Campo",
+   "director": null,
+   "dramaturgo": "Sandra Barrera Mera",
+   "elenco": [
+    "Andrés Henríquez"
+   ],
+   "duracion": 60,
+   "edad": 5,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-04",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "16:00"
+    }
+   },
+   "horarioTexto": "Domingos a las 16:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 8000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 5000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/0f982d1f3049b793696440b071d025ff.jpg",
+   "imagenLocal": "assets/img/mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral.jpg",
+   "huellaImagen": "5b9e8fff709ee6c7a93e54050f3cc1315887720b",
+   "entradas": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
+   "url": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-soy-el-unico-que-no-me-conozco",
+   "titulo": "Soy el único que no me conozco",
+   "subtitulo": null,
+   "sinopsis": "¡Prepárate para reírte a carcajadas! Felipe Izquierdo regresa en su aclamada versión de stand up con su característico y desafiante humor. En esta nueva entrega, nos invita a cuestionar la realidad que nos rodea, planteando la sospecha de que todo podría ser parte de un gran complot.",
+   "genero": "humor",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Felipe Izquierdo"
+   ],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-04",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:30"
+    }
+   },
+   "horarioTexto": "Domingos, a las 19.30 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/72d97ebbbbbd1d66c0967cbea23d79ef.jpg",
+   "imagenLocal": "assets/img/mori-soy-el-unico-que-no-me-conozco.jpg",
+   "huellaImagen": "2f96bd1e057b2256603a804008ef2b8c1bc40e6e",
+   "entradas": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
+   "url": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "puente-musica-clasica-a-pocos-metros",
+   "titulo": "Música clásica a pocos metros",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
    "dramaturgo": null,
    "elenco": [],
-   "duracion": 50,
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-06",
+    "hasta": "2027-01-06",
+    "dias": [
+     0,
+     2,
+     3
+    ],
+    "horas": {
+     "0": "20:00",
+     "2": "20:00",
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "4 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "puente-fernando-cabrera-en-vivo",
+   "titulo": "Fernando Cabrera en vivo",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-07",
+    "hasta": "2027-01-07",
+    "dias": [
+     1,
+     3,
+     4
+    ],
+    "horas": {
+     "1": "20:00",
+     "3": "20:00",
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "mori-cronicas-desquiciadas",
+   "titulo": "Crónicas Desquiciadas",
+   "subtitulo": null,
+   "sinopsis": "Crónicas Desquiciadas es una obra escrita en 2002 por Indira Páez, reconocida escritora, dramaturga y libretista venezolana. Escrita con estructura de monólogos, al estilo stand up comedy, pero desde la óptica de 12 personajes cotidianos que transparentan de manera brutal, sarcástica y divertidísima sus confesiones acerca del amor, la sexualidad, sus obsesiones, sus trastornos y los estereotipos de género. En este nuevo montaje, bajo la dirección de Moira Miller, seremos testigos y de alguna forma partícipes de una terapia artificial en que el arte, la ficción y el artificio serán las herramientas para enfrentar realidades, conflictos, frustraciones y necesidades que los tienen al borde del colapso.",
+   "genero": "humor",
+   "compania": null,
+   "director": "Moira Miller",
+   "dramaturgo": "Indira Páez",
+   "elenco": [
+    "Paz Bascuñán"
+   ],
+   "duracion": 80,
    "edad": 16,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-08",
+    "hasta": "2026-12-12",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Jueves a sábado a las 20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/cc61ecf61da1e0acc002a121d3ac1a59.jpg",
+   "imagenLocal": "assets/img/mori-cronicas-desquiciadas.jpg",
+   "huellaImagen": "c92858a4262c667d65f9f2d63bbea0ef233e4705",
+   "entradas": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas",
+   "url": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-perfectos-desconocidos",
+   "titulo": "Perfectos Desconocidos",
+   "subtitulo": null,
+   "sinopsis": "Siete amigos de toda la vida deciden jugar a un juego peligroso durante una cena: colocar sus teléfonos sobre la mesa y compartir en voz alta todos los mensajes y llamadas que reciban. Lo que comienza como un experimento para probar que no tienen nada que ocultar desata un torbellino de secretos, revelaciones y verdades que ponen en crisis sus relaciones, dejando claro que en realidad no se conocen tan bien como pensaban.",
+   "genero": "drama",
+   "compania": "MST Teatro",
+   "director": "Franco Battista",
+   "dramaturgo": "Paolo Genovese",
+   "elenco": [
+    "Catherine Mazoyer"
+   ],
+   "duracion": 100,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-08",
+    "hasta": "2026-10-31",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Jueves a sábado a las 20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/0cf36ab74c4a6e58305ecabc043b7ad9.jpg",
+   "imagenLocal": "assets/img/mori-perfectos-desconocidos.jpg",
+   "huellaImagen": "3affb79ede91b364f6599b25ed4b02b1498852f2",
+   "entradas": "https://teatromori.cl/obra/PerfDesc/perfectos-desconocidos-",
+   "url": "https://teatromori.cl/obra/PerfDesc/perfectos-desconocidos-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-cuerpo-de-lewy",
+   "titulo": "Cuerpo de Lewy",
+   "subtitulo": null,
+   "sinopsis": "Una hija decide, a modo de ritual, traer a escena el almuerzo que no alcanzó a tener con su padre a raíz de su profundo y fulminante deterioro cognitivo producto de una demencia por Cuerpos de Lewy. En este almuerzo fabricado artificialmente, la hija espera a su padre, quien sólo podrá estar presente a través de réplicas y fragmentos, resultando en un encuentro con un padre constantemente versionado. Cuerpo de Lewy se pregunta por cómo dialogar con quien no está, o no está como quisiéramos que esté. ¿Cómo conectar con una mente ingobernable? ¿Será posible conectar con alguien hecho de fragmentos? ¿Qué aprender de este padre que olvida y alucina? Cuerpo de Lewy es entonces una oportunidad para abordar las contradicciones que genera el trauma y desenredar la maraña que este deja. Y es, finalmente, la forma que encontró una hija de conversar con su padre extraviado.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Ignacia Agüero McPherson",
+   "dramaturgo": "Ignacia Agüero, con la colaboración de Carlos Briones, Melchor Pino, Juan Diego Bonilla y Martín Acuña",
+   "elenco": [
+    "Carlos Briones"
+   ],
+   "duracion": null,
+   "edad": 18,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-09",
+    "hasta": "2026-10-31",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Jueves a sábado a las 20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/de2cc520ca46a5137e445b6b6378ac12.jpg",
+   "imagenLocal": "assets/img/mori-cuerpo-de-lewy.jpg",
+   "huellaImagen": "24a917908c683bd6e3975633ada0575313f5951e",
+   "entradas": "https://teatromori.cl/obra/CrpoLewy/cuerpo-de-lewy",
+   "url": "https://teatromori.cl/obra/CrpoLewy/cuerpo-de-lewy",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "puente-dramaexpress-2026-conspiranoico",
+   "titulo": "DramaExpress 2026: Conspiranoico",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-13",
+    "hasta": "2027-01-18",
+    "dias": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "18 funciones",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "mori-homeostasis-talk",
+   "titulo": "HOMEOSTASIS TALK",
+   "subtitulo": null,
+   "sinopsis": "Felipe Monsalve, autor del libro bestseller “Homeostasis\" y el Podcast \"Homeostasis Live\", entrevistará a la canalizadora Cote Junemann y al alquimista Javier Acuña, conjuntamente y en una misma sesión. Para luego pasar a una Masterclass de Cote Junemann y Javier Acuña. Esta conversación y Masterclass, terminará con un importante espacio de preguntas del público asistente.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-14",
+    "hasta": "2026-10-14",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:00 hrs",
+   "precios": [],
+   "imagen": "https://teatromori.cl/mini/268x372xS/611254f6a6d6194bfc58d812d8ab8c41.jpg",
+   "imagenLocal": "assets/img/mori-homeostasis-talk.jpg",
+   "huellaImagen": "c4524dc5dbb8f44cc239cb9af971f77ad9550b5f",
+   "entradas": "https://teatromori.cl/obra/fO3Q8Qbo/homeostasis-talk",
+   "url": "https://teatromori.cl/obra/fO3Q8Qbo/homeostasis-talk",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "m100-matadero-alma",
+   "titulo": "Matadero Alma",
+   "subtitulo": null,
+   "sinopsis": "Matadero Alma es una radiografía urbana que explora las imágenes de nostalgia e injusticia que atraviesan la identidad del país.",
+   "genero": "danza",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 15,
    "sala": {
     "nombre": "Matucana 100 — Espacio Patricio Bunster",
     "comuna": "Estación Central",
@@ -1198,117 +887,34 @@
     "sitio": "https://www.m100.cl"
    },
    "temporada": {
-    "desde": "2026-10-01",
-    "hasta": "2026-10-04",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
+    "desde": "2026-10-14",
+    "hasta": "2026-10-17",
+    "sinHorario": true
    },
-   "horarioTexto": "Jue a dom: 20:00 hrs",
+   "horarioTexto": "19:30 hrs.",
    "precios": [
     {
      "tipo": "General",
-     "valor": 7000
+     "valor": 8000
     },
     {
      "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
+     "valor": 7000
     },
     {
      "tipo": "Convenio",
      "valor": 5000
     }
    ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/re-producirse_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-re-producirse.jpg",
-   "huellaImagen": "163300b12d0350b650cbd386d69c4336dd5ae554",
-   "entradas": "https://www.m100.cl/programacion/teatro/re-producirse/",
-   "url": "https://www.m100.cl/programacion/teatro/re-producirse/",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "url": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
    "fuente": {
     "id": "m100",
     "nombre": "Matucana 100",
     "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "finisterrae-un-enemigo-del-pueblo",
-   "titulo": "Un enemigo del pueblo",
-   "subtitulo": null,
-   "sinopsis": "Estreno | Producción Finis Terrae (Proyecto Teatro Universitario Finis Terrae — Ministerio de las Culturas)",
-   "genero": "drama",
-   "compania": null,
-   "director": "Alexandra Von Hummel",
-   "dramaturgo": "Henrick Ibsen",
-   "elenco": [
-    "por definir"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Finis Terrae",
-    "comuna": "Providencia",
-    "direccion": "Av. Pocuro 1935",
-    "metro": "—",
-    "mapa": "Teatro Finis Terrae, Providencia",
-    "sitio": "https://teatrofinisterrae.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-01",
-    "hasta": "2026-10-30",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:30",
-     "5": "20:30",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 11500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 9000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7500
-    }
-   ],
-   "imagen": "https://teatrofinisterrae.cl/wp-content/uploads/2026/03/Un-enemigo-del-pueblo.jpg",
-   "imagenLocal": "assets/img/finisterrae-un-enemigo-del-pueblo.jpg",
-   "huellaImagen": "534848e3244480bc39b6babfa5ed5dd62774695d",
-   "entradas": null,
-   "url": "https://teatrofinisterrae.cl/evento/un-enemigo-del-pueblo/",
-   "fuente": {
-    "id": "finisterrae",
-    "nombre": "Teatro Finis Terrae",
-    "sitio": "https://teatrofinisterrae.cl"
    }
   },
   {
@@ -1335,7 +941,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-02",
+    "desde": "2026-10-15",
     "hasta": "2026-10-17",
     "dias": [
      0,
@@ -1361,235 +967,15 @@
      "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/Banner_Furias.53e48872.fill-1200x630.jpg",
+   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
    "imagenLocal": "assets/img/gam-furias.jpg",
-   "huellaImagen": "61516cfe93d84bfe24f6f6cac2c5b4fc0fb9dc21",
+   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
    "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-felipe-avello",
-   "titulo": "Felipe Avello",
-   "subtitulo": null,
-   "sinopsis": "Felipe Avello llega nuevamente al TEATRO NESCAFÉ DE LAS ARTES, con un show de monólogos dinámico y cercano, que invita al público a ser parte activa de la experiencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-06",
-    "hasta": "2026-10-06",
-    "dias": [
-     2
-    ]
-   },
-   "horarioTexto": "6 de octubre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/11/2026_08_03_avello_s.jpg",
-   "imagenLocal": "assets/img/nescafe-felipe-avello.jpg",
-   "huellaImagen": "cff50340e46929673a6584a0fb82b6d348e4cc3a",
-   "entradas": "https://www.ticketmaster.cl/event/felipe-avello-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/felipe-avello/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "puente-fernando-cabrera-en-vivo",
-   "titulo": "Fernando Cabrera en vivo",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-07",
-    "hasta": "2026-10-07",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "1 función — 20:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "ictus-milena-antonia",
-   "titulo": "MILENA ANTONIA",
-   "subtitulo": null,
-   "sinopsis": "Milena Antonia es una cantautora e intérprete chilena y se ha dedicado a estudiar e interpretar boleros desde el 2016 hasta la actualidad. En este estilo musical, se desenvuelve con naturalidad y ha gestionado junto a su equipo, presentaciones de gran convocatoria. Para esta fecha, Milena viene con lo mejor de su repertorio de boleros, de esos que te harán suspirar y conectarte en profundidad con sus melodías. Escucharás una voz de primer nivel, suave y profunda que te harán encantarte con lo más lindo que tiene el género.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-07",
-    "hasta": "2026-10-07",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "7 DE OCTUBRE · Miércoles | 20:00 H · Milena Antonia es una cantautora e intérprete chilena y se ha dedicado a estudiar e interpretar boleros desde el 2016 hasta la actualidad. En este estilo musical, se desenvuelve con naturalidad y ha gestionado junto a su equipo, presentaciones de gran convocatoria. Para esta fecha, Milena viene con lo mejor de su repertorio de boleros, de esos que te harán suspirar y conectarte en profundidad con sus melodías. Escucharás una voz de primer nivel, suave y profunda que te harán encantarte con lo más lindo que tiene el género.",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/IMG_9644.JPG.jpeg",
-   "imagenLocal": "assets/img/ictus-milena-antonia.jpeg",
-   "huellaImagen": "4eccc750c61d66dc19cbf41866c4d79cada667a4",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-milena-antonia/",
-   "url": "https://teatroictus.cl/cartelera/proximamente-milena-antonia/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "teatrouc-nimiedades",
-   "titulo": "Nimiedades",
-   "subtitulo": null,
-   "sinopsis": "Por primera vez en Chile, Teatro UC presenta Nimiedades, un clásico fundamental del realismo estadounidense escrito por Susan Glaspell en 1916. Enmarcada en el género policial, la historia comienza tras el asesinato de un campesino en su propia cama, dejando a su viuda como la única sospechosa. Una pieza tan sensible como aguda que nos ofrece una mirada vigente sobre la opresión a la mujer. Presentada gracias a la Línea de Apoyo a Teatros Universitarios 2025, la obra dirigida por Rodrigo Pérez estará en cartelera entre el 7 de octubre y el 7 de noviembre de 2026.",
-   "genero": "clasico",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 70,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro UC — Sala Ana González",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-07",
-    "hasta": "2026-11-07",
-    "dias": [
-     0,
-     3,
-     6
-    ],
-    "horas": {
-     "0": "20:30",
-     "3": "20:30",
-     "6": "20:30"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/nimiedades-susan-glaspell-teatro-uc-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-nimiedades.jpg",
-   "huellaImagen": "20c7788a3081f582a0574fea89ed1cce68523a18",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/nimiedades/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "teatrouc-el-quinto-paso",
-   "titulo": "El quinto paso",
-   "subtitulo": null,
-   "sinopsis": "Protagonizada por Francisco Melo y Felipe Rojas, esta aclamada obra del dramaturgo David Ireland explora la fragilidad masculina, la culpa y la fe en un intenso duelo psicológico sin concesiones ni sentimentalismos. Una producción de Teatro Zoco llega por primera vez a Teatro UC, entre el 8 y el 24 de octubre.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 85,
-   "edad": 16,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-08",
-    "hasta": "2026-10-25",
-    "dias": [
-     3,
-     4,
-     6
-    ],
-    "horas": {
-     "3": "20:00",
-     "4": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/QuintoPaso58879-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-el-quinto-paso.jpg",
-   "huellaImagen": "720a279da5d7a02631cda7216947f8c181b24c9e",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/el-quinto-paso/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
@@ -1617,7 +1003,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-09",
+    "desde": "2026-10-15",
     "hasta": "2026-10-25",
     "dias": [
      0,
@@ -1657,110 +1043,57 @@
    }
   },
   {
-   "id": "puente-dramaexpress-2026",
-   "titulo": "DramaExpress 2026",
+   "id": "mori-tengo-miedo-torero",
+   "titulo": "Tengo Miedo Torero",
    "subtitulo": null,
-   "sinopsis": "",
+   "sinopsis": "Adaptación de la famosa novela homónima del escritor Pedro Lemebel (1952-2015), y al compás de música compuesta por Manuel García, el montaje una vez más contará la historia de La Loca del Frente, quien durante el régimen de Augusto Pinochet se enamora de un militante del Frente Patriótico Manuel Rodríguez mientras se prepara un atentado contra el dictador, revelando de paso ese mundo de poder, pesadillas y apariencias, junto a Lucía Hiriart. A 21 años de su debut teatral, el reestreno de la obra retoma ese lenguaje poético e irreverente con que el icónico artista chileno entrelazó amor, política y marginalidad, mostrando cómo la ternura y el deseo persisten sobre el miedo y la represión.",
    "genero": "drama",
    "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
+   "director": "Claudia Pérez",
+   "dramaturgo": "Pedro Lemebel",
+   "elenco": [
+    "José Luis Aguilera Minaya"
+   ],
+   "duracion": 105,
+   "edad": 14,
    "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
    },
    "temporada": {
-    "desde": "2026-10-13",
-    "hasta": "2026-10-18",
+    "desde": "2026-10-15",
+    "hasta": "2026-11-28",
     "dias": [
-     0,
-     2,
-     3,
-     4,
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "6 funciones",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "m100-matadero-alma",
-   "titulo": "Matadero Alma",
-   "subtitulo": null,
-   "sinopsis": "Matadero Alma es una radiografía urbana que explora las imágenes de nostalgia e injusticia que atraviesan la identidad del país.",
-   "genero": "danza",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Matucana 100 — Espacio Patricio Bunster",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-14",
-    "hasta": "2026-10-17",
-    "dias": [
-     0,
      4,
      5,
      6
     ],
     "horas": {
-     "0": "19:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
+     "4": "20:30",
+     "5": "20:30",
+     "6": "20:30"
     }
    },
-   "horarioTexto": "Jue a dom: 19:30 hrs.",
+   "horarioTexto": "Jueves a sábado a las 20:30 hrs",
    "precios": [
     {
      "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 7000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5000
+     "valor": 15000
     }
    ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
-   "url": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
+   "imagen": "https://teatromori.cl/mini/268x372xS/9ab2f3dbd8cb197cc77a5bc8d39d690c.jpg",
+   "imagenLocal": "assets/img/mori-tengo-miedo-torero.jpg",
+   "huellaImagen": "c1bd4d2bc9f93cd430b943d8f36384c05491fe4c",
+   "entradas": "https://teatromori.cl/obra/TMTorero/tengo-miedo-torero",
+   "url": "https://teatromori.cl/obra/TMTorero/tengo-miedo-torero",
    "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -1788,28 +1121,265 @@
     "hasta": "2026-10-24",
     "dias": [
      0,
-     2,
-     3,
-     4
+     4,
+     6
     ],
     "horas": {
-     "0": "13:00",
-     "2": "13:00",
-     "3": "13:00",
-     "4": "13:00"
+     "0": "19:00",
+     "4": "19:00",
+     "6": "19:00"
     }
    },
    "horarioTexto": null,
    "precios": [],
-   "imagen": "https://gam.cl/media/images/20230428_MG_2344.max-1200x900_rCE.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.jpg",
-   "huellaImagen": "c887d6be170622840d80025a96efcaf0ed1e2ef2",
+   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
+   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
    "entradas": null,
    "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "nescafe-dejame-caer",
+   "titulo": "Déjame caer",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
+   "genero": "musical",
+   "compania": null,
+   "director": "Jesús Urqueta",
+   "dramaturgo": "Rodrigo Muñoz Medina",
+   "elenco": [
+    "José Antonio Raffo",
+    "Magdalena Müller",
+    "Emilia Noguera",
+    "Katty Kowaleczko",
+    "Nicolás Saavedra",
+    "Norma-Norma Ortiz"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-18",
+    "hasta": "2026-10-18",
+    "dias": [
+     0
+    ]
+   },
+   "horarioTexto": "15 al 18 de octubre",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
+   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
+   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
+   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "mori-kadabra",
+   "titulo": "KADABRA",
+   "subtitulo": null,
+   "sinopsis": "KADABRA es el nuevo espectáculo del ilusionista Benjamín Cox, un show de magia de 80 minutos inspirado en los grandes espectáculos de Las Vegas. Grandes ilusiones, magia de cerca, efectos nunca antes vistos en Chile, música y coreografías se combinan en una experiencia dinámica, visual y de alto impacto. Un espectáculo familiar y moderno, pensado para sorprender a públicos de todas las edades y mantener el asombro de principio a fin.",
+   "genero": "infantil",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Benjamín Cox"
+   ],
+   "duracion": 80,
+   "edad": 8,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-18",
+    "hasta": "2026-10-18",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:00"
+    }
+   },
+   "horarioTexto": "Domingo a las 19:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/2ce51580807369d8ef772ae11c0f214c.jpg",
+   "imagenLocal": "assets/img/mori-kadabra.jpg",
+   "huellaImagen": "fb25bd8544164162011c63274b7e04db207ff197",
+   "entradas": "https://teatromori.cl/obra/Kadabra1/-kadabra",
+   "url": "https://teatromori.cl/obra/Kadabra1/-kadabra",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "nescafe-instante-lontano",
+   "titulo": "Instante & Lontano",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con el Instituto Francés de Chile, presentarán el espectáculo circense “Instante & Lontano”, el lunes 19 de octubre.",
+   "genero": "drama",
+   "compania": "Compagnie 7bis",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-19",
+    "hasta": "2026-10-19",
+    "dias": [
+     1
+    ]
+   },
+   "horarioTexto": "19 de octubre - 21:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/09/2026_10_19_instante-lontano_s.jpg",
+   "imagenLocal": "assets/img/nescafe-instante-lontano.jpg",
+   "huellaImagen": "24268e879629e31eb5cfa3d7fe13b85e75152245",
+   "entradas": "https://www.ticketmaster.cl/event/instante-lontano-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/instante-lontano/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "mori-felipe-avello-mori-recoleta",
+   "titulo": "Felipe Avello (Mori Recoleta)",
+   "subtitulo": null,
+   "sinopsis": "Felipe Avello llega con un espectáculo de monólogos dinámico y cercano, que invita al público a ser parte activa de la experiencia. Con su estilo lúdico y espontáneo, el comediante construye en escena un show donde referencias internacionales y latinoamericanas se entrelazan con situaciones cotidianas, generando una conexión directa con la audiencia.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Felipe Avello"
+   ],
+   "duracion": 90,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-21",
+    "hasta": "2026-10-22",
+    "dias": [
+     3,
+     4
+    ],
+    "horas": {
+     "3": "20:00",
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "Miércoles y jueves a las 20 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/c8539bd56c2d4e615322cb1fbde24d54.jpg",
+   "imagenLocal": "assets/img/mori-felipe-avello-mori-recoleta.jpg",
+   "huellaImagen": "dba940ef4d17dd73f072551a2b5b9fa2ecec9fe7",
+   "entradas": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
+   "url": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-mi-hermano-es-un-idiota",
+   "titulo": "Mi hermano es un idiota",
+   "subtitulo": null,
+   "sinopsis": "En una continuación de la exitosa obra \"El manager y el artista\", los hermanos Larraín se sumergen en el mundo del stand up, donde por fin, después de mucho pensarlo, Fernando decide probarse en esta área con la ayuda de Nicolás. Ambos se enfrentan en vivo con el público con sus distintos estilos y técnicas, que hacen de este show una verdadera ráfaga de risas y entretención.",
+   "genero": "humor",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "Fernando Larraín y Nicolás Larraín",
+   "elenco": [
+    "Fernando Larraín"
+   ],
+   "duracion": 75,
+   "edad": 0,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-21",
+    "hasta": "2026-10-21",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:30"
+    }
+   },
+   "horarioTexto": "Miércoles a las 20:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/39face5b94709c058ea65997641b74f5.jpg",
+   "imagenLocal": "assets/img/mori-mi-hermano-es-un-idiota.jpg",
+   "huellaImagen": "7e674d073295775ea2fec2bbcad50da650233ec6",
+   "entradas": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
+   "url": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -1911,6 +1481,108 @@
    }
   },
   {
+   "id": "zoco-comienzo",
+   "titulo": "COMIENZO",
+   "subtitulo": null,
+   "sinopsis": "Son las 3:30 de la madrugada en un departamento recién inaugurado. Los invitados ya se han ido, la música se apagó y solo quedan dos personas: Laura, una exitosa ejecutiva que parece tenerlo todo bajo control, y Danny, un hombre divorciado que carga con el peso de sus propios naufragios. Entre copas a medio tomar, canciones nostálgicas y restos de cotillón, Laura le lanza a Danny una propuesta tan directa como inesperada que cambiará el rumbo de la noche.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Pablo Halpern",
+   "dramaturgo": "David Eldridge",
+   "elenco": [
+    "Josefina Fiebelkorn",
+    "Julián Marrás"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-23",
+    "hasta": "2026-11-29",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:00",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "23 de octubre al 29 de noviembre · Jueves a sábado 19:30 hrs, domingo 18:00 hrs",
+   "precios": [],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2026/09/Afiche-COMIENZO_ALTA-scaled.jpg",
+   "imagenLocal": "assets/img/zoco-comienzo.jpg",
+   "huellaImagen": "828e82a8293aeb773da0b7931481a0bd8c609167",
+   "entradas": "https://teatrozoco.cl/evento/comienzo/",
+   "url": "https://teatrozoco.cl/evento/comienzo/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "mori-la-elvira",
+   "titulo": "La Elvira",
+   "subtitulo": null,
+   "sinopsis": "Elvira regresa más enamorada que nunca, pero esta vez de la vida. Los años la encuentran como protagonista absoluta de su propia historia: vivaz, reflexiva y con ganas de disfrutar cada momento.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Felipe Izquierdo"
+   ],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-23",
+    "hasta": "2026-10-30",
+    "dias": [
+     5
+    ],
+    "horas": {
+     "5": "22:00"
+    }
+   },
+   "horarioTexto": "Viernes a las 22:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 22000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/d14dfd7322e4f2ae4c934452e04c5098.jpg",
+   "imagenLocal": "assets/img/mori-la-elvira.jpg",
+   "huellaImagen": "10cc6e43ac4e4fe1575cca94fee5c4f98e029b95",
+   "entradas": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
+   "url": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "gam-los-dias-felices-produccion-gam-la-santa",
    "titulo": "Los días felices: Producción GAM | La Santa",
    "subtitulo": "Producción GAM | La Santa",
@@ -1975,8 +1647,8 @@
    "id": "ictus-el-bosque",
    "titulo": "EL BOSQUE",
    "subtitulo": null,
-   "sinopsis": "Nick y Ruth son una pareja joven que pasa el fin de semana en una cabaña familiar aislada en medio del bosque, junto a un lago. Lo que inicia como una escapada romántica idealizada, se degrada rápidamente en un enfrentamiento psicológico a medida que cae la noche. “ El Bosque ” es una obra punzante que a través del diálogo vertiginoso que caracteriza al autor, demuestra cómo dos personas pueden estar físicamente juntas y al mismo tiempo, completamente aisladas.",
-   "genero": "infantil",
+   "sinopsis": "&#8220;Esa tensión, entre lo aparentemente inocente y lo brutal, es el corazón de la puesta&#8221; — Cristián Marambio",
+   "genero": "drama",
    "compania": null,
    "director": "Cristian Marambio",
    "dramaturgo": "David Mamet",
@@ -2022,8 +1694,8 @@
    }
   },
   {
-   "id": "puente-epistolario-para-una-futurolog",
-   "titulo": "Epistolario para una Futurolog…",
+   "id": "puente-epistolario-para-una-futurologia-travesti",
+   "titulo": "Epistolario para una Futurología Travesti",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -2043,21 +1715,27 @@
    },
    "temporada": {
     "desde": "2026-10-24",
-    "hasta": "2026-11-01",
+    "hasta": "2027-01-31",
     "dias": [
      0,
+     1,
+     2,
+     3,
      4,
      5,
      6
     ],
     "horas": {
      "0": "20:00",
+     "1": "20:00",
+     "2": "20:00",
+     "3": "20:00",
      "4": "20:00",
      "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "6 funciones — 20:00 h",
+   "horarioTexto": "16 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -2071,55 +1749,8 @@
    }
   },
   {
-   "id": "nescafe-dejame-caer",
-   "titulo": "Déjame caer",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
-   "genero": "musical",
-   "compania": null,
-   "director": "Jesús Urqueta",
-   "dramaturgo": null,
-   "elenco": [
-    "José Antonio Raffo",
-    "Magdalena Müller",
-    "Emilia Noguera",
-    "Katty Kowaleczko",
-    "Nicolás Saavedra",
-    "Norma-Norma Ortiz"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ]
-   },
-   "horarioTexto": "1 al 4 / 8 al 11 / 15 al 18 / 22 al 25 de octubre",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s.jpg",
-   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
-   "huellaImagen": "ff202833c474cc9be09757c76f85ed8e911eaf4f",
-   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-olivia-garcia",
-   "titulo": "OLIVIA GARCÍA",
+   "id": "ictus-musica-olivia-garcia",
+   "titulo": "MÚSICA | OLIVIA GARCÍA",
    "subtitulo": null,
    "sinopsis": "Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
    "genero": "musical",
@@ -2154,9 +1785,9 @@
    },
    "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Comprar entrada",
    "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/Olivia-Garcia-sesion-20-de-junio-02.jpg",
-   "imagenLocal": "assets/img/ictus-olivia-garcia.jpg",
-   "huellaImagen": "55deff58d0af96262c9b11883f59f991e7dd76d8",
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/OLIVIAGARCIA_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-musica-olivia-garcia.jpg",
+   "huellaImagen": "8305e4a4597f57bb8f7d629aebaf70ab433a7811",
    "entradas": "https://ticketplus.cl/events/olivia-garcia",
    "url": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
    "fuente": {
@@ -2246,6 +1877,50 @@
    }
   },
   {
+   "id": "nescafe-mrs-warren-s-profession",
+   "titulo": "Mrs. Warren's Profession",
+   "subtitulo": null,
+   "sinopsis": "Importante: Las entradas adquiridas para la función del 9 de septiembre de 2026, son igualmente válidas para esta transmisión.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Justin Martin",
+   "dramaturgo": null,
+   "elenco": [
+    "Rosamund Pike",
+    "Jamie Glover",
+    "Jasper Talbot"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-29",
+    "hasta": "2026-10-29",
+    "dias": [
+     4
+    ]
+   },
+   "horarioTexto": "29 de octubre - 19:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_09_09_warren_s.jpg",
+   "imagenLocal": "assets/img/nescafe-mrs-warren-s-profession.jpg",
+   "huellaImagen": "77188fc6c5a644c5fd9f6db21f3fee4142c3e822",
+   "entradas": "https://www.ticketmaster.cl/event/477-mrs-warrens-profession-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-mrs-warrens-profession/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "gam-dona-rosita-anotada",
    "titulo": "Doña Rosita [anotada]",
    "subtitulo": null,
@@ -2275,12 +1950,12 @@
     "hasta": "2026-11-15",
     "dias": [
      0,
-     5,
+     4,
      6
     ],
     "horas": {
      "0": "19:00",
-     "5": "20:00",
+     "4": "20:00",
      "6": "20:00"
     }
    },
@@ -2299,9 +1974,9 @@
      "valor": 7800
     }
    ],
-   "imagen": "https://gam.cl/media/images/solancge-lackington-3.2e16d0ba.fill-1200x630.jpg",
+   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
    "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
-   "huellaImagen": "3b90ceaf5035b1a2a536a5092d42a498360d5657",
+   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
    "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
    "fuente": {
@@ -2345,6 +2020,48 @@
    "huellaImagen": "a8bf62f6e10924a63080703217e8eb94969e6b94",
    "entradas": "https://www.ticketmaster.cl/event/el-equilibrista-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-equilibrista/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "nescafe-un-aniversario-fabuloso",
+   "titulo": "Un Aniversario Fabuloso",
+   "subtitulo": null,
+   "sinopsis": "Este 1 de noviembre a las 21:00 horas, FABULOSO deja la pantalla y llega al TEATRO NESCAFÉ DE LAS ARTES para celebrar su primer aniversario con un show en vivo preparado especialmente para esta noche.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Fabuloso e invitados"
+   ],
+   "duracion": 30,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-01",
+    "hasta": "2026-11-01",
+    "dias": [
+     0
+    ]
+   },
+   "horarioTexto": "1 de noviembre - 21:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_01_fabuloso_s.jpg",
+   "imagenLocal": "assets/img/nescafe-un-aniversario-fabuloso.jpg",
+   "huellaImagen": "0dc36ecef6fb02d846fadf5cd2e9711c464a73ca",
+   "entradas": "https://www.ticketmaster.cl/event/aniversario-fabuloso-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/un-aniversario-fabuloso/",
    "fuente": {
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
@@ -2490,6 +2207,51 @@
    }
   },
   {
+   "id": "teatrouc-freire-la-epopeya-de-las-provincias",
+   "titulo": "Freire, la epopeya de las provincias",
+   "subtitulo": null,
+   "sinopsis": "Una producción original del Teatro Biobío en colaboración con Tryo Teatro Banda que revive la emocionante e histórica vida de Ramón Freire. A través de un viaje dinámico que fusiona teatro, música en vivo, canto y danza, la obra recorre las múltiples facetas de esta figura clave de la historia de Chile: desde líder independentista y pirata hasta presidente de la República. Una puesta en escena ágil, apasionante y didáctica que invita a redescubrir el legado de las provincias y los episodios fundamentales que construyeron la nación.",
+   "genero": "danza",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 80,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-04",
+    "hasta": "2026-11-07",
+    "dias": [
+     3,
+     6
+    ],
+    "horas": {
+     "3": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/10/Freire-TBB-@imricardinho-23-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-freire-la-epopeya-de-las-provincias.jpg",
+   "huellaImagen": "38500a5e90e20a76d60d09c6ab9d1e8a8f1144f7",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/freire-la-epopeya-de-las-provincias/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
    "id": "nescafe-the-fifth-step",
    "titulo": "The Fifth Step",
    "subtitulo": null,
@@ -2530,6 +2292,107 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "nescafe-chofi-y-tapia",
+   "titulo": "Chofi y Tapia",
+   "subtitulo": null,
+   "sinopsis": "La popular y exitosa dupla televisiva regresa al TEATRO NESCAFÉ DE LAS ARTES con el espectáculo «Por amor, o la juerza», el sábado 7 de noviembre.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Paola Troncoso",
+    "Patricio Fuentes"
+   ],
+   "duracion": 30,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-07",
+    "hasta": "2026-11-07",
+    "dias": [
+     6
+    ]
+   },
+   "horarioTexto": "7 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_11_07_chofitapia_s.jpg",
+   "imagenLocal": "assets/img/nescafe-chofi-y-tapia.jpg",
+   "huellaImagen": "25c1659b31a610ef59bc35419d7259a0c7209083",
+   "entradas": "https://www.ticketmaster.cl/event/488-chofi-y-tapia-por-la-razon-o-la-juerza",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/chofi-y-tapia/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-indigo-banch",
+   "titulo": "ÍNDIGO - BANCH",
+   "subtitulo": null,
+   "sinopsis": "Un color. Tres universos. Una nueva etapa. El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nue...",
+   "genero": "danza",
+   "compania": "ÍNDIGO - BANCH",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-07",
+    "hasta": "2026-11-14",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6300
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/banch1.jpg.1200x900_q85.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-indigo-banch.jpg",
+   "huellaImagen": "fecbb4bf8671d319234326ae0a33b59b098471a1",
+   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -2579,6 +2442,181 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "gam-quiero-ser-una-chica-almodovar",
+   "titulo": "Quiero ser una chica Almodóvar",
+   "subtitulo": null,
+   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
+   "genero": "musical",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": null,
+   "elenco": [
+    "Elvira López",
+    "Antonia Santa María",
+    "Dindi Jane",
+    "Enzo Ferrada",
+    "Santiago Viguera"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-12",
+    "hasta": "2026-11-22",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 12000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 8400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
+   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
+   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "lascondes-cazadores-de-agua",
+   "titulo": "Cazadores de Agua",
+   "subtitulo": null,
+   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega...",
+   "genero": "drama",
+   "compania": null,
+   "director": "Zagal",
+   "dramaturgo": null,
+   "elenco": [
+    "Thais Zúñiga"
+   ],
+   "duracion": 60,
+   "edad": 8,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-18",
+    "hasta": "2026-11-29",
+    "dias": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "10 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/09/WEB_TC_CAZADORES_SLIDE-scaled.jpg",
+   "imagenLocal": "assets/img/lascondes-cazadores-de-agua.jpg",
+   "huellaImagen": "5f8bfdb6c69a685e400997860b593cc93c5dc65e",
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
+   "url": "https://tmlascondes.cl/cazadores-de-agua/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "nescafe-que-le-corten-la-cabeza",
+   "titulo": "Que le corten la cabeza",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 18, 19 y 21 de noviembre.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Los Contadores Auditores",
+   "dramaturgo": "Los Contadores Auditores",
+   "elenco": [
+    "Javiera Contador",
+    "Natalia Valdebenito"
+   ],
+   "duracion": 30,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-18",
+    "hasta": "2026-11-21",
+    "dias": [
+     3,
+     4,
+     6
+    ]
+   },
+   "horarioTexto": "18, 19 y 21 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
+   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
+   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
+   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -2751,6 +2789,58 @@
    }
   },
   {
+   "id": "ictus-caballo",
+   "titulo": "| CABALLO",
+   "subtitulo": null,
+   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Emilia Noguera",
+   "dramaturgo": "Emilia Noguera",
+   "elenco": [
+    "Maricarmen Arrigorriaga",
+    "Roberto Poblete",
+    "Paula Sharim",
+    "Moisés Angulo",
+    "Nicolás Zárate",
+    "Camila Oliva"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-28",
+    "hasta": "2026-11-28",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-caballo.jpg",
+   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-caballo/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "puente-papel-de-agua",
    "titulo": "Papel de agua",
    "subtitulo": null,
@@ -2793,6 +2883,57 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "ictus-hombres-daga",
+   "titulo": "HOMBRES DAGA",
+   "subtitulo": null,
+   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
+   "genero": "drama",
+   "compania": null,
+   "director": "Ángela Urrutia y Matías González",
+   "dramaturgo": "Matías Leonardo González Gómez",
+   "elenco": [
+    "Luis Dubó",
+    "Viviana Nass",
+    "Felipe Valenzuela",
+    "Camilo Yanko",
+    "Nicolás Bascuñán",
+    "Ángela Urrutia",
+    "Katalina Urrutia"
+   ],
+   "duracion": 85,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-29",
+    "hasta": "2026-11-29",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:00"
+    }
+   },
+   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
+   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
+   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2873,6 +3014,46 @@
    "huellaImagen": "9570233b9709d7d4ed23b8714871c761bf36a361",
    "entradas": "https://www.ticketmaster.cl/event/477-hamlet-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-hamlet/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "nescafe-chungo",
+   "titulo": "Chungo",
+   "subtitulo": null,
+   "sinopsis": "El ganador de dos Premios Goya y protagonista de As Bestas, El Reino Vivir sin permiso, Animal, Alatriste, Celda 211 y Entrevías desembarca con “CHUNGO”, su exitoso show del 7 al 10 de enero en TEATRO NESCAFÉ DE LAS ARTES.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 120,
+   "edad": 13,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-09",
+    "hasta": "2027-01-09",
+    "dias": [
+     6
+    ]
+   },
+   "horarioTexto": "7 al 9 de enero - 20:00 horas / 10 de enero - 19:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/09/2027_01_07_chungo_s.jpg",
+   "imagenLocal": "assets/img/nescafe-chungo.jpg",
+   "huellaImagen": "0465477fbf8ce920bd4afd53911ce28c25cb981c",
+   "entradas": "https://www.ticketmaster.cl/event/luis-zahera-chungo-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/luis-zahera-chungo/",
    "fuente": {
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
@@ -3267,6 +3448,58 @@
    "huellaImagen": "34bd52dcf91959b70d4903f9af8faf955617b248",
    "entradas": "https://teatrozoco.cl/evento/casa-de-munecas/",
    "url": "https://teatrozoco.cl/evento/casa-de-munecas/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "zoco-recuerdame-mi-vida",
+   "titulo": "RECUÉRDAME MI VIDA",
+   "subtitulo": null,
+   "sinopsis": "Recuérdame mi Vida, es una de las historias más emotivas llevadas al teatro. Con un texto delicado de Emilia Noguera y la dirección de Jesús Urqueta narra la historia de una mamá joven y exitosa (Paola Giannini) y la relación con su hija (Sara Becker). Una historia familiar que enfrenta una crisis desde el amor. Un viaje sensible, emotivo y humano acompañado por la música de Ennio Morricone, interpretada en vivo por el pianista Ignacio Méndez.",
+   "genero": "infantil",
+   "compania": null,
+   "director": "Jesús Urqueta",
+   "dramaturgo": "Emilia Noguera",
+   "elenco": [
+    "Paola Giannini",
+    "Sara Becker"
+   ],
+   "duracion": null,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2027-07-04",
+    "hasta": "2027-08-10",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Temporada desde el viernes 4 de julio al domingo 10 de agosto. · De jueves a sábado a las 20.00 hrs y domingo a las 19.00 hrs. · Recomendada para mayores de 14 años. · Av. la Dehesa 1500, Lo Barnechea.",
+   "precios": [],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2024/12/3___.png",
+   "imagenLocal": "assets/img/zoco-recuerdame-mi-vida.png",
+   "huellaImagen": "36404b07b6d0242ea08f92a7b8612bfe7a3858bd",
+   "entradas": "https://teatrozoco.cl/evento/recuerdame-mi-vida/",
+   "url": "https://teatrozoco.cl/evento/recuerdame-mi-vida/",
    "fuente": {
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
