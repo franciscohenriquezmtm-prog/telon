@@ -473,6 +473,12 @@ function detalleHTML(o) {
       ${o.salaInfo.metro && o.salaInfo.metro !== '—' ? `<span>🚇 Metro ${esc(o.salaInfo.metro)}</span>` : ''}
       <span class="ir">Abrir en Mapas ›</span>
     </a>`}
+
+    <!-- Pegado al dato de la sala, que es donde se decide salir de la casa:
+         un teatro puede mover una obra de sede y acá no enterarnos. -->
+    <a class="confirmar-link" href="${esc(o.url)}" target="_blank" rel="noopener">
+      Antes de salir, confirma sala y hora en ${esc(o.fuente.nombre)} ›
+    </a>
   </div>
 
   <div class="detalle-seccion">
