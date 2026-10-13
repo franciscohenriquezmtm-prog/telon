@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-13T00:44:06.834Z",
+ "actualizado": "2026-10-13T01:53:09.483Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 1,
+   "obras": 3,
    "error": null
   },
   {
@@ -48,7 +48,7 @@
    "id": "finisterrae",
    "nombre": "Teatro Finis Terrae",
    "sitio": "https://teatrofinisterrae.cl",
-   "obras": 0,
+   "obras": 1,
    "error": null
   },
   {
@@ -256,6 +256,78 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "finisterrae-un-enemigo-del-pueblo",
+   "titulo": "Un enemigo del pueblo",
+   "subtitulo": null,
+   "sinopsis": "Estreno | Producción Finis Terrae (Proyecto Teatro Universitario Finis Terrae — Ministerio de las Culturas)",
+   "genero": "drama",
+   "compania": null,
+   "director": "Alexandra Von Hummel",
+   "dramaturgo": "Henrick Ibsen",
+   "elenco": [
+    "por definir"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Finis Terrae",
+    "comuna": "Providencia",
+    "direccion": "Av. Pocuro 1935",
+    "metro": "—",
+    "mapa": "Teatro Finis Terrae, Providencia",
+    "sitio": "https://teatrofinisterrae.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-01",
+    "hasta": "2026-10-30",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:30",
+     "5": "20:30",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 11500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 9000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7500
+    }
+   ],
+   "imagen": "https://teatrofinisterrae.cl/wp-content/uploads/2026/03/Un-enemigo-del-pueblo.jpg",
+   "imagenLocal": "assets/img/finisterrae-un-enemigo-del-pueblo.jpg",
+   "huellaImagen": "534848e3244480bc39b6babfa5ed5dd62774695d",
+   "entradas": null,
+   "url": "https://teatrofinisterrae.cl/evento/un-enemigo-del-pueblo/",
+   "fuente": {
+    "id": "finisterrae",
+    "nombre": "Teatro Finis Terrae",
+    "sitio": "https://teatrofinisterrae.cl"
    }
   },
   {
@@ -617,6 +689,55 @@
    }
   },
   {
+   "id": "teatrouc-nimiedades",
+   "titulo": "Nimiedades",
+   "subtitulo": null,
+   "sinopsis": "Por primera vez en Chile, Teatro UC presenta Nimiedades, un clásico fundamental del realismo estadounidense escrito por Susan Glaspell en 1916. Enmarcada en el género policial, la historia comienza tras el asesinato de un campesino en su propia cama, dejando a su viuda como la única sospechosa. Una pieza tan sensible como aguda que nos ofrece una mirada vigente sobre la opresión a la mujer. Presentada gracias a la Línea de Apoyo a Teatros Universitarios 2026, la obra dirigida por Rodrigo Pérez estará en cartelera entre el 7 de octubre y el 7 de noviembre de 2026.",
+   "genero": "clasico",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 70,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Sala Ana González",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-07",
+    "hasta": "2026-11-07",
+    "dias": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "3": "20:30",
+     "4": "20:30",
+     "5": "20:30",
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/nimiedades-susan-glaspell-teatro-uc-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-nimiedades.jpg",
+   "huellaImagen": "20c7788a3081f582a0574fea89ed1cce68523a18",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/nimiedades/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
    "id": "mori-cronicas-desquiciadas",
    "titulo": "Crónicas Desquiciadas",
    "subtitulo": null,
@@ -672,6 +793,55 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "teatrouc-el-quinto-paso",
+   "titulo": "El quinto paso",
+   "subtitulo": null,
+   "sinopsis": "Protagonizada por Francisco Melo y Felipe Rojas, esta aclamada obra del dramaturgo David Ireland explora la fragilidad masculina, la culpa y la fe en un intenso duelo psicológico sin concesiones ni sentimentalismos. Una producción de Teatro Zoco llega por primera vez a Teatro UC, entre el 8 y el 24 de octubre.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 85,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-08",
+    "hasta": "2026-10-24",
+    "dias": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/QuintoPaso58879-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-el-quinto-paso.jpg",
+   "huellaImagen": "720a279da5d7a02631cda7216947f8c181b24c9e",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/el-quinto-paso/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
@@ -1008,11 +1178,13 @@
     "dias": [
      0,
      4,
+     5,
      6
     ],
     "horas": {
      "0": "19:00",
      "4": "20:00",
+     "5": "20:00",
      "6": "20:00"
     }
    },
@@ -1120,12 +1292,10 @@
     "desde": "2026-10-15",
     "hasta": "2026-10-24",
     "dias": [
-     0,
      4,
      6
     ],
     "horas": {
-     "0": "19:00",
      "4": "19:00",
      "6": "19:00"
     }
@@ -1951,11 +2121,13 @@
     "dias": [
      0,
      4,
+     5,
      6
     ],
     "horas": {
      "0": "19:00",
      "4": "20:00",
+     "5": "20:00",
      "6": "20:00"
     }
    },
@@ -2231,10 +2403,14 @@
     "hasta": "2026-11-07",
     "dias": [
      3,
+     4,
+     5,
      6
     ],
     "horas": {
      "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
      "6": "20:00"
     }
    },
@@ -2361,13 +2537,11 @@
     "desde": "2026-11-07",
     "hasta": "2026-11-14",
     "dias": [
-     0,
      4,
      5,
      6
     ],
     "horas": {
-     "0": "19:00",
      "4": "19:00",
      "5": "19:00",
      "6": "19:00"
@@ -2646,16 +2820,7 @@
    "temporada": {
     "desde": "2026-11-24",
     "hasta": "2026-12-17",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
+    "sinHorario": true
    },
    "horarioTexto": "Estreno: 23 de noviembre · Fecha: del 24 de noviembre al 17 de diciembre · Horarios: 20:00 hrs. · General: $10.000",
    "precios": [
@@ -3170,11 +3335,13 @@
     "dias": [
      0,
      4,
+     5,
      6
     ],
     "horas": {
      "0": "19:00",
      "4": "20:00",
+     "5": "20:00",
      "6": "20:00"
     }
    },
@@ -3214,16 +3381,7 @@
    "temporada": {
     "desde": "2027-03-17",
     "hasta": "2027-04-09",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
+    "sinHorario": true
    },
    "horarioTexto": "Temporada: Desde el 17 de marzo al 9 de abril · Horarios: 20:00 hrs. · Valor entrada: $10.000",
    "precios": [

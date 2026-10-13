@@ -39,9 +39,29 @@ export const listaDeNombres = (txt) => (txt
 export async function leerEventsCalendar({ api, idFuente, sala, filtrar, log }) {
   const hoy = new Date().toISOString().slice(0, 10);
   const datos = JSON.parse(await bajar(`${api}?per_page=50&status=publish&start_date=${hoy}`));
-  const obras = [];
+  const eventos = [...(datos.events || [])];
 
-  for (const ev of datos.events || []) {
+  // El listado de esta API a veces omite eventos vigentes: Finis Terrae tenía
+  // "Un enemigo del pueblo" en cartelera del 1 al 30 de octubre y el listado
+  // devolvía cero. El detalle por id sí lo entrega bien. Por eso se cruzan con los
+  // eventos publicados según WordPress (wp/v2), y se piden por id los que falten.
+  const vistos = new Set(eventos.map((e) => e.id));
+  try {
+    const publicados = JSON.parse(await bajar(`${api.replace('/tribe/events/v1/events', '/wp/v2/tribe_events')}?per_page=50&status=publish`));
+    for (const p of Array.isArray(publicados) ? publicados : []) {
+      if (vistos.has(p.id)) continue;
+      try {
+        const ev = JSON.parse(await bajar(`${api}/${p.id}`));
+        if ((ev.end_date || ev.start_date || '').slice(0, 10) >= hoy) {
+          eventos.push(ev);
+          log(`  + ${limpiar(ev.title)} (no venía en el listado; recuperado por id)`);
+        }
+      } catch { /* evento sin detalle: se omite */ }
+    }
+  } catch { /* sitio sin wp/v2 público: queda solo el listado */ }
+
+  const obras = [];
+  for (const ev of eventos) {
     try {
       if (filtrar && !filtrar(ev)) continue;
 
@@ -51,7 +71,8 @@ export async function leerEventsCalendar({ api, idFuente, sala, filtrar, log }) 
       const horarios = parseHorarios(texto);
       const desde = ev.start_date.slice(0, 10);
       const hasta = (ev.end_date || ev.start_date).slice(0, 10);
-      const horaInicio = ev.start_date.slice(11, 16);
+      // Un evento "de todo el día" trae 00:00 como hora: eso no es la hora de la función
+      const horaInicio = ev.all_day || ev.start_date.slice(11, 16) === '00:00' ? null : ev.start_date.slice(11, 16);
       const categorias = (ev.categories || []).map((c) => c.name).join(' ');
       const sinopsis = limpiar(ev.excerpt || ev.description || '').slice(0, 900);
 

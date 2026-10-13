@@ -129,14 +129,20 @@ export function parseHorarios(texto) {
 
   let corte = 0;
   for (const m of encontradas) {
-    const contexto = t.slice(corte, m.index);
+    // Solo cuenta la línea donde está la hora. Antes se tomaba todo el texto desde la
+    // hora anterior, y en una página completa eso arrastraba palabras de días de otros
+    // párrafos: "Miércoles a sábado, a las 20:00" terminaba como mié, jue y sáb.
+    const previo = t.slice(corte, m.index);
+    const contexto = previo.slice(previo.lastIndexOf('\n') + 1);
     corte = m.index + m[0].length;
 
     const hh = String(Number(m[1] ?? m[3])).padStart(2, '0');
     const hora = `${hh}:${m[2] ?? '00'}`;
 
     // rango "Ju a Sá" / "de jueves a sábado"
-    const rango = contexto.match(/([a-záéíóúü]{2,10})\.?\s*(?:a|al|hasta)\s+([a-záéíóúü]{2,10})/i);
+    // El rango tiene que ser de días en ambos extremos ("de 2 a 3 funciones" no cuenta)
+    const rango = [...contexto.matchAll(/([a-záéíóúü]{2,10})\.?\s*(?:a|al|hasta)\s+([a-záéíóúü]{2,10})/gi)]
+      .find((r) => numeroDia(r[1]) !== null && numeroDia(r[2]) !== null);
     let encontrados = [];
     if (rango && numeroDia(rango[1]) !== null && numeroDia(rango[2]) !== null) {
       const a = numeroDia(rango[1]), b = numeroDia(rango[2]);

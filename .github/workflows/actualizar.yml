@@ -32,6 +32,10 @@ on:
       - 'assets/styles.css'
       - 'feriado/**'
       - '.github/workflows/actualizar.yml'
+      # Si se arregla un lector, la cartelera corregida se publica de inmediato
+      # en vez de esperar a la corrida programada. No crea un bucle: la corrida
+      # solo escribe assets/cartelera.json y assets/img, que no están en esta lista.
+      - 'tools/**'
 
 permissions:
   contents: write   # para guardar la cartelera nueva en el repositorio
