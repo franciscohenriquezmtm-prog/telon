@@ -67,6 +67,12 @@ jobs:
       - name: Instalar ImageMagick
         run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
 
+      # Si el lector de días quedó roto, mejor no publicar: un día mal leído manda a
+      # la gente a una función que no existe. Si esto falla, la corrida se detiene,
+      # el sitio queda con la última cartelera buena y GitHub avisa por correo.
+      - name: Probar el lector de horarios
+        run: node tools/probar-horarios.mjs
+
       # --sin-build: dist/telon.html es la versión de un archivo, que no se publica
       # en la web y se regenera a mano cuando haga falta.
       - name: Leer la cartelera de los teatros
