@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-13T02:48:31.877Z",
+ "actualizado": "2026-10-13T17:53:45.330Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 13,
+   "obras": 14,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 17,
+   "obras": 18,
    "error": null
   },
   {
@@ -973,7 +973,7 @@
     "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
-    "desde": "2026-10-13",
+    "desde": "2026-10-14",
     "hasta": "2027-01-18",
     "dias": [
      0,
@@ -985,7 +985,7 @@
      6
     ]
    },
-   "horarioTexto": "18 funciones",
+   "horarioTexto": "15 funciones",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -2619,6 +2619,51 @@
    }
   },
   {
+   "id": "mori-sin-llorar-en-off",
+   "titulo": "Sin Llorar En Off",
+   "subtitulo": null,
+   "sinopsis": "Sin Llorar es un podcast de The Clinic conducido por Axel Callís y Juan Diego Montalva, dedicado a conversar y analizar la actualidad política chilena. Cada semana aborda los principales temas de la agenda, desde el Gobierno y la oposición hasta elecciones, encuestas, partidos y movimientos de poder, buscando entregar contexto y leer lo que hay detrás de la noticia.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Juan Diego Montalva"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-11",
+    "hasta": "2026-11-11",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:00 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/8813634400b46d37fdc944b5bf81d07a.jpg",
+   "imagenLocal": "assets/img/mori-sin-llorar-en-off.jpg",
+   "huellaImagen": "47a5c8ea164973fa5b1f491f0850d572da4f0231",
+   "entradas": "https://teatromori.cl/obra/y5kRfppH/sin-llorar-en-off",
+   "url": "https://teatromori.cl/obra/y5kRfppH/sin-llorar-en-off",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "gam-quiero-ser-una-chica-almodovar",
    "titulo": "Quiero ser una chica Almodóvar",
    "subtitulo": null,
@@ -2955,7 +3000,7 @@
   },
   {
    "id": "ictus-caballo",
-   "titulo": "| CABALLO",
+   "titulo": "CABALLO",
    "subtitulo": null,
    "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
    "genero": "comedia",
@@ -2992,12 +3037,12 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
+   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-caballo.jpg",
    "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
-   "entradas": "https://teatroictus.cl/cartelera/proximamente-caballo/",
+   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
    "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
    "fuente": {
     "id": "ictus",
@@ -3179,6 +3224,57 @@
    "huellaImagen": "9570233b9709d7d4ed23b8714871c761bf36a361",
    "entradas": "https://www.ticketmaster.cl/event/477-hamlet-teatro-nescafe-de-las-artes",
    "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-hamlet/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "nescafe-la-negra-ester",
+   "titulo": "La Negra Ester",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES confirma el tradicional regreso a su escenario de “La Negra Ester”, los días 2 y 3 de enero.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Andrés Pérez Ramírez",
+   "dramaturgo": null,
+   "elenco": [
+    "Micaela Sandoval",
+    "Tito Cancino",
+    "Marcela Pumarino",
+    "Sebastián Caro",
+    "María Elena Ovalle",
+    "Franco Falcón",
+    "Mona Guerrero",
+    "Emerson Velásquez",
+    "Natalia Rojas",
+    "Michael Bravo"
+   ],
+   "duracion": 30,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-02",
+    "hasta": "2027-01-02",
+    "dias": [
+     6
+    ]
+   },
+   "horarioTexto": "2 de enero - 19:30 / 3 de enero - 19:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/12/2025_01_02_la-negra-ester_s.jpg",
+   "imagenLocal": "assets/img/nescafe-la-negra-ester.jpg",
+   "huellaImagen": "b8ff4a69cbfb795359f63549475ee4467be2e707",
+   "entradas": "https://www.ticketmaster.cl/event/la-negra-ester-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-negra-ester-enero-2027/",
    "fuente": {
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
