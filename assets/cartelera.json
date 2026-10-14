@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-14T00:45:46.566Z",
+ "actualizado": "2026-10-14T15:39:23.688Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -55,7 +55,7 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 7,
+   "obras": 9,
    "error": null
   },
   {
@@ -953,52 +953,6 @@
    }
   },
   {
-   "id": "puente-dramaexpress-2026-conspiranoico",
-   "titulo": "DramaExpress 2026: Conspiranoico",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-14",
-    "hasta": "2027-01-18",
-    "dias": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "15 funciones",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
    "id": "mori-homeostasis-talk",
    "titulo": "HOMEOSTASIS TALK",
    "subtitulo": null,
@@ -1314,50 +1268,54 @@
    }
   },
   {
-   "id": "nescafe-dejame-caer",
-   "titulo": "Déjame caer",
+   "id": "puente-dramaexpress-2026-conspiranoico",
+   "titulo": "DramaExpress 2026: Conspiranoico",
    "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
-   "genero": "musical",
+   "sinopsis": "",
+   "genero": "drama",
    "compania": null,
-   "director": "Jesús Urqueta",
-   "dramaturgo": "Rodrigo Muñoz Medina",
-   "elenco": [
-    "José Antonio Raffo",
-    "Magdalena Müller",
-    "Emilia Noguera",
-    "Katty Kowaleczko",
-    "Nicolás Saavedra",
-    "Norma-Norma Ortiz"
-   ],
-   "duracion": 30,
-   "edad": 3,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
    "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
-    "desde": "2026-10-18",
-    "hasta": "2026-10-18",
+    "desde": "2026-10-17",
+    "hasta": "2027-01-18",
     "dias": [
-     0
-    ]
+     0,
+     1,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "20:00",
+     "1": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
    },
-   "horarioTexto": "15 al 18 de octubre",
+   "horarioTexto": "6 funciones — 20:00 h",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
-   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
-   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
-   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
    "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -1919,6 +1877,53 @@
    }
   },
   {
+   "id": "nescafe-dejame-caer",
+   "titulo": "Déjame caer",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
+   "genero": "musical",
+   "compania": null,
+   "director": "Jesús Urqueta",
+   "dramaturgo": "Rodrigo Muñoz Medina",
+   "elenco": [
+    "José Antonio Raffo",
+    "Magdalena Müller",
+    "Emilia Noguera",
+    "Katty Kowaleczko",
+    "Nicolás Saavedra",
+    "Norma-Norma Ortiz"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-25",
+    "hasta": "2026-10-25",
+    "dias": [
+     0
+    ]
+   },
+   "horarioTexto": "15 al 18 / 22 al 25 de octubre",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
+   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
+   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
+   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "ictus-musica-olivia-garcia",
    "titulo": "MÚSICA | OLIVIA GARCÍA",
    "subtitulo": null,
@@ -2044,6 +2049,57 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "puente-festival-granada-cruzando-el-rio",
+   "titulo": "Festival Granada: Cruzando el Río",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-27",
+    "hasta": "2027-01-28",
+    "dias": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "horas": {
+     "0": "17:30",
+     "1": "17:30",
+     "2": "17:30",
+     "3": "17:30",
+     "4": "17:30"
+    }
+   },
+   "horarioTexto": "6 funciones — 17:30 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -2570,8 +2626,8 @@
    }
   },
   {
-   "id": "puente-se-arrienda-pieza-para-mujer-s",
-   "titulo": "Se arrienda pieza para mujer s…",
+   "id": "puente-se-arrienda-pieza-para-mujer-sola",
+   "titulo": "Se arrienda pieza para mujer sola",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -2791,6 +2847,49 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "puente-concierto-xavier-usabiaga",
+   "titulo": "Concierto Xavier Usabiaga",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-18",
+    "hasta": "2026-11-18",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "1 función — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
