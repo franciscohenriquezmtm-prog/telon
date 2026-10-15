@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-15T00:13:23.417Z",
+ "actualizado": "2026-10-15T15:26:13.784Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -55,14 +55,14 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 9,
+   "obras": 10,
    "error": null
   },
   {
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
+   "obras": 6,
    "error": null
   },
   {
@@ -1004,6 +1004,53 @@
    }
   },
   {
+   "id": "puente-taller-granada",
+   "titulo": "Taller Granada",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-14",
+    "hasta": "2027-01-14",
+    "dias": [
+     1,
+     3,
+     4
+    ],
+    "horas": {
+     "1": "18:00",
+     "3": "18:00",
+     "4": "18:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 18:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
    "id": "gam-furias",
    "titulo": "Furias",
    "subtitulo": "Coproducción GAM",
@@ -1078,7 +1125,7 @@
     "Eduardo Herrera",
     "Giordano Rossi"
    ],
-   "duracion": 70,
+   "duracion": 80,
    "edad": null,
    "sala": {
     "nombre": "Centro GAM — Sala N1",
@@ -2506,6 +2553,49 @@
    }
   },
   {
+   "id": "ictus-podcast-8220-descabelladas-8221-en-vivo",
+   "titulo": "PODCAST &#8220;DESCABELLADAS&#8221; EN VIVO",
+   "subtitulo": null,
+   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV al teatro ICTUS para compartir en vivo con su público.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-04",
+    "hasta": "2026-11-04",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "19:00"
+    }
+   },
+   "horarioTexto": "4 DE NOVIEMBRE · Miércoles | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/Descabelladas.png",
+   "imagenLocal": "assets/img/ictus-podcast-8220-descabelladas-8221-en-vivo.png",
+   "huellaImagen": "8f501c134f7cef3189f029296bada7784b9371c5",
+   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo",
+   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "nescafe-the-fifth-step",
    "titulo": "The Fifth Step",
    "subtitulo": null,
@@ -2960,6 +3050,49 @@
    }
   },
   {
+   "id": "ictus-moyita-y-panqueque",
+   "titulo": "| MOYITA Y PANQUEQUE",
+   "subtitulo": null,
+   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
+   "genero": "comedia",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-moyita-y-panqueque.jpg",
+   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
+   "entradas": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
+   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "nescafe-gens",
    "titulo": "Gens",
    "subtitulo": null,
@@ -3056,10 +3189,21 @@
    "subtitulo": null,
    "sinopsis": "Dirigida por Claudio Puebla, la obra narra la historia de dos hermanos separados por un accidente. Uno de ellos queda atrapado en el Kibba, un espacio de trá...",
    "genero": "danza",
-   "compania": "Gasper Crew",
+   "compania": "MAE · Movimiento Arte Experimental",
    "director": null,
    "dramaturgo": null,
-   "elenco": [],
+   "elenco": [
+    "Javiera Martínez",
+    "Jean Pierre Bure",
+    "John Ponce",
+    "Marcelo Laurie",
+    "Nicolás Gatica",
+    "Ruby Meléndez",
+    "Valechica Núñez",
+    "Valentina Alarcón",
+    "Valentina Del Pino",
+    "Víctor Morales"
+   ],
    "duracion": 60,
    "edad": null,
    "sala": {
