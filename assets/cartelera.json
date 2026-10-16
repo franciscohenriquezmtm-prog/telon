@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-15T15:26:13.784Z",
+ "actualizado": "2026-10-16T00:00:15.983Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 9,
+   "obras": 10,
    "error": null
   },
   {
@@ -265,10 +265,15 @@
    "sinopsis": "Estreno | Producción Finis Terrae (Proyecto Teatro Universitario Finis Terrae — Ministerio de las Culturas)",
    "genero": "drama",
    "compania": null,
-   "director": "Alexandra Von Hummel",
-   "dramaturgo": "Henrick Ibsen",
+   "director": "Alexandra Von Hummel/ Elenco: Rodrigo Soto, Paulina García, María Gracia Omegna, Germán Pinilla, Sofía Guiraldes y Laura Vila/ Diseño integral: Catalina Devia/ Música y asistencia de dirección: Mario Avillo/ Diseño audio",
+   "dramaturgo": null,
    "elenco": [
-    "por definir"
+    "Rodrigo Soto",
+    "Paulina García",
+    "María Gracia Omegna",
+    "Germán Pinilla",
+    "Sofía Guiraldes",
+    "Laura Vila/ Diseño integral: Catalina Devia/ Música y asistencia de dirección: Mario Avillo/ Diseño audiovisual: Ximena Sánchez/ Asiste"
    ],
    "duracion": null,
    "edad": null,
@@ -291,8 +296,8 @@
     ],
     "horas": {
      "0": "19:00",
-     "4": "20:30",
-     "5": "20:30",
+     "4": "20:00",
+     "5": "20:00",
      "6": "19:00"
     }
    },
@@ -1792,7 +1797,7 @@
     "María Izquierdo",
     "Rodrigo Lisboa"
    ],
-   "duracion": null,
+   "duracion": 75,
    "edad": null,
    "sala": {
     "nombre": "Centro GAM — Sala A2",
@@ -2363,6 +2368,56 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-viaje-al-corazon-de-la-madre-tierra",
+   "titulo": "Viaje al corazón de la Madre Tierra",
+   "subtitulo": null,
+   "sinopsis": "Desde La Paz, Bolivia, Teatro Grito llega a GAM con una obra de teatro callejero que invita a reflexionar sobre el cuidado del medio ambiente a través de muñ...",
+   "genero": "drama",
+   "compania": "Viaje al corazón de la Madre Tierra",
+   "director": "Carmen Guillén Ortúzar",
+   "dramaturgo": null,
+   "elenco": [
+    "Carmen Guillén Ortúzar; Mariel Camacho Ovando; Rene Suntura Mamani; Michael Apaza Apaza; Bernardo Arancibia Flores"
+   ],
+   "duracion": 36,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Plaza Zócalo",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-01",
+    "hasta": "2026-11-01",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "17:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "Entrada liberada",
+     "valor": 0
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/PortadaCorazonMadreTierra.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-viaje-al-corazon-de-la-madre-tierra.jpg",
+   "huellaImagen": "208059446255b3124ee6dded4058993373249238",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/viaje-al-corazon-de-la-madre-tierra/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
