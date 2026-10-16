@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-16T00:00:15.983Z",
+ "actualizado": "2026-10-16T15:07:05.723Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -1056,133 +1056,6 @@
    }
   },
   {
-   "id": "gam-furias",
-   "titulo": "Furias",
-   "subtitulo": "Coproducción GAM",
-   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
-   "genero": "drama",
-   "compania": "Furias",
-   "director": "Víctor Carrasco",
-   "dramaturgo": "Manuela Oyarzún",
-   "elenco": [
-    "Francisca Gavilán",
-    "Francisco Pérez Bannen"
-   ],
-   "duracion": 90,
-   "edad": 17,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-15",
-    "hasta": "2026-10-17",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h (+17 Oct—17 h) Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-furias.jpg",
-   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
-   "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-informe-para-nadie",
-   "titulo": "Informe para nadie",
-   "subtitulo": null,
-   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
-   "genero": "drama",
-   "compania": "Informe para nadie",
-   "director": "Ismael Castellón",
-   "dramaturgo": "Juan Radrigán",
-   "elenco": [
-    "Lorena Capetillo",
-    "Eduardo Herrera",
-    "Giordano Rossi"
-   ],
-   "duracion": 80,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-15",
-    "hasta": "2026-10-25",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
-   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
-   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-tengo-miedo-torero",
    "titulo": "Tengo Miedo Torero",
    "subtitulo": null,
@@ -1237,19 +1110,22 @@
    }
   },
   {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
+   "id": "gam-furias",
+   "titulo": "Furias",
+   "subtitulo": "Coproducción GAM",
+   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
+   "genero": "drama",
+   "compania": "Furias",
+   "director": "Víctor Carrasco",
+   "dramaturgo": "Manuela Oyarzún",
+   "elenco": [
+    "Francisca Gavilán",
+    "Francisco Pérez Bannen"
+   ],
+   "duracion": 90,
+   "edad": 17,
    "sala": {
-    "nombre": "Centro GAM — Sala B1",
+    "nombre": "Centro GAM — Sala A2",
     "comuna": "Santiago Centro",
     "direccion": "Av. Libertador Bernardo O’Higgins 227",
     "metro": "Universidad Católica (L1)",
@@ -1257,24 +1133,37 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-15",
-    "hasta": "2026-10-24",
+    "desde": "2026-10-16",
+    "hasta": "2026-10-17",
     "dias": [
+     0,
      4,
+     5,
      6
     ],
     "horas": {
-     "4": "19:00",
-     "6": "19:00"
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
     }
    },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
-   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "horarioTexto": "Ju a Sá— 19.30 h (+17 Oct—17 h) Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-furias.jpg",
+   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
+   "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1330,6 +1219,117 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "gam-informe-para-nadie",
+   "titulo": "Informe para nadie",
+   "subtitulo": null,
+   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
+   "genero": "drama",
+   "compania": "Informe para nadie",
+   "director": "Ismael Castellón",
+   "dramaturgo": "Juan Radrigán",
+   "elenco": [
+    "Lorena Capetillo",
+    "Eduardo Herrera",
+    "Giordano Rossi"
+   ],
+   "duracion": 80,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-17",
+    "hasta": "2026-10-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
+   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
+   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
+   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
+   "genero": "danza",
+   "compania": "XI Encuentros Coreográficos Nacionales",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-17",
+    "hasta": "2026-10-24",
+    "dias": [
+     4,
+     6
+    ],
+    "horas": {
+     "4": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
+   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -3017,8 +3017,8 @@
    }
   },
   {
-   "id": "puente-concierto-xavier-usabiaga",
-   "titulo": "Concierto Xavier Usabiaga",
+   "id": "puente-lanzamiento-disco-x-usabiaga",
+   "titulo": "Lanzamiento disco X. Usabiaga",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
