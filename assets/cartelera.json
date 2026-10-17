@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-16T15:07:05.723Z",
+ "actualizado": "2026-10-17T00:03:22.581Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 19,
+   "obras": 22,
    "error": null
   },
   {
@@ -389,7 +389,7 @@
    "id": "lascondes-chicago-el-musical",
    "titulo": "Chicago: El Musical",
    "subtitulo": null,
-   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, «CHICAGO el musical» es...",
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
    "genero": "musical",
    "compania": null,
    "director": "Felipe Leiva",
@@ -430,9 +430,9 @@
      "valor": 25000
     }
    ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/08/CHI_SLIDE_2880-x-720-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-chicago-el-musical.jpg",
-   "huellaImagen": "8b52821e5cf3de9f272bad4f6340be1b529825ce",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
    "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
    "url": "https://tmlascondes.cl/chicago/",
    "fuente": {
@@ -1110,67 +1110,6 @@
    }
   },
   {
-   "id": "gam-furias",
-   "titulo": "Furias",
-   "subtitulo": "Coproducción GAM",
-   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
-   "genero": "drama",
-   "compania": "Furias",
-   "director": "Víctor Carrasco",
-   "dramaturgo": "Manuela Oyarzún",
-   "elenco": [
-    "Francisca Gavilán",
-    "Francisco Pérez Bannen"
-   ],
-   "duracion": 90,
-   "edad": 17,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-16",
-    "hasta": "2026-10-17",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h (+17 Oct—17 h) Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-furias.jpg",
-   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
-   "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "puente-dramaexpress-2026-conspiranoico",
    "titulo": "DramaExpress 2026: Conspiranoico",
    "subtitulo": null,
@@ -1222,23 +1161,22 @@
    }
   },
   {
-   "id": "gam-informe-para-nadie",
-   "titulo": "Informe para nadie",
-   "subtitulo": null,
-   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
+   "id": "gam-furias",
+   "titulo": "Furias",
+   "subtitulo": "Coproducción GAM",
+   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
    "genero": "drama",
-   "compania": "Informe para nadie",
-   "director": "Ismael Castellón",
-   "dramaturgo": "Juan Radrigán",
+   "compania": "Furias",
+   "director": "Víctor Carrasco",
+   "dramaturgo": "Manuela Oyarzún",
    "elenco": [
-    "Lorena Capetillo",
-    "Eduardo Herrera",
-    "Giordano Rossi"
+    "Francisca Gavilán",
+    "Francisco Pérez Bannen"
    ],
-   "duracion": 80,
-   "edad": null,
+   "duracion": 90,
+   "edad": 17,
    "sala": {
-    "nombre": "Centro GAM — Sala N1",
+    "nombre": "Centro GAM — Sala A2",
     "comuna": "Santiago Centro",
     "direccion": "Av. Libertador Bernardo O’Higgins 227",
     "metro": "Universidad Católica (L1)",
@@ -1247,7 +1185,7 @@
    },
    "temporada": {
     "desde": "2026-10-17",
-    "hasta": "2026-10-25",
+    "hasta": "2026-10-17",
     "dias": [
      0,
      4,
@@ -1255,32 +1193,28 @@
      6
     ],
     "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
     }
    },
-   "horarioTexto": null,
+   "horarioTexto": "Ju a Sá— 19.30 h (+17 Oct—17 h) Do— 18.30 h (excepto 18 Oct, no",
    "precios": [
     {
      "tipo": "General",
-     "valor": 12000
+     "valor": 15000
     },
     {
      "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
+     "valor": 10500
     }
    ],
-   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
-   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
-   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
+   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-furias.jpg",
+   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
+   "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1622,6 +1556,72 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-informe-para-nadie",
+   "titulo": "Informe para nadie",
+   "subtitulo": null,
+   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
+   "genero": "drama",
+   "compania": "Informe para nadie",
+   "director": "Ismael Castellón",
+   "dramaturgo": "Juan Radrigán",
+   "elenco": [
+    "Lorena Capetillo",
+    "Eduardo Herrera",
+    "Giordano Rossi"
+   ],
+   "duracion": 80,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-22",
+    "hasta": "2026-10-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
+   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
+   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -2694,6 +2694,46 @@
    }
   },
   {
+   "id": "nescafe-primerizas",
+   "titulo": "Primerizas",
+   "subtitulo": null,
+   "sinopsis": "Alison Mandel y Chiqui Aguayo llevan la esencia del podcast Primerizas al TEATRO NESCAFÉ DE LAS ARTES. Es necesario que tomemos un respiro de la cotidianidad, y qué mejor que podemos hacerlo con dos comediantes que se toman el escenario.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 13,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-06",
+    "hasta": "2026-11-06",
+    "dias": [
+     5
+    ]
+   },
+   "horarioTexto": "6 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_06_primerizas_s.jpg",
+   "imagenLocal": "assets/img/nescafe-primerizas.jpg",
+   "huellaImagen": "bc63ee4dcea8d71b35a3bd59646c7aa77126bb20",
+   "entradas": "https://www.ticketmaster.cl/event/primerizas-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/primerizas/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "nescafe-chofi-y-tapia",
    "titulo": "Chofi y Tapia",
    "subtitulo": null,
@@ -2962,7 +3002,7 @@
    "id": "lascondes-cazadores-de-agua",
    "titulo": "Cazadores de Agua",
    "subtitulo": null,
-   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega...",
+   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
    "genero": "drama",
    "compania": null,
    "director": "Zagal",
@@ -3005,9 +3045,9 @@
      "valor": 20000
     }
    ],
-   "imagen": "https://tmlascondes.cl/wp-content/uploads/2026/09/WEB_TC_CAZADORES_SLIDE-scaled.jpg",
-   "imagenLocal": "assets/img/lascondes-cazadores-de-agua.jpg",
-   "huellaImagen": "5f8bfdb6c69a685e400997860b593cc93c5dc65e",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
    "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
    "url": "https://tmlascondes.cl/cazadores-de-agua/",
    "fuente": {
@@ -3730,6 +3770,50 @@
    }
   },
   {
+   "id": "nescafe-precoz",
+   "titulo": "Precoz",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES continúa con su programación de exitosas obras argentinas, esta vez con el estreno de “Precoz”, desde el viernes 22 de enero.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Mercedes Aranda",
+   "dramaturgo": "Ariana Harwicz",
+   "elenco": [
+    "Valeria Lois",
+    "Tomás Wicz"
+   ],
+   "duracion": 30,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-22",
+    "hasta": "2027-01-23",
+    "dias": [
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "22 y 23 de enero - 20:00 / 24 de enero 19:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2027_01_22_precoz_s.jpg",
+   "imagenLocal": "assets/img/nescafe-precoz.jpg",
+   "huellaImagen": "001942b72a557828faae093c99cd2fc3ba72bfce",
+   "entradas": "https://www.ticketmaster.cl/event/precoz-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/precoz/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "zoco-la-madriguera",
    "titulo": "LA MADRIGUERA",
    "subtitulo": null,
@@ -3970,6 +4054,47 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "nescafe-ballet-de-kiev-el-lago-de-los-cisnes",
+   "titulo": "Ballet de Kiev: El Lago de los Cisnes",
+   "subtitulo": null,
+   "sinopsis": "El Ballet de Kiev es una compañía fundada en 2017 por Viktor Ishchuk, exbailarin solista del Teatro de la Ópera Nacional de Kiev, con el objetivo de reunir a algunos de los mejores bailarines de Ucrania y preservar la esencia del ballet clásico más puro.",
+   "genero": "danza",
+   "compania": "Ballet de Kiev",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-05-01",
+    "hasta": "2027-05-02",
+    "dias": [
+     0,
+     6
+    ]
+   },
+   "horarioTexto": "1 y 2 de mayo - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2027_05_01_ballet-kiev-lago_s.jpg",
+   "imagenLocal": "assets/img/nescafe-ballet-de-kiev-el-lago-de-los-cisnes.jpg",
+   "huellaImagen": "fdab9700169635873c33f05b00fbad20bdb765bb",
+   "entradas": "https://www.ticketmaster.cl/event/ballet-de-kiev-lago-de-los-cisnes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/ballet-de-kiev-el-lago-de-los-cisnes/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
