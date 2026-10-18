@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-18T14:14:00.340Z",
+ "actualizado": "2026-10-18T23:49:13.584Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -1868,7 +1868,7 @@
      0
     ]
    },
-   "horarioTexto": "15 al 18 / 22 al 25 de octubre",
+   "horarioTexto": "22 al 25 de octubre",
    "precios": [],
    "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
    "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
