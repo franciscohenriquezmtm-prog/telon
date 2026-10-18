@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-17T23:38:26.017Z",
+ "actualizado": "2026-10-18T14:14:00.340Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 10,
+   "obras": 9,
    "error": null
   },
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -27,7 +27,7 @@
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 3,
+   "obras": 2,
    "error": null
   },
   {
@@ -958,57 +958,6 @@
    }
   },
   {
-   "id": "m100-matadero-alma",
-   "titulo": "Matadero Alma",
-   "subtitulo": null,
-   "sinopsis": "Matadero Alma es una radiografía urbana que explora las imágenes de nostalgia e injusticia que atraviesan la identidad del país.",
-   "genero": "danza",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Matucana 100 — Espacio Patricio Bunster",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-14",
-    "hasta": "2026-10-17",
-    "sinHorario": true
-   },
-   "horarioTexto": "19:30 hrs.",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 7000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
-   "url": "https://www.m100.cl/programacion/danza-circo/matadero-alma/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
    "id": "puente-taller-granada",
    "titulo": "Taller Granada",
    "subtitulo": null,
@@ -1110,112 +1059,6 @@
    }
   },
   {
-   "id": "gam-furias",
-   "titulo": "Furias",
-   "subtitulo": "Coproducción GAM",
-   "sinopsis": "Francisca Gavilán y Francisco Pérez-Bannen encarnan a dos almas que se reencuentran a través del tiempo para disputar las leyes que ordenan el mundo. Inspira...",
-   "genero": "drama",
-   "compania": "Furias",
-   "director": "Víctor Carrasco",
-   "dramaturgo": "Manuela Oyarzún",
-   "elenco": [
-    "Francisca Gavilán",
-    "Francisco Pérez Bannen"
-   ],
-   "duracion": 90,
-   "edad": 17,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-17",
-    "hasta": "2026-10-17",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h (+17 Oct—17 h) Do— 18.30 h (excepto 18 Oct, no",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/furias_4.ab658d03.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-furias.jpg",
-   "huellaImagen": "1098578ecf8ce8b57c35a663fdda91b15d2bc474",
-   "entradas": "https://gam.ticketplus.cl/events/furias?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/furias/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-17",
-    "hasta": "2026-10-24",
-    "dias": [
-     4,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
-   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "puente-dramaexpress-2026-conspiranoico",
    "titulo": "DramaExpress 2026: Conspiranoico",
    "subtitulo": null,
@@ -1236,17 +1079,17 @@
     "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
-    "desde": "2026-10-18",
-    "hasta": "2027-01-18",
+    "desde": "2026-10-17",
+    "hasta": "2027-01-17",
     "dias": [
      0,
-     1,
-     5
+     4,
+     6
     ],
     "horas": {
      "0": "20:00",
-     "1": "20:00",
-     "5": "20:00"
+     "4": "20:00",
+     "6": "20:00"
     }
    },
    "horarioTexto": "3 funciones — 20:00 h",
@@ -1676,6 +1519,51 @@
     "id": "m100",
     "nombre": "Matucana 100",
     "sitio": "https://www.m100.cl"
+   }
+  },
+  {
+   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
+   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
+   "subtitulo": "Residencia de creación El rumor del agua",
+   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
+   "genero": "danza",
+   "compania": "XI Encuentros Coreográficos Nacionales",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-22",
+    "hasta": "2026-10-24",
+    "dias": [
+     4,
+     6
+    ],
+    "horas": {
+     "4": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
+   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
