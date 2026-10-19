@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-18T23:49:13.584Z",
+ "actualizado": "2026-10-19T17:17:37.852Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 9,
+   "obras": 11,
    "error": null
   },
   {
@@ -14,13 +14,13 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 13,
+   "obras": 12,
    "error": null
   },
   {
@@ -1059,8 +1059,8 @@
    }
   },
   {
-   "id": "puente-dramaexpress-2026-conspiranoico",
-   "titulo": "DramaExpress 2026: Conspiranoico",
+   "id": "puente-dramaexpress-2026",
+   "titulo": "DramaExpress 2026",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -1080,19 +1080,23 @@
    },
    "temporada": {
     "desde": "2026-10-17",
-    "hasta": "2027-01-17",
+    "hasta": "2027-01-18",
     "dias": [
      0,
+     1,
      4,
+     5,
      6
     ],
     "horas": {
      "0": "20:00",
+     "1": "20:00",
      "4": "20:00",
+     "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "3 funciones — 20:00 h",
+   "horarioTexto": "6 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -1103,56 +1107,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "mori-kadabra",
-   "titulo": "KADABRA",
-   "subtitulo": null,
-   "sinopsis": "KADABRA es el nuevo espectáculo del ilusionista Benjamín Cox, un show de magia de 80 minutos inspirado en los grandes espectáculos de Las Vegas. Grandes ilusiones, magia de cerca, efectos nunca antes vistos en Chile, música y coreografías se combinan en una experiencia dinámica, visual y de alto impacto. Un espectáculo familiar y moderno, pensado para sorprender a públicos de todas las edades y mantener el asombro de principio a fin.",
-   "genero": "infantil",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Benjamín Cox"
-   ],
-   "duracion": 80,
-   "edad": 8,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-18",
-    "hasta": "2026-10-18",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:00"
-    }
-   },
-   "horarioTexto": "Domingo a las 19:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 25000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/2ce51580807369d8ef772ae11c0f214c.jpg",
-   "imagenLocal": "assets/img/mori-kadabra.jpg",
-   "huellaImagen": "fb25bd8544164162011c63274b7e04db207ff197",
-   "entradas": "https://teatromori.cl/obra/Kadabra1/-kadabra",
-   "url": "https://teatromori.cl/obra/Kadabra1/-kadabra",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -3113,6 +3067,108 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-tardes-de-plaza-carro-nomade",
+   "titulo": "Tardes de plaza: Carro Nómade",
+   "subtitulo": null,
+   "sinopsis": "Una sala itinerante sobre ruedas, funciones en miniatura y talleres participativos se apoderan de la Plaza Oriente para transformar el espacio público en un ...",
+   "genero": "drama",
+   "compania": "Tardes de plaza: Carro Nómade",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 4,
+   "sala": {
+    "nombre": "Centro GAM — Plaza Oriente",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-21",
+    "hasta": "2026-11-29",
+    "dias": [
+     0,
+     6
+    ],
+    "horas": {
+     "0": "17:00",
+     "6": "17:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 6000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/P1087806.MOV.05_20_05_17.Imagen_f.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-tardes-de-plaza-carro-nomade.jpg",
+   "huellaImagen": "3a9f85773cf340f3c87359dc0b7467e623969134",
+   "entradas": "https://gam.ticketplus.cl/events/carro-nomade?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tardes-de-plaza-carro-nomade/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-estados-de-deriva-apertura-de-proceso",
+   "titulo": "Estados de deriva: Apertura de proceso",
+   "subtitulo": "Apertura de proceso",
+   "sinopsis": "Participa en la apertura de proceso de la residencia de investigación escénica guiada por José Vidal y Tomás Omer, creada en GAM desde la fisura, la deriva y...",
+   "genero": "danza",
+   "compania": "Sofía Riveros",
+   "director": "José Vidal y Tomás Omer",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-23",
+    "hasta": "2026-11-25",
+    "dias": [
+     1,
+     2,
+     3
+    ],
+    "horas": {
+     "1": "17:00",
+     "2": "17:00",
+     "3": "17:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 7000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/JoVidal_28.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-estados-de-deriva-apertura-de-proceso.jpg",
+   "huellaImagen": "9a9d7e2184a73d4b5b9cd88a6da6499c96396b9c",
+   "entradas": "https://gam.ticketplus.cl/events/estados-de-deriva?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/estados-de-deriva/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
