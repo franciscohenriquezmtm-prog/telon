@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-19T17:17:37.852Z",
+ "actualizado": "2026-10-20T00:49:16.607Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 22,
+   "obras": 21,
    "error": null
   },
   {
@@ -409,7 +409,7 @@
    },
    "temporada": {
     "desde": "2026-10-04",
-    "hasta": "2026-11-01",
+    "hasta": "2026-11-08",
     "dias": [
      0,
      4,
@@ -423,7 +423,7 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "17 funciones publicadas por el teatro",
+   "horarioTexto": "21 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -1107,46 +1107,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "nescafe-instante-lontano",
-   "titulo": "Instante & Lontano",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con el Instituto Francés de Chile, presentarán el espectáculo circense “Instante & Lontano”, el lunes 19 de octubre.",
-   "genero": "drama",
-   "compania": "Compagnie 7bis",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-19",
-    "hasta": "2026-10-19",
-    "dias": [
-     1
-    ]
-   },
-   "horarioTexto": "19 de octubre - 21:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/09/2026_10_19_instante-lontano_s.jpg",
-   "imagenLocal": "assets/img/nescafe-instante-lontano.jpg",
-   "huellaImagen": "24268e879629e31eb5cfa3d7fe13b85e75152245",
-   "entradas": "https://www.ticketmaster.cl/event/instante-lontano-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/instante-lontano/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -2532,6 +2492,62 @@
    }
   },
   {
+   "id": "gam-indigo",
+   "titulo": "ÍNDIGO",
+   "subtitulo": null,
+   "sinopsis": "El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nueva directora artística de la compañía, abre...",
+   "genero": "danza",
+   "compania": "ÍNDIGO",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-06",
+    "hasta": "2026-11-14",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6300
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Banch_2.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-indigo.png",
+   "huellaImagen": "2feaaf49359dc271a3d6f055d04ba0c8575de7c2",
+   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "nescafe-primerizas",
    "titulo": "Primerizas",
    "subtitulo": null,
@@ -2612,62 +2628,6 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-indigo",
-   "titulo": "ÍNDIGO",
-   "subtitulo": null,
-   "sinopsis": "El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nueva directora artística de la compañía, abre...",
-   "genero": "danza",
-   "compania": "ÍNDIGO",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-14",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/banch1.jpg.1200x900_q85.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-indigo.jpg",
-   "huellaImagen": "fecbb4bf8671d319234326ae0a33b59b098471a1",
-   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
