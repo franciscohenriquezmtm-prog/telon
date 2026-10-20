@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T00:49:16.607Z",
+ "actualizado": "2026-10-20T15:28:56.515Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -1644,53 +1644,50 @@
    }
   },
   {
-   "id": "ictus-el-bosque",
-   "titulo": "EL BOSQUE",
+   "id": "nescafe-dejame-caer",
+   "titulo": "Déjame caer",
    "subtitulo": null,
-   "sinopsis": "&#8220;Esa tensión, entre lo aparentemente inocente y lo brutal, es el corazón de la puesta&#8221; — Cristián Marambio",
-   "genero": "drama",
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
+   "genero": "musical",
    "compania": null,
-   "director": "Cristian Marambio",
-   "dramaturgo": "David Mamet",
+   "director": "Jesús Urqueta",
+   "dramaturgo": "Rodrigo Muñoz Medina",
    "elenco": [
-    "Camila Hirane",
-    "Mario Horton"
+    "José Antonio Raffo",
+    "Magdalena Müller",
+    "Emilia Noguera",
+    "Katty Kowaleczko",
+    "Nicolás Saavedra",
+    "Norma-Norma Ortiz"
    ],
-   "duracion": null,
-   "edad": null,
+   "duracion": 30,
+   "edad": 3,
    "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
     "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    },
    "temporada": {
     "desde": "2026-10-24",
     "hasta": "2026-10-24",
     "dias": [
-     4,
-     5,
      6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
+    ]
    },
-   "horarioTexto": "ESTRENO | 1 AL 24 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
+   "horarioTexto": "22 al 24 de octubre - 20:00 / 25 de octubre - 19:00 horas",
    "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-el-bosque.jpg",
-   "huellaImagen": "63218894d5686880efa8646bc2d8e2e44c03111a",
-   "entradas": "https://ticketplus.cl/events/el-bosque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
+   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
+   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
+   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
    "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -1746,53 +1743,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "nescafe-dejame-caer",
-   "titulo": "Déjame caer",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
-   "genero": "musical",
-   "compania": null,
-   "director": "Jesús Urqueta",
-   "dramaturgo": "Rodrigo Muñoz Medina",
-   "elenco": [
-    "José Antonio Raffo",
-    "Magdalena Müller",
-    "Emilia Noguera",
-    "Katty Kowaleczko",
-    "Nicolás Saavedra",
-    "Norma-Norma Ortiz"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ]
-   },
-   "horarioTexto": "22 al 25 de octubre",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
-   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
-   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
-   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -1870,7 +1820,7 @@
      1
     ]
    },
-   "horarioTexto": "26 de octubre - 20:00 horas",
+   "horarioTexto": "26 de octubre y 9 de noviembre - 20:00 horas",
    "precios": [],
    "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_05_19_la-sole_s.jpg",
    "imagenLocal": "assets/img/nescafe-la-sole.jpg",
@@ -2124,6 +2074,56 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "ictus-el-bosque",
+   "titulo": "EL BOSQUE",
+   "subtitulo": null,
+   "sinopsis": "&#8220;Esa tensión, entre lo aparentemente inocente y lo brutal, es el corazón de la puesta&#8221; — Cristián Marambio",
+   "genero": "drama",
+   "compania": null,
+   "director": "Cristian Marambio",
+   "dramaturgo": "David Mamet",
+   "elenco": [
+    "Camila Hirane",
+    "Mario Horton"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-31",
+    "hasta": "2026-10-31",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "ESTRENO | 1 AL 31 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-el-bosque.jpg",
+   "huellaImagen": "63218894d5686880efa8646bc2d8e2e44c03111a",
+   "entradas": "https://ticketplus.cl/events/el-bosque",
+   "url": "https://teatroictus.cl/cartelera/proximamente-el-bosque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2536,9 +2536,9 @@
      "valor": 6300
     }
    ],
-   "imagen": "https://gam.cl/media/images/Banch_2.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-indigo.png",
-   "huellaImagen": "2feaaf49359dc271a3d6f055d04ba0c8575de7c2",
+   "imagen": "https://gam.cl/media/images/indigo.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-indigo.jpg",
+   "huellaImagen": "738d655fc6cf76fb131557ee6d137849a16b3a88",
    "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
    "fuente": {
