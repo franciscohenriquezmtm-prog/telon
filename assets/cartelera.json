@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T00:16:12.298Z",
+ "actualizado": "2026-10-21T15:46:18.388Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -2224,10 +2224,10 @@
    }
   },
   {
-   "id": "ictus-8220-descabelladas-8221-en-vivo",
-   "titulo": "&#8220;DESCABELLADAS&#8221; EN VIVO",
+   "id": "ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas",
+   "titulo": "&#8220;DESCABELLADAS&#8221; EN VIVO | ENTRADAS AGOTADAS",
    "subtitulo": null,
-   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV al teatro ICTUS para compartir en vivo con su público.",
+   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público.",
    "genero": "drama",
    "compania": null,
    "director": null,
@@ -2255,9 +2255,9 @@
    },
    "horarioTexto": "4 DE NOVIEMBRE · Miércoles | 19:00 H · Comprar entrada",
    "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/Descabelladas.png",
-   "imagenLocal": "assets/img/ictus-8220-descabelladas-8221-en-vivo.png",
-   "huellaImagen": "8f501c134f7cef3189f029296bada7784b9371c5",
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/DESCABELLADAS__paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas.jpg",
+   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
    "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo",
    "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
    "fuente": {
