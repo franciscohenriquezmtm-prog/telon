@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-20T15:28:56.515Z",
+ "actualizado": "2026-10-21T00:16:12.298Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -69,86 +69,11 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 14,
+   "obras": 13,
    "error": null
   }
  ],
  "obras": [
-  {
-   "id": "zoco-honor",
-   "titulo": "HONOR",
-   "subtitulo": null,
-   "sinopsis": "George y Honor llevan 32 años de matrimonio. Ella es una exitosa escritora, y él un reputado columnista. Se entienden perfectamente bien el uno al otro, pero una joven periodista, a cargo de escribir un perfil sobre él, intentará dinamitar la confianza entre ambos, sin medir consecuencias. La inquietante obra de la dramaturga australiana Joanna Murray–Smith, estrenada originalmente en Melbourne 1995, indaga en la crisis de la mediana edad, la fragilidad del amor y la infidelidad desde la perspectiva de tres mujeres implicadas: la esposa, la amante y la hija.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Jesús Urqueta",
-   "dramaturgo": "Joanna Murray–Smith",
-   "elenco": [
-    "Solange Lackington",
-    "Bastián Bodenhofer",
-    "Magdalena Muller",
-    "Octavia Bernasconi"
-   ],
-   "duracion": null,
-   "edad": 14,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-07",
-    "hasta": "2026-10-20",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Del 7 de septiembre al 20 de octubre. · Jueves a sábados 20:00 hrs, domingo 19:00 hrs. · Recomendada para mayores de 14 años · Av. La Dehesa 1500, Lo Barnechea.",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 16000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 12000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 9000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 8000
-    }
-   ],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2024/05/00_Afiche-Final-Honor-655x1024.png",
-   "imagenLocal": "assets/img/zoco-honor.png",
-   "huellaImagen": "a048b25fd3567d33509ff53dc0d4d8dd1022ff2a",
-   "entradas": "https://teatrozoco.cl/evento/honor/",
-   "url": "https://teatrozoco.cl/evento/honor/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
   {
    "id": "zoco-la-edad-es-un-sentimiento",
    "titulo": "LA EDAD ES UN SENTIMIENTO",
