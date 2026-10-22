@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-22T00:20:26.015Z",
+ "actualizado": "2026-10-22T15:44:35.568Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -70,7 +70,7 @@
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
    "obras": 12,
-   "error": null
+   "error": "https://teatrozoco.cl/wp-json/wp/v2/evento?per_page=50&status=publish → fetch failed"
   }
  ],
  "obras": [
