@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-21T15:46:18.388Z",
+ "actualizado": "2026-10-22T00:20:26.015Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,13 +14,13 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 12,
+   "obras": 11,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 21,
+   "obras": 20,
    "error": null
   },
   {
@@ -69,65 +69,11 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 13,
+   "obras": 12,
    "error": null
   }
  ],
  "obras": [
-  {
-   "id": "zoco-la-edad-es-un-sentimiento",
-   "titulo": "LA EDAD ES UN SENTIMIENTO",
-   "subtitulo": null,
-   "sinopsis": "Este unipersonal ilustra el profundo viaje de una mujer de 25 años hacia el fin de su vida. El recorrido está lleno de experiencias que invita a la protagonista y al público a reflexionar sobre lo importante que son las decisiones, las acciones, y las relaciones que se establecen a lo largo de la vida — ¿Qué es realmente importante? ¿Qué nos enseña la edad y la madurez? La verdad es que la vida es un camino hermoso, doloroso, predecible y súbito. Hay que simplemente sentirla.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Haley McGee",
-   "elenco": [
-    "Amara Pedroso"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro para las Artes Zoco",
-    "comuna": "Lo Barnechea",
-    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
-    "metro": "—",
-    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
-    "sitio": "https://teatrozoco.cl"
-   },
-   "temporada": {
-    "desde": "2026-09-22",
-    "hasta": "2026-10-21",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Temporada: 22 de septiembre al 21 de octubre · Funciones: de jueves a sábado 20.00 hrs. · General: $14.000",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 14000
-    }
-   ],
-   "imagen": "https://teatrozoco.cl/wp-content/uploads/2023/08/Captura-de-Pantalla-2023-08-28-a-las-12.42.14-1024x680.png",
-   "imagenLocal": "assets/img/zoco-la-edad-es-un-sentimiento.png",
-   "huellaImagen": "8a5c421c07cbb7982af037637775467ea08d0dcb",
-   "entradas": "https://teatrozoco.cl/evento/la-edad-es-un-sentimiento/",
-   "url": "https://teatrozoco.cl/evento/la-edad-es-un-sentimiento/",
-   "fuente": {
-    "id": "zoco",
-    "nombre": "Centro para las Artes Zoco",
-    "sitio": "https://teatrozoco.cl"
-   }
-  },
   {
    "id": "puente-las-voces-de-mi-madre",
    "titulo": "Las Voces de mi Madre",
@@ -1144,96 +1090,6 @@
     "id": "m100",
     "nombre": "Matucana 100",
     "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "mori-mi-hermano-es-un-idiota",
-   "titulo": "Mi hermano es un idiota",
-   "subtitulo": null,
-   "sinopsis": "En una continuación de la exitosa obra \"El manager y el artista\", los hermanos Larraín se sumergen en el mundo del stand up, donde por fin, después de mucho pensarlo, Fernando decide probarse en esta área con la ayuda de Nicolás. Ambos se enfrentan en vivo con el público con sus distintos estilos y técnicas, que hacen de este show una verdadera ráfaga de risas y entretención.",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Fernando Larraín y Nicolás Larraín",
-   "elenco": [
-    "Fernando Larraín"
-   ],
-   "duracion": 75,
-   "edad": 0,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-21",
-    "hasta": "2026-10-21",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:30"
-    }
-   },
-   "horarioTexto": "Miércoles a las 20:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/39face5b94709c058ea65997641b74f5.jpg",
-   "imagenLocal": "assets/img/mori-mi-hermano-es-un-idiota.jpg",
-   "huellaImagen": "7e674d073295775ea2fec2bbcad50da650233ec6",
-   "entradas": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
-   "url": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-zarzuela-y-flamenco",
-   "titulo": "Zarzuela y Flamenco",
-   "subtitulo": null,
-   "sinopsis": "Pedro Fernández Embrujo presenta su nuevo espectáculo «Zarzuela & Flamenco, un Legado en Hispanoamérica», inspirada en Faustino García, el “Quijote de la zarzuela”, quién desde muy joven llevó la zarzuela hacia Hispanoamérica, sembrando en el público un férreo amor por este género.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Pedro Fernández Embrujo",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-21",
-    "hasta": "2026-10-21",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "21 de octubre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026-10-21_embrujo_s.jpg",
-   "imagenLocal": "assets/img/nescafe-zarzuela-y-flamenco.jpg",
-   "huellaImagen": "56b83b480bcab0aa4cc451419233def49442add9",
-   "entradas": "https://www.ticketmaster.cl/event/zarzuela-y-flamenco-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/zarzuela-y-flamenco-embrujo/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
