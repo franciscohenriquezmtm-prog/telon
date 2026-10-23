@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T00:16:48.280Z",
+ "actualizado": "2026-10-23T15:47:09.268Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -42,7 +42,7 @@
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
    "obras": 20,
-   "error": "https://www.teatro-nescafe-delasartes.cl/wp-json/wp/v2/categories?per_page=100&_fields=id,slug → This operation was aborted"
+   "error": null
   },
   {
    "id": "finisterrae",
@@ -70,7 +70,7 @@
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
    "obras": 12,
-   "error": "https://teatrozoco.cl/wp-json/wp/v2/evento?per_page=50&status=publish → fetch failed"
+   "error": null
   }
  ],
  "obras": [
