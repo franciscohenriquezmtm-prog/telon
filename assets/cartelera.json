@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-23T15:47:09.268Z",
+ "actualizado": "2026-10-24T00:10:07.762Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -69,7 +69,7 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 12,
+   "obras": 13,
    "error": null
   }
  ],
@@ -1151,72 +1151,6 @@
    }
   },
   {
-   "id": "gam-informe-para-nadie",
-   "titulo": "Informe para nadie",
-   "subtitulo": null,
-   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
-   "genero": "drama",
-   "compania": "Informe para nadie",
-   "director": "Ismael Castellón",
-   "dramaturgo": "Juan Radrigán",
-   "elenco": [
-    "Lorena Capetillo",
-    "Eduardo Herrera",
-    "Giordano Rossi"
-   ],
-   "duracion": 80,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-23",
-    "hasta": "2026-10-25",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
-   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
-   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-la-elvira",
    "titulo": "La Elvira",
    "subtitulo": null,
@@ -1264,67 +1198,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-23",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1427,6 +1300,133 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "gam-informe-para-nadie",
+   "titulo": "Informe para nadie",
+   "subtitulo": null,
+   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
+   "genero": "drama",
+   "compania": "Informe para nadie",
+   "director": "Ismael Castellón",
+   "dramaturgo": "Juan Radrigán",
+   "elenco": [
+    "Lorena Capetillo",
+    "Eduardo Herrera",
+    "Giordano Rossi"
+   ],
+   "duracion": 80,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-24",
+    "hasta": "2026-10-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
+   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
+   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-la-santa",
+   "titulo": "Los días felices: Producción GAM | La Santa",
+   "subtitulo": "Producción GAM | La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-24",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -3989,6 +3989,60 @@
    "huellaImagen": "13ced563604a118fc0db0aec2684fed624c8c493",
    "entradas": "https://teatrozoco.cl/evento/inter-alia/",
    "url": "https://teatrozoco.cl/evento/inter-alia/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "zoco-la-prueba",
+   "titulo": "LA PRUEBA",
+   "subtitulo": null,
+   "sinopsis": "Catherine ha sacrificado años de su vida al cuidado de su padre, un matemático brillante que revolucionó su campo de estudio desde muy joven. Sus cuadernos la conducen ahora a develar una serie de oscuros secretos. ¿Qué es lo que realmente ha heredado de él? ¿Su genio o su locura?",
+   "genero": "drama",
+   "compania": null,
+   "director": "Marcelo Leonart",
+   "dramaturgo": "David Auburn",
+   "elenco": [
+    "Paula Luchsinger",
+    "Tito Bustamante",
+    "Andrew Bargsted",
+    "Valentina Muhr"
+   ],
+   "duracion": null,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2027-07-19",
+    "hasta": "2027-08-25",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "Temporada: 19 de julio al 25 de agosto · Funciones jueves, viernes y sábado a las 20h y domingo a las 19h · Recomendada para mayores de 14 años",
+   "precios": [],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2024/05/Captura-de-pantalla-2024-05-14-a-las-16.45.28.png",
+   "imagenLocal": "assets/img/zoco-la-prueba.png",
+   "huellaImagen": "379e9bba6a1772afab2c801cc41061ce2c69fac6",
+   "entradas": "https://teatrozoco.cl/evento/la-prueba/",
+   "url": "https://teatrozoco.cl/evento/la-prueba/",
    "fuente": {
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
