@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-24T14:12:25.190Z",
+ "actualizado": "2026-10-24T23:53:38.525Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,8 +13,8 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "obras": 4,
+   "error": null
   },
   {
    "id": "mori",
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 20,
+   "obras": 21,
    "error": null
   },
   {
@@ -2586,6 +2586,52 @@
    }
   },
   {
+   "id": "nescafe-los-puentes-de-madison",
+   "titulo": "Los puentes de Madison",
+   "subtitulo": null,
+   "sinopsis": "La legendaria historia de amor de Robert James Waller, inmortalizada en cine por Meryl Streep y Clint Eastwood, se presenta en versión teatral el 13 y 14 de noviembre en TEATRO NESCAFÉ DE LAS ARTES.",
+   "genero": "drama",
+   "compania": "MST Teatro",
+   "director": "Aranzazu Yankovic",
+   "dramaturgo": "Robert James Waller",
+   "elenco": [
+    "Blanca Lewin",
+    "César Caillet",
+    "Yosune González",
+    "Felipe Valenzuela"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-13",
+    "hasta": "2026-11-14",
+    "dias": [
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "13 y 14 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_14_puentes-madison_s.jpg",
+   "imagenLocal": "assets/img/nescafe-los-puentes-de-madison.jpg",
+   "huellaImagen": "eaa87544174a1d4409814ccc6d7cf3c2e563ce4c",
+   "entradas": "https://www.ticketmaster.cl/event/los-puentes-de-madison-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/los-puentes-de-madison/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "lascondes-cazadores-de-agua",
    "titulo": "Cazadores de Agua",
    "subtitulo": null,
@@ -2729,6 +2775,55 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "teatrouc-estampida-humana",
+   "titulo": "Estampida humana",
+   "subtitulo": null,
+   "sinopsis": "Galardonada como la mejor obra del año 2025 por el Círculo de Críticos de Arte de Chile y de regreso de su gira por escenarios de China, Polonia, España e Italia, la Compañía Bonobo regresa a Chile con su aplaudido montaje \"Estampida humana\". Con la agudeza, el absurdo y la incomodidad características de los montajes de Andreina Olivarí y Pablo Manzi (dramaturgia y dirección), la obra se presentará entre el 19 de noviembre y el 5 de diciembre en Teatro UC.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Sala Ana González",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-12-05",
+    "dias": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "3": "20:30",
+     "4": "20:30",
+     "5": "20:30",
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/10/260125_ESTAMPIDA_31752_horizontal-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-estampida-humana.jpg",
+   "huellaImagen": "d6784203b351a8570f69211d52de35c2d7e039fa",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/estampida-humana/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
