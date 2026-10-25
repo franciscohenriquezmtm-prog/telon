@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-24T23:53:38.525Z",
+ "actualizado": "2026-10-25T14:41:43.704Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 11,
+   "obras": 10,
    "error": null
   },
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 4,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 21,
+   "obras": 20,
    "error": null
   },
   {
@@ -69,7 +69,7 @@
    "id": "zoco",
    "nombre": "Centro para las Artes Zoco",
    "sitio": "https://teatrozoco.cl",
-   "obras": 13,
+   "obras": 14,
    "error": null
   }
  ],
@@ -1201,50 +1201,56 @@
    }
   },
   {
-   "id": "nescafe-dejame-caer",
-   "titulo": "Déjame caer",
+   "id": "puente-epistolario-para-una-futurologia-travesti",
+   "titulo": "Epistolario para una Futurología Travesti",
    "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con Cultura Capital, presentarán el estreno de una nueva obra de teatro musical, “Déjame caer”, con funciones desde el jueves 1 de octubre.",
-   "genero": "musical",
+   "sinopsis": "",
+   "genero": "drama",
    "compania": null,
-   "director": "Jesús Urqueta",
-   "dramaturgo": "Rodrigo Muñoz Medina",
-   "elenco": [
-    "José Antonio Raffo",
-    "Magdalena Müller",
-    "Emilia Noguera",
-    "Katty Kowaleczko",
-    "Nicolás Saavedra",
-    "Norma-Norma Ortiz"
-   ],
-   "duracion": 30,
-   "edad": 3,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
    "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
     "desde": "2026-10-24",
-    "hasta": "2026-10-24",
+    "hasta": "2027-01-31",
     "dias": [
+     0,
+     2,
+     3,
+     4,
+     5,
      6
-    ]
+    ],
+    "horas": {
+     "0": "20:00",
+     "2": "20:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
    },
-   "horarioTexto": "22 al 24 de octubre - 20:00 / 25 de octubre - 19:00 horas",
+   "horarioTexto": "13 funciones — 20:00 h",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/08/2026_10_01_dejame-caer_s2.jpg",
-   "imagenLocal": "assets/img/nescafe-dejame-caer.jpg",
-   "huellaImagen": "46daff2547dc4ead31ca72b1e5a84b9138cd2b9a",
-   "entradas": "https://www.ticketmaster.cl/event/dejame-caer-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/dejame-caer/",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
    "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -1272,7 +1278,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-24",
+    "desde": "2026-10-25",
     "hasta": "2026-10-25",
     "dias": [
      0,
@@ -1337,7 +1343,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-24",
+    "desde": "2026-10-25",
     "hasta": "2026-11-08",
     "dias": [
      0,
@@ -1372,106 +1378,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio",
-   "titulo": "XI Encuentros Coreográficos Nacionales: Residencia de creación El rumor del agua",
-   "subtitulo": "Residencia de creación El rumor del agua",
-   "sinopsis": "Cinco proyectos de danza contemporánea de distintas regiones de Chile participan en un programa de residencias, acompañamiento e intercambio artístico que po...",
-   "genero": "danza",
-   "compania": "XI Encuentros Coreográficos Nacionales",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-24",
-    "hasta": "2026-10-24",
-    "dias": [
-     4,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/PortadaEncuentrosCoreograficso.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-xi-encuentros-coreograficos-nacionales-residencia-de-creacio.png",
-   "huellaImagen": "1426f42ca9524c12ef0cb05628e7b5676f79436f",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/xi-encuentros-coreograficos-nacionales/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "puente-epistolario-para-una-futurologia-travesti",
-   "titulo": "Epistolario para una Futurología Travesti",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2027-01-31",
-    "dias": [
-     0,
-     1,
-     2,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "20:00",
-     "1": "20:00",
-     "2": "20:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "13 funciones — 20:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -4084,6 +3990,52 @@
    "huellaImagen": "13ced563604a118fc0db0aec2684fed624c8c493",
    "entradas": "https://teatrozoco.cl/evento/inter-alia/",
    "url": "https://teatrozoco.cl/evento/inter-alia/",
+   "fuente": {
+    "id": "zoco",
+    "nombre": "Centro para las Artes Zoco",
+    "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "zoco-en-el-medio",
+   "titulo": "EN EL MEDIO",
+   "subtitulo": null,
+   "sinopsis": "El dramaturgo británico David Eldridge ( Beginning ) regresa a la cartelera local con Middle –o En el medio –, segunda parte de su trilogía sobre las relaciones de pareja en la sociedad contemporánea. Dirigida por Aliocha de la Sotta, la puesta en escena se presentará entre el 14 de julio y el 26 de agosto en la sala ubicada en la comuna de Lo Barnechea. Entradas a la venta en Punto Ticket .",
+   "genero": "drama",
+   "compania": null,
+   "director": "Aliocha de la Sotta",
+   "dramaturgo": "“Al mirar la pareja, el vínculo amoroso y la familia como algo a lo que estamos ‘destinados’, comenzamos a reflexionar sobre las realidades diversas y siempre vamos a derivar en una análisis de clase para comprender las",
+   "elenco": [
+    "Blanca Lewin @blancalewin",
+    "Claudio Arredondo @claudioarredondo"
+   ],
+   "duracion": 75,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro para las Artes Zoco",
+    "comuna": "Lo Barnechea",
+    "direccion": "Av. La Dehesa 1500, piso -2 (local 30)",
+    "metro": "—",
+    "mapa": "Zoco, La Dehesa 1500, Lo Barnechea",
+    "sitio": "https://teatrozoco.cl"
+   },
+   "temporada": {
+    "desde": "2027-07-14",
+    "hasta": "2027-08-26",
+    "sinHorario": true
+   },
+   "horarioTexto": "Temporada: Desde el 14 de julio al 26 de agosto · Hora: 20.00 horas. · General: $14.000 (+recargo por servicio) · Edad recomendada : +14 · Duración : 75 min.",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 14000
+    }
+   ],
+   "imagen": "https://teatrozoco.cl/wp-content/uploads/2023/06/Captura-de-Pantalla-2023-06-22-a-las-13.55.30.png",
+   "imagenLocal": "assets/img/zoco-en-el-medio.png",
+   "huellaImagen": "36e5297a504da1f540a4a6e4c1f77e3ef58a3f59",
+   "entradas": "https://teatrozoco.cl/evento/en-el-medio-2/",
+   "url": "https://teatrozoco.cl/evento/en-el-medio-2/",
    "fuente": {
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
