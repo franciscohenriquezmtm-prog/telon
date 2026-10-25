@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-25T14:41:43.704Z",
+ "actualizado": "2026-10-25T23:42:36.308Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,8 +13,8 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 4,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "obras": 3,
+   "error": null
   },
   {
    "id": "mori",
@@ -669,55 +669,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "teatrouc-el-quinto-paso",
-   "titulo": "El quinto paso",
-   "subtitulo": null,
-   "sinopsis": "Protagonizada por Francisco Melo y Felipe Rojas, esta aclamada obra del dramaturgo David Ireland explora la fragilidad masculina, la culpa y la fe en un intenso duelo psicológico sin concesiones ni sentimentalismos. Una producción de Teatro Zoco llega por primera vez a Teatro UC, entre el 8 y el 24 de octubre.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 85,
-   "edad": 16,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-08",
-    "hasta": "2026-10-24",
-    "dias": [
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/QuintoPaso58879-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-el-quinto-paso.jpg",
-   "huellaImagen": "720a279da5d7a02631cda7216947f8c181b24c9e",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/el-quinto-paso/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
