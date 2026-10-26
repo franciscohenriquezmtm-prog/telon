@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-25T23:42:36.308Z",
+ "actualizado": "2026-10-26T17:06:05.692Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 10,
+   "obras": 9,
    "error": null
   },
   {
@@ -14,21 +14,21 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 11,
+   "obras": 8,
    "error": null
   },
   {
    "id": "m100",
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
-   "obras": 2,
-   "error": null
+   "obras": 0,
+   "error": "dejó de entregar obras (antes traía 2)"
   },
   {
    "id": "lascondes",
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 6,
+   "obras": 5,
    "error": null
   },
   {
@@ -310,164 +310,6 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "mori-el-viaje-de-la-paz",
-   "titulo": "El Viaje de la Paz",
-   "subtitulo": null,
-   "sinopsis": "En este estreno, una niña llamada Paz decide seguir su anhelo más profundo: conocer el mar. En su travesía, perdida en la montaña, encontrará en su inocencia las alas y en la amistad su libertad. Mientras tanto, en el pueblo la ausencia de Paz desata el caos. La comunidad deberá aprender a unirse para encontrarla, sin sospechar que esa búsqueda los conducirá a un viaje mayor: el de reencontrarse con la paz de todos.",
-   "genero": "drama",
-   "compania": "Teatro de la Poesía",
-   "director": "Claudio Rojas",
-   "dramaturgo": "Claudio Rojas",
-   "elenco": [
-    "Leticia Bortoletto"
-   ],
-   "duracion": 55,
-   "edad": 4,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-04",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "16:00"
-    }
-   },
-   "horarioTexto": "Domingo a las 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/761113fc9816c716b90875126db9602b.jpg",
-   "imagenLocal": "assets/img/mori-el-viaje-de-la-paz.jpg",
-   "huellaImagen": "768e852d049e919457b2187d7e23604a7b247a92",
-   "entradas": "https://teatromori.cl/obra/ViajePaz/el-viaje-de-la-paz",
-   "url": "https://teatromori.cl/obra/ViajePaz/el-viaje-de-la-paz",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral",
-   "titulo": "La Aventura de Mowgli, musicalizado en lengua de señas y oral simultáneamente",
-   "subtitulo": null,
-   "sinopsis": "El montaje narra las aventuras de Mowgli, un niño criado por lobos en la selva de la India, quien aprende las leyes de la naturaleza guiado por Baloo, Bagheera y otros animales. A lo largo del relato, Mowgli enfrenta al temible tigre Shere Khan y debe decidir entre la vida salvaje y la civilización humana. Una puesta en escena que combina fábula, aventura y enseñanzas sobre la pertenencia, la libertad y la identidad, basada en el amor por la naturaleza y la diversidad. Integra canto, música en vivo, actuación, movimiento y caracterización, y es interpretada en lengua de señas y oral simultáneamente.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Sandra Barrera Mera",
-   "elenco": [
-    "Andrés Henríquez"
-   ],
-   "duracion": 60,
-   "edad": 5,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-04",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "16:00"
-    }
-   },
-   "horarioTexto": "Domingos a las 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/0f982d1f3049b793696440b071d025ff.jpg",
-   "imagenLocal": "assets/img/mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral.jpg",
-   "huellaImagen": "5b9e8fff709ee6c7a93e54050f3cc1315887720b",
-   "entradas": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
-   "url": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "mori-soy-el-unico-que-no-me-conozco",
-   "titulo": "Soy el único que no me conozco",
-   "subtitulo": null,
-   "sinopsis": "¡Prepárate para reírte a carcajadas! Felipe Izquierdo regresa en su aclamada versión de stand up con su característico y desafiante humor. En esta nueva entrega, nos invita a cuestionar la realidad que nos rodea, planteando la sospecha de que todo podría ser parte de un gran complot.",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Izquierdo"
-   ],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-04",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:30"
-    }
-   },
-   "horarioTexto": "Domingos, a las 19.30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/72d97ebbbbbd1d66c0967cbea23d79ef.jpg",
-   "imagenLocal": "assets/img/mori-soy-el-unico-que-no-me-conozco.jpg",
-   "huellaImagen": "2f96bd1e057b2256603a804008ef2b8c1bc40e6e",
-   "entradas": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "url": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -932,124 +774,6 @@
    }
   },
   {
-   "id": "m100-intra-accion",
-   "titulo": "Intra-acción",
-   "subtitulo": null,
-   "sinopsis": "¿Y si pudieras recorrer la tecnología en lugar de observarla? Una experiencia escénica y sensorial que conecta cuerpos, sonidos y dispositivos.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Matucana 100",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-21",
-    "hasta": "2026-10-25",
-    "dias": [
-     0,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "3": "19:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/10/Intra_acción_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-intra-accion.jpg",
-   "huellaImagen": "164b985255abf7d353070fa331d9af5eabddf74a",
-   "entradas": "https://www.m100.cl/programacion/teatro/intra-accion-2/",
-   "url": "https://www.m100.cl/programacion/teatro/intra-accion-2/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
-   "id": "m100-vigia",
-   "titulo": "Vigía",
-   "subtitulo": null,
-   "sinopsis": "Vigía explora la vigilancia contemporánea, reivindicando el cuerpo, el error, la emoción y lo colectivo frente a la medición algorítmica.",
-   "genero": "danza",
-   "compania": null,
-   "director": "Luna Ivanoff",
-   "dramaturgo": "Luna Ivanoff",
-   "elenco": [],
-   "duracion": 45,
-   "edad": 14,
-   "sala": {
-    "nombre": "Matucana 100 — Espacio Patricio Bunster",
-    "comuna": "Estación Central",
-    "direccion": "Av. Matucana 100",
-    "metro": "Quinta Normal (L5) / Estación Central (L1)",
-    "mapa": "Centro Cultural Matucana 100",
-    "sitio": "https://www.m100.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-22",
-    "hasta": "2026-10-25",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Jue a dom: 19:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 5000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 3000
-    }
-   ],
-   "imagen": "https://www.m100.cl/wp-content/uploads/2026/09/vigía_slidehome_1920x1488.jpg",
-   "imagenLocal": "assets/img/m100-vigia.jpg",
-   "huellaImagen": "4da2d64e233d6bf385b95bc5d06e15e86a86cbce",
-   "entradas": "https://www.m100.cl/programacion/danza-circo/vigia/",
-   "url": "https://www.m100.cl/programacion/danza-circo/vigia/",
-   "fuente": {
-    "id": "m100",
-    "nombre": "Matucana 100",
-    "sitio": "https://www.m100.cl"
-   }
-  },
-  {
    "id": "zoco-comienzo",
    "titulo": "COMIENZO",
    "subtitulo": null,
@@ -1176,6 +900,7 @@
     "hasta": "2027-01-31",
     "dias": [
      0,
+     1,
      2,
      3,
      4,
@@ -1184,6 +909,7 @@
     ],
     "horas": {
      "0": "20:00",
+     "1": "20:00",
      "2": "20:00",
      "3": "20:00",
      "4": "20:00",
@@ -1191,7 +917,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "13 funciones — 20:00 h",
+   "horarioTexto": "16 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -1202,181 +928,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "gam-informe-para-nadie",
-   "titulo": "Informe para nadie",
-   "subtitulo": null,
-   "sinopsis": "A diez años de la partida de Juan Radrigán, una de las voces más imprescindibles y viscerales de la escena nacional, GAM abre sus puertas a una relectura rit...",
-   "genero": "drama",
-   "compania": "Informe para nadie",
-   "director": "Ismael Castellón",
-   "dramaturgo": "Juan Radrigán",
-   "elenco": [
-    "Lorena Capetillo",
-    "Eduardo Herrera",
-    "Giordano Rossi"
-   ],
-   "duracion": 80,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-10-25",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Portada_oFuz7e1.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-informe-para-nadie.png",
-   "huellaImagen": "3927f08177b9845e5687d7fb7f402bda1d9eb973",
-   "entradas": "https://gam.ticketplus.cl/events/informe-para-nadie?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/informe-para-nadie/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "ictus-musica-olivia-garcia",
-   "titulo": "MÚSICA | OLIVIA GARCÍA",
-   "subtitulo": null,
-   "sinopsis": "Olivia García llega al Ciclo Íntimos de Teatro Ictus para lanzar su segundo LP de estudio titulado &#8220;te daría tanto, solo por un poco&#8221;. Continuando con el universo nostálgico, introspectivo y brutalmente honesto de su EP &#8220;Te Daría Tanto&#8221; nominado a los Premios Pulsar 2026 como Grabación del Año, este concierto viene a completar y profundizar el relato, agregando una nueva perspectiva al duelo: el alivio de soltar, el amor de las relaciones que sostienen y la calidez de nuevos horizontes. Una propuesta pop indie folk con banda completa y una estética muy cuidada, que de seguro te hará tener un momento de presencia, disfrute y conexión emocional.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Andrés Elgueta",
-    "Rocío Gatica",
-    "Constanza Valenzuela",
-    "Fernando Guarello"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-25",
-    "hasta": "2026-10-25",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "18:00"
-    }
-   },
-   "horarioTexto": "25 DE OCTUBRE · Domingo | 18:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/OLIVIAGARCIA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-musica-olivia-garcia.jpg",
-   "huellaImagen": "8305e4a4597f57bb8f7d629aebaf70ab433a7811",
-   "entradas": "https://ticketplus.cl/events/olivia-garcia",
-   "url": "https://teatroictus.cl/cartelera/proximamente-olivia-garcia/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1568,6 +1119,67 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-la-santa",
+   "titulo": "Los días felices: Producción GAM | La Santa",
+   "subtitulo": "Producción GAM | La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-29",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -2798,8 +2410,8 @@
      6
     ],
     "horas": {
-     "0": "17:00",
-     "6": "17:00"
+     "0": "16:00",
+     "6": "16:00"
     }
    },
    "horarioTexto": null,
