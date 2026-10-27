@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-10-26T17:06:05.692Z",
+ "actualizado": "2026-10-27T01:01:43.031Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 9,
+   "obras": 10,
    "error": null
   },
   {
@@ -14,13 +14,13 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 8,
+   "obras": 9,
    "error": null
   },
   {
@@ -28,7 +28,7 @@
    "nombre": "Matucana 100",
    "sitio": "https://www.m100.cl",
    "obras": 0,
-   "error": "dejó de entregar obras (antes traía 2)"
+   "error": null
   },
   {
    "id": "lascondes",
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 20,
+   "obras": 19,
    "error": null
   },
   {
@@ -931,46 +931,6 @@
    }
   },
   {
-   "id": "nescafe-la-sole",
-   "titulo": "La Sole",
-   "subtitulo": null,
-   "sinopsis": "Lo que debería ser un día de celebración se transforma en una jornada incómoda, absurda y reveladora, donde la Sole intenta sostener su mundo mientras todo comienza a tambalear.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Paloma Larraín",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-26",
-    "hasta": "2026-10-26",
-    "dias": [
-     1
-    ]
-   },
-   "horarioTexto": "26 de octubre y 9 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_05_19_la-sole_s.jpg",
-   "imagenLocal": "assets/img/nescafe-la-sole.jpg",
-   "huellaImagen": "652cf25534116bf43eb17f1c529c717a25504297",
-   "entradas": "https://www.ticketmaster.cl/event/488-la-sole-picante-pero-feliz",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-sole-picante-pero-feliz/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "nescafe-expertas-en-nada",
    "titulo": "Expertas en Nada",
    "subtitulo": null,
@@ -1371,7 +1331,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "ESTRENO | 1 AL 31 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
+   "horarioTexto": "ÚLTIMAS FUNCIONES | 1 AL 31 DE OCTUBRE · Jue a sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/08/ELBOSQUE_paginaweb_1080X1140.jpg",
    "imagenLocal": "assets/img/ictus-el-bosque.jpg",
@@ -2339,6 +2299,51 @@
    }
   },
   {
+   "id": "mori-mi-hermano-es-un-idiota",
+   "titulo": "Mi hermano es un idiota",
+   "subtitulo": null,
+   "sinopsis": "En una continuación de la exitosa obra \"El manager y el artista\", los hermanos Larraín se sumergen en el mundo del stand up, donde por fin, después de mucho pensarlo, Fernando decide probarse en esta área con la ayuda de Nicolás. Ambos se enfrentan en vivo con el público con sus distintos estilos y técnicas, que hacen de este show una verdadera ráfaga de risas y entretención.",
+   "genero": "humor",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "Fernando Larraín y Nicolás Larraín",
+   "elenco": [
+    "Fernando Larraín"
+   ],
+   "duracion": 75,
+   "edad": 0,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/39face5b94709c058ea65997641b74f5.jpg",
+   "imagenLocal": "assets/img/mori-mi-hermano-es-un-idiota.jpg",
+   "huellaImagen": "7e674d073295775ea2fec2bbcad50da650233ec6",
+   "entradas": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
+   "url": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "nescafe-gens",
    "titulo": "Gens",
    "subtitulo": null,
@@ -2845,6 +2850,51 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-festival-enai-2026-encuentro-de-artes-escenicas-para-la-comu",
+   "titulo": "Festival ENAI 2026: Encuentro de Artes Escénicas para la Comunidad Sorda",
+   "subtitulo": "Encuentro de Artes Escénicas para la Comunidad Sorda",
+   "sinopsis": "Una programación que reúne a artistas, creadores y públicos en torno a las múltiples formas de expresión de la comunidad Sorda, donde el cuerpo, el gesto y l...",
+   "genero": "drama",
+   "compania": "Compañía de Danza Dagoberto Huerta",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1 Sala La Pecera Sala C1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-09",
+    "hasta": "2026-12-13",
+    "dias": [
+     0,
+     3
+    ],
+    "horas": {
+     "0": "19:30",
+     "3": "20:30"
+    }
+   },
+   "horarioTexto": "Mi 9 Dic | 19 a 20.30 h | Inauguración ENAI Do 13 Dic | 18 a 19.30 h | Ceremonia de cier",
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/Diseno_sin_titulo_3.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-festival-enai-2026-encuentro-de-artes-escenicas-para-la-comu.jpg",
+   "huellaImagen": "977c5ed74384cd317d1587c699335cac8b2af2c5",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/festival-enai-2026/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
