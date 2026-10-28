@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-27T16:08:43.962Z",
+ "actualizado": "2026-10-28T00:51:17.577Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 19,
+   "obras": 20,
    "error": null
   },
   {
@@ -931,46 +931,6 @@
    }
   },
   {
-   "id": "nescafe-expertas-en-nada",
-   "titulo": "Expertas en Nada",
-   "subtitulo": null,
-   "sinopsis": "Una charla sin power point. Un panel sin especialistas. Un debate sin moderador. Una conversación sin desenlace. Un consejo que no seguimos. Una fake news sin malas intenciones.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 18,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-27",
-    "hasta": "2026-10-27",
-    "dias": [
-     2
-    ]
-   },
-   "horarioTexto": "27 de octubre y 24 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2025/03/2026_10_27_een_s.jpg",
-   "imagenLocal": "assets/img/nescafe-expertas-en-nada.jpg",
-   "huellaImagen": "8398d38fba75a2f21d21937259d45dcb0158ae72",
-   "entradas": "https://www.ticketmaster.cl/event/expertas-en-nada-show-en-vivo-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/expertas-en-nada-2026/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "puente-festival-granada-cruzando-el-rio",
    "titulo": "Festival Granada: Cruzando el Río",
    "subtitulo": null,
@@ -1715,8 +1675,8 @@
    "director": null,
    "dramaturgo": null,
    "elenco": [],
-   "duracion": null,
-   "edad": null,
+   "duracion": 60,
+   "edad": 10,
    "sala": {
     "nombre": "Centro GAM — Sala B1",
     "comuna": "Santiago Centro",
@@ -1894,6 +1854,46 @@
    }
   },
   {
+   "id": "nescafe-la-sole",
+   "titulo": "La Sole",
+   "subtitulo": null,
+   "sinopsis": "Lo que debería ser un día de celebración se transforma en una jornada incómoda, absurda y reveladora, donde la Sole intenta sostener su mundo mientras todo comienza a tambalear.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Paloma Larraín",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-09",
+    "hasta": "2026-11-09",
+    "dias": [
+     1
+    ]
+   },
+   "horarioTexto": "9 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_05_19_la-sole_s.jpg",
+   "imagenLocal": "assets/img/nescafe-la-sole.jpg",
+   "huellaImagen": "652cf25534116bf43eb17f1c529c717a25504297",
+   "entradas": "https://www.ticketmaster.cl/event/488-la-sole-picante-pero-feliz",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-sole-picante-pero-feliz/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "mori-sin-llorar-en-off",
    "titulo": "Sin Llorar En Off",
    "subtitulo": null,
@@ -1936,6 +1936,51 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "nescafe-empieza-con-d-siete-letras",
+   "titulo": "Empieza con D, siete letras",
+   "subtitulo": null,
+   "sinopsis": "¿Qué pasa cuando la vida que construiste ya no se parece a la que imaginabas? Es una comedia dramática, aguda y emocionante sobre las relaciones, el duelo, la soledad y la necesidad de volver a conectar con otros… y con uno mismo. Entre citas fallidas, hijos que crecen y amores que llegan tarde, sus personajes transitan con naturalidad entre la risa y la emoción.",
+   "genero": "comedia",
+   "compania": "MST Teatro",
+   "director": "Alexis Moreno",
+   "dramaturgo": null,
+   "elenco": [
+    "Bastián Bodenhöfer",
+    "Marcela del Valle",
+    "César Sepúlveda",
+    "Miyali Irigoin"
+   ],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-12",
+    "hasta": "2026-11-12",
+    "dias": [
+     4
+    ]
+   },
+   "horarioTexto": "12 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_12_empieza-con-d_s.jpg",
+   "imagenLocal": "assets/img/nescafe-empieza-con-d-siete-letras.jpg",
+   "huellaImagen": "c8b4e58175aa3e31f2abb3bf7041af672c35f56d",
+   "entradas": "https://www.ticketmaster.cl/event/empieza-con-d-siete-letras-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/empieza-con-d-siete-letras/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
