@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28T16:55:34.130Z",
+ "actualizado": "2026-10-29T01:24:09.555Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
+   "obras": 4,
    "error": null
   },
   {
@@ -204,62 +204,6 @@
     "id": "finisterrae",
     "nombre": "Teatro Finis Terrae",
     "sitio": "https://teatrofinisterrae.cl"
-   }
-  },
-  {
-   "id": "lascondes-chicago-el-musical",
-   "titulo": "Chicago: El Musical",
-   "subtitulo": null,
-   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
-   "genero": "musical",
-   "compania": null,
-   "director": "Felipe Leiva",
-   "dramaturgo": null,
-   "elenco": [
-    "Constanza Mackenna: Roxie Hart"
-   ],
-   "duracion": 120,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-04",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "21 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 25000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
-   "url": "https://tmlascondes.cl/chicago/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
@@ -622,7 +566,7 @@
    "dramaturgo": "David Eldridge",
    "elenco": [
     "Josefina Fiebelkorn",
-    "Julián Marrás"
+    "Julián Marras"
    ],
    "duracion": null,
    "edad": null,
@@ -826,10 +770,66 @@
    }
   },
   {
+   "id": "lascondes-chicago-el-musical",
+   "titulo": "Chicago: El Musical",
+   "subtitulo": null,
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
+   "genero": "musical",
+   "compania": null,
+   "director": "Felipe Leiva",
+   "dramaturgo": null,
+   "elenco": [
+    "Constanza Mackenna: Roxie Hart"
+   ],
+   "duracion": 120,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-29",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "8 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
+   "url": "https://tmlascondes.cl/chicago/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
    "id": "gam-los-dias-felices-produccion-gam-la-santa",
    "titulo": "Los días felices: Producción GAM | La Santa",
    "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Willie, su marido, apenas m...",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
    "genero": "drama",
    "compania": "Antonia Santa María",
    "director": "Álvaro Viguera",
@@ -2144,6 +2144,57 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "teatrouc-la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-",
+   "titulo": "La remolienda y sus ánimas: Cancionero Dramático para Víctor Jara",
+   "subtitulo": null,
+   "sinopsis": "Con música en vivo, arreglos originales y material de archivo histórico, esta propuesta escénica revive La remolienda y Ánimas de día claro de Alejandro Sieveking, rescatando la impronta visual, poética y musical de la emblemática dirección de Víctor Jara en los años 60. entre el 17 y el 21 de noviembre, no te pierdas la primera realización artística de la Escuela de Teatro UC este 2026.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 120,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-17",
+    "hasta": "2026-11-21",
+    "dias": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "2": "20:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/10/IMG_7158-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-.jpg",
+   "huellaImagen": "36db4592c0077fb883d25b49fd78f69c9be37356",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-jara/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
