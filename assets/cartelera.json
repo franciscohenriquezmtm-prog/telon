@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T01:24:09.555Z",
+ "actualizado": "2026-10-29T17:13:15.403Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -633,7 +633,6 @@
     "dias": [
      0,
      1,
-     2,
      3,
      4,
      5,
@@ -642,14 +641,13 @@
     "horas": {
      "0": "20:00",
      "1": "20:00",
-     "2": "20:00",
      "3": "20:00",
      "4": "20:00",
      "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "16 funciones — 20:00 h",
+   "horarioTexto": "13 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -663,11 +661,11 @@
    }
   },
   {
-   "id": "puente-festival-granada-cruzando-el-rio",
-   "titulo": "Festival Granada: Cruzando el Río",
+   "id": "puente-festival-granada",
+   "titulo": "Festival Granada",
    "subtitulo": null,
    "sinopsis": "",
-   "genero": "musical",
+   "genero": "drama",
    "compania": null,
    "director": null,
    "dramaturgo": null,
@@ -684,19 +682,23 @@
    },
    "temporada": {
     "desde": "2026-10-27",
-    "hasta": "2027-01-27",
+    "hasta": "2027-01-28",
     "dias": [
      0,
+     1,
      2,
-     3
+     3,
+     4
     ],
     "horas": {
      "0": "17:30",
+     "1": "17:30",
      "2": "17:30",
-     "3": "17:30"
+     "3": "17:30",
+     "4": "17:30"
     }
    },
-   "horarioTexto": "3 funciones — 17:30 h",
+   "horarioTexto": "6 funciones — 17:30 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
