@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-29T17:13:15.403Z",
+ "actualizado": "2026-10-30T01:27:45.452Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,13 +14,13 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 4,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 16,
+   "obras": 15,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 21,
+   "obras": 20,
    "error": null
   },
   {
@@ -404,60 +404,6 @@
    }
   },
   {
-   "id": "mori-cuerpo-de-lewy",
-   "titulo": "Cuerpo de Lewy",
-   "subtitulo": null,
-   "sinopsis": "Una hija decide, a modo de ritual, traer a escena el almuerzo que no alcanzó a tener con su padre a raíz de su profundo y fulminante deterioro cognitivo producto de una demencia por Cuerpos de Lewy. En este almuerzo fabricado artificialmente, la hija espera a su padre, quien sólo podrá estar presente a través de réplicas y fragmentos, resultando en un encuentro con un padre constantemente versionado. Cuerpo de Lewy se pregunta por cómo dialogar con quien no está, o no está como quisiéramos que esté. ¿Cómo conectar con una mente ingobernable? ¿Será posible conectar con alguien hecho de fragmentos? ¿Qué aprender de este padre que olvida y alucina? Cuerpo de Lewy es entonces una oportunidad para abordar las contradicciones que genera el trauma y desenredar la maraña que este deja. Y es, finalmente, la forma que encontró una hija de conversar con su padre extraviado.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ignacia Agüero McPherson",
-   "dramaturgo": "Ignacia Agüero, con la colaboración de Carlos Briones, Melchor Pino, Juan Diego Bonilla y Martín Acuña",
-   "elenco": [
-    "Carlos Briones"
-   ],
-   "duracion": null,
-   "edad": 18,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-09",
-    "hasta": "2026-10-31",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Jueves a sábado a las 20:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/de2cc520ca46a5137e445b6b6378ac12.jpg",
-   "imagenLocal": "assets/img/mori-cuerpo-de-lewy.jpg",
-   "huellaImagen": "24a917908c683bd6e3975633ada0575313f5951e",
-   "entradas": "https://teatromori.cl/obra/CrpoLewy/cuerpo-de-lewy",
-   "url": "https://teatromori.cl/obra/CrpoLewy/cuerpo-de-lewy",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "puente-taller-granada",
    "titulo": "Taller Granada",
    "subtitulo": null,
@@ -794,7 +740,7 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-10-29",
+    "desde": "2026-10-30",
     "hasta": "2026-11-08",
     "dias": [
      0,
@@ -809,7 +755,7 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "8 funciones publicadas por el teatro",
+   "horarioTexto": "7 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -828,111 +774,6 @@
    }
   },
   {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-29",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-mrs-warren-s-profession",
-   "titulo": "Mrs. Warren's Profession",
-   "subtitulo": null,
-   "sinopsis": "Importante: Las entradas adquiridas para la función del 9 de septiembre de 2026, son igualmente válidas para esta transmisión.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Justin Martin",
-   "dramaturgo": null,
-   "elenco": [
-    "Rosamund Pike",
-    "Jamie Glover",
-    "Jasper Talbot"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-29",
-    "hasta": "2026-10-29",
-    "dias": [
-     4
-    ]
-   },
-   "horarioTexto": "29 de octubre - 19:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_09_09_warren_s.jpg",
-   "imagenLocal": "assets/img/nescafe-mrs-warren-s-profession.jpg",
-   "huellaImagen": "77188fc6c5a644c5fd9f6db21f3fee4142c3e822",
-   "entradas": "https://www.ticketmaster.cl/event/477-mrs-warrens-profession-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-mrs-warrens-profession/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "gam-dona-rosita-anotada",
    "titulo": "Doña Rosita [anotada]",
    "subtitulo": null,
@@ -947,7 +788,7 @@
     "Konstanza Villalobos",
     "Colomba Chamorro"
    ],
-   "duracion": 60,
+   "duracion": 90,
    "edad": null,
    "sala": {
     "nombre": "Centro GAM — Sala N1",
@@ -1088,6 +929,67 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-la-santa",
+   "titulo": "Los días felices: Producción GAM | La Santa",
+   "subtitulo": "Producción GAM | La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-30",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
