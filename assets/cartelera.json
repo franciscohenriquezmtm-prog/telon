@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-30T16:53:37.954Z",
+ "actualizado": "2026-10-31T01:14:16.675Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 15,
+   "obras": 14,
    "error": null
   },
   {
@@ -48,8 +48,8 @@
    "id": "finisterrae",
    "nombre": "Teatro Finis Terrae",
    "sitio": "https://teatrofinisterrae.cl",
-   "obras": 1,
-   "error": null
+   "obras": 0,
+   "error": "dejó de entregar obras (antes traía 1)"
   },
   {
    "id": "puente",
@@ -127,83 +127,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "finisterrae-un-enemigo-del-pueblo",
-   "titulo": "Un enemigo del pueblo",
-   "subtitulo": null,
-   "sinopsis": "Estreno | Producción Finis Terrae (Proyecto Teatro Universitario Finis Terrae — Ministerio de las Culturas)",
-   "genero": "drama",
-   "compania": null,
-   "director": "Alexandra Von Hummel/ Elenco: Rodrigo Soto, Paulina García, María Gracia Omegna, Germán Pinilla, Sofía Guiraldes y Laura Vila/ Diseño integral: Catalina Devia/ Música y asistencia de dirección: Mario Avillo/ Diseño audio",
-   "dramaturgo": null,
-   "elenco": [
-    "Rodrigo Soto",
-    "Paulina García",
-    "María Gracia Omegna",
-    "Germán Pinilla",
-    "Sofía Guiraldes",
-    "Laura Vila/ Diseño integral: Catalina Devia/ Música y asistencia de dirección: Mario Avillo/ Diseño audiovisual: Ximena Sánchez/ Asiste"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Finis Terrae",
-    "comuna": "Providencia",
-    "direccion": "Av. Pocuro 1935",
-    "metro": "—",
-    "mapa": "Teatro Finis Terrae, Providencia",
-    "sitio": "https://teatrofinisterrae.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-01",
-    "hasta": "2026-10-30",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 11500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 9000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7500
-    }
-   ],
-   "imagen": "https://teatrofinisterrae.cl/wp-content/uploads/2026/03/Un-enemigo-del-pueblo.jpg",
-   "imagenLocal": "assets/img/finisterrae-un-enemigo-del-pueblo.jpg",
-   "huellaImagen": "534848e3244480bc39b6babfa5ed5dd62774695d",
-   "entradas": null,
-   "url": "https://teatrofinisterrae.cl/evento/un-enemigo-del-pueblo/",
-   "fuente": {
-    "id": "finisterrae",
-    "nombre": "Teatro Finis Terrae",
-    "sitio": "https://teatrofinisterrae.cl"
    }
   },
   {
@@ -718,6 +641,47 @@
    }
   },
   {
+   "id": "nescafe-el-equilibrista",
+   "titulo": "El equilibrista",
+   "subtitulo": null,
+   "sinopsis": "Por gran éxito de público, TEATRO NESCAFÉ DE LAS ARTES y MST TEATRO anuncian el regreso de la obra argentina “El equilibrista”, montaje que emocionó y se ganó el corazón de los chilenos en sus funciones de julio en nuestra sala, con fechas para el 30 y 31 de octubre.",
+   "genero": "drama",
+   "compania": null,
+   "director": "César Brie",
+   "dramaturgo": "Patricio Abadi, Mariano Saba, Mauricio Dayub",
+   "elenco": [],
+   "duracion": 30,
+   "edad": 3,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-30",
+    "hasta": "2026-10-31",
+    "dias": [
+     5,
+     6
+    ]
+   },
+   "horarioTexto": "30 y 31 de octubre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/05/2026_07_24_equilibrista_s.jpg",
+   "imagenLocal": "assets/img/nescafe-el-equilibrista.jpg",
+   "huellaImagen": "a8bf62f6e10924a63080703217e8eb94969e6b94",
+   "entradas": "https://www.ticketmaster.cl/event/el-equilibrista-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-equilibrista/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
    "id": "lascondes-chicago-el-musical",
    "titulo": "Chicago: El Musical",
    "subtitulo": null,
@@ -740,7 +704,7 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-10-30",
+    "desde": "2026-10-31",
     "hasta": "2026-11-08",
     "dias": [
      0,
@@ -755,7 +719,7 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "7 funciones publicadas por el teatro",
+   "horarioTexto": "6 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -799,7 +763,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-10-30",
+    "desde": "2026-10-31",
     "hasta": "2026-11-15",
     "dias": [
      0,
@@ -834,158 +798,6 @@
    "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
    "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-el-equilibrista",
-   "titulo": "El equilibrista",
-   "subtitulo": null,
-   "sinopsis": "Por gran éxito de público, TEATRO NESCAFÉ DE LAS ARTES y MST TEATRO anuncian el regreso de la obra argentina “El equilibrista”, montaje que emocionó y se ganó el corazón de los chilenos en sus funciones de julio en nuestra sala, con fechas para el 30 y 31 de octubre.",
-   "genero": "drama",
-   "compania": null,
-   "director": "César Brie",
-   "dramaturgo": "Patricio Abadi, Mariano Saba, Mauricio Dayub",
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-30",
-    "hasta": "2026-10-31",
-    "dias": [
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "30 y 31 de octubre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/05/2026_07_24_equilibrista_s.jpg",
-   "imagenLocal": "assets/img/nescafe-el-equilibrista.jpg",
-   "huellaImagen": "a8bf62f6e10924a63080703217e8eb94969e6b94",
-   "entradas": "https://www.ticketmaster.cl/event/el-equilibrista-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-equilibrista/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "mori-la-elvira",
-   "titulo": "La Elvira",
-   "subtitulo": null,
-   "sinopsis": "Elvira regresa más enamorada que nunca, pero esta vez de la vida. Los años la encuentran como protagonista absoluta de su propia historia: vivaz, reflexiva y con ganas de disfrutar cada momento.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Izquierdo"
-   ],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-30",
-    "hasta": "2026-10-30",
-    "dias": [
-     5
-    ],
-    "horas": {
-     "5": "22:00"
-    }
-   },
-   "horarioTexto": "Viernes a las 22:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 22000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/d14dfd7322e4f2ae4c934452e04c5098.jpg",
-   "imagenLocal": "assets/img/mori-la-elvira.jpg",
-   "huellaImagen": "10cc6e43ac4e4fe1575cca94fee5c4f98e029b95",
-   "entradas": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
-   "url": "https://teatromori.cl/obra/fEfnfW2r/la-elvira",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-30",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1090,6 +902,67 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-la-santa",
+   "titulo": "Los días felices: Producción GAM | La Santa",
+   "subtitulo": "Producción GAM | La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-31",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
