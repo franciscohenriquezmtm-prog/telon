@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-01T16:58:55.772Z",
+ "actualizado": "2026-11-02T01:09:16.097Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 10,
+   "obras": 9,
    "error": null
   },
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 12,
+   "obras": 11,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 20,
+   "obras": 19,
    "error": null
   },
   {
@@ -176,250 +176,6 @@
    }
   },
   {
-   "id": "mori-animas-de-dia-claro",
-   "titulo": "Ánimas de día claro",
-   "subtitulo": null,
-   "sinopsis": "La obra narra la historia de cinco hermanas, cuyos cuerpos han quedado atrás, pero cuyos espíritus siguen habitando una vieja casona cerca de Talagante. A pesar de haber partido hace años, sus ánimas permanecen atrapadas en ese lugar, condenadas a vagar sin descanso, retenidas por el peso de un deseo insatisfecho. Cada una de ellas, aún aferrada a sus anhelos no cumplidos, se ve imposibilitada de cruzar al más allá hasta que logren alcanzar lo que les fue arrebatado en vida.",
-   "genero": "drama",
-   "compania": "Colectivo CTM",
-   "director": "María José Pizarro",
-   "dramaturgo": "Alejandro Sieveking",
-   "elenco": [
-    "Martina Ruiz"
-   ],
-   "duracion": 80,
-   "edad": 10,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-29",
-    "hasta": "2026-11-01",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Jueves a sábado a las 20 hrs Domingo a las 19 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/6435f27459ccf99a3949726e02b27fca.jpg",
-   "imagenLocal": "assets/img/mori-animas-de-dia-claro.jpg",
-   "huellaImagen": "e85a87d64c4d959f42891406e15d1b57d2d2a9b3",
-   "entradas": "https://teatromori.cl/obra/ubzaK4Ep/animas-de-dia-claro",
-   "url": "https://teatromori.cl/obra/ubzaK4Ep/animas-de-dia-claro",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "lascondes-chicago-el-musical",
-   "titulo": "Chicago: El Musical",
-   "subtitulo": null,
-   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
-   "genero": "musical",
-   "compania": null,
-   "director": "Felipe Leiva",
-   "dramaturgo": null,
-   "elenco": [
-    "Constanza Mackenna: Roxie Hart"
-   ],
-   "duracion": 120,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "5 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 25000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
-   "url": "https://tmlascondes.cl/chicago/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "gam-dona-rosita-anotada",
-   "titulo": "Doña Rosita [anotada]",
-   "subtitulo": null,
-   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
-   "genero": "clasico",
-   "compania": "Doña Rosita [anotada]",
-   "director": "Francisco Albornoz",
-   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
-   "elenco": [
-    "Solange Lackington",
-    "Benjamín Salinas",
-    "Konstanza Villalobos",
-    "Colomba Chamorro"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-15",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
-   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
-   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-soy-el-unico-que-no-me-conozco",
    "titulo": "Soy el único que no me conozco",
    "subtitulo": null,
@@ -467,98 +223,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-un-aniversario-fabuloso",
-   "titulo": "Un Aniversario Fabuloso",
-   "subtitulo": null,
-   "sinopsis": "Este 1 de noviembre a las 21:00 horas, FABULOSO deja la pantalla y llega al TEATRO NESCAFÉ DE LAS ARTES para celebrar su primer aniversario con un show en vivo preparado especialmente para esta noche.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Fabuloso e invitados"
-   ],
-   "duracion": 30,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-01",
-    "dias": [
-     0
-    ]
-   },
-   "horarioTexto": "1 de noviembre - 21:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_01_fabuloso_s.jpg",
-   "imagenLocal": "assets/img/nescafe-un-aniversario-fabuloso.jpg",
-   "huellaImagen": "0dc36ecef6fb02d846fadf5cd2e9711c464a73ca",
-   "entradas": "https://www.ticketmaster.cl/event/aniversario-fabuloso-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/un-aniversario-fabuloso/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-viaje-al-corazon-de-la-madre-tierra",
-   "titulo": "Viaje al corazón de la Madre Tierra",
-   "subtitulo": null,
-   "sinopsis": "Desde La Paz, Bolivia, Teatro Grito llega a GAM con una obra de teatro callejero que invita a reflexionar sobre el cuidado del medio ambiente a través de muñ...",
-   "genero": "drama",
-   "compania": "Viaje al corazón de la Madre Tierra",
-   "director": "Carmen Guillén Ortúzar",
-   "dramaturgo": null,
-   "elenco": [
-    "Carmen Guillén Ortúzar; Mariel Camacho Ovando; Rene Suntura Mamani; Michael Apaza Apaza; Bernardo Arancibia Flores"
-   ],
-   "duracion": 36,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Plaza Zócalo",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-01",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "Entrada liberada",
-     "valor": 0
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/PortadaCorazonMadreTierra.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-viaje-al-corazon-de-la-madre-tierra.jpg",
-   "huellaImagen": "208059446255b3124ee6dded4058993373249238",
-   "entradas": null,
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/viaje-al-corazon-de-la-madre-tierra/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -832,6 +496,190 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "lascondes-chicago-el-musical",
+   "titulo": "Chicago: El Musical",
+   "subtitulo": null,
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
+   "genero": "musical",
+   "compania": null,
+   "director": "Felipe Leiva",
+   "dramaturgo": null,
+   "elenco": [
+    "Constanza Mackenna: Roxie Hart"
+   ],
+   "duracion": 120,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-05",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "4 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
+   "url": "https://tmlascondes.cl/chicago/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "gam-dona-rosita-anotada",
+   "titulo": "Doña Rosita [anotada]",
+   "subtitulo": null,
+   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
+   "genero": "clasico",
+   "compania": "Doña Rosita [anotada]",
+   "director": "Francisco Albornoz",
+   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
+   "elenco": [
+    "Solange Lackington",
+    "Benjamín Salinas",
+    "Konstanza Villalobos",
+    "Colomba Chamorro"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-05",
+    "hasta": "2026-11-15",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
+   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
+   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-la-santa",
+   "titulo": "Los días felices: Producción GAM | La Santa",
+   "subtitulo": "Producción GAM | La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-05",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
