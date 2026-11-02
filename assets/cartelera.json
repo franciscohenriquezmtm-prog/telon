@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T01:09:16.097Z",
+ "actualizado": "2026-11-02T20:36:23.742Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -55,15 +55,15 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 4,
+   "obras": 5,
    "error": null
   },
   {
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
-   "error": null
+   "obras": 0,
+   "error": "dejó de entregar obras (antes traía 4)"
   },
   {
    "id": "zoco",
@@ -173,6 +173,53 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "puente-epistolario-para-una-futurolog",
+   "titulo": "Epistolario para una Futurolog…",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-01",
+    "hasta": "2027-01-01",
+    "dias": [
+     0,
+     2,
+     5
+    ],
+    "horas": {
+     "0": "20:00",
+     "2": "20:00",
+     "5": "20:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -303,49 +350,6 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas",
-   "titulo": "&#8220;DESCABELLADAS&#8221; EN VIVO | ENTRADAS AGOTADAS",
-   "subtitulo": null,
-   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-04",
-    "hasta": "2026-11-04",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "19:00"
-    }
-   },
-   "horarioTexto": "4 DE NOVIEMBRE · Miércoles | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/DESCABELLADAS__paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas.jpg",
-   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
-   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo",
-   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -622,9 +626,9 @@
    }
   },
   {
-   "id": "gam-los-dias-felices-produccion-gam-la-santa",
-   "titulo": "Los días felices: Producción GAM | La Santa",
-   "subtitulo": "Producción GAM | La Santa",
+   "id": "gam-los-dias-felices-produccion-gam-y-la-santa",
+   "titulo": "Los días felices: Producción GAM y La Santa",
+   "subtitulo": "Producción GAM y La Santa",
    "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
    "genero": "drama",
    "compania": "Antonia Santa María",
@@ -672,7 +676,7 @@
     }
    ],
    "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-la-santa.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-y-la-santa.jpg",
    "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
    "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
@@ -1110,7 +1114,7 @@
   {
    "id": "gam-quiero-ser-una-chica-almodovar",
    "titulo": "Quiero ser una chica Almodóvar",
-   "subtitulo": null,
+   "subtitulo": "Coproducción GAM y La Santa",
    "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
    "genero": "musical",
    "compania": "Antonia Santa María",
@@ -1686,49 +1690,6 @@
    }
   },
   {
-   "id": "ictus-improvisacion-moyita-y-panqueque",
-   "titulo": "IMPROVISACIÓN | MOYITA Y PANQUEQUE",
-   "subtitulo": null,
-   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "dias": [
-     4
-    ],
-    "horas": {
-     "4": "20:00"
-    }
-   },
-   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-improvisacion-moyita-y-panqueque.jpg",
-   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
-   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "mori-mi-hermano-es-un-idiota",
    "titulo": "Mi hermano es un idiota",
    "subtitulo": null,
@@ -2234,58 +2195,6 @@
    }
   },
   {
-   "id": "ictus-caballo",
-   "titulo": "CABALLO",
-   "subtitulo": null,
-   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Emilia Noguera",
-   "dramaturgo": "Emilia Noguera",
-   "elenco": [
-    "Maricarmen Arrigorriaga",
-    "Roberto Poblete",
-    "Paula Sharim",
-    "Moisés Angulo",
-    "Nicolás Zárate",
-    "Camila Oliva"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-28",
-    "hasta": "2026-11-28",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-caballo.jpg",
-   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
-   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "puente-papel-de-agua",
    "titulo": "Papel de agua",
    "subtitulo": null,
@@ -2336,57 +2245,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "ictus-hombres-daga",
-   "titulo": "HOMBRES DAGA",
-   "subtitulo": null,
-   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ángela Urrutia y Matías González",
-   "dramaturgo": "Matías Leonardo González Gómez",
-   "elenco": [
-    "Luis Dubó",
-    "Viviana Nass",
-    "Felipe Valenzuela",
-    "Camilo Yanko",
-    "Nicolás Bascuñán",
-    "Ángela Urrutia",
-    "Katalina Urrutia"
-   ],
-   "duracion": 85,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-29",
-    "hasta": "2026-11-29",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:00"
-    }
-   },
-   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
-   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
-   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
