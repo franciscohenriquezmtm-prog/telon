@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-02T20:36:23.742Z",
+ "actualizado": "2026-11-03T03:11:08.449Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 4,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 19,
+   "obras": 18,
    "error": null
   },
   {
@@ -63,7 +63,7 @@
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
    "obras": 0,
-   "error": "dejó de entregar obras (antes traía 4)"
+   "error": null
   },
   {
    "id": "zoco",
@@ -270,46 +270,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-claudio-michaux",
-   "titulo": "Claudio Michaux",
-   "subtitulo": null,
-   "sinopsis": "Una rutina completamente nueva, llena de historias familiares, preguntas sobre la adultez y el humor directo que lo caracteriza. Risas, emoción y momentos inesperados en uno de los shows más íntimos de su carrera.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-02",
-    "hasta": "2026-11-02",
-    "dias": [
-     1
-    ]
-   },
-   "horarioTexto": "2 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_02_michaux_s.jpg",
-   "imagenLocal": "assets/img/nescafe-claudio-michaux.jpg",
-   "huellaImagen": "9bc6ef015ce685e309b791a520ff7801ec2f237e",
-   "entradas": "https://www.ticketmaster.cl/event/claudio-michaux-isabel-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/claudio-michaux/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
