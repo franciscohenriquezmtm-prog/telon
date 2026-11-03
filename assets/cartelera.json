@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T03:11:08.449Z",
+ "actualizado": "2026-11-03T18:11:57.222Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 4,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 0,
+   "obras": 4,
    "error": null
   },
   {
@@ -124,8 +124,8 @@
    }
   },
   {
-   "id": "zoco-comienzo",
-   "titulo": "COMIENZO",
+   "id": "zoco-comienzo-de-david-eldridge",
+   "titulo": "COMIENZO DE DAVID ELDRIDGE",
    "subtitulo": null,
    "sinopsis": "Son las 3:30 de la madrugada en un departamento recién inaugurado. Los invitados ya se han ido, la música se apagó y solo quedan dos personas: Laura, una exitosa ejecutiva que parece tenerlo todo bajo control, y Danny, un hombre divorciado que carga con el peso de sus propios naufragios. Entre copas a medio tomar, canciones nostálgicas y restos de cotillón, Laura le lanza a Danny una propuesta tan directa como inesperada que cambiará el rumbo de la noche.",
    "genero": "drama",
@@ -162,10 +162,10 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "23 de octubre al 29 de noviembre · Jueves a sábado 19:30 hrs, domingo 18:00 hrs",
+   "horarioTexto": "23 de octubre al 29 de noviembre · Jueves a sábado 19:30 h. · Domingo 18:00 h.",
    "precios": [],
    "imagen": "https://teatrozoco.cl/wp-content/uploads/2026/09/Afiche-COMIENZO_ALTA-scaled.jpg",
-   "imagenLocal": "assets/img/zoco-comienzo.jpg",
+   "imagenLocal": "assets/img/zoco-comienzo-de-david-eldridge.jpg",
    "huellaImagen": "828e82a8293aeb773da0b7931481a0bd8c609167",
    "entradas": "https://teatrozoco.cl/evento/comienzo/",
    "url": "https://teatrozoco.cl/evento/comienzo/",
@@ -310,6 +310,49 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas",
+   "titulo": "&#8220;DESCABELLADAS&#8221; EN VIVO | ENTRADAS AGOTADAS",
+   "subtitulo": null,
+   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-04",
+    "hasta": "2026-11-04",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "19:00"
+    }
+   },
+   "horarioTexto": "4 DE NOVIEMBRE · Miércoles | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/DESCABELLADAS__paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas.jpg",
+   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
+   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo",
+   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1650,6 +1693,49 @@
    }
   },
   {
+   "id": "ictus-improvisacion-moyita-y-panqueque",
+   "titulo": "IMPROVISACIÓN | MOYITA Y PANQUEQUE",
+   "subtitulo": null,
+   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
+   "genero": "comedia",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-improvisacion-moyita-y-panqueque.jpg",
+   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
+   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
+   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "mori-mi-hermano-es-un-idiota",
    "titulo": "Mi hermano es un idiota",
    "subtitulo": null,
@@ -2155,8 +2241,60 @@
    }
   },
   {
+   "id": "ictus-caballo",
+   "titulo": "CABALLO",
+   "subtitulo": null,
+   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Emilia Noguera",
+   "dramaturgo": "Emilia Noguera",
+   "elenco": [
+    "Maricarmen Arrigorriaga",
+    "Roberto Poblete",
+    "Paula Sharim",
+    "Moisés Angulo",
+    "Nicolás Zárate",
+    "Camila Oliva"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-28",
+    "hasta": "2026-11-28",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-caballo.jpg",
+   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
+   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "puente-papel-de-agua",
-   "titulo": "Papel de agua",
+   "titulo": "PAPEL DE AGUA",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -2205,6 +2343,57 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "ictus-hombres-daga",
+   "titulo": "HOMBRES DAGA",
+   "subtitulo": null,
+   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
+   "genero": "drama",
+   "compania": null,
+   "director": "Ángela Urrutia y Matías González",
+   "dramaturgo": "Matías Leonardo González Gómez",
+   "elenco": [
+    "Luis Dubó",
+    "Viviana Nass",
+    "Felipe Valenzuela",
+    "Camilo Yanko",
+    "Nicolás Bascuñán",
+    "Ángela Urrutia",
+    "Katalina Urrutia"
+   ],
+   "duracion": 85,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-29",
+    "hasta": "2026-11-29",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:00"
+    }
+   },
+   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
+   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
+   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
