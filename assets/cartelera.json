@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-03T18:11:57.222Z",
+ "actualizado": "2026-11-04T01:51:10.308Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 18,
+   "obras": 17,
    "error": null
   },
   {
@@ -270,46 +270,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "nescafe-bianca-del-rio",
-   "titulo": "Bianca del Rio",
-   "subtitulo": null,
-   "sinopsis": "¡Prepárate para tragarte una amarga dosis de verdad, porque la «Clown in a Gown» está de regreso, más despiadada que nunca! Bianca Del Rio vuelve a los escenarios del mundo con su séptima gira mundial de stand-up, «It Gets Bitter».",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-03",
-    "hasta": "2026-11-03",
-    "dias": [
-     2
-    ]
-   },
-   "horarioTexto": "3 de noviembre - 20:30 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_03_bianca-del-rio_s.jpg",
-   "imagenLocal": "assets/img/nescafe-bianca-del-rio.jpg",
-   "huellaImagen": "69f0866074c75416724969610ea3a1dc94e95098",
-   "entradas": "https://www.ticketmaster.cl/event/bianca-del-rio-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/bianca-del-rio/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -2826,7 +2786,7 @@
     "hasta": "2027-03-23",
     "sinHorario": true
    },
-   "horarioTexto": "Funciones: del 8 al 23 de marzo · Horario: 20:00 hrs. · Recomendada para mayores de 14 años",
+   "horarioTexto": "Funciones: del 8 al 23 de marzo · Horario: 20:00 hrs. · Recomendada para mayores de 14 años · MENORES DE 30 AÑOS",
    "precios": [],
    "imagen": "https://teatrozoco.cl/wp-content/uploads/2023/05/Captura-de-Pantalla-2023-05-02-a-las-11.36.51-1024x573.png",
    "imagenLocal": "assets/img/zoco-la-madriguera.png",
@@ -2973,7 +2933,7 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "18 de marzo al 3 de mayo · jueves a sábado 19:30 hrs, domingo 18:00 hrs",
+   "horarioTexto": "18 de marzo al 3 de mayo · jueves a sábado 19:30 hrs, domingo 18:00 hrs · MENORES DE 30 AÑOS",
    "precios": [],
    "imagen": "https://teatrozoco.cl/wp-content/uploads/2026/01/afiche_BS.png",
    "imagenLocal": "assets/img/zoco-becky-shaw.png",
@@ -3118,7 +3078,7 @@
      "6": "19:30"
     }
    },
-   "horarioTexto": "14 de mayo al 21 de junio · jueves a sábado 19:30 hrs, domingo 18:00 hrs",
+   "horarioTexto": "14 de mayo al 21 de junio · jueves a sábado 19:30 hrs, domingo 18:00 hrs · MENORES DE 30 AÑOS",
    "precios": [],
    "imagen": "https://teatrozoco.cl/wp-content/uploads/2025/12/AficheFinal_ElQuintoPaso_adaptado-scaled.jpg",
    "imagenLocal": "assets/img/zoco-el-quinto-paso.jpg",
@@ -3375,7 +3335,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "Temporada: 19 de julio al 25 de agosto · Funciones jueves, viernes y sábado a las 20h y domingo a las 19h · Recomendada para mayores de 14 años",
+   "horarioTexto": "Temporada: 19 de julio al 25 de agosto · Funciones jueves, viernes y sábado a las 20h y domingo a las 19h · Recomendada para mayores de 14 años · MENORES DE 30 AÑOS",
    "precios": [],
    "imagen": "https://teatrozoco.cl/wp-content/uploads/2024/05/Captura-de-pantalla-2024-05-14-a-las-16.45.28.png",
    "imagenLocal": "assets/img/zoco-la-prueba.png",
