@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T01:51:10.308Z",
+ "actualizado": "2026-11-04T18:22:34.420Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -660,7 +660,7 @@
    "dramaturgo": null,
    "elenco": [],
    "duracion": 60,
-   "edad": 10,
+   "edad": null,
    "sala": {
     "nombre": "Centro GAM — Sala B1",
     "comuna": "Santiago Centro",
@@ -1084,7 +1084,7 @@
    "director": "Álvaro Viguera",
    "dramaturgo": null,
    "elenco": [
-    "Elvira López",
+    "E lvira López",
     "Antonia Santa María",
     "Dindi Jane",
     "Enzo Ferrada",
