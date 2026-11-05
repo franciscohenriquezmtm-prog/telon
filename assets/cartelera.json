@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04T18:22:34.420Z",
+ "actualizado": "2026-11-05T02:00:21.643Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 17,
+   "obras": 16,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
+   "obras": 3,
    "error": null
   },
   {
@@ -273,49 +273,6 @@
    }
   },
   {
-   "id": "ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas",
-   "titulo": "&#8220;DESCABELLADAS&#8221; EN VIVO | ENTRADAS AGOTADAS",
-   "subtitulo": null,
-   "sinopsis": "El mejor programa político de la televisión llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-04",
-    "hasta": "2026-11-04",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "19:00"
-    }
-   },
-   "horarioTexto": "4 DE NOVIEMBRE · Miércoles | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/DESCABELLADAS__paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-8220-descabelladas-8221-en-vivo-entradas-agotadas.jpg",
-   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
-   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo",
-   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "zoco-art",
    "titulo": "ART",
    "subtitulo": null,
@@ -420,49 +377,6 @@
     "id": "teatrouc",
     "nombre": "Teatro UC",
     "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "nescafe-the-fifth-step",
-   "titulo": "The Fifth Step",
-   "subtitulo": null,
-   "sinopsis": "Como ya es tradición, TEATRO NESCAFÉ DE LAS ARTES continúa en 2026 con las transmisiones del ciclo National Theatre Live, obras de altísima calidad artística producidas por el Teatro Nacional de Londres.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Finn den Hertog",
-   "dramaturgo": null,
-   "elenco": [
-    "Jack Lowden",
-    "Martin Freeman"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-04",
-    "hasta": "2026-11-04",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "4 de noviembre - 19:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/06/2026_11_04_nt-live_fifth_s.jpg",
-   "imagenLocal": "assets/img/nescafe-the-fifth-step.jpg",
-   "huellaImagen": "0167812283aaa3ef477243426fe8168006ba6b19",
-   "entradas": "https://www.ticketmaster.cl/event/477-the-fifth-step-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/nt-live-the-fifth-step/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
