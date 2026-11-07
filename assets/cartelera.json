@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-06T17:47:02.947Z",
+ "actualizado": "2026-11-07T01:27:12.567Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 16,
+   "obras": 15,
    "error": null
   },
   {
@@ -402,20 +402,18 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-06",
+    "desde": "2026-11-07",
     "hasta": "2026-11-08",
     "dias": [
      0,
-     5,
      6
     ],
     "horas": {
      "0": "18:30",
-     "5": "19:30",
      "6": "19:30"
     }
    },
-   "horarioTexto": "3 funciones publicadas por el teatro",
+   "horarioTexto": "2 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -431,6 +429,49 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "nescafe-chofi-y-tapia",
+   "titulo": "Chofi y Tapia",
+   "subtitulo": null,
+   "sinopsis": "La popular y exitosa dupla televisiva regresa al TEATRO NESCAFÉ DE LAS ARTES con el espectáculo «Por amor, o la juerza», el sábado 7 de noviembre.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Paola Troncoso",
+    "Patricio Fuentes"
+   ],
+   "duracion": 30,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-07",
+    "hasta": "2026-11-07",
+    "dias": [
+     6
+    ]
+   },
+   "horarioTexto": "7 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_11_07_chofitapia_s.jpg",
+   "imagenLocal": "assets/img/nescafe-chofi-y-tapia.jpg",
+   "huellaImagen": "25c1659b31a610ef59bc35419d7259a0c7209083",
+   "entradas": "https://www.ticketmaster.cl/event/488-chofi-y-tapia-por-la-razon-o-la-juerza",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/chofi-y-tapia/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -459,7 +500,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-06",
+    "desde": "2026-11-07",
     "hasta": "2026-11-15",
     "dias": [
      0,
@@ -521,7 +562,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-06",
+    "desde": "2026-11-07",
     "hasta": "2026-11-14",
     "dias": [
      4,
@@ -580,7 +621,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-06",
+    "desde": "2026-11-07",
     "hasta": "2026-11-08",
     "dias": [
      0,
@@ -615,89 +656,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "nescafe-primerizas",
-   "titulo": "Primerizas",
-   "subtitulo": null,
-   "sinopsis": "Alison Mandel y Chiqui Aguayo llevan la esencia del podcast Primerizas al TEATRO NESCAFÉ DE LAS ARTES. Es necesario que tomemos un respiro de la cotidianidad, y qué mejor que podemos hacerlo con dos comediantes que se toman el escenario.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 13,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-06",
-    "hasta": "2026-11-06",
-    "dias": [
-     5
-    ]
-   },
-   "horarioTexto": "6 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_06_primerizas_s.jpg",
-   "imagenLocal": "assets/img/nescafe-primerizas.jpg",
-   "huellaImagen": "bc63ee4dcea8d71b35a3bd59646c7aa77126bb20",
-   "entradas": "https://www.ticketmaster.cl/event/primerizas-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/primerizas/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "nescafe-chofi-y-tapia",
-   "titulo": "Chofi y Tapia",
-   "subtitulo": null,
-   "sinopsis": "La popular y exitosa dupla televisiva regresa al TEATRO NESCAFÉ DE LAS ARTES con el espectáculo «Por amor, o la juerza», el sábado 7 de noviembre.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Paola Troncoso",
-    "Patricio Fuentes"
-   ],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-07",
-    "dias": [
-     6
-    ]
-   },
-   "horarioTexto": "7 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_11_07_chofitapia_s.jpg",
-   "imagenLocal": "assets/img/nescafe-chofi-y-tapia.jpg",
-   "huellaImagen": "25c1659b31a610ef59bc35419d7259a0c7209083",
-   "entradas": "https://www.ticketmaster.cl/event/488-chofi-y-tapia-por-la-razon-o-la-juerza",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/chofi-y-tapia/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
