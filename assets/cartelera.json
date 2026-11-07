@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T01:27:12.567Z",
+ "actualizado": "2026-11-07T16:42:29.201Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -737,7 +737,7 @@
     "sitio": "https://teatrodelpuente.cl"
    },
    "temporada": {
-    "desde": "2026-11-07",
+    "desde": "2026-11-08",
     "hasta": "2027-01-22",
     "dias": [
      0,
@@ -758,7 +758,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "30 funciones — 20:00 h",
+   "horarioTexto": "27 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
