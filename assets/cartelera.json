@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-07T16:42:29.201Z",
+ "actualizado": "2026-11-08T01:00:10.397Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 4,
+   "obras": 2,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 15,
+   "obras": 14,
    "error": null
   },
   {
@@ -74,55 +74,6 @@
   }
  ],
  "obras": [
-  {
-   "id": "teatrouc-nimiedades",
-   "titulo": "Nimiedades",
-   "subtitulo": null,
-   "sinopsis": "Por primera vez en Chile, Teatro UC presenta Nimiedades, un clásico fundamental del realismo estadounidense escrito por Susan Glaspell en 1916. Enmarcada en el género policial, la historia comienza tras el asesinato de un campesino en su propia cama, dejando a su viuda como la única sospechosa. Una pieza tan sensible como aguda que nos ofrece una mirada vigente sobre la opresión a la mujer. Presentada gracias a la Línea de Apoyo a Teatros Universitarios 2026, la obra dirigida por Rodrigo Pérez estará en cartelera entre el 7 de octubre y el 7 de noviembre de 2026.",
-   "genero": "clasico",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 70,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro UC — Sala Ana González",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-10-07",
-    "hasta": "2026-11-07",
-    "dias": [
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "3": "20:30",
-     "4": "20:30",
-     "5": "20:30",
-     "6": "20:30"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/09/nimiedades-susan-glaspell-teatro-uc-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-nimiedades.jpg",
-   "huellaImagen": "20c7788a3081f582a0574fea89ed1cce68523a18",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/nimiedades/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
   {
    "id": "zoco-comienzo-de-david-eldridge",
    "titulo": "COMIENZO DE DAVID ELDRIDGE",
@@ -331,334 +282,6 @@
    }
   },
   {
-   "id": "teatrouc-freire-la-epopeya-de-las-provincias",
-   "titulo": "Freire, la epopeya de las provincias",
-   "subtitulo": null,
-   "sinopsis": "Una producción original del Teatro Biobío en colaboración con Tryo Teatro Banda que revive la emocionante e histórica vida de Ramón Freire. A través de un viaje dinámico que fusiona teatro, música en vivo, canto y danza, la obra recorre las múltiples facetas de esta figura clave de la historia de Chile: desde líder independentista y pirata hasta presidente de la República. Una puesta en escena ágil, apasionante y didáctica que invita a redescubrir el legado de las provincias y los episodios fundamentales que construyeron la nación.",
-   "genero": "danza",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 80,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-04",
-    "hasta": "2026-11-07",
-    "dias": [
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/10/Freire-TBB-@imricardinho-23-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-freire-la-epopeya-de-las-provincias.jpg",
-   "huellaImagen": "38500a5e90e20a76d60d09c6ab9d1e8a8f1144f7",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/freire-la-epopeya-de-las-provincias/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "lascondes-chicago-el-musical",
-   "titulo": "Chicago: El Musical",
-   "subtitulo": null,
-   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
-   "genero": "musical",
-   "compania": null,
-   "director": "Felipe Leiva",
-   "dramaturgo": null,
-   "elenco": [
-    "Constanza Mackenna: Roxie Hart"
-   ],
-   "duracion": 120,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "2 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 25000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
-   "url": "https://tmlascondes.cl/chicago/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "nescafe-chofi-y-tapia",
-   "titulo": "Chofi y Tapia",
-   "subtitulo": null,
-   "sinopsis": "La popular y exitosa dupla televisiva regresa al TEATRO NESCAFÉ DE LAS ARTES con el espectáculo «Por amor, o la juerza», el sábado 7 de noviembre.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Paola Troncoso",
-    "Patricio Fuentes"
-   ],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-07",
-    "dias": [
-     6
-    ]
-   },
-   "horarioTexto": "7 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_11_07_chofitapia_s.jpg",
-   "imagenLocal": "assets/img/nescafe-chofi-y-tapia.jpg",
-   "huellaImagen": "25c1659b31a610ef59bc35419d7259a0c7209083",
-   "entradas": "https://www.ticketmaster.cl/event/488-chofi-y-tapia-por-la-razon-o-la-juerza",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/chofi-y-tapia/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-dona-rosita-anotada",
-   "titulo": "Doña Rosita [anotada]",
-   "subtitulo": null,
-   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
-   "genero": "clasico",
-   "compania": "Doña Rosita [anotada]",
-   "director": "Francisco Albornoz",
-   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
-   "elenco": [
-    "Solange Lackington",
-    "Benjamín Salinas",
-    "Konstanza Villalobos",
-    "Colomba Chamorro"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-15",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
-   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
-   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-indigo",
-   "titulo": "ÍNDIGO",
-   "subtitulo": null,
-   "sinopsis": "El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nueva directora artística de la compañía, abre...",
-   "genero": "danza",
-   "compania": "ÍNDIGO",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-14",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/indigo.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-indigo.jpg",
-   "huellaImagen": "738d655fc6cf76fb131557ee6d137849a16b3a88",
-   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-los-dias-felices-produccion-gam-y-la-santa",
-   "titulo": "Los días felices: Producción GAM y La Santa",
-   "subtitulo": "Producción GAM y La Santa",
-   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
-   "genero": "drama",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": "Samuel Beckett",
-   "elenco": [
-    "María Izquierdo",
-    "Rodrigo Lisboa"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-07",
-    "hasta": "2026-11-08",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10500
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-y-la-santa.jpg",
-   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
-   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-mejor-no-decirlo",
    "titulo": "Mejor no decirlo",
    "subtitulo": null,
@@ -714,6 +337,184 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "lascondes-chicago-el-musical",
+   "titulo": "Chicago: El Musical",
+   "subtitulo": null,
+   "sinopsis": "CHICAGO: El Musical Tras 69 años desde el día de su estreno, el 3 de junio de 1957, en el Richard Rodgers Theatre de Nueva York, “CHICAGO el musical” es hoy la segunda obra de teatro musical con mayor permanencia en la historia de Broadway, solo superado por “El fantasma de la Ópera”. Al año…",
+   "genero": "musical",
+   "compania": null,
+   "director": "Felipe Leiva",
+   "dramaturgo": null,
+   "elenco": [
+    "Constanza Mackenna: Roxie Hart"
+   ],
+   "duracion": 120,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-08",
+    "hasta": "2026-11-08",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "18:30"
+    }
+   },
+   "horarioTexto": "1 función publicada por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30786",
+   "url": "https://tmlascondes.cl/chicago/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "gam-dona-rosita-anotada",
+   "titulo": "Doña Rosita [anotada]",
+   "subtitulo": null,
+   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
+   "genero": "clasico",
+   "compania": "Doña Rosita [anotada]",
+   "director": "Francisco Albornoz",
+   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
+   "elenco": [
+    "Solange Lackington",
+    "Benjamín Salinas",
+    "Konstanza Villalobos",
+    "Colomba Chamorro"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-08",
+    "hasta": "2026-11-15",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
+   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
+   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-los-dias-felices-produccion-gam-y-la-santa",
+   "titulo": "Los días felices: Producción GAM y La Santa",
+   "subtitulo": "Producción GAM y La Santa",
+   "sinopsis": "Winnie está enterrada hasta la cintura, pero eso no le impide maquillarse, hablar sin parar y mantener un optimismo desquiciante. Su marido, apenas murmura r...",
+   "genero": "drama",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": "Samuel Beckett",
+   "elenco": [
+    "María Izquierdo",
+    "Rodrigo Lisboa"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-08",
+    "hasta": "2026-11-08",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10500
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/dias2.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-los-dias-felices-produccion-gam-y-la-santa.jpg",
+   "huellaImagen": "209589c5839be8781b72464de8edd70d35565f86",
+   "entradas": "https://gam.ticketplus.cl/events/los-dias-felices?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/los-dias-felices/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -942,6 +743,62 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-indigo",
+   "titulo": "ÍNDIGO",
+   "subtitulo": null,
+   "sinopsis": "El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nueva directora artística de la compañía, abre...",
+   "genero": "danza",
+   "compania": "ÍNDIGO",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-12",
+    "hasta": "2026-11-14",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6300
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/indigo.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-indigo.jpg",
+   "huellaImagen": "738d655fc6cf76fb131557ee6d137849a16b3a88",
+   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
