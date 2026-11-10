@@ -1,19 +1,19 @@
 {
- "actualizado": "2026-11-10T03:57:21.109Z",
+ "actualizado": "2026-11-10T18:24:03.379Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 8,
+   "obras": 9,
    "error": null
   },
   {
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 2,
+   "obras": 3,
    "error": null
   },
   {
@@ -821,7 +821,7 @@
    "id": "teatrouc-la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-",
    "titulo": "La remolienda y sus ánimas: Cancionero Dramático para Víctor Jara",
    "subtitulo": null,
-   "sinopsis": "Con música en vivo, arreglos originales y material de archivo histórico, esta propuesta escénica revive La remolienda y Ánimas de día claro de Alejandro Sieveking, rescatando la impronta visual, poética y musical de la emblemática dirección de Víctor Jara en los años 60. entre el 17 y el 21 de noviembre, no te pierdas la primera realización artística de la Escuela de Teatro UC este 2026.",
+   "sinopsis": "Con música en vivo, arreglos originales y material de archivo histórico, esta propuesta escénica revive La remolienda y Ánimas de día claro de Alejandro Sieveking, rescatando la impronta visual, poética y musical de la emblemática dirección de Víctor Jara en los años 60. Entre el 17 y el 21 de noviembre, no te pierdas la primera realización artística de la Escuela de Teatro UC este 2026.",
    "genero": "musical",
    "compania": null,
    "director": null,
@@ -1725,16 +1725,16 @@
    "id": "gam-la-muerte-del-padre",
    "titulo": "La muerte del padre",
    "subtitulo": null,
-   "sinopsis": "Los hermanos Ibarra Roa (Gopal y Visnu) vuelven al teatro con la vida de Petra, una carnicera abandonada que se enfrenta a la muerte de su padre cosmonauta a...",
+   "sinopsis": "Los hermanos Gopal y Visnu Ibarra Roa vuelven a la escena con una fábula tan absurda como emotiva. La puesta en escena protagonizada por Francisco Reyes y Da...",
    "genero": "drama",
    "compania": "La muerte del padre",
-   "director": "Gopal Ibarra Roa y Visnu Ibarra Roa",
+   "director": "Visnu Ibarra Roa y Gopal Ibarra Roa",
    "dramaturgo": "Gopal Ibarra Roa",
    "elenco": [
-    "Francisco Reyes Morandé",
-    "Daniela Ramírez Rodríguez",
-    "Guilherme Sepúlveda Garay",
-    "Belén Fernández Gaete",
+    "Francisco Reyes",
+    "Daniela Ramírez",
+    "Guilherme Sepúlveda",
+    "Belén Fernández",
     "Catalina Ortiz"
    ],
    "duracion": null,
@@ -1765,9 +1765,9 @@
    },
    "horarioTexto": "Ju, Vi y Sá— 19.30 h Do— 18.30 h",
    "precios": [],
-   "imagen": "https://gam.cl/media/images/Portada_LA_muerte_del_padre.2e16d0ba.fill-1200x630.png",
-   "imagenLocal": "assets/img/gam-la-muerte-del-padre.png",
-   "huellaImagen": "bd9bf9faa452c269812899428895e0e47837ab59",
+   "imagen": "https://gam.cl/media/images/grupo_LMDP.5ff8a6ce.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-la-muerte-del-padre.jpg",
+   "huellaImagen": "75f7955a75670de56f3c2417494b9abc040fb572",
    "entradas": "https://gam.ticketplus.cl/events/la-muerte-del-padre?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-muerte-del-padre/",
    "fuente": {
@@ -1826,6 +1826,54 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "gam-festicrin-2026-xii-version",
+   "titulo": "FestiCrin 2026: XII Versión",
+   "subtitulo": "XII Versión",
+   "sinopsis": "Festival de música y creación para las infancias que reúne a artistas, familias y comunidades en torno al arte, el juego y la colaboración.",
+   "genero": "infantil",
+   "compania": "FestiCrin 2026",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": 0,
+   "sala": {
+    "nombre": "Centro GAM — Sala A1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-28",
+    "hasta": "2026-11-28",
+    "dias": [
+     6
+    ],
+    "horas": {
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "Entrada liberada",
+     "valor": 0
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Festicrin.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-festicrin-2026-xii-version.png",
+   "huellaImagen": "d980e497e95540c863b8d4ffb007d1f090023ce9",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/familiar/festicrin-2026/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1930,6 +1978,57 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "teatrouc-malandra",
+   "titulo": "Malandra",
+   "subtitulo": null,
+   "sinopsis": "Por primera vez, se estrena en Chile esta adaptación de Ópera do Malandro, la aclamada obra escrita y compuesta por Chico Buarque a fines de los años 70 para subvertir la censura de la dictadura brasileña. Inspirado en La ópera de los tres centavos de Brecht y en La ópera del mendigo de Gay, este clásico del teatro musical traslada su sátira política a las calles de Río de Janeiro en los años 40 para interrogar la hipocresía de un sistema que criminaliza la marginalidad mientras institucionaliza el despojo. Una puesta en escena de profunda vigencia que cruza actuación, crítica social y la música original de Buarque interpretada en vivo en español. Entre el 1 y el 5 de diciembre, no te pierdas la segunda realización artística de la Escuela de Teatro UC este 2026.",
+   "genero": "musical",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 105,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-01",
+    "hasta": "2026-12-05",
+    "dias": [
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "2": "20:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/DSC02538-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-malandra.jpg",
+   "huellaImagen": "88df7e0d0c789e6ddd6d1946715fd7f663a7ba52",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/malandra/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
