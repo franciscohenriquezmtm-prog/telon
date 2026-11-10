@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09T21:13:26.380Z",
+ "actualizado": "2026-11-10T03:57:21.109Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 14,
+   "obras": 13,
    "error": null
   },
   {
@@ -392,46 +392,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "nescafe-la-sole",
-   "titulo": "La Sole",
-   "subtitulo": null,
-   "sinopsis": "Lo que debería ser un día de celebración se transforma en una jornada incómoda, absurda y reveladora, donde la Sole intenta sostener su mundo mientras todo comienza a tambalear.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Paloma Larraín",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 30,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-09",
-    "hasta": "2026-11-09",
-    "dias": [
-     1
-    ]
-   },
-   "horarioTexto": "9 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/04/2026_05_19_la-sole_s.jpg",
-   "imagenLocal": "assets/img/nescafe-la-sole.jpg",
-   "huellaImagen": "652cf25534116bf43eb17f1c529c717a25504297",
-   "entradas": "https://www.ticketmaster.cl/event/488-la-sole-picante-pero-feliz",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/la-sole-picante-pero-feliz/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
