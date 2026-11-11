@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-10T18:24:03.379Z",
+ "actualizado": "2026-11-11T01:37:03.338Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 13,
+   "obras": 12,
    "error": null
   },
   {
@@ -392,49 +392,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "nescafe-el-quinto-paso",
-   "titulo": "El quinto paso",
-   "subtitulo": null,
-   "sinopsis": "Dos hombres, una mesa y un café que se enfría son el escenario de un duelo psicológico implacable. James, un veterano de Alcohólicos Anónimos, guía a Luka en el momento más crudo del programa: el quinto paso. Lo que inicia como un rito de redención se transforma rápidamente en una espiral de confesiones incómodas, humor ácido y silencios eléctricos que desarman cualquier certeza.",
-   "genero": "comedia",
-   "compania": "MST Teatro",
-   "director": "Jesús Urqueta",
-   "dramaturgo": null,
-   "elenco": [
-    "Francisco Melo",
-    "Felipe Rojas"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-11",
-    "hasta": "2026-11-11",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "11 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_11_quinto-paso_s.jpg",
-   "imagenLocal": "assets/img/nescafe-el-quinto-paso.jpg",
-   "huellaImagen": "f57e680b4bd04a7a5ac063eb1e731b04bf8f10a8",
-   "entradas": "https://www.ticketmaster.cl/event/el-quinto-paso-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-quinto-paso/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -1031,7 +988,8 @@
    "dramaturgo": "Los Contadores Auditores",
    "elenco": [
     "Javiera Contador",
-    "Natalia Valdebenito"
+    "Natalia Valdebenito",
+    "Handra"
    ],
    "duracion": 30,
    "edad": 14,
