@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T01:37:03.338Z",
+ "actualizado": "2026-11-11T18:13:53.755Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -978,52 +978,6 @@
    }
   },
   {
-   "id": "nescafe-que-le-corten-la-cabeza",
-   "titulo": "Que le corten la cabeza",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 18, 19 y 21 de noviembre.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Los Contadores Auditores",
-   "dramaturgo": "Los Contadores Auditores",
-   "elenco": [
-    "Javiera Contador",
-    "Natalia Valdebenito",
-    "Handra"
-   ],
-   "duracion": 30,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-18",
-    "hasta": "2026-11-21",
-    "dias": [
-     3,
-     4,
-     6
-    ]
-   },
-   "horarioTexto": "18, 19 y 21 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
-   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
-   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
-   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "mori-bruja",
    "titulo": "Bruja",
    "subtitulo": null,
@@ -1272,6 +1226,51 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "nescafe-que-le-corten-la-cabeza",
+   "titulo": "Que le corten la cabeza",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 19 y 21 de noviembre.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Los Contadores Auditores",
+   "dramaturgo": "Los Contadores Auditores",
+   "elenco": [
+    "Javiera Contador",
+    "Natalia Valdebenito",
+    "Handra"
+   ],
+   "duracion": 30,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-21",
+    "dias": [
+     4,
+     6
+    ]
+   },
+   "horarioTexto": "19 y 21 de noviembre - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
+   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
+   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
+   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
