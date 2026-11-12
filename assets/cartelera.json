@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T02:37:53.437Z",
+ "actualizado": "2026-11-12T18:40:57.747Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": null
+   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
   },
   {
    "id": "mori",
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 3,
+   "obras": 4,
    "error": null
   },
   {
@@ -381,7 +381,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "30 funciones — 20:00 h",
+   "horarioTexto": "27 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -1096,49 +1096,6 @@
    }
   },
   {
-   "id": "ictus-improvisacion-moyita-y-panqueque",
-   "titulo": "IMPROVISACIÓN | MOYITA Y PANQUEQUE",
-   "subtitulo": null,
-   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "dias": [
-     4
-    ],
-    "horas": {
-     "4": "20:00"
-    }
-   },
-   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-improvisacion-moyita-y-panqueque.jpg",
-   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
-   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "mori-mi-hermano-es-un-idiota",
    "titulo": "Mi hermano es un idiota",
    "subtitulo": null,
@@ -1181,6 +1138,49 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "ictus-moyita-y-panqueque-improvisacion",
+   "titulo": "MOYITA Y PANQUEQUE | IMPROVISACIÓN",
+   "subtitulo": null,
+   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
+   "genero": "comedia",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-moyita-y-panqueque-improvisacion.jpg",
+   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
+   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
+   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2073,6 +2073,49 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "ictus-duo-pajarito-musica",
+   "titulo": "DÚO PAJARITO | MÚSICA",
+   "subtitulo": null,
+   "sinopsis": "Dúo Pajarito es una agrupación dedicada a la interpretación del cancionero latinoamericano , con especial énfasis en la música criolla peruana, los boleros, las tonadas y otros repertorios de raíz popular. Su propuesta pone especial interés en los repertorios tradicionales y en las voces de sus compositoras y compositores, combinando el respeto por la tradición con una mirada contemporánea.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-16",
+    "hasta": "2026-12-16",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "16 DE DICIEMBRE · Miércoles | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DUOPAJARITO_paginaweb_1080X1140_01.jpg",
+   "imagenLocal": "assets/img/ictus-duo-pajarito-musica.jpg",
+   "huellaImagen": "0d402948326b01de8a04cb7711a75bbe53494ba8",
+   "entradas": "https://ticketplus.cl/events/duo-pajarito",
+   "url": "https://teatroictus.cl/cartelera/duo-pajarito/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
