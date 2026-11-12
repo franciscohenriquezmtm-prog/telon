@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-11T18:13:53.755Z",
+ "actualizado": "2026-11-12T02:37:53.437Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 11,
+   "obras": 10,
    "error": null
   },
   {
@@ -392,51 +392,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "mori-sin-llorar-en-off",
-   "titulo": "Sin Llorar En Off",
-   "subtitulo": null,
-   "sinopsis": "Sin Llorar es un podcast de The Clinic conducido por Axel Callís y Juan Diego Montalva, dedicado a conversar y analizar la actualidad política chilena. Cada semana aborda los principales temas de la agenda, desde el Gobierno y la oposición hasta elecciones, encuestas, partidos y movimientos de poder, buscando entregar contexto y leer lo que hay detrás de la noticia.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Juan Diego Montalva"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-11",
-    "hasta": "2026-11-11",
-    "sinHorario": true
-   },
-   "horarioTexto": "20:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/8813634400b46d37fdc944b5bf81d07a.jpg",
-   "imagenLocal": "assets/img/mori-sin-llorar-en-off.jpg",
-   "huellaImagen": "47a5c8ea164973fa5b1f491f0850d572da4f0231",
-   "entradas": "https://teatromori.cl/obra/y5kRfppH/sin-llorar-en-off",
-   "url": "https://teatromori.cl/obra/y5kRfppH/sin-llorar-en-off",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -1318,12 +1273,12 @@
    }
   },
   {
-   "id": "gam-tardes-de-plaza-carro-nomade",
-   "titulo": "Tardes de plaza: Carro Nómade",
+   "id": "gam-tardes-de-carro-nomade",
+   "titulo": "Tardes de Carro Nómade",
    "subtitulo": null,
-   "sinopsis": "Una sala itinerante sobre ruedas, funciones en miniatura y talleres participativos se apoderan de la Plaza Oriente para transformar el espacio público en un ...",
+   "sinopsis": "Con una sala de teatro dentro de un camión, intervenciones de teatro Lambe Lambe y talleres, la compañía invita a tomarse el espacio público de GAM.",
    "genero": "drama",
-   "compania": "Tardes de plaza: Carro Nómade",
+   "compania": "Tardes de Carro Nómade",
    "director": null,
    "dramaturgo": null,
    "elenco": [],
@@ -1350,14 +1305,9 @@
     }
    },
    "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 6000
-    }
-   ],
+   "precios": [],
    "imagen": "https://gam.cl/media/images/P1087806.MOV.05_20_05_17.Imagen_f.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-tardes-de-plaza-carro-nomade.jpg",
+   "imagenLocal": "assets/img/gam-tardes-de-carro-nomade.jpg",
    "huellaImagen": "3a9f85773cf340f3c87359dc0b7467e623969134",
    "entradas": "https://gam.ticketplus.cl/events/carro-nomade?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/tardes-de-plaza-carro-nomade/",
