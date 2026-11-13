@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-12T18:40:57.747Z",
+ "actualizado": "2026-11-13T02:17:09.198Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 3,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 12,
+   "obras": 11,
    "error": null
   },
   {
@@ -420,7 +420,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-12",
+    "desde": "2026-11-13",
     "hasta": "2026-11-15",
     "dias": [
      0,
@@ -462,51 +462,6 @@
    }
   },
   {
-   "id": "nescafe-empieza-con-d-siete-letras",
-   "titulo": "Empieza con D, siete letras",
-   "subtitulo": null,
-   "sinopsis": "¿Qué pasa cuando la vida que construiste ya no se parece a la que imaginabas? Es una comedia dramática, aguda y emocionante sobre las relaciones, el duelo, la soledad y la necesidad de volver a conectar con otros… y con uno mismo. Entre citas fallidas, hijos que crecen y amores que llegan tarde, sus personajes transitan con naturalidad entre la risa y la emoción.",
-   "genero": "comedia",
-   "compania": "MST Teatro",
-   "director": "Alexis Moreno",
-   "dramaturgo": null,
-   "elenco": [
-    "Bastián Bodenhöfer",
-    "Marcela del Valle",
-    "César Sepúlveda",
-    "Miyali Irigoin"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-12",
-    "hasta": "2026-11-12",
-    "dias": [
-     4
-    ]
-   },
-   "horarioTexto": "12 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_12_empieza-con-d_s.jpg",
-   "imagenLocal": "assets/img/nescafe-empieza-con-d-siete-letras.jpg",
-   "huellaImagen": "c8b4e58175aa3e31f2abb3bf7041af672c35f56d",
-   "entradas": "https://www.ticketmaster.cl/event/empieza-con-d-siete-letras-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/empieza-con-d-siete-letras/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "gam-indigo",
    "titulo": "ÍNDIGO",
    "subtitulo": null,
@@ -527,7 +482,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-12",
+    "desde": "2026-11-13",
     "hasta": "2026-11-14",
     "dias": [
      4,
@@ -556,78 +511,6 @@
    "huellaImagen": "738d655fc6cf76fb131557ee6d137849a16b3a88",
    "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-quiero-ser-una-chica-almodovar",
-   "titulo": "Quiero ser una chica Almodóvar",
-   "subtitulo": "Coproducción GAM y La Santa",
-   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
-   "genero": "musical",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": null,
-   "elenco": [
-    "E lvira López",
-    "Antonia Santa María",
-    "Dindi Jane",
-    "Enzo Ferrada",
-    "Santiago Viguera"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-12",
-    "hasta": "2026-11-22",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 12000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 8400
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
-   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
-   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -678,6 +561,78 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-quiero-ser-una-chica-almodovar",
+   "titulo": "Quiero ser una chica Almodóvar",
+   "subtitulo": "Coproducción GAM y La Santa",
+   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
+   "genero": "musical",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": null,
+   "elenco": [
+    "E lvira López",
+    "Antonia Santa María",
+    "Dindi Jane",
+    "Enzo Ferrada",
+    "Santiago Viguera"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-13",
+    "hasta": "2026-11-22",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 12000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 8400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
+   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
+   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1897,7 +1852,7 @@
    "director": null,
    "dramaturgo": null,
    "elenco": [],
-   "duracion": 105,
+   "duracion": 150,
    "edad": 14,
    "sala": {
     "nombre": "Teatro UC — Eugenio Dittborn",
@@ -1918,11 +1873,11 @@
      6
     ],
     "horas": {
-     "2": "20:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
+     "2": "19:00",
+     "3": "19:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
     }
    },
    "horarioTexto": null,
