@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-13T02:17:09.198Z",
+ "actualizado": "2026-11-13T18:18:45.803Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 9,
+   "obras": 8,
    "error": null
   },
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 2,
+   "obras": 3,
    "error": null
   },
   {
@@ -455,62 +455,6 @@
    "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
    "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-indigo",
-   "titulo": "ÍNDIGO",
-   "subtitulo": null,
-   "sinopsis": "El BANCH llega con una experiencia íntima y cercana en torno al fascinante universo del índigo. Avatâra Ayuso, nueva directora artística de la compañía, abre...",
-   "genero": "danza",
-   "compania": "ÍNDIGO",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-13",
-    "hasta": "2026-11-14",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/indigo.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-indigo.jpg",
-   "huellaImagen": "738d655fc6cf76fb131557ee6d137849a16b3a88",
-   "entradas": "https://gam.ticketplus.cl/events/indigo-banch?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/indigo-banch/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -2303,6 +2247,66 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "lascondes-la-fiesta-de-cumpleanos",
+   "titulo": "La Fiesta de Cumpleaños",
+   "subtitulo": null,
+   "sinopsis": "En enero, el Teatro Municipal de Las Condes y la productora La Santa se unen en una nueva coproducción teatral para presentar La Fiesta de Cumpleaños, una de las obras más emblemáticas del reconocido dramaturgo británico Harold Pinter, dirigida por Álvaro Viguera. Estrenada en 1958, esta pieza se…",
+   "genero": "drama",
+   "compania": null,
+   "director": "Álvaro Viguera",
+   "dramaturgo": "la indiferencia frente al sufrimiento ajeno",
+   "elenco": [
+    "Jaime Vadell"
+   ],
+   "duracion": 30,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-15",
+    "hasta": "2027-01-29",
+    "dias": [
+     0,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "2": "20:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "12 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30809",
+   "url": "https://tmlascondes.cl/la-fiesta-de-cumpleanos/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
