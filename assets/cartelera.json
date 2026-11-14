@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T01:56:00.890Z",
+ "actualizado": "2026-11-14T16:48:19.934Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 10,
+   "obras": 9,
    "error": null
   },
   {
@@ -829,62 +829,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "mori-bruja",
-   "titulo": "Bruja",
-   "subtitulo": null,
-   "sinopsis": "En una comunidad dominada por el miedo y la religión, 3 niñas aparecen en un estado inexplicable tras una noche en el río. Para ocultar sus deseos y protegerse de las normas del pueblo, Abiel acusa de brujería a Elizabeth Proctor, la denuncia encubre su relación clandestina con Juan Proctor, un secreto que Elizabeth ha descubierto. Elizabeth, Proctor y Abiel quedan atrapados en un juicio donde importa más lo que el pueblo cree que la verdad. El público participa como testigo y tribunal, tomando decisiones capaces de modificar el curso de los acontecimientos.",
-   "genero": "infantil",
-   "compania": "Teatro Su Versión",
-   "director": "Esteban Carvajal - Camila Velásquez",
-   "dramaturgo": "Esteban Carvajal",
-   "elenco": [
-    "Lea Lizama"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-12-10",
-    "dias": [
-     4,
-     5
-    ],
-    "horas": {
-     "4": "20:30",
-     "5": "20:30"
-    }
-   },
-   "horarioTexto": "Viernes a las 20:30 hrs Jueves a las 20:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/193dbe917b190e7d19af0611baeb0061.jpg",
-   "imagenLocal": "assets/img/mori-bruja.jpg",
-   "huellaImagen": "0d3141d8ea5fcd18ff49b113b2dde49b735d3734",
-   "entradas": "https://teatromori.cl/obra/BrujaBV1/-bruja",
-   "url": "https://teatromori.cl/obra/BrujaBV1/-bruja",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
