@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T18:18:45.803Z",
+ "actualizado": "2026-11-14T01:56:00.890Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -395,73 +395,6 @@
    }
   },
   {
-   "id": "gam-dona-rosita-anotada",
-   "titulo": "Doña Rosita [anotada]",
-   "subtitulo": null,
-   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
-   "genero": "clasico",
-   "compania": "Doña Rosita [anotada]",
-   "director": "Francisco Albornoz",
-   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
-   "elenco": [
-    "Solange Lackington",
-    "Benjamín Salinas",
-    "Konstanza Villalobos",
-    "Colomba Chamorro"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-13",
-    "hasta": "2026-11-15",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
-   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
-   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "nescafe-los-puentes-de-madison",
    "titulo": "Los puentes de Madison",
    "subtitulo": null,
@@ -508,6 +441,73 @@
    }
   },
   {
+   "id": "gam-dona-rosita-anotada",
+   "titulo": "Doña Rosita [anotada]",
+   "subtitulo": null,
+   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
+   "genero": "clasico",
+   "compania": "Doña Rosita [anotada]",
+   "director": "Francisco Albornoz",
+   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
+   "elenco": [
+    "Solange Lackington",
+    "Benjamín Salinas",
+    "Konstanza Villalobos",
+    "Colomba Chamorro"
+   ],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-14",
+    "hasta": "2026-11-15",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8400
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 7800
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
+   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
+   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-quiero-ser-una-chica-almodovar",
    "titulo": "Quiero ser una chica Almodóvar",
    "subtitulo": "Coproducción GAM y La Santa",
@@ -534,7 +534,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-13",
+    "desde": "2026-11-14",
     "hasta": "2026-11-22",
     "dias": [
      0,
@@ -2357,7 +2357,7 @@
    "genero": "drama",
    "compania": null,
    "director": "Mercedes Aranda",
-   "dramaturgo": "Ariana Harwicz",
+   "dramaturgo": null,
    "elenco": [
     "Valeria Lois",
     "Tomás Wicz"
