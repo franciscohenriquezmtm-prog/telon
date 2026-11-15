@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-14T16:48:19.934Z",
+ "actualizado": "2026-11-15T01:27:25.408Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 11,
+   "obras": 10,
    "error": null
   },
   {
@@ -395,52 +395,6 @@
    }
   },
   {
-   "id": "nescafe-los-puentes-de-madison",
-   "titulo": "Los puentes de Madison",
-   "subtitulo": null,
-   "sinopsis": "La legendaria historia de amor de Robert James Waller, inmortalizada en cine por Meryl Streep y Clint Eastwood, se presenta en versión teatral el 13 y 14 de noviembre en TEATRO NESCAFÉ DE LAS ARTES.",
-   "genero": "drama",
-   "compania": "MST Teatro",
-   "director": "Aranzazu Yankovic",
-   "dramaturgo": "Robert James Waller",
-   "elenco": [
-    "Blanca Lewin",
-    "César Caillet",
-    "Yosune González",
-    "Felipe Valenzuela"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-13",
-    "hasta": "2026-11-14",
-    "dias": [
-     5,
-     6
-    ]
-   },
-   "horarioTexto": "13 y 14 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_14_puentes-madison_s.jpg",
-   "imagenLocal": "assets/img/nescafe-los-puentes-de-madison.jpg",
-   "huellaImagen": "eaa87544174a1d4409814ccc6d7cf3c2e563ce4c",
-   "entradas": "https://www.ticketmaster.cl/event/los-puentes-de-madison-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/los-puentes-de-madison/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "gam-dona-rosita-anotada",
    "titulo": "Doña Rosita [anotada]",
    "subtitulo": null,
@@ -466,7 +420,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-14",
+    "desde": "2026-11-15",
     "hasta": "2026-11-15",
     "dias": [
      0,
@@ -501,78 +455,6 @@
    "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
    "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "gam-quiero-ser-una-chica-almodovar",
-   "titulo": "Quiero ser una chica Almodóvar",
-   "subtitulo": "Coproducción GAM y La Santa",
-   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
-   "genero": "musical",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": null,
-   "elenco": [
-    "E lvira López",
-    "Antonia Santa María",
-    "Dindi Jane",
-    "Enzo Ferrada",
-    "Santiago Viguera"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-14",
-    "hasta": "2026-11-22",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 12000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 8400
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
-   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
-   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -626,6 +508,78 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "gam-quiero-ser-una-chica-almodovar",
+   "titulo": "Quiero ser una chica Almodóvar",
+   "subtitulo": "Coproducción GAM y La Santa",
+   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
+   "genero": "musical",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": null,
+   "elenco": [
+    "E lvira López",
+    "Antonia Santa María",
+    "Dindi Jane",
+    "Enzo Ferrada",
+    "Santiago Viguera"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-15",
+    "hasta": "2026-11-22",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 12000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 8400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
+   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
+   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
