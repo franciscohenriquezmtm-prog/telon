@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-16T01:31:00.477Z",
+ "actualizado": "2026-11-16T20:46:04.555Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
+   "obras": 4,
    "error": null
   },
   {
@@ -381,7 +381,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "27 funciones — 20:00 h",
+   "horarioTexto": "30 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -698,6 +698,49 @@
    "huellaImagen": "d6784203b351a8570f69211d52de35c2d7e039fa",
    "entradas": null,
    "url": "https://teatrouc.uc.cl/evento/estampida-humana/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
+   "id": "teatrouc-lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-202",
+   "titulo": "Lanzamiento de Álbum Teatro UC: 80 años de historias (1943-2023)",
+   "subtitulo": null,
+   "sinopsis": "Un viaje a través de los vestigios, la memoria comunitaria y el archivo de ocho décadas de vida escénica.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "desconocido. Fuente: Archivo de la Escena Teatral. Circa 1965",
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "12:30"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/TeatroUC_2-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-202.jpg",
+   "huellaImagen": "52af501af614af0c063e38b2a11eb48612f64d5f",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-2023/",
    "fuente": {
     "id": "teatrouc",
     "nombre": "Teatro UC",
