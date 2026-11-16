@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-15T17:32:07.776Z",
+ "actualizado": "2026-11-16T01:31:00.477Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 8,
+   "obras": 7,
    "error": null
   },
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 9,
+   "obras": 8,
    "error": null
   },
   {
@@ -392,194 +392,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "gam-dona-rosita-anotada",
-   "titulo": "Doña Rosita [anotada]",
-   "subtitulo": null,
-   "sinopsis": "El clásico de García Lorca se reinventa en el siglo XXI con una conmovedora versión de Pablo Remón, dirigida por Francisco Albornoz y protagonizada por Solan...",
-   "genero": "clasico",
-   "compania": "Doña Rosita [anotada]",
-   "director": "Francisco Albornoz",
-   "dramaturgo": "Pablo Remón, a partir de la obra de Federico García Lorca",
-   "elenco": [
-    "Solange Lackington",
-    "Benjamín Salinas",
-    "Konstanza Villalobos",
-    "Colomba Chamorro"
-   ],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-15",
-    "hasta": "2026-11-15",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 12000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 8400
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 7800
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/Rosita-10.5cbe9f56.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-dona-rosita-anotada.jpg",
-   "huellaImagen": "b11f4fe704c8c92a5dcaf8e8953e6ad6db68e5fd",
-   "entradas": "https://gam.ticketplus.cl/events/dona-rosita-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/dona-rosita-anotada/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "mori-nzcanal-infantil-en-vivo",
-   "titulo": "NZcanal infantil en Vivo",
-   "subtitulo": null,
-   "sinopsis": "Un espectáculo que reúne música, baile y lengua de señas chilena donde el colectivo Nerven&Zellen interpreta sus videoclips de canciones populares del grupo Mazapán para toda la familia.",
-   "genero": "infantil",
-   "compania": "Nerven&Zellen",
-   "director": "María Siebald",
-   "dramaturgo": null,
-   "elenco": [
-    "Betania González"
-   ],
-   "duracion": 40,
-   "edad": 0,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-15",
-    "hasta": "2026-11-15",
-    "sinHorario": true
-   },
-   "horarioTexto": "16:00 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 10000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/b7dd22ad41dac91032172490a634176d.jpg",
-   "imagenLocal": "assets/img/mori-nzcanal-infantil-en-vivo.jpg",
-   "huellaImagen": "08394375869776dc4cb416973260a66220cd81b6",
-   "entradas": "https://teatromori.cl/obra/NZcanal1/nzcanal-infantil-en-vivo",
-   "url": "https://teatromori.cl/obra/NZcanal1/nzcanal-infantil-en-vivo",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "gam-quiero-ser-una-chica-almodovar",
-   "titulo": "Quiero ser una chica Almodóvar",
-   "subtitulo": "Coproducción GAM y La Santa",
-   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
-   "genero": "musical",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": null,
-   "elenco": [
-    "E lvira López",
-    "Antonia Santa María",
-    "Dindi Jane",
-    "Enzo Ferrada",
-    "Santiago Viguera"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-15",
-    "hasta": "2026-11-22",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 12000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 8400
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
-   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
-   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1023,6 +835,78 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-quiero-ser-una-chica-almodovar",
+   "titulo": "Quiero ser una chica Almodóvar",
+   "subtitulo": "Coproducción GAM y La Santa",
+   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
+   "genero": "musical",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": null,
+   "elenco": [
+    "E lvira López",
+    "Antonia Santa María",
+    "Dindi Jane",
+    "Enzo Ferrada",
+    "Santiago Viguera"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-22",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 12000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 8400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
+   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
+   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
