@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-17T04:17:17.980Z",
+ "actualizado": "2026-11-17T19:31:21.982Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 7,
+   "obras": 8,
    "error": null
   },
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 8,
+   "obras": 9,
    "error": null
   },
   {
@@ -62,8 +62,8 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
-   "error": null
+   "obras": 0,
+   "error": "dejó de entregar obras (antes traía 4)"
   },
   {
    "id": "zoco",
@@ -551,6 +551,62 @@
    }
   },
   {
+   "id": "mori-bruja",
+   "titulo": "Bruja",
+   "subtitulo": null,
+   "sinopsis": "En una comunidad dominada por el miedo y la religión, 3 niñas aparecen en un estado inexplicable tras una noche en el río. Para ocultar sus deseos y protegerse de las normas del pueblo, Abiel acusa de brujería a Elizabeth Proctor, la denuncia encubre su relación clandestina con Juan Proctor, un secreto que Elizabeth ha descubierto. Elizabeth, Proctor y Abiel quedan atrapados en un juicio donde importa más lo que el pueblo cree que la verdad. El público participa como testigo y tribunal, tomando decisiones capaces de modificar el curso de los acontecimientos.",
+   "genero": "infantil",
+   "compania": "Teatro Su Versión",
+   "director": "Esteban Carvajal - Camila Velásquez",
+   "dramaturgo": "Esteban Carvajal",
+   "elenco": [
+    "Lea Lizama"
+   ],
+   "duracion": 60,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-12-10",
+    "dias": [
+     4,
+     5
+    ],
+    "horas": {
+     "4": "20:30",
+     "5": "20:30"
+    }
+   },
+   "horarioTexto": "Viernes a las 20:30 hrs Jueves a las 20:30 hrs",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/193dbe917b190e7d19af0611baeb0061.jpg",
+   "imagenLocal": "assets/img/mori-bruja.jpg",
+   "huellaImagen": "0d3141d8ea5fcd18ff49b113b2dde49b735d3734",
+   "entradas": "https://teatromori.cl/obra/BrujaBV1/-bruja",
+   "url": "https://teatromori.cl/obra/BrujaBV1/-bruja",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "mori-cronicas-desquiciadas",
    "titulo": "Crónicas Desquiciadas",
    "subtitulo": null,
@@ -743,49 +799,6 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
-   }
-  },
-  {
-   "id": "ictus-moyita-y-panqueque-improvisacion",
-   "titulo": "MOYITA Y PANQUEQUE | IMPROVISACIÓN",
-   "subtitulo": null,
-   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
-   "genero": "comedia",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "dias": [
-     4
-    ],
-    "horas": {
-     "4": "20:00"
-    }
-   },
-   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-moyita-y-panqueque-improvisacion.jpg",
-   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
-   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1233,79 +1246,6 @@
    }
   },
   {
-   "id": "gam-gasper-crew",
-   "titulo": "Gasper Crew",
-   "subtitulo": "Coproducción GAM / Compañía MAE",
-   "sinopsis": "Dirigida por Claudio Puebla, la obra narra la historia de dos hermanos separados por un accidente. Uno de ellos queda atrapado en el Kibba, un espacio de trá...",
-   "genero": "danza",
-   "compania": "MAE · Movimiento Arte Experimental",
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Javiera Martínez",
-    "Jean Pierre Bure",
-    "John Ponce",
-    "Marcelo Laurie",
-    "Nicolás Gatica",
-    "Ruby Meléndez",
-    "Valechica Núñez",
-    "Valentina Alarcón",
-    "Valentina Del Pino",
-    "Víctor Morales"
-   ],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala B1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-27",
-    "hasta": "2026-12-06",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:00",
-     "4": "19:00",
-     "5": "19:00",
-     "6": "19:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 9000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 6300
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 5850
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/CREW_GASPER.cf6137e4.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-gasper-crew.jpg",
-   "huellaImagen": "27462c1137a5e63be190d1bc79551759d5cd0205",
-   "entradas": "https://gam.ticketplus.cl/events/gasper-crew?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/gasper-crew/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "gam-la-muerte-del-padre",
    "titulo": "La muerte del padre",
    "subtitulo": null,
@@ -1361,58 +1301,6 @@
    }
   },
   {
-   "id": "ictus-caballo",
-   "titulo": "CABALLO",
-   "subtitulo": null,
-   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Emilia Noguera",
-   "dramaturgo": "Emilia Noguera",
-   "elenco": [
-    "Maricarmen Arrigorriaga",
-    "Roberto Poblete",
-    "Paula Sharim",
-    "Moisés Angulo",
-    "Nicolás Zárate",
-    "Camila Oliva"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-28",
-    "hasta": "2026-11-28",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-caballo.jpg",
-   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
-   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "gam-festicrin-2026-xii-version",
    "titulo": "FestiCrin 2026: XII Versión",
    "subtitulo": "XII Versión",
@@ -1454,6 +1342,79 @@
    "huellaImagen": "d980e497e95540c863b8d4ffb007d1f090023ce9",
    "entradas": null,
    "url": "https://gam.cl/es/que-hacer-en-gam/familiar/festicrin-2026/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-gasper-crew",
+   "titulo": "Gasper Crew",
+   "subtitulo": "Coproducción GAM / Compañía MAE",
+   "sinopsis": "Dirigida por Claudio Puebla, la obra narra la historia de dos hermanos separados por un accidente. Uno de ellos queda atrapado en el Kibba, un espacio de trá...",
+   "genero": "danza",
+   "compania": "MAE · Movimiento Arte Experimental",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Javiera Martínez",
+    "Jean Pierre Bure",
+    "John Ponce",
+    "Marcelo Laurie",
+    "Nicolás Gatica",
+    "Ruby Meléndez",
+    "Valechica Núñez",
+    "Valentina Alarcón",
+    "Valentina Del Pino",
+    "Víctor Morales"
+   ],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-28",
+    "hasta": "2026-12-06",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:00",
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6300
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 5850
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/CREW_GASPER.cf6137e4.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-gasper-crew.jpg",
+   "huellaImagen": "27462c1137a5e63be190d1bc79551759d5cd0205",
+   "entradas": "https://gam.ticketplus.cl/events/gasper-crew?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/gasper-crew/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -1511,57 +1472,6 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
-   }
-  },
-  {
-   "id": "ictus-hombres-daga",
-   "titulo": "HOMBRES DAGA",
-   "subtitulo": null,
-   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ángela Urrutia y Matías González",
-   "dramaturgo": "Matías Leonardo González Gómez",
-   "elenco": [
-    "Luis Dubó",
-    "Viviana Nass",
-    "Felipe Valenzuela",
-    "Camilo Yanko",
-    "Nicolás Bascuñán",
-    "Ángela Urrutia",
-    "Katalina Urrutia"
-   ],
-   "duracion": 85,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-29",
-    "hasta": "2026-11-29",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:00"
-    }
-   },
-   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
-   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
-   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1750,49 +1660,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "ictus-duo-pajarito-musica",
-   "titulo": "DÚO PAJARITO | MÚSICA",
-   "subtitulo": null,
-   "sinopsis": "Dúo Pajarito es una agrupación dedicada a la interpretación del cancionero latinoamericano , con especial énfasis en la música criolla peruana, los boleros, las tonadas y otros repertorios de raíz popular. Su propuesta pone especial interés en los repertorios tradicionales y en las voces de sus compositoras y compositores, combinando el respeto por la tradición con una mirada contemporánea.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-12-16",
-    "hasta": "2026-12-16",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "16 DE DICIEMBRE · Miércoles | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DUOPAJARITO_paginaweb_1080X1140_01.jpg",
-   "imagenLocal": "assets/img/ictus-duo-pajarito-musica.jpg",
-   "huellaImagen": "0d402948326b01de8a04cb7711a75bbe53494ba8",
-   "entradas": "https://ticketplus.cl/events/duo-pajarito",
-   "url": "https://teatroictus.cl/cartelera/duo-pajarito/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2125,6 +1992,60 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-arde-fitam-2027",
+   "titulo": "ARDE: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Desde Lima, llega la obra de danza contemporánea ARDE, una experiencia física y sensorial donde sus intérpretes conectan con diferentes estados emocionales c...",
+   "genero": "danza",
+   "compania": "ARDE",
+   "director": "Cori Cruz y Lucía Meléndez",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 18,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-22",
+    "hasta": "2027-01-23",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "21:00",
+     "6": "21:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Fitam2.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-arde-fitam-2027.png",
+   "huellaImagen": "c357211ec524b842d37ea17602d5826da972714c",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/arde-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/arde/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
