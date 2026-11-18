@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-17T19:31:21.982Z",
+ "actualizado": "2026-11-18T03:14:58.596Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 8,
+   "obras": 13,
    "error": null
   },
   {
@@ -14,7 +14,7 @@
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
    "obras": 4,
-   "error": "Unexpected token '<', \"<html><hea\"... is not valid JSON"
+   "error": null
   },
   {
    "id": "mori",
@@ -62,8 +62,8 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 0,
-   "error": "dejó de entregar obras (antes traía 4)"
+   "obras": 5,
+   "error": null
   },
   {
    "id": "zoco",
@@ -446,6 +446,53 @@
    }
   },
   {
+   "id": "puente-musica-clasica-a-pocos-metros",
+   "titulo": "Música clásica a pocos metros",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-17",
+    "hasta": "2027-01-17",
+    "dias": [
+     0,
+     2,
+     4
+    ],
+    "horas": {
+     "0": "20:00",
+     "2": "20:00",
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
    "id": "lascondes-cazadores-de-agua",
    "titulo": "Cazadores de Agua",
    "subtitulo": null,
@@ -501,53 +548,6 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "puente-lanzamiento-disco-x-usabiaga",
-   "titulo": "Lanzamiento disco X. Usabiaga",
-   "subtitulo": null,
-   "sinopsis": "",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro del Puente",
-    "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-18",
-    "hasta": "2027-01-18",
-    "dias": [
-     1,
-     3,
-     5
-    ],
-    "horas": {
-     "1": "20:00",
-     "3": "20:00",
-     "5": "20:00"
-    }
-   },
-   "horarioTexto": "3 funciones — 20:00 h",
-   "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
-   "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -799,6 +799,49 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "ictus-moyita-y-panqueque-improvisacion",
+   "titulo": "MOYITA Y PANQUEQUE | IMPROVISACIÓN",
+   "subtitulo": null,
+   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
+   "genero": "comedia",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-19",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "20:00"
+    }
+   },
+   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-moyita-y-panqueque-improvisacion.jpg",
+   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
+   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
+   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1301,6 +1344,58 @@
    }
   },
   {
+   "id": "ictus-caballo",
+   "titulo": "CABALLO",
+   "subtitulo": null,
+   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Emilia Noguera",
+   "dramaturgo": "Emilia Noguera",
+   "elenco": [
+    "Maricarmen Arrigorriaga",
+    "Roberto Poblete",
+    "Paula Sharim",
+    "Moisés Angulo",
+    "Nicolás Zárate",
+    "Camila Oliva"
+   ],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-28",
+    "hasta": "2026-11-28",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-caballo.jpg",
+   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
+   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "gam-festicrin-2026-xii-version",
    "titulo": "FestiCrin 2026: XII Versión",
    "subtitulo": "XII Versión",
@@ -1472,6 +1567,57 @@
     "id": "puente",
     "nombre": "Teatro del Puente",
     "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "ictus-hombres-daga",
+   "titulo": "HOMBRES DAGA",
+   "subtitulo": null,
+   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
+   "genero": "drama",
+   "compania": null,
+   "director": "Ángela Urrutia y Matías González",
+   "dramaturgo": "Matías Leonardo González Gómez",
+   "elenco": [
+    "Luis Dubó",
+    "Viviana Nass",
+    "Felipe Valenzuela",
+    "Camilo Yanko",
+    "Nicolás Bascuñán",
+    "Ángela Urrutia",
+    "Katalina Urrutia"
+   ],
+   "duracion": 85,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-29",
+    "hasta": "2026-11-29",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "19:00"
+    }
+   },
+   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
+   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
+   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
+   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1663,6 +1809,99 @@
    }
   },
   {
+   "id": "ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
+   "titulo": "SIEMPRE ENCUENTRA CASA NUEVA, UN MUEBLE ANTIGUO EN LA BASURA",
+   "subtitulo": null,
+   "sinopsis": "&#8220;Es una obra que no entrega respuestas, sino que deja una metafórica pregunta de futuro ¿cómo vamos a vivir?&#8221; — Felipe Zambrano",
+   "genero": "drama",
+   "compania": null,
+   "director": "Felipe Zambrano Miguieles",
+   "dramaturgo": "Felipe Zambrano Miguieles",
+   "elenco": [
+    "Consuelo Holzapfel",
+    "Nicolás Eyzaguirre"
+   ],
+   "duracion": 50,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-12",
+    "hasta": "2026-12-12",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "3 AL 12 DE DICIEMBRE · Jue a sáb | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg.png",
+   "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.png",
+   "huellaImagen": "63570f2be8031d2f14d3b5cfec783181b814f54f",
+   "entradas": "https://ticketplus.cl/events/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura-2026-12-03-20-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "ictus-duo-pajarito-musica",
+   "titulo": "DÚO PAJARITO | MÚSICA",
+   "subtitulo": null,
+   "sinopsis": "Dúo Pajarito es una agrupación dedicada a la interpretación del cancionero latinoamericano , con especial énfasis en la música criolla peruana, los boleros, las tonadas y otros repertorios de raíz popular. Su propuesta pone especial interés en los repertorios tradicionales y en las voces de sus compositoras y compositores, combinando el respeto por la tradición con una mirada contemporánea.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-16",
+    "hasta": "2026-12-16",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:00"
+    }
+   },
+   "horarioTexto": "16 DE DICIEMBRE · Miércoles | 20:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DUOPAJARITO_paginaweb_1080X1140_01.jpg",
+   "imagenLocal": "assets/img/ictus-duo-pajarito-musica.jpg",
+   "huellaImagen": "0d402948326b01de8a04cb7711a75bbe53494ba8",
+   "entradas": "https://ticketplus.cl/events/duo-pajarito",
+   "url": "https://teatroictus.cl/cartelera/duo-pajarito/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
    "id": "mori-el-prestamista-un-actor-tres-sospechosos-una-sola-verdad",
    "titulo": "El prestamista Un actor. Tres sospechosos. Una sola verdad.",
    "subtitulo": null,
@@ -1798,6 +2037,177 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-gabriela-fitam-2027",
+   "titulo": "GABRIELA: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "El director Dante Parra presenta GABRIELA, su ópera prima, una propuesta escénica que busca desmitificar la figura de Gabriela Mistral y explorar las distin...",
+   "genero": "musical",
+   "compania": "P&B Producciones",
+   "director": "Mauricio Espinoza",
+   "dramaturgo": "Dante Parra",
+   "elenco": [],
+   "duracion": 50,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-04",
+    "hasta": "2027-01-06",
+    "dias": [
+     1,
+     2,
+     3
+    ],
+    "horas": {
+     "1": "20:30",
+     "2": "20:30",
+     "3": "20:30"
+    }
+   },
+   "horarioTexto": "Lu, Ma y Mi — 20.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Gabriela_2.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-gabriela-fitam-2027.png",
+   "huellaImagen": "4831890d9714e7da1a95e525bd6e4445fe7bfe9a",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/gabriela-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/gabriela/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-hermanas-fitam-2027",
+   "titulo": "Hermanas: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "El destacado dramaturgo, escritor y coreógrafo francés Pascal Rambert llega con Hermanas, una obra que reúne a dos mujeres separadas por el rencor en un inte...",
+   "genero": "drama",
+   "compania": "Hermanas",
+   "director": "Thierry Morin",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 90,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-04",
+    "hasta": "2027-01-05",
+    "dias": [
+     1,
+     2
+    ],
+    "horas": {
+     "1": "19:00",
+     "2": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 16000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/hermanas.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-hermanas-fitam-2027.png",
+   "huellaImagen": "0e0d4ed99c6debf251dc82f0613c1dad5b8406b8",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/hermanas-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/hermanas/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-el-beso-de-rock-hudson-fitam-2027",
+   "titulo": "El beso de Rock Hudson: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Una obra se construye a partir de testimonios y archivos de personas viviendo con VIH y de sus círculos íntimos. Desde una mirada crítica y disidente, el esp...",
+   "genero": "documental",
+   "compania": "El beso de Rock Hudson",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Lorenza Quezada",
+    "César Cisternas",
+    "Zirena Piña",
+    "Santiago Rodríguez"
+   ],
+   "duracion": 110,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-08",
+    "hasta": "2027-01-10",
+    "dias": [
+     0,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Vi, Sá y Do— 19.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Teatro_El_beso_de_Rock_Hudson_Sel.4ba54a57.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-el-beso-de-rock-hudson-fitam-2027.jpg",
+   "huellaImagen": "bdc2d6634c7193f9448baed956cc58dc53ca8b38",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/el-beso-de-rock-hudson-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/el-beso-de-rock-hudson-fitam2027/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -1952,6 +2362,116 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "gam-carino-malo-fitam-2027",
+   "titulo": "Cariño Malo: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Desde Perú llega un melodrama queer que cruza teatro, radioteatro y música criolla peruana para explorar los límites de lo obsceno: aquello que no debía most...",
+   "genero": "drama",
+   "compania": "Cariño Malo",
+   "director": "Alejandro Clavier",
+   "dramaturgo": "Alejandro Clavier",
+   "elenco": [
+    "Sebastián Stimman",
+    "Diego Salinas",
+    "Alejandro Clavier"
+   ],
+   "duracion": 75,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-18",
+    "hasta": "2027-01-19",
+    "dias": [
+     1,
+     2
+    ],
+    "horas": {
+     "1": "19:00",
+     "2": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Carinomalo.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-carino-malo-fitam-2027.png",
+   "huellaImagen": "e7b72a9678644b56d0e4d4443f6036d20a735edc",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/carino-malo-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/carino-malo/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-cabeza-de-elefante-fitam-2027",
+   "titulo": "Cabeza de elefante: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Un montaje de la compañía Silencio Blanco que narra la transformación de un hombre que pierde la memoria y su identidad hasta convertirse simbólicamente en u...",
+   "genero": "drama",
+   "compania": "Silencio Blanco",
+   "director": "Santiago Tobar",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 55,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro GAM — Sala N2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-20",
+    "hasta": "2027-03-28",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "20:30"
+    }
+   },
+   "horarioTexto": "Mi — 20.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/CabezaDeElefante_002_Johan_Karlss.3d41d99e.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-cabeza-de-elefante-fitam-2027.jpg",
+   "huellaImagen": "d752008c4d81a065977d741a7d3a7877ccd95379",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/cabeza-de-elefante-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/cabeza-de-elefante-fitam2027/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
