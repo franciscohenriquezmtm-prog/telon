@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-18T03:14:58.596Z",
+ "actualizado": "2026-11-18T19:13:11.037Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 13,
+   "obras": 15,
    "error": null
   },
   {
@@ -1304,7 +1304,7 @@
     "Belén Fernández",
     "Catalina Ortiz"
    ],
-   "duracion": null,
+   "duracion": 65,
    "edad": null,
    "sala": {
     "nombre": "Centro GAM — Sala A2",
@@ -1446,8 +1446,8 @@
   {
    "id": "gam-gasper-crew",
    "titulo": "Gasper Crew",
-   "subtitulo": "Coproducción GAM / Compañía MAE",
-   "sinopsis": "Dirigida por Claudio Puebla, la obra narra la historia de dos hermanos separados por un accidente. Uno de ellos queda atrapado en el Kibba, un espacio de trá...",
+   "subtitulo": "Coproducción GAM y Compañía MAE | Presenta SURA",
+   "sinopsis": "El espectáculo de danza dirigido por Claudio Puebla y coreografiado por Nicolás Cancino regresa a 15 años de su estreno con una propuesta inmersiva que fusio...",
    "genero": "danza",
    "compania": "MAE · Movimiento Arte Experimental",
    "director": null,
@@ -2040,6 +2040,49 @@
    }
   },
   {
+   "id": "gam-la-clausura-del-amor-fitam-2027",
+   "titulo": "La clausura del amor: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Ganadora del Gran Premio Literatura Dramática del Centre National du Théâtre 2012, La clausura del amor es la devastadora crónica de una separación a través ...",
+   "genero": "drama",
+   "compania": "La clausura del amor",
+   "director": "Thierry Morin",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 120,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-03",
+    "hasta": "2027-01-03",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "18:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://gam.cl/media/images/la_clausura_del_amor.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-la-clausura-del-amor-fitam-2027.png",
+   "huellaImagen": "4b2a3dff75cd14e886a11e9cbe6edac7a34014b2",
+   "entradas": null,
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-clausura-del-amor/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-gabriela-fitam-2027",
    "titulo": "GABRIELA: FITAM 2027",
    "subtitulo": "FITAM 2027",
@@ -2204,6 +2247,67 @@
    "huellaImagen": "bdc2d6634c7193f9448baed956cc58dc53ca8b38",
    "entradas": "https://teatro-a-mil.ticketplus.cl/events/el-beso-de-rock-hudson-FITAM2027",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/el-beso-de-rock-hudson-fitam2027/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-hijo-madre-y-padre-se-sientan-en-la-mesa-en-silencio-fitam-2",
+   "titulo": "Hijo, madre y padre se sientan en la mesa en silencio: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Dirigida por Aleksandar Švabić, la obra explora preguntas incómodas sobre la pertenencia: si una catástrofe les obligara a escoger a un solo hijo, ¿a quién s...",
+   "genero": "drama",
+   "compania": "Hijo, madre y padre se sientan en la mesa en silencio",
+   "director": "Aleksandar Švabić",
+   "dramaturgo": "Marin Lisjak",
+   "elenco": [
+    "Doris Šarić Kukuljica",
+    "Sreten Mokrović",
+    "Petra Svrtan",
+    "Luka Knez"
+   ],
+   "duracion": 90,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-08",
+    "hasta": "2027-01-10",
+    "dias": [
+     0,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "17:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 18000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 14400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/hijo_madre_y_padre.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-hijo-madre-y-padre-se-sientan-en-la-mesa-en-silencio-fitam-2.png",
+   "huellaImagen": "f958488a2050a9cb715341e87ab4fcc68f95b680",
+   "entradas": "http://ticketplus.cl/events/hijo-madre-y-padre-se-sientan-en-la-mesa-en-silencio-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/hijo-madre-y-padre-se-sientan-en-la-mesa-en-silencio/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
