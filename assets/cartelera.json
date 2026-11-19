@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-18T19:13:11.037Z",
+ "actualizado": "2026-11-19T02:54:51.983Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -493,64 +493,6 @@
    }
   },
   {
-   "id": "lascondes-cazadores-de-agua",
-   "titulo": "Cazadores de Agua",
-   "subtitulo": null,
-   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
-   "genero": "drama",
-   "compania": null,
-   "director": "Zagal",
-   "dramaturgo": null,
-   "elenco": [
-    "Thais Zúñiga"
-   ],
-   "duracion": 60,
-   "edad": 8,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-18",
-    "hasta": "2026-11-29",
-    "dias": [
-     0,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "10 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
-   "url": "https://tmlascondes.cl/cazadores-de-agua/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
    "id": "mori-bruja",
    "titulo": "Bruja",
    "subtitulo": null,
@@ -604,6 +546,64 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "lascondes-cazadores-de-agua",
+   "titulo": "Cazadores de Agua",
+   "subtitulo": null,
+   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
+   "genero": "drama",
+   "compania": null,
+   "director": "Zagal",
+   "dramaturgo": null,
+   "elenco": [
+    "Thais Zúñiga"
+   ],
+   "duracion": 60,
+   "edad": 8,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-19",
+    "hasta": "2026-11-29",
+    "dias": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "9 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
+   "url": "https://tmlascondes.cl/cazadores-de-agua/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
