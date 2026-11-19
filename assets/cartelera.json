@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-19T02:54:51.983Z",
+ "actualizado": "2026-11-19T19:16:20.313Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 15,
+   "obras": 20,
    "error": null
   },
   {
@@ -55,7 +55,7 @@
    "id": "puente",
    "nombre": "Teatro del Puente",
    "sitio": "https://teatrodelpuente.cl",
-   "obras": 4,
+   "obras": 5,
    "error": null
   },
   {
@@ -381,7 +381,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "30 funciones — 20:00 h",
+   "horarioTexto": "27 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -477,6 +477,53 @@
      "0": "20:00",
      "2": "20:00",
      "4": "20:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
+   }
+  },
+  {
+   "id": "puente-lanzamiento-disco-x-usabiaga",
+   "titulo": "Lanzamiento disco X. Usabiaga",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-18",
+    "hasta": "2027-01-18",
+    "dias": [
+     1,
+     3,
+     5
+    ],
+    "horas": {
+     "1": "20:00",
+     "3": "20:00",
+     "5": "20:00"
     }
    },
    "horarioTexto": "3 funciones — 20:00 h",
@@ -2409,6 +2456,119 @@
    }
   },
   {
+   "id": "gam-sillas-musicales-fitam-2027",
+   "titulo": "Sillas musicales: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "El director Pepo Silva se une a la danza de Rodrigo Pérez y a la Compañía Generación del Ayer, galardonada con el Premio Círculo de Críticos de Arte de Chile...",
+   "genero": "danza",
+   "compania": "Sillas musicales",
+   "director": "José Urrea Silva (Pepo Silva )",
+   "dramaturgo": "Bruce Gibbons Fell",
+   "elenco": [
+    "Carmen Aros",
+    "Mabel Diana",
+    "Rodrigo Pérez",
+    "Sonia Uribe (con participación de la compañía Generación del Ayer)"
+   ],
+   "duracion": 50,
+   "edad": 10,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-10",
+    "hasta": "2027-01-12",
+    "dias": [
+     0
+    ],
+    "horas": {
+     "0": "18:30"
+    }
+   },
+   "horarioTexto": "Do — 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 8000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 6400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/sillas_musicales.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-sillas-musicales-fitam-2027.png",
+   "huellaImagen": "eb4fba79d22e0c8a8df001ec2e5d6b0f829a75a8",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/sillas-musicales-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/sillas-musicales/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-six-fitam-2027",
+   "titulo": "SIX: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Jacob Jonas, el coreógrafo que ha trabajado con grandes artistas desde Kanye West a Rosalía, debuta en el país con SIX. Un programa que reúne dos de sus excl...",
+   "genero": "danza",
+   "compania": "SIX",
+   "director": "Emma Rosenzweig-Bock",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 65,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-14",
+    "hasta": "2027-01-16",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "19:00",
+     "5": "19:00",
+     "6": "19:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 18000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 14400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/SIX.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-six-fitam-2027.png",
+   "huellaImagen": "0f6ab6b01cfded988fb0706e336c2aa070cb08c6",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/six-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/six/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "lascondes-la-fiesta-de-cumpleanos",
    "titulo": "La Fiesta de Cumpleaños",
    "subtitulo": null,
@@ -2469,6 +2629,58 @@
    }
   },
   {
+   "id": "gam-perdon-fitam-2027",
+   "titulo": "Perdón: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Perdón es una obra del destacado dúo catalán Losinformalls que rompe con el status quo y la política de lo incorrecto. A través del humor y la provocación, e...",
+   "genero": "danza",
+   "compania": "Perdón",
+   "director": "Losinformalls",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 55,
+   "edad": 15,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-16",
+    "hasta": "2027-01-18",
+    "dias": [
+     6
+    ],
+    "horas": {
+     "6": "20:30"
+    }
+   },
+   "horarioTexto": "Sa — 20.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 14000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 11200
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/perdon.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-perdon-fitam-2027.png",
+   "huellaImagen": "d275072cabb2e85eb8095ade870fc5441195b2d9",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/perdon-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/perdon/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-carino-malo-fitam-2027",
    "titulo": "Cariño Malo: FITAM 2027",
    "subtitulo": "FITAM 2027",
@@ -2520,6 +2732,58 @@
    "huellaImagen": "e7b72a9678644b56d0e4d4443f6036d20a735edc",
    "entradas": "https://teatro-a-mil.ticketplus.cl/events/carino-malo-FITAM2027",
    "url": "https://gam.cl/es/que-hacer-en-gam/teatro/carino-malo/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "gam-ojitos-de-cordero-fitam-2027",
+   "titulo": "Ojitos de cordero: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Fundación Teatro a Mil y la Comedia Nacional de Montevideo coproducen Ojitos de cordero, una obra dirigida por los destacados integrantes de la Compañía Bono...",
+   "genero": "comedia",
+   "compania": "Ojitos de cordero",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-19",
+    "hasta": "2027-01-21",
+    "dias": [
+     4
+    ],
+    "horas": {
+     "4": "18:30"
+    }
+   },
+   "horarioTexto": "Ju — 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/ojitos_de_cordero.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-ojitos-de-cordero-fitam-2027.png",
+   "huellaImagen": "8a8f76f27db804106e9501534a40cb539c604de2",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/ojitos-de-cordero-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/ojitos-de-cordero/",
    "fuente": {
     "id": "gam",
     "nombre": "Centro GAM",
@@ -2714,6 +2978,65 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-ser-o-no-ser-de-carton-fitam-2027",
+   "titulo": "Ser o no ser… de Cartón: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Una versión de Hamlet contada con marionetas, pero desde un lugar diferente. La obra plantea preguntas que van más allá de la tragedia de William Shakespeare...",
+   "genero": "clasico",
+   "compania": "Ser o no ser… de Cartón",
+   "director": "María José Salinas Pérez",
+   "dramaturgo": "Eliana Hernández",
+   "elenco": [
+    "Antonia Arriaza",
+    "Loretta Stanton",
+    "Ariel Osorio",
+    "Lucas Figueroa"
+   ],
+   "duracion": 70,
+   "edad": 12,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-23",
+    "hasta": "2027-01-24",
+    "dias": [
+     0,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "6": "16:30"
+    }
+   },
+   "horarioTexto": "Sá — 16.30 y 19.30 h Do — 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Ser_o_no_ser.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-ser-o-no-ser-de-carton-fitam-2027.png",
+   "huellaImagen": "a8544b964ab4b5d9a2ebf3584c47343e5f611c47",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/ser-o-no-ser-de-carton-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/ser-o-no-ser-de-carton/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
