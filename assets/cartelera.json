@@ -1,26 +1,26 @@
 {
- "actualizado": "2026-11-19T19:16:20.313Z",
+ "actualizado": "2026-11-20T02:46:52.599Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 20,
+   "obras": 23,
    "error": null
   },
   {
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 4,
+   "obras": 3,
    "error": null
   },
   {
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 9,
+   "obras": 7,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
+   "obras": 4,
    "error": null
   },
   {
@@ -596,122 +596,6 @@
    }
   },
   {
-   "id": "lascondes-cazadores-de-agua",
-   "titulo": "Cazadores de Agua",
-   "subtitulo": null,
-   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
-   "genero": "drama",
-   "compania": null,
-   "director": "Zagal",
-   "dramaturgo": null,
-   "elenco": [
-    "Thais Zúñiga"
-   ],
-   "duracion": 60,
-   "edad": 8,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-29",
-    "dias": [
-     0,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "9 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
-   "url": "https://tmlascondes.cl/cazadores-de-agua/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "mori-cronicas-desquiciadas",
-   "titulo": "Crónicas Desquiciadas",
-   "subtitulo": null,
-   "sinopsis": "Crónicas Desquiciadas es una obra escrita en 2002 por Indira Páez, reconocida escritora, dramaturga y libretista venezolana. Escrita con estructura de monólogos, al estilo stand up comedy, pero desde la óptica de 12 personajes cotidianos que transparentan de manera brutal, sarcástica y divertidísima sus confesiones acerca del amor, la sexualidad, sus obsesiones, sus trastornos y los estereotipos de género. En este nuevo montaje, bajo la dirección de Moira Miller, seremos testigos y de alguna forma partícipes de una terapia artificial en que el arte, la ficción y el artificio serán las herramientas para enfrentar realidades, conflictos, frustraciones y necesidades que los tienen al borde del colapso.",
-   "genero": "humor",
-   "compania": null,
-   "director": "Moira Miller",
-   "dramaturgo": "Indira Páez",
-   "elenco": [
-    "Paz Bascuñán"
-   ],
-   "duracion": 80,
-   "edad": 16,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "dias": [
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "Jueves a sábado a las 20:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 25000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/cc61ecf61da1e0acc002a121d3ac1a59.jpg",
-   "imagenLocal": "assets/img/mori-cronicas-desquiciadas.jpg",
-   "huellaImagen": "c92858a4262c667d65f9f2d63bbea0ef233e4705",
-   "entradas": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas",
-   "url": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "teatrouc-estampida-humana",
    "titulo": "Estampida humana",
    "subtitulo": null,
@@ -761,152 +645,79 @@
    }
   },
   {
-   "id": "teatrouc-lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-202",
-   "titulo": "Lanzamiento de Álbum Teatro UC: 80 años de historias (1943-2023)",
+   "id": "lascondes-cazadores-de-agua",
+   "titulo": "Cazadores de Agua",
    "subtitulo": null,
-   "sinopsis": "Un viaje a través de los vestigios, la memoria comunitaria y el archivo de ocho décadas de vida escénica.",
+   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
    "genero": "drama",
    "compania": null,
-   "director": null,
-   "dramaturgo": "desconocido. Fuente: Archivo de la Escena Teatral. Circa 1965",
-   "elenco": [],
-   "duracion": null,
-   "edad": null,
+   "director": "Zagal",
+   "dramaturgo": null,
+   "elenco": [
+    "Thais Zúñiga"
+   ],
+   "duracion": 60,
+   "edad": 8,
    "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
+    "desde": "2026-11-20",
+    "hasta": "2026-11-29",
     "dias": [
-     4
+     0,
+     3,
+     4,
+     5,
+     6
     ],
     "horas": {
-     "4": "12:30"
+     "0": "19:00",
+     "3": "20:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
     }
    },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/TeatroUC_2-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-202.jpg",
-   "huellaImagen": "52af501af614af0c063e38b2a11eb48612f64d5f",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/lanzamiento-de-album-teatro-uc-80-anos-de-historias-1943-2023/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "mori-mi-hermano-es-un-idiota",
-   "titulo": "Mi hermano es un idiota",
-   "subtitulo": null,
-   "sinopsis": "En una continuación de la exitosa obra \"El manager y el artista\", los hermanos Larraín se sumergen en el mundo del stand up, donde por fin, después de mucho pensarlo, Fernando decide probarse en esta área con la ayuda de Nicolás. Ambos se enfrentan en vivo con el público con sus distintos estilos y técnicas, que hacen de este show una verdadera ráfaga de risas y entretención.",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Fernando Larraín y Nicolás Larraín",
-   "elenco": [
-    "Fernando Larraín"
-   ],
-   "duracion": 75,
-   "edad": 0,
-   "sala": {
-    "nombre": "Teatro Mori Parque Arauco",
-    "comuna": "Las Condes",
-    "direccion": "Av. Kennedy 5413, nivel 3",
-    "metro": "Manquehue (L1)",
-    "mapa": "Teatro Mori Parque Arauco",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "sinHorario": true
-   },
-   "horarioTexto": "20:30 hrs",
+   "horarioTexto": "8 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
      "valor": 20000
     }
    ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/39face5b94709c058ea65997641b74f5.jpg",
-   "imagenLocal": "assets/img/mori-mi-hermano-es-un-idiota.jpg",
-   "huellaImagen": "7e674d073295775ea2fec2bbcad50da650233ec6",
-   "entradas": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
-   "url": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota",
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
+   "url": "https://tmlascondes.cl/cazadores-de-agua/",
    "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
-   "id": "ictus-moyita-y-panqueque-improvisacion",
-   "titulo": "MOYITA Y PANQUEQUE | IMPROVISACIÓN",
+   "id": "nescafe-gens",
+   "titulo": "Gens",
    "subtitulo": null,
-   "sinopsis": "Los actores y comediantes, Mónica “Moyita” Moya y Sergio “Panqueque” Domínguez , dedicados hace más de 23 años a la improvisación teatral, l legan a la Sala la Comedia de Teatro ICTUS con improvisaciones libres, desafios teatrales y juegos actorales a través de las sugerencias del público existente. Los comediantes (parte del programa de tv &#8220;Los Improvisadores&#8221;) han presentado su espectáculo por todo Chile y gran parte Latinoamérica, Europa y Norteamérica, siendo un referente del teatro y la improvisación nacional e internacional.",
-   "genero": "comedia",
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES continúa con la programación de obras exclusivas de su Residencia Artística, ahora con el estreno de “Gens”, el viernes 20 de noviembre a las 20:00 horas.",
+   "genero": "drama",
    "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-19",
-    "dias": [
-     4
-    ],
-    "horas": {
-     "4": "20:00"
-    }
-   },
-   "horarioTexto": "19 DE NOVIEMBRE · Jueves | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/MOYITAYPANQUEQUE_NOV__paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-moyita-y-panqueque-improvisacion.jpg",
-   "huellaImagen": "734595f646b85377777125e75698744dc63d574a",
-   "entradas": "https://ticketplus.cl/events/moyita-y-panqueque",
-   "url": "https://teatroictus.cl/cartelera/proximamente-moyita-y-panqueque/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
-   "id": "nescafe-que-le-corten-la-cabeza",
-   "titulo": "Que le corten la cabeza",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 19 y 21 de noviembre.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Los Contadores Auditores",
-   "dramaturgo": "Los Contadores Auditores",
+   "director": "Felipe Molina",
+   "dramaturgo": "Eliana Hernández Aravena",
    "elenco": [
-    "Javiera Contador",
-    "Natalia Valdebenito",
-    "Handra"
+    "Constanza Araya",
+    "Bernabé Madrigal",
+    "Sebastián Solorza"
    ],
    "duracion": 30,
-   "edad": 14,
+   "edad": 3,
    "sala": {
     "nombre": "Teatro Nescafé de las Artes",
     "comuna": "Providencia",
@@ -916,20 +727,19 @@
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
    },
    "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-11-21",
+    "desde": "2026-11-20",
+    "hasta": "2026-11-20",
     "dias": [
-     4,
-     6
+     5
     ]
    },
-   "horarioTexto": "19 y 21 de noviembre - 20:00 horas",
+   "horarioTexto": "20 de noviembre - 20:00 horas",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
-   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
-   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
-   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_20_gens_s.jpg",
+   "imagenLocal": "assets/img/nescafe-gens.jpg",
+   "huellaImagen": "a965159cd6af0845ca054f687dfa6e91fac36846",
+   "entradas": "https://www.ticketmaster.cl/event/gens-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/gens/",
    "fuente": {
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
@@ -963,7 +773,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-19",
+    "desde": "2026-11-20",
     "hasta": "2026-11-22",
     "dias": [
      0,
@@ -1009,21 +819,21 @@
    }
   },
   {
-   "id": "nescafe-gens",
-   "titulo": "Gens",
+   "id": "nescafe-que-le-corten-la-cabeza",
+   "titulo": "Que le corten la cabeza",
    "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES continúa con la programación de obras exclusivas de su Residencia Artística, ahora con el estreno de “Gens”, el viernes 20 de noviembre a las 20:00 horas.",
-   "genero": "drama",
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 19 y 21 de noviembre.",
+   "genero": "comedia",
    "compania": null,
-   "director": "Felipe Molina",
-   "dramaturgo": "Eliana Hernández Aravena",
+   "director": "Los Contadores Auditores",
+   "dramaturgo": "Los Contadores Auditores",
    "elenco": [
-    "Constanza Araya",
-    "Bernabé Madrigal",
-    "Sebastián Solorza"
+    "Javiera Contador",
+    "Natalia Valdebenito",
+    "Handra"
    ],
    "duracion": 30,
-   "edad": 3,
+   "edad": 14,
    "sala": {
     "nombre": "Teatro Nescafé de las Artes",
     "comuna": "Providencia",
@@ -1033,19 +843,19 @@
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
    },
    "temporada": {
-    "desde": "2026-11-20",
-    "hasta": "2026-11-20",
+    "desde": "2026-11-21",
+    "hasta": "2026-11-21",
     "dias": [
-     5
+     6
     ]
    },
-   "horarioTexto": "20 de noviembre - 20:00 horas",
+   "horarioTexto": "21 de noviembre - 20:00 horas",
    "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_20_gens_s.jpg",
-   "imagenLocal": "assets/img/nescafe-gens.jpg",
-   "huellaImagen": "a965159cd6af0845ca054f687dfa6e91fac36846",
-   "entradas": "https://www.ticketmaster.cl/event/gens-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/gens/",
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
+   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
+   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
+   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
    "fuente": {
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
@@ -2240,6 +2050,60 @@
    }
   },
   {
+   "id": "gam-wunelfe-lucero-del-amanecer-fitam-2027",
+   "titulo": "Wuñelfe: Lucero del amanecer: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Una creación coreográfica inspirada en la cosmogonía mapuche y los relatos sobre el origen del mundo. Dirigida por Ricardo Curaqueo Curiche, la obra propone ...",
+   "genero": "danza",
+   "compania": "Wuñelfe: Lucero del amanecer",
+   "director": "Ricardo Curaqueo Curiche",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala B1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-05",
+    "hasta": "2027-01-21",
+    "dias": [
+     2,
+     3
+    ],
+    "horas": {
+     "2": "18:30",
+     "3": "18:30"
+    }
+   },
+   "horarioTexto": "Ma y Mi — 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 10000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 8000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/wunelfe_cred_Rodrigo_Diaz_11.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-wunelfe-lucero-del-amanecer-fitam-2027.jpg",
+   "huellaImagen": "8c96cc13b997f7f05c48106c38bc652adca297f8",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/wunelfe-lucero-del-amanecer-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/wunelfe-lucero-del-amanecer/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-el-beso-de-rock-hudson-fitam-2027",
    "titulo": "El beso de Rock Hudson: FITAM 2027",
    "subtitulo": "FITAM 2027",
@@ -2843,6 +2707,64 @@
    }
   },
   {
+   "id": "gam-vania-fitam-2027",
+   "titulo": "Vania: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "Con elenco de Antofagasta y dirección del reconocido artista argentino Guillermo Cacace, la Fundación Teatro a Mil presenta su propia versión del clásico de ...",
+   "genero": "clasico",
+   "compania": "Vania",
+   "director": "Guillermo Cacace",
+   "dramaturgo": null,
+   "elenco": [
+    "Paola Lattus",
+    "Francisco Díaz",
+    "Raúl Rocco",
+    "Dolores Reina",
+    "Alejandro Pino"
+   ],
+   "duracion": 90,
+   "edad": 14,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-20",
+    "hasta": "2027-01-20",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "21:30"
+    }
+   },
+   "horarioTexto": "Mi — 17 y 21.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/Vania.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-vania-fitam-2027.png",
+   "huellaImagen": "a8c71e61d55a3ff06e59bbddcdfb0caa986f1ae4",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/vania-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/vania/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "nescafe-el-invencible-verano-de-liliana",
    "titulo": "El invencible verano de Liliana",
    "subtitulo": null,
@@ -2978,6 +2900,60 @@
     "id": "nescafe",
     "nombre": "Teatro Nescafé de las Artes",
     "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   }
+  },
+  {
+   "id": "gam-the-killing-of-the-first-person-fitam-2027",
+   "titulo": "The killing of the first person: FITAM 2027",
+   "subtitulo": "FITAM 2027",
+   "sinopsis": "The Killing of the First Person, la obra más reciente del autor y director chileno Nicolás Lange, se presenta por primera vez en el país con un retrato de la...",
+   "genero": "drama",
+   "compania": "The killing of the first person",
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 16,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-22",
+    "hasta": "2027-01-24",
+    "dias": [
+     5,
+     6
+    ],
+    "horas": {
+     "5": "17:30",
+     "6": "18:30"
+    }
+   },
+   "horarioTexto": "Vi — 17.30 h Sá — 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9600
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/The_killing_of_the_first_person.2e16d0ba.fill-1200x630.png",
+   "imagenLocal": "assets/img/gam-the-killing-of-the-first-person-fitam-2027.png",
+   "huellaImagen": "3fba1a8428757c80bb1c247d6f3d5768c56b4283",
+   "entradas": "https://teatro-a-mil.ticketplus.cl/events/the-killing-of-the-first-person-FITAM2027",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/the-killing-of-the-first-person/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
