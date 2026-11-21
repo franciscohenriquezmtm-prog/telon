@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T18:56:34.846Z",
+ "actualizado": "2026-11-21T02:56:48.865Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 7,
+   "obras": 13,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 10,
+   "obras": 9,
    "error": null
   },
   {
@@ -62,7 +62,7 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 4,
+   "obras": 5,
    "error": null
   },
   {
@@ -74,6 +74,51 @@
   }
  ],
  "obras": [
+  {
+   "id": "mori-tengo-miedo-torero",
+   "titulo": "Tengo Miedo Torero",
+   "subtitulo": null,
+   "sinopsis": "Adaptación de la famosa novela homónima del escritor Pedro Lemebel (1952-2015), y al compás de música compuesta por Manuel García, el montaje una vez más contará la historia de La Loca del Frente, quien durante el régimen de Augusto Pinochet se enamora de un militante del Frente Patriótico Manuel Rodríguez mientras se prepara un atentado contra el dictador, revelando de paso ese mundo de poder, pesadillas y apariencias, junto a Lucía Hiriart. A 21 años de su debut teatral, el reestreno de la obra retoma ese lenguaje poético e irreverente con que el icónico artista chileno entrelazó amor, política y marginalidad, mostrando cómo la ternura y el deseo persisten sobre el miedo y la represión.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Claudia Pérez",
+   "dramaturgo": "Pedro Lemebel",
+   "elenco": [
+    "José Luis Aguilera Minaya"
+   ],
+   "duracion": 105,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-10-15",
+    "hasta": "2026-12-12",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:30 horas (ver fechas)",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 18000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/9ab2f3dbd8cb197cc77a5bc8d39d690c.jpg",
+   "imagenLocal": "assets/img/mori-tengo-miedo-torero.jpg",
+   "huellaImagen": "c1bd4d2bc9f93cd430b943d8f36384c05491fe4c",
+   "entradas": "https://teatromori.cl/obra/TMTorero/tengo-miedo-torero",
+   "url": "https://teatromori.cl/obra/TMTorero/tengo-miedo-torero",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
   {
    "id": "zoco-comienzo-de-david-eldridge",
    "titulo": "COMIENZO DE DAVID ELDRIDGE",
@@ -174,56 +219,6 @@
    }
   },
   {
-   "id": "mori-soy-el-unico-que-no-me-conozco",
-   "titulo": "Soy el único que no me conozco",
-   "subtitulo": null,
-   "sinopsis": "¡Prepárate para reírte a carcajadas! Felipe Izquierdo regresa en su aclamada versión de stand up con su característico y desafiante humor. En esta nueva entrega, nos invita a cuestionar la realidad que nos rodea, planteando la sospecha de que todo podría ser parte de un gran complot.",
-   "genero": "humor",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [
-    "Felipe Izquierdo"
-   ],
-   "duracion": 60,
-   "edad": 15,
-   "sala": {
-    "nombre": "Teatro Mori Vitacura",
-    "comuna": "Vitacura",
-    "direccion": "Av. Nueva Costanera 3736",
-    "metro": "—",
-    "mapa": "Teatro Mori Vitacura",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-01",
-    "hasta": "2026-11-29",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:30"
-    }
-   },
-   "horarioTexto": "Domingos, a las 19.30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/72d97ebbbbbd1d66c0967cbea23d79ef.jpg",
-   "imagenLocal": "assets/img/mori-soy-el-unico-que-no-me-conozco.jpg",
-   "huellaImagen": "2f96bd1e057b2256603a804008ef2b8c1bc40e6e",
-   "entradas": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "url": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "zoco-art",
    "titulo": "ART",
    "subtitulo": null,
@@ -305,7 +300,7 @@
    },
    "temporada": {
     "desde": "2026-11-07",
-    "hasta": "2026-12-12",
+    "hasta": "2026-12-19",
     "dias": [
      4,
      5,
@@ -540,62 +535,6 @@
    }
   },
   {
-   "id": "mori-bruja",
-   "titulo": "Bruja",
-   "subtitulo": null,
-   "sinopsis": "En una comunidad dominada por el miedo y la religión, 3 niñas aparecen en un estado inexplicable tras una noche en el río. Para ocultar sus deseos y protegerse de las normas del pueblo, Abiel acusa de brujería a Elizabeth Proctor, la denuncia encubre su relación clandestina con Juan Proctor, un secreto que Elizabeth ha descubierto. Elizabeth, Proctor y Abiel quedan atrapados en un juicio donde importa más lo que el pueblo cree que la verdad. El público participa como testigo y tribunal, tomando decisiones capaces de modificar el curso de los acontecimientos.",
-   "genero": "infantil",
-   "compania": "Teatro Su Versión",
-   "director": "Esteban Carvajal - Camila Velásquez",
-   "dramaturgo": "Esteban Carvajal",
-   "elenco": [
-    "Lea Lizama"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-19",
-    "hasta": "2026-12-10",
-    "dias": [
-     4,
-     5
-    ],
-    "horas": {
-     "4": "20:30",
-     "5": "20:30"
-    }
-   },
-   "horarioTexto": "Viernes a las 20:30 hrs Jueves a las 20:30 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/193dbe917b190e7d19af0611baeb0061.jpg",
-   "imagenLocal": "assets/img/mori-bruja.jpg",
-   "huellaImagen": "0d3141d8ea5fcd18ff49b113b2dde49b735d3734",
-   "entradas": "https://teatromori.cl/obra/BrujaBV1/-bruja",
-   "url": "https://teatromori.cl/obra/BrujaBV1/-bruja",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "teatrouc-estampida-humana",
    "titulo": "Estampida humana",
    "subtitulo": null,
@@ -667,7 +606,7 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-20",
+    "desde": "2026-11-21",
     "hasta": "2026-11-29",
     "dias": [
      0,
@@ -684,7 +623,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "8 funciones publicadas por el teatro",
+   "horarioTexto": "7 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -700,122 +639,6 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "nescafe-gens",
-   "titulo": "Gens",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES continúa con la programación de obras exclusivas de su Residencia Artística, ahora con el estreno de “Gens”, el viernes 20 de noviembre a las 20:00 horas.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Felipe Molina",
-   "dramaturgo": "Eliana Hernández Aravena",
-   "elenco": [
-    "Constanza Araya",
-    "Bernabé Madrigal",
-    "Sebastián Solorza"
-   ],
-   "duracion": 30,
-   "edad": 3,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-20",
-    "hasta": "2026-11-20",
-    "dias": [
-     5
-    ]
-   },
-   "horarioTexto": "20 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/10/2026_11_20_gens_s.jpg",
-   "imagenLocal": "assets/img/nescafe-gens.jpg",
-   "huellaImagen": "a965159cd6af0845ca054f687dfa6e91fac36846",
-   "entradas": "https://www.ticketmaster.cl/event/gens-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/gens/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
-   "id": "gam-quiero-ser-una-chica-almodovar",
-   "titulo": "Quiero ser una chica Almodóvar",
-   "subtitulo": "Coproducción GAM y La Santa",
-   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
-   "genero": "musical",
-   "compania": "Antonia Santa María",
-   "director": "Álvaro Viguera",
-   "dramaturgo": null,
-   "elenco": [
-    "E lvira López",
-    "Antonia Santa María",
-    "Dindi Jane",
-    "Enzo Ferrada",
-    "Santiago Viguera"
-   ],
-   "duracion": 75,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-20",
-    "hasta": "2026-11-22",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 12000
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 10500
-    },
-    {
-     "tipo": "Convenio",
-     "valor": 8400
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
-   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
-   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -863,6 +686,78 @@
    }
   },
   {
+   "id": "gam-quiero-ser-una-chica-almodovar",
+   "titulo": "Quiero ser una chica Almodóvar",
+   "subtitulo": "Coproducción GAM y La Santa",
+   "sinopsis": "Un viaje musical y escénico a través de las mujeres más inolvidables del cine de Pedro Almodóvar. Antonia Santa María, Elvira López, Dindi Jane y Enzo Ferrad...",
+   "genero": "musical",
+   "compania": "Antonia Santa María",
+   "director": "Álvaro Viguera",
+   "dramaturgo": null,
+   "elenco": [
+    "E lvira López",
+    "Antonia Santa María",
+    "Dindi Jane",
+    "Enzo Ferrada",
+    "Santiago Viguera"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala A2",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-21",
+    "hasta": "2026-11-22",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "Ju a Sá— 19.30 h Do— 18.30 h",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 12000
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 10500
+    },
+    {
+     "tipo": "Convenio",
+     "valor": 8400
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/chica4460.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-quiero-ser-una-chica-almodovar.jpg",
+   "huellaImagen": "748c778179062af2c022134d4d15731ea93e84c8",
+   "entradas": "https://gam.ticketplus.cl/events/quiero-ser-una-chica-almodovar-11-2026?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/quiero-ser-una-chica-almodovar/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
+   }
+  },
+  {
    "id": "gam-tardes-de-carro-nomade",
    "titulo": "Tardes de Carro Nómade",
    "subtitulo": null,
@@ -905,60 +800,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral",
-   "titulo": "La Aventura de Mowgli, musicalizado en lengua de señas y oral simultáneamente",
-   "subtitulo": null,
-   "sinopsis": "El montaje narra las aventuras de Mowgli, un niño criado por lobos en la selva de la India, quien aprende las leyes de la naturaleza guiado por Baloo, Bagheera y otros animales. A lo largo del relato, Mowgli enfrenta al temible tigre Shere Khan y debe decidir entre la vida salvaje y la civilización humana. Una puesta en escena que combina fábula, aventura y enseñanzas sobre la pertenencia, la libertad y la identidad, basada en el amor por la naturaleza y la diversidad. Integra canto, música en vivo, actuación, movimiento y caracterización, y es interpretada en lengua de señas y oral simultáneamente.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": "Sandra Barrera Mera",
-   "elenco": [
-    "Andrés Henríquez"
-   ],
-   "duracion": 60,
-   "edad": 5,
-   "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-22",
-    "hasta": "2026-11-22",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "16:00"
-    }
-   },
-   "horarioTexto": "Domingos a las 16:00 hrs",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 8000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 5000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/0f982d1f3049b793696440b071d025ff.jpg",
-   "imagenLocal": "assets/img/mori-la-aventura-de-mowgli-musicalizado-en-lengua-de-senas-y-oral.jpg",
-   "huellaImagen": "5b9e8fff709ee6c7a93e54050f3cc1315887720b",
-   "entradas": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
-   "url": "https://teatromori.cl/obra/Mowgli01/la-aventura-de-mowgli--musicalizado-en-lengua-de-senas-y-oral-simultaneamente",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
    }
   },
   {
@@ -1101,44 +942,48 @@
    }
   },
   {
-   "id": "mori-felipe-avello-mori-recoleta",
-   "titulo": "Felipe Avello (Mori Recoleta)",
+   "id": "mori-bruja-bruja",
+   "titulo": "Bruja Bruja",
    "subtitulo": null,
-   "sinopsis": "Felipe Avello llega con un espectáculo de monólogos dinámico y cercano, que invita al público a ser parte activa de la experiencia. Con su estilo lúdico y espontáneo, el comediante construye en escena un show donde referencias internacionales y latinoamericanas se entrelazan con situaciones cotidianas, generando una conexión directa con la audiencia.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
+   "sinopsis": "En una comunidad dominada por el miedo y la religión, 3 niñas aparecen en un estado inexplicable tras una noche en el río. Para ocultar sus deseos y protegerse de las normas del pueblo, Abiel acusa de brujería a Elizabeth Proctor; la denuncia encubre su relación clandestina con Juan Proctor, un secreto que Elizabeth ha descubierto. Elizabeth, Proctor y Abiel quedan atrapados en un juicio donde importa más lo que el pueblo cree que la verdad. El público participa como testigo y tribunal, tomando decisiones capaces de modificar el curso de los acontecimientos.",
+   "genero": "infantil",
+   "compania": "Teatro Su Versión",
+   "director": "Esteban Carvajal y Camila Velásquez",
+   "dramaturgo": "Esteban Carvajal",
    "elenco": [
-    "Felipe Avello"
+    "Lea Lizama"
    ],
-   "duracion": 90,
-   "edad": 12,
+   "duracion": 60,
+   "edad": 14,
    "sala": {
-    "nombre": "Teatro Mori Recoleta",
-    "comuna": "Recoleta",
-    "direccion": "Antonia López de Bello 0180",
-    "metro": "Patronato (L3)",
-    "mapa": "Teatro Mori Recoleta",
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
     "sitio": "https://teatromori.cl"
    },
    "temporada": {
-    "desde": "2026-11-25",
-    "hasta": "2026-11-25",
+    "desde": "2026-11-26",
+    "hasta": "2026-11-26",
     "sinHorario": true
    },
-   "horarioTexto": "20:00 hrs.",
+   "horarioTexto": "20:30 horas",
    "precios": [
     {
      "tipo": "General",
-     "valor": 20000
+     "valor": 15000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 10000
     }
    ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/c8539bd56c2d4e615322cb1fbde24d54.jpg",
-   "imagenLocal": "assets/img/mori-felipe-avello-mori-recoleta.jpg",
-   "huellaImagen": "dba940ef4d17dd73f072551a2b5b9fa2ecec9fe7",
-   "entradas": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
-   "url": "https://teatromori.cl/obra/QIIHin3B/felipe-avello--mori-recoleta-",
+   "imagen": "https://teatromori.cl/mini/268x372xS/193dbe917b190e7d19af0611baeb0061.jpg",
+   "imagenLocal": "assets/img/mori-bruja-bruja.jpg",
+   "huellaImagen": "0d3141d8ea5fcd18ff49b113b2dde49b735d3734",
+   "entradas": "https://teatromori.cl/obra/BrujaBV1/bruja-bruja",
+   "url": "https://teatromori.cl/obra/BrujaBV1/bruja-bruja",
    "fuente": {
     "id": "mori",
     "nombre": "Teatro Mori",
@@ -1201,8 +1046,8 @@
    }
   },
   {
-   "id": "ictus-caballo",
-   "titulo": "CABALLO",
+   "id": "ictus-caballo-ultimas-funciones",
+   "titulo": "CABALLO | ÚLTIMAS FUNCIONES",
    "subtitulo": null,
    "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
    "genero": "comedia",
@@ -1242,7 +1087,7 @@
    "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-caballo.jpg",
+   "imagenLocal": "assets/img/ictus-caballo-ultimas-funciones.jpg",
    "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
    "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
    "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
@@ -1427,8 +1272,8 @@
    }
   },
   {
-   "id": "ictus-hombres-daga",
-   "titulo": "HOMBRES DAGA",
+   "id": "ictus-hombres-daga-ultimas-funciones",
+   "titulo": "HOMBRES DAGA | ÚLTIMAS FUNCIONES",
    "subtitulo": null,
    "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
    "genero": "drama",
@@ -1467,7 +1312,7 @@
    "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-hombres-daga.jpg",
+   "imagenLocal": "assets/img/ictus-hombres-daga-ultimas-funciones.jpg",
    "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
    "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
    "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
@@ -1529,6 +1374,145 @@
    }
   },
   {
+   "id": "mori-cronicas-desquiciadas-desquiciadas",
+   "titulo": "Crónicas Desquiciadas Desquiciadas",
+   "subtitulo": null,
+   "sinopsis": "Crónicas Desquiciadas es una obra escrita en 2002 por Indira Páez, reconocida escritora, dramaturga y libretista venezolana. Escrita con estructura de monólogos, al estilo stand up comedy, pero desde la óptica de 12 personajes cotidianos que transparentan de manera brutal, sarcástica y divertidísima sus confesiones acerca del amor, la sexualidad, sus obsesiones, sus trastornos y los estereotipos de género. En este nuevo montaje, bajo la dirección de Moira Miller, seremos testigos y de alguna forma partícipes de una terapia artificial en que el arte, la ficción y el artificio serán las herramientas para enfrentar realidades, conflictos, frustraciones y necesidades que los tienen al borde del colapso.",
+   "genero": "humor",
+   "compania": null,
+   "director": "Moira Miller",
+   "dramaturgo": "Indira Páez",
+   "elenco": [
+    "Paz Bascuñán"
+   ],
+   "duracion": 80,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-04",
+    "hasta": "2026-12-12",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 25000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/cc61ecf61da1e0acc002a121d3ac1a59.jpg",
+   "imagenLocal": "assets/img/mori-cronicas-desquiciadas-desquiciadas.jpg",
+   "huellaImagen": "c92858a4262c667d65f9f2d63bbea0ef233e4705",
+   "entradas": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas-desquiciadas",
+   "url": "https://teatromori.cl/obra/CronDesq/cronicas-desquiciadas-desquiciadas",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-cebolla",
+   "titulo": "Cebolla",
+   "subtitulo": null,
+   "sinopsis": "\"Cebolla\" es una varieté de teatro y humor que rinde un homenaje kitsch a las telenovelas más dramáticas, a la comedia, al amor tóxico, a la envidia y al despecho. Un gran elenco de famosos actores transformistas comandados por Fernando Quintana, de la dupla de los \"Hermanos Quintana\", y su nuevo proyecto \"Popurrisas\", te sumergen en un culebrón teatral y musical cargado de risas, melodrama y canciones inolvidables. Un viaje donde las hombreras, los peinados majestuosos y los vestidos brillantes se mezclan en una teleserie interminable de sketches para llorar de la risa.",
+   "genero": "musical",
+   "compania": null,
+   "director": "Fernando Quintana",
+   "dramaturgo": "Fernando Quintana / Rodrigo Farah",
+   "elenco": [
+    "Fer Quintana"
+   ],
+   "duracion": 75,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Mori Recoleta",
+    "comuna": "Recoleta",
+    "direccion": "Antonia López de Bello 0180",
+    "metro": "Patronato (L3)",
+    "mapa": "Teatro Mori Recoleta",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-05",
+    "hasta": "2026-12-05",
+    "sinHorario": true
+   },
+   "horarioTexto": "22:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 18000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/17eabbf61a2b53db73a64d440a5f0445.jpg",
+   "imagenLocal": "assets/img/mori-cebolla.jpg",
+   "huellaImagen": "56d76afcacede2274e553aa4888cbc3e8d8404e0",
+   "entradas": "https://teatromori.cl/obra/Cebolla1/cebolla-",
+   "url": "https://teatromori.cl/obra/Cebolla1/cebolla-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-elfas-de-navidad-y-la-estrella-de-los-deseos",
+   "titulo": "Elfas de navidad y la estrella de los deseos",
+   "subtitulo": null,
+   "sinopsis": "\"Elfas de navidad y la estrella de los deseos\" narra la historia de seis Elfas que trabajan a contrarreloj para asegurarse de que todo esté listo el día de Navidad y Santa pueda visitar a los niños y niñas durante esta noche mágica. Aunque las Elfas ponen todo de sí, no todo resultará como esperan; diferentes obstáculos les van a impedir concretar su tarea. ¡Alguien está saboteando los preparativos!",
+   "genero": "infantil",
+   "compania": "La Creativa Teatro",
+   "director": "María Jesús Miranda",
+   "dramaturgo": "Margarita Ahumada, Luna Martínez, Camila Outon",
+   "elenco": [
+    "Gabriela Ahumada"
+   ],
+   "duracion": 60,
+   "edad": 5,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-06",
+    "hasta": "2026-12-20",
+    "sinHorario": true
+   },
+   "horarioTexto": "16:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 7000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/8633287d4b3191d449ba2ace59130e4f.jpg",
+   "imagenLocal": "assets/img/mori-elfas-de-navidad-y-la-estrella-de-los-deseos.jpg",
+   "huellaImagen": "24cc5700c7f8874b7cf7b41431244049cef0692f",
+   "entradas": "https://teatromori.cl/obra/ElfasND1/elfas-de-navidad-y-la-estrella-de-los-deseos-",
+   "url": "https://teatromori.cl/obra/ElfasND1/elfas-de-navidad-y-la-estrella-de-los-deseos-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "mori-malas-madres",
    "titulo": "Malas Madres",
    "subtitulo": null,
@@ -1578,6 +1562,139 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-soy-el-unico-que-no-me-conozco",
+   "titulo": "Soy el único que no me conozco",
+   "subtitulo": null,
+   "sinopsis": "¡Prepárate para reírte a carcajadas! Felipe Izquierdo regresa en su aclamada versión de stand up con su característico y desafiante humor. En esta nueva entrega, nos invita a cuestionar la realidad que nos rodea, planteando la sospecha de que todo podría ser parte de un gran complot.",
+   "genero": "humor",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [
+    "Felipe Izquierdo"
+   ],
+   "duracion": 60,
+   "edad": 15,
+   "sala": {
+    "nombre": "Teatro Mori Vitacura",
+    "comuna": "Vitacura",
+    "direccion": "Av. Nueva Costanera 3736",
+    "metro": "—",
+    "mapa": "Teatro Mori Vitacura",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-06",
+    "hasta": "2026-12-20",
+    "sinHorario": true
+   },
+   "horarioTexto": "19:30 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/72d97ebbbbbd1d66c0967cbea23d79ef.jpg",
+   "imagenLocal": "assets/img/mori-soy-el-unico-que-no-me-conozco.jpg",
+   "huellaImagen": "2f96bd1e057b2256603a804008ef2b8c1bc40e6e",
+   "entradas": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
+   "url": "https://teatromori.cl/obra/wGMfZ9vb/soy-el-unico-que-no-me-conozco",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-carrera-de-improvisadores-7",
+   "titulo": "Carrera de Improvisadores 7",
+   "subtitulo": null,
+   "sinopsis": "La gran final de la séptima temporada del espectáculo de improvisación teatral más glamuroso de todos los tiempos, inspirado en el universo de RuPaul's Drag Race. De 11 participantes, solo 4 llegan a esta última competencia, donde deberán improvisar a partir de las ideas del público en hilarantes juegos y cerrar la noche con un fabuloso lipsync final por la corona. Preparen el glitter, afilen los tacones y peinen las pelucas, porque Carrera de Improvisadores 7 llega al Teatro Mori. Y esta vez, tú decides quién gana.",
+   "genero": "drama",
+   "compania": "Lospleimovil, elenco de improvisadores LGBTQIA+",
+   "director": "Enrique Guiñez",
+   "dramaturgo": "Enrique Guiñez",
+   "elenco": [
+    "Denisse Nayen"
+   ],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-09",
+    "hasta": "2026-12-09",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 12000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/1f0ed345d2a89dd0a9c6e61c47ed9b38.jpg",
+   "imagenLocal": "assets/img/mori-carrera-de-improvisadores-7.jpg",
+   "huellaImagen": "2dfad0147c1443ec7c4ace6dde67a77858de67d7",
+   "entradas": "https://teatromori.cl/obra/CarrImp7/carrera-de-improvisadores-7-",
+   "url": "https://teatromori.cl/obra/CarrImp7/carrera-de-improvisadores-7-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "ictus-descabelladas-en-vivo-segunda-edicion",
+   "titulo": "DESCABELLADAS EN VIVO | SEGUNDA EDICIÓN",
+   "subtitulo": null,
+   "sinopsis": "“Descabelladas”, el famoso programa político de la televisión, llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público, conducido por las periodistas, Yasna Lewin, Alejandra Matus y Mirna Schindler",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 90,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro Ictus — Sala La Comedia",
+    "comuna": "Santiago Centro",
+    "direccion": "Merced 349, Barrio Lastarria",
+    "metro": "—",
+    "mapa": "Teatro Ictus, Merced 349, Santiago",
+    "sitio": "https://teatroictus.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-09",
+    "hasta": "2026-12-09",
+    "dias": [
+     3
+    ],
+    "horas": {
+     "3": "19:00"
+    }
+   },
+   "horarioTexto": "9 DE DICIEMBRE · Miércoles | 19:00 H · Comprar entrada",
+   "precios": [],
+   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DESCABELLADAS__paginaweb_1080X1140-1.jpg",
+   "imagenLocal": "assets/img/ictus-descabelladas-en-vivo-segunda-edicion.jpg",
+   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
+   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo-2026-12-09-19-00-00-0300",
+   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
+   "fuente": {
+    "id": "ictus",
+    "nombre": "Teatro Ictus",
+    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1716,6 +1833,51 @@
    }
   },
   {
+   "id": "mori-trinidad",
+   "titulo": "Trinidad",
+   "subtitulo": null,
+   "sinopsis": "En su cumpleaños, Trini rompe con la familia, la sobreprotección y las expectativas que han definido su vida. Un regalo de su abuelo abre el paso a tres mundos donde deberá confrontar el exceso, la precariedad y el deseo de independencia. TRINIDAD mezcla fantasía, humor ácido y relatos autobiográficos para cuestionar los mandatos familiares y las formas posibles de ser libre.",
+   "genero": "comedia",
+   "compania": null,
+   "director": "Carlos Fernini",
+   "dramaturgo": "Carlos Fernini y Teatro Queer",
+   "elenco": [
+    "Alejandro Martínez Osorio"
+   ],
+   "duracion": 70,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro Mori Bellavista",
+    "comuna": "Providencia",
+    "direccion": "Constitución 183",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro Mori Bellavista",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-13",
+    "hasta": "2026-12-13",
+    "sinHorario": true
+   },
+   "horarioTexto": "19:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 9000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/aae379ebca95dd49e914273950be251f.jpg",
+   "imagenLocal": "assets/img/mori-trinidad.jpg",
+   "huellaImagen": "50da7c33f967881bf0ee7639cdd126bb88934340",
+   "entradas": "https://teatromori.cl/obra/Trinida1/trinidad-",
+   "url": "https://teatromori.cl/obra/Trinida1/trinidad-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
    "id": "ictus-duo-pajarito-musica",
    "titulo": "DÚO PAJARITO | MÚSICA",
    "subtitulo": null,
@@ -1756,6 +1918,100 @@
     "id": "ictus",
     "nombre": "Teatro Ictus",
     "sitio": "https://teatroictus.cl"
+   }
+  },
+  {
+   "id": "mori-mi-hermano-es-un-idiota-es-un-idiota",
+   "titulo": "Mi hermano es un idiota es un idiota",
+   "subtitulo": null,
+   "sinopsis": "En una continuación de la exitosa obra \"El manager y el artista\", los hermanos Larraín se sumergen en el mundo del stand up, donde por fin, después de mucho pensarlo, Fernando decide probarse en esta área con la ayuda de Nicolás. Ambos se enfrentan en vivo con el público con sus distintos estilos y técnicas, que hacen de este show una verdadera ráfaga de risas y entretención.",
+   "genero": "humor",
+   "compania": null,
+   "director": null,
+   "dramaturgo": "Fernando Larraín y Nicolás Larraín",
+   "elenco": [
+    "Fernando Larraín"
+   ],
+   "duracion": 75,
+   "edad": 0,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-17",
+    "hasta": "2026-12-17",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:30 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/39face5b94709c058ea65997641b74f5.jpg",
+   "imagenLocal": "assets/img/mori-mi-hermano-es-un-idiota-es-un-idiota.jpg",
+   "huellaImagen": "7e674d073295775ea2fec2bbcad50da650233ec6",
+   "entradas": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota-es-un-idiota",
+   "url": "https://teatromori.cl/obra/HnoIdiot/mi-hermano-es-un-idiota-es-un-idiota",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "mori-gran-gala-de-ballet-cascanueces-y-otros-grandes-clasicos",
+   "titulo": "Gran Gala de Ballet: Cascanueces y otros Grandes Clásicos",
+   "subtitulo": null,
+   "sinopsis": "Para despedir el año con lo mejor de la danza, el BAM presenta la Gran Gala de Ballet: Cascanueces y otros Grandes Clásicos, una función de temporada que reúne los pasajes más emblemáticos del repertorio clásico universal junto a piezas originales de creación contemporánea. Del virtuosismo de las obras más queridas a la frescura de propuestas nuevas, el programa lleva a escena un ballet que honra su tradición y a la vez se renueva. Esta gala invita a disfrutar de una experiencia artística accesible para todo tipo de público.",
+   "genero": "danza",
+   "compania": "Corporación Ballet de Arte Moderno (BAM)",
+   "director": "Luis Duque",
+   "dramaturgo": null,
+   "elenco": [
+    "Alonso Villanueva"
+   ],
+   "duracion": 55,
+   "edad": 9,
+   "sala": {
+    "nombre": "Teatro Mori Parque Arauco",
+    "comuna": "Las Condes",
+    "direccion": "Av. Kennedy 5413, nivel 3",
+    "metro": "Manquehue (L1)",
+    "mapa": "Teatro Mori Parque Arauco",
+    "sitio": "https://teatromori.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-20",
+    "hasta": "2026-12-20",
+    "sinHorario": true
+   },
+   "horarioTexto": "20:00 horas",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 18000
+    },
+    {
+     "tipo": "Descuento (estudiantes / 3ª edad)",
+     "valor": 9000
+    }
+   ],
+   "imagen": "https://teatromori.cl/mini/268x372xS/1dbe528c2a04b10b73c9fc56a438392d.jpg",
+   "imagenLocal": "assets/img/mori-gran-gala-de-ballet-cascanueces-y-otros-grandes-clasicos.jpg",
+   "huellaImagen": "c730152bb5a9dd9e0b53f36cc36825f843e7f8e3",
+   "entradas": "https://teatromori.cl/obra/GalaBAM1/gran-gala-de-ballet--cascanueces-y-otros-grandes-clasicos-",
+   "url": "https://teatromori.cl/obra/GalaBAM1/gran-gala-de-ballet--cascanueces-y-otros-grandes-clasicos-",
+   "fuente": {
+    "id": "mori",
+    "nombre": "Teatro Mori",
+    "sitio": "https://teatromori.cl"
    }
   },
   {
