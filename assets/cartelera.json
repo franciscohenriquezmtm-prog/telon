@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T17:51:37.704Z",
+ "actualizado": "2026-11-22T01:47:17.098Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 3,
+   "obras": 2,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 9,
+   "obras": 8,
    "error": null
   },
   {
@@ -390,57 +390,6 @@
    }
   },
   {
-   "id": "teatrouc-la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-",
-   "titulo": "La remolienda y sus ánimas: Cancionero Dramático para Víctor Jara",
-   "subtitulo": null,
-   "sinopsis": "Con música en vivo, arreglos originales y material de archivo histórico, esta propuesta escénica revive La remolienda y Ánimas de día claro de Alejandro Sieveking, rescatando la impronta visual, poética y musical de la emblemática dirección de Víctor Jara en los años 60. Entre el 17 y el 21 de noviembre, no te pierdas la primera realización artística de la Escuela de Teatro UC este 2026.",
-   "genero": "musical",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 120,
-   "edad": 12,
-   "sala": {
-    "nombre": "Teatro UC — Eugenio Dittborn",
-    "comuna": "Ñuñoa",
-    "direccion": "Jorge Washington 26",
-    "metro": "Plaza Ñuñoa (L3)",
-    "mapa": "Teatro UC, Santiago",
-    "sitio": "https://teatrouc.uc.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-17",
-    "hasta": "2026-11-21",
-    "dias": [
-     2,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "2": "20:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [],
-   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/10/IMG_7158-scaled.jpg",
-   "imagenLocal": "assets/img/teatrouc-la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-.jpg",
-   "huellaImagen": "36db4592c0077fb883d25b49fd78f69c9be37356",
-   "entradas": null,
-   "url": "https://teatrouc.uc.cl/evento/la-remolienda-y-sus-animas-cancionero-dramatico-para-victor-jara/",
-   "fuente": {
-    "id": "teatrouc",
-    "nombre": "Teatro UC",
-    "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
    "id": "puente-musica-clasica-a-pocos-metros",
    "titulo": "Música clásica a pocos metros",
    "subtitulo": null,
@@ -606,7 +555,7 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-21",
+    "desde": "2026-11-22",
     "hasta": "2026-11-29",
     "dias": [
      0,
@@ -623,7 +572,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "7 funciones publicadas por el teatro",
+   "horarioTexto": "6 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -639,50 +588,6 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "nescafe-que-le-corten-la-cabeza",
-   "titulo": "Que le corten la cabeza",
-   "subtitulo": null,
-   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES volverá a presentar, por gran éxito desde su estreno en nuestra sala, la comedia “Que le corten la cabeza”, el 19 y 21 de noviembre.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Los Contadores Auditores",
-   "dramaturgo": "Los Contadores Auditores",
-   "elenco": [
-    "Javiera Contador",
-    "Natalia Valdebenito",
-    "Handra"
-   ],
-   "duracion": 30,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-21",
-    "hasta": "2026-11-21",
-    "dias": [
-     6
-    ]
-   },
-   "horarioTexto": "21 de noviembre - 20:00 horas",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/07/2026_11_18_qlclc_s.jpg",
-   "imagenLocal": "assets/img/nescafe-que-le-corten-la-cabeza.jpg",
-   "huellaImagen": "1e60f17c20a705357fd7b32b2e2e71ebc626927e",
-   "entradas": "https://www.ticketmaster.cl/event/que-le-corten-la-cabeza-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/que-le-corten-la-cabeza/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -712,7 +617,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-21",
+    "desde": "2026-11-22",
     "hasta": "2026-11-22",
     "dias": [
      0,
@@ -778,7 +683,7 @@
     "sitio": "https://www.gam.cl"
    },
    "temporada": {
-    "desde": "2026-11-21",
+    "desde": "2026-11-22",
     "hasta": "2026-11-29",
     "dias": [
      0,
