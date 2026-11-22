@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-22T01:47:17.098Z",
+ "actualizado": "2026-11-22T18:10:20.851Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -356,7 +356,7 @@
    },
    "temporada": {
     "desde": "2026-11-07",
-    "hasta": "2027-01-22",
+    "hasta": "2027-01-21",
     "dias": [
      0,
      1,
