@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T02:06:25.590Z",
+ "actualizado": "2026-11-23T22:20:16.659Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -13,7 +13,7 @@
    "id": "teatrouc",
    "nombre": "Teatro UC",
    "sitio": "https://teatrouc.uc.cl",
-   "obras": 2,
+   "obras": 5,
    "error": null
   },
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 9,
+   "obras": 10,
    "error": null
   },
   {
@@ -335,8 +335,8 @@
    }
   },
   {
-   "id": "puente-se-arrienda-pieza-para-mujer-sola",
-   "titulo": "Se arrienda pieza para mujer sola",
+   "id": "puente-se-arrienda-pieza-para-mujer-s",
+   "titulo": "Se arrienda pieza para mujer s…",
    "subtitulo": null,
    "sinopsis": "",
    "genero": "drama",
@@ -356,7 +356,7 @@
    },
    "temporada": {
     "desde": "2026-11-07",
-    "hasta": "2027-01-21",
+    "hasta": "2027-01-22",
     "dias": [
      0,
      1,
@@ -376,7 +376,7 @@
      "6": "20:00"
     }
    },
-   "horarioTexto": "27 funciones — 20:00 h",
+   "horarioTexto": "30 funciones — 20:00 h",
    "precios": [],
    "imagen": null,
    "imagenLocal": null,
@@ -1531,46 +1531,6 @@
    }
   },
   {
-   "id": "nescafe-el-cascanueces",
-   "titulo": "El Cascanueces",
-   "subtitulo": null,
-   "sinopsis": "No se permite el ingreso a la sala una vez iniciada la función . En caso de llegar después del comienzo del espectáculo, sólo podrá ingresar en el intermedio.",
-   "genero": "drama",
-   "compania": null,
-   "director": "Sara Nieto",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 100,
-   "edad": 5,
-   "sala": {
-    "nombre": "Teatro Nescafé de las Artes",
-    "comuna": "Providencia",
-    "direccion": "Manuel Montt 032",
-    "metro": "—",
-    "mapa": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   },
-   "temporada": {
-    "desde": "2026-12-09",
-    "hasta": "2026-12-09",
-    "dias": [
-     3
-    ]
-   },
-   "horarioTexto": "Desde el 9 de diciembre",
-   "precios": [],
-   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/11/El-Cascanueces-tna.jpg",
-   "imagenLocal": "assets/img/nescafe-el-cascanueces.jpg",
-   "huellaImagen": "2187e4950898c813c4b6e6819500aa9e3d9b57f2",
-   "entradas": "https://www.ticketmaster.cl/event/el-cascanueces-teatro-nescafe-de-las-artes",
-   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-cascanueces/",
-   "fuente": {
-    "id": "nescafe",
-    "nombre": "Teatro Nescafé de las Artes",
-    "sitio": "https://www.teatro-nescafe-delasartes.cl"
-   }
-  },
-  {
    "id": "gam-festival-enai-2026-encuentro-de-artes-escenicas-para-la-comu",
    "titulo": "Festival ENAI 2026: Encuentro de Artes Escénicas para la Comunidad Sorda",
    "subtitulo": "Encuentro de Artes Escénicas para la Comunidad Sorda",
@@ -1796,6 +1756,46 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "nescafe-el-cascanueces",
+   "titulo": "El Cascanueces",
+   "subtitulo": null,
+   "sinopsis": "No se permite el ingreso a la sala una vez iniciada la función . En caso de llegar después del comienzo del espectáculo, sólo podrá ingresar en el intermedio.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Sara Nieto",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 100,
+   "edad": 5,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2026-12-20",
+    "hasta": "2026-12-20",
+    "dias": [
+     0
+    ]
+   },
+   "horarioTexto": "9 al 20 de diciembre",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2024/11/El-Cascanueces-tna.jpg",
+   "imagenLocal": "assets/img/nescafe-el-cascanueces.jpg",
+   "huellaImagen": "2187e4950898c813c4b6e6819500aa9e3d9b57f2",
+   "entradas": "https://www.ticketmaster.cl/event/el-cascanueces-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/el-cascanueces/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
@@ -2193,6 +2193,53 @@
    }
   },
   {
+   "id": "teatrouc-el-cala",
+   "titulo": "El Cala",
+   "subtitulo": null,
+   "sinopsis": "En un país sin ley de eutanasia, un joven taxista recorre Santiago entre recuerdos, culpas y la radio anglo, cuestionando si su próximo paso será un delito o un acto de liberación. Una tragicomedia ácida y emotiva que llega al Teatro UC en el marco del Festival Teatro a Mil 2027.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 18,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-07",
+    "hasta": "2027-01-09",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/1-Foto-Isidora-Paez-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-el-cala.jpg",
+   "huellaImagen": "56b0e541c021ea3126b71d527c7fbd7b18aa8ab5",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/el-cala/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
    "id": "gam-el-beso-de-rock-hudson-fitam-2027",
    "titulo": "El beso de Rock Hudson: FITAM 2027",
    "subtitulo": "FITAM 2027",
@@ -2463,6 +2510,53 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "teatrouc-robot-ecos-neurodivergentes",
+   "titulo": "ROBOT: ecos neurodivergentes",
+   "subtitulo": null,
+   "sinopsis": "El arte interdisciplinar y neurodiverso participa en una nueva edición del Festival Teatro a Mil con la obra ROBOT: ecos neurodivergentes, un montaje de Tercer Abstracto, programa binacional de Chile y Brasil, que cuenta con la participación en escena de la distinguida bailarina Claudia Vicuña, ganadora del Premio Altazor 2006. Entre el 14 y el 16 de enero, en Sala Eugenio Dittborn de Teatro UC.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 80,
+   "edad": 14,
+   "sala": {
+    "nombre": "Teatro UC — Eugenio Dittborn",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-14",
+    "hasta": "2027-01-16",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/ROBOT-Fotografia-Juan-Ramirez-6.jpg",
+   "imagenLocal": "assets/img/teatrouc-robot-ecos-neurodivergentes.jpg",
+   "huellaImagen": "97be36520c244074385a19307390cc6148e12250",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/robot-ecos-neurodivergentes/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
    }
   },
   {
@@ -2894,6 +2988,53 @@
    }
   },
   {
+   "id": "teatrouc-mi-cuerpo-esta-aqui",
+   "titulo": "Mi cuerpo está aquí",
+   "subtitulo": null,
+   "sinopsis": "Desde Brasil, en el marco del Festival Teatro a Mil 2027, llega a Teatro UC Mi cuerpo está aquí, una reflexión sobre los afectos y la sexualidad de personas con discapacidad, quienes son también los actores y actrices de la obra. Una pieza que habla sobre sus experiencias de vida y sus miradas sobre las relaciones y la intimidad.",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": 16,
+   "sala": {
+    "nombre": "Teatro UC — Sala Ana González",
+    "comuna": "Ñuñoa",
+    "direccion": "Jorge Washington 26",
+    "metro": "Plaza Ñuñoa (L3)",
+    "mapa": "Teatro UC, Santiago",
+    "sitio": "https://teatrouc.uc.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-21",
+    "hasta": "2027-01-23",
+    "dias": [
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "4": "21:00",
+     "5": "21:00",
+     "6": "21:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [],
+   "imagen": "https://teatrouc.uc.cl/wp-content/uploads/sites/3/2026/11/MEU_CORPO_ESTA_AQUI_foto_LigiaJardim-1-18-scaled.jpg",
+   "imagenLocal": "assets/img/teatrouc-mi-cuerpo-esta-aqui.jpg",
+   "huellaImagen": "a7be317000d09aea50674165d3f8d00552bfe07d",
+   "entradas": null,
+   "url": "https://teatrouc.uc.cl/evento/mi-cuerpo-esta-aqui/",
+   "fuente": {
+    "id": "teatrouc",
+    "nombre": "Teatro UC",
+    "sitio": "https://teatrouc.uc.cl"
+   }
+  },
+  {
    "id": "gam-arde-fitam-2027",
    "titulo": "ARDE: FITAM 2027",
    "subtitulo": "FITAM 2027",
@@ -3102,6 +3243,46 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "nescafe-pamela-leiva",
+   "titulo": "Pamela Leiva",
+   "subtitulo": null,
+   "sinopsis": "Un espectáculo de comedia que nos invita a recorrer, con humor y sin filtro, distintas historias de la vida: viajes inolvidables, relaciones de pareja, anécdotas cotidianas y esos momentos que tod@s hemos vivido, pero que solo ella puede contar con tanta honestidad y picardía.",
+   "genero": "comedia",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 30,
+   "edad": 13,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-25",
+    "hasta": "2027-01-25",
+    "dias": [
+     1
+    ]
+   },
+   "horarioTexto": "25 de enero y 18 de febrero - 20:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/11/2027_01_25_pamela-leiva_s.jpg",
+   "imagenLocal": "assets/img/nescafe-pamela-leiva.jpg",
+   "huellaImagen": "e81076c5549ad2aa1c28d98ebaf306a384d5a0af",
+   "entradas": "https://www.ticketmaster.cl/event/pamela-leiva-comer-rezar-we-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/pamela-leiva-comer-rezar-weiar/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
