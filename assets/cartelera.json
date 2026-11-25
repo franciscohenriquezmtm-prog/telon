@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-24T20:57:48.142Z",
+ "actualizado": "2026-11-25T04:42:52.877Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -533,58 +533,6 @@
    }
   },
   {
-   "id": "gam-estados-de-deriva-apertura-de-proceso",
-   "titulo": "Estados de deriva: Apertura de proceso",
-   "subtitulo": "Apertura de proceso",
-   "sinopsis": "Participa en la apertura de proceso de la residencia de investigación escénica guiada por José Vidal y Tomás Omer, creada en GAM desde la fisura, la deriva y...",
-   "genero": "danza",
-   "compania": "Sofía Riveros",
-   "director": "José Vidal y Tomás Omer",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-24",
-    "hasta": "2026-11-25",
-    "dias": [
-     1,
-     2,
-     3
-    ],
-    "horas": {
-     "1": "17:00",
-     "2": "17:00",
-     "3": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 7000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/JoVidal_28.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-estados-de-deriva-apertura-de-proceso.jpg",
-   "huellaImagen": "9a9d7e2184a73d4b5b9cd88a6da6499c96396b9c",
-   "entradas": "https://gam.ticketplus.cl/events/estados-de-deriva?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/estados-de-deriva/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "zoco-pulsion",
    "titulo": "PULSIÓN",
    "subtitulo": null,
@@ -687,6 +635,58 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
+   }
+  },
+  {
+   "id": "gam-estados-de-deriva-apertura-de-proceso",
+   "titulo": "Estados de deriva: Apertura de proceso",
+   "subtitulo": "Apertura de proceso",
+   "sinopsis": "Participa en la apertura de proceso de la residencia de investigación escénica guiada por José Vidal y Tomás Omer, creada en GAM desde la fisura, la deriva y...",
+   "genero": "danza",
+   "compania": "Sofía Riveros",
+   "director": "José Vidal y Tomás Omer",
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": 60,
+   "edad": null,
+   "sala": {
+    "nombre": "Centro GAM — Sala N1",
+    "comuna": "Santiago Centro",
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-25",
+    "hasta": "2026-11-25",
+    "dias": [
+     1,
+     2,
+     3
+    ],
+    "horas": {
+     "1": "17:00",
+     "2": "17:00",
+     "3": "17:00"
+    }
+   },
+   "horarioTexto": null,
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 7000
+    }
+   ],
+   "imagen": "https://gam.cl/media/images/JoVidal_28.2e16d0ba.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-estados-de-deriva-apertura-de-proceso.jpg",
+   "huellaImagen": "9a9d7e2184a73d4b5b9cd88a6da6499c96396b9c",
+   "entradas": "https://gam.ticketplus.cl/events/estados-de-deriva?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/danza/estados-de-deriva/",
+   "fuente": {
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
