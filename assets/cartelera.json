@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T03:52:34.680Z",
+ "actualizado": "2026-11-26T19:57:10.850Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -1548,17 +1548,15 @@
     "desde": "2026-12-12",
     "hasta": "2026-12-12",
     "dias": [
-     4,
      5,
      6
     ],
     "horas": {
-     "4": "20:00",
      "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "3 AL 12 DE DICIEMBRE · Jue a sáb | 20:00 H · Comprar entrada",
+   "horarioTexto": "4 AL 12 DE DICIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
    "precios": [],
    "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg.png",
    "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.png",
