@@ -1,12 +1,12 @@
 {
- "actualizado": "2026-11-25T20:20:10.520Z",
+ "actualizado": "2026-11-26T03:52:34.680Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
    "id": "gam",
    "nombre": "Centro GAM",
    "sitio": "https://www.gam.cl",
-   "obras": 22,
+   "obras": 21,
    "error": null
   },
   {
@@ -580,116 +580,6 @@
    }
   },
   {
-   "id": "lascondes-cazadores-de-agua",
-   "titulo": "Cazadores de Agua",
-   "subtitulo": null,
-   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
-   "genero": "drama",
-   "compania": null,
-   "director": "Zagal",
-   "dramaturgo": null,
-   "elenco": [
-    "Thais Zúñiga"
-   ],
-   "duracion": 80,
-   "edad": 8,
-   "sala": {
-    "nombre": "Teatro Municipal de Las Condes",
-    "comuna": "Las Condes",
-    "direccion": "Av. Apoquindo 3300",
-    "metro": "—",
-    "mapa": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-25",
-    "hasta": "2026-11-29",
-    "dias": [
-     0,
-     3,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "19:00",
-     "3": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "5 funciones publicadas por el teatro",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 20000
-    }
-   ],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
-   "url": "https://tmlascondes.cl/cazadores-de-agua/",
-   "fuente": {
-    "id": "lascondes",
-    "nombre": "Teatro Municipal de Las Condes",
-    "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "gam-estados-de-deriva-apertura-de-proceso",
-   "titulo": "Estados de deriva: Apertura de proceso",
-   "subtitulo": "Apertura de proceso",
-   "sinopsis": "Participa en la apertura de proceso de la residencia de investigación escénica guiada por José Vidal y Tomás Omer, creada en GAM desde la fisura, la deriva y...",
-   "genero": "danza",
-   "compania": "Sofía Riveros",
-   "director": "José Vidal y Tomás Omer",
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 60,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala N1",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-25",
-    "hasta": "2026-11-25",
-    "dias": [
-     1,
-     2,
-     3
-    ],
-    "horas": {
-     "1": "17:00",
-     "2": "17:00",
-     "3": "17:00"
-    }
-   },
-   "horarioTexto": null,
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 7000
-    }
-   ],
-   "imagen": "https://gam.cl/media/images/JoVidal_28.2e16d0ba.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-estados-de-deriva-apertura-de-proceso.jpg",
-   "huellaImagen": "9a9d7e2184a73d4b5b9cd88a6da6499c96396b9c",
-   "entradas": "https://gam.ticketplus.cl/events/estados-de-deriva?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/danza/estados-de-deriva/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
-   }
-  },
-  {
    "id": "mori-bruja-bruja",
    "titulo": "Bruja Bruja",
    "subtitulo": null,
@@ -736,6 +626,62 @@
     "id": "mori",
     "nombre": "Teatro Mori",
     "sitio": "https://teatromori.cl"
+   }
+  },
+  {
+   "id": "lascondes-cazadores-de-agua",
+   "titulo": "Cazadores de Agua",
+   "subtitulo": null,
+   "sinopsis": "Cazadores de Agua En un desierto donde el agua escasea, una niña y su abuelo sobreviven recolectando las diminutas gotas que trae la niebla. Un día, el abuelo le entrega una antigua caracola fósil que despierta en ella una misteriosa conexión con la memoria del agua y la impulsa a emprender un…",
+   "genero": "drama",
+   "compania": null,
+   "director": "Zagal",
+   "dramaturgo": null,
+   "elenco": [
+    "Thais Zúñiga"
+   ],
+   "duracion": 80,
+   "edad": 8,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-26",
+    "hasta": "2026-11-29",
+    "dias": [
+     0,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "19:00",
+     "4": "20:00",
+     "5": "20:00",
+     "6": "20:00"
+    }
+   },
+   "horarioTexto": "4 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 20000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30808",
+   "url": "https://tmlascondes.cl/cazadores-de-agua/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
