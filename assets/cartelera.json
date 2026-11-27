@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T03:53:59.829Z",
+ "actualizado": "2026-11-27T19:46:54.473Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -41,7 +41,7 @@
    "id": "nescafe",
    "nombre": "Teatro Nescafé de las Artes",
    "sitio": "https://www.teatro-nescafe-delasartes.cl",
-   "obras": 10,
+   "obras": 11,
    "error": null
   },
   {
@@ -62,8 +62,8 @@
    "id": "ictus",
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
-   "obras": 5,
-   "error": null
+   "obras": 0,
+   "error": "dejó de entregar obras (antes traía 5)"
   },
   {
    "id": "zoco",
@@ -689,58 +689,6 @@
    }
   },
   {
-   "id": "ictus-caballo-ultimas-funciones",
-   "titulo": "CABALLO | ÚLTIMAS FUNCIONES",
-   "subtitulo": null,
-   "sinopsis": "Una mujer está montada en el caballo de Plaza Baquedano, agitando banderas de lucha que ni ella misma comprende completamente. Este es el punto de partida de &#8220;Caballo&#8221;, una obra de teatro que utiliza el emblemático monumento como escenario para una comedia dramática tan desconcertante como el país mismo . La protagonista, una mujer mayor y profundamente confundida, encarna la psique de una patria atrapada entre todos los eventos históricos y políticos de los últimos setenta años.",
-   "genero": "comedia",
-   "compania": null,
-   "director": "Emilia Noguera",
-   "dramaturgo": "Emilia Noguera",
-   "elenco": [
-    "Maricarmen Arrigorriaga",
-    "Roberto Poblete",
-    "Paula Sharim",
-    "Moisés Angulo",
-    "Nicolás Zárate",
-    "Camila Oliva"
-   ],
-   "duracion": null,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-28",
-    "hasta": "2026-11-28",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "6 AL 28 DE NOVIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/10/CABALLO_nov_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-caballo-ultimas-funciones.jpg",
-   "huellaImagen": "25006e1a65f4ecaa40f57f9ab085ea3a140e7ed3",
-   "entradas": "https://ticketplus.cl/events/caballo-2026-11-06-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-caballo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "gam-festicrin-2026-xii-version",
    "titulo": "FestiCrin 2026: XII Versión",
    "subtitulo": "XII Versión",
@@ -957,57 +905,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "ictus-hombres-daga-ultimas-funciones",
-   "titulo": "HOMBRES DAGA | ÚLTIMAS FUNCIONES",
-   "subtitulo": null,
-   "sinopsis": "En las profundidades de la cordillera de los Andes, un sicario veterano —interpretado por el destacado actor Luis Dubó— inicia a un joven en los secretos y crueldades de su oficio. Hombres-Daga, segundo montaje de Teatro La Liebre, fusiona el lenguaje cinematográfico con la potencia de la escena para construir un thriller inquietante sobre el sicariato, los cuerpos olvidados y las sombras del pasado político de nuestro país .",
-   "genero": "drama",
-   "compania": null,
-   "director": "Ángela Urrutia y Matías González",
-   "dramaturgo": "Matías Leonardo González Gómez",
-   "elenco": [
-    "Luis Dubó",
-    "Viviana Nass",
-    "Felipe Valenzuela",
-    "Camilo Yanko",
-    "Nicolás Bascuñán",
-    "Ángela Urrutia",
-    "Katalina Urrutia"
-   ],
-   "duracion": 85,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-29",
-    "hasta": "2026-11-29",
-    "dias": [
-     0
-    ],
-    "horas": {
-     "0": "19:00"
-    }
-   },
-   "horarioTexto": "1 AL 29 DE NOVIEMBRE · Domingos | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/09/HOMBRESDAGA_paginaweb_1080X1140.jpg",
-   "imagenLocal": "assets/img/ictus-hombres-daga-ultimas-funciones.jpg",
-   "huellaImagen": "2f1e62d4449df92aa217601e5c4f40d54ed370e7",
-   "entradas": "https://ticketplus.cl/events/hombres-daga-2026-11-01-19-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/proximamente-hombres-daga/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1383,49 +1280,6 @@
    }
   },
   {
-   "id": "ictus-descabelladas-en-vivo-segunda-edicion",
-   "titulo": "DESCABELLADAS EN VIVO | SEGUNDA EDICIÓN",
-   "subtitulo": null,
-   "sinopsis": "“Descabelladas”, el famoso programa político de la televisión, llega desde las pantallas de UChileTV a Teatro ICTUS para compartir en vivo con su público, conducido por las periodistas, Yasna Lewin, Alejandra Matus y Mirna Schindler",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-12-09",
-    "hasta": "2026-12-09",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "19:00"
-    }
-   },
-   "horarioTexto": "9 DE DICIEMBRE · Miércoles | 19:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DESCABELLADAS__paginaweb_1080X1140-1.jpg",
-   "imagenLocal": "assets/img/ictus-descabelladas-en-vivo-segunda-edicion.jpg",
-   "huellaImagen": "1edf1d0d5a42d18088e464dd047b439c4648d77b",
-   "entradas": "https://ticketplus.cl/events/descabelladas-en-vivo-2026-12-09-19-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/descabelladas-en-vivo/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
-   }
-  },
-  {
    "id": "gam-festival-enai-2026-encuentro-de-artes-escenicas-para-la-comu",
    "titulo": "Festival ENAI 2026: Encuentro de Artes Escénicas para la Comunidad Sorda",
    "subtitulo": "Encuentro de Artes Escénicas para la Comunidad Sorda",
@@ -1468,54 +1322,6 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
-   }
-  },
-  {
-   "id": "ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura",
-   "titulo": "SIEMPRE ENCUENTRA CASA NUEVA, UN MUEBLE ANTIGUO EN LA BASURA",
-   "subtitulo": null,
-   "sinopsis": "&#8220;Es una obra que no entrega respuestas, sino que deja una metafórica pregunta de futuro ¿cómo vamos a vivir?&#8221; — Felipe Zambrano",
-   "genero": "drama",
-   "compania": null,
-   "director": "Felipe Zambrano Miguieles",
-   "dramaturgo": "Felipe Zambrano Miguieles",
-   "elenco": [
-    "Consuelo Holzapfel",
-    "Nicolás Eyzaguirre"
-   ],
-   "duracion": 50,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-12-12",
-    "hasta": "2026-12-12",
-    "dias": [
-     5,
-     6
-    ],
-    "horas": {
-     "5": "20:00",
-     "6": "20:00"
-    }
-   },
-   "horarioTexto": "4 AL 12 DE DICIEMBRE · Vie y sáb | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/SIEMPREENCUENTRA_paginaweb_1080X1140.jpg.png",
-   "imagenLocal": "assets/img/ictus-siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura.png",
-   "huellaImagen": "63570f2be8031d2f14d3b5cfec783181b814f54f",
-   "entradas": "https://ticketplus.cl/events/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura-2026-12-03-20-00-00-0300",
-   "url": "https://teatroictus.cl/cartelera/siempre-encuentra-casa-nueva-un-mueble-antiguo-en-la-basura/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -1608,49 +1414,6 @@
     "id": "teatrouc",
     "nombre": "Teatro UC",
     "sitio": "https://teatrouc.uc.cl"
-   }
-  },
-  {
-   "id": "ictus-duo-pajarito-musica",
-   "titulo": "DÚO PAJARITO | MÚSICA",
-   "subtitulo": null,
-   "sinopsis": "Dúo Pajarito es una agrupación dedicada a la interpretación del cancionero latinoamericano , con especial énfasis en la música criolla peruana, los boleros, las tonadas y otros repertorios de raíz popular. Su propuesta pone especial interés en los repertorios tradicionales y en las voces de sus compositoras y compositores, combinando el respeto por la tradición con una mirada contemporánea.",
-   "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": 90,
-   "edad": null,
-   "sala": {
-    "nombre": "Teatro Ictus — Sala La Comedia",
-    "comuna": "Santiago Centro",
-    "direccion": "Merced 349, Barrio Lastarria",
-    "metro": "—",
-    "mapa": "Teatro Ictus, Merced 349, Santiago",
-    "sitio": "https://teatroictus.cl"
-   },
-   "temporada": {
-    "desde": "2026-12-16",
-    "hasta": "2026-12-16",
-    "dias": [
-     3
-    ],
-    "horas": {
-     "3": "20:00"
-    }
-   },
-   "horarioTexto": "16 DE DICIEMBRE · Miércoles | 20:00 H · Comprar entrada",
-   "precios": [],
-   "imagen": "https://teatroictus.cl/wp-content/uploads/2026/11/DUOPAJARITO_paginaweb_1080X1140_01.jpg",
-   "imagenLocal": "assets/img/ictus-duo-pajarito-musica.jpg",
-   "huellaImagen": "0d402948326b01de8a04cb7711a75bbe53494ba8",
-   "entradas": "https://ticketplus.cl/events/duo-pajarito",
-   "url": "https://teatroictus.cl/cartelera/duo-pajarito/",
-   "fuente": {
-    "id": "ictus",
-    "nombre": "Teatro Ictus",
-    "sitio": "https://teatroictus.cl"
    }
   },
   {
@@ -2725,6 +2488,49 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "nescafe-quiero-decir-te-amo",
+   "titulo": "Quiero decir te amo",
+   "subtitulo": null,
+   "sinopsis": "TEATRO NESCAFÉ DE LAS ARTES, en tradicional alianza con la productora CULTURA CAPITAL, y junto a la COMPANÍA TEATRO FUTURO de Buenos Aires, alistan el estreno de la adaptación local de la aplaudida obra argentina “Quiero decir te amo”, desde el jueves 14 de enero.",
+   "genero": "drama",
+   "compania": null,
+   "director": "Mariano Tenconi Blanco",
+   "dramaturgo": "Mariano Tenconi Blanco",
+   "elenco": [
+    "Dayana Amigo Jardua",
+    "Paola Volpato Martín"
+   ],
+   "duracion": 30,
+   "edad": 13,
+   "sala": {
+    "nombre": "Teatro Nescafé de las Artes",
+    "comuna": "Providencia",
+    "direccion": "Manuel Montt 032",
+    "metro": "—",
+    "mapa": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
+   },
+   "temporada": {
+    "desde": "2027-01-16",
+    "hasta": "2027-01-16",
+    "dias": [
+     6
+    ]
+   },
+   "horarioTexto": "14 al 16 de enero - 20:00 horas / 17 de enero - 19:00 horas",
+   "precios": [],
+   "imagen": "https://www.teatro-nescafe-delasartes.cl/wp-content/uploads/2026/11/2027_01_14_quiero-decir-te-amo_s.jpg",
+   "imagenLocal": "assets/img/nescafe-quiero-decir-te-amo.jpg",
+   "huellaImagen": "000310ea7a579f881b0f5df82d7b0b44f3991622",
+   "entradas": "https://www.ticketmaster.cl/event/quiero-decir-te-amo-teatro-nescafe-de-las-artes",
+   "url": "https://www.teatro-nescafe-delasartes.cl/evento/quiero-decir-te-amo-2027/",
+   "fuente": {
+    "id": "nescafe",
+    "nombre": "Teatro Nescafé de las Artes",
+    "sitio": "https://www.teatro-nescafe-delasartes.cl"
    }
   },
   {
