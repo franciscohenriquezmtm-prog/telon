@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T19:57:10.850Z",
+ "actualizado": "2026-11-27T03:53:59.829Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -20,7 +20,7 @@
    "id": "mori",
    "nombre": "Teatro Mori",
    "sitio": "https://teatromori.cl",
-   "obras": 14,
+   "obras": 13,
    "error": null
   },
   {
@@ -580,55 +580,6 @@
    }
   },
   {
-   "id": "mori-bruja-bruja",
-   "titulo": "Bruja Bruja",
-   "subtitulo": null,
-   "sinopsis": "En una comunidad dominada por el miedo y la religión, 3 niñas aparecen en un estado inexplicable tras una noche en el río. Para ocultar sus deseos y protegerse de las normas del pueblo, Abiel acusa de brujería a Elizabeth Proctor; la denuncia encubre su relación clandestina con Juan Proctor, un secreto que Elizabeth ha descubierto. Elizabeth, Proctor y Abiel quedan atrapados en un juicio donde importa más lo que el pueblo cree que la verdad. El público participa como testigo y tribunal, tomando decisiones capaces de modificar el curso de los acontecimientos.",
-   "genero": "infantil",
-   "compania": "Teatro Su Versión",
-   "director": "Esteban Carvajal y Camila Velásquez",
-   "dramaturgo": "Esteban Carvajal",
-   "elenco": [
-    "Lea Lizama"
-   ],
-   "duracion": 60,
-   "edad": 14,
-   "sala": {
-    "nombre": "Teatro Mori Bellavista",
-    "comuna": "Providencia",
-    "direccion": "Constitución 183",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro Mori Bellavista",
-    "sitio": "https://teatromori.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-26",
-    "hasta": "2026-11-26",
-    "sinHorario": true
-   },
-   "horarioTexto": "20:30 horas",
-   "precios": [
-    {
-     "tipo": "General",
-     "valor": 15000
-    },
-    {
-     "tipo": "Descuento (estudiantes / 3ª edad)",
-     "valor": 10000
-    }
-   ],
-   "imagen": "https://teatromori.cl/mini/268x372xS/193dbe917b190e7d19af0611baeb0061.jpg",
-   "imagenLocal": "assets/img/mori-bruja-bruja.jpg",
-   "huellaImagen": "0d3141d8ea5fcd18ff49b113b2dde49b735d3734",
-   "entradas": "https://teatromori.cl/obra/BrujaBV1/bruja-bruja",
-   "url": "https://teatromori.cl/obra/BrujaBV1/bruja-bruja",
-   "fuente": {
-    "id": "mori",
-    "nombre": "Teatro Mori",
-    "sitio": "https://teatromori.cl"
-   }
-  },
-  {
    "id": "lascondes-cazadores-de-agua",
    "titulo": "Cazadores de Agua",
    "subtitulo": null,
@@ -651,22 +602,20 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-26",
+    "desde": "2026-11-27",
     "hasta": "2026-11-29",
     "dias": [
      0,
-     4,
      5,
      6
     ],
     "horas": {
      "0": "19:00",
-     "4": "20:00",
      "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "4 funciones publicadas por el teatro",
+   "horarioTexto": "3 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
