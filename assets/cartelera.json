@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T19:46:54.473Z",
+ "actualizado": "2026-11-28T03:40:17.526Z",
  "zona": "America/Santiago",
  "fuentes": [
   {
@@ -34,7 +34,7 @@
    "id": "lascondes",
    "nombre": "Teatro Municipal de Las Condes",
    "sitio": "https://www.tmlascondes.cl",
-   "obras": 3,
+   "obras": 4,
    "error": null
   },
   {
@@ -63,7 +63,7 @@
    "nombre": "Teatro Ictus",
    "sitio": "https://teatroictus.cl",
    "obras": 0,
-   "error": "dejó de entregar obras (antes traía 5)"
+   "error": null
   },
   {
    "id": "zoco",
@@ -602,20 +602,18 @@
     "sitio": "https://www.tmlascondes.cl"
    },
    "temporada": {
-    "desde": "2026-11-27",
+    "desde": "2026-11-28",
     "hasta": "2026-11-29",
     "dias": [
      0,
-     5,
      6
     ],
     "horas": {
      "0": "19:00",
-     "5": "20:00",
      "6": "20:00"
     }
    },
-   "horarioTexto": "3 funciones publicadas por el teatro",
+   "horarioTexto": "2 funciones publicadas por el teatro",
    "precios": [
     {
      "tipo": "General",
@@ -631,61 +629,6 @@
     "id": "lascondes",
     "nombre": "Teatro Municipal de Las Condes",
     "sitio": "https://www.tmlascondes.cl"
-   }
-  },
-  {
-   "id": "gam-la-muerte-del-padre",
-   "titulo": "La muerte del padre",
-   "subtitulo": null,
-   "sinopsis": "Los hermanos Gopal y Visnu Ibarra Roa vuelven a la escena con una fábula tan absurda como emotiva. La puesta en escena protagonizada por Francisco Reyes y Da...",
-   "genero": "drama",
-   "compania": "La muerte del padre",
-   "director": "Visnu Ibarra Roa y Gopal Ibarra Roa",
-   "dramaturgo": "Gopal Ibarra Roa",
-   "elenco": [
-    "Francisco Reyes",
-    "Daniela Ramírez",
-    "Guilherme Sepúlveda",
-    "Belén Fernández",
-    "Catalina Ortiz"
-   ],
-   "duracion": 65,
-   "edad": null,
-   "sala": {
-    "nombre": "Centro GAM — Sala A2",
-    "comuna": "Santiago Centro",
-    "direccion": "Av. Libertador Bernardo O’Higgins 227",
-    "metro": "Universidad Católica (L1)",
-    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
-    "sitio": "https://www.gam.cl"
-   },
-   "temporada": {
-    "desde": "2026-11-27",
-    "hasta": "2026-12-13",
-    "dias": [
-     0,
-     4,
-     5,
-     6
-    ],
-    "horas": {
-     "0": "18:30",
-     "4": "19:30",
-     "5": "19:30",
-     "6": "19:30"
-    }
-   },
-   "horarioTexto": "Ju, Vi y Sá— 19.30 h Do— 18.30 h",
-   "precios": [],
-   "imagen": "https://gam.cl/media/images/grupo_LMDP.5ff8a6ce.fill-1200x630.jpg",
-   "imagenLocal": "assets/img/gam-la-muerte-del-padre.jpg",
-   "huellaImagen": "75f7955a75670de56f3c2417494b9abc040fb572",
-   "entradas": "https://gam.ticketplus.cl/events/la-muerte-del-padre?referal_name=gamcl",
-   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-muerte-del-padre/",
-   "fuente": {
-    "id": "gam",
-    "nombre": "Centro GAM",
-    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -810,56 +753,58 @@
    }
   },
   {
-   "id": "puente-papel-de-agua",
-   "titulo": "PAPEL DE AGUA",
+   "id": "gam-la-muerte-del-padre",
+   "titulo": "La muerte del padre",
    "subtitulo": null,
-   "sinopsis": "",
+   "sinopsis": "Los hermanos Gopal y Visnu Ibarra Roa vuelven a la escena con una fábula tan absurda como emotiva. La puesta en escena protagonizada por Francisco Reyes y Da...",
    "genero": "drama",
-   "compania": null,
-   "director": null,
-   "dramaturgo": null,
-   "elenco": [],
-   "duracion": null,
+   "compania": "La muerte del padre",
+   "director": "Visnu Ibarra Roa y Gopal Ibarra Roa",
+   "dramaturgo": "Gopal Ibarra Roa",
+   "elenco": [
+    "Francisco Reyes",
+    "Daniela Ramírez",
+    "Guilherme Sepúlveda",
+    "Belén Fernández",
+    "Catalina Ortiz"
+   ],
+   "duracion": 65,
    "edad": null,
    "sala": {
-    "nombre": "Teatro del Puente",
+    "nombre": "Centro GAM — Sala A2",
     "comuna": "Santiago Centro",
-    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
-    "metro": "Baquedano (L1/L5)",
-    "mapa": "Teatro del Puente, Santiago",
-    "sitio": "https://teatrodelpuente.cl"
+    "direccion": "Av. Libertador Bernardo O’Higgins 227",
+    "metro": "Universidad Católica (L1)",
+    "mapa": "Centro Cultural Gabriela Mistral, Santiago",
+    "sitio": "https://www.gam.cl"
    },
    "temporada": {
     "desde": "2026-11-28",
-    "hasta": "2027-01-29",
+    "hasta": "2026-12-13",
     "dias": [
      0,
-     1,
-     2,
      4,
      5,
      6
     ],
     "horas": {
-     "0": "20:00",
-     "1": "20:00",
-     "2": "20:00",
-     "4": "20:00",
-     "5": "20:00",
-     "6": "20:00"
+     "0": "18:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
     }
    },
-   "horarioTexto": "6 funciones — 20:00 h",
+   "horarioTexto": "Ju, Vi y Sá— 19.30 h Do— 18.30 h",
    "precios": [],
-   "imagen": null,
-   "imagenLocal": null,
-   "huellaImagen": null,
-   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
-   "url": "https://teatrodelpuente.cl/cartelera/",
+   "imagen": "https://gam.cl/media/images/grupo_LMDP.5ff8a6ce.fill-1200x630.jpg",
+   "imagenLocal": "assets/img/gam-la-muerte-del-padre.jpg",
+   "huellaImagen": "75f7955a75670de56f3c2417494b9abc040fb572",
+   "entradas": "https://gam.ticketplus.cl/events/la-muerte-del-padre?referal_name=gamcl",
+   "url": "https://gam.cl/es/que-hacer-en-gam/teatro/la-muerte-del-padre/",
    "fuente": {
-    "id": "puente",
-    "nombre": "Teatro del Puente",
-    "sitio": "https://teatrodelpuente.cl"
+    "id": "gam",
+    "nombre": "Centro GAM",
+    "sitio": "https://www.gam.cl"
    }
   },
   {
@@ -905,6 +850,53 @@
     "id": "gam",
     "nombre": "Centro GAM",
     "sitio": "https://www.gam.cl"
+   }
+  },
+  {
+   "id": "puente-papel-de-agua",
+   "titulo": "PAPEL DE AGUA",
+   "subtitulo": null,
+   "sinopsis": "",
+   "genero": "drama",
+   "compania": null,
+   "director": null,
+   "dramaturgo": null,
+   "elenco": [],
+   "duracion": null,
+   "edad": null,
+   "sala": {
+    "nombre": "Teatro del Puente",
+    "comuna": "Santiago Centro",
+    "direccion": "Parque Forestal s/n, entre los puentes Pío Nono y Purísima",
+    "metro": "Baquedano (L1/L5)",
+    "mapa": "Teatro del Puente, Santiago",
+    "sitio": "https://teatrodelpuente.cl"
+   },
+   "temporada": {
+    "desde": "2026-11-29",
+    "hasta": "2027-01-29",
+    "dias": [
+     0,
+     2,
+     5
+    ],
+    "horas": {
+     "0": "20:00",
+     "2": "20:00",
+     "5": "20:00"
+    }
+   },
+   "horarioTexto": "3 funciones — 20:00 h",
+   "precios": [],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://teatrodelpuente.cl/venta-de-entradas/",
+   "url": "https://teatrodelpuente.cl/cartelera/",
+   "fuente": {
+    "id": "puente",
+    "nombre": "Teatro del Puente",
+    "sitio": "https://teatrodelpuente.cl"
    }
   },
   {
@@ -3133,6 +3125,64 @@
     "id": "zoco",
     "nombre": "Centro para las Artes Zoco",
     "sitio": "https://teatrozoco.cl"
+   }
+  },
+  {
+   "id": "lascondes-piazzolla-eterno",
+   "titulo": "Piazzolla Eterno",
+   "subtitulo": null,
+   "sinopsis": "Directamente desde el Teatro Colón de Buenos Aires llega en marzo a nuestro escenario el musical que cautivó al público argentino en 2026, con una extraordinaria respuesta de audiencia y excelentes críticas. En ese punto en que se entrelazan la realidad, la música y los sueños, llega Piazzolla…",
+   "genero": "musical",
+   "compania": null,
+   "director": "Emiliano Dionisi",
+   "dramaturgo": "Emiliano Dionisi",
+   "elenco": [
+    "Belén Pasqualini"
+   ],
+   "duracion": 80,
+   "edad": 12,
+   "sala": {
+    "nombre": "Teatro Municipal de Las Condes",
+    "comuna": "Las Condes",
+    "direccion": "Av. Apoquindo 3300",
+    "metro": "—",
+    "mapa": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
+   },
+   "temporada": {
+    "desde": "2027-03-10",
+    "hasta": "2027-03-21",
+    "dias": [
+     0,
+     3,
+     4,
+     5,
+     6
+    ],
+    "horas": {
+     "0": "18:30",
+     "3": "19:30",
+     "4": "19:30",
+     "5": "19:30",
+     "6": "19:30"
+    }
+   },
+   "horarioTexto": "10 funciones publicadas por el teatro",
+   "precios": [
+    {
+     "tipo": "General",
+     "valor": 35000
+    }
+   ],
+   "imagen": null,
+   "imagenLocal": null,
+   "huellaImagen": null,
+   "entradas": "https://sertex.stonline.cl/tmlc/tmlcFrontOffice/Venta/Funciones?vprId=30840",
+   "url": "https://tmlascondes.cl/piazzolla-eterno/",
+   "fuente": {
+    "id": "lascondes",
+    "nombre": "Teatro Municipal de Las Condes",
+    "sitio": "https://www.tmlascondes.cl"
    }
   },
   {
